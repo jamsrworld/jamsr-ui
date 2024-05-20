@@ -1,0 +1,17 @@
+{
+  "name": "@jamsrworld/tailwind-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.3.3"
+  }
+}

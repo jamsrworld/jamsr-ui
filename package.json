@@ -10,6 +10,8 @@
   "devDependencies": {
     "@jamsrworld/eslint-config": "workspace:*",
     "@jamsrworld/typescript-config": "workspace:*",
+    "@storybook/react": "^8.1.1",
+    "@storybook/test": "^8.1.1",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },

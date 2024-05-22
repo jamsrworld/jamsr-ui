@@ -2,9 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, expect, it, test } from "vitest";
 import { Button } from "..";
 
-const sum = (a: number, b: number) => {
-  return a + b;
-};
+const sum = (a: number, b: number) => a + b;
 
 describe("Button", () => {
   it("test", () => {
@@ -21,6 +19,6 @@ describe("Button", () => {
   });
   it("check button render correctly", () => {
     render(<Button>hiii</Button>);
-    expect(screen.getByRole("button")).toBeDefined()
+    expect(screen.getByRole("button")).toBeDefined();
   });
 });

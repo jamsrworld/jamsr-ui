@@ -1,6 +1,6 @@
 // This configuration only applies to the package manager root.
 /** @type {import("eslint").Linter.Config} */
-module.exports = {
+const config = {
   ignorePatterns: ["apps/**", "packages/**"],
   extends: ["@jamsrworld/eslint-config/library.js"],
   parser: "@typescript-eslint/parser",
@@ -8,3 +8,5 @@ module.exports = {
     project: true,
   },
 };
+
+export default config;

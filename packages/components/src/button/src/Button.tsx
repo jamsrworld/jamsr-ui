@@ -1,21 +1,20 @@
 "use client";
 
 import { cn } from "@jamsrworld/utils";
-import { ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef } from "react";
 
 type ButtonProps = ComponentPropsWithoutRef<"button">;
 
-export const Button = ({ children, className = "", ...rest }: ButtonProps) => {
-  return (
-    <button
-      className={cn(
-        `border bg-black rounded-lg px-4 py-2 text-white border-gray-500 ring-2 ring-pink-400`,
-        className
-      )}
-      onClick={() => alert(`Hello from your  app!`)}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
-};
+export const Button = ({ children, className = "", ...rest }: ButtonProps) => (
+  <button
+    type="button"
+    className={cn(
+      `rounded-lg border border-gray-500 bg-black px-4 py-2 text-pink-50 ring-2 ring-pink-400 md:bg-white`,
+      className,
+    )}
+    onClick={() => alert(`Hello from your  app!`)}
+    {...rest}
+  >
+    {children}
+  </button>
+);

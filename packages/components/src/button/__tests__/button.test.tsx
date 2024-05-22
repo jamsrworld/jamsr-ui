@@ -8,12 +8,15 @@ const sum = (a: number, b: number) => {
 
 describe("Button", () => {
   it("test", () => {
-    expect(sum(1, 2)).toBe(4);
+    expect(sum(1, 2)).toBe(3);
   });
   it("test2", () => {
     expect(sum(1, 2)).not.toBe(4);
   });
   test("test3", () => {
+    expect(sum(0, 0)).toBe(0);
+  });
+  test("test4", () => {
     expect(sum(0, 0)).toBe(0);
   });
   it("check button render correctly", () => {

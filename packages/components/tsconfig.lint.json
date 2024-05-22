@@ -6,3 +6,4 @@
   "include": ["src", "*.cjs", "*.ts", "*.mjs"],
   "exclude": ["node_modules", "dist"]
 }
+-

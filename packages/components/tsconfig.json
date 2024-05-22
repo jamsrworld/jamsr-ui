@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src", "*.mjs", "*.ts"],
+  "include": ["src", "*.cjs", "*.mjs", "*.ts"],
   "exclude": ["node_modules", "dist"]
 }

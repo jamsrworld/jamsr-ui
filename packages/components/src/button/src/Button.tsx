@@ -5,6 +5,12 @@ import { type ComponentPropsWithoutRef } from "react";
 
 type ButtonProps = ComponentPropsWithoutRef<"button">;
 
+let a = 4;
+const sum = (a: number) => {
+  return a + 3;
+};
+console.log(sum("adf"));
+
 export const Button = ({ children, className = "", ...rest }: ButtonProps) => (
   <button
     type="button"

@@ -26,6 +26,9 @@ importers:
       '@storybook/test':
         specifier: ^8.1.1
         version: 8.1.1(vitest@1.6.0(@types/node@20.12.12))
+      '@typescript-eslint/parser':
+        specifier: ^7.10.0
+        version: 7.10.0(eslint@8.57.0)(typescript@5.3.3)
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -152,9 +155,6 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.1.0
         version: 7.1.0(eslint@8.57.0)(typescript@5.3.3)
-      eslint:
-        specifier: ^8
-        version: 8.57.0
       eslint-config-airbnb:
         specifier: ^19.0.4
         version: 19.0.4(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.1.0(eslint@8.57.0)(typescript@5.3.3))(eslint@8.57.0))(eslint-plugin-jsx-a11y@6.8.0(eslint@8.57.0))(eslint-plugin-react-hooks@4.6.0(eslint@8.57.0))(eslint-plugin-react@7.33.2(eslint@8.57.0))(eslint@8.57.0)
@@ -8368,7 +8368,6 @@ snapshots:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.3.3)':
     dependencies:
@@ -8410,7 +8409,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.10.0
       '@typescript-eslint/visitor-keys': 7.10.0
-    optional: true
 
   '@typescript-eslint/scope-manager@7.2.0':
     dependencies:
@@ -8450,8 +8448,7 @@ snapshots:
 
   '@typescript-eslint/types@7.1.0': {}
 
-  '@typescript-eslint/types@7.10.0':
-    optional: true
+  '@typescript-eslint/types@7.10.0': {}
 
   '@typescript-eslint/types@7.2.0': {}
 
@@ -8500,7 +8497,6 @@ snapshots:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@typescript-eslint/typescript-estree@7.2.0(typescript@5.3.3)':
     dependencies:
@@ -8586,7 +8582,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.10.0
       eslint-visitor-keys: 3.4.3
-    optional: true
 
   '@typescript-eslint/visitor-keys@7.2.0':
     dependencies:
@@ -10240,7 +10235,7 @@ snapshots:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       ignore: 5.3.1
       merge2: 1.4.1
       slash: 3.0.0

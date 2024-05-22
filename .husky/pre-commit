@@ -1,1 +1,2 @@
 pnpm test
+pnpm --filter @jamsrworld/ui ts-check

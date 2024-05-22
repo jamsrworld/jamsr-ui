@@ -11,7 +11,8 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "ts-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@jamsrworld/eslint-config": "workspace:*",

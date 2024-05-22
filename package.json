@@ -17,11 +17,18 @@
     "@storybook/react": "^8.1.1",
     "@storybook/test": "^8.1.1",
     "husky": "^9.0.11",
+    "lint-staged": ">=10",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
   "packageManager": "pnpm@9.1.2",
   "engines": {
     "node": ">=18"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,md}": [
+      "prettier --write",
+      "eslint --max-warnings 0 ."
+    ]
   }
 }

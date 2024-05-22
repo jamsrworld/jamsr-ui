@@ -7,7 +7,7 @@ type ButtonProps = ComponentPropsWithoutRef<"button">;
 
 const a = 4;
 const sum = (a: number) => a + 3;
-console.log(sum("adf"));
+console.log(sum("adf"))
 
 export const Button = ({ children, className = "", ...rest }: ButtonProps) => (
   <button

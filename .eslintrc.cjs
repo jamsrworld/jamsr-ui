@@ -5,11 +5,11 @@ const config = {
   extends: ["@jamsrworld/eslint-config/library.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project:true
+    project: true,
   },
   env: {
     es6: true,
   },
 };
 
-module.export = config;
+module.exports = config;

@@ -1,2 +1,2 @@
 pnpm test
-pnpm --filter @jamsr-ui/react ts-check
+pnpm --filter @jamsr-ui/components ts-check

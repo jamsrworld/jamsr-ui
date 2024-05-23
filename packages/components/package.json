@@ -1,0 +1,12 @@
+{
+  "name": "@jamsr-ui/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts-check": "tsc --noEmit && eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -88,7 +88,331 @@ importers:
         specifier: ^5
         version: 5.3.3
 
+  packages/components/accordion:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/alert:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/autocomplete:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/avatar:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/badge:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
   packages/components/button:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/card:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/checkbox:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/chip:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/dialog:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/divider:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/header:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/image:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/image-upload:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/input:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/link:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/menu:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/otp-input:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/popover:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/progress:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/radio:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/ripple:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/select:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/skeleton:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/switch:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/tab:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/tooltip:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.2
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
+  packages/components/typography:
     devDependencies:
       '@types/react':
         specifier: ^18.3.2

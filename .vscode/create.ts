@@ -8,7 +8,6 @@ const components = [
   "autocomplete",
   "avatar",
   "badge",
-  "button",
   "card",
   "checkbox",
   "chip",
@@ -49,19 +48,25 @@ for (const component of components) {
   const rep = (content: string) =>
     content.replace(/Button/g, Component).replace(/button/g, component);
 
+  const baseFolder = "./button";
+
   const mainFile = `./${component}/src/${component}.tsx`;
-  const mainFileContent = rep(readFileSync("./c/src/Button.tsx", "utf-8"));
+  const mainFileContent = rep(readFileSync(`${baseFolder}/src/Button.tsx`, "utf-8"));
   writeFileSync(mainFile, mainFileContent, "utf-8");
 
   const testFile = `./${component}/__test__/${component}.test.tsx`;
-  const testFileContent = rep(readFileSync("./c/__tests__/button.test.tsx", "utf-8"));
+  const testFileContent = rep(readFileSync(`${baseFolder}/__tests__/button.test.tsx`, "utf-8"));
   writeFileSync(testFile, testFileContent, "utf-8");
 
   const storyFile = `./${component}/stories/${component}.stories.tsx`;
-  const storyFileContent = rep(readFileSync("./c/stories/button.stories.tsx", "utf-8"));
+  const storyFileContent = rep(readFileSync(`${baseFolder}/stories/button.stories.tsx`, "utf-8"));
   writeFileSync(storyFile, storyFileContent, "utf-8");
 
-  const indexFile = `./${component}/index.ts`;
-  const indexFileContent = `export {${Component}} from "./src/${component}";`;
+  const indexFile = `./${component}/src/index.ts`;
+  const indexFileContent = `export {${Component}} from "./${component}";`;
   writeFileSync(indexFile, indexFileContent, "utf-8");
+
+  const packageFile = `./${component}/package.json`;
+  const packageFileContent = rep(readFileSync(`${baseFolder}/package.json`, "utf-8"));
+  writeFileSync(packageFile, packageFileContent, "utf-8");
 }

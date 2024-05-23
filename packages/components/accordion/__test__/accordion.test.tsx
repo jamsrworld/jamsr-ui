@@ -4,7 +4,7 @@ import { Accordion } from "../src";
 
 describe("Accordion", () => {
   it("should render correctly", () => {
-    const wrapper = render(<Accordion>hiii</Accordion>);
+    const wrapper = render(<Accordion>hiii Accordion</Accordion>);
     expect(() => wrapper.unmount()).not.toThrow();
   });
 });

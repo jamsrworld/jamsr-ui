@@ -88,6 +88,8 @@ importers:
         specifier: ^5
         version: 5.3.3
 
+  packages/components: {}
+
   packages/components/accordion:
     devDependencies:
       '@types/react':
@@ -149,6 +151,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/button:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@types/react':
         specifier: ^18.3.2
@@ -486,18 +492,96 @@ importers:
 
   packages/react:
     dependencies:
-      '@jamsr-ui/button':
+      '@jamsr-ui/accordion':
         specifier: workspace:^
+        version: link:../components/accordion
+      '@jamsr-ui/alert':
+        specifier: workspace:^
+        version: link:../components/alert
+      '@jamsr-ui/autocomplete':
+        specifier: workspace:^
+        version: link:../components/autocomplete
+      '@jamsr-ui/avatar':
+        specifier: workspace:^
+        version: link:../components/avatar
+      '@jamsr-ui/badge':
+        specifier: workspace:^
+        version: link:../components/badge
+      '@jamsr-ui/button':
+        specifier: workspace:*
         version: link:../components/button
+      '@jamsr-ui/card':
+        specifier: workspace:^
+        version: link:../components/card
+      '@jamsr-ui/checkbox':
+        specifier: workspace:^
+        version: link:../components/checkbox
+      '@jamsr-ui/chip':
+        specifier: workspace:^
+        version: link:../components/chip
+      '@jamsr-ui/dialog':
+        specifier: workspace:^
+        version: link:../components/dialog
+      '@jamsr-ui/divider':
+        specifier: workspace:^
+        version: link:../components/divider
+      '@jamsr-ui/header':
+        specifier: workspace:^
+        version: link:../components/header
+      '@jamsr-ui/image':
+        specifier: workspace:^
+        version: link:../components/image
+      '@jamsr-ui/image-upload':
+        specifier: workspace:^
+        version: link:../components/image-upload
+      '@jamsr-ui/input':
+        specifier: workspace:^
+        version: link:../components/input
+      '@jamsr-ui/link':
+        specifier: workspace:^
+        version: link:../components/link
+      '@jamsr-ui/menu':
+        specifier: workspace:^
+        version: link:../components/menu
+      '@jamsr-ui/otp-input':
+        specifier: workspace:^
+        version: link:../components/otp-input
+      '@jamsr-ui/popover':
+        specifier: workspace:^
+        version: link:../components/popover
+      '@jamsr-ui/progress':
+        specifier: workspace:^
+        version: link:../components/progress
+      '@jamsr-ui/radio':
+        specifier: workspace:^
+        version: link:../components/radio
+      '@jamsr-ui/ripple':
+        specifier: workspace:^
+        version: link:../components/ripple
+      '@jamsr-ui/select':
+        specifier: workspace:^
+        version: link:../components/select
+      '@jamsr-ui/skeleton':
+        specifier: workspace:^
+        version: link:../components/skeleton
+      '@jamsr-ui/switch':
+        specifier: workspace:^
+        version: link:../components/switch
+      '@jamsr-ui/tab':
+        specifier: workspace:^
+        version: link:../components/tab
+      '@jamsr-ui/tooltip':
+        specifier: workspace:^
+        version: link:../components/tooltip
+      '@jamsr-ui/typography':
+        specifier: workspace:^
+        version: link:../components/typography
       '@jamsr-ui/utils':
         specifier: workspace:*
         version: link:../utils
-      jsdom:
-        specifier: ^24.0.0
-        version: 24.0.0
-      react:
-        specifier: ^18.2.0
-        version: 18.3.1
+      react-dom:
+        specifier: '>=18'
+        version: 18.3.1(react@18.3.1)
     devDependencies:
       '@jamsr-ui/eslint-config':
         specifier: workspace:*
@@ -535,9 +619,15 @@ importers:
       eslint:
         specifier: ^8
         version: 8.57.0
+      jsdom:
+        specifier: ^24.0.0
+        version: 24.0.0
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3(ts-node@10.9.1(@types/node@20.12.12)(typescript@5.4.5))

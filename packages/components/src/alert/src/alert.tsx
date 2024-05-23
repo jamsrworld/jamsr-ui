@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef } from "react";
 
 type Props = ComponentPropsWithoutRef<"div">;
 

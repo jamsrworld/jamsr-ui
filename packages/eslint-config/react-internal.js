@@ -76,6 +76,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "react/function-component-definition": "off",
     "react/jsx-props-no-spreading": "off",
-    "import/no-extraneous-dependencies":"off"
+    "import/no-extraneous-dependencies": "off",
+    "arrow-body-style": "off",
   },
 };

@@ -1,4 +1,4 @@
-import { Button } from "@jamsrworld/ui";
+import { Button } from "@jamsr-ui/react";
 
 const page = () => {
   return (

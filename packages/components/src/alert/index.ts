@@ -1,1 +1,0 @@
-export {Alert} from "./src/alert";

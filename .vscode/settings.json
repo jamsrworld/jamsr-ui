@@ -14,7 +14,11 @@
     "**/node_modules": true
   },
   "explorerExclude.backup": {},
-  "cSpell.words": ["jamsrworld", "tailwindcss"],
+  "cSpell.words": [
+    "jamsr",
+    "jamsrworld",
+    "tailwindcss"
+  ],
   "workbench.colorCustomizations": {
     "list.warningForeground": "#00eaffcc"
   }

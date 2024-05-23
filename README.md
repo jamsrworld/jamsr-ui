@@ -18,9 +18,9 @@ This Turborepo includes the following packages/apps:
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@jamsrworld/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@jamsrworld/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@jamsrworld/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@jamsr-ui/react`: a stub React component library shared by both `web` and `docs` applications
+- `@jamsr-ui/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@jamsr-ui/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

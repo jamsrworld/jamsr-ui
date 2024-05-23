@@ -2,7 +2,7 @@
 /** @type {import("eslint").Linter.Config} */
 const config = {
   ignorePatterns: ["apps/**", "packages/**"],
-  extends: ["@jamsrworld/eslint-config/library.js"],
+  extends: ["@jamsr-ui/eslint-config/library.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,

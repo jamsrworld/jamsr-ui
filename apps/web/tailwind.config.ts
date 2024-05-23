@@ -1,4 +1,4 @@
-import sharedConfig from "@jamsrworld/tailwind-config";
+import sharedConfig from "@jamsr-ui/tailwind-config";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,7 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@jamsrworld/ui/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@jamsr-ui/react/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [sharedConfig],
 };

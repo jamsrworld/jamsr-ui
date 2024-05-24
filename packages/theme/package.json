@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.ts",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "@adityaa72",
+  "license": "MIT",
   "files": [
     "dist"
   ],

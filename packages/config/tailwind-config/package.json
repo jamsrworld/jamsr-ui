@@ -8,8 +8,8 @@
     ".": "./tailwind.config.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "@adityaa72",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.24",
     "tailwindcss": "^3.4.3",

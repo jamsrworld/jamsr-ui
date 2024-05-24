@@ -7,6 +7,10 @@
   "keywords": [],
   "author": "@adityaa72",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.mjs"
+  },
   "files": [
     "dist"
   ],

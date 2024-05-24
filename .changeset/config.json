@@ -5,6 +5,7 @@
   "fixed": [],
   "linked": [],
   "access": "public",
+    "main": "./dist/index.js",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": []

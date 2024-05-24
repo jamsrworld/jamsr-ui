@@ -1,10 +1,11 @@
 {
   "name": "@jamsr-ui/components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
-    "license": "MIT",
-"publishConfig": {
-    "access": "public"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.mjs"
   },
   "files": [
     "dist"

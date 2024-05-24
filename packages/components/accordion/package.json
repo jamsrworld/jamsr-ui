@@ -1,13 +1,14 @@
 {
   "name": "@jamsr-ui/accordion",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./src/index.ts",
   "keywords": [],
   "author": "@adityaa72",
   "license": "MIT",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "main": "./dist/index.mjs"
   },
   "files": [
     "dist"

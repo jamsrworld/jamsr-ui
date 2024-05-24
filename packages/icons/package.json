@@ -7,6 +7,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
   "devDependencies": {
     "@types/react": "^18.3.3",
     "react": "^18.3.1"

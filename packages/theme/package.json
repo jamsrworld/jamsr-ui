@@ -6,6 +6,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
   "dependencies": {
     "color2k": "^2.0.3"
   },

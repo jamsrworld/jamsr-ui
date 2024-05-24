@@ -78,5 +78,6 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": "off",
     "arrow-body-style": "off",
+    "@typescript-eslint/no-shadow": "off",
   },
 };

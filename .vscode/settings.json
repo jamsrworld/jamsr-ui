@@ -15,9 +15,12 @@
   },
   "explorerExclude.backup": {},
   "cSpell.words": [
+    "Booleanish",
+    "clsx",
     "commitlint",
     "jamsr",
     "jamsrworld",
+    "svgr",
     "tailwindcss"
   ],
   "workbench.colorCustomizations": {

@@ -1,9 +1,9 @@
+import { jamsrui } from "@jamsr-ui/theme";
 import type { Config } from "tailwindcss";
-import sharedConfig from "@jamsr-ui/tailwind-config";
 
-const config: Pick<Config, "prefix" | "presets" | "content"> = {
+const config: Config = {
   content: ["../components/**/*.@(js|jsx|mjs|ts|tsx)"],
-  presets: [sharedConfig],
+  plugins: [...jamsrui()],
 };
 
 export default config;

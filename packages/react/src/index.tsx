@@ -12,9 +12,9 @@ export * from "@jamsr-ui/divider";
 export * from "@jamsr-ui/header";
 export * from "@jamsr-ui/image";
 export * from "@jamsr-ui/image-upload";
+export * from "@jamsr-ui/input";
 export * from "@jamsr-ui/link";
 export * from "@jamsr-ui/menu";
-export * from "@jamsr-ui/input";
 export * from "@jamsr-ui/otp-input";
 export * from "@jamsr-ui/popover";
 export * from "@jamsr-ui/progress";
@@ -26,3 +26,6 @@ export * from "@jamsr-ui/switch";
 export * from "@jamsr-ui/tab";
 export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
+
+// Provider
+export { JamsrUIProvider } from "./provider";

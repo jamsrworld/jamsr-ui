@@ -1,6 +1,9 @@
 import { forwardRefUI } from "@jamsr-ui/utils";
 import { Children, useCallback, useMemo, useState } from "react";
-import { AccordionProvider, type AccordionContextType } from "./accordion-context";
+import {
+  AccordionProvider,
+  type AccordionContextType,
+} from "./accordion-context";
 import { useAccordion, type UseAccordionProps } from "./use-accordion";
 
 export const ItemProvider = (
@@ -9,7 +12,10 @@ export const ItemProvider = (
   },
 ) => {
   const { index, isOpen, onChangeIndex, children } = props;
-  const value = useMemo(() => ({ index, isOpen, onChangeIndex }), [index, isOpen, onChangeIndex]);
+  const value = useMemo(
+    () => ({ index, isOpen, onChangeIndex }),
+    [index, isOpen, onChangeIndex],
+  );
   return (
     <AccordionProvider
       key={index}
@@ -25,7 +31,10 @@ export type AccordionProps = UseAccordionProps;
 export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
   const { Component, children, getBaseProps } = useAccordion(props);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const onChangeIndex = useCallback((index: number) => setActiveIndex(index), []);
+  const onChangeIndex = useCallback(
+    (index: number) => setActiveIndex(index),
+    [],
+  );
 
   return (
     <Component
@@ -33,7 +42,6 @@ export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
       ref={ref}
       {...getBaseProps()}
     >
-      <h1 className="text-zinc-500">Hii h1</h1>
       {Children.map(children, (child, index) => {
         const isOpen = activeIndex === index;
         return (

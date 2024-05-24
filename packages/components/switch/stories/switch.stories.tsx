@@ -5,7 +5,7 @@ import { Switch } from "../src/switch";
 const meta = {
   title: "Components/Switch",
   component: Switch,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

@@ -5,7 +5,7 @@ import { Popover } from "../src/popover";
 const meta = {
   title: "Components/Popover",
   component: Popover,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

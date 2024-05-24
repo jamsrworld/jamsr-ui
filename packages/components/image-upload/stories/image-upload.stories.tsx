@@ -5,7 +5,7 @@ import { ImageUpload } from "../src/image-upload";
 const meta = {
   title: "Components/Image-upload",
   component: ImageUpload,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

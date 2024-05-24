@@ -1,15 +1,10 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { Accordion, type AccordionProps } from "../src/accordion";
 import { AccordionItem } from "../src/accordion-item";
 
 const meta = {
   title: "Components/Accordion",
   component: Accordion,
-  tags: ["autodocs"],
-  args: {
-    onClick: fn(),
-  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;

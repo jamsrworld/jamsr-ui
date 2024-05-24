@@ -5,7 +5,6 @@ import { Autocomplete } from "../src/autocomplete";
 const meta = {
   title: "Components/Autocomplete",
   component: Autocomplete,
-  tags: ["autodocs"],
   args: {
     onClick: fn(),
   },

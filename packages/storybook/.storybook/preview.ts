@@ -9,7 +9,13 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    // docs: {
+    //   source: {
+    //     type: "code",
+    //   },
+    // },
   },
+  tags: ["autodocs"],
 };
 
 export default preview;

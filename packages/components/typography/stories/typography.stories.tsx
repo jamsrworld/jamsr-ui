@@ -5,7 +5,7 @@ import { Typography } from "../src/typography";
 const meta = {
   title: "Components/Typography",
   component: Typography,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

@@ -5,7 +5,7 @@ import { Input } from "../src/input";
 const meta = {
   title: "Components/Input",
   component: Input,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

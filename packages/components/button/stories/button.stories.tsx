@@ -5,7 +5,7 @@ import { Button } from "../src/button";
 const meta = {
   title: "Components/Button",
   component: Button,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

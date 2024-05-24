@@ -5,7 +5,7 @@ import { Tooltip } from "../src/tooltip";
 const meta = {
   title: "Components/Tooltip",
   component: Tooltip,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

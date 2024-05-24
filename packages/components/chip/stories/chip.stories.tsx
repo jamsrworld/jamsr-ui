@@ -5,7 +5,7 @@ import { Chip } from "../src/chip";
 const meta = {
   title: "Components/Chip",
   component: Chip,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

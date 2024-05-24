@@ -5,7 +5,7 @@ import { Divider } from "../src/divider";
 const meta = {
   title: "Components/Divider",
   component: Divider,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

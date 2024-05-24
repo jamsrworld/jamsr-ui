@@ -5,7 +5,7 @@ import { Checkbox } from "../src/checkbox";
 const meta = {
   title: "Components/Checkbox",
   component: Checkbox,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

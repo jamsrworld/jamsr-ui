@@ -5,7 +5,7 @@ import { Menu } from "../src/menu";
 const meta = {
   title: "Components/Menu",
   component: Menu,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

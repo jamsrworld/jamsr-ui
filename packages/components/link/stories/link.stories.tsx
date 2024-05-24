@@ -5,7 +5,7 @@ import { Link } from "../src/link";
 const meta = {
   title: "Components/Link",
   component: Link,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

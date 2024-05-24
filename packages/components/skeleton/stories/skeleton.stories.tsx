@@ -5,7 +5,7 @@ import { Skeleton } from "../src/skeleton";
 const meta = {
   title: "Components/Skeleton",
   component: Skeleton,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

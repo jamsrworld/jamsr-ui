@@ -5,7 +5,7 @@ import { Image } from "../src/image";
 const meta = {
   title: "Components/Image",
   component: Image,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

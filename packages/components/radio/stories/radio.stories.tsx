@@ -5,7 +5,7 @@ import { Radio } from "../src/radio";
 const meta = {
   title: "Components/Radio",
   component: Radio,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

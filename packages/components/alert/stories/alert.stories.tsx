@@ -5,7 +5,6 @@ import { Alert } from "../src/alert";
 const meta = {
   title: "Components/Alert",
   component: Alert,
-  tags: ["autodocs"],
   args: {
     onClick: fn(),
   },

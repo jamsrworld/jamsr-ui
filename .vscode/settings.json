@@ -19,11 +19,18 @@
     "clsx",
     "commitlint",
     "jamsr",
+    "jamsrui",
     "jamsrworld",
     "svgr",
     "tailwindcss"
   ],
   "workbench.colorCustomizations": {
     "list.warningForeground": "#00eaffcc"
-  }
+  },
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "tv\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
+      "\"(.*?)\""
+    ]
+  ]
 }

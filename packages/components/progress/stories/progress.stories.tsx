@@ -5,7 +5,7 @@ import { Progress } from "../src/progress";
 const meta = {
   title: "Components/Progress",
   component: Progress,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

@@ -5,7 +5,7 @@ import { Dialog } from "../src/dialog";
 const meta = {
   title: "Components/Dialog",
   component: Dialog,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

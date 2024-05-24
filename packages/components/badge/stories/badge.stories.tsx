@@ -5,7 +5,7 @@ import { Badge } from "../src/badge";
 const meta = {
   title: "Components/Badge",
   component: Badge,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

@@ -33,6 +33,7 @@ export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
       ref={ref}
       {...getBaseProps()}
     >
+      <h1 className="text-zinc-500">Hii h1</h1>
       {Children.map(children, (child, index) => {
         const isOpen = activeIndex === index;
         return (
@@ -49,3 +50,4 @@ export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
     </Component>
   );
 });
+Accordion.displayName = "UI.Accordion";

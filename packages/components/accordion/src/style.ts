@@ -1,4 +1,4 @@
-import { type VariantProps, focusVisibleClasses, tv } from "@jamsr-ui/utils";
+import { focusVisibleClasses, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const accordion = tv({
   base: "flex flex-col gap-2",

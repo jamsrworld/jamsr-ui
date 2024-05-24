@@ -5,7 +5,7 @@ import { Avatar } from "../src/avatar";
 const meta = {
   title: "Components/Avatar",
   component: Avatar,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

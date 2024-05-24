@@ -5,7 +5,7 @@ import { OTPInput } from "../src/otp-input";
 const meta = {
   title: "Components/OTPInput",
   component: OTPInput,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

@@ -5,7 +5,7 @@ import { Tab } from "../src/tab";
 const meta = {
   title: "Components/Tab",
   component: Tab,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

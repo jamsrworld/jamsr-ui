@@ -5,7 +5,7 @@ import { Card } from "../src/card";
 const meta = {
   title: "Components/Card",
   component: Card,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

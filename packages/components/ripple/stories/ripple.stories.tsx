@@ -5,7 +5,7 @@ import { Ripple } from "../src/ripple";
 const meta = {
   title: "Components/Ripple",
   component: Ripple,
-  tags: ["autodocs"],
+  
   args: {
     onClick: fn(),
   },

@@ -8,8 +8,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
-    "publish-packages": "turbo run build lint test && changeset version && changeset publish",
-    "changeset:publish": "turbo run build && npx changeset publish"
+    "publish-packages": "turbo run build && changeset && changeset version && changeset publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

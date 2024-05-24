@@ -1,5 +1,31 @@
 # web
 
+## 0.1.8
+
+### Patch Changes
+
+- fix tv export
+- Updated dependencies
+  - @jamsr-ui/react@0.0.8
+  - @jamsr-ui/theme@0.0.4
+
+## 0.1.7
+
+### Patch Changes
+
+- fix scrips in missing packages
+- Updated dependencies
+  - @jamsr-ui/react@0.0.7
+  - @jamsr-ui/theme@0.0.3
+
+## 0.1.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/react@0.0.6
+  - @jamsr-ui/theme@0.0.2
+
 ## 0.1.5
 
 ### Patch Changes

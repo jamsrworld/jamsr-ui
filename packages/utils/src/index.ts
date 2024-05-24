@@ -7,3 +7,4 @@ export * from "./tv";
 export * from "./component";
 export { cn } from "./class-name";
 export * from "./classes";
+export * from "tailwind-variants";

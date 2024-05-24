@@ -40,5 +40,3 @@ export const mapPropsVariants = <
 export type SlotsToClasses<S extends string> = {
   [key in S]?: ClassNameValue;
 };
-
-export * from "tailwind-variants";

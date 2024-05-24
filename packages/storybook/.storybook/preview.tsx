@@ -1,5 +1,6 @@
 import { JamsrUIProvider } from "@jamsr-ui/react";
 import type { Preview } from "@storybook/react";
+import { themes } from "@storybook/theming";
 import "../src/style.css";
 
 const decorators: Preview["decorators"] = [
@@ -36,12 +37,15 @@ const preview: Preview = {
       lightClass: "light",
       classTarget: "html",
       dark: {
+        ...themes.dark,
         appBg: "#000000",
         barBg: "#000000",
-        background: "#000000",
+        base: "red",
         appContentBg: "#000000",
       },
-      light: {},
+      light: {
+        ...themes.normal,
+      },
     },
   },
   tags: ["autodocs"],

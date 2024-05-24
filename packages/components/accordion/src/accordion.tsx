@@ -7,7 +7,7 @@ import {
 import { useAccordion, type UseAccordionProps } from "./use-accordion";
 
 export const ItemProvider = (
-  props: NonNullable<AccordionContextType> & {
+  props: AccordionContextType & {
     children: React.ReactNode;
   },
 ) => {

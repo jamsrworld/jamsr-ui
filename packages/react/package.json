@@ -1,10 +1,18 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.2",
   "main": "./src/index.tsx",
   "description": "A react js ui library with tailwindcss",
   "type": "module",
+  "keywords": [],
+  "author": "@adityaa72",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "test": "vitest",

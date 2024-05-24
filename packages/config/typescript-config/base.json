@@ -26,6 +26,6 @@
         "name": "next"
       }
     ],
-    "incremental": true
+    "incremental": false
   }
 }

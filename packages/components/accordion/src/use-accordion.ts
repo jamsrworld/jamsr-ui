@@ -10,7 +10,7 @@ export type UseAccordionProps = UIProps<"div"> & Props;
 
 export const useAccordion = (props: UseAccordionProps) => {
   const { as, children, className, ...restProps } = props;
-  const Component = as || "div";
+  const Component = as ?? "div";
 
   const slots = useMemo(
     () =>

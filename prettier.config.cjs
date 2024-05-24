@@ -9,7 +9,7 @@ const config = {
   bracketSpacing: true,
   tabWidth: 2,
   useTabs: false,
-  printWidth: 100,
+  printWidth: 80,
   semi: true,
 };
 

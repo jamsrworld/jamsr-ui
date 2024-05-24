@@ -45,7 +45,13 @@ module.exports = {
       // These are the default values but feel free to customize
       callees: ["classnames", "clsx", "ctl", "cn"],
       config: "tailwind.config.js", // returned from `loadConfig()` utility if not provided
-      cssFiles: ["**/*.css", "!**/node_modules", "!**/.*", "!**/dist", "!**/build"],
+      cssFiles: [
+        "**/*.css",
+        "!**/node_modules",
+        "!**/.*",
+        "!**/dist",
+        "!**/build",
+      ],
       cssFilesRefreshRate: 5_000,
       removeDuplicates: true,
       skipClassAttribute: false,
@@ -79,5 +85,7 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "arrow-body-style": "off",
     "@typescript-eslint/no-shadow": "off",
+    "no-array-index-key": "off",
+    "no-param-reassign": "off",
   },
 };

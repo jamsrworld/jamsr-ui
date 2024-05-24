@@ -1,7 +1,8 @@
 {
   "extends": "@jamsr-ui/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "incremental": false
   },
   "include": ["**/*.tsx", "*.ts", ".*.cjs", "*.mjs"],
   "exclude": ["node_modules", "dist"]

@@ -2,13 +2,15 @@
   "name": "@jamsr-ui/react",
   "version": "0.0.0",
   "private": true,
-  "main": "./src/index.tsx",
+  "main": "./dist/index.js",
+  "description": "A react js ui library with tailwindcss",
   "type": "module",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "ts-check": "tsc --noEmit && eslint . --fix"
+    "ts-check": "tsc --noEmit && eslint . --fix",
+    "build": "tsup"
   },
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:*",
@@ -27,6 +29,7 @@
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "tailwindcss": "^3.4.3",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3",
     "vitest": "^1.6.0"
   },

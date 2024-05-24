@@ -22,7 +22,8 @@
     "jamsrui",
     "jamsrworld",
     "svgr",
-    "tailwindcss"
+    "tailwindcss",
+    "tsup"
   ],
   "workbench.colorCustomizations": {
     "list.warningForeground": "#00eaffcc"

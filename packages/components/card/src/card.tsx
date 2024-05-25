@@ -1,14 +1,55 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { CircularProgress, LinearProgress } from "@jamsr-ui/progress";
+import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import {
+  forwardRef,
+  type ComponentPropsWithoutRef,
+  type ForwardedRef,
+} from "react";
+import { cardVariants, type CardVariants } from "./style";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type CardProps = ComponentPropsWithoutRef<"div"> &
+  CardVariants & {
+    isPending?: boolean;
+    isLoading?: boolean;
+  };
 
-export const Card = (props: Props) => {
+const CardInner = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, CardProps>,
+  ref: ForwardedRef<HTMLDivElement>,
+) => {
+  const {
+    as,
+    className,
+    variant,
+    isPending = false,
+    children,
+    isLoading = false,
+    bg,
+    bordered,
+    ...restProps
+  } = props;
+  const Component = as ?? "div";
   return (
-    <div
-      className="bg-blue-50"
-      {...props}
+    <Component
+      data-component="card"
+      ref={ref}
+      className={cn(cardVariants({ variant, bg, className, bordered }))}
+      {...restProps}
     >
-      Card
-    </div>
+      {isLoading && (
+        <LinearProgress
+          className="absolute inset-0"
+          isIntermediate
+        />
+      )}
+      {isPending && (
+        <div className="absolute inset-0 z-10 grid size-full place-content-center bg-black/50">
+          <CircularProgress />
+        </div>
+      )}
+      {children}
+    </Component>
   );
 };
+
+export const Card = forwardRef(CardInner);

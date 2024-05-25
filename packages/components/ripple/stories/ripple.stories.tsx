@@ -5,7 +5,6 @@ import { Ripple } from "../src/ripple";
 const meta = {
   title: "Components/Ripple",
   component: Ripple,
-  
   args: {
     onClick: fn(),
   },
@@ -14,6 +13,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: { children: "Primary" },
+const Template = () => {
+  return (
+    <div className="grid h-full place-items-center">
+      <Ripple />
+      Click anywhere
+    </div>
+  );
+};
+
+export const Default: Story = {
+  args: {},
+  render: Template,
 };

@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/card": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }

@@ -1,19 +1,31 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Progress } from "../src/progress";
+import { CircularProgress, LinearProgress as LinearProgressUI } from "../src";
 
 const meta = {
   title: "Components/Progress",
-  component: Progress,
-  
+  component: CircularProgress,
+
   args: {
     onClick: fn(),
   },
-} satisfies Meta<typeof Progress>;
+} satisfies Meta<typeof CircularProgress>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: { children: "Primary" },
+export const Default: Story = {
+  args: {},
+};
+
+export const LinearProgress: Story = {
+  args: {},
+  render: () => {
+    return (
+      <div className="grid gap-2">
+        <LinearProgressUI progress={90} />
+        <LinearProgressUI isIntermediate />
+      </div>
+    );
+  },
 };

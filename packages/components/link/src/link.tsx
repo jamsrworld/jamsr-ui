@@ -1,14 +1,26 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithAs, cn, focusVisibleClasses } from "@jamsr-ui/utils";
+import { forwardRef, type ForwardedRef } from "react";
 
-type Props = ComponentPropsWithoutRef<"div">;
-
-export const Link = (props: Props) => {
+type LinkProps = { children: React.ReactNode };
+export const LinkInner = <T extends React.ElementType = "a">(
+  props: ComponentPropsWithAs<T, LinkProps>,
+  ref: ForwardedRef<HTMLAnchorElement>,
+) => {
+  const { as, children, className, ...restProps } = props;
+  const Component = as ?? "a";
   return (
-    <div
-      className="bg-blue-50"
-      {...props}
+    <Component
+      className={cn(
+        "cursor-pointer text-sm text-primary hover:text-primary-dark",
+        focusVisibleClasses,
+        className,
+      )}
+      ref={ref}
+      {...restProps}
     >
-      Link
-    </div>
+      {children}
+    </Component>
   );
 };
+
+export const Link = forwardRef(LinkInner);

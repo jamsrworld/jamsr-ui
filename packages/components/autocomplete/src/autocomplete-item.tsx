@@ -20,7 +20,7 @@ export const AutocompleteItem = forwardRef<
       id={id}
       aria-selected={active}
       className={cn(
-        "flex w-full cursor-pointer select-none items-center gap-2 rounded-md p-2 text-sm hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
+        "flex w-full cursor-pointer select-none items-center gap-2 rounded-md p-2 text-sm text-foreground hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
         className,
         {
           "bg-content1": active,

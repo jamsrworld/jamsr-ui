@@ -231,6 +231,9 @@ importers:
       '@jamsr-ui/ripple':
         specifier: workspace:^
         version: link:../ripple
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -250,6 +253,9 @@ importers:
 
   packages/components/card:
     dependencies:
+      '@jamsr-ui/progress':
+        specifier: workspace:^
+        version: link:../progress
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography
@@ -373,6 +379,34 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
 
+  packages/components/drawer:
+    dependencies:
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
+    devDependencies:
+      '@jamsr-ui/tailwind-config':
+        specifier: workspace:^
+        version: link:../../config/tailwind-config
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.3
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
   packages/components/header:
     dependencies:
       '@jamsr-ui/divider':
@@ -488,6 +522,9 @@ importers:
       '@floating-ui/react':
         specifier: ^0.26.16
         version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../icons
@@ -542,9 +579,18 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
         version: link:../../config/tailwind-config
+      '@jamsr-ui/typography':
+        specifier: workspace:^
+        version: link:../typography
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
@@ -701,6 +747,9 @@ importers:
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
+      '@jamsr-ui/card':
+        specifier: workspace:^
+        version: link:../card
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
@@ -729,6 +778,12 @@ importers:
       '@floating-ui/react':
         specifier: ^0.26.16
         version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -884,9 +939,6 @@ importers:
       '@jamsr-ui/header':
         specifier: workspace:^
         version: link:../components/header
-      '@jamsr-ui/image':
-        specifier: workspace:^
-        version: link:../components/image
       '@jamsr-ui/image-upload':
         specifier: workspace:^
         version: link:../components/image-upload

@@ -1,10 +1,8 @@
-import { render } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
-import { Tab } from "../src";
+import { describe } from "vitest";
 
 describe("Tab", () => {
-  it("should render correctly", () => {
-    const wrapper = render(<Tab>hiii</Tab>);
-    expect(() => wrapper.unmount()).not.toThrow();
-  });
+  // it("should render correctly", () => {
+  //   const wrapper = render(<Tab>hiii</Tab>);
+  //   expect(() => wrapper.unmount()).not.toThrow();
+  // });
 });

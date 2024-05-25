@@ -10,7 +10,6 @@ export * from "@jamsr-ui/chip";
 export * from "@jamsr-ui/dialog";
 export * from "@jamsr-ui/divider";
 export * from "@jamsr-ui/header";
-export * from "@jamsr-ui/image";
 export * from "@jamsr-ui/image-upload";
 export * from "@jamsr-ui/input";
 export * from "@jamsr-ui/link";

@@ -1,11 +1,12 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
+import { useState } from "react";
 import { Checkbox } from "../src/checkbox";
 
 const meta = {
   title: "Components/Checkbox",
   component: Checkbox,
-  
+
   args: {
     onClick: fn(),
   },
@@ -14,6 +15,21 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: { children: "Primary" },
+export const Default: Story = {
+  args: { label: "I am a checkbox" },
+};
+
+const ControlledCheckbox = () => {
+  const [checked, setChecked] = useState(false);
+  return (
+    <Checkbox
+      label="Controlled Checkbox"
+      checked={checked}
+      onCheckedChange={setChecked}
+    />
+  );
+};
+
+export const Controlled: Story = {
+  render: ControlledCheckbox,
 };

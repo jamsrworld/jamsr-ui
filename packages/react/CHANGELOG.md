@@ -18,7 +18,6 @@
   - @jamsr-ui/dialog@0.0.6
   - @jamsr-ui/divider@0.0.6
   - @jamsr-ui/header@0.0.6
-  - @jamsr-ui/image@0.0.6
   - @jamsr-ui/image-upload@0.0.6
   - @jamsr-ui/input@0.0.6
   - @jamsr-ui/link@0.0.6
@@ -62,7 +61,6 @@
   - @jamsr-ui/switch@0.0.5
   - @jamsr-ui/alert@0.0.5
   - @jamsr-ui/badge@0.0.5
-  - @jamsr-ui/image@0.0.5
   - @jamsr-ui/input@0.0.5
   - @jamsr-ui/radio@0.0.5
   - @jamsr-ui/card@0.0.5
@@ -98,7 +96,6 @@
   - @jamsr-ui/switch@0.0.4
   - @jamsr-ui/alert@0.0.4
   - @jamsr-ui/badge@0.0.4
-  - @jamsr-ui/image@0.0.4
   - @jamsr-ui/input@0.0.4
   - @jamsr-ui/radio@0.0.4
   - @jamsr-ui/card@0.0.4
@@ -126,7 +123,6 @@
   - @jamsr-ui/dialog@0.0.3
   - @jamsr-ui/divider@0.0.3
   - @jamsr-ui/header@0.0.3
-  - @jamsr-ui/image@0.0.3
   - @jamsr-ui/image-upload@0.0.3
   - @jamsr-ui/input@0.0.3
   - @jamsr-ui/link@0.0.3
@@ -170,7 +166,6 @@
   - @jamsr-ui/switch@0.0.2
   - @jamsr-ui/alert@0.0.2
   - @jamsr-ui/badge@0.0.2
-  - @jamsr-ui/image@0.0.2
   - @jamsr-ui/input@0.0.2
   - @jamsr-ui/radio@0.0.2
   - @jamsr-ui/card@0.0.2
@@ -215,7 +210,6 @@
   - @jamsr-ui/dialog@0.0.1
   - @jamsr-ui/divider@0.0.1
   - @jamsr-ui/header@0.0.1
-  - @jamsr-ui/image@0.0.1
   - @jamsr-ui/image-upload@0.0.1
   - @jamsr-ui/input@0.0.1
   - @jamsr-ui/link@0.0.1

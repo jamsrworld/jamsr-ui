@@ -27,6 +27,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@jamsr-ui/progress": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }

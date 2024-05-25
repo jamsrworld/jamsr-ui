@@ -1,8 +1,8 @@
 import { describe } from "vitest";
 
-describe("Popover", () => {
+describe("Divider", () => {
   // it("should render correctly", () => {
-  //   const wrapper = render(<Popover>hiii</Popover>);
+  //   const wrapper = render(<Drawer>hiii</Drawer>);
   //   expect(() => wrapper.unmount()).not.toThrow();
   // });
 });

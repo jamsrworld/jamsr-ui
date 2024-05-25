@@ -17,7 +17,10 @@
     "build": "tsup"
   },
   "devDependencies": {
+    "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/tailwind-config": "workspace:^",
+    "@jamsr-ui/typography": "workspace:^",
     "@types/react": "^18.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

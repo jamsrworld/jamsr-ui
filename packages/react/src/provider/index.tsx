@@ -21,8 +21,7 @@ export const JamsrUIProvider = (props: Props) => {
   const { children } = props;
   return (
     <div
-      // eslint-disable-next-line tailwindcss/no-custom-classname
-      className="dark"
+      className="bg-background text-foreground dark"
       id="app"
     >
       <FramerMotionProvider>{children}</FramerMotionProvider>

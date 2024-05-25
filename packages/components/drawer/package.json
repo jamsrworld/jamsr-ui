@@ -1,6 +1,6 @@
 {
-  "name": "@jamsr-ui/image",
-  "version": "0.0.6",
+  "name": "drawer",
+  "version": "1.0.0",
   "description": "",
   "main": "./src/index.ts",
   "keywords": [],
@@ -19,14 +19,18 @@
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.2",
+    "framer-motion": "^11.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "peerDependencies": {
+    "framer-motion": "^11.2.6",
     "react": ">=18",
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }
 }

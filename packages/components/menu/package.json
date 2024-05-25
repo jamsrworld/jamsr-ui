@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.16",
+    "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }

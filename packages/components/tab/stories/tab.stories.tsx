@@ -1,19 +1,52 @@
+import { Card, CardContent } from "@jamsr-ui/card";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { Tab } from "../src/tab";
+import { Tab, Tabs } from "../src";
 
 const meta = {
   title: "Components/Tab",
   component: Tab,
-  
-  args: {
-    onClick: fn(),
-  },
 } satisfies Meta<typeof Tab>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: { children: "Primary" },
+const content = (
+  <Card>
+    <CardContent>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </CardContent>
+  </Card>
+);
+
+const Template = () => {
+  return (
+    <Tabs defaultValue="photos">
+      <Tab
+        value="photos"
+        title="Photos"
+      >
+        {content}
+      </Tab>
+      <Tab
+        value="music"
+        title="Music"
+      >
+        {content}
+      </Tab>
+      <Tab
+        value="videos"
+        title="Videos"
+      >
+        {content}
+      </Tab>
+    </Tabs>
+  );
+};
+
+export const Default: Story = {
+  args: {},
+  render: Template,
 };

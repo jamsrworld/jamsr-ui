@@ -1,19 +1,31 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import { useState } from "react";
 import { Input } from "../src/input";
 
 const meta = {
   title: "Components/Input",
   component: Input,
-  
-  args: {
-    onClick: fn(),
-  },
 } satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: { children: "Primary" },
+export const Default: Story = {
+  args: { label: "Form label" },
+};
+
+const ControlledInput = () => {
+  const [value, setValue] = useState("");
+  return (
+    <Input
+      label="Form Label"
+      value={value}
+      onValueChange={setValue}
+    />
+  );
+};
+
+export const Controlled: Story = {
+  args: {},
+  render: ControlledInput,
 };

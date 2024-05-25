@@ -5,7 +5,7 @@ import { Avatar } from "../src/avatar";
 const meta = {
   title: "Components/Avatar",
   component: Avatar,
-  
+
   args: {
     onClick: fn(),
   },
@@ -15,5 +15,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { children: "Primary" },
+  args: {
+    alt: "img",
+    className: "flex",
+    src: "http://placekitten.com/200/300",
+  },
 };

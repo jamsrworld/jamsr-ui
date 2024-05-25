@@ -1,4 +1,4 @@
-export { Dialog } from "./dialog";
+export { Dialog, type DialogProps } from "./dialog";
 export { DialogBody } from "./dialog-body";
 export { DialogContent } from "./dialog-content";
 export { DialogFooter } from "./dialog-footer";

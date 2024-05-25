@@ -1,19 +1,17 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { Switch } from "../src/switch";
 
 const meta = {
   title: "Components/Switch",
   component: Switch,
-  
-  args: {
-    onClick: fn(),
-  },
 } satisfies Meta<typeof Switch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: { children: "Primary" },
+const DefaultSwitch = () => <Switch label="I'm a switch" />;
+
+export const Default: Story = {
+  render: DefaultSwitch,
+  args: {},
 };

@@ -5,10 +5,7 @@ import {
 } from "react";
 import { badgeVariants, type BadgeVariants } from "./style";
 
-export type BadgeProps = BadgeVariants &
-  ComponentPropsWithoutRef<"div"> & {
-    children: React.ReactNode;
-  };
+export type BadgeProps = BadgeVariants & ComponentPropsWithoutRef<"div">;
 
 export const Badge = forwardRef(
   (props: BadgeProps, ref: ForwardedRef<HTMLDivElement>) => {

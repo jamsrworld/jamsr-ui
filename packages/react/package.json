@@ -55,7 +55,6 @@
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
     "@jamsr-ui/header": "workspace:^",
-    "@jamsr-ui/image": "workspace:^",
     "@jamsr-ui/image-upload": "workspace:^",
     "@jamsr-ui/input": "workspace:^",
     "@jamsr-ui/link": "workspace:^",

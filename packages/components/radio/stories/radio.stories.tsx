@@ -1,19 +1,17 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { Radio } from "../src/radio";
+import { Radio, type RadioProps } from "../src";
 
 const meta = {
   title: "Components/Radio",
   component: Radio,
-  
-  args: {
-    onClick: fn(),
-  },
 } satisfies Meta<typeof Radio>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const Template = (props: RadioProps) => (
+  <Radio {...props}>This is a radio</Radio>
+);
 export const Primary: Story = {
-  args: { children: "Primary" },
+  render: Template,
 };

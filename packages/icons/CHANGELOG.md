@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.6
+
+### Patch Changes
+
+- fix tailwind eslint tsconfig files
+
 ## 0.0.5
 
 ### Patch Changes

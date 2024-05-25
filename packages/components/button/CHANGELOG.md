@@ -1,5 +1,13 @@
 # @jamsr-ui/button
 
+## 0.0.6
+
+### Patch Changes
+
+- fix tailwind eslint tsconfig files
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.5
+
 ## 0.0.5
 
 ### Patch Changes

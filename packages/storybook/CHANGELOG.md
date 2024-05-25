@@ -1,5 +1,13 @@
 # @jamsr-ui/storybook
 
+## 0.0.9
+
+### Patch Changes
+
+- fix tailwind eslint tsconfig files
+- Updated dependencies
+  - @jamsr-ui/react@0.0.9
+
 ## 0.0.8
 
 ### Patch Changes

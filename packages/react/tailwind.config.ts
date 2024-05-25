@@ -1,5 +1,4 @@
-import type { Config } from "tailwindcss";
-import sharedConfig from "@jamsr-ui/tailwind-config";
+import { sharedConfig, type Config } from "@jamsr-ui/tailwind-config";
 
 const config: Pick<Config, "prefix" | "presets" | "content"> = {
   content: ["./src/**/*.tsx"],

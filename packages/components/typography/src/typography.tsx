@@ -1,14 +1,32 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { type UIProps, forwardRefUI } from "@jamsr-ui/utils";
+import { typographyVariants, type TypographyVariants } from "./style";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type TypographyProps = UIProps<"p"> & TypographyVariants;
 
-export const Typography = (props: Props) => {
+export const Typography = forwardRefUI<"p", TypographyProps>((props, ref) => {
+  const {
+    as,
+    className,
+    variant,
+    spaced,
+    gutterBottom,
+    gradient,
+    fontSize,
+    ...restProps
+  } = props;
+  const Component = as ?? "p";
   return (
-    <div
-      className="bg-blue-50"
-      {...props}
-    >
-      Typography
-    </div>
+    <Component
+      ref={ref}
+      className={typographyVariants({
+        variant,
+        spaced,
+        gutterBottom,
+        gradient,
+        fontSize,
+        className,
+      })}
+      {...restProps}
+    />
   );
-};
+});

@@ -1,14 +1,36 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { isEmpty, type UIProps } from "@jamsr-ui/utils";
+import { avatarVariants, type AvatarVariants } from "./style";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type AvatarProps = {
+  alt: string;
+  placeholderType?: "avatar" | "name";
+} & AvatarVariants &
+  UIProps<"img">;
 
-export const Avatar = (props: Props) => {
+export const Avatar = (props: AvatarProps) => {
+  const {
+    size,
+    alt,
+    src,
+    bordered,
+    className,
+    placeholderType = "avatar",
+    ...restProps
+  } = props;
+  const source = !isEmpty(src)
+    ? src
+    : `https://avatar.iran.liara.run/${placeholderType === "avatar" ? "public" : "username"}?username=${alt}`;
   return (
-    <div
-      className="bg-blue-50"
-      {...props}
-    >
-      Avatar
-    </div>
+    <img
+      src={source}
+      alt={alt}
+      className={avatarVariants({
+        size,
+        bordered,
+        className,
+      })}
+      sizes="100vw"
+      {...restProps}
+    />
   );
 };

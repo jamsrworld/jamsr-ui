@@ -1,17 +1,38 @@
-import { cn } from "@jamsr-ui/utils";
-import { type ComponentPropsWithoutRef } from "react";
+import { forwardRefUI } from "@jamsr-ui/utils";
+import { useButton, type UseButtonProps } from "./use-button";
 
-type Props = ComponentPropsWithoutRef<"button">;
+export type ButtonProps = UseButtonProps;
+export const Button = forwardRefUI<"button", ButtonProps>((props, ref) => {
+  const {
+    Component,
+    children,
+    endContent,
+    getButtonProps,
+    spinnerPlacement,
+    isIconOnly,
+    isLoading,
+    startContent,
+    styles,
+    isDisabled,
+    isContinue,
+    disableRipple,
+  } = useButton({ ...props });
 
-export const Button = (props: Props) => {
-  const { className, ...restProps } = props;
+  const spinner = <CircularProgress />;
+  const endContentWithContinue = isContinue ? <ArrowIcons.Right /> : endContent;
   return (
-    <button
-      type="button"
-      className={cn("bg-blue-50", className)}
-      {...restProps}
+    <Component
+      ref={ref}
+      className={styles}
+      {...getButtonProps()}
     >
-      Button
-    </button>
+      {isLoading && spinnerPlacement === "start" ? spinner : startContent}
+      {isLoading && isIconOnly ? null : children}
+      {isLoading && spinnerPlacement === "end"
+        ? spinner
+        : endContentWithContinue}
+      {!isDisabled && !disableRipple && <Ripple />}
+    </Component>
   );
-};
+});
+Button.displayName = "UI.Button";

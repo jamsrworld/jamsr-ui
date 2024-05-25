@@ -1,1 +1,2 @@
-export {Progress} from "./progress";
+export { CircularProgress } from "./circular-progress";
+export { LinearProgress } from "./progress";

@@ -1,14 +1,30 @@
-import { type ComponentPropsWithoutRef } from "react";
+import {
+  forwardRef,
+  type ComponentPropsWithoutRef,
+  type ForwardedRef,
+} from "react";
+import { badgeVariants, type BadgeVariants } from "./style";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type BadgeProps = BadgeVariants &
+  ComponentPropsWithoutRef<"div"> & {
+    children: React.ReactNode;
+  };
 
-export const Badge = (props: Props) => {
-  return (
-    <div
-      className="bg-blue-50"
-      {...props}
-    >
-      Badge
-    </div>
-  );
-};
+export const Badge = forwardRef(
+  (props: BadgeProps, ref: ForwardedRef<HTMLDivElement>) => {
+    const { children, className, color, size, ...restProps } = props;
+    return (
+      <div
+        ref={ref}
+        className={badgeVariants({
+          color,
+          className,
+          size,
+        })}
+        {...restProps}
+      >
+        {children}
+      </div>
+    );
+  },
+);

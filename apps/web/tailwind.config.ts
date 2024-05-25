@@ -1,4 +1,4 @@
-import sharedConfig from "@jamsr-ui/tailwind-config";
+import { sharedConfig } from "@jamsr-ui/tailwind-config";
 import { jamsrui } from "@jamsr-ui/theme";
 import type { Config } from "tailwindcss";
 

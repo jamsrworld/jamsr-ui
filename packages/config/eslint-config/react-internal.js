@@ -43,8 +43,7 @@ module.exports = {
     },
     tailwindcss: {
       // These are the default values but feel free to customize
-      callees: ["classnames", "clsx", "ctl", "cn"],
-      config: "tailwind.config.js", // returned from `loadConfig()` utility if not provided
+      callees: ["classnames", "clsx", "cn", "tv"],
       cssFiles: [
         "**/*.css",
         "!**/node_modules",
@@ -87,5 +86,6 @@ module.exports = {
     "@typescript-eslint/no-shadow": "off",
     "no-array-index-key": "off",
     "no-param-reassign": "off",
+    "react/require-default-props": "off",
   },
 };

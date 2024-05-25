@@ -25,5 +25,11 @@
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.26.16",
+    "@jamsr-ui/hooks": "workspace:^",
+    "@jamsr-ui/shared-icons": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^"
   }
 }

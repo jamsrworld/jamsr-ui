@@ -131,6 +131,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../icons
+      '@jamsr-ui/typography':
+        specifier: workspace:^
+        version: link:../typography
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -149,6 +152,19 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/autocomplete:
+    dependencies:
+      '@floating-ui/react':
+        specifier: ^0.26.16
+        version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -164,6 +180,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/avatar:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -179,6 +199,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/badge:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -213,6 +237,13 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/card:
+    dependencies:
+      '@jamsr-ui/typography':
+        specifier: workspace:^
+        version: link:../typography
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -228,6 +259,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/checkbox:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -243,6 +278,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/chip:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -258,6 +297,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/dialog:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -273,6 +316,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/divider:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -288,6 +335,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/header:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -303,6 +354,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/image:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -318,6 +373,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/image-upload:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -333,6 +392,13 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/input:
+    dependencies:
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -348,6 +414,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/link:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -363,6 +433,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/menu:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -378,6 +452,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/otp-input:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -393,6 +471,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/popover:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -408,6 +490,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/progress:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -415,6 +501,9 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -423,6 +512,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/radio:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -438,6 +531,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/ripple:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -453,6 +550,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/select:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -468,6 +569,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/skeleton:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -483,6 +588,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/switch:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -498,6 +607,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/tab:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -513,6 +626,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/tooltip:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -528,6 +645,10 @@ importers:
         version: 18.3.1(react@18.3.1)
 
   packages/components/typography:
+    dependencies:
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -604,6 +725,15 @@ importers:
         version: 5.4.5
 
   packages/config/typescript-config: {}
+
+  packages/hooks:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
 
   packages/icons:
     devDependencies:
@@ -2155,6 +2285,27 @@ packages:
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2':
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
+
+  '@floating-ui/core@1.6.2':
+    resolution: {integrity: sha512-+2XpQV9LLZeanU4ZevzRnGFg2neDeKHgFLjP6YLW+tly0IvrhqT4u8enLGjLH3qeh85g19xY5rsAusfwTdn5lg==}
+
+  '@floating-ui/dom@1.6.5':
+    resolution: {integrity: sha512-Nsdud2X65Dz+1RHjAIP0t8z5e2ff/IRbei6BqFrl1urT8sDVzM1HMQ+R0XcU5ceRfyO3I6ayeqIfh+6Wb8LGTw==}
+
+  '@floating-ui/react-dom@2.1.0':
+    resolution: {integrity: sha512-lNzj5EQmEKn5FFKc04+zasr09h/uX8RtJRNj5gUXsSQIXHVWTVh+hVAg1vOMCexkX8EgvemMvIFpQfkosnVNyA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@floating-ui/react@0.26.16':
+    resolution: {integrity: sha512-HEf43zxZNAI/E781QIVpYSF3K2VH4TTYZpqecjdsFkjsaU1EbaWcM++kw0HXFffj7gDUcBFevX8s0rQGQpxkow==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@floating-ui/utils@0.2.2':
+    resolution: {integrity: sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -6452,6 +6603,9 @@ packages:
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
+  tabbable@6.2.0:
+    resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
+
   tailwind-merge@2.3.0:
     resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}
 
@@ -8549,6 +8703,31 @@ snapshots:
   '@eslint/js@8.57.0': {}
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2': {}
+
+  '@floating-ui/core@1.6.2':
+    dependencies:
+      '@floating-ui/utils': 0.2.2
+
+  '@floating-ui/dom@1.6.5':
+    dependencies:
+      '@floating-ui/core': 1.6.2
+      '@floating-ui/utils': 0.2.2
+
+  '@floating-ui/react-dom@2.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@floating-ui/dom': 1.6.5
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@floating-ui/react@0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@floating-ui/react-dom': 2.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@floating-ui/utils': 0.2.2
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tabbable: 6.2.0
+
+  '@floating-ui/utils@0.2.2': {}
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -14098,6 +14277,8 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   symbol-tree@3.2.4: {}
+
+  tabbable@6.2.0: {}
 
   tailwind-merge@2.3.0:
     dependencies:

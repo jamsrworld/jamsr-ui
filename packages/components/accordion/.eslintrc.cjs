@@ -1,4 +1,3 @@
-/** @type {import("eslint").Linter.Config} */
 const config = {
   root: true,
   extends: ["@jamsr-ui/eslint-config/react-internal.js"],

@@ -1,7 +1,9 @@
+import { jamsrui } from "@jamsr-ui/theme";
 import type { Config } from "tailwindcss";
 
 // We want each package to be responsible for its own content.
-const config: Omit<Config, "content"> = {
-  plugins: [],
+export const sharedConfig: Omit<Config, "content"> = {
+  plugins: [...jamsrui()],
 };
-export default config;
+
+export type { Config };

@@ -6,6 +6,8 @@ import {
 } from "./accordion-context";
 import { useAccordion, type UseAccordionProps } from "./use-accordion";
 
+let a = 3;
+
 export const ItemProvider = (
   props: AccordionContextType & {
     children: React.ReactNode;

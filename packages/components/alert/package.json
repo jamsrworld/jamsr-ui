@@ -16,7 +16,8 @@
   "scripts": {
     "build": "tsup"
   },
-  "devDependencies": {
+   "devDependencies": {
+    "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -26,6 +27,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@jamsr-ui/utils": "workspace:^"
+    "@jamsr-ui/utils": "workspace:^",
+    "@jamsr-ui/shared-icons": "workspace:^"
   }
 }

@@ -1,6 +1,6 @@
 import { type SVGProps } from "react";
 
-const DoubleLeft = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronDoubleLeft = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -18,7 +18,7 @@ const DoubleLeft = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const DoubleRight = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronDoubleRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -36,7 +36,7 @@ const DoubleRight = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const Down = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronDown = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={24}
     height={24}
@@ -53,7 +53,7 @@ const Down = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const Left = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronLeft = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={24}
     height={24}
@@ -70,7 +70,7 @@ const Left = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const Up = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronUp = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={24}
     height={24}
@@ -87,7 +87,7 @@ const Up = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const Right = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     width={24}
     height={24}
@@ -104,11 +104,34 @@ const Right = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ChevronIcons = {
-  Up,
-  Down,
-  Left,
-  Right,
-  DoubleLeft,
-  DoubleRight,
-};
+export const Info = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <circle
+      cx={12}
+      cy={12}
+      r={10}
+      stroke="currentColor"
+      strokeWidth={1.5}
+    />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M11.992 15h.009"
+    />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M12 12V8"
+    />
+  </svg>
+);

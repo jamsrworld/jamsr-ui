@@ -11,6 +11,7 @@
   "author": "@adityaa72",
   "license": "MIT",
   "devDependencies": {
+    "@jamsr-ui/theme": "workspace:^",
     "@types/node": "^20.11.24",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.3.3"

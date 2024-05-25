@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "@jamsr-ui/storybook",
   "private": true,
   "version": "0.0.8",
   "type": "module",
@@ -40,7 +40,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8.4.38",
-    "storybook": "^0.0.8",
+    "storybook": "^8.1.1",
     "storybook-dark-mode": "^4.0.1",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2",

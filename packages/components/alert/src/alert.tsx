@@ -1,17 +1,23 @@
-import { forwardRefUI } from "@jamsr-ui/utils";
-import { type ComponentPropsWithoutRef } from "react";
+import { Info } from "@jamsr-ui/shared-icons";
+import { forwardRefUI, type UIProps } from "@jamsr-ui/utils";
+import { alertVariant, type AlertVariantProps } from "./style";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type AlertProps = UIProps<"div"> & AlertVariantProps;
 
-export const Alert = forwardRefUI<"div", Props>((props, ref) => {
+export const Alert = forwardRefUI<"div", AlertProps>((props, ref) => {
+  const { children, severity, as, className, ...restProps } = props;
+  const styles = alertVariant({ severity });
+
+  const Component = as ?? "div";
   return (
-    <div
+    <Component
       ref={ref}
-      className="bg-blue-50"
-      {...props}
+      className={styles.wrapper({ className })}
+      {...restProps}
     >
-      Alert
-    </div>
+      <Info className="shrink-0" />
+      <div className={styles.message()}>{children}</div>
+    </Component>
   );
 });
 Alert.displayName = "UI.Alert";

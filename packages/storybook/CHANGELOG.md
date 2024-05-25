@@ -1,4 +1,10 @@
-# @jamsr-ui/storybook
+# @ui/storybook
+
+## 0.0.10
+
+### Patch Changes
+
+- changed name
 
 ## 0.0.9
 

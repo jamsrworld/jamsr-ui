@@ -6,6 +6,21 @@ export const sharedConfig: Omit<Config, "content"> = {
   plugins: [...jamsrui()],
   theme: {
     extend: {
+      borderRadius: {
+        inherit: "inherit",
+      },
+      zIndex: {
+        "1": "1",
+        "-1": "-1",
+        backdrop: "98",
+        popover: "99",
+        dialog: "99",
+        header: "50",
+        drawer: "60",
+      },
+      boxShadow: {
+        card: "inset 0 0 90px rgba(255,255,255,.15)",
+      },
       fontSize: {
         "size-inherit": "inherit",
       },

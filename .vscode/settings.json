@@ -25,7 +25,8 @@
     "jamsrworld",
     "svgr",
     "tailwindcss",
-    "tsup"
+    "tsup",
+    "Typeahead"
   ],
   "workbench.colorCustomizations": {
     "list.warningForeground": "#00eaffcc"

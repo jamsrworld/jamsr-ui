@@ -1,14 +1,52 @@
-import { type ComponentPropsWithoutRef } from "react";
+import {
+  forwardRef,
+  type ComponentPropsWithoutRef,
+  type ForwardedRef,
+} from "react";
+import { dividerVariants, type DividerVariants } from "./style";
 
-type Props = ComponentPropsWithoutRef<"div">;
+type Props = ComponentPropsWithoutRef<"div"> &
+  DividerVariants & {
+    gap?: string;
+  };
 
-export const Divider = (props: Props) => {
+export const DividerInner = (
+  props: Props,
+  ref: ForwardedRef<HTMLDivElement>,
+) => {
+  const {
+    className,
+    variant,
+    orientation = "horizontal",
+    absolute,
+    children,
+    gap = "px-2",
+    ...restProps
+  } = props;
+
+  const slots = dividerVariants({
+    variant,
+    orientation,
+    absolute,
+  });
+
   return (
     <div
-      className="bg-blue-50"
-      {...props}
+      ref={ref}
+      data-slot="divider"
+      className={slots.base({ className })}
+      {...restProps}
+      data-orientation={orientation}
     >
-      Divider
+      <div className={slots.divider()} />
+      {children && (
+        <>
+          <span className={gap}>{children}</span>
+          <div className={slots.divider()} />
+        </>
+      )}
     </div>
   );
 };
+
+export const Divider = forwardRef(DividerInner);

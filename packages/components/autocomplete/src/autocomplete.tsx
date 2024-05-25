@@ -1,4 +1,3 @@
-import { useControlledState } from "@jamsr-ui/hooks";
 import {
   autoUpdate,
   FloatingFocusManager,
@@ -11,6 +10,11 @@ import {
   useListNavigation,
   useRole,
 } from "@floating-ui/react";
+import { Button } from "@jamsr-ui/button";
+import { useControlledState } from "@jamsr-ui/hooks";
+import { Input, inputVariants, type InputProps } from "@jamsr-ui/input";
+import { ChevronDown } from "@jamsr-ui/shared-icons";
+import { cn } from "@jamsr-ui/utils";
 import { useRef, useState } from "react";
 import { AutocompleteItem } from "./autocomplete-item";
 
@@ -45,7 +49,9 @@ type Props<T extends Record<string | number, unknown>[]> = GetProps<
 
 export { type Props as AutoCompleteProps };
 
-export const AutoComplete = <T extends Record<string | number, unknown>[]>(props: Props<T>) => {
+export const AutoComplete = <T extends Record<string | number, unknown>[]>(
+  props: Props<T>,
+) => {
   const {
     classNames,
     defaultValue,
@@ -108,11 +114,9 @@ export const AutoComplete = <T extends Record<string | number, unknown>[]>(props
     loop: true,
   });
 
-  const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions([
-    role,
-    dismiss,
-    listNav,
-  ]);
+  const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
+    [role, dismiss, listNav],
+  );
 
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { value } = event.target;
@@ -151,7 +155,6 @@ export const AutoComplete = <T extends Record<string | number, unknown>[]>(props
     setIsFocused(!open);
   };
 
-  const root = getAppRoot();
   return (
     <>
       <Input
@@ -164,7 +167,7 @@ export const AutoComplete = <T extends Record<string | number, unknown>[]>(props
             variant="light"
             rounded
           >
-            <ChevronIcons.Down />
+            <ChevronDown />
           </Button>
         }
         type="search"
@@ -179,7 +182,11 @@ export const AutoComplete = <T extends Record<string | number, unknown>[]>(props
             setIsFocused(false);
           },
           onKeyDown(event) {
-            if (event.key === "Enter" && activeIndex != null && items[activeIndex]) {
+            if (
+              event.key === "Enter" &&
+              activeIndex != null &&
+              items[activeIndex]
+            ) {
               const item = items?.[activeIndex];
               if (item) {
                 onSelect(item);
@@ -191,7 +198,7 @@ export const AutoComplete = <T extends Record<string | number, unknown>[]>(props
         className={inputVariants().input()}
       />
       {open && (
-        <FloatingPortal root={root}>
+        <FloatingPortal>
           <FloatingFocusManager
             context={context}
             initialFocus={-1}
@@ -210,7 +217,9 @@ export const AutoComplete = <T extends Record<string | number, unknown>[]>(props
                 },
               })}
             >
-              {items.length === 0 && <AutocompleteItem disabled>No results found</AutocompleteItem>}
+              {items.length === 0 && (
+                <AutocompleteItem disabled>No results found</AutocompleteItem>
+              )}
               {(isFocused && value ? options : items).map((item, index) => {
                 const label = getOptionLabel(item);
                 // eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle

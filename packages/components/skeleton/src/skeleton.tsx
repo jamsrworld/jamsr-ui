@@ -1,14 +1,20 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { forwardRefUI } from "@jamsr-ui/utils";
+import { useSkeleton, type UseSkeletonProps } from "./use-skeleton";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type SkeletonProps = UseSkeletonProps;
 
-export const Skeleton = (props: Props) => {
+export const Skeleton = forwardRefUI<"div", SkeletonProps>((props, ref) => {
+  const { Component, children, getSkeletonProps, getContentProps } =
+    useSkeleton({ ...props });
+
   return (
-    <div
-      className="bg-blue-50"
-      {...props}
+    <Component
+      ref={ref}
+      {...getSkeletonProps()}
     >
-      Skeleton
-    </div>
+      <div {...getContentProps()}>{children}</div>
+    </Component>
   );
-};
+});
+
+Skeleton.displayName = "UI.Skeleton";

@@ -1,14 +1,96 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { Button } from "@jamsr-ui/button";
+import { EyeClosed, EyeOpen } from "@jamsr-ui/shared-icons";
+import { forwardRefUI } from "@jamsr-ui/utils";
+import React, { useId, useMemo, type ForwardedRef } from "react";
+import { useInput, type UseInputProps } from "./use-input";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type InputProps<T extends boolean> = UseInputProps<T>;
 
-export const Input = (props: Props) => {
+const InputInner = <T extends boolean>(
+  props: InputProps<T>,
+  ref: ForwardedRef<HTMLInputElement>,
+) => {
+  const {
+    Component,
+    InputComponent,
+    label,
+    helperText,
+    startContent,
+    endContent,
+    isSecuredText,
+    showPassword,
+    mask,
+    getBaseProps,
+    getLabelWrapperProps,
+    getLabelProps,
+    labelHelper,
+    getInputProps,
+    getInputWrapperProps,
+    getHelperProps,
+    getInnerWrapperProps,
+    handleChangeInputType,
+    getMainWrapperProps,
+  } = useInput(props);
+  const id = useId();
+
+  const getStartContent = useMemo(() => {
+    const content = startContent;
+    return !content ? null : (
+      <div className="pl-2 text-foreground-muted empty:hidden">{content}</div>
+    );
+  }, [startContent]);
+
+  const getEndContent = useMemo(() => {
+    const content =
+      (isSecuredText === true && (
+        <Button
+          isIconOnly
+          onClick={handleChangeInputType}
+          variant="link"
+          rounded
+        >
+          {!showPassword ? <EyeOpen /> : <EyeClosed />}
+        </Button>
+      )) ||
+      (mask === "percent" && "%") ||
+      endContent;
+
+    return !content ? null : (
+      <div className="pr-2 text-foreground-muted">{content}</div>
+    );
+  }, [endContent, handleChangeInputType, isSecuredText, mask, showPassword]);
+
   return (
-    <div
-      className="bg-blue-50"
-      {...props}
+    <Component
+      ref={ref}
+      {...getBaseProps()}
     >
-      Input
-    </div>
+      <div {...getMainWrapperProps()}>
+        <div {...getLabelWrapperProps()}>
+          <label
+            htmlFor={id}
+            {...getLabelProps()}
+          >
+            {label}
+          </label>
+          {labelHelper}
+        </div>
+        <div {...getInputWrapperProps()}>
+          <div {...getInnerWrapperProps()}>
+            {getStartContent}
+            <InputComponent
+              id={id}
+              {...getInputProps()}
+            />
+            {getEndContent}
+          </div>
+        </div>
+      </div>
+      <div {...getHelperProps()}>{helperText}</div>
+    </Component>
   );
 };
+
+export const Input = forwardRefUI(InputInner) as <T extends boolean>(
+  props: InputProps<T>,
+) => React.ReactNode;

@@ -6,7 +6,6 @@ type Props = UIProps<"button"> & {
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   isLoading?: boolean;
-  isContinue?: boolean;
   spinnerPlacement?: "start" | "end";
   disableRipple?: boolean;
   disableAnimation?: boolean;
@@ -35,7 +34,6 @@ export const useButton = (props: UseButtonProps) => {
     fullWidth,
     rounded,
     variant,
-    isContinue,
     type = "button",
     disableRipple,
     disableAnimation = false,
@@ -90,7 +88,6 @@ export const useButton = (props: UseButtonProps) => {
     isIconOnly,
     spinnerPlacement,
     isDisabled,
-    isContinue,
     disableRipple,
     getButtonProps,
   };

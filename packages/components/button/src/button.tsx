@@ -1,3 +1,5 @@
+import { CircularProgress } from "@jamsr-ui/progress";
+import { Ripple } from "@jamsr-ui/ripple";
 import { forwardRefUI } from "@jamsr-ui/utils";
 import { useButton, type UseButtonProps } from "./use-button";
 
@@ -14,12 +16,10 @@ export const Button = forwardRefUI<"button", ButtonProps>((props, ref) => {
     startContent,
     styles,
     isDisabled,
-    isContinue,
     disableRipple,
   } = useButton({ ...props });
 
   const spinner = <CircularProgress />;
-  const endContentWithContinue = isContinue ? <ArrowIcons.Right /> : endContent;
   return (
     <Component
       ref={ref}
@@ -28,9 +28,7 @@ export const Button = forwardRefUI<"button", ButtonProps>((props, ref) => {
     >
       {isLoading && spinnerPlacement === "start" ? spinner : startContent}
       {isLoading && isIconOnly ? null : children}
-      {isLoading && spinnerPlacement === "end"
-        ? spinner
-        : endContentWithContinue}
+      {isLoading && spinnerPlacement === "end" ? spinner : endContent}
       {!isDisabled && !disableRipple && <Ripple />}
     </Component>
   );

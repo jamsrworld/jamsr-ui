@@ -1,14 +1,25 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { FloatingTree, useFloatingParentNodeId } from "@floating-ui/react";
+import { forwardRef } from "react";
+import { MenuComponent, type MenuProps } from "./menu-component";
 
-type Props = ComponentPropsWithoutRef<"div">;
-
-export const Menu = (props: Props) => {
+export const Menu = forwardRef<HTMLDivElement, MenuProps>((props, ref) => {
+  const parentId = useFloatingParentNodeId();
+  if (parentId === null) {
+    return (
+      <FloatingTree>
+        <MenuComponent
+          {...props}
+          ref={ref}
+        />
+      </FloatingTree>
+    );
+  }
   return (
-    <div
-      className="bg-blue-50"
+    <MenuComponent
       {...props}
-    >
-      Menu
-    </div>
+      ref={ref}
+    />
   );
-};
+});
+
+Menu.displayName = "UI.Menu";

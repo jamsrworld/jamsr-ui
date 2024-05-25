@@ -156,9 +156,15 @@ importers:
       '@floating-ui/react':
         specifier: ^0.26.16
         version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/input':
+        specifier: workspace:^
+        version: link:../input
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../icons
@@ -219,6 +225,12 @@ importers:
 
   packages/components/button:
     dependencies:
+      '@jamsr-ui/progress':
+        specifier: workspace:^
+        version: link:../progress
+      '@jamsr-ui/ripple':
+        specifier: workspace:^
+        version: link:../ripple
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -260,6 +272,9 @@ importers:
 
   packages/components/checkbox:
     dependencies:
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -270,6 +285,9 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -279,6 +297,12 @@ importers:
 
   packages/components/chip:
     dependencies:
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -298,6 +322,18 @@ importers:
 
   packages/components/dialog:
     dependencies:
+      '@floating-ui/react':
+        specifier: ^0.26.16
+        version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -308,6 +344,9 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -336,6 +375,9 @@ importers:
 
   packages/components/header:
     dependencies:
+      '@jamsr-ui/divider':
+        specifier: workspace:^
+        version: link:../divider
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -346,6 +388,9 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -393,9 +438,15 @@ importers:
 
   packages/components/input:
     dependencies:
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -434,6 +485,12 @@ importers:
 
   packages/components/menu:
     dependencies:
+      '@floating-ui/react':
+        specifier: ^0.26.16
+        version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -444,6 +501,9 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -472,6 +532,12 @@ importers:
 
   packages/components/popover:
     dependencies:
+      '@floating-ui/react':
+        specifier: ^0.26.16
+        version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -532,6 +598,9 @@ importers:
 
   packages/components/ripple:
     dependencies:
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -551,6 +620,18 @@ importers:
 
   packages/components/select:
     dependencies:
+      '@jamsr-ui/chip':
+        specifier: workspace:^
+        version: link:../chip
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/popover':
+        specifier: workspace:^
+        version: link:../popover
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -589,6 +670,12 @@ importers:
 
   packages/components/switch:
     dependencies:
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/typography':
+        specifier: workspace:^
+        version: link:../typography
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -599,6 +686,9 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -608,6 +698,12 @@ importers:
 
   packages/components/tab:
     dependencies:
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -618,6 +714,9 @@ importers:
       '@types/react':
         specifier: ^18.3.2
         version: 18.3.2
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -627,6 +726,9 @@ importers:
 
   packages/components/tooltip:
     dependencies:
+      '@floating-ui/react':
+        specifier: ^0.26.16
+        version: 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils

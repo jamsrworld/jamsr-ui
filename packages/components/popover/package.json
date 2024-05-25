@@ -27,6 +27,8 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.16",
+    "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }
 }

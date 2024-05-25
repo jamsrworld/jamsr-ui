@@ -1,14 +1,19 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { forwardRefUI } from "@jamsr-ui/utils";
+import { HeaderDivider } from "./header-divider";
+import { useHeader, type UseHeaderProps } from "./use-header";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type HeaderProps = UseHeaderProps;
 
-export const Header = (props: Props) => {
+export const Header = forwardRefUI<"header", HeaderProps>((props, ref) => {
+  const { Component, getBaseProps, children, defaultDivider } =
+    useHeader(props);
   return (
-    <div
-      className="bg-blue-50"
-      {...props}
+    <Component
+      ref={ref}
+      {...getBaseProps()}
     >
-      Header
-    </div>
+      {children}
+      <HeaderDivider show={defaultDivider} />
+    </Component>
   );
-};
+});

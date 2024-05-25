@@ -1,14 +1,13 @@
-import { type ComponentPropsWithoutRef } from "react";
+import React from "react";
+import { DialogProvider } from "./dialog-context";
+import { UseDialog, type UseDialogProps } from "./use-dialog";
 
-type Props = ComponentPropsWithoutRef<"div">;
+export type DialogProps = UseDialogProps & {
+  children: React.ReactNode;
+};
 
-export const Dialog = (props: Props) => {
-  return (
-    <div
-      className="bg-blue-50"
-      {...props}
-    >
-      Dialog
-    </div>
-  );
+export const Dialog = (props: DialogProps) => {
+  const { children, ...restProps } = props;
+  const context = UseDialog({ ...restProps });
+  return <DialogProvider value={context}>{children}</DialogProvider>;
 };

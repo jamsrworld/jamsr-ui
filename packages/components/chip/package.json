@@ -27,6 +27,8 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }
 }

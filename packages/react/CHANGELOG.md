@@ -1,5 +1,145 @@
 # @jamsr-ui/react
 
+## 0.0.15
+
+### Patch Changes
+
+- fix deps
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.12
+  - @jamsr-ui/image-upload@0.0.12
+  - @jamsr-ui/typography@0.0.12
+  - @jamsr-ui/accordion@0.0.13
+  - @jamsr-ui/otp-input@0.0.12
+  - @jamsr-ui/checkbox@0.0.12
+  - @jamsr-ui/progress@0.0.12
+  - @jamsr-ui/skeleton@0.0.12
+  - @jamsr-ui/divider@0.0.12
+  - @jamsr-ui/popover@0.0.12
+  - @jamsr-ui/tooltip@0.0.12
+  - @jamsr-ui/avatar@0.0.12
+  - @jamsr-ui/button@0.0.12
+  - @jamsr-ui/dialog@0.0.12
+  - @jamsr-ui/header@0.0.12
+  - @jamsr-ui/ripple@0.0.12
+  - @jamsr-ui/select@0.0.12
+  - @jamsr-ui/switch@0.0.12
+  - @jamsr-ui/alert@0.0.12
+  - @jamsr-ui/badge@0.0.12
+  - @jamsr-ui/input@0.0.12
+  - @jamsr-ui/radio@0.0.12
+  - @jamsr-ui/card@0.0.12
+  - @jamsr-ui/chip@0.0.12
+  - @jamsr-ui/link@0.0.12
+  - @jamsr-ui/menu@0.0.12
+  - @jamsr-ui/tab@0.0.12
+  - @jamsr-ui/utils@0.0.10
+
+## 0.0.14
+
+### Patch Changes
+
+- fix dev deps
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.11
+  - @jamsr-ui/image-upload@0.0.11
+  - @jamsr-ui/typography@0.0.11
+  - @jamsr-ui/accordion@0.0.12
+  - @jamsr-ui/otp-input@0.0.11
+  - @jamsr-ui/checkbox@0.0.11
+  - @jamsr-ui/progress@0.0.11
+  - @jamsr-ui/skeleton@0.0.11
+  - @jamsr-ui/divider@0.0.11
+  - @jamsr-ui/popover@0.0.11
+  - @jamsr-ui/tooltip@0.0.11
+  - @jamsr-ui/avatar@0.0.11
+  - @jamsr-ui/button@0.0.11
+  - @jamsr-ui/dialog@0.0.11
+  - @jamsr-ui/header@0.0.11
+  - @jamsr-ui/ripple@0.0.11
+  - @jamsr-ui/select@0.0.11
+  - @jamsr-ui/switch@0.0.11
+  - @jamsr-ui/alert@0.0.11
+  - @jamsr-ui/badge@0.0.11
+  - @jamsr-ui/input@0.0.11
+  - @jamsr-ui/radio@0.0.11
+  - @jamsr-ui/card@0.0.11
+  - @jamsr-ui/chip@0.0.11
+  - @jamsr-ui/link@0.0.11
+  - @jamsr-ui/menu@0.0.11
+  - @jamsr-ui/tab@0.0.11
+  - @jamsr-ui/utils@0.0.9
+
+## 0.0.13
+
+### Patch Changes
+
+- clean package
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.10
+  - @jamsr-ui/image-upload@0.0.10
+  - @jamsr-ui/typography@0.0.10
+  - @jamsr-ui/accordion@0.0.11
+  - @jamsr-ui/otp-input@0.0.10
+  - @jamsr-ui/checkbox@0.0.10
+  - @jamsr-ui/progress@0.0.10
+  - @jamsr-ui/skeleton@0.0.10
+  - @jamsr-ui/divider@0.0.10
+  - @jamsr-ui/popover@0.0.10
+  - @jamsr-ui/tooltip@0.0.10
+  - @jamsr-ui/avatar@0.0.10
+  - @jamsr-ui/button@0.0.10
+  - @jamsr-ui/dialog@0.0.10
+  - @jamsr-ui/header@0.0.10
+  - @jamsr-ui/ripple@0.0.10
+  - @jamsr-ui/select@0.0.10
+  - @jamsr-ui/switch@0.0.10
+  - @jamsr-ui/alert@0.0.10
+  - @jamsr-ui/badge@0.0.10
+  - @jamsr-ui/input@0.0.10
+  - @jamsr-ui/radio@0.0.10
+  - @jamsr-ui/card@0.0.10
+  - @jamsr-ui/chip@0.0.10
+  - @jamsr-ui/link@0.0.10
+  - @jamsr-ui/menu@0.0.10
+  - @jamsr-ui/tab@0.0.10
+  - @jamsr-ui/utils@0.0.8
+
+## 0.0.12
+
+### Patch Changes
+
+- added clean-package
+- Updated dependencies
+  - @jamsr-ui/accordion@0.0.10
+  - @jamsr-ui/alert@0.0.9
+  - @jamsr-ui/autocomplete@0.0.9
+  - @jamsr-ui/avatar@0.0.9
+  - @jamsr-ui/badge@0.0.9
+  - @jamsr-ui/button@0.0.9
+  - @jamsr-ui/card@0.0.9
+  - @jamsr-ui/checkbox@0.0.9
+  - @jamsr-ui/chip@0.0.9
+  - @jamsr-ui/dialog@0.0.9
+  - @jamsr-ui/divider@0.0.9
+  - @jamsr-ui/header@0.0.9
+  - @jamsr-ui/image-upload@0.0.9
+  - @jamsr-ui/input@0.0.9
+  - @jamsr-ui/link@0.0.9
+  - @jamsr-ui/menu@0.0.9
+  - @jamsr-ui/otp-input@0.0.9
+  - @jamsr-ui/popover@0.0.9
+  - @jamsr-ui/progress@0.0.9
+  - @jamsr-ui/radio@0.0.9
+  - @jamsr-ui/ripple@0.0.9
+  - @jamsr-ui/select@0.0.9
+  - @jamsr-ui/skeleton@0.0.9
+  - @jamsr-ui/switch@0.0.9
+  - @jamsr-ui/tab@0.0.9
+  - @jamsr-ui/tooltip@0.0.9
+  - @jamsr-ui/typography@0.0.9
+  - @jamsr-ui/utils@0.0.7
+
 ## 0.0.11
 
 ### Patch Changes

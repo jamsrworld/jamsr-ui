@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.11",
+  "version": "0.1.15",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,7 +15,7 @@
     "next": "14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-"clean-package": "^2.2.0"
+    "clean-package": "^2.2.0"
   },
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:*",

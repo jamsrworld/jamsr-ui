@@ -24,10 +24,12 @@
     "jamsr",
     "jamsrui",
     "jamsrworld",
+    "postpack",
     "svgr",
     "tailwindcss",
     "tsup",
-    "Typeahead"
+    "Typeahead",
+    "typecheck"
   ],
   "workbench.colorCustomizations": {
     "list.warningForeground": "#00eaffcc"

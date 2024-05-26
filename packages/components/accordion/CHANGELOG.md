@@ -1,5 +1,41 @@
 # @jamsr-ui/accordion
 
+## 0.0.13
+
+### Patch Changes
+
+- fix deps
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.11
+  - @jamsr-ui/utils@0.0.10
+
+## 0.0.12
+
+### Patch Changes
+
+- fix dev deps
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.10
+  - @jamsr-ui/utils@0.0.9
+
+## 0.0.11
+
+### Patch Changes
+
+- clean package
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.9
+  - @jamsr-ui/utils@0.0.8
+
+## 0.0.10
+
+### Patch Changes
+
+- added clean-package
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.8
+  - @jamsr-ui/utils@0.0.7
+
 ## 0.0.9
 
 ### Patch Changes

@@ -1,5 +1,41 @@
 # web
 
+## 0.1.15
+
+### Patch Changes
+
+- fix deps
+- Updated dependencies
+  - @jamsr-ui/react@0.0.15
+  - @jamsr-ui/theme@0.0.10
+
+## 0.1.14
+
+### Patch Changes
+
+- fix dev deps
+- Updated dependencies
+  - @jamsr-ui/react@0.0.14
+  - @jamsr-ui/theme@0.0.9
+
+## 0.1.13
+
+### Patch Changes
+
+- clean package
+- Updated dependencies
+  - @jamsr-ui/react@0.0.13
+  - @jamsr-ui/theme@0.0.8
+
+## 0.1.12
+
+### Patch Changes
+
+- added clean-package
+- Updated dependencies
+  - @jamsr-ui/react@0.0.12
+  - @jamsr-ui/theme@0.0.7
+
 ## 0.1.11
 
 ### Patch Changes

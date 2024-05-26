@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.7
+
+### Patch Changes
+
+- add package.json info
+
 ## 0.0.6
 
 ### Patch Changes

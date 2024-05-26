@@ -102,7 +102,7 @@ importers:
     dependencies:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -116,6 +116,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
       framer-motion:
         specifier: ^11.2.6
         version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -130,7 +133,7 @@ importers:
     dependencies:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography
@@ -167,7 +170,7 @@ importers:
         version: link:../input
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -233,7 +236,7 @@ importers:
         version: link:../ripple
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -308,7 +311,7 @@ importers:
         version: link:../button
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -342,7 +345,7 @@ importers:
         version: link:../../hooks
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -435,25 +438,6 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
 
-  packages/components/image:
-    dependencies:
-      '@jamsr-ui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@jamsr-ui/tailwind-config':
-        specifier: workspace:^
-        version: link:../../config/tailwind-config
-      '@types/react':
-        specifier: ^18.3.2
-        version: 18.3.2
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-
   packages/components/image-upload:
     dependencies:
       '@jamsr-ui/utils':
@@ -483,7 +467,7 @@ importers:
         version: link:../../hooks
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -530,7 +514,7 @@ importers:
         version: link:../button
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -587,7 +571,7 @@ importers:
         version: link:../button
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
         version: link:../../config/tailwind-config
@@ -680,7 +664,7 @@ importers:
         version: link:../popover
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -786,7 +770,7 @@ importers:
         version: link:../button
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
-        version: link:../../icons
+        version: link:../../shared-icons
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -887,15 +871,6 @@ importers:
   packages/config/typescript-config: {}
 
   packages/hooks:
-    devDependencies:
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.3
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-
-  packages/icons:
     devDependencies:
       '@types/react':
         specifier: ^18.3.3
@@ -1052,6 +1027,15 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0(@types/node@20.12.12)(jsdom@24.0.0)
 
+  packages/shared-icons:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+
   packages/storybook:
     dependencies:
       '@jamsr-ui/react':
@@ -1161,6 +1145,9 @@ importers:
       tw-colors:
         specifier: ^3.3.1
         version: 3.3.1(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
 
   packages/utils:
     dependencies:
@@ -3980,6 +3967,10 @@ packages:
   citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}
 
+  clean-package@2.2.0:
+    resolution: {integrity: sha512-vLv8kRqvh4smPDpqAYFPLEijTppAd/cfCz4yBcUGoVl/JKu6ZWKhlo+G/cAmwlSa29RudfBeuyiNEzas8bTwEQ==}
+    hasBin: true
+
   clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -4335,6 +4326,10 @@ packages:
   dot-prop@5.3.0:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
+
+  dot-prop@6.0.1:
+    resolution: {integrity: sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==}
+    engines: {node: '>=10'}
 
   dotenv-expand@10.0.0:
     resolution: {integrity: sha512-GopVGCpVS1UKH75VKHGuQFqS1Gusej0z4FyQkPdwjil2gNIv+LNsqBlboOzpJFZKVT95GkCyWJbBSdFEFUWI2A==}
@@ -11325,6 +11320,10 @@ snapshots:
     dependencies:
       consola: 3.2.3
 
+  clean-package@2.2.0:
+    dependencies:
+      dot-prop: 6.0.1
+
   clean-stack@2.2.0: {}
 
   cli-cursor@3.1.0:
@@ -11665,6 +11664,10 @@ snapshots:
   dom-accessibility-api@0.6.3: {}
 
   dot-prop@5.3.0:
+    dependencies:
+      is-obj: 2.0.0
+
+  dot-prop@6.0.1:
     dependencies:
       is-obj: 2.0.0
 

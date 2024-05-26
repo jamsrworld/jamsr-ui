@@ -3,7 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   entry: ["src"],
   minify: true,
-  format: ["esm"],
+  format: ["cjs", "esm"],
   clean: true,
   esbuildOptions(options) {
     options.banner = {

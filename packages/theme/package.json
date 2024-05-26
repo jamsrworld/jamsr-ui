@@ -7,20 +7,24 @@
     "access": "public",
     "main": "./dist/index.mjs"
   },
-  "keywords": [],
+  "keywords": ["react","ui"],
   "author": "@jamsrworld",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
   "dependencies": {
     "color2k": "^2.0.3"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3",
-    "tw-colors": "^3.3.1"
+    "tw-colors": "^3.3.1",
+    "typescript": "^5.4.5"
   }
 }

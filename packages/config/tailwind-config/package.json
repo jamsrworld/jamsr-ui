@@ -7,7 +7,7 @@
   "exports": {
     ".": "./tailwind.config.ts"
   },
-  "keywords": [],
+  "keywords": ["react","ui"],
   "author": "@jamsrworld",
   "license": "MIT",
   "devDependencies": {

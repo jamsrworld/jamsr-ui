@@ -4,7 +4,7 @@
   "main": "./src/index.tsx",
   "description": "A react js ui library with tailwindcss",
   "type": "module",
-  "keywords": [],
+  "keywords": ["react","ui"],
   "author": "@jamsrworld",
   "license": "MIT",
   "publishConfig": {
@@ -26,7 +26,10 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "ts-check": "tsc --noEmit && eslint . --fix",
-    "build": "tsup"
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
   },
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:*",

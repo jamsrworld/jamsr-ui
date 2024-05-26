@@ -1,5 +1,75 @@
 # @jamsr-ui/react
 
+## 0.0.17
+
+### Patch Changes
+
+- fix clean package path error
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.14
+  - @jamsr-ui/image-upload@0.0.14
+  - @jamsr-ui/typography@0.0.14
+  - @jamsr-ui/accordion@0.0.15
+  - @jamsr-ui/otp-input@0.0.14
+  - @jamsr-ui/checkbox@0.0.14
+  - @jamsr-ui/progress@0.0.14
+  - @jamsr-ui/skeleton@0.0.14
+  - @jamsr-ui/divider@0.0.14
+  - @jamsr-ui/popover@0.0.14
+  - @jamsr-ui/tooltip@0.0.14
+  - @jamsr-ui/avatar@0.0.14
+  - @jamsr-ui/button@0.0.14
+  - @jamsr-ui/dialog@0.0.14
+  - @jamsr-ui/header@0.0.14
+  - @jamsr-ui/ripple@0.0.14
+  - @jamsr-ui/select@0.0.14
+  - @jamsr-ui/switch@0.0.14
+  - @jamsr-ui/alert@0.0.14
+  - @jamsr-ui/badge@0.0.14
+  - @jamsr-ui/input@0.0.14
+  - @jamsr-ui/radio@0.0.14
+  - @jamsr-ui/card@0.0.14
+  - @jamsr-ui/chip@0.0.14
+  - @jamsr-ui/link@0.0.14
+  - @jamsr-ui/menu@0.0.14
+  - @jamsr-ui/tab@0.0.14
+  - @jamsr-ui/utils@0.0.12
+
+## 0.0.16
+
+### Patch Changes
+
+- fix storybook deps to devDeps
+- Updated dependencies
+  - @jamsr-ui/accordion@0.0.14
+  - @jamsr-ui/alert@0.0.13
+  - @jamsr-ui/autocomplete@0.0.13
+  - @jamsr-ui/avatar@0.0.13
+  - @jamsr-ui/badge@0.0.13
+  - @jamsr-ui/button@0.0.13
+  - @jamsr-ui/card@0.0.13
+  - @jamsr-ui/checkbox@0.0.13
+  - @jamsr-ui/chip@0.0.13
+  - @jamsr-ui/dialog@0.0.13
+  - @jamsr-ui/divider@0.0.13
+  - @jamsr-ui/header@0.0.13
+  - @jamsr-ui/image-upload@0.0.13
+  - @jamsr-ui/input@0.0.13
+  - @jamsr-ui/link@0.0.13
+  - @jamsr-ui/menu@0.0.13
+  - @jamsr-ui/otp-input@0.0.13
+  - @jamsr-ui/popover@0.0.13
+  - @jamsr-ui/progress@0.0.13
+  - @jamsr-ui/radio@0.0.13
+  - @jamsr-ui/ripple@0.0.13
+  - @jamsr-ui/select@0.0.13
+  - @jamsr-ui/skeleton@0.0.13
+  - @jamsr-ui/switch@0.0.13
+  - @jamsr-ui/tab@0.0.13
+  - @jamsr-ui/tooltip@0.0.13
+  - @jamsr-ui/typography@0.0.13
+  - @jamsr-ui/utils@0.0.11
+
 ## 0.0.15
 
 ### Patch Changes

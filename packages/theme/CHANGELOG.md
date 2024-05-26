@@ -1,5 +1,17 @@
 # @jamsr-ui/theme
 
+## 0.0.12
+
+### Patch Changes
+
+- fix clean package path error
+
+## 0.0.11
+
+### Patch Changes
+
+- fix storybook deps to devDeps
+
 ## 0.0.10
 
 ### Patch Changes

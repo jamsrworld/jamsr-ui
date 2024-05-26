@@ -1,5 +1,23 @@
 # web
 
+## 0.1.17
+
+### Patch Changes
+
+- fix clean package path error
+- Updated dependencies
+  - @jamsr-ui/react@0.0.17
+  - @jamsr-ui/theme@0.0.12
+
+## 0.1.16
+
+### Patch Changes
+
+- fix storybook deps to devDeps
+- Updated dependencies
+  - @jamsr-ui/react@0.0.16
+  - @jamsr-ui/theme@0.0.11
+
 ## 0.1.15
 
 ### Patch Changes

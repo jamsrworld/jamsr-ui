@@ -1,5 +1,23 @@
 # @jamsr-ui/ripple
 
+## 0.0.14
+
+### Patch Changes
+
+- fix clean package path error
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.7
+  - @jamsr-ui/utils@0.0.12
+
+## 0.0.13
+
+### Patch Changes
+
+- fix storybook deps to devDeps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.6
+  - @jamsr-ui/utils@0.0.11
+
 ## 0.0.12
 
 ### Patch Changes

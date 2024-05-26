@@ -1,5 +1,17 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.6
+
+### Patch Changes
+
+- fix clean package path error
+
+## 0.0.5
+
+### Patch Changes
+
+- fix storybook deps to devDeps
+
 ## 0.0.4
 
 ### Patch Changes

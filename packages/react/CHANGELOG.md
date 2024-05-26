@@ -1,5 +1,11 @@
 # @jamsr-ui/react
 
+## 0.0.18
+
+### Patch Changes
+
+- fix module type
+
 ## 0.0.17
 
 ### Patch Changes

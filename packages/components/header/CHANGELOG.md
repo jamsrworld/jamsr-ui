@@ -1,5 +1,23 @@
 # @jamsr-ui/header
 
+## 0.0.16
+
+### Patch Changes
+
+- remove scrips from package.json
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.16
+  - @jamsr-ui/utils@0.0.14
+
+## 0.0.15
+
+### Patch Changes
+
+- remove clean-package from package.json
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.15
+  - @jamsr-ui/utils@0.0.13
+
 ## 0.0.14
 
 ### Patch Changes

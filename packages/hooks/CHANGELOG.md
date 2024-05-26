@@ -1,5 +1,17 @@
 # @jamsr-ui/hooks
 
+## 0.0.9
+
+### Patch Changes
+
+- remove scrips from package.json
+
+## 0.0.8
+
+### Patch Changes
+
+- remove clean-package from package.json
+
 ## 0.0.7
 
 ### Patch Changes

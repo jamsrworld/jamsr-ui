@@ -1,5 +1,17 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.15
+
+### Patch Changes
+
+- remove scrips from package.json
+
+## 0.0.14
+
+### Patch Changes
+
+- remove clean-package from package.json
+
 ## 0.0.13
 
 ### Patch Changes

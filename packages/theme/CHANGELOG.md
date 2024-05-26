@@ -1,5 +1,17 @@
 # @jamsr-ui/theme
 
+## 0.0.14
+
+### Patch Changes
+
+- remove scrips from package.json
+
+## 0.0.13
+
+### Patch Changes
+
+- remove clean-package from package.json
+
 ## 0.0.12
 
 ### Patch Changes

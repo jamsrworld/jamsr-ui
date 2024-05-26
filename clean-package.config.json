@@ -1,6 +1,8 @@
 {
     "remove": [
-        "devDependencies"
+        "devDependencies",
+        "scripts",
+        "clean-package"
     ],
     "replace": {
         "main": "dist/index.js",

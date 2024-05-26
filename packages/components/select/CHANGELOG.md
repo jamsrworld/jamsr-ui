@@ -1,5 +1,29 @@
 # @jamsr-ui/select
 
+## 0.0.16
+
+### Patch Changes
+
+- remove scrips from package.json
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.16
+  - @jamsr-ui/chip@0.0.16
+  - @jamsr-ui/shared-icons@0.0.15
+  - @jamsr-ui/hooks@0.0.9
+  - @jamsr-ui/utils@0.0.14
+
+## 0.0.15
+
+### Patch Changes
+
+- remove clean-package from package.json
+- Updated dependencies
+  - @jamsr-ui/chip@0.0.15
+  - @jamsr-ui/popover@0.0.15
+  - @jamsr-ui/hooks@0.0.8
+  - @jamsr-ui/shared-icons@0.0.14
+  - @jamsr-ui/utils@0.0.13
+
 ## 0.0.14
 
 ### Patch Changes

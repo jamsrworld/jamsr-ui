@@ -1,5 +1,75 @@
 # @jamsr-ui/react
 
+## 0.0.20
+
+### Patch Changes
+
+- remove scrips from package.json
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.16
+  - @jamsr-ui/image-upload@0.0.16
+  - @jamsr-ui/typography@0.0.16
+  - @jamsr-ui/accordion@0.0.17
+  - @jamsr-ui/otp-input@0.0.16
+  - @jamsr-ui/checkbox@0.0.16
+  - @jamsr-ui/progress@0.0.16
+  - @jamsr-ui/skeleton@0.0.16
+  - @jamsr-ui/divider@0.0.16
+  - @jamsr-ui/popover@0.0.16
+  - @jamsr-ui/tooltip@0.0.16
+  - @jamsr-ui/avatar@0.0.16
+  - @jamsr-ui/button@0.0.16
+  - @jamsr-ui/dialog@0.0.16
+  - @jamsr-ui/header@0.0.16
+  - @jamsr-ui/ripple@0.0.16
+  - @jamsr-ui/select@0.0.16
+  - @jamsr-ui/switch@0.0.16
+  - @jamsr-ui/alert@0.0.16
+  - @jamsr-ui/badge@0.0.16
+  - @jamsr-ui/input@0.0.16
+  - @jamsr-ui/radio@0.0.16
+  - @jamsr-ui/card@0.0.16
+  - @jamsr-ui/chip@0.0.16
+  - @jamsr-ui/link@0.0.16
+  - @jamsr-ui/menu@0.0.16
+  - @jamsr-ui/tab@0.0.16
+  - @jamsr-ui/utils@0.0.14
+
+## 0.0.19
+
+### Patch Changes
+
+- remove clean-package from package.json
+- Updated dependencies
+  - @jamsr-ui/accordion@0.0.16
+  - @jamsr-ui/alert@0.0.15
+  - @jamsr-ui/autocomplete@0.0.15
+  - @jamsr-ui/avatar@0.0.15
+  - @jamsr-ui/badge@0.0.15
+  - @jamsr-ui/button@0.0.15
+  - @jamsr-ui/card@0.0.15
+  - @jamsr-ui/checkbox@0.0.15
+  - @jamsr-ui/chip@0.0.15
+  - @jamsr-ui/dialog@0.0.15
+  - @jamsr-ui/divider@0.0.15
+  - @jamsr-ui/header@0.0.15
+  - @jamsr-ui/image-upload@0.0.15
+  - @jamsr-ui/input@0.0.15
+  - @jamsr-ui/link@0.0.15
+  - @jamsr-ui/menu@0.0.15
+  - @jamsr-ui/otp-input@0.0.15
+  - @jamsr-ui/popover@0.0.15
+  - @jamsr-ui/progress@0.0.15
+  - @jamsr-ui/radio@0.0.15
+  - @jamsr-ui/ripple@0.0.15
+  - @jamsr-ui/select@0.0.15
+  - @jamsr-ui/skeleton@0.0.15
+  - @jamsr-ui/switch@0.0.15
+  - @jamsr-ui/tab@0.0.15
+  - @jamsr-ui/tooltip@0.0.15
+  - @jamsr-ui/typography@0.0.15
+  - @jamsr-ui/utils@0.0.13
+
 ## 0.0.18
 
 ### Patch Changes

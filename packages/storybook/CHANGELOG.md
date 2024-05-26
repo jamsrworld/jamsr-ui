@@ -1,5 +1,21 @@
 # @ui/storybook
 
+## 0.0.21
+
+### Patch Changes
+
+- remove scrips from package.json
+- Updated dependencies
+  - @jamsr-ui/react@0.0.20
+
+## 0.0.20
+
+### Patch Changes
+
+- remove clean-package from package.json
+- Updated dependencies
+  - @jamsr-ui/react@0.0.19
+
 ## 0.0.19
 
 ### Patch Changes

@@ -1,5 +1,23 @@
 # @jamsr-ui/drawer
 
+## 1.0.10
+
+### Patch Changes
+
+- remove scrips from package.json
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.9
+  - @jamsr-ui/utils@0.0.14
+
+## 1.0.9
+
+### Patch Changes
+
+- remove clean-package from package.json
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.8
+  - @jamsr-ui/utils@0.0.13
+
 ## 1.0.8
 
 ### Patch Changes

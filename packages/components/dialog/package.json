@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/dialog",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "./src/index.ts",
   "keywords": [],
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.16",
+    "@floating-ui/react-dom": "^2.1.0",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",

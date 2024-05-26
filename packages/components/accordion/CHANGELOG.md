@@ -1,5 +1,11 @@
 # @jamsr-ui/accordion
 
+## 0.0.8
+
+### Patch Changes
+
+- base components
+
 ## 0.0.7
 
 ### Patch Changes

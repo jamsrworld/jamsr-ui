@@ -2,6 +2,7 @@ import { type ComponentPropsWithAs, cn, focusVisibleClasses } from "@jamsr-ui/ut
 import { forwardRef, type ForwardedRef } from "react";
 
 type LinkProps = { children: React.ReactNode };
+
 export const LinkInner = <T extends React.ElementType = "a">(
   props: ComponentPropsWithAs<T, LinkProps>,
   ref: ForwardedRef<HTMLAnchorElement>,

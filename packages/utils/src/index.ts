@@ -6,6 +6,5 @@ export * from "./color-variants";
 export * from "./component";
 export * from "./context";
 export * from "./react";
-export * from "./time";
 export * from "./transition";
 export * from "./tv";

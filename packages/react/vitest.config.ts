@@ -6,6 +6,6 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     watch: false,
-    include: ["../components/**/*.{test,spec}.?(c|m)[jt]s?(x)"],
+    include: ["../components/*/__tests__/*.{test,spec}.?(c|m)[jt]s?(x)"],
   },
 });

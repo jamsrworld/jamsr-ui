@@ -5,7 +5,7 @@
   "description": "",
   "main": "src/index.tsx",
   "keywords": [],
-  "author": "@adityaa72",
+  "author": "@jamsrworld",
   "license": "MIT",
   "publishConfig": {
     "access": "public",

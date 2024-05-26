@@ -8,7 +8,7 @@
     ".": "./tailwind.config.ts"
   },
   "keywords": [],
-  "author": "@adityaa72",
+  "author": "@jamsrworld",
   "license": "MIT",
   "devDependencies": {
     "@jamsr-ui/theme": "workspace:^",

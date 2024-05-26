@@ -40,5 +40,6 @@
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

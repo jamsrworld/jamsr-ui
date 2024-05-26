@@ -30,5 +30,6 @@
     "tw-colors": "^3.3.1",
     "typescript": "^5.4.5",
     "clean-package": "^2.2.0"
-  }
+  },
+  "clean-package": "../../clean-package.config.json"
 }

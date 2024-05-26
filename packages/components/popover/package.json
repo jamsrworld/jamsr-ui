@@ -41,5 +41,6 @@
     "@floating-ui/react": "^0.26.16",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

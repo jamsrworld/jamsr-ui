@@ -37,5 +37,6 @@
   "dependencies": {
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

@@ -38,5 +38,6 @@
     "@jamsr-ui/progress": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

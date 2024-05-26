@@ -28,6 +28,8 @@
     "@types/react": "^18.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/shared-icons": "workspace:^",
     "clean-package": "^2.2.0"
   },
   "peerDependencies": {
@@ -36,8 +38,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.16",
-    "@jamsr-ui/button": "workspace:^",
-    "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

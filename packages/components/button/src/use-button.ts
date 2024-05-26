@@ -1,4 +1,4 @@
-import { PropGetter, type UIProps } from "@jamsr-ui/utils";
+import { type PropGetter, type UIProps } from "@jamsr-ui/utils";
 import { useCallback, useMemo, useState } from "react";
 import { buttonVariant, type ButtonVariantProps } from "./style";
 

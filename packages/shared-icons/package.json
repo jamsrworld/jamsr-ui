@@ -30,5 +30,6 @@
   },
   "peerDependencies": {
     "react": "^18.3.1"
-  }
+  },
+  "clean-package": "../../clean-package.config.json"
 }

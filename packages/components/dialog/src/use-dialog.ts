@@ -69,11 +69,13 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     };
   };
 
-  const floating = useFloating({
+  const {
+    context,
+    refs: { setFloating },
+  } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
   });
-  const { context } = floating;
   const click = useClick(context, {
     enabled: true,
   });
@@ -96,7 +98,8 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     slots,
     hideCloseButton,
     interactions,
-    floating,
+    context,
+    setFloating,
     setIsOpen,
   };
 };

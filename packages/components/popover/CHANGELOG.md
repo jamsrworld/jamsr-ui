@@ -1,5 +1,11 @@
 # @jamsr-ui/popover
 
+## 0.0.17
+
+### Patch Changes
+
+- added dts
+
 ## 0.0.16
 
 ### Patch Changes

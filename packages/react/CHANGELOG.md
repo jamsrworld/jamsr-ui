@@ -1,5 +1,16 @@
 # @jamsr-ui/react
 
+## 0.0.21
+
+### Patch Changes
+
+- added dts
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.17
+  - @jamsr-ui/dialog@0.0.17
+  - @jamsr-ui/select@0.0.17
+  - @jamsr-ui/menu@0.0.17
+
 ## 0.0.20
 
 ### Patch Changes

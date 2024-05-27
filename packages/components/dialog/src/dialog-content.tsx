@@ -4,7 +4,7 @@ import {
   FloatingPortal,
   useMergeRefs,
 } from "@floating-ui/react";
-import { type UIProps, forwardRefUI } from "@jamsr-ui/utils";
+import { forwardRefUI, type UIProps } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import { DialogClose } from "./dialog-close";
 import { useDialogContext } from "./dialog-context";
@@ -16,7 +16,8 @@ export const DialogContent = forwardRefUI<"div", DialogContentProps>(
     const { as, children, className } = props;
     const {
       interactions,
-      floating,
+      context,
+      setFloating,
       slots,
       Component: DialogComponent,
       hideCloseButton,
@@ -24,7 +25,7 @@ export const DialogContent = forwardRefUI<"div", DialogContentProps>(
       isOpen,
     } = useDialogContext();
     const Component = as || DialogComponent;
-    const mergedRef = useMergeRefs([floating.refs.setFloating, ref]);
+    const mergedRef = useMergeRefs([setFloating, ref]);
 
     return (
       <AnimatePresence>
@@ -35,7 +36,7 @@ export const DialogContent = forwardRefUI<"div", DialogContentProps>(
               lockScroll
             >
               <FloatingFocusManager
-                context={floating.context}
+                context={context}
                 modal
               >
                 <m.div

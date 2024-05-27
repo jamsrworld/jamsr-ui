@@ -1,5 +1,13 @@
 # @jamsr-ui/select
 
+## 0.0.17
+
+### Patch Changes
+
+- added dts
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.17
+
 ## 0.0.16
 
 ### Patch Changes

@@ -10,5 +10,5 @@ export default defineConfig({
       js: '"use client"',
     };
   },
-  dts: false,
+  dts: true,
 });

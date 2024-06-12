@@ -47,6 +47,8 @@ export const CheckboxInner = (
     <button
       type="button"
       className="flex items-center gap-2"
+      data-component="checkbox"
+      data-slot="base"
     >
       <div className="relative flex size-max items-center ">
         <input

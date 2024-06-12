@@ -32,6 +32,7 @@ export const DialogContent = forwardRefUI<"div", DialogContentProps>(
         {isOpen && (
           <FloatingPortal>
             <FloatingOverlay
+              data-slot="backdrop"
               className={slots.backdrop()}
               lockScroll
             >
@@ -52,6 +53,7 @@ export const DialogContent = forwardRefUI<"div", DialogContentProps>(
                   className="flex w-full items-center justify-center"
                 >
                   <Component
+                    data-slot="content"
                     ref={mergedRef}
                     {...interactions.getFloatingProps()}
                     {...getDialogProps({ className })}

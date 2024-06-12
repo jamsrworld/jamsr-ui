@@ -9,6 +9,7 @@ export const Header = forwardRefUI<"header", HeaderProps>((props, ref) => {
     useHeader(props);
   return (
     <Component
+      data-component="header"
       ref={ref}
       {...getBaseProps()}
     >

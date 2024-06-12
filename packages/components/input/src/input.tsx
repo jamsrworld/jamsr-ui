@@ -62,6 +62,7 @@ const InputInner = <T extends boolean>(
 
   return (
     <Component
+      data-component="input"
       ref={ref}
       {...getBaseProps()}
     >

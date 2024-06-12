@@ -28,7 +28,7 @@ export const CardHeaderInner = <T extends React.ElementType = "div">(
   const Component = as ?? "div";
   return (
     <Component
-      data-component="card-header"
+      data-slot="header"
       ref={ref}
       className={cn(
         "relative flex justify-between px-4 pt-4",

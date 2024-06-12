@@ -33,7 +33,7 @@ export const DividerInner = (
   return (
     <div
       ref={ref}
-      data-slot="divider"
+      data-component="divider"
       className={slots.base({ className })}
       {...restProps}
       data-orientation={orientation}

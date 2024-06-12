@@ -12,6 +12,8 @@ export const Alert = forwardRefUI<"div", AlertProps>((props, ref) => {
   return (
     <Component
       ref={ref}
+      data-component="alert"
+      data-slot="wrapper"
       className={styles.wrapper({ className })}
       {...restProps}
     >

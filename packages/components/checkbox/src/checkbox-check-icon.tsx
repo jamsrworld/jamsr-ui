@@ -29,7 +29,10 @@ const tickVariants: Variants = {
 export const CheckboxCheckIcon = (props: Props) => {
   const { isChecked } = props;
   return (
-    <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+    <div
+      data-slot="icon"
+      className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+    >
       <m.svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

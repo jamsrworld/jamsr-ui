@@ -12,6 +12,7 @@ export const Badge = forwardRef(
     const { children, className, color, size, ...restProps } = props;
     return (
       <div
+        data-component="badge"
         ref={ref}
         className={badgeVariants({
           color,

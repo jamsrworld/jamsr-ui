@@ -1,4 +1,8 @@
-import { type ComponentPropsWithAs, cn, focusVisibleClasses } from "@jamsr-ui/utils";
+import {
+  type ComponentPropsWithAs,
+  cn,
+  focusVisibleClasses,
+} from "@jamsr-ui/utils";
 import { forwardRef, type ForwardedRef } from "react";
 
 type LinkProps = { children: React.ReactNode };
@@ -11,6 +15,7 @@ export const LinkInner = <T extends React.ElementType = "a">(
   const Component = as ?? "a";
   return (
     <Component
+      data-component="link"
       className={cn(
         "cursor-pointer text-sm text-primary hover:text-primary-dark",
         focusVisibleClasses,

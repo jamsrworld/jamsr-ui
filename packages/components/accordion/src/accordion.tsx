@@ -39,6 +39,7 @@ export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
   return (
     <Component
       data-component="accordion"
+      data-slot="base"
       ref={ref}
       {...getBaseProps()}
     >

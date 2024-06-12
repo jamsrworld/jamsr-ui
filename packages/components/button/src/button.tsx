@@ -23,6 +23,8 @@ export const Button = forwardRefUI<"button", ButtonProps>((props, ref) => {
   return (
     <Component
       ref={ref}
+      data-component="button"
+      data-slot="base"
       className={styles}
       {...getButtonProps()}
     >

@@ -32,6 +32,7 @@ const CardInner = <T extends React.ElementType = "div">(
   return (
     <Component
       data-component="card"
+      data-slot="base"
       ref={ref}
       className={cn(cardVariants({ variant, bg, className, bordered }))}
       {...restProps}

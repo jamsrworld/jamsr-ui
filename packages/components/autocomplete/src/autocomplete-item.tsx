@@ -15,6 +15,7 @@ export const AutocompleteItem = forwardRef<
   const id = useId();
   return (
     <div
+      data-slot="item"
       ref={ref}
       role="option"
       id={id}

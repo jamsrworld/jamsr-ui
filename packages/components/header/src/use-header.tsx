@@ -19,6 +19,7 @@ export const useHeader = (props: UseHeaderProps) => {
 
   const getBaseProps: PropGetter = useCallback(() => {
     return {
+      "data-slot": "base",
       className: cn(style, className),
       ...restProps,
     };

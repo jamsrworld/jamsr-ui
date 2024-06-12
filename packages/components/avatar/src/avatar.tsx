@@ -22,6 +22,7 @@ export const Avatar = (props: AvatarProps) => {
     : `https://avatar.iran.liara.run/${placeholderType === "avatar" ? "public" : "username"}?username=${alt}`;
   return (
     <img
+      data-component="avatar"
       src={source}
       alt={alt}
       className={avatarVariants({

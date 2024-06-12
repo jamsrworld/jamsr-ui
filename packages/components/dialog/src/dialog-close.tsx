@@ -11,6 +11,7 @@ export const DialogClose = (props: Partial<ButtonProps>) => {
   };
   return (
     <Button
+      data-slot="close"
       isIconOnly
       type="button"
       variant="light"
@@ -18,7 +19,6 @@ export const DialogClose = (props: Partial<ButtonProps>) => {
       rounded
       className={cn("absolute right-2 top-2 z-10", className)}
       {...restProps}
-      data-slot="close"
     >
       <Close />
     </Button>

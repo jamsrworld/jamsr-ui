@@ -13,6 +13,7 @@ export const Chip = forwardRefUI<"div", ChipProps>((props, ref) => {
   const Comp = as ?? "div";
   return (
     <Comp
+      data-component="chip"
       ref={ref}
       className={cn(
         "inline-flex items-center justify-between gap-1 rounded-full border border-divider px-2 py-1 text-sm",

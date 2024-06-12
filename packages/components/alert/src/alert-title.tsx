@@ -11,6 +11,7 @@ export const AlertTitle = (props: Props) => {
       as="h6"
       variant="body"
       className="flex font-medium"
+      data-slot="title"
     >
       {children}
     </Typography>

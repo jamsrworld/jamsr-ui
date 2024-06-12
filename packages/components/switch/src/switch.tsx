@@ -30,10 +30,7 @@ type Props = {
 
 export type SwitchProps = VariantProps<typeof switchVariants> & Props;
 
-export const SwitchInner = (
-  props: SwitchProps,
-  ref: ForwardedRef<HTMLDivElement>,
-) => {
+const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
   const id = useId();
 
   const {
@@ -68,6 +65,7 @@ export const SwitchInner = (
 
   return (
     <div
+      data-component="switch"
       ref={ref}
       className={cn("flex items-center justify-between gap-2", {
         "flex-row": labelPlacement === "start",
@@ -83,6 +81,7 @@ export const SwitchInner = (
         {...restProps}
       />
       <m.button
+        data-slot="wrapper"
         type="button"
         className={wrapper()}
         onClick={onClick}
@@ -93,6 +92,7 @@ export const SwitchInner = (
         disabled={disabled}
       >
         <m.div
+          data-slot="thumb"
           variants={variants}
           layoutId={id}
           className={thumb()}
@@ -100,7 +100,7 @@ export const SwitchInner = (
       </m.button>
       <div className="grid gap-1">
         <Typography className="font-medium">{label}</Typography>
-        <Typography className="text-xs text-foreground-500">
+        <Typography className="text-foreground-500 text-xs">
           {typeof description === "function"
             ? description(checked)
             : description}

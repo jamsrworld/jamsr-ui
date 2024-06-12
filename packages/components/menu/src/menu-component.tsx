@@ -137,6 +137,7 @@ export const MenuComponent = forwardRef<HTMLDivElement, MenuProps>(
       tree.events.on("click", handleTreeClick);
       tree.events.on("menuopen", onSubMenuOpen);
 
+      // eslint-disable-next-line consistent-return
       return () => {
         tree.events.off("click", handleTreeClick);
         tree.events.off("menuopen", onSubMenuOpen);

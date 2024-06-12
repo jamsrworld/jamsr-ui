@@ -3,6 +3,7 @@ export const CircularProgress = () => {
     <div
       aria-label="Loading..."
       role="status"
+      data-component="circular-progress"
     >
       <svg
         className="size-6 animate-spin fill-current"

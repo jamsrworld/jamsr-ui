@@ -74,7 +74,7 @@ export const Tabs = <T extends string>(props: TabsProps<T>) => {
         <div
           data-slot="tab-list"
           className={cn(
-            "bg-content2 flex gap-1 rounded-full p-1",
+            "flex gap-1 rounded-full bg-content2 p-1",
             overflowScroll && "overflow-auto [&>*]:shrink-0",
             classNames?.tabList,
           )}

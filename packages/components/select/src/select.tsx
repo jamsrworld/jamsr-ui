@@ -80,6 +80,7 @@ export const Select = <Value extends string | string[] = "">(
 
   const triggerComp = slots.trigger ?? (
     <button
+      data-slot="trigger"
       type="button"
       className={styles.trigger()}
       {...restProps}
@@ -107,6 +108,7 @@ export const Select = <Value extends string | string[] = "">(
     <SelectProvider value={contextValue}>
       <div
         data-component="select"
+        data-slot="wrapper"
         className={cn(styles.mainWrapper(), className)}
       >
         {label && <label htmlFor={id}>{label}</label>}

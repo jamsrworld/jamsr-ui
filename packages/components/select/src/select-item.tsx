@@ -1,6 +1,10 @@
 import { Check } from "@jamsr-ui/shared-icons";
 import { cn } from "@jamsr-ui/utils";
-import { forwardRef, type ComponentPropsWithoutRef, type ForwardedRef } from "react";
+import {
+  forwardRef,
+  type ComponentPropsWithoutRef,
+  type ForwardedRef,
+} from "react";
 import { useSelectContext } from "./use-select-context";
 
 type SelectItemProps<T extends string> = {
@@ -48,10 +52,10 @@ export const SelectItemInner = <T extends string>(
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div
+      data-slot="item"
       ref={ref}
       role="menuitem"
       tabIndex={-1}
-      data-component="select-item"
       onClick={handleClick}
       className={cn(
         "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-md p-2 text-sm hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",

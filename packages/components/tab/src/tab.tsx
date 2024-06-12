@@ -19,6 +19,7 @@ export const Tab = forwardRefUI<"button", TabProps>((props: TabProps, ref) => {
 
   return (
     <Button
+      data-slot="tab"
       ref={ref}
       disableRipple
       disableAnimation

@@ -6,6 +6,7 @@ export const Ripple = () => {
   const ripples = useRipple(ref);
   return (
     <span
+      data-component="ripple"
       className="absolute inset-0 size-full overflow-hidden rounded-inherit"
       ref={ref}
     >

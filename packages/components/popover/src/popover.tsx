@@ -137,8 +137,10 @@ export const Popover = forwardRef<HTMLButtonElement, PopoverProps>(
               modal={modal}
             >
               <div
+                data-component="popover"
+                data-slot="wrapper"
                 className={cn(
-                  "z-popover border-divider bg-background shadow-card rounded-2xl border p-2 focus:outline-none",
+                  "z-popover rounded-2xl border border-divider bg-background p-2 shadow-card focus:outline-none",
                   classNames?.wrapper,
                   className,
                 )}

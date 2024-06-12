@@ -9,6 +9,7 @@ export const Skeleton = forwardRefUI<"div", SkeletonProps>((props, ref) => {
 
   return (
     <Component
+      data-component="skeleton"
       ref={ref}
       {...getSkeletonProps()}
     >

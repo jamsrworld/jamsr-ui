@@ -29,6 +29,7 @@ export const MenuItemInner = <T extends React.ElementType = "button">(
   const Component = as ?? "button";
   return (
     <Component
+      data-slot="item"
       {...restProps}
       ref={useMergeRefs([item.ref, ref])}
       role="menuitem"

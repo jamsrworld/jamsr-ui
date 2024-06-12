@@ -100,6 +100,7 @@ export const TooltipInner = (
       {isOpen && (
         <FloatingPortal>
           <div
+            data-component="tooltip"
             role="tooltip"
             className="z-popover inline-block rounded-lg border border-black bg-background px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-opacity duration-300"
             ref={refs.setFloating}

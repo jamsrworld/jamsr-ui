@@ -17,6 +17,7 @@ export const Typography = forwardRefUI<"p", TypographyProps>((props, ref) => {
   const Component = as ?? "p";
   return (
     <Component
+      data-component="typography"
       ref={ref}
       className={typographyVariants({
         variant,

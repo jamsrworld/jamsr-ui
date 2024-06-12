@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { Input } from "../src/input";
+import { Input, type InputProps } from "../src/input";
 
 const meta = {
   title: "Components/Input",
@@ -14,18 +14,38 @@ export const Default: Story = {
   args: { label: "Form label" },
 };
 
-const ControlledInput = () => {
+const ControlledInput = <T extends boolean>(props: InputProps<T>) => {
   const [value, setValue] = useState("");
   return (
     <Input
-      label="Form Label"
       value={value}
       onValueChange={setValue}
+      {...props}
     />
   );
 };
 
 export const Controlled: Story = {
-  args: {},
+  args: {
+    label: "Form Label",
+  },
   render: ControlledInput,
+};
+
+export const Textarea: Story = {
+  args: {
+    multiline: true,
+    label: "Textarea Label",
+    type: "checkbox",
+  },
+  render: ControlledInput,
+};
+
+const TestTextArea = () => {
+  return (
+    <Input
+      label=""
+      multiline
+    />
+  );
 };

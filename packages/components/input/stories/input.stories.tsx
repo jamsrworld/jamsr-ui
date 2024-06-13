@@ -14,7 +14,7 @@ export const Default: Story = {
   args: { label: "Form label" },
 };
 
-const ControlledInput = <T extends boolean>(props: InputProps<T>) => {
+const ControlledInput = (props: InputProps) => {
   const [value, setValue] = useState("");
   return (
     <Input
@@ -30,22 +30,4 @@ export const Controlled: Story = {
     label: "Form Label",
   },
   render: ControlledInput,
-};
-
-export const Textarea: Story = {
-  args: {
-    multiline: true,
-    label: "Textarea Label",
-    type: "checkbox",
-  },
-  render: ControlledInput,
-};
-
-const TestTextArea = () => {
-  return (
-    <Input
-      label=""
-      multiline
-    />
-  );
 };

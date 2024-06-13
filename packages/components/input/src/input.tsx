@@ -1,15 +1,11 @@
 import { Button } from "@jamsr-ui/button";
 import { EyeClosed, EyeOpen } from "@jamsr-ui/shared-icons";
 import { forwardRefUI } from "@jamsr-ui/utils";
-import React, { useId, useMemo, type ForwardedRef } from "react";
+import { useId, useMemo } from "react";
 import { useInput, type UseInputProps } from "./use-input";
 
-export type InputProps<T extends boolean> = UseInputProps<T>;
-
-const InputInner = <T extends boolean>(
-  props: InputProps<T>,
-  ref: ForwardedRef<HTMLInputElement>,
-) => {
+export type InputProps = UseInputProps;
+export const Input = forwardRefUI<"input", InputProps>((props, ref) => {
   const {
     Component,
     InputComponent,
@@ -36,7 +32,7 @@ const InputInner = <T extends boolean>(
   const getStartContent = useMemo(() => {
     const content = startContent;
     return !content ? null : (
-      <div className="pl-2 text-foreground-muted empty:hidden">{content}</div>
+      <div className="text-foreground-muted pl-2 empty:hidden">{content}</div>
     );
   }, [startContent]);
 
@@ -56,7 +52,7 @@ const InputInner = <T extends boolean>(
       endContent;
 
     return !content ? null : (
-      <div className="pr-2 text-foreground-muted">{content}</div>
+      <div className="text-foreground-muted pr-2">{content}</div>
     );
   }, [endContent, handleChangeInputType, isSecuredText, mask, showPassword]);
 
@@ -90,8 +86,4 @@ const InputInner = <T extends boolean>(
       <div {...getHelperProps()}>{helperText}</div>
     </Component>
   );
-};
-
-export const Input = forwardRefUI(InputInner) as <T extends boolean>(
-  props: InputProps<T>,
-) => React.ReactNode;
+});

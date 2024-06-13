@@ -5,37 +5,33 @@ import {
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { useCallback, useMemo, type ComponentProps } from "react";
+import { useCallback, type ComponentProps } from "react";
 import {
-  inputVariants,
-  type InputSlots,
-  type InputVariantProps,
+  textareaVariants,
+  type TextareaSlots,
+  type TextareaVariantProps,
 } from "./style";
 
 type Props = {
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
-  classNames?: SlotsToClasses<InputSlots>;
+  classNames?: SlotsToClasses<TextareaSlots>;
   label: string | null;
   labelHelperContent?: React.ReactNode;
-  mask?: "number" | "percent" | "currency";
-  isSecuredText?: boolean;
   value?: string;
   defaultValue?: string;
   onValueChange?: (value: string) => void;
   fullWidth?: boolean;
-  showPassword?: boolean;
-  setShowPassword?: React.Dispatch<React.SetStateAction<boolean>>;
   isInvalid?: boolean;
   helperText?: string;
-  precision?: number;
-  ref?: React.Ref<HTMLInputElement>;
+  ref?: React.Ref<HTMLTextAreaElement>;
 };
 
-type InputProps = UIProps<"input">;
-export type UseInputProps = InputProps & Props & InputVariantProps;
+export type UseTextareaProps = Props &
+  UIProps<"textarea"> &
+  TextareaVariantProps;
 
-export const useInput = (props: UseInputProps) => {
+export const useTextarea = (props: UseTextareaProps) => {
   const {
     as,
     label,
@@ -44,29 +40,23 @@ export const useInput = (props: UseInputProps) => {
     className,
     classNames,
     size,
-    mask,
     defaultValue,
     value: propValue,
     onValueChange,
     isInvalid,
-    type,
-    isSecuredText,
-    showPassword: propShowPassword,
-    setShowPassword: propSetShowPassword,
     startContent,
     endContent,
     onChange,
     fullWidth,
     variant,
     helperText,
-    precision = 2,
     ref,
     ...restProps
   } = props;
   const Component = as ?? "div";
-  const InputComponent = "input";
+  const TextareaComponent = "textarea";
 
-  const slots = inputVariants({
+  const slots = textareaVariants({
     variant,
     size,
     isInvalid,
@@ -79,44 +69,12 @@ export const useInput = (props: UseInputProps) => {
     onChange: onValueChange,
   });
 
-  const [showPassword, setShowPassword] = useControlledState({
-    prop: propShowPassword,
-    onChange: propSetShowPassword,
-  });
-
-  const handleInputChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      let { value: crrValue } = e.target;
-      crrValue = String(crrValue);
-
-      if (precision < 1) {
-        const newValue = crrValue.replace(/\D/g, "");
-        crrValue = newValue;
-      } else if (
-        mask === "number" ||
-        mask === "currency" ||
-        mask === "percent"
-      ) {
-        // const regexString = `^\\d*\\.?\\d{0,${precision}}$`;
-        const regexString = `^\\$?\\d*\\.?\\d{0,${precision}}$`;
-        const regex = new RegExp(regexString);
-        // const newValue = value.match(regex);
-
-        if (!regex.test(crrValue)) {
-          crrValue = value;
-        } else {
-          crrValue = crrValue.replace(/^\$/, "");
-        }
-      }
+  const handleTextareaChange = useCallback(
+    (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       onChange?.(e);
-      setValue(crrValue);
+      setValue(e.target.value);
     },
-    [mask, onChange, precision, setValue, value],
-  );
-
-  const handleChangeInputType = useCallback(
-    () => setShowPassword((prev) => !prev),
-    [setShowPassword],
+    [onChange, setValue, value],
   );
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -197,57 +155,47 @@ export const useInput = (props: UseInputProps) => {
     [slots, classNames?.mainWrapper],
   );
 
-  const getInputWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
+  const getTextareaWrapperProps: PropGetter<ComponentProps<"div">> =
+    useCallback(
+      (props) => {
+        return {
+          ...props,
+          ref,
+          "data-slot": "textarea-wrapper",
+          className: slots.textareaWrapper({
+            class: cn(classNames?.textareaWrapper, props?.className),
+          }),
+        };
+      },
+      [ref, slots, classNames?.textareaWrapper],
+    );
+
+  const getTextareaProps: PropGetter<ComponentProps<"textarea">> = useCallback(
     (props) => {
       return {
-        ...props,
-        ref,
-        "data-slot": "input-wrapper",
-        className: slots.inputWrapper({
-          class: cn(classNames?.inputWrapper, props?.className),
+        "data-slot": "textarea",
+        className: slots.textarea({
+          class: cn(classNames?.textarea, props?.className, className),
         }),
-      };
-    },
-    [ref, slots, classNames?.inputWrapper],
-  );
-
-  const inputType = useMemo(() => {
-    if (isSecuredText) {
-      return showPassword ? "text" : "password";
-    }
-    return type;
-  }, [isSecuredText, showPassword, type]);
-
-  const getInputProps: PropGetter<ComponentProps<"input">> = useCallback(
-    (props) => {
-      const fValue = mask === "currency" ? `$${value}` : value;
-      return {
-        "data-slot": "input",
-        className: slots.input({
-          class: cn(classNames?.input, props?.className, className),
-        }),
-        value: fValue,
-        onChange: handleInputChange,
-        type: inputType,
+        value: value,
+        onChange: handleTextareaChange,
         ...restProps,
         ...props,
       };
     },
     [
-      mask,
       value,
       slots,
-      classNames?.input,
+      classNames?.textarea,
       className,
-      handleInputChange,
-      inputType,
+      handleTextareaChange,
       restProps,
     ],
   );
 
   return {
     Component,
-    InputComponent,
+    TextareaComponent,
     classNames,
     label,
     helperText,
@@ -255,18 +203,14 @@ export const useInput = (props: UseInputProps) => {
     endContent,
     labelPlacement,
     isInvalid,
-    isSecuredText,
-    showPassword,
-    mask,
     getBaseProps,
     labelHelper: labelHelperContent,
     getLabelWrapperProps,
     getLabelProps,
-    getInputProps,
-    getInputWrapperProps,
+    getTextareaProps,
+    getTextareaWrapperProps,
     getHelperProps,
     getInnerWrapperProps,
-    handleChangeInputType,
     getMainWrapperProps,
   };
 };

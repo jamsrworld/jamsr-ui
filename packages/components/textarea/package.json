@@ -1,0 +1,44 @@
+{
+  "name": "@jamsr-ui/textarea",
+  "version": "0.0.16",
+  "description": "",
+  "main": "./src/index.ts",
+  "sideEffects": false,
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "author": "@jamsrworld",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "devDependencies": {
+    "@jamsr-ui/tailwind-config": "workspace:^",
+    "@types/react": "^18.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "clean-package": "^2.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/hooks": "workspace:^",
+    "@jamsr-ui/shared-icons": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

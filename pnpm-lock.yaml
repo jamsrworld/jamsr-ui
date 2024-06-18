@@ -95,7 +95,7 @@ importers:
         specifier: ^8
         version: 8.4.38
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: ^3.4.3
         version: 3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.11.24)(typescript@5.3.3))
       typescript:
         specifier: ^5

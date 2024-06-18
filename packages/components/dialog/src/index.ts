@@ -1,3 +1,5 @@
+"use client";
+
 export { Dialog, type DialogProps } from "./dialog";
 export { DialogBody, type DialogBodyProps } from "./dialog-body";
 export { DialogContent, type DialogContentProps } from "./dialog-content";

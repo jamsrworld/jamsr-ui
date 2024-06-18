@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "main": "./src/index.tsx",
   "description": "A react js ui library with tailwindcss",
   "keywords": [
@@ -44,6 +44,7 @@
     "@typescript-eslint/parser": "^7.10.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "clean-package": "^2.2.0",
     "eslint": "^8",
     "framer-motion": "^11.2.6",
     "jsdom": "^24.0.0",
@@ -51,8 +52,7 @@
     "react": "^18.2.0",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3",
-    "vitest": "^1.6.0",
-    "clean-package": "^2.2.0"
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@jamsr-ui/accordion": "workspace:^",
@@ -64,6 +64,7 @@
     "@jamsr-ui/card": "workspace:^",
     "@jamsr-ui/checkbox": "workspace:^",
     "@jamsr-ui/chip": "workspace:^",
+    "@jamsr-ui/core": "workspace:^",
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
     "@jamsr-ui/header": "workspace:^",

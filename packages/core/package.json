@@ -1,0 +1,33 @@
+{
+  "name": "@jamsr-ui/core",
+  "version": "0.0.0",
+  "main": "src/index.tsx",
+  "sideEffects": false,
+  "keywords": [],
+  "author": "@jamsrworld",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "clean-package": "^2.2.0",
+    "framer-motion": "^11.2.6",
+    "react": "^18.3.1"
+  },
+  "peerDependencies": {
+    "framer-motion": "^11.2.6",
+    "react": ">=18"
+  },
+  "clean-package": "../../clean-package.config.json"
+}

@@ -4,6 +4,6 @@
     "outDir": "dist",
     "incremental": false
   },
-  "include": ["**/*.tsx", "*.ts", ".*.cjs", "*.mjs"],
+  "include": ["**/*.tsx", "*.ts", ".*.cjs", "*.mjs", "src/index.ts"],
   "exclude": ["node_modules", "dist"]
 }

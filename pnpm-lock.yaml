@@ -838,6 +838,37 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
 
+  packages/components/textarea:
+    dependencies:
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../shared-icons
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
+    devDependencies:
+      '@jamsr-ui/tailwind-config':
+        specifier: workspace:^
+        version: link:../../config/tailwind-config
+      '@types/react':
+        specifier: ^18.3.2
+        version: 18.3.3
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+
   packages/components/tooltip:
     dependencies:
       '@floating-ui/react':
@@ -954,6 +985,21 @@ importers:
 
   packages/config/typescript-config: {}
 
+  packages/core:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      framer-motion:
+        specifier: ^11.2.6
+        version: 11.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+
   packages/hooks:
     devDependencies:
       '@types/react':
@@ -995,6 +1041,9 @@ importers:
       '@jamsr-ui/chip':
         specifier: workspace:^
         version: link:../components/chip
+      '@jamsr-ui/core':
+        specifier: workspace:^
+        version: link:../core
       '@jamsr-ui/dialog':
         specifier: workspace:^
         version: link:../components/dialog

@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.11
+
+### Patch Changes
+
+- fixing export
+
 ## 0.0.10
 
 ### Patch Changes

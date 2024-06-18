@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.19
+
+### Patch Changes
+
+- fixing export
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.19
+  - @jamsr-ui/typography@0.0.19
+  - @jamsr-ui/utils@0.0.17
+
 ## 0.0.18
 
 ### Patch Changes

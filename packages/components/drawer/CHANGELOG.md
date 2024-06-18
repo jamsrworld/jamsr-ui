@@ -1,5 +1,23 @@
 # @jamsr-ui/drawer
 
+## 1.0.12
+
+### Patch Changes
+
+- unknown
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.11
+  - @jamsr-ui/utils@0.0.16
+
+## 1.0.11
+
+### Patch Changes
+
+- added data-slot and component
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.10
+  - @jamsr-ui/utils@0.0.15
+
 ## 1.0.10
 
 ### Patch Changes

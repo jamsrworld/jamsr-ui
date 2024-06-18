@@ -1,5 +1,17 @@
 # @jamsr-ui/utils
 
+## 0.0.16
+
+### Patch Changes
+
+- unknown
+
+## 0.0.15
+
+### Patch Changes
+
+- added data-slot and component
+
 ## 0.0.14
 
 ### Patch Changes

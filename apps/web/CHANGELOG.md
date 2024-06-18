@@ -1,5 +1,23 @@
 # web
 
+## 0.1.23
+
+### Patch Changes
+
+- unknown
+- Updated dependencies
+  - @jamsr-ui/react@0.0.23
+  - @jamsr-ui/theme@0.0.16
+
+## 0.1.22
+
+### Patch Changes
+
+- added data-slot and component
+- Updated dependencies
+  - @jamsr-ui/react@0.0.22
+  - @jamsr-ui/theme@0.0.15
+
 ## 0.1.21
 
 ### Patch Changes

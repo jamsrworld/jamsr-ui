@@ -1,5 +1,25 @@
 # @jamsr-ui/card
 
+## 0.0.18
+
+### Patch Changes
+
+- unknown
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.18
+  - @jamsr-ui/progress@0.0.18
+  - @jamsr-ui/utils@0.0.16
+
+## 0.0.17
+
+### Patch Changes
+
+- added data-slot and component
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.17
+  - @jamsr-ui/typography@0.0.17
+  - @jamsr-ui/utils@0.0.15
+
 ## 0.0.16
 
 ### Patch Changes

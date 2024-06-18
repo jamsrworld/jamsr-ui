@@ -1,5 +1,21 @@
 # @ui/storybook
 
+## 0.0.24
+
+### Patch Changes
+
+- unknown
+- Updated dependencies
+  - @jamsr-ui/react@0.0.23
+
+## 0.0.23
+
+### Patch Changes
+
+- added data-slot and component
+- Updated dependencies
+  - @jamsr-ui/react@0.0.22
+
 ## 0.0.22
 
 ### Patch Changes

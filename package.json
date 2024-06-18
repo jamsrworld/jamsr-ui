@@ -8,8 +8,8 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
-    "build-packages": "turbo run build --filter=@jamsr-ui*",
-    "publish-packages": "turbo run build --filter=@jamsr-ui* && changeset && changeset version && changeset publish"
+    "build-packages": "turbo build --filter='@jamsr-ui*'",
+    "publish-packages": "turbo build --filter='@jamsr-ui*' && changeset && changeset version && changeset publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

@@ -1,5 +1,21 @@
 # @jamsr-ui/link
 
+## 0.0.18
+
+### Patch Changes
+
+- unknown
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.16
+
+## 0.0.17
+
+### Patch Changes
+
+- added data-slot and component
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.15
+
 ## 0.0.16
 
 ### Patch Changes

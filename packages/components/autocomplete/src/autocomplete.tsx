@@ -21,7 +21,7 @@ import { AutocompleteItem } from "./autocomplete-item";
 type GetProps<T, K> = Omit<T, keyof K> & K;
 
 type Props<T extends Record<string | number, unknown>[]> = GetProps<
-  InputProps<false>,
+  InputProps,
   {
     options: T;
     getOptionValue: (option: T[number]) => string;
@@ -42,7 +42,7 @@ type Props<T extends Record<string | number, unknown>[]> = GetProps<
 
     label: string;
     slotProps?: {
-      input?: Partial<InputProps<false>>;
+      input?: Partial<InputProps>;
     };
   }
 >;
@@ -206,7 +206,7 @@ export const AutoComplete = <T extends Record<string | number, unknown>[]>(
           >
             <div
               className={cn(
-                "z-popover rounded-lg border border-divider bg-background shadow-card focus:outline-none",
+                "z-popover border-divider bg-background shadow-card rounded-lg border focus:outline-none",
                 classNames?.wrapper,
               )}
               {...getFloatingProps({

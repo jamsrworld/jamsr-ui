@@ -1,5 +1,27 @@
 # @jamsr-ui/dialog
 
+## 0.0.19
+
+### Patch Changes
+
+- unknown
+- Updated dependencies
+  - @jamsr-ui/button@0.0.18
+  - @jamsr-ui/shared-icons@0.0.17
+  - @jamsr-ui/hooks@0.0.11
+  - @jamsr-ui/utils@0.0.16
+
+## 0.0.18
+
+### Patch Changes
+
+- added data-slot and component
+- Updated dependencies
+  - @jamsr-ui/button@0.0.17
+  - @jamsr-ui/hooks@0.0.10
+  - @jamsr-ui/shared-icons@0.0.16
+  - @jamsr-ui/utils@0.0.15
+
 ## 0.0.17
 
 ### Patch Changes

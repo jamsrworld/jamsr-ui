@@ -1,5 +1,17 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.11
+
+### Patch Changes
+
+- unknown
+
+## 0.0.10
+
+### Patch Changes
+
+- added data-slot and component
+
 ## 0.0.9
 
 ### Patch Changes

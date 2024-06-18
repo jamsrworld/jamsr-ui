@@ -1,23 +1,20 @@
 import {
-  type ComponentPropsWithAs,
+  UIProps,
   cn,
   focusVisibleClasses,
+  forwardRefUI,
 } from "@jamsr-ui/utils";
-import { forwardRef, type ForwardedRef } from "react";
 
-type LinkProps = { children: React.ReactNode };
+type LinkProps = UIProps<"a">;
 
-export const LinkInner = <T extends React.ElementType = "a">(
-  props: ComponentPropsWithAs<T, LinkProps>,
-  ref: ForwardedRef<HTMLAnchorElement>,
-) => {
+export const Link = forwardRefUI<"a", LinkProps>((props, ref) => {
   const { as, children, className, ...restProps } = props;
   const Component = as ?? "a";
   return (
     <Component
       data-component="link"
       className={cn(
-        "cursor-pointer text-sm text-primary hover:text-primary-dark",
+        "text-primary hover:text-primary-dark cursor-pointer text-sm",
         focusVisibleClasses,
         className,
       )}
@@ -27,6 +24,5 @@ export const LinkInner = <T extends React.ElementType = "a">(
       {children}
     </Component>
   );
-};
-
-export const Link = forwardRef(LinkInner);
+});
+Link.displayName = "UI.Link"

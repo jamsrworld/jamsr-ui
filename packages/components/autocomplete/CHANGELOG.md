@@ -1,5 +1,17 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.22
+
+### Patch Changes
+
+- fix exports
+- Updated dependencies
+  - @jamsr-ui/button@0.0.22
+  - @jamsr-ui/input@0.0.22
+  - @jamsr-ui/hooks@0.0.15
+  - @jamsr-ui/shared-icons@0.0.21
+  - @jamsr-ui/utils@0.0.20
+
 ## 0.0.21
 
 ### Patch Changes

@@ -2,4 +2,4 @@
 
 export { Radio, type RadioProps } from "./radio";
 export { RadioGroup } from "./radio-group";
-export * from "./radio-group-item";
+export { RadioGroupItem, type RadioGroupItemProps } from "./radio-group-item";

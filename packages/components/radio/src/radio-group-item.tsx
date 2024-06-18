@@ -11,7 +11,7 @@ export type RadioGroupItemProps = ComponentPropsWithoutRef<"input"> & {
   wrapperClassName?: string;
 };
 
-export const RadioGroupItemInner = (
+const RadioGroupItemInner = (
   props: RadioGroupItemProps,
   ref: ForwardedRef<HTMLInputElement>,
 ) => {

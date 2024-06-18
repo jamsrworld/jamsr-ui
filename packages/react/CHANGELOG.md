@@ -1,5 +1,13 @@
 # @jamsr-ui/react
 
+## 0.0.25
+
+### Patch Changes
+
+- core repo
+- Updated dependencies
+  - @jamsr-ui/core@0.0.1
+
 ## 0.0.24
 
 ### Patch Changes

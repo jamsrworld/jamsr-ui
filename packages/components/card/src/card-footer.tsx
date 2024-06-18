@@ -1,6 +1,6 @@
 import { type UIProps, cn, forwardRefUI } from "@jamsr-ui/utils";
 
-type CardFooterProps = UIProps<"div">;
+export type CardFooterProps = UIProps<"div">;
 
 export const CardFooter = forwardRefUI<"div", CardFooterProps>((props, ref) => {
   const { children, className, as, ...restProps } = props;

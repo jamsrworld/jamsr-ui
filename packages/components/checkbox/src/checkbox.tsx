@@ -16,7 +16,7 @@ export type CheckboxProps = ComponentPropsWithoutRef<"input"> & {
   onCheckedChange: (checked: boolean) => void;
 };
 
-export const CheckboxInner = (
+const CheckboxInner = (
   props: CheckboxProps,
   ref: ForwardedRef<HTMLInputElement>,
 ) => {

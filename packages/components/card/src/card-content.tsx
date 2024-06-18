@@ -1,8 +1,8 @@
 import { type ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
 import { forwardRef, type ForwardedRef } from "react";
 
-type CardContentProps = NonNullable<unknown>;
-export const CardContentInner = <T extends React.ElementType = "div">(
+export type CardContentProps = NonNullable<unknown>;
+const CardContentInner = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, CardContentProps>,
   ref: ForwardedRef<HTMLDivElement>,
 ) => {

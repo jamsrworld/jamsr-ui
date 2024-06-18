@@ -1,44 +1,15 @@
 "use client";
 
-export {
-  Accordion,
-  AccordionItem,
-  type AccordionItemProps,
-  type AccordionProps,
-} from "@jamsr-ui/accordion";
-export { Alert, type AlertProps } from "@jamsr-ui/alert";
-export { AutoComplete, type AutoCompleteProps } from "@jamsr-ui/autocomplete";
-export { Avatar, type AvatarProps } from "@jamsr-ui/avatar";
-export { Badge, type BadgeProps } from "@jamsr-ui/badge";
-export {
-  Button,
-  type ButtonProps,
-  type UseButtonProps,
-} from "@jamsr-ui/button";
-export {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  type CardContentProps,
-  type CardFooterProps,
-  type CardHeaderProps,
-  type CardProps,
-} from "@jamsr-ui/card";
-export { Checkbox, type CheckboxProps } from "@jamsr-ui/checkbox";
-export { Chip, type ChipProps } from "@jamsr-ui/chip";
-export {
-  Dialog,
-  DialogBody,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  type DialogBodyProps,
-  type DialogContentProps,
-  type DialogFooterProps,
-  type DialogHeaderProps,
-  type DialogProps,
-} from "@jamsr-ui/dialog";
+export * from "@jamsr-ui/accordion";
+export * from "@jamsr-ui/alert";
+export * from "@jamsr-ui/autocomplete";
+export * from "@jamsr-ui/avatar";
+export * from "@jamsr-ui/badge";
+export * from "@jamsr-ui/button";
+export * from "@jamsr-ui/card";
+export * from "@jamsr-ui/checkbox";
+export * from "@jamsr-ui/chip";
+export * from "@jamsr-ui/dialog";
 export * from "@jamsr-ui/divider";
 export * from "@jamsr-ui/header";
 export * from "@jamsr-ui/image-upload";
@@ -57,5 +28,5 @@ export * from "@jamsr-ui/tab";
 export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
 
-//
+// Provider
 export { JamsrUIProvider } from "@jamsr-ui/core";

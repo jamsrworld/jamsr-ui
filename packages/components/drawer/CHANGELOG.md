@@ -1,5 +1,23 @@
 # @jamsr-ui/drawer
 
+## 1.0.15
+
+### Patch Changes
+
+- fix
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.14
+  - @jamsr-ui/utils@0.0.19
+
+## 1.0.14
+
+### Patch Changes
+
+- fix
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.13
+  - @jamsr-ui/utils@0.0.18
+
 ## 1.0.13
 
 ### Patch Changes

@@ -1,15 +1,24 @@
-import { type PropGetter, type UIProps, cn } from "@jamsr-ui/utils";
+import { PropGetter, UIProps, cn } from "@jamsr-ui/utils";
 import { useCallback } from "react";
 import { header, type HeaderVariantProps } from "./style";
 
 type Props = UIProps<"header"> & {
-  defaultDivider?: boolean;
+  showDivider?: boolean;
+  showDividerDefault?: boolean;
 };
 
 export type UseHeaderProps = Props & HeaderVariantProps;
 
 export const useHeader = (props: UseHeaderProps) => {
-  const { as, blur, className, children, defaultDivider, ...restProps } = props;
+  const {
+    as,
+    blur,
+    className,
+    children,
+    showDivider = true,
+    showDividerDefault,
+    ...restProps
+  } = props;
 
   const Component = as ?? "header";
 
@@ -19,7 +28,6 @@ export const useHeader = (props: UseHeaderProps) => {
 
   const getBaseProps: PropGetter = useCallback(() => {
     return {
-      "data-slot": "base",
       className: cn(style, className),
       ...restProps,
     };
@@ -27,7 +35,8 @@ export const useHeader = (props: UseHeaderProps) => {
 
   return {
     Component,
-    defaultDivider,
+    showDivider,
+    showDividerDefault,
     children,
     getBaseProps,
   };

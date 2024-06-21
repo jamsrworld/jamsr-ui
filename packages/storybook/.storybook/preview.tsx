@@ -5,9 +5,11 @@ import "../src/style.css";
 
 const decorators: Preview["decorators"] = [
   (Story) => (
-    <JamsrUIProvider>
-      <Story />
-    </JamsrUIProvider>
+    <div className="text-foreground">
+      <JamsrUIProvider>
+        <Story />
+      </JamsrUIProvider>
+    </div>
   ),
 ];
 

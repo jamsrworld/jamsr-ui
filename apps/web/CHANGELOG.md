@@ -1,5 +1,20 @@
 # web
 
+## 0.1.31
+
+### Patch Changes
+
+- fix wrapper
+- Updated dependencies
+  - @jamsr-ui/react@0.0.31
+
+## 0.1.30
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/react@0.0.30
+
 ## 0.1.29
 
 ### Patch Changes

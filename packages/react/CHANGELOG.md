@@ -1,5 +1,19 @@
 # @jamsr-ui/react
 
+## 0.0.31
+
+### Patch Changes
+
+- fix wrapper
+- Updated dependencies
+  - @jamsr-ui/core@0.0.6
+
+## 0.0.30
+
+### Patch Changes
+
+- fix export
+
 ## 0.0.29
 
 ### Patch Changes

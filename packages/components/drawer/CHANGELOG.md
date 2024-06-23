@@ -1,5 +1,14 @@
 # @jamsr-ui/drawer
 
+## 1.0.17
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.16
+  - @jamsr-ui/utils@0.0.21
+
 ## 1.0.16
 
 ### Patch Changes

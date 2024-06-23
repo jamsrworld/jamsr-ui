@@ -1,5 +1,17 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.23
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/button@0.0.23
+  - @jamsr-ui/input@0.0.23
+  - @jamsr-ui/hooks@0.0.16
+  - @jamsr-ui/shared-icons@0.0.22
+  - @jamsr-ui/utils@0.0.21
+
 ## 0.0.22
 
 ### Patch Changes

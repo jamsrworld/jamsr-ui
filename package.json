@@ -5,7 +5,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "typecheck": "turbo typecheck",
-    "test": "",
+    "test": "turbo test",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",

@@ -12,6 +12,7 @@ export * from "@jamsr-ui/divider";
 export * from "@jamsr-ui/header";
 export * from "@jamsr-ui/image-upload";
 export * from "@jamsr-ui/input";
+export * from "@jamsr-ui/textarea";
 export * from "@jamsr-ui/link";
 export * from "@jamsr-ui/menu";
 export * from "@jamsr-ui/otp-input";

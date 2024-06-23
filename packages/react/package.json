@@ -81,6 +81,7 @@
     "@jamsr-ui/skeleton": "workspace:^",
     "@jamsr-ui/switch": "workspace:^",
     "@jamsr-ui/tab": "workspace:^",
+    "@jamsr-ui/textarea": "^0.0.23",
     "@jamsr-ui/tooltip": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
     "@jamsr-ui/utils": "workspace:*"

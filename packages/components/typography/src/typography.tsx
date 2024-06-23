@@ -1,9 +1,11 @@
-import { type UIProps, forwardRefUI } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { typographyVariants, type TypographyVariants } from "./style";
 
-export type TypographyProps = UIProps<"p"> & TypographyVariants;
+export type TypographyProps = TypographyVariants;
 
-export const Typography = forwardRefUI<"p", TypographyProps>((props, ref) => {
+export const Typography = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, TypographyProps>,
+) => {
   const {
     as,
     className,
@@ -18,7 +20,6 @@ export const Typography = forwardRefUI<"p", TypographyProps>((props, ref) => {
   return (
     <Component
       data-component="typography"
-      ref={ref}
       className={typographyVariants({
         variant,
         spaced,
@@ -30,4 +31,4 @@ export const Typography = forwardRefUI<"p", TypographyProps>((props, ref) => {
       {...restProps}
     />
   );
-});
+};

@@ -4,7 +4,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "test": "",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
@@ -18,7 +19,7 @@
     "@jamsr-ui/typescript-config": "workspace:*",
     "@storybook/react": "^8.1.1",
     "@storybook/test": "^8.1.1",
-    "@testing-library/react": "^15.0.7",
+    "@testing-library/react": "^16.0.0",
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",

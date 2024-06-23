@@ -1,10 +1,12 @@
 import { CircularProgress } from "@jamsr-ui/progress";
 import { Ripple } from "@jamsr-ui/ripple";
-import { forwardRefUI } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useButton, type UseButtonProps } from "./use-button";
 
 export type ButtonProps = UseButtonProps;
-export const Button = forwardRefUI<"button", ButtonProps>((props, ref) => {
+export const Button = <T extends React.ElementType = "button">(
+  props: ComponentPropsWithAs<T, ButtonProps>,
+) => {
   const {
     Component,
     children,
@@ -22,7 +24,6 @@ export const Button = forwardRefUI<"button", ButtonProps>((props, ref) => {
   const spinner = <CircularProgress />;
   return (
     <Component
-      ref={ref}
       data-component="button"
       data-slot="base"
       className={styles}
@@ -34,5 +35,4 @@ export const Button = forwardRefUI<"button", ButtonProps>((props, ref) => {
       {!isDisabled && !disableRipple && <Ripple />}
     </Component>
   );
-});
-Button.displayName = "UI.Button";
+};

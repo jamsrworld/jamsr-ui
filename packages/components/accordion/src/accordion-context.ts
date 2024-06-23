@@ -6,7 +6,8 @@ export type AccordionContextType = {
   isOpen: boolean;
 };
 
-export const [AccordionProvider, useAccordionContext] = createContext<AccordionContextType>({
-  name: "AccordionContext",
-  strict: true,
-});
+export const [AccordionProvider, useAccordionContext] =
+  createContext<AccordionContextType>({
+    name: "AccordionContext",
+    strict: true,
+  });

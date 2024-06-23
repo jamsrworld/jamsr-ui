@@ -1,6 +1,5 @@
 import { Typography } from "@jamsr-ui/typography";
-import { type ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
-import { forwardRef, type ForwardedRef } from "react";
+import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 
 export type CardHeaderProps = {
   heading?: React.ReactNode;
@@ -11,9 +10,8 @@ export type CardHeaderProps = {
   children?: React.ReactNode;
 };
 
-export const CardHeaderInner = <T extends React.ElementType = "div">(
+export const CardHeader = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, CardHeaderProps>,
-  ref: ForwardedRef<HTMLDivElement>,
 ) => {
   const {
     as,
@@ -29,7 +27,6 @@ export const CardHeaderInner = <T extends React.ElementType = "div">(
   return (
     <Component
       data-slot="header"
-      ref={ref}
       className={cn(
         "relative flex justify-between px-4 pt-4",
         { "pb-4": gutterBottom },
@@ -56,5 +53,3 @@ export const CardHeaderInner = <T extends React.ElementType = "div">(
     </Component>
   );
 };
-
-export const CardHeader = forwardRef(CardHeaderInner);

@@ -42,7 +42,6 @@ const Template = (props: DialogProps) => {
   );
 };
 
-export const Default: Story = {
-  args: {},
+export const Default = {
   render: Template,
 };

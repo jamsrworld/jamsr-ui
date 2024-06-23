@@ -1,6 +1,6 @@
 import { Button } from "@jamsr-ui/button";
 import { Close } from "@jamsr-ui/shared-icons";
-import { cn, forwardRefUI } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
 import React from "react";
 
 export type ChipProps = {
@@ -8,15 +8,16 @@ export type ChipProps = {
   onClose?: () => void;
 };
 
-export const Chip = forwardRefUI<"div", ChipProps>((props, ref) => {
+export const Chip = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, ChipProps>,
+) => {
   const { as, children, onClose, className, ...restProps } = props;
   const Comp = as ?? "div";
   return (
     <Comp
       data-component="chip"
-      ref={ref}
       className={cn(
-        "inline-flex items-center justify-between gap-1 rounded-full border border-divider px-2 py-1 text-sm",
+        "border-divider inline-flex items-center justify-between gap-1 rounded-full border px-2 py-1 text-sm",
         className,
       )}
       {...restProps}
@@ -34,4 +35,4 @@ export const Chip = forwardRefUI<"div", ChipProps>((props, ref) => {
       )}
     </Comp>
   );
-});
+};

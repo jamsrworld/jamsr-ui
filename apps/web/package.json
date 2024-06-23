@@ -13,9 +13,9 @@
     "@jamsr-ui/react": "workspace:*",
     "@jamsr-ui/theme": "workspace:^",
     "clean-package": "^2.2.0",
-    "next": "14.2.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "next": "15.0.0-rc.0",
+    "react": "19.0.0-rc-3563387fe3-20240621",
+    "react-dom": "19.0.0-rc-3563387fe3-20240621"
   },
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:*",

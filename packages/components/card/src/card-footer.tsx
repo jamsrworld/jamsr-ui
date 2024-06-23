@@ -1,13 +1,14 @@
-import { type UIProps, cn, forwardRefUI } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
 
-export type CardFooterProps = UIProps<"div">;
+export type CardFooterProps = {};
 
-export const CardFooter = forwardRefUI<"div", CardFooterProps>((props, ref) => {
+export const CardFooter = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, CardFooterProps>,
+) => {
   const { children, className, as, ...restProps } = props;
   const Component = as ?? "div";
   return (
     <Component
-      ref={ref}
       data-slot="footer"
       className={cn("flex justify-end gap-2 px-4 pb-4", className)}
       {...restProps}
@@ -15,4 +16,4 @@ export const CardFooter = forwardRefUI<"div", CardFooterProps>((props, ref) => {
       {children}
     </Component>
   );
-});
+};

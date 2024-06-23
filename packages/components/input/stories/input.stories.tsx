@@ -25,9 +25,6 @@ const ControlledInput = (props: InputProps) => {
   );
 };
 
-export const Controlled: Story = {
-  args: {
-    label: "Form Label",
-  },
+export const Controlled = {
   render: ControlledInput,
 };

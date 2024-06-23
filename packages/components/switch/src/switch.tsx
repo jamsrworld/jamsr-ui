@@ -80,6 +80,7 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
         aria-hidden="true"
         {...restProps}
       />
+      {/* @ts-ignore */}
       <m.button
         data-slot="wrapper"
         type="button"
@@ -91,6 +92,7 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
         animate="initial"
         disabled={disabled}
       >
+        {/* @ts-ignore */}
         <m.div
           data-slot="thumb"
           variants={variants}

@@ -1,27 +1,27 @@
 import { Check } from "@jamsr-ui/shared-icons";
-import { cn } from "@jamsr-ui/utils";
-import { forwardRef, useId } from "react";
+import { ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
+import { useId } from "react";
 
-interface ItemProps {
+interface AutocompleteItemProps {
   children: React.ReactNode;
   active?: boolean;
   selected?: boolean;
+  disabled?: boolean;
 }
 
-export const AutocompleteItem = forwardRef<
-  HTMLDivElement,
-  ItemProps & React.HTMLProps<HTMLDivElement>
->(({ children, active, className, selected, disabled, ...rest }, ref) => {
+export const AutocompleteItem = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, AutocompleteItemProps>,
+) => {
+  const { children, active, className, selected, disabled, ...rest } = props;
   const id = useId();
   return (
     <div
       data-slot="item"
-      ref={ref}
       role="option"
       id={id}
       aria-selected={active}
       className={cn(
-        "flex w-full cursor-pointer select-none items-center gap-2 rounded-md p-2 text-sm text-foreground hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
+        "text-foreground hover:bg-action-hover focus-visible:ring-primary flex w-full cursor-pointer select-none items-center gap-2 rounded-md p-2 text-sm focus-visible:ring-2",
         className,
         {
           "bg-content1": active,
@@ -32,8 +32,7 @@ export const AutocompleteItem = forwardRef<
       {...rest}
     >
       {children}
-      {selected && <Check className="absolute right-2 bg-background  " />}
+      {selected && <Check className="bg-background absolute right-2  " />}
     </div>
   );
-});
-AutocompleteItem.displayName = "UI.AutocompleteItem";
+};

@@ -5,6 +5,5 @@ export * from "./classes";
 export * from "./color-variants";
 export * from "./component";
 export * from "./context";
-export * from "./react";
 export * from "./transition";
 export * from "./tv";

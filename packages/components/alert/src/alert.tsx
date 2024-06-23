@@ -1,17 +1,18 @@
 import { Info } from "@jamsr-ui/shared-icons";
-import { forwardRefUI, type UIProps } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { alertVariant, type AlertVariantProps } from "./style";
 
-export type AlertProps = UIProps<"div"> & AlertVariantProps;
+export type AlertProps = AlertVariantProps;
 
-export const Alert = forwardRefUI<"div", AlertProps>((props, ref) => {
+export const Alert = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, AlertProps>,
+) => {
   const { children, severity, as, className, ...restProps } = props;
   const styles = alertVariant({ severity });
 
   const Component = as ?? "div";
   return (
     <Component
-      ref={ref}
       data-component="alert"
       data-slot="wrapper"
       className={styles.wrapper({ className })}
@@ -21,5 +22,4 @@ export const Alert = forwardRefUI<"div", AlertProps>((props, ref) => {
       <div className={styles.message()}>{children}</div>
     </Component>
   );
-});
-Alert.displayName = "UI.Alert";
+};

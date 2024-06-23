@@ -47,6 +47,6 @@ const Template = () => {
 };
 
 export const Default: Story = {
-  args: {},
+  args: { title: "", value: "" },
   render: Template,
 };

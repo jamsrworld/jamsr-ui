@@ -1,11 +1,13 @@
 import { Button } from "@jamsr-ui/button";
 import { EyeClosed, EyeOpen } from "@jamsr-ui/shared-icons";
-import { forwardRefUI } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
 import { useInput, type UseInputProps } from "./use-input";
 
 export type InputProps = UseInputProps;
-export const Input = forwardRefUI<"input", InputProps>((props, ref) => {
+export const Input = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, InputProps>,
+) => {
   const {
     Component,
     InputComponent,
@@ -59,7 +61,6 @@ export const Input = forwardRefUI<"input", InputProps>((props, ref) => {
   return (
     <Component
       data-component="input"
-      ref={ref}
       {...getBaseProps()}
     >
       <div {...getMainWrapperProps()}>
@@ -86,4 +87,4 @@ export const Input = forwardRefUI<"input", InputProps>((props, ref) => {
       <div {...getHelperProps()}>{helperText}</div>
     </Component>
   );
-});
+};

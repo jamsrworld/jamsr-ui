@@ -30,7 +30,7 @@ const Template = (props: TooltipProps) => {
     </div>
   );
 };
-export const Default: Story = {
+export const Default = {
   render: Template,
   args: {},
 };

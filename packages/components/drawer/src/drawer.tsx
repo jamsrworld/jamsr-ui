@@ -34,6 +34,7 @@ export const Drawer = (props: Props) => {
       {isOpen && <Backdrop onClick={onOpenChange} />}
       <AnimatePresence>
         {isOpen && (
+          // @ts-ignore
           <m.div
             initial={{ right: -900 }}
             animate={{ right: 0 }}

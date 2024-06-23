@@ -1,13 +1,10 @@
-import {
-  UIProps,
-  cn,
-  focusVisibleClasses,
-  forwardRefUI,
-} from "@jamsr-ui/utils";
+import { ComponentPropsWithAs, cn, focusVisibleClasses } from "@jamsr-ui/utils";
 
-type LinkProps = UIProps<"a">;
+type LinkProps = {};
 
-export const Link = forwardRefUI<"a", LinkProps>((props, ref) => {
+export const Link = <T extends React.ElementType = "a">(
+  props: ComponentPropsWithAs<T, LinkProps>,
+) => {
   const { as, children, className, ...restProps } = props;
   const Component = as ?? "a";
   return (
@@ -18,11 +15,9 @@ export const Link = forwardRefUI<"a", LinkProps>((props, ref) => {
         focusVisibleClasses,
         className,
       )}
-      ref={ref}
       {...restProps}
     >
       {children}
     </Component>
   );
-});
-Link.displayName = "UI.Link"
+};

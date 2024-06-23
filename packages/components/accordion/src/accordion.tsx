@@ -1,4 +1,4 @@
-import { forwardRefUI } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { Children, useCallback, useMemo, useState } from "react";
 import {
   AccordionProvider,
@@ -28,7 +28,9 @@ export const ItemProvider = (
 
 export type AccordionProps = UseAccordionProps;
 
-export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
+export const Accordion = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, AccordionProps>,
+) => {
   const { Component, children, getBaseProps } = useAccordion(props);
   const [activeIndex, setActiveIndex] = useState(-1);
   const onChangeIndex = useCallback(
@@ -40,7 +42,6 @@ export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
     <Component
       data-component="accordion"
       data-slot="base"
-      ref={ref}
       {...getBaseProps()}
     >
       {Children.map(children, (child, index) => {
@@ -58,5 +59,4 @@ export const Accordion = forwardRefUI<"div", AccordionProps>((props, ref) => {
       })}
     </Component>
   );
-});
-Accordion.displayName = "UI.Accordion";
+};

@@ -1,14 +1,16 @@
 "use client";
 
 import { Divider } from "@jamsr-ui/divider";
-import { forwardRefUI } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useScroll } from "framer-motion";
 import { useState } from "react";
 import { useHeader, type UseHeaderProps } from "./use-header";
 
 export type HeaderProps = UseHeaderProps;
 
-export const Header = forwardRefUI<"header", HeaderProps>((props, ref) => {
+export const Header = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, HeaderProps>,
+) => {
   const { Component, getBaseProps, children, showDivider, showDividerDefault } =
     useHeader(props);
   const { scrollY } = useScroll();
@@ -25,7 +27,6 @@ export const Header = forwardRefUI<"header", HeaderProps>((props, ref) => {
   return (
     <Component
       data-component="header"
-      ref={ref}
       data-state={hasScrolled ? "active" : "inactive"}
       {...getBaseProps()}
     >
@@ -35,4 +36,4 @@ export const Header = forwardRefUI<"header", HeaderProps>((props, ref) => {
       )}
     </Component>
   );
-});
+};

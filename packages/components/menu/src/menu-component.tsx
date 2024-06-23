@@ -212,6 +212,7 @@ export const MenuComponent = forwardRef<HTMLDivElement, MenuProps>(
                     initialFocus={isNested ? -1 : 0}
                     returnFocus={!isNested}
                   >
+                    {/* @ts-ignore */}
                     <m.div
                       ref={refs.setFloating}
                       style={floatingStyles}

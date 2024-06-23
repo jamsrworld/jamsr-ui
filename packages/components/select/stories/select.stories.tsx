@@ -44,12 +44,10 @@ const MultipleTemplate = () => {
   );
 };
 
-export const Default: Story = {
+export const Default = {
   render: Template,
-  args: {},
 };
 
-export const Multiple: Story = {
+export const Multiple = {
   render: MultipleTemplate,
-  args: {},
 };

@@ -38,7 +38,6 @@ const Template = () => {
   );
 };
 
-export const Primary: Story = {
+export const Primary = {
   render: Template,
-  args: {},
 };

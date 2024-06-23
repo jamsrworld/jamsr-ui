@@ -1,10 +1,6 @@
 import { CircularProgress, LinearProgress } from "@jamsr-ui/progress";
 import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
-import {
-  forwardRef,
-  type ComponentPropsWithoutRef,
-  type ForwardedRef,
-} from "react";
+import { type ComponentPropsWithoutRef } from "react";
 import { cardVariants, type CardVariants } from "./style";
 
 export type CardProps = ComponentPropsWithoutRef<"div"> &
@@ -13,9 +9,8 @@ export type CardProps = ComponentPropsWithoutRef<"div"> &
     isLoading?: boolean;
   };
 
-const CardInner = <T extends React.ElementType = "div">(
+export const Card = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, CardProps>,
-  ref: ForwardedRef<HTMLDivElement>,
 ) => {
   const {
     as,
@@ -33,7 +28,6 @@ const CardInner = <T extends React.ElementType = "div">(
     <Component
       data-component="card"
       data-slot="base"
-      ref={ref}
       className={cn(cardVariants({ variant, bg, className, bordered }))}
       {...restProps}
     >
@@ -52,5 +46,3 @@ const CardInner = <T extends React.ElementType = "div">(
     </Component>
   );
 };
-
-export const Card = forwardRef(CardInner);

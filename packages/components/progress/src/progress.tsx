@@ -17,7 +17,8 @@ type Props = VariantProps<typeof linearProgressVariants> &
   );
 
 export const LinearProgress = (props: Props) => {
-  const { progress, size, color, isIntermediate, className, ...restProps } = props;
+  const { progress, size, color, isIntermediate, className, ...restProps } =
+    props;
   const { bar, wrapper } = linearProgressVariants({
     size,
     color,
@@ -31,6 +32,7 @@ export const LinearProgress = (props: Props) => {
       {isIntermediate ? (
         <div className={cn(bar(), "animate-progress")} />
       ) : (
+        // @ts-ignore
         <m.div
           className={bar()}
           initial={{

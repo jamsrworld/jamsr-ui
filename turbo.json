@@ -24,6 +24,9 @@
       "cache": false,
       "persistent": true
     },
+    "typecheck": {
+      "cache": true
+    },
     "test": {}
   }
 }

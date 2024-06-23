@@ -26,7 +26,6 @@ const Template = () => {
   );
 };
 
-export const Default: Story = {
+export const Default = {
   render: Template,
-  args: {},
 };

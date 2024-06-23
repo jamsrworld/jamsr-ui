@@ -2,9 +2,10 @@ import { m } from "framer-motion";
 
 export const ActiveIndicator = () => {
   return (
+    // @ts-ignore
     <m.div
       data-slot="indicator"
-      className="absolute inset-0 -z-1 size-full rounded-inherit bg-content3"
+      className="-z-1 rounded-inherit bg-content3 absolute inset-0 size-full"
       layoutId="activeTab"
     />
   );

@@ -2,72 +2,70 @@ import {
   FloatingFocusManager,
   FloatingOverlay,
   FloatingPortal,
-  useMergeRefs,
 } from "@floating-ui/react";
-import { forwardRefUI, type UIProps } from "@jamsr-ui/utils";
+import { ComponentPropsWithAs, type UIProps } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import { DialogClose } from "./dialog-close";
 import { useDialogContext } from "./dialog-context";
 
 export type DialogContentProps = UIProps<"div">;
 
-export const DialogContent = forwardRefUI<"div", DialogContentProps>(
-  (props, ref) => {
-    const { as, children, className } = props;
-    const {
-      interactions,
-      context,
-      setFloating,
-      slots,
-      Component: DialogComponent,
-      hideCloseButton,
-      getDialogProps,
-      isOpen,
-    } = useDialogContext();
-    const Component = as || DialogComponent;
-    const mergedRef = useMergeRefs([setFloating, ref]);
+export const DialogContent = <T extends React.ElementType = "div">(
+  props: ComponentPropsWithAs<T, DialogContentProps>,
+) => {
+  const { as, children, className } = props;
+  const {
+    interactions,
+    context,
+    setFloating,
+    slots,
+    Component: DialogComponent,
+    hideCloseButton,
+    getDialogProps,
+    isOpen,
+  } = useDialogContext();
+  const Component = as || DialogComponent;
 
-    return (
-      <AnimatePresence>
-        {isOpen && (
-          <FloatingPortal>
-            <FloatingOverlay
-              data-slot="backdrop"
-              className={slots.backdrop()}
-              lockScroll
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <FloatingPortal>
+          <FloatingOverlay
+            data-slot="backdrop"
+            className={slots.backdrop()}
+            lockScroll
+          >
+            <FloatingFocusManager
+              context={context}
+              modal
             >
-              <FloatingFocusManager
-                context={context}
-                modal
+              {/* @ts-ignore */}
+              <m.div
+                initial={{ y: 50, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                exit={{
+                  y: 50,
+                  opacity: 0,
+                }}
+                className="flex w-full items-center justify-center"
               >
-                <m.div
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{
-                    y: 0,
-                    opacity: 1,
-                  }}
-                  exit={{
-                    y: 50,
-                    opacity: 0,
-                  }}
-                  className="flex w-full items-center justify-center"
+                <Component
+                  data-slot="content"
+                  ref={setFloating}
+                  {...interactions.getFloatingProps()}
+                  {...getDialogProps({ className })}
                 >
-                  <Component
-                    data-slot="content"
-                    ref={mergedRef}
-                    {...interactions.getFloatingProps()}
-                    {...getDialogProps({ className })}
-                  >
-                    {!hideCloseButton && <DialogClose />}
-                    {children}
-                  </Component>
-                </m.div>
-              </FloatingFocusManager>
-            </FloatingOverlay>
-          </FloatingPortal>
-        )}
-      </AnimatePresence>
-    );
-  },
-);
-DialogContent.displayName = "UI.DialogContent";
+                  {!hideCloseButton && <DialogClose />}
+                  {children}
+                </Component>
+              </m.div>
+            </FloatingFocusManager>
+          </FloatingOverlay>
+        </FloatingPortal>
+      )}
+    </AnimatePresence>
+  );
+};

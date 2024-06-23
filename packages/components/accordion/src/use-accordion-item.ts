@@ -1,7 +1,17 @@
-import { cn, dataAttr, type PropGetter, type SlotsToClasses, type UIProps } from "@jamsr-ui/utils";
+import {
+  cn,
+  dataAttr,
+  type PropGetter,
+  type SlotsToClasses,
+  type UIProps,
+} from "@jamsr-ui/utils";
 import { useCallback, type ComponentProps } from "react";
 import { useAccordionContext } from "./accordion-context";
-import { accordionItem, type AccordionItemSlots, type AccordionItemVariantProps } from "./style";
+import {
+  accordionItem,
+  type AccordionItemSlots,
+  type AccordionItemVariantProps,
+} from "./style";
 
 export type AccordionItemIndicatorProps = {
   indicator?: React.ReactNode;
@@ -17,7 +27,9 @@ type Props = AccordionItemVariantProps & {
   actionContent?: React.ReactNode;
   classNames?: SlotsToClasses<AccordionItemSlots>;
   className?: string;
-  indicator?: React.ReactNode | ((props: AccordionItemIndicatorProps) => React.ReactNode);
+  indicator?:
+    | React.ReactNode
+    | ((props: AccordionItemIndicatorProps) => React.ReactNode);
 } & (
     | {
         title: React.ReactNode;

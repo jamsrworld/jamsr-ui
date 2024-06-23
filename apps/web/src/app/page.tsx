@@ -1,8 +1,23 @@
-import { Button } from "@jamsr-ui/react";
+"use client";
+
+import { Button, Menu, MenuItem } from "@jamsr-ui/react";
 
 const page = () => {
   return (
-    <div className="gap-responsive bg-background  grid h-dvh place-content-center ">
+    <div className="gap-responsive bg-background grid  h-dvh place-content-center text-white ">
+      <Menu label={<Button>Click Me</Button>}>
+        <MenuItem>hii</MenuItem>
+        <MenuItem>Hii2</MenuItem>
+      </Menu>
+      {/* <Dialog
+        isOpen
+        onOpenChange={() => {}}
+      >
+        <DialogContent>
+          <DialogBody>HIii</DialogBody>
+        </DialogContent>
+      </Dialog> */}
+
       <Button className="rounded-lg border border-gray-500 p-2 text-purple-500">
         Hello
       </Button>

@@ -13,7 +13,7 @@
     "**/Thumbs.db": true,
     "**/node_modules": true,
     "**/.turbo": true,
-    "**/dist": false
+    "**/dist": true
   },
   "explorerExclude.backup": {},
   "cSpell.words": [
@@ -38,6 +38,16 @@
     [
       "tv\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
       "\"(.*?)\""
-    ]
-  ]
+    ],
+    ["Classes \\=([^;]*);", "'([^']*)'"],
+    ["Classes \\=([^;]*);", "\"([^\"]*)\""],
+    ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    ".*Classes.*"
+  ],
+  "files.autoSave": "onFocusChange"
 }

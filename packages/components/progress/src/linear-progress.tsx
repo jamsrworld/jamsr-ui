@@ -1,9 +1,9 @@
+import { cn, type VariantProps } from "@jamsr-ui/utils";
 import { m } from "framer-motion";
 import { type ComponentPropsWithoutRef } from "react";
-import { cn, type VariantProps } from "@jamsr-ui/utils";
 import { linearProgressVariants } from "./style";
 
-type Props = VariantProps<typeof linearProgressVariants> &
+export type LinearProgressProps = VariantProps<typeof linearProgressVariants> &
   ComponentPropsWithoutRef<"div"> &
   (
     | {
@@ -16,7 +16,7 @@ type Props = VariantProps<typeof linearProgressVariants> &
       }
   );
 
-export const LinearProgress = (props: Props) => {
+export const LinearProgress = (props: LinearProgressProps) => {
   const { progress, size, color, isIntermediate, className, ...restProps } =
     props;
   const { bar, wrapper } = linearProgressVariants({

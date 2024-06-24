@@ -3,6 +3,7 @@
  */
 export const focusVisibleClasses = [
   "focus-visible:z-10",
+  "focus-visible:outline-primary",
   "focus-visible:outline-2",
   "focus-visible:outline-focus",
   "focus-visible:outline-offset-2",

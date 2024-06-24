@@ -1,9 +1,9 @@
 import {
+  ComponentPropsWithAs,
   cn,
   dataAttr,
   type PropGetter,
   type SlotsToClasses,
-  type UIProps,
 } from "@jamsr-ui/utils";
 import { useCallback, type ComponentProps } from "react";
 import { useAccordionContext } from "./accordion-context";
@@ -30,6 +30,7 @@ type Props = AccordionItemVariantProps & {
   indicator?:
     | React.ReactNode
     | ((props: AccordionItemIndicatorProps) => React.ReactNode);
+  isDisabled?: boolean;
 } & (
     | {
         title: React.ReactNode;
@@ -41,7 +42,8 @@ type Props = AccordionItemVariantProps & {
       }
   );
 
-export type UseAccordionItemProps = UIProps<"div"> & Props;
+export type UseAccordionItemProps = ComponentPropsWithAs<"div", Props>;
+
 export const useAccordionItem = (props: UseAccordionItemProps) => {
   const {
     as,
@@ -56,14 +58,15 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     hideIndicator,
     indicator,
     triggerContent,
+    isDisabled,
   } = props;
 
   const Component = as ?? "div";
-  const slots = accordionItem({
+  const { index, isOpen, onChangeIndex } = useAccordionContext();
+
+  const styles = accordionItem({
     hideIndicator,
   });
-
-  const { index, isOpen, onChangeIndex } = useAccordionContext();
 
   const onClick = useCallback(() => {
     if (!isOpen) onChangeIndex(index);
@@ -74,146 +77,149 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     (props = {}) => {
       return {
         "data-slot": "base",
-        className: slots.base({
+        "data-disabled": dataAttr(isDisabled),
+        className: styles.base({
           className: cn(classNames?.base, className),
         }),
         ...props,
       };
     },
-    [className, classNames?.base, slots],
+    [className, classNames?.base, styles],
   );
 
   const getButtonProps: PropGetter<ComponentProps<"button">> = useCallback(
     (props = {}) => {
       return {
         "data-slot": "trigger",
-        className: slots.trigger({
+        "data-disabled": dataAttr(isDisabled),
+        className: styles.trigger({
           className: classNames?.trigger,
         }),
         type: "button",
         onClick,
+        disabled: isDisabled,
         ...props,
       };
     },
-    [classNames?.trigger, onClick, slots],
+    [classNames?.trigger, onClick, styles],
   );
 
   const getContentProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "content",
-        className: slots.content({
+        className: styles.content({
           className: classNames?.content,
         }),
         ...props,
       };
     },
-    [classNames?.content, slots],
+    [classNames?.content, styles],
   );
 
   const getIndicatorProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "indicator",
-        className: slots.indicator({
+        className: styles.indicator({
           className: classNames?.indicator,
         }),
         "data-open": dataAttr(isOpen),
         ...props,
       };
     },
-    [classNames?.indicator, isOpen, slots],
+    [classNames?.indicator, isOpen, styles],
   );
 
   const getHeadingProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "heading",
-        className: slots.heading({
+        className: styles.heading({
           className: classNames?.heading,
         }),
         ...props,
       };
     },
-    [classNames?.heading, slots],
+    [classNames?.heading, styles],
   );
 
   const getStartContentProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "start-content",
-        className: slots.startContent({
+        className: styles.startContent({
           className: classNames?.startContent,
         }),
         ...props,
       };
     },
-    [classNames?.startContent, slots],
+    [classNames?.startContent, styles],
   );
 
   const getEndContentProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "end-content",
-        className: slots.endContent({
+        className: styles.endContent({
           className: classNames?.endContent,
         }),
         ...props,
       };
     },
-    [classNames?.endContent, slots],
+    [classNames?.endContent, styles],
   );
 
   const getActionContentProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "action-content",
-        className: slots.actionContent({
+        className: styles.actionContent({
           className: classNames?.actionContent,
         }),
         ...props,
       };
     },
-    [classNames?.actionContent, slots],
+    [classNames?.actionContent, styles],
   );
 
   const getTitleProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "title",
-        className: slots.title({
+        className: styles.title({
           className: classNames?.title,
         }),
         ...props,
       };
     },
-    [classNames?.title, slots],
+    [classNames?.title, styles],
   );
 
   const getTitleWrapperProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "title-wrapper",
-        className: slots.titleWrapper({
+        className: styles.titleWrapper({
           className: classNames?.titleWrapper,
         }),
         ...props,
       };
     },
-    [classNames?.titleWrapper, slots],
+    [classNames?.titleWrapper, styles],
   );
 
   const getSubtitleProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
         "data-slot": "subtitle",
-        className: slots.subtitle({
+        className: styles.subtitle({
           className: classNames?.subtitle,
         }),
         ...props,
       };
     },
-    [classNames?.subtitle, slots],
+    [classNames?.subtitle, styles],
   );
 
   return {

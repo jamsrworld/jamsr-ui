@@ -39,3 +39,4 @@ export const uploadVariants = tv({
 });
 
 export type UploadVariants = VariantProps<typeof uploadVariants>;
+export type UploadSlots = keyof ReturnType<typeof uploadVariants>;

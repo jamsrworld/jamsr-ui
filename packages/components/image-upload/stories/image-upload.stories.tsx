@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ImageUpload, ImageUploadProps } from "../src";
 
 const meta = {
-  title: "Components/Image-upload",
+  title: "Components/Image Upload",
   component: ImageUpload,
 } satisfies Meta<typeof ImageUpload>;
 
@@ -39,11 +39,13 @@ const Template = (props: ImageUploadProps) => {
       className="aspect-video h-40"
       onError={handleOnError}
       showDeleteBtn
-      progress={50}
+      classNames={{
+        base:"border-error"
+      }}
     />
   );
 };
 
-export const Primary = {
+export const SingleImage = {
   render: Template,
 };

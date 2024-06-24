@@ -13,7 +13,10 @@ export const accordionItem = tv({
   slots: {
     base: "flex flex-col rounded-xl bg-background-paper px-4",
     heading: "flex items-center gap-2",
-    trigger: ["flex size-full items-center gap-3 py-4", focusVisibleClasses],
+    trigger: [
+      "flex size-full items-center gap-3 py-4 disabled:opacity-50 disabled:cursor-not-allowed",
+      ...focusVisibleClasses,
+    ],
     startContent: "shrink-0",
     endContent: "shrink-0",
     actionContent: "",

@@ -1,8 +1,9 @@
+import { CircularProgress } from "@jamsr-ui/progress";
 import { Close, ImageUpload as ImageUploadIcon } from "@jamsr-ui/shared-icons";
+import { SlotsToClasses, cn, dataAttr } from "@jamsr-ui/utils";
 import { useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
-import { uploadVariants } from "./style";
-import { CircularProgress } from "@jamsr-ui/progress";
+import { UploadSlots, uploadVariants } from "./style";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
@@ -11,6 +12,7 @@ export type ImageUploadProps = {
   onValueChange: (value: string) => void;
   onFileSelect: (file: File) => void | Promise<void>;
   className?: string;
+  classNames?: SlotsToClasses<UploadSlots>;
   isAvatar?: boolean;
   disabled?: boolean;
   onError?: (error: string) => void;
@@ -21,13 +23,14 @@ export type ImageUploadProps = {
 export const ImageUpload = (props: ImageUploadProps) => {
   const {
     value,
-    isAvatar,
+    isAvatar = false,
     className,
-    disabled,
+    classNames,
+    disabled = false,
     onFileSelect,
     onValueChange,
     onError,
-    showDeleteBtn,
+    showDeleteBtn = true,
     progress,
   } = props;
   const [preview, setPreview] = useState("");
@@ -57,8 +60,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
     },
     onDropRejected(fileRejections) {
       fileRejections.forEach((item) => {
-        const { errors, file } = item;
-        const fileName = file.name;
+        const { errors } = item;
         let error = errors[0];
         if (error) {
           const message = error.message;
@@ -76,7 +78,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
     isDragActive,
   });
   const baseStyles = styles.base({
-    className,
+    className: cn(classNames?.base, className),
   });
 
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -86,10 +88,13 @@ export const ImageUpload = (props: ImageUploadProps) => {
 
   return (
     <div
+      {...getRootProps()}
       data-slot="base"
       data-component="image-upload"
+      data-drag-active={dataAttr(isDragActive)}
+      data-disabled={dataAttr(disabled)}
+      data-avatar={dataAttr(isAvatar)}
       className={baseStyles}
-      {...getRootProps()}
     >
       <input {...getInputProps()} />
       <ImageUploadIcon className="shrink-0 text-inherit" />
@@ -97,13 +102,13 @@ export const ImageUpload = (props: ImageUploadProps) => {
         <>
           <p
             data-slot="info"
-            className={styles.info()}
+            className={styles.info({ className: classNames?.info })}
           >
             Choose a file or drag & drop it here
           </p>
           <p
             data-slot="info"
-            className={styles.info()}
+            className={styles.info({ className: classNames?.info })}
           >
             JPEG, PNG, and WEBP formats, up to 5MB
           </p>
@@ -112,7 +117,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
       {imageUrl && (
         <img
           data-slot="image"
-          className={styles.image()}
+          className={styles.image({ className: classNames?.image })}
           src={imageUrl}
           alt=""
         />
@@ -121,15 +126,15 @@ export const ImageUpload = (props: ImageUploadProps) => {
         <button
           data-slot="delete-btn"
           onClick={handleDelete}
-          className={styles.deleteBtn()}
+          className={styles.deleteBtn({ className: classNames?.deleteBtn })}
         >
           <Close />
         </button>
       )}
-      {progress && (
+      {!!progress && (
         <div
           data-slot="overlay"
-          className={styles.overlay()}
+          className={styles.overlay({ className: classNames?.overlay })}
         >
           <CircularProgress />
         </div>

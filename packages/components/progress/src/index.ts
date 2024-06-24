@@ -1,4 +1,8 @@
 "use client";
 
-export { CircularProgress } from "./circular-progress";
-export { LinearProgress } from "./progress";
+export {
+    CircularProgress,
+    type CircularProgressProps
+} from "./circular-progress";
+export { LinearProgress, type LinearProgressProps } from "./linear-progress";
+

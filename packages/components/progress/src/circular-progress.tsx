@@ -1,4 +1,11 @@
-export const CircularProgress = () => {
+export type CircularProgressProps = {
+  value?: number;
+  defaultValue?: number;
+  onValueChange?: number;
+  setValue?: number;
+};
+
+export const CircularProgress = (props: CircularProgressProps) => {
   return (
     <div
       aria-label="Loading..."

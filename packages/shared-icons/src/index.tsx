@@ -210,3 +210,37 @@ export const EyeOpen = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
+export const ImageUpload = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      d="M3.39 4.393C2 5.784 2 8.023 2 12.502c0 4.478 0 6.717 1.39 8.109l1.193.79.789-.951c4.155-5.031 8.875-10.745 15.62-6.394.003-.486.003-1.003.003-1.554 0-4.478 0-6.718-1.391-8.109s-3.63-1.391-8.107-1.391c-4.477 0-6.715 0-8.106 1.391Z"
+      opacity={0.4}
+    />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth={1.5}
+      d="M11.497 3.002c-4.477 0-6.715 0-8.106 1.391S2 8.023 2 12.502c0 4.478 0 6.717 1.39 8.109 1.392 1.391 3.63 1.391 8.107 1.391 4.477 0 6.716 0 8.107-1.391 1.39-1.392 1.39-3.63 1.39-8.109v-.5"
+    />
+    <path
+      stroke="currentColor"
+      strokeWidth={1.5}
+      d="M4.999 21.002c4.209-4.751 8.939-11.053 15.996-6.327"
+    />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M17.996 1.998v8.008M22 5.977l-8.009.015"
+    />
+  </svg>
+);

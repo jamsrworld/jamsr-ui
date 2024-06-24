@@ -1,3 +1,3 @@
 "use client";
 
-export { ImageUpload } from "./image-upload";
+export { ImageUpload, type ImageUploadProps } from "./image-upload";

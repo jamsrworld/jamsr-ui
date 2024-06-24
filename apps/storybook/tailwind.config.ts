@@ -2,7 +2,11 @@ import { jamsrui } from "@jamsr-ui/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./node_modules/@jamsr-ui/**/dist/*.{js,jsx,mjs}"],
+  content: [
+    "../../packages/components/*/src/*.ts",
+    "../../packages/components/*/src/*.tsx",
+    "../../packages/components/*/stories/*.tsx",
+  ],
   plugins: [...jamsrui()],
 };
 

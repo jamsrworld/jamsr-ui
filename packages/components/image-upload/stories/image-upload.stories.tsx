@@ -1,6 +1,11 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { ImageUpload, ImageUploadProps } from "../src";
+import {
+  FileState,
+  ImageUpload,
+  ImageUploadProps,
+  MultiImageUpload,
+} from "../src";
 
 const meta = {
   title: "Components/Image Upload",
@@ -13,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 const fileUrl =
   "https://cdn.jamsrworld.com/06-24-2024/avatar_1_1719214634268_71531560.jpg?w=3840&q=75";
 
-const Template = (props: ImageUploadProps) => {
+const SingleImageTemplate = (props: ImageUploadProps) => {
   const [value, setValue] = useState("");
   const onFileSelect = async (file: File) => {
     console.log("file:->", file);
@@ -40,12 +45,65 @@ const Template = (props: ImageUploadProps) => {
       onError={handleOnError}
       showDeleteBtn
       classNames={{
-        base:"border-error"
+        base: "border-error",
+      }}
+    />
+  );
+};
+
+const MultiImageTemplate = (props: ImageUploadProps) => {
+  const [files, setValue] = useState<FileState[]>([]);
+  const images = files.filter((item) => item.progress === "COMPLETE");
+  console.log("images:->", images)
+
+  const onFilesSelect = async (files: FileState[]) => {
+    for (const item of files) {
+      const { file, id } = item;
+
+      //  upload file
+      await new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("");
+        }, 1000);
+      });
+
+      setValue((value) =>
+        value.map((item, idx) => {
+          if (item.id === id)
+            return {
+              ...item,
+              file: fileUrl,
+              progress: "COMPLETE",
+            };
+          return item;
+        }),
+      );
+    }
+  };
+
+  const handleOnError = (error: string) => {
+    console.error("error:->", error);
+  };
+
+  return (
+    <MultiImageUpload
+      {...props}
+      value={files}
+      onValueChange={setValue}
+      onFilesSelect={onFilesSelect}
+      className="aspect-square h-20"
+      onError={handleOnError}
+      dropzoneOptions={{
+        maxFiles: 4,
       }}
     />
   );
 };
 
 export const SingleImage = {
-  render: Template,
+  render: SingleImageTemplate,
+};
+
+export const MultiImage = {
+  render: MultiImageTemplate,
 };

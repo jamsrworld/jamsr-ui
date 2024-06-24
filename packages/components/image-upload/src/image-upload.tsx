@@ -2,7 +2,7 @@ import { CircularProgress } from "@jamsr-ui/progress";
 import { Close, ImageUpload as ImageUploadIcon } from "@jamsr-ui/shared-icons";
 import { SlotsToClasses, cn, dataAttr } from "@jamsr-ui/utils";
 import { useEffect, useState } from "react";
-import { useDropzone } from "react-dropzone";
+import { DropzoneOptions, useDropzone } from "react-dropzone";
 import { UploadSlots, uploadVariants } from "./style";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
@@ -18,6 +18,9 @@ export type ImageUploadProps = {
   onError?: (error: string) => void;
   showDeleteBtn?: boolean;
   progress?: number;
+  description?: React.ReactNode;
+  info?: React.ReactNode;
+  dropzoneOptions?: DropzoneOptions;
 };
 
 export const ImageUpload = (props: ImageUploadProps) => {
@@ -32,6 +35,9 @@ export const ImageUpload = (props: ImageUploadProps) => {
     onError,
     showDeleteBtn = true,
     progress,
+    dropzoneOptions,
+    description = "Choose a file or drag & drop it here",
+    info = "JPEG, PNG, and WEBP formats, up to 5MB",
   } = props;
   const [preview, setPreview] = useState("");
 
@@ -68,6 +74,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
         }
       });
     },
+    ...dropzoneOptions
   });
 
   const imageUrl = preview.length > 0 ? preview : value;
@@ -100,18 +107,22 @@ export const ImageUpload = (props: ImageUploadProps) => {
       <ImageUploadIcon className="shrink-0 text-inherit" />
       {!isAvatar && (
         <>
-          <p
-            data-slot="info"
-            className={styles.info({ className: classNames?.info })}
-          >
-            Choose a file or drag & drop it here
-          </p>
-          <p
-            data-slot="info"
-            className={styles.info({ className: classNames?.info })}
-          >
-            JPEG, PNG, and WEBP formats, up to 5MB
-          </p>
+          {description && (
+            <p
+              data-slot="info"
+              className={styles.info({ className: classNames?.info })}
+            >
+              {description}
+            </p>
+          )}
+          {info && (
+            <p
+              data-slot="info"
+              className={styles.info({ className: classNames?.info })}
+            >
+              JPEG, PNG, and WEBP formats, up to 5MB
+            </p>
+          )}
         </>
       )}
       {imageUrl && (

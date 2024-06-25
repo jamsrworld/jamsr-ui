@@ -11,21 +11,21 @@
   },
   "dependencies": {
     "@jamsr-ui/react": "workspace:*",
-    "@jamsr-ui/theme": "workspace:^",
+    "@jamsr-ui/theme": "workspace:*",
     "clean-package": "^2.2.0",
     "next": "15.0.0-rc.0",
-    "react": "19.0.0-rc-3563387fe3-20240621",
-    "react-dom": "19.0.0-rc-3563387fe3-20240621"
+    "react": "19.0.0-rc-c21bcd627b-20240624",
+    "react-dom": "19.0.0-rc-c21bcd627b-20240624"
   },
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:*",
-    "@types/node": "^20",
-    "@types/react": "^18.3.1",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
-    "postcss": "^8",
+    "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5"
+    "typescript": "^5.4.5"
   }
 }

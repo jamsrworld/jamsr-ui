@@ -23,11 +23,11 @@
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.0",
-    "react": "19.0.0-rc-3563387fe3-20240621"
+    "react": "19.0.0-rc-c21bcd627b-20240624"
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.0",
-    "react": ">=19"
+    "react": "19.0.0-rc-c21bcd627b-20240624"
   },
   "clean-package": "../../clean-package.config.json"
 }

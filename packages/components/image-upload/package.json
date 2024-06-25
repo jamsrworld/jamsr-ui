@@ -24,22 +24,22 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@jamsr-ui/tailwind-config": "workspace:^",
-    "@types/react": "^18.3.2",
+    "@jamsr-ui/tailwind-config": "workspace:*",
+    "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "react": "19.0.0-rc-3563387fe3-20240621",
-    "react-dom": "19.0.0-rc-3563387fe3-20240621",
+    "react": "19.0.0-rc-c21bcd627b-20240624",
+    "react-dom": "19.0.0-rc-c21bcd627b-20240624",
     "react-dropzone": "^14.2.3"
   },
   "peerDependencies": {
-    "react": ">=19",
-    "react-dom": ">=18",
+    "react": "19.0.0-rc-c21bcd627b-20240624",
+    "react-dom": "19.0.0-rc-c21bcd627b-20240624",
     "react-dropzone": "^14.2.3"
   },
   "dependencies": {
-    "@jamsr-ui/progress": "workspace:^",
-    "@jamsr-ui/shared-icons": "workspace:^",
-    "@jamsr-ui/utils": "workspace:^"
+    "@jamsr-ui/progress": "workspace:*",
+    "@jamsr-ui/shared-icons": "workspace:*",
+    "@jamsr-ui/utils": "workspace:*"
   },
   "clean-package": "../../../clean-package.config.json"
 }

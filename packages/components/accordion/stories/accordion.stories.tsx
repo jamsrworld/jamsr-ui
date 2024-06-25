@@ -1,67 +1,39 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Accordion, type AccordionProps } from "../src/accordion";
-import { AccordionItem } from "../src/accordion-item";
+import { DefaultAccordion } from "./stories/default";
+import { EndContentAccordion } from "./stories/end-content";
+import { EndContentOutsideAccordion } from "./stories/end-content-outside";
+import { StartContentAccordion } from "./stories/start-content";
+import { StartContentOutsideAccordion } from "./stories/start-content-outside";
+import { SubtitleAccordion } from "./stories/subtitle";
 
-const meta = {
+const meta: Meta<typeof Accordion> = {
   title: "Components/Accordion",
   component: Accordion,
-} satisfies Meta<typeof Accordion>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-const defaultContent =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-const defaultContent2 =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-const defaultContent3 =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
-const DefaultTemplate = (arg: AccordionProps) => {
-  return (
-    <Accordion {...arg}>
-      <AccordionItem title="Accordion 1">{defaultContent}</AccordionItem>
-      <AccordionItem title="Accordion 2">{defaultContent2}</AccordionItem>
-      <AccordionItem
-        isDisabled
-        title="Accordion 3"
-      >
-        {defaultContent3}
-      </AccordionItem>
-    </Accordion>
-  );
 };
+export default meta;
+type Story = StoryObj<AccordionProps>;
 
 export const Default: Story = {
-  render: DefaultTemplate,
-};
-
-const WithSubtitleTemplate = (arg: AccordionProps) => {
-  return (
-    <Accordion {...arg}>
-      <AccordionItem
-        title="Accordion 1"
-        subtitle="Press to expand item 1"
-      >
-        {defaultContent}
-      </AccordionItem>
-      <AccordionItem
-        title="Accordion 2"
-        subtitle="Press to expand item 2"
-      >
-        {defaultContent2}
-      </AccordionItem>
-      <AccordionItem
-        isDisabled
-        title="Accordion 3"
-        subtitle="Disabled Accordion Item"
-      >
-        {defaultContent3}
-      </AccordionItem>
-    </Accordion>
-  );
+  render: DefaultAccordion,
 };
 
 export const WithSubtitle: Story = {
-  render: WithSubtitleTemplate,
+  render: SubtitleAccordion,
+};
+
+export const StartContent: Story = {
+  render: StartContentAccordion,
+};
+
+export const EndContent: Story = {
+  render: EndContentAccordion,
+};
+
+export const StartContentOutside: Story = {
+  render: StartContentOutsideAccordion,
+};
+
+export const EndContentOutside: Story = {
+  render: EndContentOutsideAccordion,
 };

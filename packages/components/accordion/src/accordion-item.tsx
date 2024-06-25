@@ -16,7 +16,9 @@ export const AccordionItem = <T extends React.ElementType = "div">(
     Component,
     children,
     startContent,
+    startContentPlacement,
     endContent,
+    endContentPlacement,
     hideIndicator,
     subtitle,
     title,
@@ -51,28 +53,33 @@ export const AccordionItem = <T extends React.ElementType = "div">(
   return (
     <Component {...getBaseProps()}>
       <div {...getHeadingProps()}>
+        {startContent && startContentPlacement === "outside" && (
+          <div {...getStartContentProps()}>{startContent}</div>
+        )}
         <button
           type="button"
           {...getButtonProps()}
         >
           {triggerContent || (
             <>
-              {startContent && (
+              {startContent && startContentPlacement === "inside" && (
                 <div {...getStartContentProps()}>{startContent}</div>
               )}
               <div {...getTitleWrapperProps()}>
                 {title && <span {...getTitleProps()}>{title}</span>}
                 {subtitle && <span {...getSubtitleProps()}>{subtitle}</span>}
               </div>
-              {endContent && <div {...getEndContentProps()}>{endContent}</div>}
+              {endContent && endContentPlacement === "inside" && (
+                <div {...getEndContentProps()}>{endContent}</div>
+              )}
               {!hideIndicator && (
                 <span {...getIndicatorProps()}>{indicatorContent}</span>
               )}
             </>
           )}
         </button>
-        {actionContent && (
-          <div {...getActionContentProps()}>{actionContent}</div>
+        {endContent && endContentPlacement === "outside" && (
+          <div {...getEndContentProps()}>{endContent}</div>
         )}
       </div>
       <AnimatePresence initial={false}>

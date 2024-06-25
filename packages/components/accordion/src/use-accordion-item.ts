@@ -19,11 +19,15 @@ export type AccordionItemIndicatorProps = {
   isDisabled?: boolean;
 };
 
+type ContentPlacement = "inside" | "outside";
+
 type Props = AccordionItemVariantProps & {
   children: React.ReactNode;
   subtitle?: React.ReactNode;
   startContent?: React.ReactNode;
+  startContentPlacement?: ContentPlacement;
   endContent?: React.ReactNode;
+  endContentPlacement?: ContentPlacement;
   actionContent?: React.ReactNode;
   classNames?: SlotsToClasses<AccordionItemSlots>;
   className?: string;
@@ -31,16 +35,9 @@ type Props = AccordionItemVariantProps & {
     | React.ReactNode
     | ((props: AccordionItemIndicatorProps) => React.ReactNode);
   isDisabled?: boolean;
-} & (
-    | {
-        title: React.ReactNode;
-        triggerContent?: undefined;
-      }
-    | {
-        triggerContent?: React.ReactNode;
-        title?: undefined;
-      }
-  );
+  title: React.ReactNode;
+  triggerContent?: React.ReactNode;
+};
 
 export type UseAccordionItemProps = ComponentPropsWithAs<"div", Props>;
 
@@ -59,6 +56,9 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     indicator,
     triggerContent,
     isDisabled,
+    startContentPlacement = "inside",
+    endContentPlacement = "inside",
+    ...restProps
   } = props;
 
   const Component = as ?? "div";
@@ -82,6 +82,7 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
           className: cn(classNames?.base, className),
         }),
         ...props,
+        ...restProps,
       };
     },
     [className, classNames?.base, styles],
@@ -229,7 +230,9 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     title,
     subtitle,
     startContent,
+    startContentPlacement,
     endContent,
+    endContentPlacement,
     actionContent,
     indicator,
     triggerContent,

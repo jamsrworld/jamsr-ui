@@ -14,7 +14,7 @@ export const accordionItem = tv({
     base: "flex flex-col rounded-xl bg-background-paper px-4",
     heading: "flex items-center gap-2",
     trigger: [
-      "flex size-full items-center gap-3 py-4 disabled:opacity-50 disabled:cursor-not-allowed",
+      "flex size-full items-center gap-3 py-4 disabled:cursor-not-allowed disabled:opacity-50",
       ...focusVisibleClasses,
     ],
     startContent: "shrink-0",

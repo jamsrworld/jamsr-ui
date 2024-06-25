@@ -1,11 +1,12 @@
 import {
-  ComponentPropsWithAs,
   cn,
   dataAttr,
+  includes,
+  type ComponentPropsWithAs,
   type PropGetter,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { useCallback, type ComponentProps } from "react";
+import { useCallback, useEffect, useRef, type ComponentProps } from "react";
 import { useAccordionContext } from "./accordion-context";
 import {
   accordionItem,
@@ -40,7 +41,11 @@ type Props = AccordionItemVariantProps & {
 
 export type UseAccordionItemProps = ComponentPropsWithAs<"div", Props>;
 
+const accessKeys = ["Home", "End", "ArrowUp", "ArrowDown"] as const;
+
 export const useAccordionItem = (props: UseAccordionItemProps) => {
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+
   const {
     as,
     children,
@@ -66,6 +71,36 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     hideIndicator,
   });
 
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      const { key } = e;
+      if (includes(accessKeys, key)) {
+        switch (key) {
+          case "ArrowDown":
+            onChangeIndex(index + 1);
+            return;
+          case "ArrowUp":
+            onChangeIndex(index - 1);
+            return;
+          case "Home":
+            onChangeIndex(0);
+            return;
+          case "End":
+            return;
+          default:
+            null;
+        }
+      } else return;
+    },
+    [index, onChangeIndex],
+  );
+
+  useEffect(() => {
+    const buttonDOM = buttonRef.current;
+    buttonDOM?.addEventListener("keydown", handleKeyDown);
+    return () => buttonDOM?.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
+
   const onClick = useCallback(() => {
     if (!isOpen) onChangeIndex(index);
     else onChangeIndex(-1);
@@ -83,7 +118,7 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
         ...restProps,
       };
     },
-    [className, classNames?.base, styles],
+    [className, classNames?.base, isDisabled, restProps, styles],
   );
 
   const getButtonProps: PropGetter<ComponentProps<"button">> = useCallback(
@@ -97,10 +132,11 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
         type: "button",
         onClick,
         disabled: isDisabled,
+        ref: buttonRef,
         ...props,
       };
     },
-    [classNames?.trigger, onClick, styles],
+    [classNames?.trigger, isDisabled, onClick, styles],
   );
 
   const getContentProps = useCallback<PropGetter>(

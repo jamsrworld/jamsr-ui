@@ -1,4 +1,4 @@
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { Children, useCallback, useMemo, useState } from "react";
 import {
   AccordionProvider,

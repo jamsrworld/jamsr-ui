@@ -7,3 +7,4 @@ export * from "./component";
 export * from "./context";
 export * from "./transition";
 export * from "./tv";
+export * from "./array";

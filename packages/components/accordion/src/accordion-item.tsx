@@ -1,5 +1,8 @@
 import { ChevronDown } from "@jamsr-ui/shared-icons";
-import { ComponentPropsWithAs, TRANSITION_VARIANTS } from "@jamsr-ui/utils";
+import {
+  TRANSITION_VARIANTS,
+  type ComponentPropsWithAs,
+} from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import { useMemo } from "react";
 import {
@@ -49,7 +52,10 @@ export const AccordionItem = <T extends React.ElementType = "div">(
   }, [indicator, isOpen]);
 
   return (
-    <Component {...getBaseProps()}>
+    <Component
+      data-component="accordion-item"
+      {...getBaseProps()}
+    >
       <div {...getHeadingProps()}>
         {startContent && startContentPlacement === "outside" && (
           <div {...getStartContentProps()}>{startContent}</div>
@@ -82,7 +88,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
       </div>
       <AnimatePresence initial={false}>
         {isOpen && (
-          // @ts-ignore
+          // @ts-expect-error Framer Error
           <m.div
             className="overflow-hidden"
             initial="exit"

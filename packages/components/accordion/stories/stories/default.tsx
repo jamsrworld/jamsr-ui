@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, AccordionProps } from "../../src";
+import { Accordion, AccordionItem, type AccordionProps } from "../../src";
 import { defaultContent, defaultContent2, defaultContent3 } from "./shared";
 
 export const DefaultAccordion = (arg: AccordionProps) => {

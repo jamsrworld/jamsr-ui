@@ -23,7 +23,6 @@ module.exports = {
     "prettier",
     "async",
     "async/typescript",
-    "eslint-config-turbo",
   ],
   globals: {
     React: true,

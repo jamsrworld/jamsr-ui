@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.35",
+  "version": "0.0.38",
   "main": "./src/index.ts",
   "description": "A react js ui library with tailwindcss",
   "keywords": [
@@ -81,7 +81,7 @@
     "@jamsr-ui/skeleton": "workspace:^",
     "@jamsr-ui/switch": "workspace:^",
     "@jamsr-ui/tab": "workspace:^",
-    "@jamsr-ui/textarea": "^0.0.23",
+    "@jamsr-ui/textarea": "^0.0.26",
     "@jamsr-ui/tooltip": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
     "@jamsr-ui/utils": "workspace:*"

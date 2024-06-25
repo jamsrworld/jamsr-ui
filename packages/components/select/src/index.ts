@@ -1,4 +1,4 @@
 "use client";
 
-export { Select } from "./select";
+export { Select, type SelectProps } from "./select";
 export { SelectItem } from "./select-item";

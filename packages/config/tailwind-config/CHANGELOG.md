@@ -1,5 +1,17 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.17
+
+### Patch Changes
+
+- added type
+
+## 0.0.16
+
+### Patch Changes
+
+- new version
+
 ## 0.0.15
 
 ### Patch Changes

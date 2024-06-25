@@ -1,5 +1,29 @@
 # web
 
+## 0.1.39
+
+### Patch Changes
+
+- added type
+- Updated dependencies
+  - @jamsr-ui/react@0.0.38
+  - @jamsr-ui/theme@0.0.24
+
+## 0.1.38
+
+### Patch Changes
+
+- new version
+- Updated dependencies
+  - @jamsr-ui/react@0.0.37
+  - @jamsr-ui/theme@0.0.23
+
+## 0.1.37
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.36
+
 ## 0.1.36
 
 ### Patch Changes

@@ -97,10 +97,8 @@ export const useInput = (props: UseInputProps) => {
         mask === "currency" ||
         mask === "percent"
       ) {
-        // const regexString = `^\\d*\\.?\\d{0,${precision}}$`;
         const regexString = `^\\$?\\d*\\.?\\d{0,${precision}}$`;
         const regex = new RegExp(regexString);
-        // const newValue = value.match(regex);
 
         if (!regex.test(crrValue)) {
           crrValue = value;

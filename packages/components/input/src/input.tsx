@@ -44,7 +44,7 @@ export const Input = <T extends React.ElementType = "div">(
         <Button
           isIconOnly
           onClick={handleChangeInputType}
-          variant="link"
+          variant="light"
           rounded
         >
           {!showPassword ? <EyeOpen /> : <EyeClosed />}

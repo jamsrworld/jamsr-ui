@@ -1,5 +1,11 @@
 # @jamsr-ui/badge
 
+## 0.0.27
+
+### Patch Changes
+
+- improvements
+
 ## 0.0.26
 
 ### Patch Changes

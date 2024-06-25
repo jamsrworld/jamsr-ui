@@ -1,0 +1,216 @@
+{
+  "folders": [
+    {
+      "name": "✨ jamsr-ui",
+      "path": ".",
+    },
+    {
+      "name": "🚀 @ui/storybook",
+      "path": "apps/storybook",
+    },
+    {
+      "name": "🚀 web",
+      "path": "apps/web",
+    },
+    {
+      "name": "📦 @jamsr-ui/accordion",
+      "path": "packages/components/accordion",
+    },
+    {
+      "name": "📦 @jamsr-ui/alert",
+      "path": "packages/components/alert",
+    },
+    {
+      "name": "📦 @jamsr-ui/autocomplete",
+      "path": "packages/components/autocomplete",
+    },
+    {
+      "name": "📦 @jamsr-ui/avatar",
+      "path": "packages/components/avatar",
+    },
+    {
+      "name": "📦 @jamsr-ui/badge",
+      "path": "packages/components/badge",
+    },
+    {
+      "name": "📦 @jamsr-ui/button",
+      "path": "packages/components/button",
+    },
+    {
+      "name": "📦 @jamsr-ui/card",
+      "path": "packages/components/card",
+    },
+    {
+      "name": "📦 @jamsr-ui/checkbox",
+      "path": "packages/components/checkbox",
+    },
+    {
+      "name": "📦 @jamsr-ui/chip",
+      "path": "packages/components/chip",
+    },
+    {
+      "name": "📦 @jamsr-ui/dialog",
+      "path": "packages/components/dialog",
+    },
+    {
+      "name": "📦 @jamsr-ui/divider",
+      "path": "packages/components/divider",
+    },
+    {
+      "name": "📦 @jamsr-ui/drawer",
+      "path": "packages/components/drawer",
+    },
+    {
+      "name": "📦 @jamsr-ui/header",
+      "path": "packages/components/header",
+    },
+    {
+      "name": "📦 @jamsr-ui/image-upload",
+      "path": "packages/components/image-upload",
+    },
+    {
+      "name": "📦 @jamsr-ui/input",
+      "path": "packages/components/input",
+    },
+    {
+      "name": "📦 @jamsr-ui/link",
+      "path": "packages/components/link",
+    },
+    {
+      "name": "📦 @jamsr-ui/menu",
+      "path": "packages/components/menu",
+    },
+    {
+      "name": "📦 @jamsr-ui/otp-input",
+      "path": "packages/components/otp-input",
+    },
+    {
+      "name": "📦 @jamsr-ui/popover",
+      "path": "packages/components/popover",
+    },
+    {
+      "name": "📦 @jamsr-ui/progress",
+      "path": "packages/components/progress",
+    },
+    {
+      "name": "📦 @jamsr-ui/radio",
+      "path": "packages/components/radio",
+    },
+    {
+      "name": "📦 @jamsr-ui/ripple",
+      "path": "packages/components/ripple",
+    },
+    {
+      "name": "📦 @jamsr-ui/select",
+      "path": "packages/components/select",
+    },
+    {
+      "name": "📦 @jamsr-ui/skeleton",
+      "path": "packages/components/skeleton",
+    },
+    {
+      "name": "📦 @jamsr-ui/switch",
+      "path": "packages/components/switch",
+    },
+    {
+      "name": "📦 @jamsr-ui/tab",
+      "path": "packages/components/tab",
+    },
+    {
+      "name": "📦 @jamsr-ui/textarea",
+      "path": "packages/components/textarea",
+    },
+    {
+      "name": "📦 @jamsr-ui/tooltip",
+      "path": "packages/components/tooltip",
+    },
+    {
+      "name": "📦 @jamsr-ui/typography",
+      "path": "packages/components/typography",
+    },
+    {
+      "name": "📦 @jamsr-ui/eslint-config",
+      "path": "packages/config/eslint-config",
+    },
+    {
+      "name": "📦 @jamsr-ui/tailwind-config",
+      "path": "packages/config/tailwind-config",
+    },
+    {
+      "name": "📦 @jamsr-ui/typescript-config",
+      "path": "packages/config/typescript-config",
+    },
+    {
+      "name": "📦 @jamsr-ui/core",
+      "path": "packages/core",
+    },
+    {
+      "name": "📦 @jamsr-ui/hooks",
+      "path": "packages/hooks",
+    },
+    {
+      "name": "📦 @jamsr-ui/react",
+      "path": "packages/react",
+    },
+    {
+      "name": "📦 @jamsr-ui/shared-icons",
+      "path": "packages/shared-icons",
+    },
+    {
+      "name": "📦 @jamsr-ui/theme",
+      "path": "packages/theme",
+    },
+    {
+      "name": "📦 @jamsr-ui/utils",
+      "path": "packages/utils",
+    },
+  ],
+  "settings": {
+    "explorerExclude.backup": {},
+    "workbench.colorCustomizations": {
+      "list.warningForeground": "#00eaffcc",
+    },
+    "tailwindCSS.classAttributes": [
+      "class",
+      "className",
+      "ngClass",
+      ".*Classes.*",
+    ],
+    "cSpell.words": [
+      "adityaa",
+      "Booleanish",
+      "clsx",
+      "commitlint",
+      "jamsr",
+      "jamsrui",
+      "jamsrworld",
+      "postpack",
+      "svgr",
+      "tailwindcss",
+      "tsup",
+      "Typeahead",
+      "typecheck",
+    ],
+    "tailwindCSS.experimental.classRegex": [
+      [
+        "tv\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
+        "\"(.*?)\"",
+      ],
+      ["Classes \\=([^;]*);", "'([^']*)'"],
+      ["Classes \\=([^;]*);", "\"([^\"]*)\""],
+      ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"],
+    ],
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/node_modules": true,
+      "**/.turbo": true,
+      "**/dist": true,
+    },
+    "files.autoSave": "onFocusChange",
+  },
+}

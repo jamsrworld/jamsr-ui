@@ -90,6 +90,7 @@ const base: SemanticBaseColors = {
     },
     divider: {
       DEFAULT: "hsla(0, 0%, 100%, 0.2)",
+      dark: "hsla(0, 0%, 100%, 0.3)",
     },
     content1: {
       DEFAULT: "#181818",

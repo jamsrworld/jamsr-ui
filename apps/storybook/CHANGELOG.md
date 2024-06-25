@@ -1,5 +1,11 @@
 # @ui/storybook
 
+## 0.0.40
+
+### Patch Changes
+
+- improvements
+
 ## 0.0.39
 
 ### Patch Changes

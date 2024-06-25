@@ -6,18 +6,18 @@ export const inputVariants = tv({
     input:
       "block w-full grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
+    label: "shrink-0 select-none text-sm font-normal",
     mainWrapper: "flex gap-1",
     inputWrapper:
       "w-full focus-within:border-primary focus-within:ring-primary",
     innerWrapper: "flex items-center",
-    helper: "",
+    helper: "text-xs text-foreground-500",
   },
   variants: {
     variant: {
       outline: {
-        inputWrapper: "rounded-lg border-2 border-divider",
-        input: "rounded-lg",
+        inputWrapper:
+          "rounded-xl border-2 border-divider",
       },
       transparent: {
         inputWrapper: "border-none bg-transparent outline-none",
@@ -43,6 +43,8 @@ export const inputVariants = tv({
       true: {
         inputWrapper:
           "border-error focus-within:border-error focus-within:shadow-error focus-within:ring-error",
+        helper: "text-error",
+        label: "text-error",
       },
     },
     labelPlacement: {

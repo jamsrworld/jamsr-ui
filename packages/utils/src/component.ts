@@ -39,9 +39,6 @@ export type PropGetter<P = Record<string, unknown>, R = DOMAttributes> = (
   ref?: React.Ref<any>,
 ) => R & React.RefAttributes<any>;
 
-// export type ComponentPropsWithAs<T extends React.ElementType, Y> = Y &
-//   UIProps<T, keyof Y>;
-
 export type ComponentPropsWithAs<T extends React.ElementType, Y> = Y & {
   as?: T;
 } & Omit<React.ComponentPropsWithoutRef<T>, "as" | keyof Y>;

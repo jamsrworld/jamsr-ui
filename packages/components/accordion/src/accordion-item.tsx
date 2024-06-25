@@ -24,7 +24,6 @@ export const AccordionItem = <T extends React.ElementType = "div">(
     title,
     indicator,
     isOpen,
-    actionContent,
     triggerContent,
     getBaseProps,
     getButtonProps,
@@ -36,7 +35,6 @@ export const AccordionItem = <T extends React.ElementType = "div">(
     getEndContentProps,
     getStartContentProps,
     getTitleWrapperProps,
-    getActionContentProps,
   } = useAccordionItem(props);
 
   const indicatorContent = useMemo(() => {

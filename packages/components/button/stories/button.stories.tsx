@@ -1,18 +1,18 @@
 import { Info } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button } from "../src/button";
+import { Button, ButtonProps } from "../src/button";
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
   args: {
     onClick: fn(),
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<ButtonProps>;
 
 export const Default: Story = {
   args: {
@@ -40,4 +40,8 @@ export const IconButton: Story = {
       exclude: [],
     },
   },
+};
+
+export const Loading: Story = {
+  args: { isLoading: true, children: "Submit" },
 };

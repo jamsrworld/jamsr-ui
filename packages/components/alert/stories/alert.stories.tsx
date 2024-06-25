@@ -1,8 +1,8 @@
+import { Button } from "@jamsr-ui/button";
+import { Close } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Alert, type AlertProps } from "../src/alert";
 import { AlertVariantProps } from "../src/style";
-import { Close } from "@jamsr-ui/shared-icons";
-import { Button } from "@jamsr-ui/button";
 
 const meta = {
   title: "Components/Alert",
@@ -89,7 +89,7 @@ export const Severity: Story = {
   render: SeverityTemplate,
 };
 
-const VariantTemplate = (props: AlertProps) => {
+const VariantTemplate = () => {
   const variants: AlertVariantProps["variant"][] = ["filled", "outline"];
 
   return (

@@ -1,28 +1,25 @@
-import {
-  forwardRef,
-  type ComponentPropsWithoutRef,
-  type ForwardedRef,
-} from "react";
+import { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { badgeVariants, type BadgeVariants } from "./style";
 
-export type BadgeProps = BadgeVariants & ComponentPropsWithoutRef<"div">;
+export type BadgeProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T, BadgeVariants>;
 
-export const Badge = forwardRef(
-  (props: BadgeProps, ref: ForwardedRef<HTMLDivElement>) => {
-    const { children, className, color, size, ...restProps } = props;
-    return (
-      <div
-        data-component="badge"
-        ref={ref}
-        className={badgeVariants({
-          color,
-          className,
-          size,
-        })}
-        {...restProps}
-      >
-        {children}
-      </div>
-    );
-  },
-);
+export const Badge = <T extends React.ElementType = "div">(
+  props: BadgeProps<T>,
+) => {
+  const { children, className, color, size, ...restProps } = props;
+  const style = badgeVariants({
+    color,
+    className,
+    size,
+  });
+  return (
+    <div
+      data-component="badge"
+      className={style}
+      {...restProps}
+    >
+      {children}
+    </div>
+  );
+};

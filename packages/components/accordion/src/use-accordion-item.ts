@@ -28,7 +28,6 @@ type Props = AccordionItemVariantProps & {
   startContentPlacement?: ContentPlacement;
   endContent?: React.ReactNode;
   endContentPlacement?: ContentPlacement;
-  actionContent?: React.ReactNode;
   classNames?: SlotsToClasses<AccordionItemSlots>;
   className?: string;
   indicator?:
@@ -48,7 +47,6 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     title,
     classNames,
     endContent,
-    actionContent,
     startContent,
     subtitle,
     className,
@@ -171,19 +169,6 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     [classNames?.endContent, styles],
   );
 
-  const getActionContentProps = useCallback<PropGetter>(
-    (props = {}) => {
-      return {
-        "data-slot": "action-content",
-        className: styles.actionContent({
-          className: classNames?.actionContent,
-        }),
-        ...props,
-      };
-    },
-    [classNames?.actionContent, styles],
-  );
-
   const getTitleProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
@@ -233,14 +218,12 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     startContentPlacement,
     endContent,
     endContentPlacement,
-    actionContent,
     indicator,
     triggerContent,
     hideIndicator,
     getBaseProps,
     getStartContentProps,
     getEndContentProps,
-    getActionContentProps,
     getHeadingProps,
     getButtonProps,
     getContentProps,

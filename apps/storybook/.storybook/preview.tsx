@@ -14,7 +14,19 @@ const decorators: Preview["decorators"] = [
 ];
 
 const preview: Preview = {
+  argTypes: {
+    as: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
+    docs: {
+      toc: {
+        title: "Table of Contents",
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -27,11 +39,6 @@ const preview: Preview = {
         order: ["Foundations", "Components"],
       },
     },
-    // docs: {
-    //   source: {
-    //     type: "code",
-    //   },
-    // },
     darkMode: {
       current: "dark",
       stylePreview: true,

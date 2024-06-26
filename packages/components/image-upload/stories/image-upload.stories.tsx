@@ -1,16 +1,16 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 import {
-  FileState,
   ImageUpload,
-  ImageUploadProps,
   MultiImageUpload,
+  type ImageUploadProps,
+  type MultiUploadImgState,
 } from "../src";
 
-const meta = {
+const meta: Meta<typeof ImageUpload> = {
   title: "Components/Image Upload",
   component: ImageUpload,
-} satisfies Meta<typeof ImageUpload>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -52,11 +52,12 @@ const SingleImageTemplate = (props: ImageUploadProps) => {
 };
 
 const MultiImageTemplate = (props: ImageUploadProps) => {
-  const [files, setValue] = useState<FileState[]>([]);
+  const [files, setValue] = useState<MultiUploadImgState[]>([]);
   const images = files.filter((item) => item.progress === "COMPLETE");
-  console.log("images:->", images)
+  console.log("images:->", images);
 
-  const onFilesSelect = async (files: FileState[]) => {
+  const onFilesSelect = async (files: MultiUploadImgState[]) => {
+    // eslint-disable-next-line no-restricted-syntax
     for (const item of files) {
       const { file, id } = item;
 
@@ -72,7 +73,7 @@ const MultiImageTemplate = (props: ImageUploadProps) => {
           if (item.id === id)
             return {
               ...item,
-              file: fileUrl,
+              preview: fileUrl,
               progress: "COMPLETE",
             };
           return item;
@@ -100,10 +101,10 @@ const MultiImageTemplate = (props: ImageUploadProps) => {
   );
 };
 
-export const SingleImage = {
+export const SingleImage: Story = {
   render: SingleImageTemplate,
 };
 
-export const MultiImage = {
+export const MultiImage: Story = {
   render: MultiImageTemplate,
 };

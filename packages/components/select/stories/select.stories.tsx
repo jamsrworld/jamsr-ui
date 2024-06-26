@@ -1,23 +1,28 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Select, SelectItem } from "../src";
 
-const meta = {
+const meta: Meta<typeof Select> = {
   title: "Components/Select",
   component: Select,
-} satisfies Meta<typeof Select>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template = () => {
   return (
-    <Select
-      className="max-w-md"
-      label="Select Label"
-    >
-      <SelectItem value="option1">Option 1</SelectItem>
-      <SelectItem value="option2">Option 2</SelectItem>
-    </Select>
+    <div className="min-h-[200px]">
+      <Select
+        className="max-w-md"
+        label="Select Label"
+      >
+        <SelectItem value="Apple">THis Apple</SelectItem>
+        <SelectItem value="Blueberry">Blueberry</SelectItem>
+        <SelectItem value="Watermelon">Watermelon</SelectItem>
+        <SelectItem value="Banana">Banana</SelectItem>
+        <SelectItem value="Orange">Orange</SelectItem>
+      </Select>
+    </div>
   );
 };
 
@@ -27,8 +32,9 @@ const MultipleTemplate = () => {
       className="max-w-md"
       label="Select Label"
       multiple
+      closeOnSelection={false}
     >
-      {Array(20)
+      {Array(200)
         .fill(null)
         .map((_, idx) => {
           return (
@@ -44,10 +50,10 @@ const MultipleTemplate = () => {
   );
 };
 
-export const Default = {
+export const Default: Story = {
   render: Template,
 };
 
-export const Multiple = {
+export const Multiple: Story = {
   render: MultipleTemplate,
 };

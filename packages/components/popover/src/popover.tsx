@@ -34,6 +34,7 @@ export type PopoverProps = {
   showArrow?: boolean;
   className?: string;
   applyWidth?: boolean;
+  offset?: number;
 };
 
 export const Popover = (props: PopoverProps) => {
@@ -50,6 +51,7 @@ export const Popover = (props: PopoverProps) => {
     showArrow = false,
     className,
     applyWidth,
+    offset: offsetValue = 4,
   } = props;
 
   const [open, setOpen] = useControlledState({
@@ -64,7 +66,7 @@ export const Popover = (props: PopoverProps) => {
     open,
     onOpenChange: setOpen,
     middleware: [
-      offset(8),
+      offset(offsetValue),
       flip({
         crossAxis: placement.includes("-"),
         fallbackAxisSideDirection: "end",
@@ -130,7 +132,7 @@ export const Popover = (props: PopoverProps) => {
             <div
               data-component="popover"
               className={cn(
-                "z-popover border-divider bg-background shadow-card rounded-2xl border p-2 focus:outline-none",
+                "z-popover rounded-2xl border border-divider bg-background p-2 shadow-card focus:outline-none",
                 className,
               )}
               ref={refs.setFloating}

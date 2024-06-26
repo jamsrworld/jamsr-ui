@@ -1,20 +1,19 @@
-import { Chip } from "@jamsr-ui/chip";
+import { FloatingFocusManager, FloatingList } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { Popover } from "@jamsr-ui/popover";
-import { ChevronDown } from "@jamsr-ui/shared-icons";
 import { cn } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
 import { selectVariant, type SelectVariantProps } from "./style";
+import { useSelect } from "./use-select";
 import { SelectProvider, type SelectContextType } from "./use-select-context";
 
-export type SelectProps<Value = unknown> = SelectVariantProps & {
+export type SelectProps<Value = string> = SelectVariantProps & {
   children: React.ReactNode;
   label: string | null;
   placeholder?: string;
   error?: boolean;
   value?: Value;
   defaultValue?: Value;
-  onValueChange?: (value: NonNullable<SelectProps<Value>["value"]>) => void;
+  onValueChange?: (value: Value) => void;
   getOptionLabel?: (value: string) => string;
   open?: boolean;
   defaultOpen?: boolean;
@@ -49,7 +48,6 @@ export const Select = <Value extends string | string[] = "">(
     getOptionLabel = (value) => value,
     closeOnSelection = true,
     slots = {},
-    ...restProps
   } = props;
 
   const [value = (multiple ? [] : "") as Value, setValue] = useControlledState({
@@ -69,60 +67,73 @@ export const Select = <Value extends string | string[] = "">(
     size,
   });
 
-  const renderValue = () => {
-    if (Array.isArray(value)) {
-      return value.map((item) => {
-        return <Chip key={item}>{getOptionLabel(item)}</Chip>;
-      });
-    }
-    return getOptionLabel(value);
-  };
+  const {
+    activeIndex,
+    selectedIndex,
+    getItemProps,
+    handleSelect,
+    context,
+    elementsRef,
+    floatingStyles,
+    getFloatingProps,
+    getReferenceProps,
+    labelsRef,
+    selectedLabel,
+    setFloating,
+    setReference,
+    isOpen,
+  } = useSelect();
 
-  const triggerComp = slots.trigger ?? (
-    <button
-      data-slot="trigger"
-      type="button"
-      className={styles.trigger()}
-      {...restProps}
-    >
-      {value ? (
-        <div className={styles.value()}>{renderValue()}</div>
-      ) : (
-        <span className={styles.placeholder()}>{placeholder}</span>
-      )}
-      <ChevronDown className="shrink-0" />
-    </button>
-  );
-
-  const contextValue = useMemo(() => {
+  const contextValue: SelectContextType = useMemo(() => {
     return {
-      setValue,
-      setOpen,
-      multiple,
-      value,
-      closeOnSelection,
-    } as SelectContextType;
-  }, [closeOnSelection, multiple, setOpen, setValue, value]);
+      activeIndex,
+      selectedIndex,
+      getItemProps,
+      handleSelect,
+    };
+  }, [activeIndex, getItemProps, handleSelect, selectedIndex]);
 
   return (
-    <SelectProvider value={contextValue}>
-      <div
-        data-component="select"
-        data-slot="wrapper"
-        className={cn(styles.mainWrapper(), className)}
+    <div
+      data-component="select"
+      data-slot="wrapper"
+      className={cn(styles.mainWrapper(), className)}
+    >
+      <button
+        data-slot="trigger"
+        type="button"
+        className={styles.trigger()}
+        ref={setReference}
+        {...getReferenceProps()}
       >
-        {label && <label htmlFor={id}>{label}</label>}
-        <Popover
-          open={open}
-          onOpenChange={setOpen}
-          trigger={triggerComp}
-          placement="bottom-start"
-          applyWidth
-          className="p-1"
-        >
-          {children}
-        </Popover>
-      </div>
-    </SelectProvider>
+        {selectedLabel ?? "Select..."}
+      </button>
+      <SelectProvider value={contextValue}>
+        {isOpen && (
+          <FloatingFocusManager
+            context={context}
+            modal
+          >
+            <div
+              ref={setFloating}
+              style={floatingStyles}
+              {...getFloatingProps()}
+              data-slot="popover"
+              className={cn(
+                "z-popover flex flex-col overflow-hidden rounded-2xl border border-divider bg-background shadow-card focus:outline-none",
+                className,
+              )}
+            >
+              <FloatingList
+                elementsRef={elementsRef}
+                labelsRef={labelsRef}
+              >
+                <div className="overflow-y-auto p-2">{children}</div>
+              </FloatingList>
+            </div>
+          </FloatingFocusManager>
+        )}
+      </SelectProvider>
+    </div>
   );
 };

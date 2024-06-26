@@ -47,7 +47,7 @@ export const ChevronDown = (props: SVGProps<SVGSVGElement>) => (
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2}
+      strokeWidth={1.5}
       d="M8 10.14a20.36 20.36 0 0 0 3.702 3.893c.175.141.42.141.596 0A20.361 20.361 0 0 0 16 10.14"
     />
   </svg>
@@ -138,17 +138,20 @@ export const Info = (props: SVGProps<SVGSVGElement>) => (
 
 export const Check = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={24}
-    height={24}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={16}
+    height={16}
+    color="currentColor"
     fill="none"
     {...props}
   >
     <path
+      d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7"
       stroke="currentColor"
+      strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2}
-      d="m4 12.374 5.351 5.346.428-.748a30.506 30.506 0 0 1 9.278-10.048L20 6.28"
     />
   </svg>
 );

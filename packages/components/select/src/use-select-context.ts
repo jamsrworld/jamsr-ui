@@ -1,11 +1,11 @@
+import { type useInteractions } from "@floating-ui/react";
 import { createContext } from "@jamsr-ui/utils";
 
 export type SelectContextType = {
-  multiple?: boolean;
-  value?: string | string[];
-  setValue: (value?: string | string[]) => void;
-  setOpen: (open: boolean) => void;
-  closeOnSelection?: boolean;
+  activeIndex: number | null;
+  selectedIndex: number | null;
+  getItemProps: ReturnType<typeof useInteractions>["getItemProps"];
+  handleSelect: (index: number | null) => void;
 };
 
 export const [SelectProvider, useSelectContext] =

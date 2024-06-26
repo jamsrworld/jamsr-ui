@@ -12,7 +12,7 @@ export const selectVariant = tv({
     placeholder: ["text-left", "text-foreground-500", "text-sm"],
     mainWrapper: "flex w-full flex-col gap-2",
     trigger:
-      "relative flex w-full flex-row items-center justify-between gap-3 rounded-lg border-2 border-divider px-3 py-2 shadow-sm outline-none focus-within:ring-2 focus-within:ring-primary",
+      "relative flex w-full flex-row items-center justify-between gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus-within:ring-2 focus-within:ring-primary",
   },
   variants: {
     color: {

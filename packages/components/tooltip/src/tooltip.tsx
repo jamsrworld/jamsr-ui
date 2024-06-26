@@ -25,6 +25,8 @@ export type TooltipProps = {
   offset?: number;
   showArrow?: boolean;
   isInteractive?: boolean;
+  openDelay?: number;
+  closeDelay?: number;
 };
 
 export const Tooltip = (props: TooltipProps) => {
@@ -36,6 +38,8 @@ export const Tooltip = (props: TooltipProps) => {
     offset: offsetVal = 8,
     showArrow = false,
     isInteractive = false,
+    closeDelay = 100,
+    openDelay = 400,
   } = props;
   const [isOpen, setIsOpen] = useState(false);
   const arrowRef = useRef(null);
@@ -67,8 +71,8 @@ export const Tooltip = (props: TooltipProps) => {
       handleClose: safePolygon({ blockPointerEvents: true }),
     }),
     delay: {
-      open: 400,
-      close: 100,
+      open: openDelay,
+      close: closeDelay,
     },
   });
   const focus = useFocus(context);
@@ -90,9 +94,7 @@ export const Tooltip = (props: TooltipProps) => {
     }),
   );
 
-  if (!enabled) {
-    return children;
-  }
+  if (!enabled) return children;
   return (
     <>
       {triggerContent}

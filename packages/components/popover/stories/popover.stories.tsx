@@ -2,31 +2,41 @@ import { Button } from "@jamsr-ui/button";
 import { Info } from "@jamsr-ui/shared-icons";
 import { Typography } from "@jamsr-ui/typography";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Popover } from "../src/popover";
+import { Popover, type PopoverProps } from "../src/popover";
 
-const meta = {
+const meta: Meta<typeof Popover> = {
   title: "Components/Popover",
   component: Popover,
-} satisfies Meta<typeof Popover>;
-
+};
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<PopoverProps>;
 
-const Template = () => {
+const Template = (props: Partial<PopoverProps>) => {
   return (
-    <Popover
-      trigger={
-        <Button isIconOnly>
-          <Info />
-        </Button>
-      }
-      className="p-2"
-    >
-      <Typography>This is a Popover content</Typography>
-    </Popover>
+    <div className="grid min-h-[120px] place-content-center">
+      <Popover
+        trigger={
+          <Button isIconOnly>
+            <Info />
+          </Button>
+        }
+        className="p-2"
+        {...props}
+      >
+        <Typography>This is a Popover content</Typography>
+      </Popover>
+    </div>
   );
 };
 
-export const Default = {
-  render: Template,
+export const Default: Story = {
+  render: () => <Template />,
+};
+
+export const WithArrow: Story = {
+  render: () => <Template showArrow />,
+};
+
+export const AsModal: Story = {
+  render: () => <Template isModal />,
 };

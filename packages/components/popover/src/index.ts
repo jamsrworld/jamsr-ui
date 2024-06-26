@@ -1,3 +1,3 @@
 "use client";
 
-export { Popover } from "./popover";
+export { Popover, type PopoverProps } from "./popover";

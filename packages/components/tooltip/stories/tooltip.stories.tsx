@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 const Template = (props: Partial<TooltipProps>) => {
   return (
-    <div className="grid min-h-[400px] place-items-center">
+    <div className="grid min-h-[100px] place-items-center">
       <Tooltip
         title="I am tooltip"
         {...props}

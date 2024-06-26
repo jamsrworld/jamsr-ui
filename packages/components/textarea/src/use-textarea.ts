@@ -1,4 +1,5 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { inputVariants } from "@jamsr-ui/input";
 import {
   cn,
   type PropGetter,
@@ -6,11 +7,8 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import { useCallback, type ComponentProps } from "react";
-import {
-  textareaVariants,
-  type TextareaSlots,
-  type TextareaVariantProps,
-} from "./style";
+
+import { type TextareaSlots, type TextareaVariantProps } from "./style";
 
 type Props = {
   startContent?: React.ReactNode;
@@ -56,7 +54,7 @@ export const useTextarea = (props: UseTextareaProps) => {
   const Component = as ?? "div";
   const TextareaComponent = "textarea";
 
-  const slots = textareaVariants({
+  const styles = inputVariants({
     variant,
     size,
     isInvalid,
@@ -81,13 +79,13 @@ export const useTextarea = (props: UseTextareaProps) => {
     (props) => {
       return {
         "data-slot": "base",
-        className: slots.base({
+        className: styles.base({
           class: cn(classNames?.base, props?.className),
         }),
         ...props,
       };
     },
-    [slots, classNames?.base],
+    [styles, classNames?.base],
   );
 
   const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -95,12 +93,12 @@ export const useTextarea = (props: UseTextareaProps) => {
       return {
         ...props,
         "data-slot": "label-wrapper",
-        className: slots.labelWrapper({
+        className: styles.labelWrapper({
           class: cn(classNames?.labelWrapper, props?.className),
         }),
       };
     },
-    [slots, classNames?.labelWrapper],
+    [styles, classNames?.labelWrapper],
   );
 
   const getLabelProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -108,12 +106,12 @@ export const useTextarea = (props: UseTextareaProps) => {
       return {
         ...props,
         "data-slot": "label",
-        className: slots.label({
+        className: styles.label({
           class: cn(classNames?.label, props?.className),
         }),
       };
     },
-    [slots, classNames?.label],
+    [styles, classNames?.label],
   );
 
   const getInnerWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -121,12 +119,12 @@ export const useTextarea = (props: UseTextareaProps) => {
       return {
         ...props,
         "data-slot": "inner-wrapper",
-        className: slots.innerWrapper({
+        className: styles.innerWrapper({
           class: cn(classNames?.innerWrapper, props?.className),
         }),
       };
     },
-    [slots, classNames?.innerWrapper],
+    [styles, classNames?.innerWrapper],
   );
 
   const getHelperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -134,12 +132,12 @@ export const useTextarea = (props: UseTextareaProps) => {
       return {
         ...props,
         "data-slot": "helper",
-        className: slots.helper({
+        className: styles.helper({
           class: cn(classNames?.helper, props?.className),
         }),
       };
     },
-    [slots, classNames?.helper],
+    [styles, classNames?.helper],
   );
 
   const getMainWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -147,12 +145,12 @@ export const useTextarea = (props: UseTextareaProps) => {
       return {
         ...props,
         "data-slot": "main-wrapper",
-        className: slots.mainWrapper({
+        className: styles.mainWrapper({
           class: cn(classNames?.mainWrapper, props?.className),
         }),
       };
     },
-    [slots, classNames?.mainWrapper],
+    [styles, classNames?.mainWrapper],
   );
 
   const getTextareaWrapperProps: PropGetter<ComponentProps<"div">> =
@@ -162,22 +160,22 @@ export const useTextarea = (props: UseTextareaProps) => {
           ...props,
           ref,
           "data-slot": "textarea-wrapper",
-          className: slots.textareaWrapper({
+          className: styles.inputWrapper({
             class: cn(classNames?.textareaWrapper, props?.className),
           }),
         };
       },
-      [ref, slots, classNames?.textareaWrapper],
+      [ref, styles, classNames?.textareaWrapper],
     );
 
   const getTextareaProps: PropGetter<ComponentProps<"textarea">> = useCallback(
     (props) => {
       return {
         "data-slot": "textarea",
-        className: slots.textarea({
+        className: styles.input({
           class: cn(classNames?.textarea, props?.className, className),
         }),
-        value: value,
+        value,
         onChange: handleTextareaChange,
         ...restProps,
         ...props,
@@ -185,7 +183,7 @@ export const useTextarea = (props: UseTextareaProps) => {
     },
     [
       value,
-      slots,
+      styles,
       classNames?.textarea,
       className,
       handleTextareaChange,

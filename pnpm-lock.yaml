@@ -957,6 +957,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:*
         version: link:../../hooks
+      '@jamsr-ui/input':
+        specifier: workspace:^
+        version: link:../input
       '@jamsr-ui/shared-icons':
         specifier: workspace:*
         version: link:../../shared-icons

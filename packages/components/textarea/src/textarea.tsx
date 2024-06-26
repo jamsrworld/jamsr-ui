@@ -1,4 +1,4 @@
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
 import { useTextarea, type UseTextareaProps } from "./use-textarea";
 

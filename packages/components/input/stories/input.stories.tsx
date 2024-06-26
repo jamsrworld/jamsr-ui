@@ -1,4 +1,3 @@
-import { Button } from "@jamsr-ui/button";
 import { Email } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
@@ -19,12 +18,15 @@ export const Default: Story = {
 const ControlledInput = (props: InputProps) => {
   const [value, setValue] = useState("");
   return (
-    <Input
-      {...props}
-      label="Controlled Input"
-      value={value}
-      onValueChange={setValue}
-    />
+    <div>
+      <Input
+        {...props}
+        label="Controlled Input"
+        value={value}
+        onValueChange={setValue}
+      />
+      <p className="text-foreground-secondary">Value: {value}</p>
+    </div>
   );
 };
 export const Controlled = {

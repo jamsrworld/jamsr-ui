@@ -5,10 +5,13 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: "class",
   content: [
-    "../../packages/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "../../packages/components/**/*.{ts,tsx}",
+    "./src/app/**/*.{ts,tsx}",
   ],
   presets: [sharedConfig],
+  theme: {
+    fontFamily: {},
+  },
   plugins: [...jamsrui()],
 };
 export default config;

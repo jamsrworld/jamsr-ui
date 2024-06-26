@@ -1,4 +1,4 @@
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { typographyVariants, type TypographyVariants } from "./style";
 
 export type TypographyProps = TypographyVariants;

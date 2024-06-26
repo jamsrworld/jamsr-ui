@@ -35,7 +35,7 @@ type PopoverProps = {
   };
   enabled?: boolean;
   triggerOn?: "click" | "hover";
-  disableArrow?: boolean;
+  showArrow?: boolean;
   className?: string;
   applyWidth?: boolean;
 };
@@ -53,7 +53,7 @@ export const Popover = forwardRef<HTMLButtonElement, PopoverProps>(
       enabled = true,
       placement = "bottom",
       triggerOn = "click",
-      disableArrow = true,
+      showArrow = false,
       className,
       applyWidth,
     } = props;
@@ -78,11 +78,11 @@ export const Popover = forwardRef<HTMLButtonElement, PopoverProps>(
           padding: 4,
         }),
         shift({ padding: 4 }),
-        disableArrow
-          ? undefined
-          : arrow({
+        showArrow
+          ? arrow({
               element: arrowRef,
-            }),
+            })
+          : undefined,
         size({
           apply({ rects, elements, availableHeight }) {
             if (!applyWidth) return;
@@ -140,7 +140,7 @@ export const Popover = forwardRef<HTMLButtonElement, PopoverProps>(
                 data-component="popover"
                 data-slot="wrapper"
                 className={cn(
-                  "z-popover rounded-2xl border border-divider bg-background p-2 shadow-card focus:outline-none",
+                  "z-popover border-divider bg-background shadow-card rounded-2xl border p-2 focus:outline-none",
                   classNames?.wrapper,
                   className,
                 )}
@@ -148,7 +148,7 @@ export const Popover = forwardRef<HTMLButtonElement, PopoverProps>(
                 style={floatingStyles}
                 {...getFloatingProps()}
               >
-                {!disableArrow && (
+                {showArrow && (
                   <FloatingArrow
                     ref={arrowRef}
                     context={context}

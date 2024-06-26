@@ -5,42 +5,37 @@ import {
   autoUpdate,
   flip,
   offset,
+  safePolygon,
   shift,
   useDismiss,
   useFloating,
   useFocus,
   useHover,
   useInteractions,
-  useMergeRefs,
   useRole,
   type Placement,
 } from "@floating-ui/react";
-import {
-  cloneElement,
-  forwardRef,
-  useRef,
-  useState,
-  type ComponentPropsWithoutRef,
-  type ForwardedRef,
-} from "react";
+import { cloneElement, useRef, useState } from "react";
 
-export type TooltipProps = ComponentPropsWithoutRef<"div"> & {
+export type TooltipProps = {
   title: string;
   children: JSX.Element;
   placement?: Placement;
   enabled?: boolean;
+  offset?: number;
+  showArrow?: boolean;
+  isInteractive?: boolean;
 };
 
-export const TooltipInner = (
-  props: TooltipProps,
-  propRef: ForwardedRef<HTMLDivElement>,
-) => {
+export const Tooltip = (props: TooltipProps) => {
   const {
     title,
     children,
     placement = "top",
     enabled = true,
-    ...restProps
+    offset: offsetVal = 8,
+    showArrow = false,
+    isInteractive = false,
   } = props;
   const [isOpen, setIsOpen] = useState(false);
   const arrowRef = useRef(null);
@@ -49,30 +44,35 @@ export const TooltipInner = (
     open: isOpen,
     onOpenChange: setIsOpen,
     placement,
-    // Make sure the tooltip stays on the screen
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset(16),
+      offset(offsetVal),
       flip({
         fallbackAxisSideDirection: "start",
       }),
       shift(),
-      arrow({
-        element: arrowRef,
-      }),
+      showArrow
+        ? arrow({
+            element: arrowRef,
+          })
+        : undefined,
     ],
   });
-  const ref = useMergeRefs([
-    // eslint-disable-next-line @typescript-eslint/unbound-method
-    context.refs.setReference,
-    propRef,
-  ]);
+  // eslint-disable-next-line @typescript-eslint/unbound-method
+  const ref = context.refs.setReference;
 
-  // Event listeners to change the open state
-  const hover = useHover(context, { move: false });
+  const hover = useHover(context, {
+    move: false,
+    ...(isInteractive && {
+      handleClose: safePolygon({ blockPointerEvents: true }),
+    }),
+    delay: {
+      open: 400,
+      close: 100,
+    },
+  });
   const focus = useFocus(context);
   const dismiss = useDismiss(context);
-  // Role props for screen readers
   const role = useRole(context, { role: "tooltip" });
 
   // Merge all the interactions into prop getters
@@ -87,7 +87,6 @@ export const TooltipInner = (
     children,
     getReferenceProps({
       ref,
-      ...restProps,
     }),
   );
 
@@ -102,17 +101,18 @@ export const TooltipInner = (
           <div
             data-component="tooltip"
             role="tooltip"
-            className="z-popover inline-block rounded-lg border border-black bg-background px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-opacity duration-300"
+            className="z-popover inline-block rounded-lg bg-background-paper px-3 py-1.5 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300"
             ref={refs.setFloating}
             style={floatingStyles}
             {...getFloatingProps()}
           >
-            <div className="absolute z-1 h-1 w-1/2 bg-white blur-lg" />
-            <FloatingArrow
-              ref={arrowRef}
-              context={context}
-              className="fill-background"
-            />
+            {showArrow && (
+              <FloatingArrow
+                ref={arrowRef}
+                context={context}
+                className="fill-background-paper"
+              />
+            )}
             {title}
           </div>
         </FloatingPortal>
@@ -120,5 +120,3 @@ export const TooltipInner = (
     </>
   );
 };
-
-export const Tooltip = forwardRef(TooltipInner);

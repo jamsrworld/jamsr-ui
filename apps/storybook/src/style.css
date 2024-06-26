@@ -6,3 +6,7 @@
 .dark .docs-story {
   background: #000;
 }
+
+html {
+  @apply text-foreground bg-background;
+}

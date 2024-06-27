@@ -72,7 +72,7 @@ export const useTextarea = (props: UseTextareaProps) => {
       onChange?.(e);
       setValue(e.target.value);
     },
-    [onChange, setValue, value],
+    [onChange, setValue],
   );
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(

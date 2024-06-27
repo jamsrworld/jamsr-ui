@@ -52,7 +52,7 @@ export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
       aria-selected={isSelected}
       tabIndex={isSelected ? 0 : -1}
       className={cn(
-        "hover:bg-action-hover focus-visible:ring-primary relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm focus-visible:ring-2",
+        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
         className,
         { "bg-action-hover": isActive },
       )}

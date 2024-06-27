@@ -125,7 +125,7 @@ export const useSelect = (props: UseSelectProps) => {
       prev.has(label) ? prev.delete(label) : prev.add(label);
       setSelectedLabels(prev);
     },
-    [selectedLabels],
+    [isMultiple, selectedLabels, setIsOpen],
   );
 
   function handleTypeaheadMatch(index: number | null) {

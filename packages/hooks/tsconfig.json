@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src", ".eslintrc.cjs"],
+  "include": ["**/**/*.tsx", "**/**/*.ts", ".eslintrc.cjs"],
   "exclude": ["node_modules", "dist"]
 }

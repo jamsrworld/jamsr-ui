@@ -11,10 +11,10 @@ export const selectVariant = tv({
     ],
     placeholder: ["text-left", "text-foreground-500", "text-sm"],
     mainWrapper: "flex w-full flex-col",
-    label: "text-sm mb-1",
+    label: "mb-1 text-sm",
     trigger:
       "relative flex w-full flex-row items-center justify-between gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus-within:ring-2 focus-within:ring-primary",
-    helperText: "text-xs text-foreground-500 mt-1",
+    helperText: "mt-1 text-xs text-foreground-500",
   },
   variants: {
     color: {

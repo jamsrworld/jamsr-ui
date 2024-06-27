@@ -1,6 +1,6 @@
 import { type useInteractions } from "@floating-ui/react";
 import { createContext } from "@jamsr-ui/utils";
-import { SelectionSet } from "./use-select";
+import type { SelectionSet } from "./use-select";
 
 export type SelectContextType = {
   activeIndex: number | null;

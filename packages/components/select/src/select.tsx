@@ -2,7 +2,8 @@
 import { FloatingFocusManager, FloatingList } from "@floating-ui/react";
 import { cn } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
-import { UseSelectProps, useSelect } from "./use-select";
+import type { UseSelectProps} from "./use-select";
+import { useSelect } from "./use-select";
 import { SelectProvider, type SelectContextType } from "./use-select-context";
 
 export type SelectProps = UseSelectProps;
@@ -91,7 +92,7 @@ export const Select = (props: SelectProps) => {
               {...getFloatingProps()}
               data-slot="popover"
               className={cn(
-                "z-popover border-divider bg-background shadow-card flex flex-col overflow-hidden rounded-2xl border focus:outline-none",
+                "z-popover flex flex-col overflow-hidden rounded-2xl border border-divider bg-background shadow-card focus:outline-none",
                 className,
               )}
             >

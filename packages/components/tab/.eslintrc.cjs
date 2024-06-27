@@ -1,11 +1,8 @@
-const config = {
+/** @type {import("eslint").Linter.Config} */
+module.exports = {
   root: true,
-  extends: ["@jamsr-ui/eslint-config/react-internal.js"],
-  parser: "@typescript-eslint/parser",
+  extends: ["@jamsr-ui/eslint-config/next.js"],
   parserOptions: {
-    project: "./tsconfig.json",
-    tsconfigRootDir: __dirname,
+    project: true,
   },
 };
-
-module.exports = config;

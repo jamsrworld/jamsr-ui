@@ -1,0 +1,1 @@
+"@jamsr-ui/prettier-config"

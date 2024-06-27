@@ -24,6 +24,7 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
+    "@jamsr-ui/prettier-config": "workspace:^",
     "@jamsr-ui/tailwind-config": "workspace:*",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",

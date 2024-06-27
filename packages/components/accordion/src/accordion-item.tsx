@@ -52,18 +52,12 @@ export const AccordionItem = <T extends React.ElementType = "div">(
   }, [indicator, isOpen]);
 
   return (
-    <Component
-      data-component="accordion-item"
-      {...getBaseProps()}
-    >
+    <Component data-component="accordion-item" {...getBaseProps()}>
       <div {...getHeadingProps()}>
         {startContent && startContentPlacement === "outside" && (
           <div {...getStartContentProps()}>{startContent}</div>
         )}
-        <button
-          type="button"
-          {...getButtonProps()}
-        >
+        <button type="button" {...getButtonProps()}>
           {triggerContent || (
             <>
               {startContent && startContentPlacement === "inside" && (

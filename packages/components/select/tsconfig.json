@@ -3,6 +3,11 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["**/**/*.tsx", "**/**/*.ts", ".eslintrc.cjs", "../popover/src/test.tsx"],
+  "include": [
+    "**/**/*.tsx",
+    "**/**/*.ts",
+    ".eslintrc.cjs",
+    "prettier.config.cjs"
+  ],
   "exclude": ["node_modules", "dist"]
 }

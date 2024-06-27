@@ -5,7 +5,7 @@
   "files": [
     "library.js",
     "next.js",
-    "react-internal.js"
+    "react-library.js"
   ],
   "devDependencies": {
     "@types/eslint": "^8.56.2",

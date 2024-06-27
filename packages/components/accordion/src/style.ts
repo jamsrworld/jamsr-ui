@@ -20,7 +20,7 @@ export const accordionItem = tv({
     startContent: "shrink-0",
     endContent: "shrink-0",
     actionContent: "",
-    titleWrapper: "flex flex-1 flex-col text-start",
+    titleWrapper: " flex flex-1 flex-col text-start",
     title: "text-base font-medium text-foreground",
     subtitle: "text-sm font-normal text-foreground-500",
     content: "py-2 text-foreground-secondary",

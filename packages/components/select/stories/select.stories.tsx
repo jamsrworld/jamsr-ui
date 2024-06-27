@@ -1,7 +1,8 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { Select, SelectItem, SelectProps } from "../src";
-import { SelectionSet } from "../src/use-select";
+import type { SelectProps } from "../src";
+import { Select, SelectItem } from "../src";
+import type { SelectionSet } from "../src/use-select";
 
 const meta: Meta<typeof Select> = {
   title: "Components/Select",
@@ -19,13 +20,11 @@ const Template = (props: Partial<SelectProps>) => {
         label="Select Label"
         {...props}
       >
-        <SelectItem value="Apple">
-          <div>HIi div</div> THis Apple
-        </SelectItem>
-        <SelectItem value="Blueberry">Blueberry</SelectItem>
-        <SelectItem value="Watermelon">Watermelon</SelectItem>
-        <SelectItem value="Banana">Banana</SelectItem>
-        <SelectItem value="Orange">Orange</SelectItem>
+        <SelectItem value="apple">Apple</SelectItem>
+        <SelectItem value="blueberry">Blueberry</SelectItem>
+        <SelectItem value="watermelon">Watermelon</SelectItem>
+        <SelectItem value="banana">Banana</SelectItem>
+        <SelectItem value="orange">Orange</SelectItem>
       </Select>
     </div>
   );
@@ -35,17 +34,19 @@ export const Default: Story = {
   render: () => <Template />,
 };
 
+const ControlledTemplate = () => {
+  const [value, setValue] = useState<SelectionSet>(new Set([""]));
+  return (
+    <Template
+      value={value}
+      onValueChange={setValue}
+      helperText={`Selected Value: ${Array.from(value).join("")}`}
+    />
+  );
+};
+
 export const Controlled: Story = {
-  render: () => {
-    const [value, setValue] = useState<SelectionSet>(new Set([""]));
-    return (
-      <Template
-        value={value}
-        onValueChange={setValue}
-        helperText={`Selected Value: ${Array.from(value)}`}
-      />
-    );
-  },
+  render: ControlledTemplate,
 };
 
 export const ChangePlaceholder: Story = {
@@ -85,8 +86,7 @@ export const CustomRenderValue: Story = {
     <Template
       placeholder="Choose Fruit"
       renderValue={(value) => {
-        console.log("value:->", value);
-        return `Selected value is ${value}`;
+        return `Selected value is ${Array.from(value).join("")}`;
       }}
     />
   ),
@@ -109,7 +109,7 @@ const MultipleTemplate = () => {
                 key={value}
                 value={value}
               >
-                {`Option ${ idx }`}
+                {`Option ${idx}`}
               </SelectItem>
             );
           })}

@@ -113,7 +113,7 @@ export const useSelect = (props: UseSelectProps) => {
       setSelectedIndex(index);
       if (index === null) return;
       const label = labelsRef.current[index];
-      if (!label) return;
+      if (typeof label !== "string") return;
 
       if (!isMultiple) {
         setSelectedLabels(new Set([label]));

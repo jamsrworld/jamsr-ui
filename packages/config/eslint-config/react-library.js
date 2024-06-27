@@ -2,16 +2,12 @@ const { resolve } = require("node:path");
 
 const project = resolve(process.cwd(), "tsconfig.json");
 
-/*
- * This is a custom ESLint configuration for use with
- * internal (bundled by their consumer) libraries
- * that utilize React.
- */
-
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  plugins: ["@typescript-eslint", "only-warn", "import"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   extends: [
+    "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:tailwindcss/recommended",
@@ -21,20 +17,16 @@ module.exports = {
     "airbnb-typescript",
     "airbnb/hooks",
     "prettier",
-    "async",
-    "async/typescript",
   ],
   globals: {
     React: true,
     JSX: true,
   },
   env: {
+    node: true,
     browser: true,
   },
   settings: {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
-    },
     "import/resolver": {
       typescript: {
         project,
@@ -62,19 +54,30 @@ module.exports = {
     // Ignore dotfiles
     ".*.js",
     "node_modules/",
-    "dist/",
   ],
-  overrides: [
-    // Force ESLint to detect .tsx files
-    { files: ["*.js?(x)", "*.ts?(x)"], parser: "@typescript-eslint/parser" },
-  ],
+  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
   rules: {
+    "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       {
-        fixStyle: "inline-type-imports",
         prefer: "type-imports",
+        fixStyle: "separate-type-imports",
+      },
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        argsIgnorePattern: "^_",
+      },
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
       },
     ],
     "import/prefer-default-export": "off",
@@ -86,5 +89,14 @@ module.exports = {
     "no-array-index-key": "off",
     "no-param-reassign": "off",
     "react/require-default-props": "off",
+    "@typescript-eslint/await-thenable": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-misused-promises": "error",
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/require-await": "error",
+    "react/no-unescaped-entities": "off",
+    "react/no-array-index-key": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
+    "no-underscore-dangle": "off",
   },
 };

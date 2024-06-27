@@ -9,19 +9,39 @@ type SelectItemProps<T extends string> = {
 } & ComponentPropsWithoutRef<"button">;
 
 export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
+  const { children, className, value } = props;
   const {
-    children,
-    className,
-    onClick: propOnClick,
-    value,
-    ...restProps
-  } = props;
-  const { activeIndex, selectedIndex, getItemProps, handleSelect } =
-    useSelectContext();
+    activeIndex,
+    getItemProps,
+    handleSelect,
+    setValue,
+    isMultiple,
+    value: inputValue,
+  } = useSelectContext();
 
-  const { ref, index } = useListItem({ label: children });
+  const { ref, index } = useListItem({
+    label: typeof children === "string" ? children : "",
+  });
   const isActive = activeIndex === index;
-  const isSelected = selectedIndex === index;
+
+  const isSelected = inputValue.has(value);
+
+  const handleClick = () => {
+    const getNewValue = () => {
+      if (isMultiple) {
+        const prev = new Set(inputValue);
+        if (inputValue.has(value)) {
+          prev.delete(value);
+          return prev;
+        }
+        prev.add(value);
+        return prev;
+      }
+      return new Set([value]);
+    };
+
+    setValue(getNewValue());
+  };
 
   return (
     <button
@@ -32,12 +52,15 @@ export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
       aria-selected={isSelected}
       tabIndex={isSelected ? 0 : -1}
       className={cn(
-        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
+        "hover:bg-action-hover focus-visible:ring-primary relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm focus-visible:ring-2",
         className,
         { "bg-action-hover": isActive },
       )}
       {...getItemProps({
-        onClick: () => handleSelect(index),
+        onClick: () => {
+          handleClick();
+          handleSelect(index);
+        },
       })}
     >
       {children}

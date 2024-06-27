@@ -1,6 +1,6 @@
 const config = {
   root: true,
-  extends: ["@jamsr-ui/eslint-config/react-internal.js"],
+  extends: ["@jamsr-ui/eslint-config/library.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: "./tsconfig.json",

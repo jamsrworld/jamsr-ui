@@ -1,6 +1,6 @@
 import { Button } from "@jamsr-ui/button";
 import { EyeClosed, EyeOpen } from "@jamsr-ui/shared-icons";
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
 import { useInput, type UseInputProps } from "./use-input";
 
@@ -34,7 +34,7 @@ export const Input = <T extends React.ElementType = "div">(
   const getStartContent = useMemo(() => {
     const content = startContent;
     return !content ? null : (
-      <div className="text-foreground-muted pl-2 empty:hidden">{content}</div>
+      <div className="pl-2 text-foreground-muted empty:hidden">{content}</div>
     );
   }, [startContent]);
 
@@ -54,7 +54,7 @@ export const Input = <T extends React.ElementType = "div">(
       endContent;
 
     return !content ? null : (
-      <div className="text-foreground-muted pr-2">{content}</div>
+      <div className="pr-2 text-foreground-muted">{content}</div>
     );
   }, [endContent, handleChangeInputType, isSecuredText, mask, showPassword]);
 

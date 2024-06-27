@@ -7,7 +7,6 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "prettier",
-    "eslint-config-turbo",
     "plugin:tailwindcss/recommended",
   ],
   plugins: ["@typescript-eslint", "only-warn"],
@@ -36,4 +35,7 @@ module.exports = {
       files: ["*.js?(x)", "*.ts?(x)"],
     },
   ],
+  rules: {
+    "tailwindcss/classnames-order": "off",
+  },
 };

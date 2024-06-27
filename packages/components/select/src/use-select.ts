@@ -11,20 +11,75 @@ import {
   useRole,
   useTypeahead,
 } from "@floating-ui/react";
+import { useControlledState } from "@jamsr-ui/hooks";
 import { useCallback, useRef, useState } from "react";
-import { type SelectVariantProps } from "./style";
+import { selectVariant, type SelectVariantProps } from "./style";
+
+export type SelectionSet = Set<number | string>;
 
 type Props = {
-  placeholder: string;
+  children: React.ReactNode;
+  label?: string;
+  placeholder?: string;
+  isInvalid?: boolean;
+  value?: SelectionSet;
+  defaultValue?: SelectionSet;
+  onValueChange?: (value: SelectionSet) => void;
+  open?: boolean;
+  defaultOpen?: boolean;
+  onOpenChange?: (value: boolean) => void;
+  isMultiple?: boolean;
+  className?: string;
+  helperText?: React.ReactNode;
+  renderValue?: (value: SelectionSet) => React.ReactNode;
 };
 
 export type UseSelectProps = Props & SelectVariantProps;
 
-export const useSelect = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export const useSelect = (props: UseSelectProps) => {
+  const {
+    label,
+    children,
+    onValueChange,
+    defaultValue,
+    value: propValue,
+    placeholder = "Select",
+    className,
+    isInvalid,
+    color,
+    size: propSize,
+    onOpenChange,
+    defaultOpen,
+    open: propOpen,
+    isMultiple = false,
+    helperText,
+    renderValue,
+  } = props;
+
+  const [value = new Set([]), setValue] = useControlledState({
+    prop: propValue,
+    defaultProp: defaultValue,
+    onChange: onValueChange,
+  });
+
+  const [isOpen, setIsOpen] = useControlledState({
+    prop: propOpen,
+    onChange: onOpenChange,
+    defaultProp: defaultOpen,
+  });
+  const [selectedLabels, setSelectedLabels] = useState<SelectionSet>(
+    new Set([]),
+  );
+
+  const styles = selectVariant({
+    className,
+    color,
+    size: propSize,
+    isInvalid,
+  });
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [selectedLabel, setSelectedLabel] = useState<string | null>(null);
 
   const {
     refs: { setReference, setFloating },
@@ -53,14 +108,25 @@ export const useSelect = () => {
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
   const labelsRef = useRef<(string | null)[]>([]);
 
-  const handleSelect = useCallback((index: number | null) => {
-    setSelectedIndex(index);
-    setIsOpen(false);
-    if (index !== null) {
+  const handleSelect = useCallback(
+    (index: number | null) => {
+      setSelectedIndex(index);
+      if (index === null) return;
       const label = labelsRef.current[index];
-      if (label) setSelectedLabel(label);
-    }
-  }, []);
+      if (!label) return;
+
+      if (!isMultiple) {
+        setSelectedLabels(new Set([label]));
+        setIsOpen(false);
+        return;
+      }
+
+      const prev = new Set(selectedLabels);
+      prev.has(label) ? prev.delete(label) : prev.add(label);
+      setSelectedLabels(prev);
+    },
+    [selectedLabels],
+  );
 
   function handleTypeaheadMatch(index: number | null) {
     if (isOpen) {
@@ -94,10 +160,12 @@ export const useSelect = () => {
   return {
     isOpen,
     activeIndex,
-    selectedIndex,
+    value,
+    setValue,
     getItemProps,
     handleSelect,
-    selectedLabel,
+    selectedLabel: selectedLabels,
+    selectedIndex,
     setReference,
     getReferenceProps,
     context,
@@ -106,5 +174,13 @@ export const useSelect = () => {
     elementsRef,
     labelsRef,
     getFloatingProps,
+    styles,
+    isMultiple,
+    renderValue,
+    className,
+    label,
+    placeholder,
+    helperText,
+    children,
   };
 };

@@ -1,72 +1,14 @@
+/* eslint-disable no-unused-vars */
 import { FloatingFocusManager, FloatingList } from "@floating-ui/react";
-import { useControlledState } from "@jamsr-ui/hooks";
 import { cn } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
-import { selectVariant, type SelectVariantProps } from "./style";
-import { useSelect } from "./use-select";
+import { UseSelectProps, useSelect } from "./use-select";
 import { SelectProvider, type SelectContextType } from "./use-select-context";
 
-export type SelectProps<Value = string> = SelectVariantProps & {
-  children: React.ReactNode;
-  label: string | null;
-  placeholder?: string;
-  error?: boolean;
-  value?: Value;
-  defaultValue?: Value;
-  onValueChange?: (value: Value) => void;
-  getOptionLabel?: (value: string) => string;
-  open?: boolean;
-  defaultOpen?: boolean;
-  onOpenChange?: (value: boolean) => void;
-  multiple?: boolean;
-  className?: string;
-  closeOnSelection?: boolean;
-  slots?: Partial<{
-    trigger: JSX.Element;
-  }>;
-};
+export type SelectProps = UseSelectProps;
 
-export const Select = <Value extends string | string[] = "">(
-  props: SelectProps<Value>,
-) => {
+export const Select = (props: SelectProps) => {
   const id = useId();
-  const {
-    label,
-    children,
-    onValueChange,
-    defaultValue,
-    value: propValue,
-    placeholder,
-    className,
-    error,
-    color,
-    size,
-    onOpenChange,
-    defaultOpen,
-    open: propOpen,
-    multiple,
-    getOptionLabel = (value) => value,
-    closeOnSelection = true,
-    slots = {},
-  } = props;
-
-  const [value = (multiple ? [] : "") as Value, setValue] = useControlledState({
-    prop: propValue,
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-  });
-  const [open, setOpen] = useControlledState({
-    prop: propOpen,
-    onChange: onOpenChange,
-    defaultProp: defaultOpen,
-  });
-
-  const styles = selectVariant({
-    className,
-    color,
-    size,
-  });
-
   const {
     activeIndex,
     selectedIndex,
@@ -82,7 +24,17 @@ export const Select = <Value extends string | string[] = "">(
     setFloating,
     setReference,
     isOpen,
-  } = useSelect();
+    value,
+    styles,
+    setValue,
+    isMultiple,
+    renderValue,
+    className,
+    label,
+    placeholder,
+    helperText,
+    children,
+  } = useSelect(props);
 
   const contextValue: SelectContextType = useMemo(() => {
     return {
@@ -90,8 +42,16 @@ export const Select = <Value extends string | string[] = "">(
       selectedIndex,
       getItemProps,
       handleSelect,
+      setValue,
+      isMultiple,
+      value,
     };
   }, [activeIndex, getItemProps, handleSelect, selectedIndex]);
+
+  const getRenderValue = useMemo(() => {
+    if (renderValue) return renderValue(value);
+    return Array.from(selectedLabel).join(",");
+  }, [renderValue, selectedLabel]);
 
   return (
     <div
@@ -99,14 +59,25 @@ export const Select = <Value extends string | string[] = "">(
       data-slot="wrapper"
       className={cn(styles.mainWrapper(), className)}
     >
+      <label
+        className={styles.label()}
+        htmlFor={id}
+      >
+        {label}
+      </label>
       <button
+        id={id}
         data-slot="trigger"
         type="button"
         className={styles.trigger()}
         ref={setReference}
         {...getReferenceProps()}
       >
-        {selectedLabel ?? "Select..."}
+        {selectedLabel.size ? (
+          <div className={styles.value()}>{getRenderValue}</div>
+        ) : (
+          <span className={styles.placeholder()}>{placeholder}</span>
+        )}
       </button>
       <SelectProvider value={contextValue}>
         {isOpen && (
@@ -120,7 +91,7 @@ export const Select = <Value extends string | string[] = "">(
               {...getFloatingProps()}
               data-slot="popover"
               className={cn(
-                "z-popover flex flex-col overflow-hidden rounded-2xl border border-divider bg-background shadow-card focus:outline-none",
+                "z-popover border-divider bg-background shadow-card flex flex-col overflow-hidden rounded-2xl border focus:outline-none",
                 className,
               )}
             >
@@ -134,6 +105,14 @@ export const Select = <Value extends string | string[] = "">(
           </FloatingFocusManager>
         )}
       </SelectProvider>
+      {helperText && (
+        <div
+          data-slot="helper-text"
+          className={styles.helperText()}
+        >
+          {helperText}
+        </div>
+      )}
     </div>
   );
 };

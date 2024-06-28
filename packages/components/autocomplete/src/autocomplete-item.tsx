@@ -1,38 +1,63 @@
+import { useListItem } from "@floating-ui/react";
 import { Check } from "@jamsr-ui/shared-icons";
-import { ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
-import { useId } from "react";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { cn } from "@jamsr-ui/utils";
+import { useAutocompleteContext } from "./use-autocomplete-context";
 
-interface AutocompleteItemProps {
-  children: React.ReactNode;
-  active?: boolean;
-  selected?: boolean;
-  disabled?: boolean;
-}
+type Props = {
+  value: string;
+  label?: string;
+};
 
-export const AutocompleteItem = <T extends React.ElementType = "div">(
-  props: ComponentPropsWithAs<T, AutocompleteItemProps>,
+export type AutocompleteItemProps<T extends React.ElementType = "button"> =
+  ComponentPropsWithAs<T, Props>;
+
+export const AutocompleteItem = <T extends React.ElementType = "button">(
+  props: AutocompleteItemProps<T>,
 ) => {
-  const { children, active, className, selected, disabled, ...rest } = props;
-  const id = useId();
+  const { children, className, value, as, label, ...restProps } = props;
+  const {
+    activeIndex,
+    getItemProps,
+    handleSelect,
+    value: valueSet,
+  } = useAutocompleteContext();
+
+  const listLabel = label ?? (typeof children === "string" ? children : "");
+
+  if (!listLabel.length) {
+    console.warn(`No label provided for list item with value ${value}`);
+  }
+
+  const { ref, index } = useListItem({
+    label: listLabel,
+  });
+  const isActive = activeIndex === index;
+  const isSelected = valueSet.has(value);
+  const Component = as ?? "button";
+
   return (
-    <div
+    <Component
+      ref={ref}
+      type="button"
       data-slot="item"
       role="option"
-      id={id}
-      aria-selected={active}
+      aria-selected={isSelected}
+      tabIndex={isSelected ? 0 : -1}
       className={cn(
-        "text-foreground hover:bg-action-hover focus-visible:ring-primary flex w-full cursor-pointer select-none items-center gap-2 rounded-md p-2 text-sm focus-visible:ring-2",
+        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
         className,
-        {
-          "bg-content1": active,
-          "bg-content1/50": selected,
-          "cursor-not-allowed opacity-90 hover:bg-transparent": disabled,
-        },
+        { "bg-action-hover": isActive },
       )}
-      {...rest}
+      {...restProps}
+      {...getItemProps({
+        onClick: () => {
+          handleSelect({ label: listLabel, value });
+        },
+      })}
     >
       {children}
-      {selected && <Check className="bg-background absolute right-2  " />}
-    </div>
+      {isSelected && <Check className="absolute right-1" />}
+    </Component>
   );
 };

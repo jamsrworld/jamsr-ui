@@ -1,10 +1,9 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Autocomplete, AutocompleteProps } from "../src/autocomplete";
-import { AutocompleteItem } from "../src/autocomplete-item";
+import { AutoComplete } from "../src/autocomplete";
 
-const meta: Meta<typeof Autocomplete> = {
+const meta: Meta<typeof AutoComplete> = {
   title: "Components/Autocomplete",
-  component: Autocomplete,
+  component: AutoComplete,
 };
 
 export default meta;
@@ -79,26 +78,23 @@ const Animals = [
   },
 ];
 
-const Template = (props: Partial<AutocompleteProps>) => {
+const Template = () => {
   return (
-    <Autocomplete label="User" {...props}>
-      {Animals.map((animal) => (
-        <AutocompleteItem
-          key={animal.value}
-          value={animal.value}
-          label={animal.label}
-        >
-          {animal.label}
-        </AutocompleteItem>
-      ))}
-    </Autocomplete>
+    <AutoComplete
+      options={Animals}
+      getOptionLabel={(option) => option.label}
+      label="User"
+      renderOption={(option) => option.label}
+      getOptionValue={(option) => option.value}
+      slotProps={{
+        input: {
+          placeholder: "Search user",
+        },
+      }}
+    />
   );
 };
 
 export const Default: Story = {
   render: Template,
-};
-
-export const Multiple: Story = {
-  render: () => <Template isMultiple />,
 };

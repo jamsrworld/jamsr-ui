@@ -73,7 +73,7 @@ export const useInput = (props: UseInputProps) => {
     labelPlacement,
   });
 
-  const [value, setValue] = useControlledState({
+  const [value = "", setValue] = useControlledState({
     prop: propValue,
     defaultProp: defaultValue,
     onChange: onValueChange,

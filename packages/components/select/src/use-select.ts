@@ -31,7 +31,6 @@ import { selectVariant } from "./style";
 import type { SelectContextType } from "./use-select-context";
 
 export type SelectionSet = Set<string>;
-
 type Props = {
   placement?: Placement;
   children: React.ReactNode;
@@ -85,6 +84,12 @@ export const useSelect = (props: UseSelectProps) => {
     onChange: onValueChange,
   });
 
+  const [isOpen, setIsOpen] = useControlledState({
+    prop: propOpen,
+    onChange: onOpenChange,
+    defaultProp: defaultOpen,
+  });
+
   const childrenArray = Children.toArray(children);
   const selectItems = childrenArray.map((item) => {
     if (isValidElement<SelectItemProps>(item) && item.type === SelectItem) {
@@ -102,11 +107,6 @@ export const useSelect = (props: UseSelectProps) => {
     return label ? new Set([label]) : new Set([]);
   }, [selectItems, value]);
 
-  const [isOpen, setIsOpen] = useControlledState({
-    prop: propOpen,
-    onChange: onOpenChange,
-    defaultProp: defaultOpen,
-  });
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [selectedLabels, setSelectedLabels] =
@@ -192,7 +192,6 @@ export const useSelect = (props: UseSelectProps) => {
   const click = useClick(context);
   const dismiss = useDismiss(context);
   const role = useRole(context, { role: "listbox" });
-
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
     [listNav, typeahead, click, dismiss, role],
   );
@@ -230,7 +229,7 @@ export const useSelect = (props: UseSelectProps) => {
       "data-component": "select",
       "data-slot": "base",
       className: styles.base({
-        className: cn(classNames?.mainWrapper, className),
+        className: cn(classNames?.base, className),
       }),
       ...props,
     };

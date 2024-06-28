@@ -1,3 +1,3 @@
 "use client";
 
-export { AutoComplete, type AutoCompleteProps } from "./autocomplete";
+export { Autocomplete, type AutocompleteProps } from "./autocomplete";

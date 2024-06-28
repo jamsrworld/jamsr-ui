@@ -836,6 +836,9 @@ importers:
       '@floating-ui/react':
         specifier: ^0.26.16
         version: 0.26.16(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
       '@jamsr-ui/chip':
         specifier: workspace:*
         version: link:../chip

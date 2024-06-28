@@ -1,15 +1,21 @@
 import { useListItem } from "@floating-ui/react";
 import { Check } from "@jamsr-ui/shared-icons";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { cn } from "@jamsr-ui/utils";
-import { type ComponentPropsWithoutRef } from "react";
 import { useSelectContext } from "./use-select-context";
 
-export type SelectItemProps<T extends string = string> = {
-  value: T;
-} & Omit<ComponentPropsWithoutRef<"button">, "value">;
+type Props = {
+  value: string;
+  label?: string;
+};
 
-export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
-  const { children, className, value } = props;
+export type SelectItemProps<T extends React.ElementType = "button"> =
+  ComponentPropsWithAs<T, Props>;
+
+export const SelectItem = <T extends React.ElementType = "button">(
+  props: SelectItemProps<T>,
+) => {
+  const { children, className, value, as, label, ...restProps } = props;
   const {
     activeIndex,
     getItemProps,
@@ -19,8 +25,16 @@ export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
     value: inputValue,
   } = useSelectContext();
 
+  // eslint-disable-next-line no-nested-ternary
+  const listLabel =
+    label ?? (typeof children === "string" ? children : undefined);
+
+  if (!listLabel) {
+    console.warn(`No label provided for list item with value ${value}`);
+  }
+
   const { ref, index } = useListItem({
-    label: typeof children === "string" ? children : "",
+    label: listLabel,
   });
   const isActive = activeIndex === index;
   const isSelected = inputValue.has(value);
@@ -42,8 +56,10 @@ export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
     setValue(getNewValue());
   };
 
+  const Component = as ?? "button";
+
   return (
-    <button
+    <Component
       ref={ref}
       type="button"
       data-slot="item"
@@ -55,6 +71,7 @@ export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
         className,
         { "bg-action-hover": isActive },
       )}
+      {...restProps}
       {...getItemProps({
         onClick: () => {
           handleClick();
@@ -64,6 +81,6 @@ export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
     >
       {children}
       {isSelected && <Check className="absolute right-1" />}
-    </button>
+    </Component>
   );
 };

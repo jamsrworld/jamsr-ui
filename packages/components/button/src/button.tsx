@@ -1,9 +1,10 @@
 import { CircularProgress } from "@jamsr-ui/progress";
 import { Ripple } from "@jamsr-ui/ripple";
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useButton, type UseButtonProps } from "./use-button";
 
 export type ButtonProps = UseButtonProps;
+
 export const Button = <T extends React.ElementType = "button">(
   props: ComponentPropsWithAs<T, ButtonProps>,
 ) => {

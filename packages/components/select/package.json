@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.16",
+    "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/chip": "workspace:*",
     "@jamsr-ui/hooks": "workspace:*",
     "@jamsr-ui/popover": "workspace:*",

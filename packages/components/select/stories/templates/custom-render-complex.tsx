@@ -206,47 +206,49 @@ export const users = [
 
 export const CustomRenderValueStory = () => {
   return (
-    <Select
-      renderValue={(values) => {
-        const value = values[0];
-        const selectedUser = users.find((u) => u.email === value);
-        if (!selectedUser) return null;
-        return (
-          <div className="flex items-center gap-2">
-            <Avatar
-              alt={selectedUser.name}
-              className="shrink-0"
-              size="sm"
-              src={selectedUser.avatar}
-            />
-            <div className="flex flex-col">
-              <span className="text-left text-sm">{selectedUser.name}</span>
-              <span className="text-xs text-default-400">
-                {selectedUser.email}
-              </span>
-            </div>
-          </div>
-        );
-      }}
-    >
-      {users.map((user) => {
-        return (
-          <SelectItem key={user.id} value={user.email}>
+    <div className="min-h-[300px]">
+      <Select
+        renderValue={(values) => {
+          const value = values[0];
+          const selectedUser = users.find((u) => u.email === value);
+          if (!selectedUser) return null;
+          return (
             <div className="flex items-center gap-2">
               <Avatar
-                alt={user.name}
+                alt={selectedUser.name}
                 className="shrink-0"
                 size="sm"
-                src={user.avatar}
+                src={selectedUser.avatar}
               />
               <div className="flex flex-col">
-                <span className="text-left text-sm">{user.name}</span>
-                <span className="text-xs text-default-400">{user.email}</span>
+                <span className="text-left text-sm">{selectedUser.name}</span>
+                <span className="text-xs text-default-400">
+                  {selectedUser.email}
+                </span>
               </div>
             </div>
-          </SelectItem>
-        );
-      })}
-    </Select>
+          );
+        }}
+      >
+        {users.map((user) => {
+          return (
+            <SelectItem key={user.id} value={user.email}>
+              <div className="flex items-center gap-2">
+                <Avatar
+                  alt={user.name}
+                  className="shrink-0"
+                  size="sm"
+                  src={user.avatar}
+                />
+                <div className="flex flex-col">
+                  <span className="text-left text-sm">{user.name}</span>
+                  <span className="text-xs text-default-400">{user.email}</span>
+                </div>
+              </div>
+            </SelectItem>
+          );
+        })}
+      </Select>
+    </div>
   );
 };

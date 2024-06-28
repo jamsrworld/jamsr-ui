@@ -1,4 +1,4 @@
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { Error, Info, Success, Warning } from "./icons";
 import { alertVariant, type AlertVariantProps } from "./style";
 
@@ -55,25 +55,16 @@ export const Alert = <T extends React.ElementType = "div">(
       <Icon />
       <div>
         {heading && (
-          <div
-            data-slot="heading"
-            className={styles.heading()}
-          >
+          <div data-slot="heading" className={styles.heading()}>
             {heading}
           </div>
         )}
-        <div
-          data-slot="description"
-          className={styles.description()}
-        >
+        <div data-slot="description" className={styles.description()}>
           {children}
         </div>
       </div>
       {action && (
-        <div
-          data-slot="action"
-          className={styles.action()}
-        >
+        <div data-slot="action" className={styles.action()}>
           {action}
         </div>
       )}
@@ -81,7 +72,4 @@ export const Alert = <T extends React.ElementType = "div">(
   );
 };
 
-<Alert
-  as="a"
-  href="/"
-/>;
+<Alert as="a" href="/" />;

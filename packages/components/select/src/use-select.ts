@@ -13,16 +13,22 @@ import {
   useTypeahead,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
+import { cn, type PropGetter, type SlotsToClasses } from "@jamsr-ui/utils";
+import type { ComponentProps } from "react";
 import {
   Children,
   isValidElement,
   useCallback,
+  useId,
   useMemo,
   useRef,
   useState,
 } from "react";
-import { SelectItem, SelectItemProps } from "./select-item";
-import { selectVariant, type SelectVariantProps } from "./style";
+import type { SelectItemProps } from "./select-item";
+import { SelectItem } from "./select-item";
+import type { SelectSlots, SelectVariantProps } from "./style";
+import { selectVariant } from "./style";
+import type { SelectContextType } from "./use-select-context";
 
 export type SelectionSet = Set<string>;
 
@@ -40,8 +46,11 @@ type Props = {
   onOpenChange?: (value: boolean) => void;
   isMultiple?: boolean;
   className?: string;
+  classNames?: SlotsToClasses<SelectSlots>;
   helperText?: React.ReactNode;
   renderValue?: (value: string[]) => React.ReactNode;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
 };
 
 export type UseSelectProps = Props & SelectVariantProps;
@@ -55,6 +64,7 @@ export const useSelect = (props: UseSelectProps) => {
     value: propValue,
     placeholder = "Select",
     className,
+    classNames,
     isInvalid,
     color,
     size: propSize,
@@ -65,6 +75,8 @@ export const useSelect = (props: UseSelectProps) => {
     helperText,
     renderValue,
     placement = "bottom-start",
+    startContent,
+    endContent,
   } = props;
 
   const [value = new Set([]), setValue] = useControlledState({
@@ -185,30 +197,165 @@ export const useSelect = (props: UseSelectProps) => {
     [listNav, typeahead, click, dismiss, role],
   );
 
-  return {
-    isOpen,
+  const contextValue: SelectContextType = useMemo(() => {
+    return {
+      activeIndex,
+      selectedIndex,
+      getItemProps,
+      handleSelect,
+      setValue,
+      isMultiple,
+      value,
+    };
+  }, [
     activeIndex,
-    value,
-    setValue,
     getItemProps,
     handleSelect,
-    selectedLabels,
+    isMultiple,
     selectedIndex,
-    setReference,
-    getReferenceProps,
+    setValue,
+    value,
+  ]);
+
+  const hasValue = value.size > 0;
+
+  const getRenderValue = useMemo(() => {
+    if (renderValue) return renderValue(Array.from(value));
+    return Array.from(selectedLabels).join(",");
+  }, [renderValue, selectedLabels, value]);
+
+  const id = useId();
+  const getBaseProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-component": "select",
+      "data-slot": "base",
+      className: styles.base({
+        className: cn(classNames?.mainWrapper, className),
+      }),
+      ...props,
+    };
+  };
+
+  const getLabelProps: PropGetter<ComponentProps<"label">> = (props) => {
+    return {
+      "data-slot": "label",
+      className: styles.label({ className: classNames?.label }),
+      htmlFor: id,
+      ...props,
+    };
+  };
+
+  const getMainWrapperProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "main-wrapper",
+      className: styles.mainWrapper({ className: classNames?.mainWrapper }),
+      ...props,
+    };
+  };
+
+  const getInnerWrapperProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "inner-wrapper",
+      className: styles.innerWrapper({ className: classNames?.innerWrapper }),
+      ...props,
+    };
+  };
+
+  const getTriggerProps: PropGetter<ComponentProps<"button">> = (props) => {
+    return {
+      "data-slot": "trigger",
+      type: "button",
+      className: styles.trigger({ className: classNames?.trigger }),
+      ref: setReference,
+      ...props,
+      ...getReferenceProps(),
+    };
+  };
+
+  const getValueProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "value",
+      className: styles.value({ className: classNames?.value }),
+      ...props,
+    };
+  };
+
+  const getPlaceholderProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "placeholder",
+      className: styles.placeholder({ className: classNames?.placeholder }),
+      ...props,
+    };
+  };
+
+  const getPopoverProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "popover",
+      ref: setFloating,
+      style: floatingStyles,
+      className: styles.popover({ className: classNames?.popover }),
+      ...getFloatingProps(),
+      ...props,
+    };
+  };
+
+  const getContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "content",
+      className: styles.content({ className: classNames?.content }),
+      ...props,
+    };
+  };
+
+  const getHelperTextProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "helper-text",
+      className: styles.helperText({ className: classNames?.helperText }),
+      ...props,
+    };
+  };
+
+  const getStartContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "start-content",
+      className: styles.startContent({ className: classNames?.startContent }),
+      ...props,
+    };
+  };
+
+  const getEndContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "end-content",
+      className: styles.endContent({ className: classNames?.endContent }),
+      ...props,
+    };
+  };
+
+  return {
     context,
-    setFloating,
-    floatingStyles,
     elementsRef,
     labelsRef,
-    getFloatingProps,
-    styles,
-    isMultiple,
-    renderValue,
-    className,
+    isOpen,
+    hasValue,
     label,
     placeholder,
     helperText,
     children,
+    getRenderValue,
+    getBaseProps,
+    getLabelProps,
+    getMainWrapperProps,
+    getInnerWrapperProps,
+    getTriggerProps,
+    getValueProps,
+    getPlaceholderProps,
+    getPopoverProps,
+    getContentProps,
+    getHelperTextProps,
+    getStartContentProps,
+    getEndContentProps,
+    contextValue,
+    startContent,
+    endContent,
   };
 };

@@ -1,3 +1,4 @@
+import { Email } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 import type { SelectProps } from "../src";
@@ -45,6 +46,18 @@ const ControlledTemplate = () => {
 
 export const Controlled: Story = {
   render: ControlledTemplate,
+};
+
+export const StartEndItems: Story = {
+  render: () => (
+    <>
+      <Template startContent="$" />
+      <Template endContent="%" />
+      <Template startContent={<Email />} />
+      <Template endContent={<Email />} />
+      <Template startContent={<Email />} endContent={<Email />} />
+    </>
+  ),
 };
 
 export const ChangePlaceholder: Story = {

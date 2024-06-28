@@ -5,7 +5,7 @@ import { users } from "./custom-render-complex";
 
 export const CustomRenderMultiStory = () => {
   return (
-    <div className="h-dvh">
+    <div className="min-h-[300px]">
       <Select
         className="w-full min-w-[300px] max-w-md"
         isMultiple
@@ -37,7 +37,7 @@ export const CustomRenderMultiStory = () => {
       >
         {users.map((user) => {
           return (
-            <SelectItem key={user.id} value={user.email}>
+            <SelectItem key={user.id} value={user.email} label={user.name}>
               <div className="flex items-center gap-2">
                 <Avatar
                   alt={user.name}

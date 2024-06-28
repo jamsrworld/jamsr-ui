@@ -26,9 +26,9 @@
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:*",
     "@types/react": "^18.3.3",
+    "clean-package": "^2.2.0",
     "react": "19.0.0-rc-c21bcd627b-20240624",
-    "react-dom": "19.0.0-rc-c21bcd627b-20240624",
-    "clean-package": "^2.2.0"
+    "react-dom": "19.0.0-rc-c21bcd627b-20240624"
   },
   "peerDependencies": {
     "react": "19.0.0-rc-c21bcd627b-20240624",
@@ -37,6 +37,7 @@
   "dependencies": {
     "@floating-ui/react": "^0.26.16",
     "@jamsr-ui/button": "workspace:*",
+    "@jamsr-ui/chip": "workspace:^",
     "@jamsr-ui/hooks": "workspace:*",
     "@jamsr-ui/input": "workspace:*",
     "@jamsr-ui/shared-icons": "workspace:*",

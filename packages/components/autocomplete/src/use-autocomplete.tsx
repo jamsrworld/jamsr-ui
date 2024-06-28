@@ -10,6 +10,7 @@ import {
   useListNavigation,
   useRole,
 } from "@floating-ui/react";
+import { Chip } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import type { InputProps } from "@jamsr-ui/input";
 import { cn, type PropGetter, type SlotsToClasses } from "@jamsr-ui/utils";
@@ -45,6 +46,7 @@ export type UseAutocompleteProps = Pick<InputProps, "label"> & {
 };
 
 export const useAutocomplete = (props: UseAutocompleteProps) => {
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const {
     className,
     classNames,
@@ -157,13 +159,14 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
 
   const handleSelect = useCallback(
     (args: { value: string; label: string }) => {
-      console.log("args:->", args);
       if (!isMultiple) {
         setInputValue(args.label);
         setIsOpen(false);
       }
+
       if (isMultiple) {
         setInputValue("");
+        inputRef.current?.focus();
       }
 
       const getNewValue = () => {
@@ -226,11 +229,15 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     };
   };
 
-  const handleClick = () => {
-    setIsOpen((open) => {
-      return !open;
-    });
+  const getEmptyContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "empty-content",
+      className: styles.emptyContent({ className: classNames?.emptyContent }),
+      ...props,
+    };
   };
+
+  const handleToggleOpen = () => setIsOpen((open) => !open);
 
   const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && activeIndex !== null) {
@@ -240,18 +247,28 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     }
   };
 
+  const selectedItemsContent = !isMultiple ? null : (
+    <div className="flex gap-1">
+      {Array.from(value).map((item) => (
+        <Chip key={item}>{item}</Chip>
+      ))}
+    </div>
+  );
+
   const getInputProps: PropGetter<InputProps> = () => {
     return {
       "data-slot": "input",
-      ref: setReference,
       label,
       value: inputValue,
       onValueChange: handleInputChange,
       type: "search",
       autoComplete: "off",
+      startContent: selectedItemsContent,
+      baseRef: setReference,
       ...getReferenceProps({
-        onClick: handleClick,
         onKeyDown: handleInputKeyDown,
+        onClick: handleToggleOpen,
+        ref:inputRef
       }),
     };
   };
@@ -267,5 +284,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     getContentProps,
     contextValue,
     childrenToRender,
+    getEmptyContentProps,
   };
 };

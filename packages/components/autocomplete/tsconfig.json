@@ -8,6 +8,6 @@
     "**/**/*.ts",
     ".eslintrc.cjs",
     "prettier.config.cjs"
-  ],
+, "src/use-autocomplete.tsx"  ],
   "exclude": ["node_modules", "dist"]
 }

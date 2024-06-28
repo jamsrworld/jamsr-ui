@@ -29,7 +29,7 @@ type Props = {
   isInvalid?: boolean;
   helperText?: string;
   precision?: number;
-  ref?: React.Ref<HTMLInputElement>;
+  baseRef?: React.Ref<HTMLDivElement>;
 };
 
 type InputProps = UIProps<"input">;
@@ -60,7 +60,7 @@ export const useInput = (props: UseInputProps) => {
     variant,
     helperText,
     precision = 2,
-    ref,
+    baseRef,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -71,6 +71,7 @@ export const useInput = (props: UseInputProps) => {
     size,
     isInvalid,
     labelPlacement,
+    fullWidth,
   });
 
   const [value = "", setValue] = useControlledState({
@@ -124,10 +125,11 @@ export const useInput = (props: UseInputProps) => {
         className: slots.base({
           class: cn(classNames?.base, props?.className),
         }),
+        ref: baseRef,
         ...props,
       };
     },
-    [slots, classNames?.base],
+    [slots, classNames?.base, baseRef],
   );
 
   const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -143,7 +145,7 @@ export const useInput = (props: UseInputProps) => {
     [slots, classNames?.labelWrapper],
   );
 
-  const getLabelProps: PropGetter<ComponentProps<"div">> = useCallback(
+  const getLabelProps: PropGetter<ComponentProps<"label">> = useCallback(
     (props) => {
       return {
         ...props,
@@ -199,14 +201,39 @@ export const useInput = (props: UseInputProps) => {
     (props) => {
       return {
         ...props,
-        ref,
         "data-slot": "input-wrapper",
         className: slots.inputWrapper({
           class: cn(classNames?.inputWrapper, props?.className),
         }),
       };
     },
-    [ref, slots, classNames?.inputWrapper],
+    [slots, classNames?.inputWrapper],
+  );
+
+  const getStartContentProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "start-content",
+        className: slots.startContent({
+          class: cn(classNames?.startContent, props?.className),
+        }),
+      };
+    },
+    [slots, classNames?.startContent],
+  );
+
+  const getEndContentProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "end-content",
+        className: slots.endContent({
+          class: cn(classNames?.endContent, props?.className),
+        }),
+      };
+    },
+    [slots, classNames?.endContent],
   );
 
   const inputType = useMemo(() => {
@@ -266,5 +293,7 @@ export const useInput = (props: UseInputProps) => {
     getInnerWrapperProps,
     handleChangeInputType,
     getMainWrapperProps,
+    getStartContentProps,
+    getEndContentProps,
   };
 };

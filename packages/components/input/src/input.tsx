@@ -28,15 +28,16 @@ export const Input = <T extends React.ElementType = "div">(
     getInnerWrapperProps,
     handleChangeInputType,
     getMainWrapperProps,
+    getStartContentProps,
+    getEndContentProps,
   } = useInput(props);
   const id = useId();
 
   const getStartContent = useMemo(() => {
-    const content = startContent;
-    return !content ? null : (
-      <div className="pl-2 text-foreground-muted empty:hidden">{content}</div>
+    return !startContent ? null : (
+      <div {...getStartContentProps()}>{startContent}</div>
     );
-  }, [startContent]);
+  }, [getStartContentProps, startContent]);
 
   const getEndContent = useMemo(() => {
     const content =
@@ -50,25 +51,23 @@ export const Input = <T extends React.ElementType = "div">(
           {!showPassword ? <EyeOpen /> : <EyeClosed />}
         </Button>
       )) ||
-      (mask === "percent" && "%") ||
-      endContent;
+      (mask === "percent" && "%");
 
-    return !content ? null : (
-      <div className="pr-2 text-foreground-muted">{content}</div>
-    );
-  }, [endContent, handleChangeInputType, isSecuredText, mask, showPassword]);
+    return !content ? null : <div {...getEndContentProps()}>{endContent}</div>;
+  }, [
+    endContent,
+    getEndContentProps,
+    handleChangeInputType,
+    isSecuredText,
+    mask,
+    showPassword,
+  ]);
 
   return (
-    <Component
-      data-component="input"
-      {...getBaseProps()}
-    >
+    <Component data-component="input" {...getBaseProps()}>
       <div {...getMainWrapperProps()}>
         <div {...getLabelWrapperProps()}>
-          <label
-            htmlFor={id}
-            {...getLabelProps()}
-          >
+          <label htmlFor={id} {...getLabelProps()}>
             {label}
           </label>
           {labelHelper}
@@ -76,10 +75,7 @@ export const Input = <T extends React.ElementType = "div">(
         <div {...getInputWrapperProps()}>
           <div {...getInnerWrapperProps()}>
             {getStartContent}
-            <InputComponent
-              id={id}
-              {...getInputProps()}
-            />
+            <InputComponent id={id} {...getInputProps()} />
             {getEndContent}
           </div>
         </div>

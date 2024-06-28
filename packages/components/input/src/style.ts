@@ -4,7 +4,7 @@ export const inputVariants = tv({
   slots: {
     base: "flex flex-col gap-1",
     input:
-      "block w-full grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+      "block grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
     labelWrapper: "flex items-center gap-2",
     label: "shrink-0 select-none text-sm font-normal",
     mainWrapper: "flex gap-1",
@@ -12,12 +12,18 @@ export const inputVariants = tv({
       "w-full focus-within:border-primary focus-within:ring-primary",
     innerWrapper: "flex items-center",
     helper: "text-xs text-foreground-500",
+    startContent: "pl-2 text-foreground-muted empty:hidden",
+    endContent: "pr-2 text-foreground-muted",
   },
   variants: {
+    fullWidth: {
+      true: {
+        input: "w-full",
+      },
+    },
     variant: {
       outline: {
-        inputWrapper:
-          "rounded-xl border-2 border-divider",
+        inputWrapper: "rounded-xl border-2 border-divider",
       },
       transparent: {
         inputWrapper: "border-none bg-transparent outline-none",

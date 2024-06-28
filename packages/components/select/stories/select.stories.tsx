@@ -3,6 +3,8 @@ import { useState } from "react";
 import type { SelectProps } from "../src";
 import { Select, SelectItem } from "../src";
 import type { SelectionSet } from "../src/use-select";
+import { CustomRenderValueStory as CustomRenderValueComplexStory } from "./templates/custom-render-complex";
+import { CustomRenderMultiStory } from "./templates/custom-render-multi";
 
 const meta: Meta<typeof Select> = {
   title: "Components/Select",
@@ -15,11 +17,7 @@ type Story = StoryObj<typeof meta>;
 const Template = (props: Partial<SelectProps>) => {
   return (
     <div className="min-h-[200px]">
-      <Select
-        className="max-w-sm"
-        label="Select Label"
-        {...props}
-      >
+      <Select className="max-w-sm" label="Select Label" {...props}>
         <SelectItem value="apple">Apple</SelectItem>
         <SelectItem value="blueberry">Blueberry</SelectItem>
         <SelectItem value="watermelon">Watermelon</SelectItem>
@@ -35,7 +33,7 @@ export const Default: Story = {
 };
 
 const ControlledTemplate = () => {
-  const [value, setValue] = useState<SelectionSet>(new Set([""]));
+  const [value, setValue] = useState<SelectionSet>(new Set(["apple"]));
   return (
     <Template
       value={value}
@@ -54,12 +52,7 @@ export const ChangePlaceholder: Story = {
 };
 
 export const WithoutLabel: Story = {
-  render: () => (
-    <Template
-      placeholder="Select as item..."
-      label={undefined}
-    />
-  ),
+  render: () => <Template placeholder="Select as item..." label={undefined} />,
 };
 
 export const WithHelperText: Story = {
@@ -95,20 +88,13 @@ export const CustomRenderValue: Story = {
 const MultipleTemplate = () => {
   return (
     <div className="min-h-[300px]">
-      <Select
-        className="max-w-md"
-        label="Select Label"
-        isMultiple
-      >
+      <Select className="max-w-md" label="Select Label" isMultiple>
         {Array(20)
           .fill(null)
           .map((_, idx) => {
             const value = `option${idx}`;
             return (
-              <SelectItem
-                key={value}
-                value={value}
-              >
+              <SelectItem key={value} value={value}>
                 {`Option ${idx}`}
               </SelectItem>
             );
@@ -120,4 +106,12 @@ const MultipleTemplate = () => {
 
 export const Multiple: Story = {
   render: MultipleTemplate,
+};
+
+export const CustomRenderComplex: Story = {
+  render: CustomRenderValueComplexStory,
+};
+
+export const CustomRenderMulti: Story = {
+  render: CustomRenderMultiStory,
 };

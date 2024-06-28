@@ -4,9 +4,9 @@ import { cn } from "@jamsr-ui/utils";
 import { type ComponentPropsWithoutRef } from "react";
 import { useSelectContext } from "./use-select-context";
 
-type SelectItemProps<T extends string> = {
+export type SelectItemProps<T extends string = string> = {
   value: T;
-} & ComponentPropsWithoutRef<"button">;
+} & Omit<ComponentPropsWithoutRef<"button">, "value">;
 
 export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
   const { children, className, value } = props;
@@ -23,7 +23,6 @@ export const SelectItem = <T extends string>(props: SelectItemProps<T>) => {
     label: typeof children === "string" ? children : "",
   });
   const isActive = activeIndex === index;
-
   const isSelected = inputValue.has(value);
 
   const handleClick = () => {

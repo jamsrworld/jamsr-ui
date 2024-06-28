@@ -11,6 +11,7 @@ export const avatarVariants = tv({
   ],
   variants: {
     size: {
+      xs: "size-6",
       sm: "size-8",
       md: "size-10",
       lg: "size-12",

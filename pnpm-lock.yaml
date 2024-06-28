@@ -852,6 +852,9 @@ importers:
         specifier: workspace:*
         version: link:../../utils
     devDependencies:
+      '@jamsr-ui/avatar':
+        specifier: workspace:^
+        version: link:../avatar
       '@jamsr-ui/tailwind-config':
         specifier: workspace:*
         version: link:../../config/tailwind-config

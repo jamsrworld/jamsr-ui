@@ -21,7 +21,7 @@ export const Select = (props: SelectProps) => {
     getFloatingProps,
     getReferenceProps,
     labelsRef,
-    selectedLabel,
+    selectedLabels,
     setFloating,
     setReference,
     isOpen,
@@ -58,9 +58,9 @@ export const Select = (props: SelectProps) => {
   ]);
 
   const getRenderValue = useMemo(() => {
-    if (renderValue) return renderValue(value);
-    return Array.from(selectedLabel).join(",");
-  }, [renderValue, selectedLabel, value]);
+    if (renderValue) return renderValue(Array.from(value));
+    return Array.from(selectedLabels).join(",");
+  }, [renderValue, selectedLabels, value]);
 
   return (
     <div
@@ -79,7 +79,7 @@ export const Select = (props: SelectProps) => {
         ref={setReference}
         {...getReferenceProps()}
       >
-        {selectedLabel.size ? (
+        {value.size ? (
           <div className={styles.value()}>{getRenderValue}</div>
         ) : (
           <span className={styles.placeholder()}>{placeholder}</span>

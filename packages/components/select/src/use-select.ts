@@ -1,3 +1,4 @@
+import type { Placement } from "@floating-ui/react";
 import {
   autoUpdate,
   flip,
@@ -12,12 +13,21 @@ import {
   useTypeahead,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { useCallback, useRef, useState } from "react";
+import {
+  Children,
+  isValidElement,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { SelectItem, SelectItemProps } from "./select-item";
 import { selectVariant, type SelectVariantProps } from "./style";
 
-export type SelectionSet = Set<number | string>;
+export type SelectionSet = Set<string>;
 
 type Props = {
+  placement?: Placement;
   children: React.ReactNode;
   label?: string;
   placeholder?: string;
@@ -31,7 +41,7 @@ type Props = {
   isMultiple?: boolean;
   className?: string;
   helperText?: React.ReactNode;
-  renderValue?: (value: SelectionSet) => React.ReactNode;
+  renderValue?: (value: string[]) => React.ReactNode;
 };
 
 export type UseSelectProps = Props & SelectVariantProps;
@@ -54,6 +64,7 @@ export const useSelect = (props: UseSelectProps) => {
     isMultiple = false,
     helperText,
     renderValue,
+    placement = "bottom-start",
   } = props;
 
   const [value = new Set([]), setValue] = useControlledState({
@@ -62,15 +73,34 @@ export const useSelect = (props: UseSelectProps) => {
     onChange: onValueChange,
   });
 
+  const childrenArray = Children.toArray(children);
+  const selectItems = childrenArray.map((item) => {
+    if (isValidElement<SelectItemProps>(item) && item.type === SelectItem) {
+      return {
+        value: item.props.value,
+        children: item.props.children,
+      };
+    }
+    return null;
+  });
+  const defaultSelectedLabel = useMemo(() => {
+    const item = selectItems.find((item) => item && value.has(item.value));
+    const label =
+      item && typeof item.children === "string" ? item?.children : null;
+    return label ? new Set([label]) : new Set([]);
+  }, [selectItems, value]);
+
   const [isOpen, setIsOpen] = useControlledState({
     prop: propOpen,
     onChange: onOpenChange,
     defaultProp: defaultOpen,
   });
-  const [selectedLabels, setSelectedLabels] = useState<SelectionSet>(
-    new Set([]),
-  );
-
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [selectedLabels, setSelectedLabels] =
+    useState<SelectionSet>(defaultSelectedLabel);
+  const elementsRef = useRef<(HTMLElement | null)[]>([]);
+  const labelsRef = useRef<(string | null)[]>([]);
   const styles = selectVariant({
     className,
     color,
@@ -78,25 +108,26 @@ export const useSelect = (props: UseSelectProps) => {
     isInvalid,
   });
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
   const {
     refs: { setReference, setFloating },
     floatingStyles,
     context,
   } = useFloating({
-    placement: "bottom-start",
+    placement,
     open: isOpen,
     onOpenChange: setIsOpen,
     whileElementsMounted: autoUpdate,
     middleware: [
       offset(5),
-      flip({ padding: 10 }),
+      flip({
+        crossAxis: placement.includes("-"),
+        // fallbackAxisSideDirection: isMultiple ? "end" : "none",
+        padding: 10,
+      }),
       size({
         apply({ rects, elements, availableHeight }) {
           Object.assign(elements.floating.style, {
-            maxHeight: `${availableHeight}px`,
+            maxHeight: `${Math.max(50, availableHeight)}px`,
             minWidth: `${rects.reference.width}px`,
           });
         },
@@ -104,9 +135,6 @@ export const useSelect = (props: UseSelectProps) => {
       }),
     ],
   });
-
-  const elementsRef = useRef<(HTMLElement | null)[]>([]);
-  const labelsRef = useRef<(string | null)[]>([]);
 
   const handleSelect = useCallback(
     (index: number | null) => {
@@ -164,7 +192,7 @@ export const useSelect = (props: UseSelectProps) => {
     setValue,
     getItemProps,
     handleSelect,
-    selectedLabel: selectedLabels,
+    selectedLabels,
     selectedIndex,
     setReference,
     getReferenceProps,

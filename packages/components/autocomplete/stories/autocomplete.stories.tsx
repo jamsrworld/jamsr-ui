@@ -1,6 +1,7 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Autocomplete, AutocompleteProps } from "../src/autocomplete";
 import { AutocompleteItem } from "../src/autocomplete-item";
+import { ComplexAutocompleteStory } from "./templates/complex";
 
 const meta: Meta<typeof Autocomplete> = {
   title: "Components/Autocomplete",
@@ -97,6 +98,10 @@ const Template = (props: Partial<AutocompleteProps>) => {
 
 export const Default: Story = {
   render: Template,
+};
+
+export const Complex: Story = {
+  render: ComplexAutocompleteStory,
 };
 
 export const Multiple: Story = {

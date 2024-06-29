@@ -63,6 +63,8 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   } = props;
 
   const [inputValue, setInputValue] = useState("");
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
+  const [isFocused, setIsFocused] = useState(false);
   const [value = new Set([]), setValue] = useControlledState({
     prop: propValue,
     defaultProp: defaultValue,
@@ -97,7 +99,9 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     item?.label.toLowerCase().startsWith(inputValue.toLowerCase()),
   );
 
-  const childrenToRender = filteredItems.map(
+  const renderedItems = isFocused ? allItems : filteredItems;
+
+  const childrenToRender = renderedItems.map(
     (item) => item?.autocompleteItem ?? null,
   );
 
@@ -112,7 +116,13 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   const handleInputChange = (value: string) => {
     setInputValue(value);
     setIsOpen(true);
+    setIsFocused(false);
     setActiveIndex(0);
+  };
+
+  const handleToggleOpen = () => {
+    setIsFocused(true);
+    setIsOpen((open) => !open);
   };
 
   const {
@@ -122,10 +132,10 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   } = useFloating({
     placement,
     open: isOpen,
-    onOpenChange: setIsOpen,
+    onOpenChange: handleToggleOpen,
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset(5),
+      offset(2),
       flip({
         crossAxis: placement.includes("-"),
         padding: 10,
@@ -145,6 +155,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   const listNav = useListNavigation(context, {
     listRef: elementsRef,
     activeIndex,
+    selectedIndex,
     onNavigate: setActiveIndex,
     virtual: true,
     loop: true,
@@ -159,6 +170,8 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
 
   const handleSelect = useCallback(
     (args: { value: string; label: string }) => {
+      if (isFocused && activeIndex !== null) setSelectedIndex(activeIndex);
+
       if (!isMultiple) {
         setInputValue(args.label);
         setIsOpen(false);
@@ -184,7 +197,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
 
       setValue(getNewValue());
     },
-    [isMultiple, setIsOpen, setValue, value],
+    [activeIndex, isFocused, isMultiple, setIsOpen, setValue, value],
   );
 
   const contextValue: AutocompleteContextType = useMemo(() => {
@@ -198,6 +211,17 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       setInputValue,
     };
   }, [activeIndex, getItemProps, handleSelect, isMultiple, setValue, value]);
+
+  const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter" && activeIndex !== null) {
+      const indexItem = renderedItems[activeIndex];
+      if (!indexItem) return;
+      handleSelect({
+        label: indexItem.label,
+        value: indexItem.value,
+      });
+    }
+  };
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = (props) => {
     return {
@@ -236,17 +260,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       ...props,
     };
   };
-
-  const handleToggleOpen = () => setIsOpen((open) => !open);
-
-  const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter" && activeIndex !== null) {
-      const indexItem = filteredItems[activeIndex];
-      if (!indexItem) return;
-      handleSelect(indexItem);
-    }
-  };
-
   const selectedItemsContent = !isMultiple ? null : (
     <div className="flex gap-1">
       {Array.from(value).map((item) => (
@@ -268,7 +281,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       ...getReferenceProps({
         onKeyDown: handleInputKeyDown,
         onClick: handleToggleOpen,
-        ref:inputRef
+        ref: inputRef,
       }),
     };
   };

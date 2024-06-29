@@ -1,6 +1,6 @@
 import { type useInteractions } from "@floating-ui/react";
 import { createContext } from "@jamsr-ui/utils";
-import type { SelectionSet } from "./use-autocomplete.tsx";
+import type { SelectionSet } from "./use-autocomplete";
 
 export type AutocompleteContextType = {
   activeIndex: number | null;

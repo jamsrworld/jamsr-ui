@@ -40,6 +40,5 @@ export const useRipple = <T extends HTMLElement>(ref: React.RefObject<T>) => {
       setRipples([]);
     }
   }, [debounced.length]);
-
   return ripples;
 };

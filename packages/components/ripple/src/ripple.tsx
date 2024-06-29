@@ -14,11 +14,9 @@ export const Ripple = () => {
         return (
           <span
             key={i}
-            className="absolute scale-0 rounded-full bg-current opacity-25"
+            className="absolute scale-0 animate-ripple rounded-full bg-current opacity-25"
             style={{
               ...style,
-              transform: "scale(0)",
-              animation: "ripple 1s linear",
             }}
           />
         );

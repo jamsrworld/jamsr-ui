@@ -30,6 +30,7 @@ export const Input = <T extends React.ElementType = "div">(
     getMainWrapperProps,
     getStartContentProps,
     getEndContentProps,
+    children,
   } = useInput(props);
   const id = useId();
 
@@ -51,9 +52,10 @@ export const Input = <T extends React.ElementType = "div">(
           {!showPassword ? <EyeOpen /> : <EyeClosed />}
         </Button>
       )) ||
-      (mask === "percent" && "%");
+      (mask === "percent" && "%") ||
+      endContent;
 
-    return !content ? null : <div {...getEndContentProps()}>{endContent}</div>;
+    return !content ? null : <div {...getEndContentProps()}>{content}</div>;
   }, [
     endContent,
     getEndContentProps,
@@ -75,6 +77,7 @@ export const Input = <T extends React.ElementType = "div">(
         <div {...getInputWrapperProps()}>
           <div {...getInnerWrapperProps()}>
             {getStartContent}
+            {children}
             <InputComponent id={id} {...getInputProps()} />
             {getEndContent}
           </div>

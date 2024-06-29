@@ -1,6 +1,7 @@
 import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
+  useDOMRef,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -30,6 +31,8 @@ type Props = {
   helperText?: string;
   precision?: number;
   baseRef?: React.Ref<HTMLDivElement>;
+  inputWrapperRef?: React.Ref<HTMLDivElement>;
+  ref?: React.Ref<HTMLInputElement>;
 };
 
 type InputProps = UIProps<"input">;
@@ -61,10 +64,15 @@ export const useInput = (props: UseInputProps) => {
     helperText,
     precision = 2,
     baseRef,
+    inputWrapperRef,
+    children,
+    ref,
     ...restProps
   } = props;
+
   const Component = as ?? "div";
   const InputComponent = "input";
+  const inputDOMRef = useDOMRef(ref);
 
   const slots = inputVariants({
     variant,
@@ -118,6 +126,10 @@ export const useInput = (props: UseInputProps) => {
     [setShowPassword],
   );
 
+  const handleFocusInput = useCallback(() => {
+    inputDOMRef.current?.focus();
+  }, [inputDOMRef]);
+
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -161,11 +173,11 @@ export const useInput = (props: UseInputProps) => {
   const getInnerWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
-        ...props,
         "data-slot": "inner-wrapper",
         className: slots.innerWrapper({
           class: cn(classNames?.innerWrapper, props?.className),
         }),
+        ...props,
       };
     },
     [slots, classNames?.innerWrapper],
@@ -200,14 +212,16 @@ export const useInput = (props: UseInputProps) => {
   const getInputWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
+        ref: inputWrapperRef,
         ...props,
         "data-slot": "input-wrapper",
         className: slots.inputWrapper({
           class: cn(classNames?.inputWrapper, props?.className),
         }),
+        onClick: handleFocusInput,
       };
     },
-    [slots, classNames?.inputWrapper],
+    [inputWrapperRef, slots, classNames?.inputWrapper, handleFocusInput],
   );
 
   const getStartContentProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -256,6 +270,7 @@ export const useInput = (props: UseInputProps) => {
         type: inputType,
         ...restProps,
         ...props,
+        ref: inputDOMRef,
       };
     },
     [
@@ -267,12 +282,14 @@ export const useInput = (props: UseInputProps) => {
       handleInputChange,
       inputType,
       restProps,
+      inputDOMRef,
     ],
   );
 
   return {
     Component,
     InputComponent,
+    children,
     classNames,
     label,
     helperText,

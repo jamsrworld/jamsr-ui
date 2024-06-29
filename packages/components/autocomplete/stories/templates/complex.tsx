@@ -1,7 +1,7 @@
 import type { AutocompleteProps } from "../../src";
 import { Autocomplete, AutocompleteItem } from "../../src";
 
-const countries = [
+export const countries = [
   { code: "AD", label: "Andorra", phone: "376" },
   {
     code: "AE",
@@ -428,7 +428,7 @@ const countries = [
 
 export const ComplexAutocompleteStory = (props: Partial<AutocompleteProps>) => {
   return (
-    <Autocomplete label="User" {...props}>
+    <Autocomplete label="Country" {...props}>
       {countries.map((item) => (
         <AutocompleteItem key={item.code} value={item.code} label={item.label}>
           <div className="flex items-center gap-2">

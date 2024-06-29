@@ -48,6 +48,7 @@ export const jamsrui = () => [
           },
           animation: {
             progress: "progress 1s infinite linear",
+            ripple: "ripple 1s linear",
           },
           keyframes: {
             progress: {
@@ -56,6 +57,15 @@ export const jamsrui = () => [
               },
               "100%": {
                 transform: "translateX(100%) scaleX(1)",
+              },
+            },
+            ripple: {
+              "0%": {
+                transform: "scale(0)",
+              },
+              "100%": {
+                transform: "scale(4)",
+                opacify: "0",
               },
             },
             "caret-blink": {

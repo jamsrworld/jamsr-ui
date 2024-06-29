@@ -15,10 +15,11 @@ import { useControlledState } from "@jamsr-ui/hooks";
 import type { InputProps } from "@jamsr-ui/input";
 import { cn, type PropGetter, type SlotsToClasses } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
-import {
+import React, {
   Children,
   isValidElement,
   useCallback,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -31,7 +32,15 @@ import type { AutocompleteContextType } from "./use-autocomplete-context";
 
 export type SelectionSet = Set<string>;
 
-export type UseAutocompleteProps = Pick<InputProps, "label"> & {
+export type UseAutocompleteProps = Pick<
+  InputProps,
+  | "label"
+  | "startContent"
+  | "endContent"
+  | "placeholder"
+  | "helperText"
+  | "isInvalid"
+> & {
   className?: string;
   classNames?: SlotsToClasses<AutocompleteSlots>;
   placement?: Placement;
@@ -43,6 +52,7 @@ export type UseAutocompleteProps = Pick<InputProps, "label"> & {
   onOpenChange?: (value: boolean) => void;
   isMultiple?: boolean;
   children: React.ReactNode;
+  inputProps?: Partial<InputProps>;
 };
 
 export const useAutocomplete = (props: UseAutocompleteProps) => {
@@ -59,7 +69,13 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     placement = "bottom-start",
     value: propValue,
     label,
+    startContent,
+    endContent,
+    placeholder,
+    helperText,
+    isInvalid,
     children,
+    inputProps,
   } = props;
 
   const [inputValue, setInputValue] = useState("");
@@ -120,13 +136,13 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     setActiveIndex(0);
   };
 
-  const handleToggleOpen = () => {
+  const handleToggleOpen = useCallback(() => {
     setIsFocused(true);
     setIsOpen((open) => !open);
-  };
+  }, [setIsOpen]);
 
   const {
-    refs: { setReference, setFloating },
+    refs: { setReference, setFloating, domReference },
     floatingStyles,
     context,
   } = useFloating({
@@ -260,27 +276,38 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       ...props,
     };
   };
-  const selectedItemsContent = !isMultiple ? null : (
-    <div className="flex gap-1">
-      {Array.from(value).map((item) => (
-        <Chip key={item}>{item}</Chip>
-      ))}
-    </div>
-  );
+  const selectedItemsContent = !isMultiple
+    ? null
+    : Array.from(value).map((val) => {
+        const label = allItems.find((item) => item?.value === val)?.label ?? "";
+        return <Chip key={val}>{label}</Chip>;
+      });
+
+  useEffect(() => {
+    domReference.current?.addEventListener("click", handleToggleOpen);
+  }, [domReference, handleToggleOpen]);
 
   const getInputProps: PropGetter<InputProps> = () => {
     return {
-      "data-slot": "input",
       label,
+      startContent,
+      endContent,
+      placeholder,
+      helperText,
+      isInvalid,
+      ...inputProps,
+      "data-slot": "input",
       value: inputValue,
       onValueChange: handleInputChange,
       type: "search",
       autoComplete: "off",
-      startContent: selectedItemsContent,
-      baseRef: setReference,
+      children: selectedItemsContent,
+      inputWrapperRef: setReference,
+      classNames: {
+        innerWrapper: isMultiple && "gap-2 flex-wrap",
+      },
       ...getReferenceProps({
         onKeyDown: handleInputKeyDown,
-        onClick: handleToggleOpen,
         ref: inputRef,
       }),
     };

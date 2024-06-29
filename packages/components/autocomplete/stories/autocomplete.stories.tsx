@@ -1,6 +1,8 @@
-import { type Meta, type StoryObj } from "@storybook/react";
 import { Email, EyeOpen } from "@jamsr-ui/shared-icons";
+import { type Meta, type StoryObj } from "@storybook/react";
+import { useState } from "react";
 import { Autocomplete } from "../src/autocomplete";
+import type { SelectionSet } from "../src/use-autocomplete";
 import {
   ComplexAutocompleteStory as ChooseCountryAutocompleteStory,
   countries,
@@ -17,6 +19,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: DefaultAutocomplete,
+};
+
+const ControlledStory = () => {
+  const [value, setValue] = useState<SelectionSet>(new Set(["cat"]));
+  return (
+    <DefaultAutocomplete
+      value={value}
+      onValueChange={setValue}
+      helperText={`Selected Value is ${Array.from(value).join("")}`}
+    />
+  );
+};
+
+export const Controlled: Story = {
+  render: ControlledStory,
 };
 
 export const HelperText: Story = {
@@ -46,6 +63,22 @@ export const ChooseCountry: Story = {
 
 export const Multiple: Story = {
   render: () => <DefaultAutocomplete isMultiple />,
+};
+
+const MultipleControlledStory = () => {
+  const [value, setValue] = useState<SelectionSet>(new Set(["cat"]));
+  return (
+    <DefaultAutocomplete
+      value={value}
+      onValueChange={setValue}
+      isMultiple
+      helperText={`Selected Value is: ${Array.from(value).join(",")}`}
+    />
+  );
+};
+
+export const MultipleControlled: Story = {
+  render: MultipleControlledStory,
 };
 
 export const MultipleCustomRender: Story = {

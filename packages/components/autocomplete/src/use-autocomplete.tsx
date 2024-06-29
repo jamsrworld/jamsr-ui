@@ -78,7 +78,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     inputProps,
   } = props;
 
-  const [inputValue, setInputValue] = useState("");
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
   const [isFocused, setIsFocused] = useState(false);
   const [value = new Set([]), setValue] = useControlledState({
@@ -86,13 +85,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     defaultProp: defaultValue,
     onChange: onValueChange,
   });
-
-  const [isOpen = false, setIsOpen] = useControlledState({
-    prop: propOpen,
-    onChange: onOpenChange,
-    defaultProp: defaultOpen,
-  });
-
   const childrenArray = Children.toArray(children);
   const allItems = childrenArray.map((item) => {
     if (
@@ -102,6 +94,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       return {
         value: item.props.value,
         children: item.props.children,
+        renderLabel: item.props.renderLabel,
         label:
           item.props.label ??
           (typeof item.props.children === "string" ? item.props.children : ""),
@@ -111,19 +104,76 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     return null;
   });
 
+  const getNewValue = useCallback(
+    (newValue: string) => {
+      if (isMultiple) {
+        const prev = new Set(value);
+        if (value.has(newValue)) {
+          prev.delete(newValue);
+          return prev;
+        }
+        prev.add(newValue);
+        return prev;
+      }
+      return new Set([newValue]);
+    },
+    [isMultiple, value],
+  );
+
+  const selectedItemsContent = useMemo(() => {
+    const selectedValues = Array.from(value);
+    if (!isMultiple) {
+      const label =
+        allItems.find((item) => item?.value === selectedValues[0])?.label ?? "";
+      return label;
+    }
+
+    return selectedValues.map((val) => {
+      const item = allItems.find((item) => item?.value === val);
+      const label =
+        item?.renderLabel ??
+        item?.label ??
+        ((typeof children === "string" && children) || "");
+
+      const onClose = () => setValue(getNewValue(val));
+
+      const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        console.log(e);
+        e.stopPropagation();
+        e.nativeEvent.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+      };
+
+      return (
+        <Chip onClick={handleOnClick} onClose={onClose} key={val}>
+          {label}
+        </Chip>
+      );
+    });
+  }, [allItems, children, getNewValue, isMultiple, setValue, value]);
+
+  const [isOpen = false, setIsOpen] = useControlledState({
+    prop: propOpen,
+    onChange: onOpenChange,
+    defaultProp: defaultOpen,
+  });
+
+  const [inputValue, setInputValue] = useState(
+    !isMultiple && typeof selectedItemsContent === "string"
+      ? selectedItemsContent
+      : "",
+  );
+
   const filteredItems = allItems.filter((item) =>
     item?.label.toLowerCase().startsWith(inputValue.toLowerCase()),
   );
-
   const renderedItems = isFocused ? allItems : filteredItems;
-
   const childrenToRender = renderedItems.map(
     (item) => item?.autocompleteItem ?? null,
   );
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
-  const labelsRef = useRef<(string | null)[]>([]);
 
   const styles = autocompleteVariant({
     className,
@@ -137,6 +187,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   };
 
   const handleToggleOpen = useCallback(() => {
+    console.log("toggle");
     setIsFocused(true);
     setIsOpen((open) => !open);
   }, [setIsOpen]);
@@ -197,23 +248,9 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
         setInputValue("");
         inputRef.current?.focus();
       }
-
-      const getNewValue = () => {
-        if (isMultiple) {
-          const prev = new Set(value);
-          if (value.has(args.value)) {
-            prev.delete(args.value);
-            return prev;
-          }
-          prev.add(args.value);
-          return prev;
-        }
-        return new Set([args.value]);
-      };
-
-      setValue(getNewValue());
+      setValue(getNewValue(args.value));
     },
-    [activeIndex, isFocused, isMultiple, setIsOpen, setValue, value],
+    [activeIndex, getNewValue, isFocused, isMultiple, setIsOpen, setValue],
   );
 
   const contextValue: AutocompleteContextType = useMemo(() => {
@@ -276,16 +313,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       ...props,
     };
   };
-  const selectedItemsContent = !isMultiple
-    ? null
-    : Array.from(value).map((val) => {
-        const label = allItems.find((item) => item?.value === val)?.label ?? "";
-        return <Chip key={val}>{label}</Chip>;
-      });
-
-  useEffect(() => {
-    domReference.current?.addEventListener("click", handleToggleOpen);
-  }, [domReference, handleToggleOpen]);
 
   const getInputProps: PropGetter<InputProps> = () => {
     return {
@@ -301,10 +328,16 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       onValueChange: handleInputChange,
       type: "search",
       autoComplete: "off",
-      children: selectedItemsContent,
+      children: isMultiple ? selectedItemsContent : null,
       inputWrapperRef: setReference,
       classNames: {
+        inputWrapper: "select-none",
         innerWrapper: isMultiple && "gap-2 flex-wrap",
+      },
+      slotProps: {
+        inputWrapper: {
+          onClick: handleToggleOpen,
+        },
       },
       ...getReferenceProps({
         onKeyDown: handleInputKeyDown,
@@ -316,7 +349,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   return {
     context,
     elementsRef,
-    labelsRef,
     isOpen,
     getBaseProps,
     getInputProps,

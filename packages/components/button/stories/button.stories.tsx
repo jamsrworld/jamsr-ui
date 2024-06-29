@@ -1,7 +1,8 @@
 import { Info } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { Button, ButtonProps } from "../src/button";
+import type { ButtonProps } from "../src/button";
+import { Button } from "../src/button";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",

@@ -27,7 +27,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
     title,
     indicator,
     isOpen,
-    triggerContent,
+    triggerContent = null,
     getBaseProps,
     getButtonProps,
     getContentProps,
@@ -58,7 +58,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
           <div {...getStartContentProps()}>{startContent}</div>
         )}
         <button type="button" {...getButtonProps()}>
-          {triggerContent || (
+          {triggerContent ?? (
             <>
               {startContent && startContentPlacement === "inside" && (
                 <div {...getStartContentProps()}>{startContent}</div>

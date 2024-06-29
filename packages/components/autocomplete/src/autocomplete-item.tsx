@@ -7,15 +7,18 @@ import { useAutocompleteContext } from "./use-autocomplete-context";
 type Props = {
   value: string;
   label?: string;
+  renderLabel?: React.ReactNode;
 };
 
-export type AutocompleteItemProps<T extends React.ElementType = "button"> =
+export type AutocompleteItemProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T, Props>;
 
-export const AutocompleteItem = <T extends React.ElementType = "button">(
+export const AutocompleteItem = <T extends React.ElementType = "div">(
   props: AutocompleteItemProps<T>,
 ) => {
-  const { children, className, value, as, label, ...restProps } = props;
+  const { children, className, value, as, label, renderLabel, ...restProps } =
+    props;
+
   const {
     activeIndex,
     getItemProps,
@@ -34,18 +37,17 @@ export const AutocompleteItem = <T extends React.ElementType = "button">(
   });
   const isActive = activeIndex === index;
   const isSelected = valueSet.has(value);
-  const Component = as ?? "button";
+  const Component = as ?? "div";
 
   return (
     <Component
       ref={ref}
-      type="button"
       data-slot="item"
       role="option"
       aria-selected={isSelected}
       tabIndex={-1}
       className={cn(
-        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
+        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-action-hover",
         className,
         { "bg-action-hover": isActive },
       )}

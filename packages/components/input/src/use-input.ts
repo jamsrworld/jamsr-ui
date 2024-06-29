@@ -1,6 +1,7 @@
 import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
+  mergeProps,
   useDOMRef,
   type PropGetter,
   type SlotsToClasses,
@@ -33,6 +34,9 @@ type Props = {
   baseRef?: React.Ref<HTMLDivElement>;
   inputWrapperRef?: React.Ref<HTMLDivElement>;
   ref?: React.Ref<HTMLInputElement>;
+  slotProps?: {
+    inputWrapper?: React.ComponentProps<"div">;
+  };
 };
 
 type InputProps = UIProps<"input">;
@@ -67,6 +71,7 @@ export const useInput = (props: UseInputProps) => {
     inputWrapperRef,
     children,
     ref,
+    slotProps = {},
     ...restProps
   } = props;
 
@@ -215,13 +220,21 @@ export const useInput = (props: UseInputProps) => {
         ref: inputWrapperRef,
         ...props,
         "data-slot": "input-wrapper",
-        className: slots.inputWrapper({
-          class: cn(classNames?.inputWrapper, props?.className),
+        ...mergeProps(slotProps.inputWrapper ?? {}, {
+          className: slots.inputWrapper({
+            class: cn(classNames?.inputWrapper, props?.className),
+          }),
+          onClick: handleFocusInput,
         }),
-        onClick: handleFocusInput,
       };
     },
-    [inputWrapperRef, slots, classNames?.inputWrapper, handleFocusInput],
+    [
+      inputWrapperRef,
+      slots,
+      classNames?.inputWrapper,
+      handleFocusInput,
+      slotProps.inputWrapper,
+    ],
   );
 
   const getStartContentProps: PropGetter<ComponentProps<"div">> = useCallback(

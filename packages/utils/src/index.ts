@@ -9,3 +9,4 @@ export * from "./transition";
 export * from "./tv";
 export * from "./array";
 export * from "./dom";
+export * from "./merge-props";

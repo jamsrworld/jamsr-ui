@@ -191,7 +191,7 @@ export const buttonVariant = tv({
     {
       isIconOnly: true,
       size: "xs",
-      class: "size-6 min-w-6 [&>svg]:size-5",
+      class: "size-6 [&>svg]:size-5",
     },
     {
       isIconOnly: true,

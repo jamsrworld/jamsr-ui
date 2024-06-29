@@ -1,7 +1,7 @@
 import {
-    Autocomplete,
-    AutocompleteItem,
-    type AutocompleteProps,
+  Autocomplete,
+  AutocompleteItem,
+  type AutocompleteProps,
 } from "../../src";
 
 const Animals = [
@@ -75,16 +75,18 @@ const Animals = [
 
 export const DefaultAutocomplete = (props: Partial<AutocompleteProps>) => {
   return (
-    <Autocomplete label="Animal" {...props}>
-      {Animals.map((animal) => (
-        <AutocompleteItem
-          key={animal.value}
-          value={animal.value}
-          label={animal.label}
-        >
-          {animal.label}
-        </AutocompleteItem>
-      ))}
-    </Autocomplete>
+    <div className="min-h-[300px]">
+      <Autocomplete label="Animal" {...props}>
+        {Animals.map((animal) => (
+          <AutocompleteItem
+            key={animal.value}
+            value={animal.value}
+            label={animal.label}
+          >
+            {animal.label}
+          </AutocompleteItem>
+        ))}
+      </Autocomplete>
+    </div>
   );
 };

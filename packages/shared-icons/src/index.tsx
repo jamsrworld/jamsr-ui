@@ -6,6 +6,7 @@ export const ChevronDoubleLeft = (props: SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path
@@ -24,6 +25,7 @@ export const ChevronDoubleRight = (props: SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path
@@ -37,12 +39,7 @@ export const ChevronDoubleRight = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export const ChevronDown = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width={24}
-    height={24}
-    fill="none"
-    {...props}
-  >
+  <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -54,12 +51,7 @@ export const ChevronDown = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export const ChevronLeft = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width={24}
-    height={24}
-    fill="none"
-    {...props}
-  >
+  <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -71,12 +63,7 @@ export const ChevronLeft = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export const ChevronUp = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width={24}
-    height={24}
-    fill="none"
-    {...props}
-  >
+  <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -88,12 +75,7 @@ export const ChevronUp = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export const ChevronRight = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width={24}
-    height={24}
-    fill="none"
-    {...props}
-  >
+  <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -110,15 +92,10 @@ export const Info = (props: SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
-    <circle
-      cx={12}
-      cy={12}
-      r={10}
-      stroke="currentColor"
-      strokeWidth={1.5}
-    />
+    <circle cx={12} cy={12} r={10} stroke="currentColor" strokeWidth={1.5} />
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -155,13 +132,9 @@ export const Check = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+
 export const Close = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    width={24}
-    height={24}
-    fill="none"
-    {...props}
-  >
+  <svg width={24} height={24} viewBox="0 0 24 24" fill="none" {...props}>
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -178,6 +151,7 @@ export const EyeClosed = (props: SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path
@@ -199,12 +173,10 @@ export const EyeOpen = (props: SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
-    <path
-      fill="currentColor"
-      d="M10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z"
-    />
+    <path fill="currentColor" d="M10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z" />
     <path
       fill="currentColor"
       fillRule="evenodd"
@@ -220,6 +192,7 @@ export const ImageUpload = (props: SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path
@@ -255,6 +228,7 @@ export const Email = (props: SVGProps<SVGSVGElement>) => (
     height={24}
     fill="none"
     color="currentColor"
+    viewBox="0 0 24 24"
     {...props}
   >
     <path

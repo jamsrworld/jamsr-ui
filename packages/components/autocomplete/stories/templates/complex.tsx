@@ -428,23 +428,35 @@ export const countries = [
 
 export const ComplexAutocompleteStory = (props: Partial<AutocompleteProps>) => {
   return (
-    <Autocomplete label="Country" {...props}>
-      {countries.map((item) => (
-        <AutocompleteItem key={item.code} value={item.code} label={item.label}>
-          <div className="flex items-center gap-2">
-            <img
-              loading="lazy"
-              width="20"
-              srcSet={`https://flagcdn.com/w40/${item.code.toLowerCase()}.png 2x`}
-              src={`https://flagcdn.com/w20/${item.code.toLowerCase()}.png`}
-              alt=""
-            />
-            <div>
-              {item.label} ({item.code}) +{item.phone}
+    <div className="min-h-[600px]">
+      <Autocomplete label="Country" {...props}>
+        {countries.map((item) => {
+          const content = (
+            <div className="flex items-center gap-2">
+              <img
+                loading="lazy"
+                width="20"
+                srcSet={`https://flagcdn.com/w40/${item.code.toLowerCase()}.png 2x`}
+                src={`https://flagcdn.com/w20/${item.code.toLowerCase()}.png`}
+                alt=""
+              />
+              <div>
+                +{item.phone} ({item.code}) {item.label}
+              </div>
             </div>
-          </div>
-        </AutocompleteItem>
-      ))}
-    </Autocomplete>
+          );
+          return (
+            <AutocompleteItem
+              key={item.code}
+              value={item.code}
+              label={item.label}
+              renderLabel={content}
+            >
+              {content}
+            </AutocompleteItem>
+          );
+        })}
+      </Autocomplete>
+    </div>
   );
 };

@@ -9,7 +9,6 @@ export const Autocomplete = (props: AutocompleteProps) => {
   const {
     context,
     elementsRef,
-    labelsRef,
     isOpen,
     getBaseProps,
     getInputProps,
@@ -31,7 +30,7 @@ export const Autocomplete = (props: AutocompleteProps) => {
             visuallyHiddenDismiss
           >
             <div {...getPopoverProps()}>
-              <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
+              <FloatingList elementsRef={elementsRef}>
                 <div {...getContentProps()}>
                   {childrenToRender.length ? (
                     childrenToRender

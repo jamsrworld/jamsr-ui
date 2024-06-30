@@ -84,7 +84,8 @@
     "@jamsr-ui/textarea": "workspace:*",
     "@jamsr-ui/tooltip": "workspace:*",
     "@jamsr-ui/typography": "workspace:*",
-    "@jamsr-ui/utils": "workspace:*"
+    "@jamsr-ui/utils": "workspace:*",
+    "@jamsr-ui/repeater": "workspace:*"
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.0",

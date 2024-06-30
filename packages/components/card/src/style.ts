@@ -1,7 +1,7 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const cardVariants = tv({
-  base: "relative overflow-hidden rounded-3xl bg-background-paper shadow-sm shadow-black/30",
+  base: "relative overflow-hidden rounded-2xl bg-background-paper shadow-sm shadow-black/30",
   variants: {
     variant: {
       default: "",

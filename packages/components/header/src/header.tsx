@@ -1,39 +1,64 @@
 "use client";
 
 import { Divider } from "@jamsr-ui/divider";
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { useScroll } from "framer-motion";
+import {
+  AnimatePresence,
+  m,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { useState } from "react";
 import { useHeader, type UseHeaderProps } from "./use-header";
 
 export type HeaderProps = UseHeaderProps;
 
-export const Header = <T extends React.ElementType = "div">(
-  props: ComponentPropsWithAs<T, HeaderProps>,
-) => {
-  const { Component, getBaseProps, children, showDivider, showDividerDefault } =
-    useHeader(props);
-  const { scrollY } = useScroll();
+export const Header = (props: HeaderProps) => {
+  const { getBaseProps, children, hideOnScroll, isBordered } = useHeader(props);
+  const { scrollYProgress } = useScroll();
+  const [isVisible, setIsVisible] = useState(true);
 
-  const [hasScrolled, setHasScrolled] = useState(false);
-  scrollY.on("change", (val) => {
-    if (val > 100) {
-      setHasScrolled(true);
-    } else {
-      setHasScrolled(false);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    const previous = scrollYProgress.getPrevious();
+    const isScrollingUp = previous && previous > latest;
+
+    if (hideOnScroll) {
+      if (scrollYProgress.get() < 0.02) {
+        setIsVisible(true);
+      } else if (isScrollingUp) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     }
+    
   });
 
   return (
-    <Component
-      data-component="header"
-      data-state={hasScrolled ? "active" : "inactive"}
-      {...getBaseProps()}
-    >
-      {children}
-      {(showDividerDefault || (showDivider && hasScrolled)) && (
-        <Divider className="absolute bottom-0 left-0 w-full" />
+    <AnimatePresence mode="wait" initial={false}>
+      {isVisible && (
+        /* @ts-expect-error typeerror */
+        <m.header
+          initial={{
+            opacity: 1,
+            y: -100,
+          }}
+          animate={{
+            y: isVisible ? 0 : -100,
+            opacity: isVisible ? 1 : 0,
+          }}
+          transition={{
+            duration: 0.2,
+          }}
+          data-component="header"
+          data-state={isVisible ? "active" : "inactive"}
+          {...getBaseProps()}
+        >
+          {children}
+          {isBordered && (
+            <Divider className="absolute bottom-0 left-0 w-full" />
+          )}
+        </m.header>
       )}
-    </Component>
+    </AnimatePresence>
   );
 };

@@ -26,6 +26,7 @@ export * from "@jamsr-ui/switch";
 export * from "@jamsr-ui/tab";
 export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
+export * from "@jamsr-ui/repeater";
 
 // Provider
 export { JamsrUIProvider } from "@jamsr-ui/core";

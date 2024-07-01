@@ -997,6 +997,9 @@ importers:
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
       react:
         specifier: 19.0.0-rc-c21bcd627b-20240624
         version: 19.0.0-rc-c21bcd627b-20240624
@@ -1277,6 +1280,9 @@ importers:
       '@jamsr-ui/tab':
         specifier: workspace:*
         version: link:../components/tab
+      '@jamsr-ui/table':
+        specifier: workspace:^
+        version: link:../components/table
       '@jamsr-ui/textarea':
         specifier: workspace:*
         version: link:../components/textarea

@@ -1,5 +1,20 @@
 # web
 
+## 0.1.50
+
+### Patch Changes
+
+- table
+- Updated dependencies
+  - @jamsr-ui/react@0.0.48
+
+## 0.1.49
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/react@0.0.47
+
 ## 0.1.48
 
 ### Patch Changes

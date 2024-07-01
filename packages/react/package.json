@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.46",
+  "version": "0.0.48",
   "main": "./src/index.ts",
   "description": "A react js ui library with tailwindcss",
   "keywords": [
@@ -76,16 +76,17 @@
     "@jamsr-ui/popover": "workspace:*",
     "@jamsr-ui/progress": "workspace:*",
     "@jamsr-ui/radio": "workspace:*",
+    "@jamsr-ui/repeater": "workspace:*",
     "@jamsr-ui/ripple": "workspace:*",
     "@jamsr-ui/select": "workspace:*",
     "@jamsr-ui/skeleton": "workspace:*",
     "@jamsr-ui/switch": "workspace:*",
     "@jamsr-ui/tab": "workspace:*",
+    "@jamsr-ui/table": "workspace:^",
     "@jamsr-ui/textarea": "workspace:*",
     "@jamsr-ui/tooltip": "workspace:*",
     "@jamsr-ui/typography": "workspace:*",
-    "@jamsr-ui/utils": "workspace:*",
-    "@jamsr-ui/repeater": "workspace:*"
+    "@jamsr-ui/utils": "workspace:*"
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.0",

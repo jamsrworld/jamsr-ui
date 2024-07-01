@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/table",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "main": "src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -19,16 +19,17 @@
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
-  "clean-package": "../../../clean-package.config.json",
   "dependencies": {
     "@jamsr-ui/utils": "workspace:^"
   },
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
+    "clean-package": "^2.2.0",
     "react": "19.0.0-rc-c21bcd627b-20240624"
   },
   "peerDependencies": {
     "react": "19.0.0-rc-c21bcd627b-20240624"
-  }
+  },
+  "clean-package": "../../../clean-package.config.json"
 }

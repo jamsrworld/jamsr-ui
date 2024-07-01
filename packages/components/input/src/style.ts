@@ -23,14 +23,14 @@ export const inputVariants = tv({
     },
     variant: {
       outline: {
-        inputWrapper: "rounded-2xl border-2 border-divider",
+        inputWrapper: "rounded-xl border-2 border-divider",
       },
       transparent: {
         inputWrapper: "border-none bg-transparent outline-none",
         input: "p-0",
       },
       filled: {
-        inputWrapper: "rounded-2xl border-2 border-divider bg-background-paper",
+        inputWrapper: "rounded-xl border-2 border-divider bg-background-paper",
       },
     },
     size: {

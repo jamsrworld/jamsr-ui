@@ -28,8 +28,7 @@
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "react": "19.0.0-rc-c21bcd627b-20240624",
-    "react-dom": "19.0.0-rc-c21bcd627b-20240624",
-    "react-dropzone": "^14.2.3"
+    "react-dom": "19.0.0-rc-c21bcd627b-20240624"
   },
   "peerDependencies": {
     "react": "19.0.0-rc-c21bcd627b-20240624",
@@ -39,7 +38,8 @@
   "dependencies": {
     "@jamsr-ui/progress": "workspace:*",
     "@jamsr-ui/shared-icons": "workspace:*",
-    "@jamsr-ui/utils": "workspace:*"
+    "@jamsr-ui/utils": "workspace:*",
+    "react-dropzone": "^14.2.3"
   },
   "clean-package": "../../../clean-package.config.json"
 }

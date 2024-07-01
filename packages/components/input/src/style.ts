@@ -8,7 +8,7 @@ export const inputVariants = tv({
     mainWrapper: "flex gap-1",
     inputWrapper:
       "w-full focus-within:border-primary focus-within:ring-primary",
-    innerWrapper: "flex items-center px-3",
+    innerWrapper: "flex items-center px-3 py-2",
     input:
       "block grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
     helper: "text-xs text-foreground-500",
@@ -60,6 +60,11 @@ export const inputVariants = tv({
       },
       start: {
         mainWrapper: "items-center",
+      },
+    },
+    isTextarea: {
+      true: {
+        innerWrapper: "h-auto",
       },
     },
   },

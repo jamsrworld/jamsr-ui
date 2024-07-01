@@ -2,12 +2,12 @@ import { Button } from "@jamsr-ui/button";
 import { Close } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Alert, type AlertProps } from "../src/alert";
-import { AlertVariantProps } from "../src/style";
+import type { AlertVariantProps } from "../src/style";
 
-const meta = {
+const meta: Meta<typeof Alert> = {
   title: "Components/Alert",
   component: Alert,
-} satisfies Meta<typeof Alert>;
+};
 
 export default meta;
 type Story = StoryObj<AlertProps>;
@@ -49,10 +49,7 @@ export const WithAction: Story = {
     children: "Your plan will expire soon, please renew your plan.",
     severity: "warning",
     action: (
-      <Button
-        variant="light"
-        color="warning"
-      >
+      <Button variant="light" color="warning">
         Renew Now!
       </Button>
     ),

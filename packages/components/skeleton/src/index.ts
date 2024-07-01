@@ -1,3 +1,3 @@
 "use client";
 
-export { Skeleton } from "./skeleton";
+export { Skeleton, type SkeletonProps } from "./skeleton";

@@ -4,10 +4,10 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import type { HeaderProps } from "../src/header";
 import { Header } from "../src/header";
 
-const meta = {
+const meta: Meta<typeof Header> = {
   title: "Components/Header",
   component: Header,
-} satisfies Meta<typeof Header>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

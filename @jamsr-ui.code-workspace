@@ -121,6 +121,10 @@
       "path": "packages/components/tab"
     },
     {
+      "name": "📦 @jamsr-ui/table",
+      "path": "packages/components/table"
+    },
+    {
       "name": "📦 @jamsr-ui/textarea",
       "path": "packages/components/textarea"
     },

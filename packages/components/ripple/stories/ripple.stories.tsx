@@ -2,13 +2,13 @@ import { type Meta, type StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Ripple } from "../src/ripple";
 
-const meta = {
+const meta: Meta<typeof Ripple> = {
   title: "Components/Ripple",
   component: Ripple,
   args: {
     onClick: fn(),
   },
-} satisfies Meta<typeof Ripple>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

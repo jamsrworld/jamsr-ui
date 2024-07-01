@@ -1,6 +1,5 @@
 import { Button } from "@jamsr-ui/button";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { useState } from "react";
 import {
   Dialog,
@@ -10,14 +9,10 @@ import {
   type DialogProps,
 } from "../src";
 
-const meta = {
+const meta: Meta<typeof Dialog> = {
   title: "Components/Dialog",
   component: Dialog,
-
-  args: {
-    onClick: fn(),
-  },
-} satisfies Meta<typeof Dialog>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -28,11 +23,7 @@ const Template = (props: DialogProps) => {
   return (
     <div>
       <Button onClick={handleClick}>Open Me</Button>
-      <Dialog
-        {...props}
-        isOpen={open}
-        onOpenChange={setOpen}
-      >
+      <Dialog {...props} isOpen={open} onOpenChange={setOpen}>
         <DialogContent>
           <DialogHeader>Im am dialog Heading</DialogHeader>
           <DialogBody>I am dialog content!</DialogBody>
@@ -42,6 +33,6 @@ const Template = (props: DialogProps) => {
   );
 };
 
-export const Default = {
+export const Default: Story = {
   render: Template,
 };

@@ -2,6 +2,7 @@ export type As<Props = any> = React.ElementType<Props>;
 export type PropsOf<T extends As> = React.ComponentProps<T> & {
   as?: As;
 };
+
 export type UIProps<
   T extends As = "div",
   OmitKeys extends keyof any = never,
@@ -14,11 +15,9 @@ export type UIProps<
   | "defaultChecked"
   | "defaultValue"
   | OmitKeys
-> & {
-  as?: As;
-};
+>;
 
-export type ComponentPropsWithAs<T extends React.ElementType, Y> = Y & {
+export type ComponentPropsWithAs<T extends React.ElementType, Y = {}> = Y & {
   as?: T;
 } & Omit<React.ComponentProps<T>, "as" | keyof Y>;
 

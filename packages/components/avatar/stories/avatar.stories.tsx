@@ -1,15 +1,10 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { Avatar } from "../src/avatar";
 
-const meta = {
+const meta: Meta<typeof Avatar> = {
   title: "Components/Avatar",
   component: Avatar,
-
-  args: {
-    onClick: fn(),
-  },
-} satisfies Meta<typeof Avatar>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

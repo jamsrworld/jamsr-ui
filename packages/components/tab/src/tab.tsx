@@ -25,7 +25,7 @@ export const Tab = (props: TabProps) => {
       variant="light"
       size="sm"
       className={cn(
-        "hover:text-foreground-600 relative z-10 text-sm",
+        "relative z-10 text-sm hover:text-foreground-600",
         className,
       )}
       onClick={handleClick}

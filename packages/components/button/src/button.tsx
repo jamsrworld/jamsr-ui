@@ -37,3 +37,5 @@ export const Button = <T extends React.ElementType = "button">(
     </Component>
   );
 };
+
+<Button as="a" href="/" />;

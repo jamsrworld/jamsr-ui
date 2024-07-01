@@ -1,10 +1,10 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { LinearProgress } from "../src";
 
-const meta = {
+const meta: Meta<typeof LinearProgress> = {
   title: "Components/Linear Progress",
   component: LinearProgress,
-} satisfies Meta<typeof LinearProgress>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

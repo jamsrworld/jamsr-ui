@@ -1,13 +1,14 @@
 import { type Meta, type StoryObj } from "@storybook/react";
+import type { SkeletonProps } from "../src/skeleton";
 import { Skeleton } from "../src/skeleton";
 
-const meta = {
+const meta: Meta<typeof Skeleton> = {
   title: "Components/Skeleton",
   component: Skeleton,
-} satisfies Meta<typeof Skeleton>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<SkeletonProps>;
 
 const DefaultComponent = () => {
   return (

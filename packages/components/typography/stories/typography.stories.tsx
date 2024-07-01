@@ -1,14 +1,10 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { Typography, type TypographyProps, typographyVariants } from "../src";
+import { Typography, typographyVariants, type TypographyProps } from "../src";
 
-const meta = {
+const meta: Meta<typeof Typography> = {
   title: "Components/Typography",
   component: Typography,
-  args: {
-    onClick: fn(),
-  },
-} satisfies Meta<typeof Typography>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,15 +1,10 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import { Divider } from "../src";
 
-const meta = {
+const meta: Meta<typeof Divider> = {
   title: "Components/Divider",
   component: Divider,
-
-  args: {
-    onClick: fn(),
-  },
-} satisfies Meta<typeof Divider>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;

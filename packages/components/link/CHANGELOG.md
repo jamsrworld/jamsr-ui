@@ -1,5 +1,13 @@
 # @jamsr-ui/link
 
+## 0.0.29
+
+### Patch Changes
+
+- improvements
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.25
+
 ## 0.0.28
 
 ### Patch Changes

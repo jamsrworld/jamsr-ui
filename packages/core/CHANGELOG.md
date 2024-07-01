@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.10
+
+### Patch Changes
+
+- improvements
+
 ## 0.0.9
 
 ### Patch Changes

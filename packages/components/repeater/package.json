@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/repeater",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"
@@ -23,7 +23,8 @@
   ],
   "devDependencies": {
     "@types/react": "^18.3.3",
-    "react": "19.0.0-rc-c21bcd627b-20240624"
+    "react": "19.0.0-rc-c21bcd627b-20240624",
+    "clean-package": "^2.2.0"
   },
   "peerDependencies": {
     "react": "19.0.0-rc-c21bcd627b-20240624"

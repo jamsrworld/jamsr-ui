@@ -1,5 +1,27 @@
 # web
 
+## 0.1.47
+
+### Patch Changes
+
+- fix repeater
+- Updated dependencies
+  - @jamsr-ui/react@0.0.45
+
+## 0.1.46
+
+### Patch Changes
+
+- fix repeater
+- Updated dependencies
+  - @jamsr-ui/react@0.0.44
+
+## 0.1.45
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.43
+
 ## 0.1.44
 
 ### Patch Changes

@@ -1,5 +1,31 @@
 # @jamsr-ui/react
 
+## 0.0.45
+
+### Patch Changes
+
+- fix repeater
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.5
+  - @jamsr-ui/header@0.0.30
+
+## 0.0.44
+
+### Patch Changes
+
+- fix repeater
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.4
+  - @jamsr-ui/header@0.0.30
+
+## 0.0.43
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.3
+  - @jamsr-ui/header@0.0.30
+
 ## 0.0.42
 
 ### Patch Changes

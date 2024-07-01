@@ -18,7 +18,7 @@ type Props = {
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   classNames?: SlotsToClasses<InputSlots>;
-  label: string | null;
+  label?: string;
   labelHelperContent?: React.ReactNode;
   mask?: "number" | "percent" | "currency";
   isSecuredText?: boolean;

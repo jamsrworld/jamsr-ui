@@ -1,4 +1,5 @@
-import { Email } from "@jamsr-ui/shared-icons";
+import { Popover } from "@jamsr-ui/popover";
+import { Email, Info } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { Input, type InputProps } from "../src/input";
@@ -85,6 +86,52 @@ export const WithIcon: Story = {
     type: "email",
     startContent: <Email />,
   },
+};
+
+export const Sizes: Story = {
+  render: () => {
+    return (
+      <div className="space-y-4">
+        <Input label="Small" size="sm" />
+        <Input label="Medium" size="md" />
+        <Input label="Large" size="lg" />
+      </div>
+    );
+  },
+};
+
+export const Variant: Story = {
+  render: () => {
+    return (
+      <div className="space-y-4">
+        <Input label="Outline" variant="outline" />
+        <Input label="Filled" variant="filled" />
+        <Input label="Transparent" variant="transparent" />
+      </div>
+    );
+  },
+};
+
+export const LabelHelper: Story = {
+  render: () => (
+    <div className="space-y-4">
+      <Input
+        label="Password"
+        labelHelperContent={
+          <Popover
+            trigger={<Info className="size-4 text-foreground-secondary" />}
+          >
+            Password must be at least 8 characters
+          </Popover>
+        }
+      />
+      <Input
+        label="Password"
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+        labelHelperContent={<a className="ml-auto text-xs">Forgot Password?</a>}
+      />
+    </div>
+  ),
 };
 
 export const SecuredText: Story = {

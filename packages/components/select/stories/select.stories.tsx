@@ -87,6 +87,16 @@ export const InvalidState: Story = {
   ),
 };
 
+export const Size: Story = {
+  render: () => (
+    <>
+      <Template size="sm" />
+      <Template size="md" />
+      <Template size="lg" />
+    </>
+  ),
+};
+
 export const CustomRenderValue: Story = {
   render: () => (
     <Template

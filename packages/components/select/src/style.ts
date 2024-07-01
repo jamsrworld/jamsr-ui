@@ -14,7 +14,7 @@ export const selectVariant = tv({
     innerWrapper: "flex w-full items-center gap-2",
     label: "mb-1 text-sm",
     trigger:
-      "relative flex h-auto w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus-within:ring-2 focus-within:ring-primary",
+      "relative flex w-full flex-row items-center gap-3 border-2 border-divider px-3 py-2 shadow-sm outline-none focus-within:ring-2 focus-within:ring-primary",
     helperText: "mt-1 text-xs text-foreground-500",
     popover:
       "z-popover flex flex-col overflow-hidden rounded-2xl border border-divider bg-background shadow-card focus:outline-none",
@@ -34,15 +34,15 @@ export const selectVariant = tv({
     size: {
       sm: {
         label: "text-xs",
-        trigger: "h-8 min-h-8 rounded-md px-2",
+        trigger: "h-9 min-h-9 rounded-xl px-2.5",
         value: "text-sm",
       },
       md: {
-        trigger: "h-10 min-h-10 rounded-md",
+        trigger: "h-10 min-h-10 rounded-2xl",
         value: "text-sm",
       },
       lg: {
-        trigger: "h-12 min-h-12 rounded-lg",
+        trigger: "h-12 min-h-12 rounded-2xl",
         value: "text-sm",
       },
     },
@@ -53,6 +53,9 @@ export const selectVariant = tv({
         trigger: "border-error",
       },
     },
+  },
+  defaultVariants: {
+    size: "md",
   },
 });
 

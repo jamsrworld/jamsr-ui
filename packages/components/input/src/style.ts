@@ -8,7 +8,7 @@ export const inputVariants = tv({
     mainWrapper: "flex gap-1",
     inputWrapper:
       "w-full focus-within:border-primary focus-within:ring-primary",
-    innerWrapper: "flex items-center",
+    innerWrapper: "flex items-center px-3",
     input:
       "block grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
     helper: "text-xs text-foreground-500",
@@ -23,26 +23,27 @@ export const inputVariants = tv({
     },
     variant: {
       outline: {
-        inputWrapper: "rounded-xl border-2 border-divider",
+        inputWrapper: "rounded-2xl border-2 border-divider",
       },
       transparent: {
         inputWrapper: "border-none bg-transparent outline-none",
         input: "p-0",
       },
-      search: {
+      filled: {
         inputWrapper: "rounded-2xl border-2 border-divider bg-background-paper",
       },
     },
     size: {
       false: {},
       sm: {
-        innerWrapper: "p-1.5",
+        inputWrapper: "rounded-xl",
+        innerWrapper: "h-8 min-h-8 px-2.5",
       },
       md: {
-        innerWrapper: "p-3",
+        innerWrapper: "h-10 min-h-10",
       },
       lg: {
-        innerWrapper: "p-5",
+        innerWrapper: "h-12 min-h-12",
       },
     },
     isInvalid: {

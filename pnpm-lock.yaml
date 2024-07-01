@@ -637,6 +637,9 @@ importers:
         specifier: workspace:*
         version: link:../../utils
     devDependencies:
+      '@jamsr-ui/popover':
+        specifier: workspace:^
+        version: link:../popover
       '@jamsr-ui/tailwind-config':
         specifier: workspace:*
         version: link:../../config/tailwind-config

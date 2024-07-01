@@ -24,6 +24,7 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
+    "@jamsr-ui/popover": "workspace:^",
     "@jamsr-ui/tailwind-config": "workspace:*",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",

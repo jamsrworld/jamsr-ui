@@ -1,27 +1,34 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable react/prop-types */
-import { useFloatingTree, useListItem, useMergeRefs } from "@floating-ui/react";
+import { useFloatingTree, useListItem } from "@floating-ui/react";
 import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { forwardRef, type ForwardedRef } from "react";
 import { menuVariants } from "./style";
 import { useMenu } from "./use-menu";
 
 type InternalProps = {
-  label: string;
   disabled?: boolean;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
 };
 
 type MenuItemProps<T extends React.ElementType = "button"> =
   ComponentPropsWithAs<T, InternalProps>;
 
-export const MenuItemInner = <T extends React.ElementType = "button">(
+export const MenuItem = <T extends React.ElementType = "button">(
   props: MenuItemProps<T>,
-  ref: ForwardedRef<HTMLButtonElement>,
 ) => {
-  const { label, disabled, as, className, ...restProps } = props;
+  const {
+    children,
+    disabled,
+    as,
+    className,
+    startContent,
+    endContent,
+    ...restProps
+  } = props;
   const menu = useMenu();
   const item = useListItem({
-    label: disabled ? null : label,
+    label: disabled ? null : children,
   });
   const tree = useFloatingTree();
   const isActive = item.index === menu.activeIndex;
@@ -30,8 +37,7 @@ export const MenuItemInner = <T extends React.ElementType = "button">(
   return (
     <Component
       data-slot="item"
-      {...restProps}
-      ref={useMergeRefs([item.ref, ref])}
+      ref={item.ref}
       role="menuitem"
       className={menuClasses.menuItem({ className })}
       tabIndex={isActive ? 0 : -1}
@@ -46,10 +52,11 @@ export const MenuItemInner = <T extends React.ElementType = "button">(
           menu.setHasFocusInside(true);
         },
       })}
+      {...restProps}
     >
-      {label}
+      {startContent}
+      <div className="grow text-left">{children}</div>
+      {endContent}
     </Component>
   );
 };
-
-export const MenuItem = forwardRef(MenuItemInner);

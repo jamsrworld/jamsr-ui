@@ -34,22 +34,15 @@ export const useRipple = <T extends HTMLElement>(ref: React.RefObject<T>) => {
         ]);
       };
 
-      const handleMouseUp = () => {
-        setRipples((prev) => prev.filter((item) => item.id === id));
-        console.log("mouse leave");
-      };
-
       elem.addEventListener("mousedown", clickHandler);
-      elem.addEventListener("mouseup", handleMouseUp);
       return () => {
         elem.removeEventListener("mousedown", clickHandler);
-        elem.removeEventListener("mouseup", handleMouseUp);
       };
     }
     return () => {};
   }, [ref, ripples]);
 
-  const debounced = useDebounce(ripples, 1000);
+  const debounced = useDebounce(ripples, 500);
   useEffect(() => {
     if (debounced.length) {
       setRipples([]);

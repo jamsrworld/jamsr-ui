@@ -23,33 +23,27 @@ export const Textarea = <T extends React.ElementType = "div">(
     getHelperProps,
     getInnerWrapperProps,
     getMainWrapperProps,
+    getStartContentProps,
+    getEndContentProps,
   } = useTextarea(props);
   const id = useId();
 
   const getStartContent = useMemo(() => {
     const content = startContent;
-    return !content ? null : (
-      <div className="text-foreground-muted pl-2 empty:hidden">{content}</div>
-    );
-  }, [startContent]);
+    return !content ? null : <div {...getStartContentProps()}>{content}</div>;
+  }, [getStartContentProps, startContent]);
 
   const getEndContent = useMemo(() => {
     return !endContent ? null : (
-      <div className="text-foreground-muted pr-2">{endContent}</div>
+      <div {...getEndContentProps()}>{endContent}</div>
     );
-  }, [endContent]);
+  }, [endContent, getEndContentProps]);
 
   return (
-    <Component
-      data-component="textarea"
-      {...getBaseProps()}
-    >
+    <Component data-component="textarea" {...getBaseProps()}>
       <div {...getMainWrapperProps()}>
         <div {...getLabelWrapperProps()}>
-          <label
-            htmlFor={id}
-            {...getLabelProps()}
-          >
+          <label htmlFor={id} {...getLabelProps()}>
             {label}
           </label>
           {labelHelper}
@@ -57,10 +51,7 @@ export const Textarea = <T extends React.ElementType = "div">(
         <div {...getTextareaWrapperProps()}>
           <div {...getInnerWrapperProps()}>
             {getStartContent}
-            <TextareaComponent
-              id={id}
-              {...getTextareaProps()}
-            />
+            <TextareaComponent id={id} {...getTextareaProps()} />
             {getEndContent}
           </div>
         </div>

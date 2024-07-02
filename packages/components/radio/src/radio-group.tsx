@@ -1,18 +1,33 @@
-import React from "react";
-import {
-  RadioGroupContext,
-  type RadioGroupContextType,
-} from "./use-radio-group";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { RadioGroupProvider } from "./radio-group-context";
+import type { UseRadioGroupProps } from "./use-radio-group";
+import { useRadioGroup } from "./use-radio-group";
 
-type Props = RadioGroupContextType & {
-  children: React.ReactNode;
-};
+export type RadioGroupProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T, UseRadioGroupProps>;
 
-export const RadioGroup = (props: Props) => {
-  const { children, ...restProps } = props;
+export const RadioGroup = <T extends React.ElementType = "div">(
+  props: RadioGroupProps<T>,
+) => {
+  const {
+    Component,
+    context,
+    getBaseProps,
+    getHelperTextProps,
+    getLabelProps,
+    getWrapperProps,
+    label,
+    children,
+    helperText,
+  } = useRadioGroup(props);
+
   return (
-    <RadioGroupContext.Provider value={restProps}>
-      {children}
-    </RadioGroupContext.Provider>
+    <Component {...getBaseProps()}>
+      {label && <span {...getLabelProps()}>{label}</span>}
+      <div {...getWrapperProps()}>
+        <RadioGroupProvider value={context}>{children}</RadioGroupProvider>
+      </div>
+      <div {...getHelperTextProps()}>{helperText}</div>
+    </Component>
   );
 };

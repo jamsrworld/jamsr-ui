@@ -13,7 +13,7 @@ export const jamsrui = () => [
         },
       });
       addUtilities({
-        ".tap-highlight-color": {
+        ".tap-highlight-transparent": {
           "-webkit-tap-highlight-color": "transparent",
         },
         ".hide-scrollbar": {

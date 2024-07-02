@@ -798,6 +798,9 @@ importers:
 
   packages/components/radio:
     dependencies:
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/utils':
         specifier: workspace:*
         version: link:../../utils

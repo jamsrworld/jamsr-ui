@@ -1,5 +1,20 @@
 # @jamsr-ui/accordion
 
+## 0.0.31
+
+### Patch Changes
+
+- fix
+- Updated dependencies
+  - @jamsr-ui/avatar@0.0.30
+
+## 0.0.30
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/avatar@0.0.29
+
 ## 0.0.29
 
 ### Patch Changes

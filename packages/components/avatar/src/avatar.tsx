@@ -1,13 +1,16 @@
-import { isEmpty, type UIProps } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { isEmpty } from "@jamsr-ui/utils";
 import { avatarVariants, type AvatarVariants } from "./style";
 
-export type AvatarProps = {
-  alt: string;
-  placeholderType?: "avatar" | "name";
-} & AvatarVariants &
-  UIProps<"img">;
+export type AvatarProps<T extends React.ElementType = "img"> =
+  ComponentPropsWithAs<T, AvatarVariants> & {
+    alt: string;
+    placeholderType?: "avatar" | "name";
+  };
 
-export const Avatar = (props: AvatarProps) => {
+export const Avatar = <T extends React.ElementType = "img">(
+  props: AvatarProps<T>,
+) => {
   const {
     size,
     alt,
@@ -15,14 +18,16 @@ export const Avatar = (props: AvatarProps) => {
     bordered,
     className,
     placeholderType = "avatar",
+    as,
     ...restProps
   } = props;
   const source = !isEmpty(src)
     ? src
     : `https://avatar.iran.liara.run/${placeholderType === "avatar" ? "public" : "username"}?username=${alt}`;
 
+  const Component = as ?? "img";
   return (
-    <img
+    <Component
       data-component="avatar"
       src={source}
       alt={alt}

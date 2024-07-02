@@ -6,7 +6,7 @@ import { uploadVariants, type UploadSlots } from "./style";
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 export type MultiUploadImgState = {
-  file: File;
+  file?: File;
   preview: string;
   id: string;
   progress: "PENDING" | "COMPLETE" | "ERROR" | number;
@@ -66,7 +66,7 @@ export const MultiImageUpload = (props: MultiImageUploadProps) => {
       });
 
       onValueChange([...value, ...selectedFiles]);
-      onFilesSelect(selectedFiles);
+      void onFilesSelect(selectedFiles);
     },
     onDropRejected(fileRejections) {
       fileRejections.forEach((item) => {

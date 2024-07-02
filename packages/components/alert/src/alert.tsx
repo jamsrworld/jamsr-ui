@@ -1,4 +1,5 @@
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { useCallback } from "react";
 import { Error, Info, Success, Warning } from "./icons";
 import { alertVariant, type AlertVariantProps } from "./style";
 
@@ -27,7 +28,7 @@ export const Alert = <T extends React.ElementType = "div">(
   const styles = alertVariant({ severity, variant, className });
   const Component = as ?? "div";
 
-  const Icon = () => {
+  const Icon = useCallback(() => {
     if (typeof icon !== "undefined") return icon;
     switch (severity) {
       case "default":
@@ -43,7 +44,8 @@ export const Alert = <T extends React.ElementType = "div">(
       default:
         null;
     }
-  };
+    return null;
+  }, [icon, severity]);
 
   return (
     <Component
@@ -71,5 +73,3 @@ export const Alert = <T extends React.ElementType = "div">(
     </Component>
   );
 };
-
-<Alert as="a" href="/" />;

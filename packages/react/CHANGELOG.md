@@ -1,5 +1,28 @@
 # @jamsr-ui/react
 
+## 0.0.50
+
+### Patch Changes
+
+- fix
+- Updated dependencies
+  - @jamsr-ui/image-upload@0.0.31
+  - @jamsr-ui/accordion@0.0.31
+  - @jamsr-ui/avatar@0.0.30
+  - @jamsr-ui/select@0.0.30
+  - @jamsr-ui/alert@0.0.30
+  - @jamsr-ui/menu@0.0.30
+
+## 0.0.49
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/avatar@0.0.29
+  - @jamsr-ui/alert@0.0.29
+  - @jamsr-ui/accordion@0.0.30
+  - @jamsr-ui/select@0.0.29
+
 ## 0.0.48
 
 ### Patch Changes

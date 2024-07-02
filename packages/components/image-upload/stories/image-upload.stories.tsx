@@ -44,9 +44,6 @@ const SingleImageTemplate = (props: ImageUploadProps) => {
       className="aspect-video h-40"
       onError={handleOnError}
       showDeleteBtn
-      classNames={{
-        base: "border-error",
-      }}
     />
   );
 };
@@ -61,7 +58,7 @@ const MultiImageTemplate = (props: ImageUploadProps) => {
     for (const item of files) {
       const { file, id } = item;
 
-      //  upload file
+      // eslint-disable-next-line no-await-in-loop
       await new Promise((resolve) => {
         setTimeout(() => {
           resolve("");

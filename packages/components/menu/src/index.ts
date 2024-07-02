@@ -1,4 +1,5 @@
 "use client";
 
 export { Menu } from "./menu";
-export { MenuItem } from "./menu-item";
+export { type MenuProps } from "./menu-component";
+export { MenuItem, type MenuItemProps } from "./menu-item";

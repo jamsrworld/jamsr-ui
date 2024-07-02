@@ -11,7 +11,7 @@ type InternalProps = {
   endContent?: React.ReactNode;
 };
 
-type MenuItemProps<T extends React.ElementType = "button"> =
+export type MenuItemProps<T extends React.ElementType = "button"> =
   ComponentPropsWithAs<T, InternalProps>;
 
 export const MenuItem = <T extends React.ElementType = "button">(

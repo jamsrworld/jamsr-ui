@@ -22,6 +22,7 @@ export type MultiImageUploadProps = {
   onError?: (error: string) => void;
   showDeleteBtn?: boolean;
   dropzoneOptions?: DropzoneOptions;
+  onDelete?: (id: string) => void;
 };
 
 export const MultiImageUpload = (props: MultiImageUploadProps) => {
@@ -35,6 +36,7 @@ export const MultiImageUpload = (props: MultiImageUploadProps) => {
     onError,
     showDeleteBtn = true,
     dropzoneOptions = {},
+    onDelete,
   } = props;
   const { maxFiles } = dropzoneOptions;
   const canUploadImage = maxFiles ? value.length < maxFiles : true;
@@ -90,6 +92,7 @@ export const MultiImageUpload = (props: MultiImageUploadProps) => {
   });
 
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: string) => {
+    onDelete?.(id);
     e.stopPropagation();
     onValueChange(value.filter((item) => item.id !== id));
   };

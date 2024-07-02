@@ -1,5 +1,12 @@
 # @jamsr-ui/react
 
+## 0.0.51
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/image-upload@0.0.32
+
 ## 0.0.50
 
 ### Patch Changes

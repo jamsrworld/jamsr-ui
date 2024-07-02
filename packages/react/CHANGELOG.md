@@ -1,5 +1,12 @@
 # @jamsr-ui/react
 
+## 0.0.52
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/radio@0.0.29
+
 ## 0.0.51
 
 ### Patch Changes

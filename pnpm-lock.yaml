@@ -802,6 +802,9 @@ importers:
         specifier: workspace:*
         version: link:../../utils
     devDependencies:
+      '@jamsr-ui/card':
+        specifier: workspace:^
+        version: link:../card
       '@jamsr-ui/tailwind-config':
         specifier: workspace:*
         version: link:../../config/tailwind-config

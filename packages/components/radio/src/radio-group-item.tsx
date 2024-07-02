@@ -1,19 +1,16 @@
+import type { UIProps } from "@jamsr-ui/utils";
 import { cn } from "@jamsr-ui/utils";
-import {
-  forwardRef,
-  type ComponentPropsWithoutRef,
-  type ForwardedRef,
-} from "react";
+import type { RadioProps } from "./radio";
 import { Radio } from "./radio";
 import { useRadioGroup } from "./use-radio-group";
 
-export type RadioGroupItemProps = ComponentPropsWithoutRef<"input"> & {
-  wrapperClassName?: string;
-};
+export type RadioGroupItemProps<T extends React.ElementType = "input"> =
+  RadioProps<T> & {
+    wrapperClassName?: string;
+  };
 
-const RadioGroupItemInner = (
-  props: RadioGroupItemProps,
-  ref: ForwardedRef<HTMLInputElement>,
+export const RadioGroupItem = <T extends React.ElementType = "input">(
+  props: RadioGroupItemProps<T>,
 ) => {
   const context = useRadioGroup();
   const {
@@ -22,7 +19,10 @@ const RadioGroupItemInner = (
     wrapperClassName,
     onChange: onChangeProp,
     ...restProps
-  } = props;
+  } = props as UIProps<"input"> & {
+    wrapperClassName?: string;
+  };
+
   const {
     name,
     onChange,
@@ -37,7 +37,6 @@ const RadioGroupItemInner = (
   };
   return (
     <Radio
-      ref={ref}
       type="radio"
       name={name}
       checked={isChecked}
@@ -53,5 +52,3 @@ const RadioGroupItemInner = (
     </Radio>
   );
 };
-
-export const RadioGroupItem = forwardRef(RadioGroupItemInner);

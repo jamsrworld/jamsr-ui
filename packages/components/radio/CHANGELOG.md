@@ -1,5 +1,11 @@
 # @jamsr-ui/radio
 
+## 0.0.29
+
+### Patch Changes
+
+- fix radio
+
 ## 0.0.28
 
 ### Patch Changes

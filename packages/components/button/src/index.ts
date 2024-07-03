@@ -1,4 +1,4 @@
 "use client";
 
 export { Button, type ButtonProps } from "./button";
-export { type UseButtonProps } from "./use-button";
+export { useButton, type UseButtonProps } from "./use-button";

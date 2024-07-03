@@ -37,7 +37,7 @@ export const Select = (props: SelectProps) => {
   return (
     <div {...getBaseProps()}>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label {...getLabelProps()}>{label}</label>
+      {label && <label {...getLabelProps()}>{label}</label>}
       <div {...getMainWrapperProps()}>
         {/*  eslint-disable-next-line react/button-has-type */}
         <button {...getTriggerProps()}>

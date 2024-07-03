@@ -265,9 +265,10 @@ export const useSelect = (props: UseSelectProps) => {
       "data-slot": "trigger",
       type: "button",
       className: styles.trigger({ className: classNames?.trigger }),
-      ref: setReference,
       ...props,
-      ...getReferenceProps(),
+      ...getReferenceProps({
+        ref: setReference,
+      }),
     };
   };
 

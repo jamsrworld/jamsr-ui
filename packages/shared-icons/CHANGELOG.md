@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.26
+
+### Patch Changes
+
+- fix exports
+
 ## 0.0.25
 
 ### Patch Changes

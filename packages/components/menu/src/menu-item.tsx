@@ -42,6 +42,7 @@ export const MenuItem = <T extends React.ElementType = "button">(
       className={menuClasses.menuItem({ className })}
       tabIndex={isActive ? 0 : -1}
       disabled={disabled}
+      {...restProps}
       {...menu.getItemProps({
         onClick(event: React.MouseEvent<HTMLButtonElement>) {
           restProps.onClick?.(event);
@@ -52,7 +53,6 @@ export const MenuItem = <T extends React.ElementType = "button">(
           menu.setHasFocusInside(true);
         },
       })}
-      {...restProps}
     >
       {startContent}
       <div className="grow text-left">{children}</div>

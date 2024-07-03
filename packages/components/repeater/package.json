@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/repeater",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"

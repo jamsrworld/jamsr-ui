@@ -1,5 +1,20 @@
 # web
 
+## 0.1.59
+
+### Patch Changes
+
+- toast & confirmation
+- Updated dependencies
+  - @jamsr-ui/react@0.0.57
+
+## 0.1.58
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/react@0.0.56
+
 ## 0.1.57
 
 ### Patch Changes

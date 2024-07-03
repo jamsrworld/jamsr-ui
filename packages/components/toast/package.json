@@ -1,7 +1,7 @@
 {
-  "name": "@jamsr-ui/confirmation",
-  "version": "0.0.2",
-  "main": "./src/index.ts",
+  "name": "@jamsr-ui/toast",
+  "version": "0.0.0",
+  "main": "src/index.ts",
   "sideEffects": false,
   "keywords": [
     "react",
@@ -22,24 +22,19 @@
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
+  "dependencies": {
+    "react-hot-toast": "^2.4.1"
+  },
   "devDependencies": {
-    "@jamsr-ui/tailwind-config": "workspace:*",
-    "@types/react": "^18.3.3",
+    "@jamsr-ui/button": "^0.0.28",
     "clean-package": "^2.2.0",
-    "framer-motion": "12.0.0-alpha.0",
+    "@types/react": "^18.3.3",
     "react": "19.0.0-rc-c21bcd627b-20240624",
     "react-dom": "19.0.0-rc-c21bcd627b-20240624"
   },
   "peerDependencies": {
-    "framer-motion": "12.0.0-alpha.0",
     "react": "19.0.0-rc-c21bcd627b-20240624",
     "react-dom": "19.0.0-rc-c21bcd627b-20240624"
-  },
-  "dependencies": {
-    "@jamsr-ui/button": "^0.0.28",
-    "@jamsr-ui/dialog": "workspace:^",
-    "@jamsr-ui/divider": "^0.0.28",
-    "zustand": "^4.5.4"
   },
   "clean-package": "../../../clean-package.config.json"
 }

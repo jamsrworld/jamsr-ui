@@ -1,5 +1,21 @@
 # @jamsr-ui/react
 
+## 0.0.57
+
+### Patch Changes
+
+- toast & confirmation
+- Updated dependencies
+  - @jamsr-ui/confirmation@0.0.2
+
+## 0.0.56
+
+### Patch Changes
+
+- new package
+- Updated dependencies
+  - @jamsr-ui/confirmation@0.0.1
+
 ## 0.0.55
 
 ### Patch Changes

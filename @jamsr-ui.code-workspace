@@ -49,6 +49,10 @@
       "path": "packages/components/chip"
     },
     {
+      "name": "📦 @jamsr-ui/confirmation",
+      "path": "packages/components/confirmation"
+    },
+    {
       "name": "📦 @jamsr-ui/dialog",
       "path": "packages/components/dialog"
     },
@@ -127,6 +131,10 @@
     {
       "name": "📦 @jamsr-ui/textarea",
       "path": "packages/components/textarea"
+    },
+    {
+      "name": "📦 @jamsr-ui/toast",
+      "path": "packages/components/toast"
     },
     {
       "name": "📦 @jamsr-ui/tooltip",

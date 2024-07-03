@@ -28,6 +28,8 @@ export * from "@jamsr-ui/table";
 export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
 export * from "@jamsr-ui/repeater";
+export * from "@jamsr-ui/confirmation";
+export * from "@jamsr-ui/toast";
 
 // Provider
 export { JamsrUIProvider } from "@jamsr-ui/core";

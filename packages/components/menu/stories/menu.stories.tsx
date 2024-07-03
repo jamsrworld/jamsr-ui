@@ -12,9 +12,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template = () => {
+  const handleClick = () => {
+    alert("clicked undo");
+  };
+
   return (
-    <Menu trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}>
-      <MenuItem>Undo</MenuItem>
+    <Menu
+      classNames={{
+        popover: "min-w-[300px]",
+      }}
+      trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}
+    >
+      <MenuItem onClick={handleClick}>Undo</MenuItem>
       <MenuItem startContent={<Info className="size-5" />}>Info</MenuItem>
       <MenuItem
         startContent={

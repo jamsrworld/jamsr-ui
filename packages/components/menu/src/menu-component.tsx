@@ -45,6 +45,9 @@ export type MenuProps = {
   children?: React.ReactNode;
   triggerOn?: "hover" | "click";
   placement?: Placement;
+  classNames?: {
+    popover?: string;
+  };
 } & ComponentProps<"div">;
 
 export const MenuComponent = ({
@@ -52,7 +55,9 @@ export const MenuComponent = ({
   trigger,
   triggerOn = "click",
   placement,
-  ...props
+  className,
+  classNames,
+  ...restProps
 }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasFocusInside, setHasFocusInside] = useState(false);
@@ -162,6 +167,7 @@ export const MenuComponent = ({
     }),
     [activeIndex, getItemProps, isOpen],
   );
+
   const menuClasses = menuVariants();
   const menuItemClass = menuClasses.menuItem({
     opened: isOpen && hasFocusInside && isNested,
@@ -178,9 +184,9 @@ export const MenuComponent = ({
         role={isNested ? "menuitem" : undefined}
         {...getReferenceProps(
           parent.getItemProps({
-            ...props,
+            ...restProps,
             onFocus(event: React.FocusEvent<HTMLDivElement>) {
-              props.onFocus?.(event);
+              restProps.onFocus?.(event);
               setHasFocusInside(false);
               parent.setHasFocusInside(true);
             },
@@ -209,7 +215,9 @@ export const MenuComponent = ({
                   <m.div
                     ref={refs.setFloating}
                     style={floatingStyles}
-                    className={menuClasses.menu()}
+                    className={menuClasses.menu({
+                      className: classNames?.popover,
+                    })}
                     initial={{ opacity: 0, top: -10 }}
                     animate={{ opacity: 1, top: 0 }}
                     exit={{ opacity: 0, top: 10 }}

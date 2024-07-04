@@ -1,32 +1,33 @@
 # Todo improve components
 
-- [ ] Accordion
-- [ ] Alert
-- [ ] Autocomplete
-- [ ] Avatar
-- [ ] Badge
-- [ ] Button
-- [ ] Card
-- [ ] Checkbox
-- [ ] Chip
-- [ ] CircularProgress
-- [ ] Dialog
-- [ ] Divider
+- [x] Accordion
+- [x] Alert
+- [x] Autocomplete
+- [x] Avatar
+- [x] Badge
+- [x] Button
+  - [ ] Button Group
+- [x] Card
+- [x] Checkbox
+- [x] Chip
+- [x] CircularProgress
+- [x] Dialog
+- [x] Divider
 - [ ] Drawer
-- [ ] Header
+- [x] Header
 - [ ] ImageUpload
-- [ ] Input
-- [ ] LinearProgress
-- [ ] Link
-- [ ] Menu
+- [x] Input
+- [x] LinearProgress
+- [x] Link
+- [x] Menu
 - [ ] OtpInput
-- [ ] Popover
-- [ ] Radio
-- [ ] Ripple
-- [ ] Select
-- [ ] Skeleton
-- [ ] Switch
-- [ ] Tab
-- [ ] Textarea
-- [ ] Tooltip
-- [ ] Typography
+- [x] Popover
+- [x] Radio
+- [x] Ripple
+- [x] Select
+- [x] Skeleton
+- [x] Switch
+- [x] Tab
+- [x] Textarea
+- [x] Tooltip
+- [x] Typography

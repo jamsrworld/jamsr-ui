@@ -31,6 +31,8 @@ export const Input = <T extends React.ElementType = "div">(
     getStartContentProps,
     getEndContentProps,
     children,
+    getNotationProps,
+    hasNotation,
   } = useInput(props);
   const id = useId();
 
@@ -70,7 +72,7 @@ export const Input = <T extends React.ElementType = "div">(
       <div {...getMainWrapperProps()}>
         <div {...getLabelWrapperProps()}>
           <label htmlFor={id} {...getLabelProps()}>
-            {label}
+            {label} {hasNotation && <span {...getNotationProps()}>*</span>}
           </label>
           {labelHelper}
         </div>

@@ -1,6 +1,4 @@
-import { sharedConfig } from "@jamsr-ui/tailwind-config";
-import { jamsrui } from "@jamsr-ui/theme";
-import type { Config } from "tailwindcss";
+import { sharedConfig, type Config } from "@jamsr-ui/tailwind-config";
 
 const config: Config = {
   darkMode: "class",
@@ -9,9 +7,5 @@ const config: Config = {
     "./src/app/**/*.{ts,tsx}",
   ],
   presets: [sharedConfig],
-  theme: {
-    fontFamily: {},
-  },
-  plugins: [...jamsrui()],
 };
 export default config;

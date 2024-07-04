@@ -4,7 +4,7 @@ export const inputVariants = tv({
   slots: {
     base: "flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal",
+    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
     mainWrapper: "flex gap-1",
     inputWrapper:
       "w-full focus-within:border-primary focus-within:ring-primary",
@@ -14,6 +14,7 @@ export const inputVariants = tv({
     helper: "text-xs text-foreground-500",
     startContent: "pr-2 text-foreground-muted empty:hidden",
     endContent: "pl-2 text-foreground-muted",
+    notation: "",
   },
   variants: {
     fullWidth: {
@@ -65,6 +66,16 @@ export const inputVariants = tv({
     isTextarea: {
       true: {
         innerWrapper: "h-auto",
+      },
+    },
+    isRequired: {
+      true: {
+        notation: "text-error",
+      },
+    },
+    isOptional: {
+      true: {
+        notation: "text-success",
       },
     },
   },

@@ -1,5 +1,12 @@
 # web
 
+## 0.1.65
+
+### Patch Changes
+
+- required & optional input
+  - @jamsr-ui/react@0.0.63
+
 ## 0.1.64
 
 ### Patch Changes

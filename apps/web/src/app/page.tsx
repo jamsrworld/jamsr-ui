@@ -1,11 +1,13 @@
 "use client";
 
 import { Button, Menu, MenuItem } from "@jamsr-ui/react";
+import { Editor } from "./components/editor";
 
 const page = () => {
   return (
-    <div className="gap-responsive bg-background grid  min-h-dvh place-content-center text-white ">
-      <Menu label={<Button>Click Me</Button>}>
+    <div className="gap-responsive bg-background grid  min-h-dvh text-white ">
+      <Editor />
+      <Menu trigger={<Button>Click Me</Button>}>
         <MenuItem>hii</MenuItem>
         <MenuItem>Hii2</MenuItem>
       </Menu>

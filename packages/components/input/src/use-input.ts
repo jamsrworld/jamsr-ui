@@ -37,6 +37,8 @@ type Props = {
   slotProps?: {
     inputWrapper?: React.ComponentProps<"div">;
   };
+  isRequired?: boolean;
+  isOptional?: boolean;
 };
 
 type InputProps = UIProps<"input">;
@@ -71,6 +73,8 @@ export const useInput = (props: UseInputProps) => {
     inputWrapperRef,
     children,
     ref,
+    isRequired = false,
+    isOptional = false,
     slotProps = {},
     ...restProps
   } = props;
@@ -85,6 +89,8 @@ export const useInput = (props: UseInputProps) => {
     isInvalid,
     labelPlacement,
     fullWidth,
+    isRequired,
+    isOptional,
   });
 
   const [value = "", setValue] = useControlledState({
@@ -299,6 +305,21 @@ export const useInput = (props: UseInputProps) => {
     ],
   );
 
+  const getNotationProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "notation",
+        className: slots.notation({
+          class: cn(classNames?.notation, props?.className),
+        }),
+      };
+    },
+    [slots, classNames?.notation],
+  );
+
+  const hasNotation = isRequired === true || isOptional === true;
+
   return {
     Component,
     InputComponent,
@@ -312,6 +333,7 @@ export const useInput = (props: UseInputProps) => {
     isInvalid,
     isSecuredText,
     showPassword,
+    hasNotation,
     mask,
     getBaseProps,
     labelHelper: labelHelperContent,
@@ -325,5 +347,6 @@ export const useInput = (props: UseInputProps) => {
     getMainWrapperProps,
     getStartContentProps,
     getEndContentProps,
+    getNotationProps,
   };
 };

@@ -88,6 +88,20 @@ export const WithIcon: Story = {
   },
 };
 
+export const Required: Story = {
+  args: {
+    label: "Enter your name",
+    isRequired: true,
+  },
+};
+
+export const Optional: Story = {
+  args: {
+    label: "Enter your address",
+    isOptional: true,
+  },
+};
+
 export const Sizes: Story = {
   render: () => {
     return (

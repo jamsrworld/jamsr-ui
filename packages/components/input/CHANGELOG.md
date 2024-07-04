@@ -1,5 +1,11 @@
 # @jamsr-ui/input
 
+## 0.0.31
+
+### Patch Changes
+
+- required & optional input
+
 ## 0.0.30
 
 ### Patch Changes

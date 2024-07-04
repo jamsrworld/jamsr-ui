@@ -1,5 +1,11 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.31
+
+### Patch Changes
+
+- editror
+
 ## 0.0.30
 
 ### Patch Changes

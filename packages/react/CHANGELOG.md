@@ -1,5 +1,15 @@
 # @jamsr-ui/react
 
+## 0.0.62
+
+### Patch Changes
+
+- editror
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.31
+  - @jamsr-ui/header@0.0.32
+  - @jamsr-ui/editor@0.0.1
+
 ## 0.0.61
 
 ### Patch Changes

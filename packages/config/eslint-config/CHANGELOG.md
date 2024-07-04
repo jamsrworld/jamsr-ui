@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.22
+
+### Patch Changes
+
+- editror
+
 ## 0.0.21
 
 ### Patch Changes

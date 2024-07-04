@@ -1,5 +1,11 @@
 # @jamsr-ui/header
 
+## 0.0.32
+
+### Patch Changes
+
+- editror
+
 ## 0.0.31
 
 ### Patch Changes

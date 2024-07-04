@@ -100,5 +100,15 @@ module.exports = {
     "no-console": "off",
     "no-void": "off",
     "no-nested-ternary": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
   },
 };

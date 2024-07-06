@@ -38,6 +38,76 @@ const Template = () => {
 };
 
 export const Default: Story = {
-  args: { title: "", value: "" },
   render: Template,
+};
+
+export const Disabled: Story = {
+  render: () => {
+    return (
+      <Tabs defaultValue="photos" isDisabled>
+        <Tab value="photos" title="Photos">
+          {content}
+        </Tab>
+        <Tab value="music" title="Music">
+          {content}
+        </Tab>
+        <Tab value="videos" title="Videos">
+          {content}
+        </Tab>
+      </Tabs>
+    );
+  },
+};
+
+export const DisabledItem: Story = {
+  render: () => {
+    return (
+      <Tabs defaultValue="photos">
+        <Tab value="photos" title="Photos">
+          {content}
+        </Tab>
+        <Tab value="music" title="Music" disabled>
+          {content}
+        </Tab>
+        <Tab value="videos" title="Videos">
+          {content}
+        </Tab>
+      </Tabs>
+    );
+  },
+};
+
+export const Sizes: Story = {
+  render: () => {
+    const sizes = ["sm", "md", "lg"] as const;
+    return (
+      <div className="flex flex-wrap gap-4">
+        {sizes.map((size) => (
+          <Tabs key={size} size={size} aria-label="Tabs sizes">
+            <Tab value="photos" title="Photos" />
+            <Tab value="music" title="Music" />
+            <Tab value="videos" title="Videos" />
+          </Tabs>
+        ))}
+      </div>
+    );
+  },
+};
+
+export const Radius: Story = {
+  render: () => {
+    const radiusList = ["full", "lg", "md", "sm", "none"] as const;
+
+    return (
+      <div className="flex flex-wrap gap-4">
+        {radiusList.map((radius) => (
+          <Tabs key={radius} radius={radius} aria-label="Tabs radius">
+            <Tab value="photos" title="Photos" />
+            <Tab value="music" title="Music" />
+            <Tab value="videos" title="Videos" />
+          </Tabs>
+        ))}
+      </div>
+    );
+  },
 };

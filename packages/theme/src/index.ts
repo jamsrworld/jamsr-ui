@@ -16,11 +16,11 @@ export const jamsrui = () => [
         ".tap-highlight-transparent": {
           "-webkit-tap-highlight-color": "transparent",
         },
-        ".hide-scrollbar": {
+        ".scrollbar-hide": {
           "-ms-overflow-style": "none" /* Internet Explorer 10+ */,
           "scrollbar-width": "none" /* Firefox */,
         },
-        ".hide-scrollbar::-webkit-scrollbar ": {
+        ".scrollbar-hide::-webkit-scrollbar ": {
           display: "none" /* Safari and Chrome */,
         },
       });
@@ -72,6 +72,9 @@ export const jamsrui = () => [
               "0%,70%,100%": { opacity: "1" },
               "20%,50%": { opacity: "0" },
             },
+          },
+          opacity: {
+            disabled: "50%",
           },
         },
       },

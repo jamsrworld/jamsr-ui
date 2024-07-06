@@ -24,12 +24,17 @@
   },
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:*",
-    "@types/react": "^18.3.3",
+    "@types/react": "npm:types-react@alpha",
+    "@types/react-dom": "npm:types-react-dom@alpha",
     "framer-motion": "12.0.0-alpha.0",
     "react": "19.0.0-rc-c21bcd627b-20240624",
     "react-dom": "19.0.0-rc-c21bcd627b-20240624",
     "@jamsr-ui/button": "workspace:*",
     "clean-package": "^2.2.0"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@alpha",
+    "@types/react-dom": "npm:types-react-dom@alpha"
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.0",

@@ -1,5 +1,3 @@
-import { type ClassNameValue } from "tailwind-merge";
-
 export const mapPropsVariants = <
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   T extends Record<string, any>,
@@ -38,5 +36,5 @@ export const mapPropsVariants = <
 };
 
 export type SlotsToClasses<S extends string> = {
-  [key in S]?: ClassNameValue;
+  [key in S]?: string;
 };

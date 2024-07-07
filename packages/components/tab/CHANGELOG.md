@@ -1,5 +1,17 @@
 # @jamsr-ui/tab
 
+## 0.0.31
+
+### Patch Changes
+
+- fix theme
+
+## 0.0.30
+
+### Patch Changes
+
+- tabs improvements
+
 ## 0.0.29
 
 ### Patch Changes

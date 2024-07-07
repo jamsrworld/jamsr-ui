@@ -1,5 +1,17 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.34
+
+### Patch Changes
+
+- fix theme
+
+## 0.0.33
+
+### Patch Changes
+
+- tabs improvements
+
 ## 0.0.32
 
 ### Patch Changes

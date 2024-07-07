@@ -111,3 +111,51 @@ export const Radius: Story = {
     );
   },
 };
+
+export const Colors: Story = {
+  render: () => {
+    const colors = [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "error",
+    ] as const;
+
+    return (
+      <div className="flex flex-wrap gap-4">
+        {colors.map((color) => (
+          <Tabs
+            key={color}
+            color={color}
+            aria-label="Tabs colors"
+            radius="full"
+          >
+            <Tab value="photos" title="Photos" />
+            <Tab value="music" title="Music" />
+            <Tab value="videos" title="Videos" />
+          </Tabs>
+        ))}
+      </div>
+    );
+  },
+};
+
+export const Variants: Story = {
+  render: () => {
+    const variants = ["solid", "underlined", "bordered", "light"] as const;
+
+    return (
+      <div className="flex flex-wrap gap-4">
+        {variants.map((variant) => (
+          <Tabs key={variant} variant={variant} aria-label="Tabs variants">
+            <Tab value="photos" title="Photos" />
+            <Tab value="music" title="Music" />
+            <Tab value="videos" title="Videos" />
+          </Tabs>
+        ))}
+      </div>
+    );
+  },
+};

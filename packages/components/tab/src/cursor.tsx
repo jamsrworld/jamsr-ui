@@ -3,8 +3,6 @@ import { useTabsContext } from "./tabs-context";
 
 export const Cursor = () => {
   const { getCursorProps } = useTabsContext();
-  return (
-    //  @ts-expect-error type error
-    <m.div {...getCursorProps()} layoutId="activeTab" />
-  );
+  // @ts-expect-error framer type error
+  return <m.div {...getCursorProps()} layoutId="activeTab" />;
 };

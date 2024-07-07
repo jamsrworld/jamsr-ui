@@ -1,3 +1,5 @@
+import { LayoutGroup } from "framer-motion";
+import { useId } from "react";
 import { TabContext } from "./tabs-context";
 import { useTabs, type UseTabsProps } from "./use-tabs";
 
@@ -12,12 +14,13 @@ export const Tabs = (props: TabsProps) => {
     children,
     contextValue,
   } = useTabs(props);
+  const id = useId();
 
   return (
     <Component {...getBaseProps()}>
       <div {...getTabListProps()}>
         <TabContext.Provider value={contextValue}>
-          {children}
+          <LayoutGroup id={id}>{children}</LayoutGroup>
         </TabContext.Provider>
       </div>
       <div {...getPanelProps()}>{selectedTabContent}</div>

@@ -1,5 +1,22 @@
 # @jamsr-ui/react
 
+## 0.0.65
+
+### Patch Changes
+
+- fix theme
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.34
+  - @jamsr-ui/tab@0.0.31
+
+## 0.0.64
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.33
+  - @jamsr-ui/tab@0.0.30
+
 ## 0.0.63
 
 ### Patch Changes

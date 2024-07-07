@@ -15,7 +15,7 @@ import type { TabContextType } from "./tabs-context";
 
 type Props<T extends string = string> = {
   classNames?: SlotsToClasses<TabsSlots>;
-  children: React.ReactNode[];
+  children: React.ReactNode;
   value?: T;
   onValueChange?: (value: T) => void;
   defaultValue?: T;

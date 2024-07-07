@@ -11,7 +11,7 @@ export const tabsVariant = tv({
       "gap-2",
       "items-center",
       "flex-nowrap",
-      "overflow-x-scroll",
+      "overflow-x-auto",
       "scrollbar-hide",
       "bg-default-100",
     ],

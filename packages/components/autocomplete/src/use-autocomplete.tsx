@@ -332,7 +332,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       inputWrapperRef: setReference,
       classNames: {
         inputWrapper: "select-none",
-        innerWrapper: isMultiple && "gap-2 flex-wrap h-auto",
+        innerWrapper: isMultiple ? "" : "gap-2 flex-wrap h-auto",
       },
       slotProps: {
         inputWrapper: {

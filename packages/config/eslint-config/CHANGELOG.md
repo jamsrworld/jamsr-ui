@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.23
+
+### Patch Changes
+
+- fix lgos
+
 ## 0.0.22
 
 ### Patch Changes

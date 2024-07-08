@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.7
+
+### Patch Changes
+
+- fix lgos
+
 ## 0.0.6
 
 ### Patch Changes

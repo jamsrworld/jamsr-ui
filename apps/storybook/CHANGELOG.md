@@ -1,5 +1,19 @@
 # @ui/storybook
 
+## 0.0.69
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/react@0.0.67
+
+## 0.0.68
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.66
+
 ## 0.0.67
 
 ### Patch Changes

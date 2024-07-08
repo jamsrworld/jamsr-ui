@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.30
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.30
+  - @jamsr-ui/typography@0.0.30
+  - @jamsr-ui/utils@0.0.27
+
 ## 0.0.29
 
 ### Patch Changes

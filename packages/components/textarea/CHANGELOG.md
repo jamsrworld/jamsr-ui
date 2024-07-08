@@ -1,5 +1,17 @@
 # @jamsr-ui/input
 
+## 0.0.32
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/button@0.0.30
+  - @jamsr-ui/input@0.0.32
+  - @jamsr-ui/hooks@0.0.21
+  - @jamsr-ui/shared-icons@0.0.27
+  - @jamsr-ui/utils@0.0.27
+
 ## 0.0.31
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @jamsr-ui/menu
 
+## 0.0.34
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.27
+  - @jamsr-ui/utils@0.0.27
+
 ## 0.0.33
 
 ### Patch Changes

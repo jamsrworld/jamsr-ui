@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.4
+
+### Patch Changes
+
+- fix lgos
+
 ## 0.0.3
 
 ### Patch Changes

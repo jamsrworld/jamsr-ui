@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.12
+
+### Patch Changes
+
+- fix lgos
+
 ## 0.0.11
 
 ### Patch Changes

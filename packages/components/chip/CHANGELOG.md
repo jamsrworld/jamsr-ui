@@ -1,5 +1,15 @@
 # @jamsr-ui/chip
 
+## 0.0.30
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/button@0.0.30
+  - @jamsr-ui/shared-icons@0.0.27
+  - @jamsr-ui/utils@0.0.27
+
 ## 0.0.29
 
 ### Patch Changes

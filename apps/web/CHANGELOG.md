@@ -1,5 +1,15 @@
 # web
 
+## 0.1.67
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/react@0.0.67
+  - @jamsr-ui/editor@0.0.2
+  - @jamsr-ui/theme@0.0.31
+
 ## 0.1.66
 
 ### Patch Changes

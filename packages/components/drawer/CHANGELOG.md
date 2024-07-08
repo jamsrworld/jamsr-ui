@@ -1,5 +1,14 @@
 # @jamsr-ui/drawer
 
+## 1.0.24
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.21
+  - @jamsr-ui/utils@0.0.27
+
 ## 1.0.23
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.27
+
+### Patch Changes
+
+- fix lgos
+
 ## 0.0.26
 
 ### Patch Changes

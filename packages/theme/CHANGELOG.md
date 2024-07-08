@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.31
+
+### Patch Changes
+
+- fix lgos
+
 ## 0.0.30
 
 ### Patch Changes

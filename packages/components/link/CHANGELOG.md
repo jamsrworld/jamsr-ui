@@ -1,5 +1,13 @@
 # @jamsr-ui/link
 
+## 0.0.31
+
+### Patch Changes
+
+- fix lgos
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.27
+
 ## 0.0.30
 
 ### Patch Changes

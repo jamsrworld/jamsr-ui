@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
   ImageUpload,
   MultiImageUpload,
+  MultiImageUploadProps,
   type ImageUploadProps,
   type MultiUploadImgState,
 } from "../src";
@@ -18,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 const fileUrl =
   "https://cdn.jamsrworld.com/06-24-2024/avatar_1_1719214634268_71531560.jpg?w=3840&q=75";
 
-const SingleImageTemplate = (props: ImageUploadProps) => {
+const SingleImageTemplate = (props: Partial<ImageUploadProps>) => {
   const [value, setValue] = useState("");
   const onFileSelect = async (file: File) => {
     console.log("file:->", file);
@@ -37,18 +38,18 @@ const SingleImageTemplate = (props: ImageUploadProps) => {
 
   return (
     <ImageUpload
-      {...props}
       value={value}
       onValueChange={setValue}
       onFileSelect={onFileSelect}
       className="aspect-video h-40"
       onError={handleOnError}
       showDeleteBtn
+      {...props}
     />
   );
 };
 
-const MultiImageTemplate = (props: ImageUploadProps) => {
+const MultiImageTemplate = (props: Partial<MultiImageUploadProps>) => {
   const [files, setValue] = useState<MultiUploadImgState[]>([]);
   const images = files.filter((item) => item.progress === "COMPLETE");
   console.log("images:->", images);
@@ -89,7 +90,10 @@ const MultiImageTemplate = (props: ImageUploadProps) => {
       value={files}
       onValueChange={setValue}
       onFilesSelect={onFilesSelect}
-      className="aspect-square h-20"
+      classNames={{
+        picker: "aspect-square h-20",
+        fileView: "size-[200px]",
+      }}
       onError={handleOnError}
       dropzoneOptions={{
         maxFiles: 4,
@@ -102,6 +106,23 @@ export const SingleImage: Story = {
   render: SingleImageTemplate,
 };
 
-export const MultiImage: Story = {
+export const Avatar: Story = {
+  render: () => <SingleImageTemplate isAvatar className="aspect-square" />,
+};
+
+export const Disabled: Story = {
+  render: () => (
+    <div className="grid gap-4">
+      <SingleImageTemplate isAvatar className="aspect-square" isDisabled />
+      <SingleImageTemplate isDisabled />
+    </div>
+  ),
+};
+
+export const MultiImage = {
   render: MultiImageTemplate,
+};
+
+export const MultiImageDisabled: Story = {
+  render: () => <MultiImageTemplate isDisabled />,
 };

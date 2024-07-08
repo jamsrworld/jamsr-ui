@@ -1,9 +1,12 @@
 import { CircularProgress } from "@jamsr-ui/progress";
 import { Close, ImageUpload as ImageUploadIcon } from "@jamsr-ui/shared-icons";
-import { SlotsToClasses, cn, dataAttr } from "@jamsr-ui/utils";
+import type { SlotsToClasses } from "@jamsr-ui/utils";
+import { cn, dataAttr } from "@jamsr-ui/utils";
 import { useEffect, useState } from "react";
-import { DropzoneOptions, useDropzone } from "react-dropzone";
-import { UploadSlots, uploadVariants } from "./style";
+import type { DropzoneOptions } from "react-dropzone";
+import { useDropzone } from "react-dropzone";
+import type { UploadSlots } from "./style";
+import { uploadVariants } from "./style";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
@@ -14,7 +17,7 @@ export type ImageUploadProps = {
   className?: string;
   classNames?: SlotsToClasses<UploadSlots>;
   isAvatar?: boolean;
-  disabled?: boolean;
+  isDisabled?: boolean;
   onError?: (error: string) => void;
   showDeleteBtn?: boolean;
   progress?: number;
@@ -29,7 +32,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
     isAvatar = false,
     className,
     classNames,
-    disabled = false,
+    isDisabled = false,
     onFileSelect,
     onValueChange,
     onError,
@@ -46,7 +49,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
       setPreview("");
       URL.revokeObjectURL(preview);
     }
-  }, [value]);
+  }, [preview, value]);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     maxFiles: 1,
@@ -55,32 +58,32 @@ export const ImageUpload = (props: ImageUploadProps) => {
     accept: {
       "image/*": [".jpeg", ".png", ".webp"],
     },
-    disabled,
+    disabled: isDisabled,
     onDrop: (acceptedFiles: File[]) => {
       const file = acceptedFiles[0];
       if (!file) return;
       const objectUrl = URL.createObjectURL(file);
       onValueChange("");
       setPreview(objectUrl);
-      onFileSelect(file);
+      void onFileSelect(file);
     },
     onDropRejected(fileRejections) {
       fileRejections.forEach((item) => {
         const { errors } = item;
-        let error = errors[0];
+        const error = errors[0];
         if (error) {
-          const message = error.message;
+          const { message } = error;
           onError?.(message);
         }
       });
     },
-    ...dropzoneOptions
+    ...dropzoneOptions,
   });
 
   const imageUrl = preview.length > 0 ? preview : value;
 
   const styles = uploadVariants({
-    disabled,
+    isDisabled,
     isAvatar,
     isDragActive,
   });
@@ -99,7 +102,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
       data-slot="base"
       data-component="image-upload"
       data-drag-active={dataAttr(isDragActive)}
-      data-disabled={dataAttr(disabled)}
+      data-disabled={dataAttr(isDisabled)}
       data-avatar={dataAttr(isAvatar)}
       className={baseStyles}
     >
@@ -133,9 +136,11 @@ export const ImageUpload = (props: ImageUploadProps) => {
           alt=""
         />
       )}
-      {showDeleteBtn && imageUrl && !disabled && (
+      {showDeleteBtn && imageUrl && !isDisabled && (
         <button
+          type="button"
           data-slot="delete-btn"
+          aria-label="Delete"
           onClick={handleDelete}
           className={styles.deleteBtn({ className: classNames?.deleteBtn })}
         >

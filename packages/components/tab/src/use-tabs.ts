@@ -52,15 +52,12 @@ export const useTabs = (props: UseTabsProps) => {
 
   const selectedTabContent = useMemo(() => {
     const childrenArray = Children.toArray(children);
-    console.log("childrenArray:->", childrenArray)
     const selected = !value
       ? (childrenArray[0] as ReactElement<TabProps>)
       : (childrenArray.find((child) => {
           if (!isValidElement<TabProps>(child)) return null;
           return child.props.value === value;
         }) as ReactElement<TabProps> | null);
-    console.log("selected:->", selected);
-
     return selected?.props.children as React.ReactElement;
   }, [children, value]);
 

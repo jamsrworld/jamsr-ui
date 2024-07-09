@@ -1,5 +1,11 @@
 # @jamsr-ui/tab
 
+## 0.0.36
+
+### Patch Changes
+
+- fix tabs
+
 ## 0.0.35
 
 ### Patch Changes

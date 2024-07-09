@@ -161,9 +161,29 @@ export const Variants: Story = {
   },
 };
 
+export const As: Story = {
+  render: () => {
+    return (
+      <Tabs as="nav" aria-label="Tabs as nav">
+        <Tab
+          value="photos"
+          heading="Photos"
+          as="a"
+          href="https://jamsrworld.com"
+        />
+        <Tab value="music" heading="Music" />
+        <Tab value="videos" heading="Videos" />
+      </Tabs>
+    );
+  },
+};
+
 export const Outside: Story = {
   render: () => {
-    const [activeTab, setActiveTab] = useState("photos");
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [activeTab, setActiveTab] = useState<"photos" | "music" | "videos">(
+      "photos",
+    );
     return (
       <>
         <div>

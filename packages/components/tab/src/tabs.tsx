@@ -3,8 +3,9 @@ import { useId } from "react";
 import { TabContext } from "./tabs-context";
 import { useTabs, type UseTabsProps } from "./use-tabs";
 
-export type TabsProps = UseTabsProps;
-export const Tabs = (props: TabsProps) => {
+export type TabsProps<T extends string> = UseTabsProps<T>;
+
+export const Tabs = <T extends string>(props: TabsProps<T>) => {
   const {
     getBaseProps,
     getTabListProps,

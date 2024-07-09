@@ -13,7 +13,7 @@ import { tabsVariant } from "./style";
 import type { TabProps } from "./tab";
 import type { TabContextType } from "./tabs-context";
 
-type Props<T extends string = string> = {
+type Props<T extends string> = {
   classNames?: SlotsToClasses<TabsSlots>;
   children: React.ReactNode;
   value?: T;
@@ -21,9 +21,11 @@ type Props<T extends string = string> = {
   defaultValue?: T;
 };
 
-export type UseTabsProps = UIProps<"div"> & TabVariants & Props;
+export type UseTabsProps<T extends string> = UIProps<"div"> &
+  TabVariants &
+  Props<T>;
 
-export const useTabs = (props: UseTabsProps) => {
+export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
   const {
     classNames,
     className,

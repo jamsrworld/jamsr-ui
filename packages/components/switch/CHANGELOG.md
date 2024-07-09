@@ -1,5 +1,13 @@
 # @jamsr-ui/switch
 
+## 0.0.31
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.28
+  - @jamsr-ui/typography@0.0.31
+
 ## 0.0.30
 
 ### Patch Changes

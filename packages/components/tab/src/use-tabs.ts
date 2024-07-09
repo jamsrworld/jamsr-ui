@@ -2,6 +2,7 @@ import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
   dataAttr,
+  filterDOMProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -109,7 +110,9 @@ export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
         "data-disabled": dataAttr(props?.disabled),
         disabled: props?.disabled,
         "aria-disabled": props?.disabled,
-        ...props,
+        ...filterDOMProps(props ?? {}, {
+          omitPropNames: new Set(["value"]),
+        }),
         className: styles.tab({
           className: cn(classNames?.tab, props?.className),
         }),

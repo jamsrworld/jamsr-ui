@@ -10,3 +10,4 @@ export * from "./tv";
 export * from "./array";
 export * from "./dom";
 export * from "./merge-props";
+export { filterDOMProps } from "./filter-dom-props";

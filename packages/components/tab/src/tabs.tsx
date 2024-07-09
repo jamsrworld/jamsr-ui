@@ -23,7 +23,9 @@ export const Tabs = (props: TabsProps) => {
           <LayoutGroup id={id}>{children}</LayoutGroup>
         </TabContext.Provider>
       </div>
-      <div {...getPanelProps()}>{selectedTabContent}</div>
+      {selectedTabContent && (
+        <div {...getPanelProps()}>{selectedTabContent}</div>
+      )}
     </Component>
   );
 };

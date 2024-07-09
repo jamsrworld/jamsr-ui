@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@jamsr-ui/card";
 import { type Meta, type StoryObj } from "@storybook/react";
+import { useState } from "react";
 import { Tab, Tabs } from "../src";
 
 const meta: Meta<typeof Tab> = {
@@ -156,6 +157,30 @@ export const Variants: Story = {
           </Tabs>
         ))}
       </div>
+    );
+  },
+};
+
+export const Outside: Story = {
+  render: () => {
+    const [activeTab, setActiveTab] = useState("photos");
+    return (
+      <>
+        <div>
+          {/* tabs */}
+          <Tabs value={activeTab} onValueChange={setActiveTab}>
+            <Tab value="photos" title="Photos" />
+            <Tab value="music" title="Music" />
+            <Tab value="videos" title="Videos" />
+          </Tabs>
+        </div>
+        <div>
+          {activeTab === "photos" && "photos"}
+          {activeTab === "music" && "music"}
+          {activeTab === "videos" && "videos"}
+          {/* content */}
+        </div>
+      </>
     );
   },
 };

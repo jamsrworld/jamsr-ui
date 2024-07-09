@@ -11,7 +11,7 @@ export type TabProps = ComponentPropsWithAs<
 >;
 
 export const Tab = (props: TabProps) => {
-  const { title, value, children: _, onClick, as } = props;
+  const { title, value, children, onClick, as } = props;
   const { selectedValue, onValueChange, getTabProps, getTabContentProps } =
     useTabsContext();
   const isActive = value === selectedValue;

@@ -5,7 +5,7 @@ export const tabsVariant = tv({
   slots: {
     base: "",
     tabList: [
-      "flex",
+      "inline-flex",
       "p-1",
       "h-fit",
       "gap-2",

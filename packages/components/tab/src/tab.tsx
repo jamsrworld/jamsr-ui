@@ -5,13 +5,13 @@ import { useTabsContext } from "./tabs-context";
 export type TabProps = ComponentPropsWithAs<
   "button",
   {
-    title: string;
+    heading: React.ReactNode;
     value: string;
   }
 >;
 
 export const Tab = (props: TabProps) => {
-  const { title, value, children, onClick, as } = props;
+  const { heading, value, children, onClick, as } = props;
   const { selectedValue, onValueChange, getTabProps, getTabContentProps } =
     useTabsContext();
   const isActive = value === selectedValue;
@@ -23,7 +23,7 @@ export const Tab = (props: TabProps) => {
 
   return (
     <Component {...getTabProps(props)} onClick={handleClick}>
-      <div {...getTabContentProps()}>{title}</div>
+      <div {...getTabContentProps()}>{heading}</div>
       {isActive && <Cursor />}
     </Component>
   );

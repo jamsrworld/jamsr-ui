@@ -1,5 +1,12 @@
 # @jamsr-ui/react
 
+## 0.0.70
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/tab@0.0.35
+
 ## 0.0.69
 
 ### Patch Changes

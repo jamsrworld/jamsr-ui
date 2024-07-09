@@ -25,13 +25,13 @@ const content = (
 const Template = () => {
   return (
     <Tabs defaultValue="photos">
-      <Tab value="photos" title="Photos">
+      <Tab value="photos" heading="Photos">
         {content}
       </Tab>
-      <Tab value="music" title="Music">
+      <Tab value="music" heading="Music">
         {content}
       </Tab>
-      <Tab value="videos" title="Videos">
+      <Tab value="videos" heading="Videos">
         {content}
       </Tab>
     </Tabs>
@@ -46,13 +46,13 @@ export const Disabled: Story = {
   render: () => {
     return (
       <Tabs defaultValue="photos" isDisabled>
-        <Tab value="photos" title="Photos">
+        <Tab value="photos" heading="Photos">
           {content}
         </Tab>
-        <Tab value="music" title="Music">
+        <Tab value="music" heading="Music">
           {content}
         </Tab>
-        <Tab value="videos" title="Videos">
+        <Tab value="videos" heading="Videos">
           {content}
         </Tab>
       </Tabs>
@@ -64,13 +64,13 @@ export const DisabledItem: Story = {
   render: () => {
     return (
       <Tabs defaultValue="photos">
-        <Tab value="photos" title="Photos">
+        <Tab value="photos" heading="Photos">
           {content}
         </Tab>
-        <Tab value="music" title="Music" disabled>
+        <Tab value="music" heading="Music" disabled>
           {content}
         </Tab>
-        <Tab value="videos" title="Videos">
+        <Tab value="videos" heading="Videos">
           {content}
         </Tab>
       </Tabs>
@@ -85,9 +85,9 @@ export const Sizes: Story = {
       <div className="flex flex-wrap gap-4">
         {sizes.map((size) => (
           <Tabs key={size} size={size} aria-label="Tabs sizes">
-            <Tab value="photos" title="Photos" />
-            <Tab value="music" title="Music" />
-            <Tab value="videos" title="Videos" />
+            <Tab value="photos" heading="Photos" />
+            <Tab value="music" heading="Music" />
+            <Tab value="videos" heading="Videos" />
           </Tabs>
         ))}
       </div>
@@ -103,9 +103,9 @@ export const Radius: Story = {
       <div className="flex flex-wrap gap-4">
         {radiusList.map((radius) => (
           <Tabs key={radius} radius={radius} aria-label="Tabs radius">
-            <Tab value="photos" title="Photos" />
-            <Tab value="music" title="Music" />
-            <Tab value="videos" title="Videos" />
+            <Tab value="photos" heading="Photos" />
+            <Tab value="music" heading="Music" />
+            <Tab value="videos" heading="Videos" />
           </Tabs>
         ))}
       </div>
@@ -133,9 +133,9 @@ export const Colors: Story = {
             aria-label="Tabs colors"
             radius="full"
           >
-            <Tab value="photos" title="Photos" />
-            <Tab value="music" title="Music" />
-            <Tab value="videos" title="Videos" />
+            <Tab value="photos" heading="Photos" />
+            <Tab value="music" heading="Music" />
+            <Tab value="videos" heading="Videos" />
           </Tabs>
         ))}
       </div>
@@ -151,9 +151,9 @@ export const Variants: Story = {
       <div className="flex flex-wrap gap-4">
         {variants.map((variant) => (
           <Tabs key={variant} variant={variant} aria-label="Tabs variants">
-            <Tab value="photos" title="Photos" />
-            <Tab value="music" title="Music" />
-            <Tab value="videos" title="Videos" />
+            <Tab value="photos" heading="Photos" />
+            <Tab value="music" heading="Music" />
+            <Tab value="videos" heading="Videos" />
           </Tabs>
         ))}
       </div>
@@ -169,9 +169,9 @@ export const Outside: Story = {
         <div>
           {/* tabs */}
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <Tab value="photos" title="Photos" />
-            <Tab value="music" title="Music" />
-            <Tab value="videos" title="Videos" />
+            <Tab value="photos" heading="Photos" />
+            <Tab value="music" heading="Music" />
+            <Tab value="videos" heading="Videos" />
           </Tabs>
         </div>
         <div>

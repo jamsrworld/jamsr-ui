@@ -29,6 +29,7 @@ export type ImageUploadProps = {
   fileName?: string;
   helperText?: React.ReactNode;
   isInvalid?: boolean;
+  uploadIcon?: React.ReactNode;
 };
 
 export const ImageUpload = (props: ImageUploadProps) => {
@@ -50,6 +51,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
     fileSize,
     helperText,
     isInvalid,
+    uploadIcon = <ImageUploadIcon className="shrink-0 text-inherit" />,
   } = props;
   const [preview, setPreview] = useState("");
   const isImage = isImageExt(value);
@@ -120,7 +122,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
         className={baseStyles}
       >
         <input {...getInputProps()} />
-        <ImageUploadIcon className="shrink-0 text-inherit" />
+        {uploadIcon}
         {!isAvatar && (
           <>
             {description && (

@@ -231,12 +231,13 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
       return {
         "data-slot": "image",
         ...props,
+        src: previewUrl,
         className: styles.image({
           className: classNames?.image,
         }),
       };
     },
-    [classNames?.image, styles],
+    [classNames?.image, previewUrl, styles],
   );
 
   const getFileNameProps: PropGetter<ComponentProps<"div">> = useCallback(

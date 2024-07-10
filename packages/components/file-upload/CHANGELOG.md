@@ -1,5 +1,11 @@
 # @jamsr-ui/file-upload
 
+## 0.0.44
+
+### Patch Changes
+
+- fix upload
+
 ## 0.0.43
 
 ### Patch Changes

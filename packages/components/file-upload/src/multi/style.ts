@@ -4,7 +4,7 @@ import { tv } from "@jamsr-ui/utils";
 export const multiUploadVariant = tv({
   slots: {
     base: "flex flex-col gap-1",
-    innerWrapper: "flex gap-2",
+    innerWrapper: "flex flex-wrap gap-2",
     fileView: "group relative size-20",
     file: "size-full rounded-lg object-cover",
     deleteBtn:

@@ -42,6 +42,7 @@ export const uploadVariants = tv({
     file: "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 bg-black",
     overlay:
       "absolute inset-0 flex size-full items-center justify-center bg-black/60",
+    helperText: "text-xs text-foreground-500",
   },
   variants: {
     isDisabled: {
@@ -63,6 +64,12 @@ export const uploadVariants = tv({
     isDragActive: {
       true: {
         base: "border-solid border-primary bg-primary-50 text-primary",
+      },
+    },
+    isInvalid: {
+      true: {
+        base: "border-error text-error",
+        helperText: "text-error",
       },
     },
   },

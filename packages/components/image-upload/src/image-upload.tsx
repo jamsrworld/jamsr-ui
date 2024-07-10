@@ -27,6 +27,8 @@ export type ImageUploadProps = {
   dropzoneOptions?: DropzoneOptions;
   fileSize?: number;
   fileName?: string;
+  helperText?: React.ReactNode;
+  isInvalid?: boolean;
 };
 
 export const ImageUpload = (props: ImageUploadProps) => {
@@ -46,6 +48,8 @@ export const ImageUpload = (props: ImageUploadProps) => {
     info = "JPEG, PNG, and WEBP formats, up to 5MB",
     fileName,
     fileSize,
+    helperText,
+    isInvalid,
   } = props;
   const [preview, setPreview] = useState("");
   const isImage = isImageExt(value);
@@ -93,6 +97,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
     isDisabled,
     isAvatar,
     isDragActive,
+    isInvalid,
   });
   const baseStyles = styles.base({
     className: cn(classNames?.base, className),
@@ -104,77 +109,82 @@ export const ImageUpload = (props: ImageUploadProps) => {
   };
 
   return (
-    <div
-      {...getRootProps()}
-      data-slot="base"
-      data-component="image-upload"
-      data-drag-active={dataAttr(isDragActive)}
-      data-disabled={dataAttr(isDisabled)}
-      data-avatar={dataAttr(isAvatar)}
-      className={baseStyles}
-    >
-      <input {...getInputProps()} />
-      <ImageUploadIcon className="shrink-0 text-inherit" />
-      {!isAvatar && (
-        <>
-          {description && (
-            <p
-              data-slot="info"
-              className={styles.info({ className: classNames?.info })}
-            >
-              {description}
-            </p>
-          )}
-          {info && (
-            <p
-              data-slot="info"
-              className={styles.info({ className: classNames?.info })}
-            >
-              JPEG, PNG, and WEBP formats, up to 5MB
-            </p>
-          )}
-        </>
-      )}
-      {imageUrl && isImage && (
-        <img
-          data-slot="image"
-          className={styles.image({ className: classNames?.image })}
-          src={imageUrl}
-          alt=""
-        />
-      )}
+    <div>
+      <div
+        {...getRootProps()}
+        data-slot="base"
+        data-component="image-upload"
+        data-drag-active={dataAttr(isDragActive)}
+        data-disabled={dataAttr(isDisabled)}
+        data-avatar={dataAttr(isAvatar)}
+        className={baseStyles}
+      >
+        <input {...getInputProps()} />
+        <ImageUploadIcon className="shrink-0 text-inherit" />
+        {!isAvatar && (
+          <>
+            {description && (
+              <p
+                data-slot="info"
+                className={styles.info({ className: classNames?.info })}
+              >
+                {description}
+              </p>
+            )}
+            {info && (
+              <p
+                data-slot="info"
+                className={styles.info({ className: classNames?.info })}
+              >
+                JPEG, PNG, and WEBP formats, up to 5MB
+              </p>
+            )}
+          </>
+        )}
+        {imageUrl && isImage && (
+          <img
+            data-slot="image"
+            className={styles.image({ className: classNames?.image })}
+            src={imageUrl}
+            alt=""
+          />
+        )}
 
-      {!isImage && (
-        <div className={styles.file({ className: classNames?.overlay })}>
-          {getFileIcon(value)}
-          {fileName && (
-            <span className="w-11/12 truncate text-xs">{fileName}</span>
-          )}
-          {fileSize && (
-            <span className="text-xs">{formatFileSize(fileSize)}</span>
-          )}
-        </div>
-      )}
+        {!isImage && (
+          <div className={styles.file({ className: classNames?.overlay })}>
+            {getFileIcon(value)}
+            {fileName && (
+              <span className="w-11/12 truncate text-center text-xs">
+                {fileName}
+              </span>
+            )}
+            {fileSize && (
+              <span className="text-xs">{formatFileSize(fileSize)}</span>
+            )}
+          </div>
+        )}
 
-      {showDeleteBtn && imageUrl && !isDisabled && (
-        <button
-          type="button"
-          data-slot="delete-btn"
-          aria-label="Delete"
-          onClick={handleDelete}
-          className={styles.deleteBtn({ className: classNames?.deleteBtn })}
-        >
-          <Close />
-        </button>
-      )}
-      {!!progress && (
-        <div
-          data-slot="overlay"
-          className={styles.overlay({ className: classNames?.overlay })}
-        >
-          <CircularProgress />
-        </div>
-      )}
+        {showDeleteBtn && imageUrl && !isDisabled && (
+          <button
+            type="button"
+            data-slot="delete-btn"
+            aria-label="Delete"
+            onClick={handleDelete}
+            className={styles.deleteBtn({ className: classNames?.deleteBtn })}
+          >
+            <Close />
+          </button>
+        )}
+        {!!progress && (
+          <div
+            data-slot="overlay"
+            className={styles.overlay({ className: classNames?.overlay })}
+          >
+            <CircularProgress />
+          </div>
+        )}
+      </div>
+      {helperText && <div className={styles.helperText()}>{helperText}</div>}
     </div>
   );
 };

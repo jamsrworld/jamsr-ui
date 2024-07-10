@@ -114,6 +114,12 @@ export const SingleImage: Story = {
   render: SingleImageTemplate,
 };
 
+export const HelperText: Story = {
+  render: () => (
+    <SingleImageTemplate isInvalid helperText="Image is required" />
+  ),
+};
+
 export const Avatar: Story = {
   render: () => <SingleImageTemplate isAvatar className="aspect-square" />,
 };

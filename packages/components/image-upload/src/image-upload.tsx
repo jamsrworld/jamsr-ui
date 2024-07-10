@@ -136,7 +136,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
                 data-slot="info"
                 className={styles.info({ className: classNames?.info })}
               >
-                JPEG, PNG, and WEBP formats, up to 5MB
+                {info}
               </p>
             )}
           </>

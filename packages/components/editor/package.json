@@ -1,0 +1,51 @@
+{
+  "name": "@jamsr-ui/editor",
+  "version": "0.0.4",
+  "main": "./src/index.ts",
+  "sideEffects": false,
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "author": "@jamsrworld",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "main": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "devDependencies": {
+    "@jamsr-ui/tailwind-config": "workspace:^",
+    "@types/react": "^18.3.3",
+    "clean-package": "^2.2.0",
+    "react": "19.0.0-rc-c21bcd627b-20240624",
+    "react-dom": "19.0.0-rc-c21bcd627b-20240624"
+  },
+  "clean-package": "../../../clean-package.config.json",
+  "dependencies": {
+    "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/divider": "workspace:^",
+    "@jamsr-ui/hooks": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^",
+    "@tiptap/extension-character-count": "^2.2.4",
+    "@tiptap/extension-highlight": "^2.2.4",
+    "@tiptap/extension-placeholder": "^2.2.4",
+    "@tiptap/extension-task-item": "^2.2.4",
+    "@tiptap/extension-task-list": "^2.2.4",
+    "@tiptap/react": "^2.2.4",
+    "@tiptap/starter-kit": "^2.2.4",
+    "remixicon": "^4.3.0"
+  },
+  "peerDependencies": {
+    "react": "19.0.0-rc-c21bcd627b-20240624",
+    "react-dom": "19.0.0-rc-c21bcd627b-20240624"
+  }
+}

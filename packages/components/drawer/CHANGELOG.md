@@ -1,5 +1,11 @@
 # @jamsr-ui/drawer
 
+## 1.0.26
+
+### Patch Changes
+
+- editor new
+
 ## 1.0.25
 
 ### Patch Changes

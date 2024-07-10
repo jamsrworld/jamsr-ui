@@ -1,0 +1,18 @@
+.editor {
+  p {
+    @apply outline-none focus-visible:outline-none;
+  }
+
+  p.is-editor-empty:first-child::before {
+    color: var(--gray-4);
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+    @apply text-xs text-foreground-400;
+  }
+
+  [contenteditable]:focus {
+    outline: 0px solid transparent;
+  }
+}

@@ -167,3 +167,8 @@ const RadioGroupCustomTemplate = (args: RadioGroupProps) => {
 export const RadioGroupCustom = {
   render: RadioGroupCustomTemplate,
 };
+
+const Test = () => {
+  const [value, setValue] = useState<"a" | "b">("a");
+  return <RadioGroup value={value} onValueChange={setValue} />;
+};

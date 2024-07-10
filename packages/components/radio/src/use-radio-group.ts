@@ -20,17 +20,22 @@ export type ContextType = Common & {
   onSelectedValueChange: (value: string) => void;
 };
 
-interface Props extends Omit<UIProps<"div">, "onChange">, Common {
-  onValueChange?: (value: string) => void;
+type Props<T extends string> = {
+  value?: T;
+  onValueChange?: (value: T) => void;
   classNames?: SlotsToClasses<RadioGroupSlots>;
   label?: React.ReactNode;
   helperText?: React.ReactNode;
-  value?: string;
   defaultValue?: string;
-}
+};
 
-export type UseRadioGroupProps = Props;
-export const useRadioGroup = (props: UseRadioGroupProps) => {
+export type UseRadioGroupProps<T extends string = string> = Props<T> &
+  Omit<UIProps<"div">, "onChange"> &
+  Common;
+
+export const useRadioGroup = <T extends string>(
+  props: UseRadioGroupProps<T>,
+) => {
   const {
     as,
     className,
@@ -48,7 +53,8 @@ export const useRadioGroup = (props: UseRadioGroupProps) => {
     children,
     helperText,
     ...restProps
-  } = props;
+  } = props as UseRadioGroupProps<string>;
+
   const Component = as ?? "div";
 
   const [selectedValue = "", setSelectedValue] = useControlledState({

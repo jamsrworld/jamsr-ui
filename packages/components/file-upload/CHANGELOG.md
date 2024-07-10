@@ -1,4 +1,4 @@
-# @jamsr-ui/image-upload
+# @jamsr-ui/file-upload
 
 ## 0.0.42
 

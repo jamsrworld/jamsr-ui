@@ -9,7 +9,13 @@ export const isImageExt = (url: string): boolean => {
   }
 };
 
-export const getFileIcon = (url: string) => {
+export const getFileExtension = (url: string) => {
+  const ext = new URL(url).pathname.split(".").pop();
+  if (!ext) return "";
+  return ext;
+};
+
+export const getFileIconFromUrl = (url: string) => {
   if (!url.length) return null;
   const ext = new URL(url).pathname.split(".").pop();
   switch (ext) {

@@ -70,7 +70,7 @@
     "@jamsr-ui/divider": "workspace:*",
     "@jamsr-ui/editor": "workspace:^",
     "@jamsr-ui/header": "workspace:*",
-    "@jamsr-ui/image-upload": "workspace:*",
+    "@jamsr-ui/file-upload": "workspace:*",
     "@jamsr-ui/input": "workspace:*",
     "@jamsr-ui/link": "workspace:*",
     "@jamsr-ui/menu": "workspace:*",

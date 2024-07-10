@@ -5,7 +5,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.42
+  - @jamsr-ui/file-upload@0.0.42
 
 ## 0.0.77
 
@@ -13,21 +13,21 @@
 
 - fix uploads
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.41
+  - @jamsr-ui/file-upload@0.0.41
 
 ## 0.0.76
 
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.40
+  - @jamsr-ui/file-upload@0.0.40
 
 ## 0.0.75
 
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.39
+  - @jamsr-ui/file-upload@0.0.39
 
 ## 0.0.74
 
@@ -37,7 +37,7 @@
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.38
   - @jamsr-ui/confirmation@0.0.10
-  - @jamsr-ui/image-upload@0.0.38
+  - @jamsr-ui/file-upload@0.0.38
   - @jamsr-ui/accordion@0.0.36
   - @jamsr-ui/textarea@0.0.35
   - @jamsr-ui/dialog@0.0.34
@@ -59,7 +59,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.37
+  - @jamsr-ui/file-upload@0.0.37
   - @jamsr-ui/accordion@0.0.35
   - @jamsr-ui/alert@0.0.34
   - @jamsr-ui/autocomplete@0.0.37
@@ -93,7 +93,7 @@
   - @jamsr-ui/dialog@0.0.32
   - @jamsr-ui/divider@0.0.31
   - @jamsr-ui/header@0.0.34
-  - @jamsr-ui/image-upload@0.0.36
+  - @jamsr-ui/file-upload@0.0.36
   - @jamsr-ui/input@0.0.33
   - @jamsr-ui/link@0.0.32
   - @jamsr-ui/menu@0.0.35
@@ -146,7 +146,7 @@
 
 - fix lgos
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.35
+  - @jamsr-ui/file-upload@0.0.35
   - @jamsr-ui/accordion@0.0.33
   - @jamsr-ui/alert@0.0.32
   - @jamsr-ui/autocomplete@0.0.35
@@ -187,7 +187,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.34
+  - @jamsr-ui/file-upload@0.0.34
 
 ## 0.0.65
 
@@ -253,7 +253,7 @@
   - @jamsr-ui/confirmation@0.0.6
   - @jamsr-ui/dialog@0.0.30
   - @jamsr-ui/divider@0.0.29
-  - @jamsr-ui/image-upload@0.0.33
+  - @jamsr-ui/file-upload@0.0.33
   - @jamsr-ui/link@0.0.30
   - @jamsr-ui/otp-input@0.0.29
   - @jamsr-ui/popover@0.0.30
@@ -342,7 +342,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.32
+  - @jamsr-ui/file-upload@0.0.32
 
 ## 0.0.50
 
@@ -350,7 +350,7 @@
 
 - fix
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.31
+  - @jamsr-ui/file-upload@0.0.31
   - @jamsr-ui/accordion@0.0.31
   - @jamsr-ui/avatar@0.0.30
   - @jamsr-ui/select@0.0.30
@@ -444,7 +444,7 @@
   - @jamsr-ui/dialog@0.0.29
   - @jamsr-ui/divider@0.0.28
   - @jamsr-ui/header@0.0.30
-  - @jamsr-ui/image-upload@0.0.30
+  - @jamsr-ui/file-upload@0.0.30
   - @jamsr-ui/input@0.0.28
   - @jamsr-ui/link@0.0.29
   - @jamsr-ui/menu@0.0.29
@@ -469,14 +469,14 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.29
+  - @jamsr-ui/file-upload@0.0.29
 
 ## 0.0.39
 
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.28
+  - @jamsr-ui/file-upload@0.0.28
 
 ## 0.0.38
 
@@ -485,7 +485,7 @@
 - added type
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.26
-  - @jamsr-ui/image-upload@0.0.26
+  - @jamsr-ui/file-upload@0.0.26
   - @jamsr-ui/typography@0.0.26
   - @jamsr-ui/accordion@0.0.27
   - @jamsr-ui/otp-input@0.0.26
@@ -522,7 +522,7 @@
 - new version
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.25
-  - @jamsr-ui/image-upload@0.0.25
+  - @jamsr-ui/file-upload@0.0.25
   - @jamsr-ui/typography@0.0.25
   - @jamsr-ui/accordion@0.0.26
   - @jamsr-ui/otp-input@0.0.25
@@ -557,7 +557,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/image-upload@0.0.24
+  - @jamsr-ui/file-upload@0.0.24
   - @jamsr-ui/utils@0.0.22
   - @jamsr-ui/accordion@0.0.25
   - @jamsr-ui/alert@0.0.24
@@ -611,7 +611,7 @@
   - @jamsr-ui/dialog@0.0.24
   - @jamsr-ui/divider@0.0.23
   - @jamsr-ui/header@0.0.25
-  - @jamsr-ui/image-upload@0.0.23
+  - @jamsr-ui/file-upload@0.0.23
   - @jamsr-ui/input@0.0.23
   - @jamsr-ui/link@0.0.24
   - @jamsr-ui/menu@0.0.24
@@ -675,7 +675,7 @@
   - @jamsr-ui/dialog@0.0.23
   - @jamsr-ui/divider@0.0.22
   - @jamsr-ui/header@0.0.22
-  - @jamsr-ui/image-upload@0.0.22
+  - @jamsr-ui/file-upload@0.0.22
   - @jamsr-ui/input@0.0.22
   - @jamsr-ui/link@0.0.23
   - @jamsr-ui/menu@0.0.23
@@ -700,7 +700,7 @@
 - fix
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.21
-  - @jamsr-ui/image-upload@0.0.21
+  - @jamsr-ui/file-upload@0.0.21
   - @jamsr-ui/typography@0.0.21
   - @jamsr-ui/accordion@0.0.22
   - @jamsr-ui/otp-input@0.0.21
@@ -747,7 +747,7 @@
   - @jamsr-ui/dialog@0.0.21
   - @jamsr-ui/divider@0.0.20
   - @jamsr-ui/header@0.0.20
-  - @jamsr-ui/image-upload@0.0.20
+  - @jamsr-ui/file-upload@0.0.20
   - @jamsr-ui/input@0.0.20
   - @jamsr-ui/link@0.0.21
   - @jamsr-ui/menu@0.0.21
@@ -783,7 +783,7 @@
   - @jamsr-ui/dialog@0.0.20
   - @jamsr-ui/divider@0.0.19
   - @jamsr-ui/header@0.0.19
-  - @jamsr-ui/image-upload@0.0.19
+  - @jamsr-ui/file-upload@0.0.19
   - @jamsr-ui/input@0.0.19
   - @jamsr-ui/link@0.0.20
   - @jamsr-ui/menu@0.0.20
@@ -823,7 +823,7 @@
 - unknown
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.18
-  - @jamsr-ui/image-upload@0.0.18
+  - @jamsr-ui/file-upload@0.0.18
   - @jamsr-ui/typography@0.0.18
   - @jamsr-ui/accordion@0.0.19
   - @jamsr-ui/otp-input@0.0.18
@@ -869,7 +869,7 @@
   - @jamsr-ui/dialog@0.0.18
   - @jamsr-ui/divider@0.0.17
   - @jamsr-ui/header@0.0.17
-  - @jamsr-ui/image-upload@0.0.17
+  - @jamsr-ui/file-upload@0.0.17
   - @jamsr-ui/input@0.0.17
   - @jamsr-ui/link@0.0.17
   - @jamsr-ui/menu@0.0.18
@@ -904,7 +904,7 @@
 - remove scrips from package.json
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.16
-  - @jamsr-ui/image-upload@0.0.16
+  - @jamsr-ui/file-upload@0.0.16
   - @jamsr-ui/typography@0.0.16
   - @jamsr-ui/accordion@0.0.17
   - @jamsr-ui/otp-input@0.0.16
@@ -950,7 +950,7 @@
   - @jamsr-ui/dialog@0.0.15
   - @jamsr-ui/divider@0.0.15
   - @jamsr-ui/header@0.0.15
-  - @jamsr-ui/image-upload@0.0.15
+  - @jamsr-ui/file-upload@0.0.15
   - @jamsr-ui/input@0.0.15
   - @jamsr-ui/link@0.0.15
   - @jamsr-ui/menu@0.0.15
@@ -980,7 +980,7 @@
 - fix clean package path error
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.14
-  - @jamsr-ui/image-upload@0.0.14
+  - @jamsr-ui/file-upload@0.0.14
   - @jamsr-ui/typography@0.0.14
   - @jamsr-ui/accordion@0.0.15
   - @jamsr-ui/otp-input@0.0.14
@@ -1026,7 +1026,7 @@
   - @jamsr-ui/dialog@0.0.13
   - @jamsr-ui/divider@0.0.13
   - @jamsr-ui/header@0.0.13
-  - @jamsr-ui/image-upload@0.0.13
+  - @jamsr-ui/file-upload@0.0.13
   - @jamsr-ui/input@0.0.13
   - @jamsr-ui/link@0.0.13
   - @jamsr-ui/menu@0.0.13
@@ -1050,7 +1050,7 @@
 - fix deps
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.12
-  - @jamsr-ui/image-upload@0.0.12
+  - @jamsr-ui/file-upload@0.0.12
   - @jamsr-ui/typography@0.0.12
   - @jamsr-ui/accordion@0.0.13
   - @jamsr-ui/otp-input@0.0.12
@@ -1085,7 +1085,7 @@
 - fix dev deps
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.11
-  - @jamsr-ui/image-upload@0.0.11
+  - @jamsr-ui/file-upload@0.0.11
   - @jamsr-ui/typography@0.0.11
   - @jamsr-ui/accordion@0.0.12
   - @jamsr-ui/otp-input@0.0.11
@@ -1120,7 +1120,7 @@
 - clean package
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.10
-  - @jamsr-ui/image-upload@0.0.10
+  - @jamsr-ui/file-upload@0.0.10
   - @jamsr-ui/typography@0.0.10
   - @jamsr-ui/accordion@0.0.11
   - @jamsr-ui/otp-input@0.0.10
@@ -1166,7 +1166,7 @@
   - @jamsr-ui/dialog@0.0.9
   - @jamsr-ui/divider@0.0.9
   - @jamsr-ui/header@0.0.9
-  - @jamsr-ui/image-upload@0.0.9
+  - @jamsr-ui/file-upload@0.0.9
   - @jamsr-ui/input@0.0.9
   - @jamsr-ui/link@0.0.9
   - @jamsr-ui/menu@0.0.9
@@ -1201,7 +1201,7 @@
   - @jamsr-ui/dialog@0.0.8
   - @jamsr-ui/divider@0.0.8
   - @jamsr-ui/header@0.0.8
-  - @jamsr-ui/image-upload@0.0.8
+  - @jamsr-ui/file-upload@0.0.8
   - @jamsr-ui/input@0.0.8
   - @jamsr-ui/link@0.0.8
   - @jamsr-ui/menu@0.0.8
@@ -1225,7 +1225,7 @@
 - base components
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.7
-  - @jamsr-ui/image-upload@0.0.7
+  - @jamsr-ui/file-upload@0.0.7
   - @jamsr-ui/typography@0.0.7
   - @jamsr-ui/accordion@0.0.8
   - @jamsr-ui/otp-input@0.0.7
@@ -1270,7 +1270,7 @@
   - @jamsr-ui/dialog@0.0.6
   - @jamsr-ui/divider@0.0.6
   - @jamsr-ui/header@0.0.6
-  - @jamsr-ui/image-upload@0.0.6
+  - @jamsr-ui/file-upload@0.0.6
   - @jamsr-ui/input@0.0.6
   - @jamsr-ui/link@0.0.6
   - @jamsr-ui/menu@0.0.6
@@ -1294,7 +1294,7 @@
 - fix tv export
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.5
-  - @jamsr-ui/image-upload@0.0.5
+  - @jamsr-ui/file-upload@0.0.5
   - @jamsr-ui/typography@0.0.5
   - @jamsr-ui/accordion@0.0.6
   - @jamsr-ui/otp-input@0.0.5
@@ -1329,7 +1329,7 @@
 - fix scrips in missing packages
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.4
-  - @jamsr-ui/image-upload@0.0.4
+  - @jamsr-ui/file-upload@0.0.4
   - @jamsr-ui/typography@0.0.4
   - @jamsr-ui/accordion@0.0.5
   - @jamsr-ui/otp-input@0.0.4
@@ -1375,7 +1375,7 @@
   - @jamsr-ui/dialog@0.0.3
   - @jamsr-ui/divider@0.0.3
   - @jamsr-ui/header@0.0.3
-  - @jamsr-ui/image-upload@0.0.3
+  - @jamsr-ui/file-upload@0.0.3
   - @jamsr-ui/input@0.0.3
   - @jamsr-ui/link@0.0.3
   - @jamsr-ui/menu@0.0.3
@@ -1399,7 +1399,7 @@
 - fix main script
 - Updated dependencies
   - @jamsr-ui/autocomplete@0.0.2
-  - @jamsr-ui/image-upload@0.0.2
+  - @jamsr-ui/file-upload@0.0.2
   - @jamsr-ui/typography@0.0.2
   - @jamsr-ui/accordion@0.0.3
   - @jamsr-ui/otp-input@0.0.2
@@ -1462,7 +1462,7 @@
   - @jamsr-ui/dialog@0.0.1
   - @jamsr-ui/divider@0.0.1
   - @jamsr-ui/header@0.0.1
-  - @jamsr-ui/image-upload@0.0.1
+  - @jamsr-ui/file-upload@0.0.1
   - @jamsr-ui/input@0.0.1
   - @jamsr-ui/link@0.0.1
   - @jamsr-ui/menu@0.0.1

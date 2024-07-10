@@ -1,4 +1,5 @@
-import type { PropGetter, PropsOf, SlotsToClasses } from "@jamsr-ui/utils";
+import { ImageUpload as FileUploadIcon } from "@jamsr-ui/shared-icons";
+import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import { cn, dataAttr } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import { useCallback } from "react";
@@ -9,7 +10,7 @@ import {
   type MultiUploadVariants,
 } from "./style";
 
-export type MultiUploadImgState = {
+export type MultiFileUploadState = {
   file?: File;
   preview: string;
   id: string;
@@ -17,9 +18,9 @@ export type MultiUploadImgState = {
 };
 
 type Props = MultiUploadVariants & {
-  value: MultiUploadImgState[];
-  onValueChange: (value: MultiUploadImgState[]) => void;
-  onFilesSelect: (file: MultiUploadImgState[]) => void | Promise<void>;
+  value: MultiFileUploadState[];
+  onValueChange: (value: MultiFileUploadState[]) => void;
+  onFilesSelect: (file: MultiFileUploadState[]) => void | Promise<void>;
   className?: string;
   classNames?: SlotsToClasses<MultiUploadSlots>;
   isDisabled?: boolean;
@@ -28,10 +29,14 @@ type Props = MultiUploadVariants & {
   dropzoneOptions?: DropzoneOptions;
   onDelete?: (id: string) => void;
   maxFileSize?: number;
+  isInvalid?: boolean;
+  helperText?: React.ReactNode;
+  uploadIcon?: React.ReactNode;
+  info?: React.ReactNode;
 };
 
-export type UseMultiUploadProps = Props & Omit<PropsOf<"div">, "onError">;
-export const useMultiUpload = (props: UseMultiUploadProps) => {
+export type UseMultiFileUploadProps = Props & UIProps<"div", keyof Props>;
+export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
   const {
     value,
     className,
@@ -43,17 +48,18 @@ export const useMultiUpload = (props: UseMultiUploadProps) => {
     showDeleteBtn = true,
     dropzoneOptions = {},
     onDelete,
+    isInvalid,
+    helperText,
+    info,
+    uploadIcon = <FileUploadIcon className="shrink-0 text-inherit" />,
     ...restProps
   } = props;
   const { maxFiles } = dropzoneOptions;
-  const canUploadImage = maxFiles ? value.length < maxFiles : true;
+  const canUploadFile = maxFiles ? value.length < maxFiles : true;
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     maxFiles,
     multiple: true,
-    accept: {
-      "image/*": [".jpeg", ".png", ".webp"],
-    },
     disabled: isDisabled,
     onDrop: (acceptedFiles: File[]) => {
       const files = acceptedFiles;
@@ -63,7 +69,7 @@ export const useMultiUpload = (props: UseMultiUploadProps) => {
         return;
       }
 
-      const selectedFiles = files.map<MultiUploadImgState>((file) => {
+      const selectedFiles = files.map<MultiFileUploadState>((file) => {
         const objectUrl = URL.createObjectURL(file);
         return {
           preview: objectUrl,
@@ -92,6 +98,7 @@ export const useMultiUpload = (props: UseMultiUploadProps) => {
   const styles = multiUploadVariant({
     isDisabled,
     isDragActive,
+    isInvalid,
   });
 
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: string) => {
@@ -103,7 +110,7 @@ export const useMultiUpload = (props: UseMultiUploadProps) => {
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
-        "data-component": "image-upload",
+        "data-component": "file-upload",
         "data-slot": "base",
         "data-drag-active": dataAttr(isDragActive),
         "data-disabled": dataAttr(isDisabled),
@@ -172,6 +179,45 @@ export const useMultiUpload = (props: UseMultiUploadProps) => {
     [classNames?.picker, styles],
   );
 
+  const getHelperTextProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        "data-slot": "helper-text",
+        className: styles.helperText({
+          className: cn(classNames?.helperText, props?.className),
+        }),
+        ...props,
+      };
+    },
+    [classNames?.helperText, styles],
+  );
+
+  const getInnerWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        "data-slot": "inner-wrapper",
+        className: styles.innerWrapper({
+          className: cn(classNames?.innerWrapper, props?.className),
+        }),
+        ...props,
+      };
+    },
+    [classNames?.innerWrapper, styles],
+  );
+
+  const getInfoProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        "data-slot": "info",
+        className: styles.info({
+          className: cn(classNames?.info, props?.className),
+        }),
+        ...props,
+      };
+    },
+    [classNames?.info, styles],
+  );
+
   return {
     getRootProps,
     getInputProps,
@@ -184,6 +230,12 @@ export const useMultiUpload = (props: UseMultiUploadProps) => {
     value,
     showDeleteBtn,
     isDisabled,
-    canUploadImage,
+    canUploadFile,
+    helperText,
+    getHelperTextProps,
+    getInnerWrapperProps,
+    info,
+    getInfoProps,
+    uploadIcon,
   };
 };

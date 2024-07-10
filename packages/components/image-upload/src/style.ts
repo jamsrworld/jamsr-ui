@@ -34,11 +34,12 @@ export type MultiUploadSlots = keyof ReturnType<typeof multiUploadVariant>;
 
 export const uploadVariants = tv({
   slots: {
-    base: "group relative flex aspect-video select-none flex-col items-center justify-center rounded-lg border-2 border-dashed border-divider",
+    base: "group relative flex aspect-video select-none flex-col items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-divider",
     image: "absolute size-full rounded-md object-cover",
     deleteBtn:
       "absolute right-0 top-0 hidden hover:text-error group-hover:block",
     info: "text-xs",
+    file: "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 bg-black",
     overlay:
       "absolute inset-0 flex size-full items-center justify-center bg-black/60",
   },

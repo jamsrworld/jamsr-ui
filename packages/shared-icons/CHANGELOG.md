@@ -1,5 +1,17 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.29
+
+### Patch Changes
+
+- fix consoles
+
+## 0.0.28
+
+### Patch Changes
+
+- image with file
+
 ## 0.0.27
 
 ### Patch Changes

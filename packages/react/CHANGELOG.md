@@ -1,5 +1,50 @@
 # @jamsr-ui/react
 
+## 0.0.74
+
+### Patch Changes
+
+- fix consoles
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.38
+  - @jamsr-ui/confirmation@0.0.10
+  - @jamsr-ui/image-upload@0.0.38
+  - @jamsr-ui/accordion@0.0.36
+  - @jamsr-ui/textarea@0.0.35
+  - @jamsr-ui/dialog@0.0.34
+  - @jamsr-ui/ripple@0.0.32
+  - @jamsr-ui/select@0.0.35
+  - @jamsr-ui/alert@0.0.35
+  - @jamsr-ui/input@0.0.35
+  - @jamsr-ui/chip@0.0.33
+  - @jamsr-ui/menu@0.0.37
+  - @jamsr-ui/button@0.0.32
+  - @jamsr-ui/popover@0.0.32
+  - @jamsr-ui/tooltip@0.0.31
+  - @jamsr-ui/header@0.0.34
+  - @jamsr-ui/tab@0.0.37
+  - @jamsr-ui/toast@0.0.2
+
+## 0.0.73
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/image-upload@0.0.37
+  - @jamsr-ui/accordion@0.0.35
+  - @jamsr-ui/alert@0.0.34
+  - @jamsr-ui/autocomplete@0.0.37
+  - @jamsr-ui/button@0.0.31
+  - @jamsr-ui/chip@0.0.32
+  - @jamsr-ui/dialog@0.0.33
+  - @jamsr-ui/input@0.0.34
+  - @jamsr-ui/menu@0.0.36
+  - @jamsr-ui/popover@0.0.32
+  - @jamsr-ui/select@0.0.34
+  - @jamsr-ui/textarea@0.0.34
+  - @jamsr-ui/tooltip@0.0.31
+  - @jamsr-ui/confirmation@0.0.9
+
 ## 0.0.72
 
 ### Patch Changes

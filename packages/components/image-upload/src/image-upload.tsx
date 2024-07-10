@@ -7,6 +7,7 @@ import type { DropzoneOptions } from "react-dropzone";
 import { useDropzone } from "react-dropzone";
 import type { UploadSlots } from "./style";
 import { uploadVariants } from "./style";
+import { formatFileSize, getFileIcon, isImageExt } from "./utils";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
@@ -24,6 +25,8 @@ export type ImageUploadProps = {
   description?: React.ReactNode;
   info?: React.ReactNode;
   dropzoneOptions?: DropzoneOptions;
+  fileSize?: number;
+  fileName?: string;
 };
 
 export const ImageUpload = (props: ImageUploadProps) => {
@@ -41,8 +44,11 @@ export const ImageUpload = (props: ImageUploadProps) => {
     dropzoneOptions,
     description = "Choose a file or drag & drop it here",
     info = "JPEG, PNG, and WEBP formats, up to 5MB",
+    fileName,
+    fileSize,
   } = props;
   const [preview, setPreview] = useState("");
+  const isImage = isImageExt(value);
 
   useEffect(() => {
     if (value && preview) {
@@ -55,16 +61,17 @@ export const ImageUpload = (props: ImageUploadProps) => {
     maxFiles: 1,
     maxSize: MAX_FILE_SIZE,
     multiple: false,
-    accept: {
-      "image/*": [".jpeg", ".png", ".webp"],
-    },
     disabled: isDisabled,
     onDrop: (acceptedFiles: File[]) => {
       const file = acceptedFiles[0];
       if (!file) return;
-      const objectUrl = URL.createObjectURL(file);
+      const isImage = file.type.startsWith("image/");
+      if (isImage) {
+        const objectUrl = URL.createObjectURL(file);
+        setPreview(objectUrl);
+      }
+
       onValueChange("");
-      setPreview(objectUrl);
       void onFileSelect(file);
     },
     onDropRejected(fileRejections) {
@@ -128,7 +135,7 @@ export const ImageUpload = (props: ImageUploadProps) => {
           )}
         </>
       )}
-      {imageUrl && (
+      {imageUrl && isImage && (
         <img
           data-slot="image"
           className={styles.image({ className: classNames?.image })}
@@ -136,6 +143,19 @@ export const ImageUpload = (props: ImageUploadProps) => {
           alt=""
         />
       )}
+
+      {!isImage && (
+        <div className={styles.file({ className: classNames?.overlay })}>
+          {getFileIcon(value)}
+          {fileName && (
+            <span className="w-11/12 truncate text-xs">{fileName}</span>
+          )}
+          {fileSize && (
+            <span className="text-xs">{formatFileSize(fileSize)}</span>
+          )}
+        </div>
+      )}
+
       {showDeleteBtn && imageUrl && !isDisabled && (
         <button
           type="button"

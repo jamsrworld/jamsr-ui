@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/confirmation",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -36,7 +36,7 @@
     "react-dom": "19.0.0-rc-c21bcd627b-20240624"
   },
   "dependencies": {
-    "@jamsr-ui/button": "^0.0.31",
+    "@jamsr-ui/button": "^0.0.32",
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/divider": "^0.0.31",
     "zustand": "^4.5.4"

@@ -1,5 +1,11 @@
 # @jamsr-ui/ripple
 
+## 0.0.32
+
+### Patch Changes
+
+- fix consoles
+
 ## 0.0.31
 
 ### Patch Changes

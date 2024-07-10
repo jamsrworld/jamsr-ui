@@ -19,9 +19,6 @@ export const useRipple = <T extends HTMLElement>(ref: React.RefObject<T>) => {
         const height = elem.clientHeight;
         const width = elem.clientWidth;
         const diameter = Math.max(width, height);
-
-        console.log("mousedown");
-
         setRipples([
           ...ripples,
           {

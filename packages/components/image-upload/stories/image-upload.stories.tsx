@@ -1,12 +1,11 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
-import {
-  ImageUpload,
-  MultiImageUpload,
+import type {
+  ImageUploadProps,
   MultiImageUploadProps,
-  type ImageUploadProps,
-  type MultiUploadImgState,
+  MultiUploadImgState,
 } from "../src";
+import { ImageUpload, MultiImageUpload } from "../src";
 
 const meta: Meta<typeof ImageUpload> = {
   title: "Components/Image Upload",
@@ -17,10 +16,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const fileUrl =
-  "https://cdn.jamsrworld.com/06-24-2024/avatar_1_1719214634268_71531560.jpg?w=3840&q=75";
+  "https://jamsrworld.com/assets/files/roi-nextjs-pages-master.zip-52635761687417717bc8a44ee-6aac-4d42-ab88-adf8ee1c48f1.zip";
+// "https://cdn.jamsrworld.com/06-24-2024/avatar_1_1719214634268_71531560.jpg?w=3840&q=75";
 
 const SingleImageTemplate = (props: Partial<ImageUploadProps>) => {
   const [value, setValue] = useState("");
+  console.log("value:->", value);
   const onFileSelect = async (file: File) => {
     console.log("file:->", file);
     // let upload file
@@ -44,6 +45,13 @@ const SingleImageTemplate = (props: Partial<ImageUploadProps>) => {
       className="aspect-video h-40"
       onError={handleOnError}
       showDeleteBtn
+      fileName="components-image-upload--single-image-nextjs-site.zip"
+      fileSize={3473433}
+      dropzoneOptions={{
+        accept: {
+          "image/*": [],
+        },
+      }}
       {...props}
     />
   );

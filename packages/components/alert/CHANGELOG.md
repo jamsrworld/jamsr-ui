@@ -1,5 +1,20 @@
 # @jamsr-ui/alert
 
+## 0.0.35
+
+### Patch Changes
+
+- fix consoles
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.29
+
+## 0.0.34
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.28
+
 ## 0.0.33
 
 ### Patch Changes

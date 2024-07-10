@@ -138,7 +138,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       const onClose = () => setValue(getNewValue(val));
 
       const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        console.log(e);
         e.stopPropagation();
         e.nativeEvent.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
@@ -187,7 +186,6 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   };
 
   const handleToggleOpen = useCallback(() => {
-    console.log("toggle");
     setIsFocused(true);
     setIsOpen((open) => !open);
   }, [setIsOpen]);

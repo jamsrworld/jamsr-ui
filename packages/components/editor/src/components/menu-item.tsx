@@ -1,6 +1,5 @@
-// @ts-expect-error err
-import remixiconUrl from "remixicon/fonts/remixicon.symbol.svg";
 import { Button } from "@jamsr-ui/button";
+import { Icons } from "./icons";
 
 export default function MenuItem({
   icon,
@@ -13,6 +12,8 @@ export default function MenuItem({
   action?: () => void;
   isActive?: (() => boolean) | null;
 }) {
+  const svgIcon = icon ? Icons[icon] : null;
+
   return (
     <Button
       isIconOnly
@@ -22,9 +23,7 @@ export default function MenuItem({
       aria-label={title}
       variant={isActive?.() ? "solid" : "light"}
     >
-      <svg fill="currentColor">
-        <use xlinkHref={`${remixiconUrl}#ri-${icon}`} />
-      </svg>
+      {svgIcon}
     </Button>
   );
 }

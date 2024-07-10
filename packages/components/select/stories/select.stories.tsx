@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@jamsr-ui/card";
 import { Email } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
@@ -137,4 +138,16 @@ export const CustomRenderComplex: Story = {
 
 export const CustomRenderMulti: Story = {
   render: CustomRenderMultiStory,
+};
+
+export const WithCard: Story = {
+  render: () => {
+    return (
+      <Card>
+        <CardContent>
+          <Template placeholder="Select as item..." />
+        </CardContent>
+      </Card>
+    );
+  },
 };

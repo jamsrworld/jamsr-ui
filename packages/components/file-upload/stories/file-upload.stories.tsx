@@ -17,8 +17,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const fileUrl =
-  // "https://jamsrworld.com/assets/files/roi-nextjs-pages-master.zip-52635761687417717bc8a44ee-6aac-4d42-ab88-adf8ee1c48f1.zip";
-  "https://cdn.jamsrworld.com/06-24-2024/avatar_1_1719214634268_71531560.jpg?w=3840&q=75";
+  "https://jamsrworld.com/assets/files/roi-nextjs-pages-master.zip-52635761687417717bc8a44ee-6aac-4d42-ab88-adf8ee1c48f1.zip";
+  // "https://cdn.jamsrworld.com/06-24-2024/avatar_1_1719214634268_71531560.jpg?w=3840&q=75";
 
 const SingleFileTemplate = (props: Partial<SingleFileUploadProps>) => {
   const [value, setValue] = useState("");

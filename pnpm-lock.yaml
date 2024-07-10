@@ -31,7 +31,7 @@ importers:
         version: 8.1.1(vitest@1.6.0(@types/node@20.12.12)(jsdom@24.0.0))
       '@testing-library/react':
         specifier: ^16.0.0
-        version: 16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
+        version: 16.0.0(@testing-library/dom@9.3.4)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -164,7 +164,7 @@ importers:
         version: link:../../packages/components/editor
       '@jamsr-ui/react':
         specifier: '*'
-        version: 0.0.62(@types/react-dom@18.3.0)(@types/react@18.3.3)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react-dropzone@14.2.3(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)
+        version: 0.0.62(@types/react-dom@18.3.0)(@types/react@18.3.3)(csstype@3.1.2)(emojibase@15.3.1)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react-dropzone@14.2.3(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)
       '@jamsr-ui/theme':
         specifier: workspace:*
         version: link:../../packages/theme
@@ -1148,6 +1148,9 @@ importers:
       '@jamsr-ui/avatar':
         specifier: workspace:^
         version: link:../avatar
+      '@jamsr-ui/card':
+        specifier: workspace:^
+        version: link:../card
       '@jamsr-ui/tailwind-config':
         specifier: workspace:*
         version: link:../../config/tailwind-config
@@ -2964,6 +2967,7 @@ packages:
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -2971,6 +2975,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.2':
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
+    deprecated: Use @eslint/object-schema instead
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -6450,6 +6455,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -6629,6 +6635,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -8092,6 +8099,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup@4.17.2:
@@ -10810,7 +10818,7 @@ snapshots:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/editor@0.0.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)':
+  '@jamsr-ui/editor@0.0.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(csstype@3.1.2)(emojibase@15.3.1)(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)':
     dependencies:
       '@fontsource/inter': 5.0.18
       '@hocuspocus/provider': 2.13.5(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)
@@ -11001,7 +11009,7 @@ snapshots:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/react@0.0.62(@types/react-dom@18.3.0)(@types/react@18.3.3)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react-dropzone@14.2.3(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)':
+  '@jamsr-ui/react@0.0.62(@types/react-dom@18.3.0)(@types/react@18.3.3)(csstype@3.1.2)(emojibase@15.3.1)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react-dropzone@14.2.3(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)':
     dependencies:
       '@jamsr-ui/accordion': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/alert': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
@@ -11016,7 +11024,7 @@ snapshots:
       '@jamsr-ui/core': 0.0.11(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
       '@jamsr-ui/dialog': 0.0.30(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/divider': 0.0.29(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
-      '@jamsr-ui/editor': 0.0.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)
+      '@jamsr-ui/editor': 0.0.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(csstype@3.1.2)(emojibase@15.3.1)(katex@0.16.11)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)
       '@jamsr-ui/header': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/image-upload': 0.0.33(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react-dropzone@14.2.3(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/input': 0.0.30(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
@@ -11034,7 +11042,7 @@ snapshots:
       '@jamsr-ui/tab': 0.0.29(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/table': 0.0.3(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/textarea': 0.0.30(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
-      '@jamsr-ui/toast': 0.0.1(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
+      '@jamsr-ui/toast': 0.0.1(csstype@3.1.2)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
       '@jamsr-ui/tooltip': 0.0.29(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/typography': 0.0.29(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/utils': 0.0.26(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
@@ -11152,7 +11160,7 @@ snapshots:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/toast@0.0.1(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)':
+  '@jamsr-ui/toast@0.0.1(csstype@3.1.2)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)':
     dependencies:
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624)
@@ -12891,6 +12899,16 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.24.5
       '@testing-library/dom': 10.1.0
+      react: 19.0.0-rc-c21bcd627b-20240624
+      react-dom: 19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624)
+    optionalDependencies:
+      '@types/react': 18.3.3
+      '@types/react-dom': 18.3.0
+
+  '@testing-library/react@16.0.0(@testing-library/dom@9.3.4)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)':
+    dependencies:
+      '@babel/runtime': 7.24.5
+      '@testing-library/dom': 9.3.4
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624)
     optionalDependencies:
@@ -14710,8 +14728,8 @@ snapshots:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.33.2(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
@@ -14738,13 +14756,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0):
+  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0):
     dependencies:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
       is-core-module: 2.13.1
@@ -14765,14 +14783,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -14786,7 +14804,7 @@ snapshots:
     dependencies:
       eslint: 8.57.0
 
-  eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-plugin-import@2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.7
       array.prototype.findlastindex: 1.2.3
@@ -14796,7 +14814,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3

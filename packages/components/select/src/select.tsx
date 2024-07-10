@@ -1,4 +1,4 @@
-import { FloatingFocusManager, FloatingList } from "@floating-ui/react";
+import { FloatingFocusManager, FloatingList, FloatingPortal } from "@floating-ui/react";
 import type { UseSelectProps } from "./use-select";
 import { useSelect } from "./use-select";
 import { SelectProvider } from "./use-select-context";
@@ -53,13 +53,15 @@ export const Select = (props: SelectProps) => {
         </button>
         <SelectProvider value={contextValue}>
           {isOpen && (
-            <FloatingFocusManager context={context} modal>
-              <div {...getPopoverProps()}>
-                <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
-                  <div {...getContentProps()}>{children}</div>
-                </FloatingList>
-              </div>
-            </FloatingFocusManager>
+            <FloatingPortal>
+              <FloatingFocusManager context={context} modal>
+                <div {...getPopoverProps()}>
+                  <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
+                    <div {...getContentProps()}>{children}</div>
+                  </FloatingList>
+                </div>
+              </FloatingFocusManager>
+            </FloatingPortal>
           )}
         </SelectProvider>
         {helperText && <div {...getHelperTextProps()}>{helperText}</div>}

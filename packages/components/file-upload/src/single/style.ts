@@ -16,8 +16,8 @@ export const singleUploadVariants = tv({
     progressOverlay:
       "absolute inset-0 flex size-full items-center justify-center bg-black/60",
     helperText: "text-xs text-foreground-500",
-    fileName: "",
-    fileSize: "",
+    fileName: "max-w-[90%] truncate text-center text-xs",
+    fileSize: "text-xs text-foreground-400",
   },
   variants: {
     isDisabled: {

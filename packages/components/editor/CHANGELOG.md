@@ -1,5 +1,15 @@
 # @jamsr-ui/editor
 
+## 0.0.9
+
+### Patch Changes
+
+- fix editor, select
+- Updated dependencies
+  - @jamsr-ui/button@0.0.33
+  - @jamsr-ui/select@0.0.39
+  - @jamsr-ui/menu@0.0.37
+
 ## 0.0.8
 
 ### Patch Changes

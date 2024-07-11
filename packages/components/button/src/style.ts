@@ -15,7 +15,7 @@ export const buttonVariant = tv({
     "whitespace-nowrap",
     "min-w-max",
     "font-medium",
-    "tap-highlight-color",
+    "tap-highlight-transparent",
     "subpixel-antialiased",
     // "overflow-hidden",
     "transition-transform",

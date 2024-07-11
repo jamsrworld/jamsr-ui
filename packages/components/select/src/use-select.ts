@@ -13,7 +13,8 @@ import {
   useTypeahead,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { cn, type PropGetter, type SlotsToClasses } from "@jamsr-ui/utils";
+import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
+import { cn } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import {
   Children,
@@ -31,9 +32,9 @@ import { selectVariant } from "./style";
 import type { SelectContextType } from "./use-select-context";
 
 export type SelectionSet = Set<string>;
-type Props = {
+
+type Props = SelectVariantProps & {
   placement?: Placement;
-  children: React.ReactNode;
   label?: string;
   placeholder?: string;
   isInvalid?: boolean;
@@ -52,7 +53,8 @@ type Props = {
   endContent?: React.ReactNode;
 };
 
-export type UseSelectProps = Props & SelectVariantProps;
+export type UseSelectInnerProps = Props;
+export type UseSelectProps = Props & UIProps<"div", keyof Props>;
 
 export const useSelect = (props: UseSelectProps) => {
   const {
@@ -76,8 +78,11 @@ export const useSelect = (props: UseSelectProps) => {
     placement = "bottom-start",
     startContent,
     endContent,
+    as,
+    ...restProps
   } = props;
 
+  const Component = as ?? "div";
   const [value = new Set([]), setValue] = useControlledState({
     prop: propValue,
     defaultProp: defaultValue,
@@ -231,10 +236,11 @@ export const useSelect = (props: UseSelectProps) => {
     return {
       "data-component": "select",
       "data-slot": "base",
+      ...props,
       className: styles.base({
         className: cn(classNames?.base, className),
       }),
-      ...props,
+      ...restProps,
     };
   };
 
@@ -335,6 +341,7 @@ export const useSelect = (props: UseSelectProps) => {
   };
 
   return {
+    Component,
     context,
     elementsRef,
     labelsRef,

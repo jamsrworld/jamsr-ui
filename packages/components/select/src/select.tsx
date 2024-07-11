@@ -3,13 +3,17 @@ import {
   FloatingList,
   FloatingPortal,
 } from "@floating-ui/react";
-import type { UseSelectProps } from "./use-select";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import type { UseSelectInnerProps } from "./use-select";
 import { useSelect } from "./use-select";
 import { SelectProvider } from "./use-select-context";
 
-export type SelectProps = UseSelectProps;
+export type SelectProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T, UseSelectInnerProps>;
 
-export const Select = (props: SelectProps) => {
+export const Select = <T extends React.ElementType = "div">(
+  props: SelectProps<T>,
+) => {
   const {
     context,
     elementsRef,
@@ -36,10 +40,11 @@ export const Select = (props: SelectProps) => {
     getRenderValue,
     startContent,
     endContent,
+    Component,
   } = useSelect(props);
 
   return (
-    <div {...getBaseProps()}>
+    <Component {...getBaseProps()}>
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       {label && <label {...getLabelProps()}>{label}</label>}
       <div {...getMainWrapperProps()}>
@@ -72,6 +77,6 @@ export const Select = (props: SelectProps) => {
         </SelectProvider>
         {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
       </div>
-    </div>
+    </Component>
   );
 };

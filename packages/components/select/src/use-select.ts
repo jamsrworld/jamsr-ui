@@ -96,21 +96,26 @@ export const useSelect = (props: UseSelectProps) => {
       return {
         value: item.props.value,
         children: item.props.children,
+        label: item.props.label,
       };
     }
     return null;
   });
-  const defaultSelectedLabel = useMemo(() => {
-    const item = selectItems.find((item) => item && value.has(item.value));
-    const label =
-      item && typeof item.children === "string" ? item?.children : null;
-    return label ? new Set([label]) : new Set([]);
+
+  const selectedLabels = useMemo(() => {
+    const items = selectItems
+      .filter((item) => item && value.has(item.value))
+      .map(
+        (item) =>
+          item?.label ??
+          (typeof item?.children === "string" ? item.children : ""),
+      );
+    return new Set(items);
   }, [selectItems, value]);
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [selectedLabels, setSelectedLabels] =
-    useState<SelectionSet>(defaultSelectedLabel);
+
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
   const labelsRef = useRef<(string | null)[]>([]);
   const styles = selectVariant({
@@ -156,14 +161,12 @@ export const useSelect = (props: UseSelectProps) => {
       if (typeof label !== "string") return;
 
       if (!isMultiple) {
-        setSelectedLabels(new Set([label]));
         setIsOpen(false);
         return;
       }
 
       const prev = new Set(selectedLabels);
       prev.has(label) ? prev.delete(label) : prev.add(label);
-      setSelectedLabels(prev);
     },
     [isMultiple, selectedLabels, setIsOpen],
   );

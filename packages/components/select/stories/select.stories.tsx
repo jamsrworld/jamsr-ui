@@ -2,9 +2,8 @@ import { Card, CardContent } from "@jamsr-ui/card";
 import { Email } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
-import type { SelectProps } from "../src";
+import type { SelectionSet, SelectProps } from "../src";
 import { Select, SelectItem } from "../src";
-import type { SelectionSet } from "../src/use-select";
 import { CustomRenderValueStory as CustomRenderValueComplexStory } from "./templates/custom-render-complex";
 import { CustomRenderMultiStory } from "./templates/custom-render-multi";
 
@@ -128,8 +127,40 @@ const MultipleTemplate = () => {
   );
 };
 
+const MultipleControlledTemplate = () => {
+  const [value, setValue] = useState<SelectionSet>(
+    new Set(["option1", "option2"]),
+  );
+  return (
+    <div className="min-h-[300px]">
+      <Select
+        className="max-w-md"
+        label="Select Label"
+        isMultiple
+        value={value}
+        onValueChange={setValue}
+      >
+        {Array(20)
+          .fill(null)
+          .map((_, idx) => {
+            const value = `option${idx}`;
+            return (
+              <SelectItem key={value} value={value}>
+                {`Option ${idx}`}
+              </SelectItem>
+            );
+          })}
+      </Select>
+    </div>
+  );
+};
+
 export const Multiple: Story = {
   render: MultipleTemplate,
+};
+
+export const MultipleControlled: Story = {
+  render: MultipleControlledTemplate,
 };
 
 export const CustomRenderComplex: Story = {

@@ -1,6 +1,7 @@
+import { Divider } from "@jamsr-ui/divider";
 import type { Editor } from "@tiptap/react";
 import { Fragment } from "react";
-import { Divider } from "@jamsr-ui/divider";
+import { HeadingMenu } from "./heading";
 import MenuItem from "./menu-item.js";
 
 export default function MenuBar({ editor }: { editor: Editor }) {
@@ -124,6 +125,7 @@ export default function MenuBar({ editor }: { editor: Editor }) {
 
   return (
     <div className="flex gap-1 pb-2">
+      <HeadingMenu editor={editor} />
       {items.map((item, index) => (
         <Fragment key={index}>
           {item.type === "divider" ? (

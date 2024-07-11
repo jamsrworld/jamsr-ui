@@ -1,11 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 type Props = {
   count: number;
-  children: React.ReactNode;
+  children: ((idx: number) => React.ReactNode) | React.ReactNode;
 };
 
 export const Repeater = (props: Props) => {
   const { count, children } = props;
-  return Array.from({ length: count }, () => children);
+  const items = Array.from({ length: count }).fill(null);
+  return items.map((_, idx) => (
+    <Fragment key={idx}>
+      {typeof children === "function" ? children(idx) : children}
+    </Fragment>
+  ));
 };

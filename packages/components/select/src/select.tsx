@@ -1,4 +1,8 @@
-import { FloatingFocusManager, FloatingList, FloatingPortal } from "@floating-ui/react";
+import {
+  FloatingFocusManager,
+  FloatingList,
+  FloatingPortal,
+} from "@floating-ui/react";
 import type { UseSelectProps } from "./use-select";
 import { useSelect } from "./use-select";
 import { SelectProvider } from "./use-select-context";
@@ -42,13 +46,15 @@ export const Select = (props: SelectProps) => {
         {/*  eslint-disable-next-line react/button-has-type */}
         <button {...getTriggerProps()}>
           <div {...getInnerWrapperProps()}>
-            <div {...getStartContentProps()}>{startContent}</div>
+            {startContent && (
+              <div {...getStartContentProps()}>{startContent}</div>
+            )}
             {hasValue ? (
               <div {...getValueProps()}>{getRenderValue}</div>
             ) : (
               <span {...getPlaceholderProps()}>{placeholder}</span>
             )}
-            <div {...getEndContentProps()}>{endContent}</div>
+            {endContent && <div {...getEndContentProps()}>{endContent}</div>}
           </div>
         </button>
         <SelectProvider value={contextValue}>

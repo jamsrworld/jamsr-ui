@@ -1,5 +1,14 @@
 # @jamsr-ui/editor
 
+## 0.0.8
+
+### Patch Changes
+
+- improve components
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.8
+  - @jamsr-ui/select@0.0.38
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/editor",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -29,7 +29,7 @@
     "react": "19.0.0-rc-c21bcd627b-20240624",
     "react-dom": "19.0.0-rc-c21bcd627b-20240624"
   },
-  "clean-package": "../../../clean-package.config.json",
+  "clean-package": "../../../clean-package-css.config.json",
   "dependencies": {
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",

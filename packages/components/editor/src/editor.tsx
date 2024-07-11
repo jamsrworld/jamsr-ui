@@ -10,7 +10,7 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { useRef } from "react";
 import MenuBar from "./components/menu-bar";
-import "./styles/editor.css";
+import "./index.css";
 
 export type EditorProps = {
   value?: JSONContent;

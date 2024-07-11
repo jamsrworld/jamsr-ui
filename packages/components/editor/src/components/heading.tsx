@@ -42,7 +42,6 @@ export const HeadingMenu = ({ editor }: { editor: Editor }) => {
   ];
 
   const [value, setValue] = useState(new Set(["paragraph"]));
-  console.log("value:->", value);
   const onValueChange = (value: Set<string>) => {
     setValue(value);
     const val = Array.from(value)[0];
@@ -53,7 +52,6 @@ export const HeadingMenu = ({ editor }: { editor: Editor }) => {
 
   const isParagraphActive = editor.isActive("paragraph");
   useEffect(() => {
-    console.log("isParagraphActive:->", isParagraphActive);
     if (isParagraphActive) {
       setValue(new Set(["paragraph"]));
     }

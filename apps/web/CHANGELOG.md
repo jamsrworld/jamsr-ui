@@ -1,5 +1,13 @@
 # web
 
+## 0.1.74
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.10
+  - @jamsr-ui/react@0.0.89
+
 ## 0.1.73
 
 ### Patch Changes

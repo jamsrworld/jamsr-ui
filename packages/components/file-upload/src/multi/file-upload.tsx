@@ -24,10 +24,11 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
     getInnerWrapperProps,
     getInfoProps,
     uploadIcon,
+    Component,
   } = useMultiFileUpload(props);
 
   return (
-    <div {...getBaseProps()}>
+    <Component {...getBaseProps()}>
       <div {...getInnerWrapperProps()}>
         {value.map((item) => (
           <div key={item.id} {...getFileViewProps()}>
@@ -52,6 +53,6 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
         )}
       </div>
       {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
-    </div>
+    </Component>
   );
 };

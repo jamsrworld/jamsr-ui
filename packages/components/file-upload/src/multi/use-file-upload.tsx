@@ -52,8 +52,11 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     helperText,
     info,
     uploadIcon = <FileUploadIcon className="shrink-0 text-inherit" />,
+    as,
     ...restProps
   } = props;
+
+  const Component = as ?? "div";
   const { maxFiles } = dropzoneOptions;
   const canUploadFile = maxFiles ? value.length < maxFiles : true;
 
@@ -219,6 +222,7 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
   );
 
   return {
+    Component,
     getRootProps,
     getInputProps,
     getBaseProps,

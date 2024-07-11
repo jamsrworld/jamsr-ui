@@ -103,6 +103,7 @@ const MultiFileTemplate = (props: Partial<MultiFileUploadProps>) => {
         fileView: "size-[200px]",
       }}
       onError={handleOnError}
+      data-test-id="multi"
       dropzoneOptions={{
         maxFiles: 4,
       }}

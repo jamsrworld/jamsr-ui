@@ -7,8 +7,7 @@ export const HeadingMenu = ({ editor }: { editor: Editor }) => {
     {
       value: "h1",
       label: "Heading 1",
-      action: () =>
-        editor.chain().focus().toggleHeading({ level: 1 }).focus().run(),
+      action: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
     },
     {
       value: "h2",
@@ -43,7 +42,7 @@ export const HeadingMenu = ({ editor }: { editor: Editor }) => {
   ];
 
   const [value, setValue] = useState(new Set(["paragraph"]));
-  console.log("value:->", value)
+  console.log("value:->", value);
   const onValueChange = (value: Set<string>) => {
     setValue(value);
     const val = Array.from(value)[0];

@@ -40,24 +40,6 @@ export default function MenuBar({ editor }: { editor: Editor }) {
       type: "divider",
     },
     {
-      icon: "h-1",
-      title: "Heading 1",
-      action: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
-      isActive: () => editor.isActive("heading", { level: 1 }),
-    },
-    {
-      icon: "h-2",
-      title: "Heading 2",
-      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
-      isActive: () => editor.isActive("heading", { level: 2 }),
-    },
-    {
-      icon: "paragraph",
-      title: "Paragraph",
-      action: () => editor.chain().focus().setParagraph().run(),
-      isActive: () => editor.isActive("paragraph"),
-    },
-    {
       icon: "list-unordered",
       title: "Bullet List",
       action: () => editor.chain().focus().toggleBulletList().run(),

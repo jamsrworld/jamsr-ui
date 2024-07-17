@@ -48,6 +48,7 @@ export type MenuProps = {
   classNames?: {
     popover?: string;
   };
+  showArrow?: boolean;
 } & ComponentProps<"div">;
 
 export const MenuComponent = ({
@@ -57,6 +58,7 @@ export const MenuComponent = ({
   placement,
   className,
   classNames,
+  showArrow = false,
   ...restProps
 }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +84,7 @@ export const MenuComponent = ({
     placement: placement ?? isNested ? "right-start" : "bottom-start",
     middleware: [
       offset({
-        mainAxis: isNested ? 6 : 14,
+        mainAxis: isNested ? 6 : 8,
         alignmentAxis: isNested ? -4 : 0,
       }),
       flip(),
@@ -223,11 +225,13 @@ export const MenuComponent = ({
                     exit={{ opacity: 0, top: 10 }}
                     {...getFloatingProps()}
                   >
-                    <FloatingArrow
-                      ref={arrowRef}
-                      context={context}
-                      className="fill-background-neutral"
-                    />
+                    {showArrow && (
+                      <FloatingArrow
+                        ref={arrowRef}
+                        context={context}
+                        className="fill-background-neutral"
+                      />
+                    )}
                     {children}
                   </m.div>
                 </FloatingFocusManager>

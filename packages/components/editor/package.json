@@ -56,7 +56,8 @@
     "@tiptap/extension-underline": "^2.5.2",
     "@tiptap/extension-youtube": "^2.5.2",
     "@tiptap/react": "^2.2.4",
-    "@tiptap/starter-kit": "^2.2.4"
+    "@tiptap/starter-kit": "^2.2.4",
+    "tiptap-extension-resize-image": "^1.1.8"
   },
   "peerDependencies": {
     "react": "19.0.0-rc-c21bcd627b-20240624",

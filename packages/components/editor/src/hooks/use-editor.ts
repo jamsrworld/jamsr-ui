@@ -9,6 +9,7 @@ import CharacterCount from "@tiptap/extension-character-count";
 import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
 import Highlight from "@tiptap/extension-highlight";
+import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import Subscript from "@tiptap/extension-subscript";
@@ -23,6 +24,8 @@ import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import type { ComponentProps, ComponentPropsWithoutRef } from "react";
 import { useCallback } from "react";
+import ImageResize from 'tiptap-extension-resize-image';
+
 import {
   editorVariants,
   type EditorVariantsProps,
@@ -74,6 +77,10 @@ export const useEditor = (props: UseEditorProps) => {
       Underline,
       Superscript,
       Link,
+      ImageResize,
+      Image.configure({
+        inline: true,
+      }),
       TextAlign.configure({
         types: ["heading", "paragraph"],
       }),

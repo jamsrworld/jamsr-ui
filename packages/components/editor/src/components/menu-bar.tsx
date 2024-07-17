@@ -1,11 +1,13 @@
 import { Divider } from "@jamsr-ui/divider";
 import { type Editor } from "@tiptap/react";
+import React from "react";
 import { useTextMenuCommands } from "../hooks/use-text-menu-commands";
 import { useTextMenuState } from "../hooks/use-text-menu-state";
 import { FontColorPicker } from "./font-color-picker";
 import { FontFamilyPicker } from "./font-family-picker";
 import { FontHighlightPicker } from "./font-highlight-picker";
 import type { IconTypes } from "./Icon/icons";
+import { ImagePicker } from "./image-picker";
 import ToolbarItem from "./menu-item";
 import { TextPicker } from "./text-picker";
 
@@ -70,6 +72,10 @@ const items = (
     isActive: () => state.isStrike,
   },
   { type: "divider" },
+  {
+    type: "custom",
+    component: <ImagePicker onImage={commands.onImage} />,
+  },
   {
     type: "option",
     icon: "code-view",
@@ -209,16 +215,14 @@ export const EditorMenuBar = (props: Props) => {
 
   return (
     <div className="flex flex-wrap gap-1 pb-2">
-      {menuItems.map((item) => {
-        if (item.type === "divider") {
-          return <Divider orientation="vertical" />;
-        }
-
-        if (item.type === "custom") {
-          return item.component;
-        }
-
-        return <ToolbarItem {...item} />;
+      {menuItems.map((item, idx) => {
+        return (
+          <React.Fragment key={idx}>
+            {item.type === "divider" && <Divider orientation="vertical" />}
+            {item.type === "custom" && item.component}
+            {item.type === "option" && <ToolbarItem {...item} />}
+          </React.Fragment>
+        );
       })}
     </div>
   );

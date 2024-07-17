@@ -17,6 +17,9 @@ export const Editor = (props: EditorProps) => {
     helperText,
   } = useEditor(props);
 
+  const json = editor?.getJSON()
+  console.log("json:->", json)
+
   return (
     <Component {...getBaseProps()}>
       <div {...getEditorProps()}>

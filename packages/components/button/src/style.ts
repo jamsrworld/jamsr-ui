@@ -191,22 +191,22 @@ export const buttonVariant = tv({
     {
       isIconOnly: true,
       size: "xs",
-      class: "size-6 [&>svg]:size-5",
+      class: "size-6",
     },
     {
       isIconOnly: true,
       size: "sm",
-      class: "size-8 min-w-8 [&>svg]:size-6",
+      class: "size-8 min-w-8 ",
     },
     {
       isIconOnly: true,
       size: "md",
-      class: "size-10 min-w-10 [&>svg]:size-6",
+      class: "size-10 min-w-10",
     },
     {
       isIconOnly: true,
       size: "lg",
-      class: "size-12 min-w-12 [&>svg]:size-8",
+      class: "size-12 min-w-12",
     },
   ],
   defaultVariants: {

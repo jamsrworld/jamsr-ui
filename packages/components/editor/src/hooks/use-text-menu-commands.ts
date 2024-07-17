@@ -119,6 +119,16 @@ export const useTextMenuCommands = (editor: Editor) => {
     [editor],
   );
 
+  const onImage = useCallback(
+    (options: { src: string }) =>
+      editor
+        .chain()
+        .focus()
+        .setImage({ ...options })
+        .run(),
+    [editor],
+  );
+
   return {
     onBold,
     onItalic,
@@ -144,5 +154,6 @@ export const useTextMenuCommands = (editor: Editor) => {
     onRedo,
     onBlockquote,
     onHorizontalRule,
+    onImage,
   };
 };

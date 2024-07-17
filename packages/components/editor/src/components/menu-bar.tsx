@@ -1,47 +1,21 @@
 import { Divider } from "@jamsr-ui/divider";
 import type { Editor } from "@tiptap/react";
 import { Fragment } from "react";
-import { HeadingMenu } from "./heading";
 import MenuItem from "./menu-item.js";
 
 export default function MenuBar({ editor }: { editor: Editor }) {
   const items = [
-    {
-      icon: "h-1",
-      title: "Heading 1",
-      action: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
-      isActive: () => editor.isActive("heading", { level: 1 }),
-    },
-    {
-      icon: "h-2",
-      title: "Heading 2",
-      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
-      isActive: () => editor.isActive("heading", { level: 2 }),
-    },
-    {
-      icon: "h-3",
-      title: "Heading 3",
-      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
-      isActive: () => editor.isActive("heading", { level: 2 }),
-    },
-    {
-      icon: "h-4",
-      title: "Heading 4",
-      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
-      isActive: () => editor.isActive("heading", { level: 2 }),
-    },
-    {
-      icon: "h-5",
-      title: "Heading 5",
-      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
-      isActive: () => editor.isActive("heading", { level: 2 }),
-    },
-    {
-      icon: "h-6",
-      title: "Heading 6",
-      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
-      isActive: () => editor.isActive("heading", { level: 2 }),
-    },
+    ...Array(6)
+      .fill(null)
+      .map((_, idx) => {
+        const level = (idx + 1) as 1 | 2 | 3 | 4 | 5 | 6;
+        return {
+          icon: `h-${level}`,
+          title: `Heading ${level}`,
+          action: () => editor.chain().focus().toggleHeading({ level }).run(),
+          isActive: () => editor.isActive("heading", { level }),
+        };
+      }),
     {
       icon: "paragraph",
       title: "Paragraph",
@@ -152,7 +126,6 @@ export default function MenuBar({ editor }: { editor: Editor }) {
 
   return (
     <div className="flex gap-1 pb-2">
-      <HeadingMenu editor={editor} />
       {items.map((item, index) => (
         <Fragment key={index}>
           {item.type === "divider" ? (

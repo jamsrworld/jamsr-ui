@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/editor",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -33,6 +33,7 @@
   "dependencies": {
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
+    "@jamsr-ui/file-upload": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/menu": "workspace:^",
     "@jamsr-ui/popover": "workspace:^",
@@ -40,6 +41,7 @@
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^",
+    "@tiptap/core": "^2.5.4",
     "@tiptap/extension-character-count": "^2.2.4",
     "@tiptap/extension-color": "^2.5.2",
     "@tiptap/extension-font-family": "^2.5.3",

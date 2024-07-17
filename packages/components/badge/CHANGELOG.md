@@ -1,5 +1,13 @@
 # @jamsr-ui/badge
 
+## 0.0.32
+
+### Patch Changes
+
+- improve editor
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.29
+
 ## 0.0.31
 
 ### Patch Changes

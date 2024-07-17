@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.22
+
+### Patch Changes
+
+- improve editor
+
 ## 0.0.21
 
 ### Patch Changes

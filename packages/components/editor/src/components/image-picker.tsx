@@ -9,7 +9,7 @@ const src =
 
 export const ImagePicker = (props: Props) => {
   const { onImage } = props;
-  const handleClick = () => onImage({ src, width: 900 });
+  const handleClick = () => onImage({ src });
   return (
     <div>
       <ToolbarItem icon="image" isActive={() => false} onClick={handleClick} />

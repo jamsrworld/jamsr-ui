@@ -1,5 +1,11 @@
 # @jamsr-ui/toast
 
+## 0.0.3
+
+### Patch Changes
+
+- improve editor
+
 ## 0.0.2
 
 ### Patch Changes

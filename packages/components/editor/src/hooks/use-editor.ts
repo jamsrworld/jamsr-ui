@@ -24,8 +24,9 @@ import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import type { ComponentProps, ComponentPropsWithoutRef } from "react";
 import { useCallback } from "react";
-import ImageResize from 'tiptap-extension-resize-image';
-
+import ImageResize from "tiptap-extension-resize-image";
+import type { SingleFileUploadProps } from "@jamsr-ui/file-upload";
+import { ImageUpload } from "../components/extensions/image-upload";
 import {
   editorVariants,
   type EditorVariantsProps,
@@ -41,6 +42,9 @@ type Props = EditorVariantsProps & {
   classNames?: SlotsToClasses<EditorVariantsSlots>;
   helperText?: React.ReactNode;
   isInvalid?: boolean;
+  extensionsProps?: {
+    imageUpload?: Partial<SingleFileUploadProps>;
+  };
 };
 
 export type UseEditorProps = Props & UIProps<"div", keyof Props>;
@@ -56,6 +60,7 @@ export const useEditor = (props: UseEditorProps) => {
     isInvalid,
     as,
     className,
+    extensionsProps,
     ...restProps
   } = props;
 
@@ -78,6 +83,9 @@ export const useEditor = (props: UseEditorProps) => {
       Superscript,
       Link,
       ImageResize,
+      ImageUpload.configure({
+        props: extensionsProps?.imageUpload,
+      }),
       Image.configure({
         inline: true,
       }),

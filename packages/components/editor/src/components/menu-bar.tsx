@@ -74,7 +74,7 @@ const items = (
   { type: "divider" },
   {
     type: "custom",
-    component: <ImagePicker onImage={commands.onImage} />,
+    component: <ImagePicker onImage={commands.onImageUpload} />,
   },
   {
     type: "option",

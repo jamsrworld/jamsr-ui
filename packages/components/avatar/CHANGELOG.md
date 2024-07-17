@@ -1,5 +1,13 @@
 # @jamsr-ui/avatar
 
+## 0.0.34
+
+### Patch Changes
+
+- improve editor
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.29
+
 ## 0.0.33
 
 ### Patch Changes

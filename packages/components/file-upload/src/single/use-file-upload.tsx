@@ -20,7 +20,7 @@ import {
 type Props = Omit<UploadVariants, "isDragActive"> & {
   value: string;
   onValueChange: (value: string) => void;
-  onFileSelect: (file: File) => void | Promise<void>;
+  onFileSelect: (file: File) => (void | string) | Promise<void | string>;
   className?: string;
   classNames?: SlotsToClasses<UploadSlots>;
   onError?: (error: FileError) => void;

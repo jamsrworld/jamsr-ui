@@ -129,6 +129,10 @@ export const useTextMenuCommands = (editor: Editor) => {
     [editor],
   );
 
+  const onImageUpload = useCallback(() => {
+    editor.chain().focus().setImageUpload().run();
+  }, [editor]);
+
   return {
     onBold,
     onItalic,
@@ -155,5 +159,6 @@ export const useTextMenuCommands = (editor: Editor) => {
     onBlockquote,
     onHorizontalRule,
     onImage,
+    onImageUpload,
   };
 };

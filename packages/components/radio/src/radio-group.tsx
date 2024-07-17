@@ -32,7 +32,7 @@ export const RadioGroup = <
       <div {...getWrapperProps()}>
         <RadioGroupProvider value={context}>{children}</RadioGroupProvider>
       </div>
-      <div {...getHelperTextProps()}>{helperText}</div>
+      {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
     </Component>
   );
 };

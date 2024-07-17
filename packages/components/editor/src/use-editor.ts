@@ -13,7 +13,7 @@ import TaskList from "@tiptap/extension-task-list";
 import type { EditorOptions, JSONContent } from "@tiptap/react";
 import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import type { ComponentProps, ComponentPropsWithoutRef} from "react";
+import type { ComponentProps, ComponentPropsWithoutRef } from "react";
 import { useCallback } from "react";
 import {
   editorVariants,
@@ -25,7 +25,7 @@ type Props = EditorVariantsProps & {
   value?: JSONContent;
   defaultValue?: JSONContent;
   onValueChange?: (content: JSONContent) => void;
-  options: Partial<EditorOptions>;
+  options?: Partial<EditorOptions>;
   placeholder?: string;
   classNames?: SlotsToClasses<EditorVariantsSlots>;
   helperText?: React.ReactNode;

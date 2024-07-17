@@ -1,29 +1,31 @@
 import { Button } from "@jamsr-ui/button";
-import { Icons } from "./icons";
+import { EditorIcon } from "./Icon";
+import type { IconTypes } from "./Icon/icons";
 
-export default function MenuItem({
+export default function ToolbarItem({
   icon,
   title,
-  action,
-  isActive = null,
+  onClick,
+  isActive = () => false,
+  ...props
 }: {
-  icon?: string;
+  icon: IconTypes;
   title?: string;
-  action?: () => void;
-  isActive?: (() => boolean) | null;
+  onClick?: () => void;
+  isActive?: () => boolean;
 }) {
-  const svgIcon = icon ? Icons[icon] : null;
-
   return (
     <Button
       isIconOnly
       type="button"
-      onClick={action}
+      onClick={onClick}
       title={title}
       aria-label={title}
-      variant={isActive?.() ? "solid" : "light"}
+      size="sm"
+      variant={isActive() ? "solid" : "light"}
+      {...props}
     >
-      {svgIcon}
+      <EditorIcon name={icon} />
     </Button>
   );
 }

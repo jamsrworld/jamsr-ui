@@ -1,6 +1,6 @@
 import { EditorContent } from "@tiptap/react";
-import MenuBar from "./components/menu-bar";
-import "./index.css";
+import { EditorMenuBar } from "./components/menu-bar";
+import "./styles/index.css";
 import type { UseEditorProps } from "./use-editor";
 import { useEditor } from "./use-editor";
 
@@ -20,7 +20,7 @@ export const Editor = (props: EditorProps) => {
   return (
     <Component {...getBaseProps()}>
       <div {...getEditorProps()}>
-        {editor && <MenuBar editor={editor} />}
+        {editor && <EditorMenuBar editor={editor} />}
         <EditorContent editor={editor} {...getContentProps()} />
       </div>
       {helperText && <div {...getHelperTextProps()}>{helperText}</div>}

@@ -1,140 +1,225 @@
 import { Divider } from "@jamsr-ui/divider";
-import type { Editor } from "@tiptap/react";
-import { Fragment } from "react";
-import MenuItem from "./menu-item.js";
+import { type Editor } from "@tiptap/react";
+import type { IconTypes } from "./Icon/icons";
+import ToolbarItem from "./menu-item";
+import { FontColorPicker } from "./text-menu/font-color-picker";
+import { FontFamilyPicker } from "./text-menu/font-family-picker";
+import { FontHighlightPicker } from "./text-menu/font-highlight-picker";
+import { useTextMenuCommands } from "./text-menu/hooks/use-text-menu-commands";
+import { useTextMenuState } from "./text-menu/hooks/use-text-menu-state";
+import { TextPicker } from "./text-menu/text-picker";
 
-export default function MenuBar({ editor }: { editor: Editor }) {
-  const items = [
-    ...Array(6)
-      .fill(null)
-      .map((_, idx) => {
-        const level = (idx + 1) as 1 | 2 | 3 | 4 | 5 | 6;
-        return {
-          icon: `h-${level}`,
-          title: `Heading ${level}`,
-          action: () => editor.chain().focus().toggleHeading({ level }).run(),
-          isActive: () => editor.isActive("heading", { level }),
-        };
-      }),
-    {
-      icon: "paragraph",
-      title: "Paragraph",
-      action: () => editor.chain().focus().setParagraph().run(),
-      isActive: () => editor.isActive("paragraph"),
-    },
-    {
-      type: "divider",
-    },
-    {
-      icon: "bold",
-      title: "Bold",
-      action: () => editor.chain().focus().toggleBold().run(),
-      isActive: () => editor.isActive("bold"),
-    },
-    {
-      icon: "italic",
-      title: "Italic",
-      action: () => editor.chain().focus().toggleItalic().run(),
-      isActive: () => editor.isActive("italic"),
-    },
-    {
-      icon: "strikethrough",
-      title: "Strike",
-      action: () => editor.chain().focus().toggleStrike().run(),
-      isActive: () => editor.isActive("strike"),
-    },
-    {
-      icon: "code-view",
-      title: "Code",
-      action: () => editor.chain().focus().toggleCode().run(),
-      isActive: () => editor.isActive("code"),
-    },
-    {
-      icon: "mark-pen-line",
-      title: "Highlight",
-      action: () => editor.chain().focus().toggleHighlight().run(),
-      isActive: () => editor.isActive("highlight"),
-    },
-    {
-      type: "divider",
-    },
-    {
-      icon: "list-unordered",
-      title: "Bullet List",
-      action: () => editor.chain().focus().toggleBulletList().run(),
-      isActive: () => editor.isActive("bulletList"),
-    },
-    {
-      icon: "list-ordered",
-      title: "Ordered List",
-      action: () => editor.chain().focus().toggleOrderedList().run(),
-      isActive: () => editor.isActive("orderedList"),
-    },
-    {
-      icon: "list-check-2",
-      title: "Task List",
-      action: () => editor.chain().focus().toggleTaskList().run(),
-      isActive: () => editor.isActive("taskList"),
-    },
-    {
-      icon: "code-box-line",
-      title: "Code Block",
-      action: () => editor.chain().focus().toggleCodeBlock().run(),
-      isActive: () => editor.isActive("codeBlock"),
-    },
-    {
-      type: "divider",
-    },
-    {
-      icon: "double-quotes-l",
-      title: "Blockquote",
-      action: () => editor.chain().focus().toggleBlockquote().run(),
-      isActive: () => editor.isActive("blockquote"),
-    },
-    {
-      icon: "separator",
-      title: "Horizontal Rule",
-      action: () => editor.chain().focus().setHorizontalRule().run(),
-    },
-    {
-      type: "divider",
-    },
-    {
-      icon: "text-wrap",
-      title: "Hard Break",
-      action: () => editor.chain().focus().setHardBreak().run(),
-    },
-    {
-      icon: "format-clear",
-      title: "Clear Format",
-      action: () => editor.chain().focus().clearNodes().unsetAllMarks().run(),
-    },
-    {
-      type: "divider",
-    },
-    {
-      icon: "arrow-go-back-line",
-      title: "Undo",
-      action: () => editor.chain().focus().undo().run(),
-    },
-    {
-      icon: "arrow-go-forward-line",
-      title: "Redo",
-      action: () => editor.chain().focus().redo().run(),
-    },
-  ];
+type Props = {
+  editor: Editor;
+};
+
+const items = (
+  editor: Editor,
+  state: ReturnType<typeof useTextMenuState>,
+  commands: ReturnType<typeof useTextMenuCommands>,
+): (
+  | {
+      type: "option";
+      icon: IconTypes;
+      onClick: () => void;
+      title: string;
+      isActive: () => boolean;
+    }
+  | { type: "divider" }
+  | { type: "custom"; component: React.ReactNode }
+)[] => [
+  {
+    type: "custom",
+    component: <TextPicker editor={editor} />,
+  },
+  {
+    type: "custom",
+    component: (
+      <FontFamilyPicker
+        value={state.currentFont ?? ""}
+        onChange={commands.onSetFont}
+      />
+    ),
+  },
+  {
+    type: "option",
+    icon: "bold",
+    onClick: commands.onBold,
+    title: "Bold",
+    isActive: () => state.isBold,
+  },
+  {
+    type: "option",
+    icon: "italic",
+    onClick: commands.onItalic,
+    title: "Italic",
+    isActive: () => state.isItalic,
+  },
+  {
+    type: "option",
+    icon: "underline",
+    onClick: commands.onUnderline,
+    title: "Underline",
+    isActive: () => state.isUnderline,
+  },
+  {
+    type: "option",
+    icon: "strikethrough",
+    onClick: commands.onStrike,
+    title: "Strikethrough",
+    isActive: () => state.isStrike,
+  },
+  { type: "divider" },
+  {
+    type: "option",
+    icon: "code-view",
+    onClick: commands.onCode,
+    title: "Code",
+    isActive: () => state.isCode,
+  },
+  {
+    type: "option",
+    icon: "code-box-line",
+    onClick: commands.onCodeBlock,
+    title: "Code Block",
+    isActive: () => state.isCode,
+  },
+  {
+    type: "custom",
+    component: (
+      <FontColorPicker
+        value={state.currentColor ?? ""}
+        onChange={commands.onChangeColor}
+      />
+    ),
+  },
+  {
+    type: "custom",
+    component: (
+      <FontHighlightPicker
+        value={state.currentHighlight ?? ""}
+        onChange={commands.onChangeHighlight}
+      />
+    ),
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "option",
+    icon: "subscript",
+    title: "Subscript",
+    onClick: commands.onSubscript,
+    isActive: () => state.isSubscript,
+  },
+  {
+    type: "option",
+    icon: "superscript",
+    title: "Superscript",
+    onClick: commands.onSuperscript,
+    isActive: () => state.isSuperscript,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "option",
+    icon: "align-left",
+    title: "Align Left",
+    onClick: commands.onAlignLeft,
+    isActive: () => state.isAlignLeft,
+  },
+  {
+    type: "option",
+    icon: "align-center",
+    title: "Align Center",
+    onClick: commands.onAlignCenter,
+    isActive: () => state.isAlignCenter,
+  },
+  {
+    type: "option",
+    icon: "align-right",
+    title: "Align Right",
+    onClick: commands.onAlignRight,
+    isActive: () => state.isAlignRight,
+  },
+  {
+    type: "option",
+    icon: "align-justify",
+    title: "Align Justify",
+    onClick: commands.onAlignJustify,
+    isActive: () => state.isAlignJustify,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "option",
+    icon: "double-quotes-l",
+    title: "Blockquote",
+    onClick: commands.onBlockquote,
+    isActive: () => false,
+  },
+  {
+    type: "option",
+    icon: "separator",
+    isActive: () => false,
+    title: "Separator",
+    onClick: commands.onHorizontalRule,
+  },
+  {
+    type: "option",
+    icon: "text-wrap",
+    isActive: () => false,
+    onClick: commands.onHardBreak,
+    title: "Hard Break",
+  },
+  {
+    type: "option",
+    icon: "format-clear",
+    isActive: () => false,
+    onClick: commands.onClearFormat,
+    title: "Clear Format",
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "option",
+    icon: "arrow-go-back-line",
+    onClick: commands.onUndo,
+    title: "Undo",
+    isActive: () => false,
+  },
+  {
+    type: "option",
+    icon: "arrow-go-forward-line",
+    onClick: commands.onRedo,
+    title: "Redo",
+    isActive: () => false,
+  },
+];
+
+export const EditorMenuBar = (props: Props) => {
+  const { editor } = props;
+  const commands = useTextMenuCommands(editor);
+  const state = useTextMenuState(editor);
+
+  const menuItems = items(editor, state, commands);
 
   return (
-    <div className="flex gap-1 pb-2">
-      {items.map((item, index) => (
-        <Fragment key={index}>
-          {item.type === "divider" ? (
-            <Divider orientation="vertical" />
-          ) : (
-            <MenuItem {...item} />
-          )}
-        </Fragment>
-      ))}
+    <div className="flex flex-wrap gap-1 pb-2">
+      {menuItems.map((item) => {
+        if (item.type === "divider") {
+          return <Divider orientation="vertical" />;
+        }
+
+        if (item.type === "custom") {
+          return item.component;
+        }
+
+        return <ToolbarItem {...item} />;
+      })}
     </div>
   );
-}
+};

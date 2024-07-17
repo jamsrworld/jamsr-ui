@@ -7,6 +7,51 @@ import MenuItem from "./menu-item.js";
 export default function MenuBar({ editor }: { editor: Editor }) {
   const items = [
     {
+      icon: "h-1",
+      title: "Heading 1",
+      action: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
+      isActive: () => editor.isActive("heading", { level: 1 }),
+    },
+    {
+      icon: "h-2",
+      title: "Heading 2",
+      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+      isActive: () => editor.isActive("heading", { level: 2 }),
+    },
+    {
+      icon: "h-3",
+      title: "Heading 3",
+      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+      isActive: () => editor.isActive("heading", { level: 2 }),
+    },
+    {
+      icon: "h-4",
+      title: "Heading 4",
+      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+      isActive: () => editor.isActive("heading", { level: 2 }),
+    },
+    {
+      icon: "h-5",
+      title: "Heading 5",
+      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+      isActive: () => editor.isActive("heading", { level: 2 }),
+    },
+    {
+      icon: "h-6",
+      title: "Heading 6",
+      action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+      isActive: () => editor.isActive("heading", { level: 2 }),
+    },
+    {
+      icon: "paragraph",
+      title: "Paragraph",
+      action: () => editor.chain().focus().setParagraph().run(),
+      isActive: () => editor.isActive("paragraph"),
+    },
+    {
+      type: "divider",
+    },
+    {
       icon: "bold",
       title: "Bold",
       action: () => editor.chain().focus().toggleBold().run(),

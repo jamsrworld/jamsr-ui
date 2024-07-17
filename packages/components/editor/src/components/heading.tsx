@@ -2,6 +2,27 @@ import { Select, SelectItem } from "@jamsr-ui/select";
 import type { Editor } from "@tiptap/react";
 import { useEffect, useState } from "react";
 
+const useIsActive = ({
+  editor,
+  name,
+  setValue,
+  value,
+  attributes,
+}: {
+  editor: Editor;
+  name: string;
+  value: string;
+  attributes?: Record<string, unknown>;
+  setValue: React.Dispatch<React.SetStateAction<Set<string>>>;
+}) => {
+  const isActive = editor.isActive(name, attributes);
+  useEffect(() => {
+    if (isActive) {
+      setValue(new Set([value]));
+    }
+  }, [isActive, name, setValue, value]);
+};
+
 export const HeadingMenu = ({ editor }: { editor: Editor }) => {
   const values = [
     {
@@ -50,12 +71,55 @@ export const HeadingMenu = ({ editor }: { editor: Editor }) => {
     }
   };
 
-  const isParagraphActive = editor.isActive("paragraph");
-  useEffect(() => {
-    if (isParagraphActive) {
-      setValue(new Set(["paragraph"]));
-    }
-  }, [isParagraphActive]);
+  useIsActive({
+    editor,
+    name: "heading",
+    setValue,
+    value: "h1",
+    attributes: { level: 1 },
+  });
+
+  useIsActive({
+    editor,
+    name: "heading",
+    setValue,
+    value: "h2",
+    attributes: { level: 2 },
+  });
+
+  useIsActive({
+    editor,
+    name: "heading",
+    setValue,
+    value: "h3",
+    attributes: { level: 3 },
+  });
+
+  useIsActive({
+    editor,
+    name: "heading",
+    setValue,
+    value: "h4",
+    attributes: { level: 4 },
+  });
+
+  useIsActive({
+    editor,
+    name: "heading",
+    setValue,
+    value: "h5",
+    attributes: { level: 5 },
+  });
+
+  useIsActive({
+    editor,
+    name: "heading",
+    setValue,
+    value: "h6",
+    attributes: { level: 6 },
+  });
+
+  useIsActive({ editor, name: "paragraph", value: "paragraph", setValue });
 
   return (
     <Select

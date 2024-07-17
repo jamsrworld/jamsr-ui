@@ -1,13 +1,13 @@
 import { Divider } from "@jamsr-ui/divider";
 import { type Editor } from "@tiptap/react";
+import { useTextMenuCommands } from "../hooks/use-text-menu-commands";
+import { useTextMenuState } from "../hooks/use-text-menu-state";
+import { FontColorPicker } from "./font-color-picker";
+import { FontFamilyPicker } from "./font-family-picker";
+import { FontHighlightPicker } from "./font-highlight-picker";
 import type { IconTypes } from "./Icon/icons";
 import ToolbarItem from "./menu-item";
-import { FontColorPicker } from "./text-menu/font-color-picker";
-import { FontFamilyPicker } from "./text-menu/font-family-picker";
-import { FontHighlightPicker } from "./text-menu/font-highlight-picker";
-import { useTextMenuCommands } from "./text-menu/hooks/use-text-menu-commands";
-import { useTextMenuState } from "./text-menu/hooks/use-text-menu-state";
-import { TextPicker } from "./text-menu/text-picker";
+import { TextPicker } from "./text-picker";
 
 type Props = {
   editor: Editor;

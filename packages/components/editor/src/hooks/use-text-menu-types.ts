@@ -1,5 +1,5 @@
 import type { Editor } from "@tiptap/react";
-import type { IconTypes } from "../../Icon/icons";
+import type { IconTypes } from "../components/Icon/icons";
 
 export type TextPickerOption = {
   label: string;

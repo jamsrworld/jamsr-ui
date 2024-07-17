@@ -1,8 +1,8 @@
 import { EditorContent } from "@tiptap/react";
 import { EditorMenuBar } from "./components/menu-bar";
+import type { UseEditorProps } from "./hooks/use-editor";
+import { useEditor } from "./hooks/use-editor";
 import "./styles/index.css";
-import type { UseEditorProps } from "./use-editor";
-import { useEditor } from "./use-editor";
 
 export type EditorProps = UseEditorProps;
 

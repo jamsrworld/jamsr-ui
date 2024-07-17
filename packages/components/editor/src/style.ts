@@ -4,7 +4,7 @@ import { tv } from "@jamsr-ui/utils";
 export const editorVariants = tv({
   slots: {
     base: "flex flex-col gap-1",
-    editor: "editor rounded-2xl border-2 border-divider p-2",
+    editor: "rounded-2xl border-2 border-divider p-2",
     content: "min-h-[200px] border-t border-divider py-2",
     helperText: "text-xs text-foreground-400",
   },

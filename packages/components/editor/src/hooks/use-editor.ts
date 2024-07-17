@@ -27,7 +27,7 @@ import {
   editorVariants,
   type EditorVariantsProps,
   type EditorVariantsSlots,
-} from "./style";
+} from "../style";
 
 type Props = EditorVariantsProps & {
   value?: JSONContent;

@@ -1,8 +1,8 @@
 import { Button } from "@jamsr-ui/button";
 import { Menu, MenuItem } from "@jamsr-ui/menu";
 import type { Editor } from "@tiptap/react";
-import { EditorIcon } from "../Icon";
-import { useTextTypes } from "./hooks/use-text-menu-types";
+import { useTextTypes } from "../hooks/use-text-menu-types";
+import { EditorIcon } from "./Icon";
 
 type Props = {
   editor: Editor;

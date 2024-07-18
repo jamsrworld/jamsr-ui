@@ -1,5 +1,11 @@
 # @jamsr-ui/tab
 
+## 0.0.43
+
+### Patch Changes
+
+- @jamsr-ui/card@0.0.37
+
 ## 0.0.42
 
 ### Patch Changes

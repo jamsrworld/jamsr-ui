@@ -1,10 +1,15 @@
 import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { typographyVariants, type TypographyVariants } from "./style";
 
-export type TypographyProps = TypographyVariants;
+export type TypographyProps<T extends React.ElementType = "div"> = Omit<
+  ComponentPropsWithAs<T, TypographyVariants>,
+  "as"
+> & {
+  as: T;
+};
 
 export const Typography = <T extends React.ElementType = "div">(
-  props: ComponentPropsWithAs<T, TypographyProps>,
+  props: TypographyProps<T>,
 ) => {
   const {
     as,
@@ -16,7 +21,8 @@ export const Typography = <T extends React.ElementType = "div">(
     fontSize,
     ...restProps
   } = props;
-  const Component = as ?? "p";
+
+  const Component = (as ?? "div") as unknown as React.ElementType;
   return (
     <Component
       data-component="typography"

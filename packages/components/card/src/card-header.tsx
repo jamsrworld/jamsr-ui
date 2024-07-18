@@ -34,14 +34,17 @@ export const CardHeader = <T extends React.ElementType = "div">(
       )}
       {...restProps}
     >
-      {children || (
+      {children ?? (
         <>
           <div className="grid gap-1">
-            <Typography variant="h6">{heading}</Typography>
+            <Typography as="h6" variant="h6">
+              {heading}
+            </Typography>
             {subHeading && (
               <Typography
                 className="text-foreground-secondary"
                 variant="caption"
+                as="h6"
               >
                 {subHeading}
               </Typography>

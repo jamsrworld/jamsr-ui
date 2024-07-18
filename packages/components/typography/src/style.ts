@@ -9,14 +9,12 @@ export const typographyVariants = tv({
       h3: "text-2xl font-semibold md:text-3xl",
       h4: "text-xl font-semibold md:text-2xl",
       h5: "text-lg font-semibold md:text-xl",
-      h6: "text-base font-semibold",
-      subtitle: "text-[14px] font-medium",
-      subtitle2: "text-xs font-medium",
-      body: "text-[14px]",
-      body2: "text-sm",
+      h6: "text-base font-semibold md:text-lg",
       caption: "text-xs",
-      "display-bold": "text-base font-medium md:text-lg",
-      display: "text-base font-normal md:text-lg",
+      body: "text-sm",
+      body1: "text-base font-normal md:text-lg",
+      body2: "text-lg font-normal md:text-xl",
+      body3: "text-xl font-normal md:text-2xl",
     },
     gradient: {
       violet: "from-[#FF1CF7] to-[#b249f8]",
@@ -34,7 +32,7 @@ export const typographyVariants = tv({
       true: "mb-2",
     },
     fontSize: {
-      inherit: "!text-size-inherit",
+      inherit: "text-size-inherit",
     },
   },
   defaultVariants: {

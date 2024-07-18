@@ -15,3 +15,10 @@ export const Default: Story = {
   render: DefaultSwitch,
   args: {},
 };
+
+export const Description: Story = {
+  args: {
+    label: "Are you ok?",
+    description: "This is a description",
+  },
+};

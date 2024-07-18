@@ -13,11 +13,12 @@ export const LinkMenuBarItem = (props: Props) => {
   const { onLink } = props;
   const [formData, setFormData] = useState({
     url: "",
-    newTab: false,
+    newTab: true,
   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.stopPropagation();
     onLink(formData.url, formData.newTab);
     setIsOpen(false);
   };
@@ -37,10 +38,12 @@ export const LinkMenuBarItem = (props: Props) => {
     >
       <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
         <Input
+          value={formData.url}
           onValueChange={(e) => setFormData({ ...formData, url: e })}
           placeholder="Enter Url"
         />
         <Switch
+          checked={formData.newTab}
           onCheckedChange={(e) => setFormData({ ...formData, newTab: e })}
           label="Open in new tab"
         />

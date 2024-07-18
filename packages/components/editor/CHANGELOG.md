@@ -1,5 +1,21 @@
 # @jamsr-ui/editor
 
+## 0.0.17
+
+### Patch Changes
+
+- fix typography
+- Updated dependencies
+  - @jamsr-ui/switch@0.0.33
+  - @jamsr-ui/popover@0.0.33
+  - @jamsr-ui/select@0.0.40
+
+## 0.0.16
+
+### Patch Changes
+
+- fix editor
+
 ## 0.0.15
 
 ### Patch Changes

@@ -63,6 +63,10 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
 
   const onClick = () => setChecked((prev) => !prev);
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") e.preventDefault();
+  };
+
   return (
     <div
       data-component="switch"
@@ -73,14 +77,16 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
         "flex-col": labelPlacement === "top",
         "flex-col-reverse": labelPlacement === "bottom",
       })}
+      onBlur={onBlur}
     >
       <input
         type="checked"
         className="sr-only"
         aria-hidden="true"
+        disabled={disabled}
         {...restProps}
       />
-      {/* @ts-ignore */}
+      {/* @ts-expect-error FramerError */}
       <m.button
         data-slot="wrapper"
         type="button"
@@ -91,8 +97,10 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
         whileTap="tapped"
         animate="initial"
         disabled={disabled}
+        id={id}
+        onKeyPress={handleKeyPress}
       >
-        {/* @ts-ignore */}
+        {/* @ts-expect-error FramerError */}
         <m.div
           data-slot="thumb"
           variants={variants}
@@ -100,14 +108,19 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
           className={thumb()}
         />
       </m.button>
-      <div className="grid gap-1">
-        <Typography className="font-medium">{label}</Typography>
-        <Typography className="text-foreground-500 text-xs">
+      <label
+        htmlFor={id}
+        className="grid grow cursor-pointer select-none gap-1"
+      >
+        <Typography as="p" className="font-medium">
+          {label}
+        </Typography>
+        <Typography as="p" className="text-xs text-foreground-500">
           {typeof description === "function"
             ? description(checked)
             : description}
         </Typography>
-      </div>
+      </label>
     </div>
   );
 };

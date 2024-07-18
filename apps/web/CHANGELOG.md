@@ -1,5 +1,22 @@
 # web
 
+## 0.1.81
+
+### Patch Changes
+
+- fix typography
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.17
+  - @jamsr-ui/react@0.0.96
+
+## 0.1.80
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.16
+  - @jamsr-ui/react@0.0.95
+
 ## 0.1.79
 
 ### Patch Changes

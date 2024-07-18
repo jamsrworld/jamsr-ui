@@ -1,4 +1,5 @@
-import { ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { cn } from "@jamsr-ui/utils";
 
 export type CardFooterProps = {};
 

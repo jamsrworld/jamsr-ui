@@ -1,13 +1,14 @@
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Typography, typographyVariants, type TypographyProps } from "../src";
 
-const meta: Meta<typeof Typography> = {
+const meta: Meta<TypographyProps> = {
   title: "Components/Typography",
   component: Typography,
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
 const Template = (props: TypographyProps) => (
   <Typography {...props}>I'm a typography</Typography>
 );
@@ -28,7 +29,8 @@ const TemplateAll = (props: TypographyProps) => {
             variant={item}
             {...props}
           >
-            I am {item} Typography Variant
+            I am {item} Typography Variant 15 templates to present your iOS &
+            Android App in awesome ways
           </Typography>
         );
       })}

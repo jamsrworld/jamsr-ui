@@ -5,11 +5,9 @@ import {
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
-import CharacterCount from "@tiptap/extension-character-count";
 import { Color } from "@tiptap/extension-color";
 import FontFamily from "@tiptap/extension-font-family";
 import Highlight from "@tiptap/extension-highlight";
-import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import Subscript from "@tiptap/extension-subscript";
@@ -25,8 +23,9 @@ import StarterKit from "@tiptap/starter-kit";
 import type { ComponentProps, ComponentPropsWithoutRef } from "react";
 import { useCallback } from "react";
 import ImageResize from "tiptap-extension-resize-image";
-import type { SingleFileUploadProps } from "@jamsr-ui/file-upload";
+import { ExtendedImage } from "../components/extensions/image";
 import { ImageUpload } from "../components/extensions/image-upload";
+import type { ImageUploadProps } from "../components/extensions/image-upload/view/image-upload";
 import {
   editorVariants,
   type EditorVariantsProps,
@@ -43,7 +42,7 @@ type Props = EditorVariantsProps & {
   helperText?: React.ReactNode;
   isInvalid?: boolean;
   extensionsProps?: {
-    imageUpload?: Partial<SingleFileUploadProps>;
+    imageUpload?: Partial<ImageUploadProps>;
   };
 };
 
@@ -74,19 +73,23 @@ export const useEditor = (props: UseEditorProps) => {
   const editor = useEditorBase({
     extensions: [
       StarterKit.configure(),
-      Highlight,
+      Highlight.configure({
+        multicolor: true,
+      }),
       TaskList,
       TaskItem,
       TextStyle,
       Color,
       Underline,
       Superscript,
-      Link,
+      Link.configure({
+        openOnClick: false,
+      }),
       ImageResize,
       ImageUpload.configure({
         props: extensionsProps?.imageUpload,
       }),
-      Image.configure({
+      ExtendedImage.configure({
         inline: true,
       }),
       TextAlign.configure({
@@ -94,9 +97,6 @@ export const useEditor = (props: UseEditorProps) => {
       }),
       Subscript,
       FontFamily,
-      CharacterCount.configure({
-        limit: 10000,
-      }),
       Placeholder.configure({
         placeholder,
       }),
@@ -111,8 +111,6 @@ export const useEditor = (props: UseEditorProps) => {
     },
     ...options,
   });
-
-  // editor?.chain().focus()
 
   const handleOnClick = useCallback(() => {
     editor?.commands.focus();

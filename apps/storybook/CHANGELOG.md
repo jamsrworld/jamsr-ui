@@ -1,5 +1,19 @@
 # @ui/storybook
 
+## 0.0.96
+
+### Patch Changes
+
+- fix editor
+- Updated dependencies
+  - @jamsr-ui/react@0.0.94
+
+## 0.0.95
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.93
+
 ## 0.0.94
 
 ### Patch Changes

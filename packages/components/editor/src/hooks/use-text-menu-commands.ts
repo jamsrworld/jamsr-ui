@@ -62,21 +62,36 @@ export const useTextMenuCommands = (editor: Editor) => {
   );
 
   const onChangeHighlight = useCallback(
-    (color: string) => editor.chain().setHighlight({ color }).run(),
+    (color: string) => {
+      editor.chain().focus().setHighlight({ color }).run();
+    },
     [editor],
   );
+
   const onClearHighlight = useCallback(
     () => editor.chain().focus().unsetHighlight().run(),
     [editor],
   );
 
   const onLink = useCallback(
-    (url: string, inNewTab?: boolean) =>
+    (url: string, inNewTab?: boolean) => {
+      if (url === "") {
+        editor.chain().focus().extendMarkRange("link").unsetLink().run();
+        return;
+      }
+
       editor
         .chain()
         .focus()
+        .extendMarkRange("link")
         .setLink({ href: url, target: inNewTab ? "_blank" : "" })
-        .run(),
+        .run();
+    },
+    [editor],
+  );
+
+  const onUnlink = useCallback(
+    () => editor.chain().focus().unsetLink().run(),
     [editor],
   );
 
@@ -152,6 +167,7 @@ export const useTextMenuCommands = (editor: Editor) => {
     onClearHighlight,
     onSetFont,
     onLink,
+    onUnlink,
     onHardBreak,
     onClearFormat,
     onUndo,

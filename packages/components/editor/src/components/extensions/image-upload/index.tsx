@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Node, ReactNodeViewRenderer } from "@tiptap/react";
@@ -38,11 +39,10 @@ export const ImageUpload = Node.create({
     };
   },
   addNodeView() {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return ReactNodeViewRenderer((e: any) => {
       return (
         <ImageUploadComponent
-          fileUploadProps={e.extension.options?.props}
+          imageUploadProps={e.extension.options?.props}
           editor={e.editor}
           getPos={e.getPos}
         />

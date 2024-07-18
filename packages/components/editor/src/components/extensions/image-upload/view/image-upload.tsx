@@ -4,29 +4,33 @@ import type { Editor } from "@tiptap/react";
 import { NodeViewWrapper } from "@tiptap/react";
 import { useState } from "react";
 
+export type ImageUploadProps = Omit<SingleFileUploadProps, "onFileSelect"> & {
+  onFileSelect: (file: File) => Promise<{
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+    placeholder?: string;
+  }>;
+};
+
 export const ImageUploadComponent = ({
   getPos,
   editor,
-  fileUploadProps,
+  imageUploadProps,
 }: {
   getPos: () => number;
   editor: Editor;
-  fileUploadProps: SingleFileUploadProps;
+  imageUploadProps: ImageUploadProps;
 }) => {
   const [value, setValue] = useState("");
-
   const onFileSelect = async (file: File) => {
-    const url = await fileUploadProps.onFileSelect(file);
-    if (!url) {
-      return;
-    }
-
-    setValue(url);
+    const data = await imageUploadProps.onFileSelect(file);
     //
     editor
       .chain()
       .focus()
-      .setImage({ src: url })
+      .setImage(data)
       .deleteRange({ from: getPos(), to: getPos() })
       .run();
   };
@@ -35,7 +39,7 @@ export const ImageUploadComponent = ({
     <NodeViewWrapper>
       <div className="m-0 p-0" data-drag-handle>
         <SingleFileUpload
-          {...fileUploadProps}
+          {...imageUploadProps}
           value={value}
           onValueChange={setValue}
           onFileSelect={onFileSelect}

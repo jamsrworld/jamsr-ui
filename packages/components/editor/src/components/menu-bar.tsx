@@ -7,6 +7,7 @@ import { FontColorPicker } from "./font-color-picker";
 import { FontFamilyPicker } from "./font-family-picker";
 import { FontHighlightPicker } from "./font-highlight-picker";
 import type { IconTypes } from "./Icon/icons";
+import { LinkMenuBarItem } from "./Icon/link-item";
 import { ImagePicker } from "./image-picker";
 import ToolbarItem from "./menu-item";
 import { TextPicker } from "./text-picker";
@@ -26,6 +27,7 @@ const items = (
       onClick: () => void;
       title: string;
       isActive: () => boolean;
+      isDisabled?: () => boolean;
     }
   | { type: "divider" }
   | { type: "custom"; component: React.ReactNode }
@@ -110,6 +112,18 @@ const items = (
   },
   {
     type: "divider",
+  },
+  {
+    type: "custom",
+    component: <LinkMenuBarItem onLink={commands.onLink} />,
+  },
+  {
+    type: "option",
+    icon: "unlink",
+    isActive: () => false,
+    onClick: commands.onUnlink,
+    title: "Unlink",
+    isDisabled: () => !editor.isActive("link"),
   },
   {
     type: "option",

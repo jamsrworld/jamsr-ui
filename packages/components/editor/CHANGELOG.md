@@ -1,5 +1,21 @@
 # @jamsr-ui/editor
 
+## 0.0.15
+
+### Patch Changes
+
+- fix editor
+- Updated dependencies
+  - @jamsr-ui/file-upload@0.0.50
+
+## 0.0.14
+
+### Patch Changes
+
+- fix
+- Updated dependencies
+  - @jamsr-ui/file-upload@0.0.49
+
 ## 0.0.13
 
 ### Patch Changes

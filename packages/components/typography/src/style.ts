@@ -1,7 +1,7 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const typographyVariants = tv({
-  base: "text-left subpixel-antialiased",
+  base: "subpixel-antialiased",
   variants: {
     variant: {
       h1: "text-5xl md:text-6xl",

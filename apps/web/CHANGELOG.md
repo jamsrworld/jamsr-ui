@@ -1,5 +1,21 @@
 # web
 
+## 0.1.83
+
+### Patch Changes
+
+- impro typography
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.19
+  - @jamsr-ui/react@0.0.98
+
+## 0.1.82
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.97
+- @jamsr-ui/editor@0.0.18
+
 ## 0.1.81
 
 ### Patch Changes

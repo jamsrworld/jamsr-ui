@@ -1,5 +1,19 @@
 # @jamsr-ui/tab
 
+## 0.0.41
+
+### Patch Changes
+
+- impro typography
+- Updated dependencies
+  - @jamsr-ui/card@0.0.35
+
+## 0.0.40
+
+### Patch Changes
+
+- @jamsr-ui/card@0.0.34
+
 ## 0.0.39
 
 ### Patch Changes

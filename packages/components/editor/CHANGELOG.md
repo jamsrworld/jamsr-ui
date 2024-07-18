@@ -1,5 +1,23 @@
 # @jamsr-ui/editor
 
+## 0.0.19
+
+### Patch Changes
+
+- impro typography
+- Updated dependencies
+  - @jamsr-ui/switch@0.0.35
+  - @jamsr-ui/popover@0.0.33
+  - @jamsr-ui/select@0.0.40
+
+## 0.0.18
+
+### Patch Changes
+
+- @jamsr-ui/popover@0.0.33
+- @jamsr-ui/switch@0.0.34
+- @jamsr-ui/select@0.0.40
+
 ## 0.0.17
 
 ### Patch Changes

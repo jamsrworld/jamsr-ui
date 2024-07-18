@@ -15,10 +15,9 @@ export const Typography = <T extends React.ElementType = "div">(
     as,
     className,
     variant,
-    spaced,
     gutterBottom,
     gradient,
-    fontSize,
+    leading,
     ...restProps
   } = props;
 
@@ -28,10 +27,9 @@ export const Typography = <T extends React.ElementType = "div">(
       data-component="typography"
       className={typographyVariants({
         variant,
-        spaced,
+        leading,
         gutterBottom,
         gradient,
-        fontSize,
         className,
       })}
       {...restProps}

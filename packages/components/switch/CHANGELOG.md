@@ -1,5 +1,20 @@
 # @jamsr-ui/switch
 
+## 0.0.35
+
+### Patch Changes
+
+- impro typography
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.35
+
+## 0.0.34
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.34
+
 ## 0.0.33
 
 ### Patch Changes

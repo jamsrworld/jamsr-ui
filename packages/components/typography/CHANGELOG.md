@@ -1,5 +1,17 @@
 # @jamsr-ui/typography
 
+## 0.0.35
+
+### Patch Changes
+
+- impro typography
+
+## 0.0.34
+
+### Patch Changes
+
+- improve typography
+
 ## 0.0.33
 
 ### Patch Changes

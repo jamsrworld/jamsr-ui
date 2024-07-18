@@ -1,20 +1,21 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const typographyVariants = tv({
-  base: "subpixel-antialiased",
+  base: "text-left subpixel-antialiased",
   variants: {
     variant: {
-      h1: "text-4xl font-semibold md:text-5xl",
-      h2: "text-3xl font-semibold md:text-4xl",
-      h3: "text-2xl font-semibold md:text-3xl",
-      h4: "text-xl font-semibold md:text-2xl",
-      h5: "text-lg font-semibold md:text-xl",
-      h6: "text-base font-semibold md:text-lg",
+      h1: "text-5xl md:text-6xl",
+      h2: "text-4xl md:text-5xl",
+      h3: "text-3xl md:text-4xl",
+      h4: "text-2xl md:text-3xl",
+      h5: "text-xl md:text-2xl",
+      h6: "text-lg md:text-xl",
       caption: "text-xs",
-      body: "text-sm",
-      body1: "text-base font-normal md:text-lg",
-      body2: "text-lg font-normal md:text-xl",
-      body3: "text-xl font-normal md:text-2xl",
+      paragraph: "text-sm",
+      body1: "text-sm md:text-base",
+      body2: "text-base md:text-lg",
+      body3: "text-lg md:text-xl",
+      body4: "text-xl md:text-2xl",
     },
     gradient: {
       violet: "from-[#FF1CF7] to-[#b249f8]",
@@ -25,19 +26,16 @@ export const typographyVariants = tv({
       pink: "from-[#FF72E1] to-[#F54C7A]",
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
     },
-    spaced: {
-      true: "leading-[1.9] tracking-wide sm:leading-[1.9]",
+    leading: {
+      none: "leading-none",
+      md: "!leading-[1.7]",
     },
     gutterBottom: {
       true: "mb-2",
     },
-    fontSize: {
-      inherit: "text-size-inherit",
-    },
   },
   defaultVariants: {
-    spaced: false,
-    variant: "body",
+    variant: "paragraph",
   },
   compoundVariants: [
     {
@@ -51,6 +49,14 @@ export const typographyVariants = tv({
         "foreground",
       ],
       class: "bg-gradient-to-b bg-clip-text text-transparent",
+    },
+    {
+      variant: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      className: "font-semibold",
+    },
+    {
+      variant: ["body1", "body2", "body3", "body4"],
+      className: "font-normal",
     },
   ],
 });

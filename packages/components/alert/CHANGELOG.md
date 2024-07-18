@@ -1,5 +1,20 @@
 # @jamsr-ui/alert
 
+## 0.0.39
+
+### Patch Changes
+
+- impro typography
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.35
+
+## 0.0.38
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.34
+
 ## 0.0.37
 
 ### Patch Changes

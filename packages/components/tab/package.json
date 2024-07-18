@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/tab",
-  "version": "0.0.39",
+  "version": "0.0.41",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

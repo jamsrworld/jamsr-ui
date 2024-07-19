@@ -43,6 +43,11 @@ export const ImageUploadComponent = ({
           value={value}
           onValueChange={setValue}
           onFileSelect={onFileSelect}
+          dropzoneOptions={{
+            accept: {
+              "image/*": [],
+            },
+          }}
         />
       </div>
     </NodeViewWrapper>

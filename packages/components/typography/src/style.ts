@@ -9,7 +9,7 @@ export const typographyVariants = tv({
       h3: "text-2xl md:text-3xl lg:text-4xl",
       h4: "text-xl md:text-2xl lg:text-3xl",
       h5: "text-lg md:text-xl lg:text-2xl",
-      h6: "text-base md:text-lg lg:text-xl",
+      h6: "text-base md:text-lg",
       caption: "text-xs",
       paragraph: "text-sm",
       body1: "text-sm md:text-base",

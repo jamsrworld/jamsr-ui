@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.101",
+  "version": "0.0.102",
   "main": "./src/index.ts",
   "description": "A react js ui library with tailwindcss",
   "keywords": [
@@ -66,11 +66,12 @@
     "@jamsr-ui/chip": "workspace:*",
     "@jamsr-ui/confirmation": "workspace:^",
     "@jamsr-ui/core": "workspace:*",
+    "@jamsr-ui/data-table": "workspace:^",
     "@jamsr-ui/dialog": "workspace:*",
     "@jamsr-ui/divider": "workspace:*",
     "@jamsr-ui/editor": "workspace:^",
-    "@jamsr-ui/header": "workspace:*",
     "@jamsr-ui/file-upload": "workspace:*",
+    "@jamsr-ui/header": "workspace:*",
     "@jamsr-ui/input": "workspace:*",
     "@jamsr-ui/link": "workspace:*",
     "@jamsr-ui/menu": "workspace:*",

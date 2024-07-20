@@ -34,7 +34,7 @@ export const DataTable = (props: Props) => {
   const {
     sorting: propSorting,
     columns,
-    isServer = true,
+    isServer = false,
     pagination: showPagination = true,
     bottomContent,
     topContent,

@@ -1473,6 +1473,9 @@ importers:
       '@jamsr-ui/core':
         specifier: workspace:*
         version: link:../core
+      '@jamsr-ui/data-table':
+        specifier: workspace:^
+        version: link:../components/data-table
       '@jamsr-ui/dialog':
         specifier: workspace:*
         version: link:../components/dialog

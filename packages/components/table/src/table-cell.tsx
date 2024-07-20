@@ -4,7 +4,7 @@ import { useTableContext } from "./table-context";
 
 export type TableCellProps = UIProps<"td">;
 
-export const TableCell = <T extends React.ElementType = "tbody">(
+export const TableCell = <T extends React.ElementType = "td">(
   props: ComponentPropsWithAs<T>,
 ) => {
   const { as, children, className, ...restProps } = props as TableCellProps;

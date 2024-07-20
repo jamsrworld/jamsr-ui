@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.102",
+  "version": "0.0.103",
   "main": "./src/index.ts",
   "description": "A react js ui library with tailwindcss",
   "keywords": [

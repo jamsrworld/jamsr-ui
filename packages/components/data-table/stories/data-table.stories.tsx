@@ -3,7 +3,7 @@ import { DataTable } from "../src";
 import { COLUMNS, USERS } from "./columns";
 
 const meta: Meta<typeof DataTable> = {
-  title: "Components/DataTable",
+  title: "Components/Data Table",
   component: DataTable,
 };
 

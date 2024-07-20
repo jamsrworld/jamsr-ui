@@ -17,7 +17,7 @@ import { usePagination } from "./hooks/use-pagination";
 import { useSorting } from "./hooks/use-sorting";
 import { Pagination } from "./pagination";
 
-type Props = Partial<TableProps> & {
+export type DataTableProps = Partial<TableProps> & {
   sorting: {
     id: string;
     desc: boolean;
@@ -30,7 +30,7 @@ type Props = Partial<TableProps> & {
   options?: TableOptions<RowData>;
 };
 
-export const DataTable = (props: Props) => {
+export const DataTable = (props: DataTableProps) => {
   const {
     sorting: propSorting,
     columns,

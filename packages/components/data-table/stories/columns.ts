@@ -24,7 +24,7 @@ export function createRandomUser(): User {
 }
 
 export const USERS: User[] = faker.helpers.multiple(createRandomUser, {
-  count: 500,
+  count: 100,
 });
 
 export const COLUMNS: ColumnDef<User>[] = [

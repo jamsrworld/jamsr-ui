@@ -1,4 +1,5 @@
 import { TableBody, TableCell, TableRow } from "@jamsr-ui/table";
+import { cn } from "@jamsr-ui/utils";
 import { flexRender, type Row } from "@tanstack/react-table";
 import { EmptyContent } from "./empty-content";
 import { LoadingSkeleton } from "./loading-skeleton";
@@ -18,13 +19,19 @@ export const Body = <T,>({ rows, isLoading = false }: Props<T>) => {
   const isEmpty = rows.length === 0;
 
   const body = rows.map((row) => (
-    <TableRow key={row.id}>
+    <TableRow
+      key={row.id}
+      className="flex w-full"
+    >
       {row.getVisibleCells().map((cell) => {
         const width = cell.column.getSize();
         const { maxSize } = cell.column.columnDef;
         return (
           <TableCell
-            className={cell.column.columnDef?.meta?.cellClassName}
+            className={cn(
+              "flex grow items-center",
+              cell.column.columnDef?.meta?.cellClassName,
+            )}
             key={cell.id}
             style={{
               width,

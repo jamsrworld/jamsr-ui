@@ -26,3 +26,20 @@ export const Default: Story = {
     );
   },
 };
+
+export const Server: Story = {
+  render: () => {
+    return (
+      <DataTable
+        columns={COLUMNS}
+        isServer
+        sorting={{
+          id: "registeredAt",
+          desc: false,
+        }}
+        data={USERS}
+        rowCount={USERS.length}
+      />
+    );
+  },
+};

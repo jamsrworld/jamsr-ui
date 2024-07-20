@@ -26,7 +26,7 @@ type Props = Partial<TableProps> & {
   isServer?: boolean;
   pagination?: boolean;
   data: unknown[];
-  rowCount: number;
+  rowCount?: number;
   options?: TableOptions<RowData>;
 };
 
@@ -44,8 +44,7 @@ export const DataTable = (props: Props) => {
     ...restProps
   } = props;
 
-  const { pagination, skip, take, onPaginationChange } = usePagination();
-  console.log("pagination:->", pagination)
+  const { pagination, take, onPaginationChange } = usePagination();
   const { sorting, field, order, onSortingChange } =
     useSorting<string>(propSorting);
 
@@ -65,7 +64,7 @@ export const DataTable = (props: Props) => {
     ];
   }, [columns]);
 
-  const pageCount = Math.round(rowCount / take);
+  const pageCount = rowCount ? Math.round(rowCount / take) : 0;
 
   const table = useReactTable({
     data,
@@ -92,9 +91,9 @@ export const DataTable = (props: Props) => {
     defaultColumn: {
       minSize: 100,
       size: 100,
-      maxSize: 1e3,
+      maxSize: 1e6,
     },
-    // ...options,
+    ...options,
   });
 
   return (
@@ -110,7 +109,7 @@ export const DataTable = (props: Props) => {
           )
         }
         classNames={{
-          wrapper: "overflow-x-scroll",
+          wrapper: "overflow-x-auto",
           base: "overflow-hidden",
         }}
         {...restProps}

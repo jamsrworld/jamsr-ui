@@ -11,7 +11,10 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
   return (
     <TableHeader>
       {headerGroups.map((headerGroup) => (
-        <TableRow key={headerGroup.id}>
+        <TableRow
+          className="flex w-full"
+          key={headerGroup.id}
+        >
           {headerGroup.headers.map((header) => (
             <TableColumn
               key={header.id}
@@ -19,7 +22,7 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
                 width: header.getSize(),
                 maxWidth: header.column.columnDef.maxSize,
               }}
-              className="relative"
+              className="relative flex"
             >
               {header.isPlaceholder ? null : (
                 <>

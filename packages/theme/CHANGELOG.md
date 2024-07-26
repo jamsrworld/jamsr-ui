@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.34
+
+### Patch Changes
+
+- fix skeletion
+
 ## 0.0.33
 
 ### Patch Changes

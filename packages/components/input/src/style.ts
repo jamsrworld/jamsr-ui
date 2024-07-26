@@ -31,7 +31,8 @@ export const inputVariants = tv({
         input: "p-0",
       },
       filled: {
-        inputWrapper: "rounded-xl border-2 border-divider bg-background-paper",
+        inputWrapper:
+          "rounded-xl border-2 border-divider bg-background-secondary",
       },
     },
     size: {
@@ -50,9 +51,9 @@ export const inputVariants = tv({
     isInvalid: {
       true: {
         inputWrapper:
-          "border-error focus-within:border-error focus-within:shadow-error focus-within:ring-error",
-        helper: "text-error",
-        label: "text-error",
+          "border-danger focus-within:border-danger focus-within:shadow-danger focus-within:ring-danger",
+        helper: "text-danger",
+        label: "text-danger",
       },
     },
     labelPlacement: {
@@ -70,7 +71,7 @@ export const inputVariants = tv({
     },
     isRequired: {
       true: {
-        notation: "text-error",
+        notation: "text-danger",
       },
     },
     isOptional: {

@@ -33,7 +33,7 @@ export const Alert = <T extends React.ElementType = "div">(
     switch (severity) {
       case "default":
         return <Info />;
-      case "error":
+      case "danger":
         return <Error />;
       case "info":
         return <Info />;

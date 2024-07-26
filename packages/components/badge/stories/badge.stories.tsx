@@ -17,7 +17,7 @@ export const Default: Story = {
 const ColorsTemplate = () => {
   const colors: BadgeVariants["color"][] = [
     "default",
-    "error",
+    "danger",
     "primary",
     "secondary",
     "success",
@@ -26,10 +26,7 @@ const ColorsTemplate = () => {
   return (
     <div className="flex gap-4">
       {colors.map((color) => (
-        <Badge
-          color={color}
-          key={color}
-        >
+        <Badge color={color} key={color}>
           {color}
         </Badge>
       ))}

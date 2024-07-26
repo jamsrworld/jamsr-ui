@@ -57,9 +57,9 @@ export const radioVariant = tv({
         control: "bg-warning text-warning-foreground",
         wrapper: "group-data-[selected=true]:border-warning",
       },
-      error: {
-        control: "bg-error text-error-foreground",
-        wrapper: "group-data-[selected=true]:border-error",
+      danger: {
+        control: "bg-danger text-danger-foreground",
+        wrapper: "group-data-[selected=true]:border-danger",
       },
     },
     size: {
@@ -92,10 +92,10 @@ export const radioVariant = tv({
     },
     isInvalid: {
       true: {
-        control: "bg-error text-error-foreground",
-        wrapper: "border-error group-data-[selected=true]:border-error",
-        label: "text-error",
-        description: "text-error-300",
+        control: "bg-danger text-danger-foreground",
+        wrapper: "border-danger group-data-[selected=true]:border-danger",
+        label: "text-danger",
+        description: "text-danger-300",
       },
     },
   },
@@ -118,7 +118,7 @@ export const radioGroupVariant = tv({
   variants: {
     isInvalid: {
       true: {
-        helperText: "text-error",
+        helperText: "text-danger",
       },
     },
   },

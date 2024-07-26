@@ -23,7 +23,7 @@ export const Avatar = <T extends React.ElementType = "img">(
   } = props;
   const source = !isEmpty(src)
     ? src
-    : `https://avatar.iran.liara.run/${placeholderType === "avatar" ? "public" : "username"}?username=${alt}`;
+    : `https://avatars.jamsrworld.com/${placeholderType === "avatar" ? "public" : "username"}?username=${alt}`;
 
   const Component = as ?? "img";
   return (

@@ -79,7 +79,7 @@ export const tabsVariant = tv({
       secondary: {},
       success: {},
       warning: {},
-      error: {},
+      danger: {},
     },
     size: {
       sm: {
@@ -206,10 +206,10 @@ export const tabsVariant = tv({
     },
     {
       variant: ["solid", "bordered", "light"],
-      color: "error",
+      color: "danger",
       class: {
-        cursor: colorVariants.solid.error,
-        tabContent: "group-data-[selected=true]:text-error-foreground",
+        cursor: colorVariants.solid.danger,
+        tabContent: "group-data-[selected=true]:text-danger-foreground",
       },
     },
     // underlined && color
@@ -255,10 +255,10 @@ export const tabsVariant = tv({
     },
     {
       variant: "underlined",
-      color: "error",
+      color: "danger",
       class: {
-        cursor: "bg-error",
-        tabContent: "group-data-[selected=true]:text-error",
+        cursor: "bg-danger",
+        tabContent: "group-data-[selected=true]:text-danger",
       },
     },
   ],

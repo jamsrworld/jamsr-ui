@@ -6,7 +6,7 @@ export const dialog = tv({
     header: "px-4 pt-4 text-base font-bold",
     body: "m-auto w-full flex-1 overflow-y-auto p-2 md:p-4",
     content:
-      "relative z-dialog flex w-full flex-col rounded-3xl border border-divider bg-background-paper",
+      "relative z-dialog flex w-full flex-col rounded-3xl border border-divider bg-background-secondary",
     footer: "bottom-0 flex w-full justify-end p-2",
   },
   variants: {

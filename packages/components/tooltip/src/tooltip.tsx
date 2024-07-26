@@ -103,7 +103,7 @@ export const Tooltip = (props: TooltipProps) => {
           <div
             data-component="tooltip"
             role="tooltip"
-            className="z-popover inline-block rounded-lg bg-background-paper px-3 py-1.5 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300"
+            className="z-popover inline-block rounded-lg bg-background-secondary px-3 py-1.5 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300"
             ref={refs.setFloating}
             style={floatingStyles}
             {...getFloatingProps()}

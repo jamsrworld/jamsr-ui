@@ -27,7 +27,7 @@ export const switchVariants = tv({
         wrapper: "bg-warning",
       },
       error: {
-        wrapper: "bg-error",
+        wrapper: "bg-danger",
       },
     },
     size: {
@@ -54,7 +54,7 @@ export const switchVariants = tv({
     },
     disabled: {
       true: {
-        wrapper: "pointer-events-none cursor-not-allowed bg-background-neutral",
+        wrapper: "pointer-events-none cursor-not-allowed bg-background-muted",
       },
     },
   },

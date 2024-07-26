@@ -40,7 +40,7 @@ export const Drawer = (props: Props) => {
             animate={{ right: 0 }}
             exit={{ right: -900 }}
             className={cn(
-              "bg-background-paper z-dialog fixed right-0 top-0 h-screen",
+              "bg-background-secondary z-dialog fixed right-0 top-0 h-screen",
               className,
             )}
           >

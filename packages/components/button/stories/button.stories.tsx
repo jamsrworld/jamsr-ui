@@ -66,7 +66,7 @@ export const Variants: Story = {
       "secondary",
       "success",
       "warning",
-      "error",
+      "danger",
     ];
 
     return (

@@ -48,9 +48,9 @@ export const selectVariant = tv({
     },
     isInvalid: {
       true: {
-        helperText: "text-error",
-        label: "text-error",
-        trigger: "border-error",
+        helperText: "text-danger",
+        label: "text-danger",
+        trigger: "border-danger",
       },
     },
   },

@@ -11,10 +11,7 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
   return (
     <TableHeader>
       {headerGroups.map((headerGroup) => (
-        <TableRow
-          className="flex w-full"
-          key={headerGroup.id}
-        >
+        <TableRow className="flex w-full" key={headerGroup.id}>
           {headerGroup.headers.map((header) => (
             <TableColumn
               key={header.id}

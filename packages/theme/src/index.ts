@@ -6,7 +6,7 @@ export { createThemes, semanticColors };
 
 export const jamsrui = () => [
   plugin(
-    ({ addBase, addUtilities, matchUtilities, addComponents, theme }) => {
+    ({ addUtilities, addComponents }) => {
       addComponents({
         ".gap-responsive": {
           "@apply gap-1 md:gap-2 lg:gap-4": "",

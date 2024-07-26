@@ -11,8 +11,8 @@ export const editorVariants = tv({
   variants: {
     isInvalid: {
       true: {
-        editor: "border-error",
-        helperText: "text-error",
+        editor: "border-danger",
+        helperText: "text-danger",
       },
     },
   },

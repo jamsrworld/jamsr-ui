@@ -1,4 +1,5 @@
-import { VariantProps, tv } from "@jamsr-ui/utils";
+import type { VariantProps } from "@jamsr-ui/utils";
+import { tv } from "@jamsr-ui/utils";
 
 export const alertVariant = tv({
   slots: {
@@ -20,18 +21,18 @@ export const alertVariant = tv({
       warning: {
         wrapper: "border border-warning-600 text-warning-600",
       },
-      error: { wrapper: "border border-error-600 text-error-500" },
+      danger: { wrapper: "border border-danger-600 text-danger-500" },
       info: { wrapper: "border border-blue-600 text-blue-500" },
       default: { wrapper: "border border-default-600 text-default-500" },
     },
   },
   compoundVariants: [
-    // error
+    // danger
     {
-      severity: "error",
+      severity: "danger",
       variant: "filled",
       className: {
-        wrapper: "bg-error-100 text-white",
+        wrapper: "bg-danger-100 text-white",
       },
     },
     // success

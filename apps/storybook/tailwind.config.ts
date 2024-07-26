@@ -7,6 +7,7 @@ const config: Config = {
     "../../packages/components/*/src/**/*.ts",
     "../../packages/components/*/src/**/*.tsx",
     "../../packages/components/*/stories/**/*.tsx",
+    "../../packages/theme/stories/**/*.tsx",
   ],
   plugins: [...jamsrui()],
 };

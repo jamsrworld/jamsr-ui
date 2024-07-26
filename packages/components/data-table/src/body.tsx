@@ -19,10 +19,7 @@ export const Body = <T,>({ rows, isLoading = false }: Props<T>) => {
   const isEmpty = rows.length === 0;
 
   const body = rows.map((row) => (
-    <TableRow
-      key={row.id}
-      className="flex w-full"
-    >
+    <TableRow key={row.id} className="flex w-full">
       {row.getVisibleCells().map((cell) => {
         const width = cell.column.getSize();
         const { maxSize } = cell.column.columnDef;

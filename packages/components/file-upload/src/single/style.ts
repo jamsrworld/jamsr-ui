@@ -8,7 +8,7 @@ export const singleUploadVariants = tv({
       "group relative flex aspect-video select-none flex-col items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-divider",
     image: "absolute size-full rounded-md object-cover",
     deleteBtn:
-      "absolute right-0 top-0 hidden hover:text-error group-hover:block",
+      "absolute right-0 top-0 hidden hover:text-danger group-hover:block",
     description: "text-xs",
     info: "text-xs text-foreground-400",
     fileWrapper:
@@ -46,10 +46,10 @@ export const singleUploadVariants = tv({
     },
     isInvalid: {
       true: {
-        picker: "border-error text-error",
-        helperText: "text-error",
-        info: "text-error",
-        description: "text-error",
+        picker: "border-danger text-danger",
+        helperText: "text-danger",
+        info: "text-danger",
+        description: "text-danger",
       },
     },
   },

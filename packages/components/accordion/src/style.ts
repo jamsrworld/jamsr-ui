@@ -11,7 +11,7 @@ export const accordion = tv({
 
 export const accordionItem = tv({
   slots: {
-    base: "flex flex-col rounded-xl bg-background-paper px-4",
+    base: "flex flex-col rounded-xl bg-background-secondary px-4",
     heading: "flex items-center gap-2",
     trigger: [
       "flex size-full items-center gap-3 py-4 disabled:cursor-not-allowed disabled:opacity-50",

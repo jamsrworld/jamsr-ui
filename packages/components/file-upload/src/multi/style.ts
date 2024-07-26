@@ -8,7 +8,7 @@ export const multiUploadVariant = tv({
     fileView: "group relative size-20",
     file: "size-full rounded-lg object-cover",
     deleteBtn:
-      "absolute right-1 top-1 hidden size-4 rounded-full bg-error text-white hover:bg-error-300 group-hover:block",
+      "absolute right-1 top-1 hidden size-4 rounded-full bg-danger text-white hover:bg-danger-300 group-hover:block",
     picker:
       "group relative flex aspect-video select-none flex-col items-center justify-center rounded-lg border-2 border-dashed border-divider",
     helperText: "text-xs text-foreground-400",
@@ -31,9 +31,9 @@ export const multiUploadVariant = tv({
     },
     isInvalid: {
       true: {
-        picker: "border-error text-error",
-        helperText: "text-error",
-        info: "text-error",
+        picker: "border-danger text-danger",
+        helperText: "text-danger",
+        info: "text-danger",
       },
     },
   },

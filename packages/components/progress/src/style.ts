@@ -11,7 +11,7 @@ export const linearProgressVariants = tv({
         bar: "bg-primary",
       },
       error: {
-        bar: "bg-error",
+        bar: "bg-danger",
       },
       success: {
         bar: "bg-success",

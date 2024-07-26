@@ -121,7 +121,7 @@ export const Colors: Story = {
       "secondary",
       "success",
       "warning",
-      "error",
+      "danger",
     ] as const;
 
     return (

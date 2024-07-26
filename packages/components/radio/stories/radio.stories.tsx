@@ -29,7 +29,7 @@ export const Colors: Story = {
   render: () => {
     const colors: RadioProps["color"][] = [
       "default",
-      "error",
+      "danger",
       "primary",
       "secondary",
       "success",

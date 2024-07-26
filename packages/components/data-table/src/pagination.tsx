@@ -21,6 +21,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
 
   useEffect(() => {
     table.setPageSize(Number(Array.from(value)[0] ?? rowPerPageOptions[0]));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   const onNext = () => {
@@ -37,12 +38,9 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
   };
 
   return (
-    <div className="border-divider/10 flex flex-row items-center justify-between gap-4 border-t p-3">
+    <div className="flex flex-row items-center justify-between gap-4 border-t border-divider/10 p-3">
       <div className="flex grow items-center gap-2">
-        <Typography
-          as="p"
-          className="_md:hidden"
-        >
+        <Typography as="p" className="_md:hidden">
           Rows Per Page:
         </Typography>
         <Select
@@ -52,10 +50,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           size="sm"
         >
           {rowPerPageOptions.map((pageSize) => (
-            <SelectItem
-              key={pageSize.toString()}
-              value={pageSize.toString()}
-            >
+            <SelectItem key={pageSize.toString()} value={pageSize.toString()}>
               {pageSize.toString()}
             </SelectItem>
           ))}

@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/theme",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "",
   "main": "src/index.ts",
   "publishConfig": {
@@ -26,10 +26,12 @@
     "color2k": "^2.0.3"
   },
   "devDependencies": {
+    "@types/react": "^18.3.3",
+    "clean-package": "^2.2.0",
+    "react": "19.0.0-rc-c21bcd627b-20240624",
     "tailwindcss": "^3.4.3",
     "tw-colors": "^3.3.1",
-    "typescript": "^5.4.5",
-    "clean-package": "^2.2.0"
+    "typescript": "^5.4.5"
   },
   "clean-package": "../../clean-package.config.json"
 }

@@ -22,7 +22,7 @@ export type DataTableProps = Partial<TableProps> & {
     id: string;
     desc: boolean;
   };
-  columns: ColumnDef<any>[];
+  columns: ColumnDef<unknown, any>[];
   isServer?: boolean;
   pagination?: boolean;
   data: unknown[];
@@ -37,7 +37,6 @@ export const DataTable = (props: DataTableProps) => {
     isServer = false,
     pagination: showPagination = true,
     bottomContent,
-    topContent,
     data,
     rowCount,
     options,
@@ -68,7 +67,6 @@ export const DataTable = (props: DataTableProps) => {
 
   const table = useReactTable({
     data,
-    debugTable: true,
     columns: allColumns,
     columnResizeMode: "onChange",
     getCoreRowModel: getCoreRowModel(),
@@ -101,12 +99,10 @@ export const DataTable = (props: DataTableProps) => {
       <Table
         density="standard"
         bottomContent={
-          !showPagination ? null : (
-            <Pagination
-              take={take}
-              table={table}
-            />
-          )
+          <>
+            {!showPagination ? null : <Pagination take={take} table={table} />}
+            {bottomContent}
+          </>
         }
         classNames={{
           wrapper: "overflow-x-auto",

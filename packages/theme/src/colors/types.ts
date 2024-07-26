@@ -17,25 +17,22 @@ export type ColorScale =
     }>
   | string;
 
+type Background = ColorScale & {
+  secondary: string;
+  content1: string;
+  content2: string;
+  content3: string;
+  content4: string;
+  muted: string;
+};
+
 export type BaseColors = {
-  background: ColorScale & {
-    paper: string;
-    neutral: string;
-  };
+  background: Background;
   divider: ColorScale;
-  overlay: ColorScale;
-  focus: ColorScale;
-  content1: ColorScale;
-  content2: ColorScale;
-  content3: ColorScale;
-  content4: ColorScale;
   action: {
     hover: string;
   };
-  foreground: ColorScale & {
-    secondary: string;
-    muted: string;
-  };
+  foreground: Background;
 };
 
 export type ThemeColors = BaseColors & {
@@ -44,7 +41,7 @@ export type ThemeColors = BaseColors & {
   secondary: ColorScale;
   success: ColorScale;
   warning: ColorScale;
-  error: ColorScale;
+  danger: ColorScale;
 };
 
 export type SemanticBaseColors = {

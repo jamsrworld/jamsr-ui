@@ -29,7 +29,7 @@ export const buttonVariant = tv({
       secondary: "",
       success: "",
       warning: "",
-      error: "",
+      danger: "",
     },
     variant: {
       solid: "",
@@ -92,8 +92,8 @@ export const buttonVariant = tv({
     },
     {
       variant: "solid",
-      color: "error",
-      class: colorVariants.solid.error,
+      color: "danger",
+      class: colorVariants.solid.danger,
     },
     // light / color
     {
@@ -122,8 +122,8 @@ export const buttonVariant = tv({
     },
     {
       variant: "light",
-      color: "error",
-      class: "text-error",
+      color: "danger",
+      class: "text-danger",
     },
     // shadow / color
     {
@@ -153,8 +153,8 @@ export const buttonVariant = tv({
     },
     {
       variant: "shadow",
-      color: "error",
-      class: colorVariants.shadow.error,
+      color: "danger",
+      class: colorVariants.shadow.danger,
     },
     // outline / color
     {
@@ -184,8 +184,8 @@ export const buttonVariant = tv({
     },
     {
       variant: "outline",
-      color: "error",
-      class: colorVariants.outline.error,
+      color: "danger",
+      class: colorVariants.outline.danger,
     },
     // Icon Only
     {

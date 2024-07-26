@@ -32,39 +32,26 @@ const base: SemanticBaseColors = {
   light: {
     background: {
       DEFAULT: "#FFFFFF",
-      paper: "#fff",
-      neutral: "hsl(240, 8.5%, 23.1%)",
+      secondary: "#fff",
+      muted: "hsl(240, 8.5%, 23.1%)",
+      content1: "#FFFFFF",
+      content2: common.zinc[100],
+      content3: common.zinc[200],
+      content4: common.zinc[300],
     },
     foreground: {
       ...common.zinc,
-      DEFAULT: "hsl(201.8, 24.4%, 8.8%)",
-      muted: "hsl(222 15% 65%)",
+      DEFAULT: "#000",
       secondary: "hsl(231, 10%, 61%)",
+      muted: "#fff",
+      content1: "#11181C",
+      content2: common.zinc[800],
+      content3: common.zinc[700],
+      content4: common.zinc[600],
     },
     divider: {
       DEFAULT: "#454545",
-    },
-    focus: {
-      DEFAULT: common.blue[500],
-    },
-    overlay: {
-      DEFAULT: "#000000",
-    },
-    content1: {
-      DEFAULT: "#FFFFFF",
-      foreground: "#11181C",
-    },
-    content2: {
-      DEFAULT: common.zinc[100],
-      foreground: common.zinc[800],
-    },
-    content3: {
-      DEFAULT: common.zinc[200],
-      foreground: common.zinc[700],
-    },
-    content4: {
-      DEFAULT: common.zinc[300],
-      foreground: common.zinc[600],
+      dark: "#454545",
     },
     action: {
       hover: "hsl(240, 20%, 10%)",
@@ -73,41 +60,26 @@ const base: SemanticBaseColors = {
   dark: {
     background: {
       DEFAULT: "rgb(0,0,0)",
-      paper: "hsl(240, 11%, 9%)",
-      neutral: "hsl(240, 8.5%, 23.1%)",
+      secondary: "hsl(240, 11%, 9%)",
+      muted: "hsl(240, 8.5%, 23.1%)",
+      content1: "#181818",
+      content2: common.zinc[800],
+      content3: common.zinc[700],
+      content4: common.zinc[600],
     },
     foreground: {
       ...common.zinc,
       DEFAULT: "hsl(210, 5.6%, 92.9%)",
       secondary: "hsl(231, 10.1%, 61.2%)",
-      muted: "hsl(222, 15%, 65%)",
-    },
-    focus: {
-      DEFAULT: common.blue[500],
-    },
-    overlay: {
-      DEFAULT: "#000000",
+      muted: "#888",
+      content1: "rgb(119,119,119)",
+      content2: common.zinc[100],
+      content3: common.zinc[200],
+      content4: common.zinc[300],
     },
     divider: {
       DEFAULT: "hsla(0, 0%, 100%, 0.2)",
       dark: "hsla(0, 0%, 100%, 0.3)",
-    },
-    content1: {
-      DEFAULT: "#181818",
-      dark: "#161616",
-      foreground: "rgb(119,119,119)",
-    },
-    content2: {
-      DEFAULT: common.zinc[800],
-      foreground: common.zinc[100],
-    },
-    content3: {
-      DEFAULT: common.zinc[700],
-      foreground: common.zinc[200],
-    },
-    content4: {
-      DEFAULT: common.zinc[600],
-      foreground: common.zinc[300],
     },
     action: {
       hover: common.zinc[800],
@@ -150,7 +122,7 @@ export const themeColorsLight: ThemeColors = {
     DEFAULT: common.yellow[500],
     dark: common.yellow[600],
   },
-  error: {
+  danger: {
     ...common.red,
     foreground: common.white,
     light: common.red[400],
@@ -196,7 +168,7 @@ export const themeColorsDark: ThemeColors = {
     DEFAULT: common.yellow[500],
     dark: common.yellow[600],
   },
-  error: {
+  danger: {
     ...swapColorValues(common.red),
     foreground: common.white,
     light: common.red[400],

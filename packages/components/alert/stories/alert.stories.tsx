@@ -30,7 +30,7 @@ export const Description: Story = {
 export const CustomIcon: Story = {
   args: {
     children: "This is a error message.",
-    severity: "error",
+    severity: "danger",
     icon: <Close />,
   },
 };
@@ -61,7 +61,7 @@ const SeverityTemplate = (props: AlertProps) => {
     "info",
     "success",
     "warning",
-    "error",
+    "danger",
     "default",
   ];
 

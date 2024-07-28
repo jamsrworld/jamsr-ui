@@ -26,7 +26,7 @@
     "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
-    "@jamsr-ui/button": "^0.0.35",
+    "@jamsr-ui/button": "^0.0.36",
     "clean-package": "^2.2.0",
     "@types/react": "^18.3.3",
     "react": "19.0.0-rc-c21bcd627b-20240624",

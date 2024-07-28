@@ -1,5 +1,11 @@
 # @jamsr-ui/button
 
+## 0.0.36
+
+### Patch Changes
+
+- fix
+
 ## 0.0.35
 
 ### Patch Changes

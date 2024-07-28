@@ -41,10 +41,12 @@ import { MenuContext, useMenu } from "./use-menu";
 
 export type MenuProps = {
   trigger: React.ReactNode;
-  nested?: boolean;
   children?: React.ReactNode;
   triggerOn?: "hover" | "click";
   placement?: Placement;
+  nestedPlacement?: Placement;
+  offset?: number;
+  nestedOffset?: number;
   classNames?: {
     popover?: string;
   };
@@ -56,8 +58,11 @@ export const MenuComponent = ({
   trigger,
   triggerOn = "click",
   placement,
+  nestedPlacement,
   className,
   classNames,
+  offset: offsetProp,
+  nestedOffset,
   showArrow = false,
   ...restProps
 }: MenuProps) => {
@@ -81,10 +86,12 @@ export const MenuComponent = ({
     nodeId,
     open: isOpen,
     onOpenChange: setIsOpen,
-    placement: placement ?? isNested ? "right-start" : "bottom-start",
+    placement: isNested
+      ? nestedPlacement ?? "right-start"
+      : placement ?? "bottom-start",
     middleware: [
       offset({
-        mainAxis: isNested ? 6 : 8,
+        mainAxis: isNested ? nestedOffset ?? 6 : offsetProp ?? 8,
         alignmentAxis: isNested ? -4 : 0,
       }),
       flip(),
@@ -218,7 +225,7 @@ export const MenuComponent = ({
                     ref={refs.setFloating}
                     style={floatingStyles}
                     className={menuClasses.menu({
-                      className: classNames?.popover,
+                      className: cn(classNames?.popover, className),
                     })}
                     initial={{ opacity: 0, top: -10 }}
                     animate={{ opacity: 1, top: 0 }}

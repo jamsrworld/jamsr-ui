@@ -21,6 +21,7 @@ export const buttonVariant = tv({
     "transition-transform",
     "disabled:opacity-50",
     "focus-visible:ring-2 focus-visible:ring-primary",
+    "hover:opacity-90",
   ],
   variants: {
     color: {

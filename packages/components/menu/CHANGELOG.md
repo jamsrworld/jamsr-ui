@@ -1,5 +1,11 @@
 # @jamsr-ui/menu
 
+## 0.0.40
+
+### Patch Changes
+
+- fix
+
 ## 0.0.39
 
 ### Patch Changes

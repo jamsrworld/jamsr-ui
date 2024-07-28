@@ -9,6 +9,7 @@ type InternalProps = {
   disabled?: boolean;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
+  label?: string;
 };
 
 export type MenuItemProps<T extends React.ElementType = "button"> =
@@ -24,11 +25,13 @@ export const MenuItem = <T extends React.ElementType = "button">(
     className,
     startContent,
     endContent,
+    label,
     ...restProps
   } = props;
   const menu = useMenu();
+  const labelString = label ?? (typeof children === "string" ? children : null);
   const item = useListItem({
-    label: disabled ? null : children,
+    label: disabled ? null : labelString,
   });
   const tree = useFloatingTree();
   const isActive = item.index === menu.activeIndex;

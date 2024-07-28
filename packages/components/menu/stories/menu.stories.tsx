@@ -17,38 +17,41 @@ const Template = () => {
   };
 
   return (
-    <Menu
-      classNames={{
-        popover: "min-w-[300px]",
-      }}
-      trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}
-    >
-      <MenuItem onClick={handleClick}>Undo</MenuItem>
-      <MenuItem startContent={<Info className="size-5" />}>Info</MenuItem>
-      <MenuItem
-        startContent={
-          <SearchIcon className="size-5 text-foreground-secondary" />
-        }
-        endContent={
-          <div className="rounded bg-background p-0.5 text-xs text-foreground-secondary">
-            Ctrl+K
-          </div>
-        }
+    <div className="flex justify-center">
+      <Menu
+        classNames={{
+          popover: "min-w-[300px]",
+        }}
+        trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}
+        placement="bottom-end"
       >
-        Search
-      </MenuItem>
-      <MenuItem disabled>Redo</MenuItem>
-      <MenuItem>Cut</MenuItem>
-      <Menu trigger="Copy as">
-        <MenuItem>Text</MenuItem>
-        <MenuItem>Video</MenuItem>
-        <MenuItem>Audio</MenuItem>
+        <MenuItem onClick={handleClick}>Undo</MenuItem>
+        <MenuItem startContent={<Info className="size-5" />}>Info</MenuItem>
+        <MenuItem
+          startContent={
+            <SearchIcon className="size-5 text-foreground-secondary" />
+          }
+          endContent={
+            <div className="rounded bg-background p-0.5 text-xs text-foreground-secondary">
+              Ctrl+K
+            </div>
+          }
+        >
+          Search
+        </MenuItem>
+        <MenuItem disabled>Redo</MenuItem>
+        <MenuItem>Cut</MenuItem>
+        <Menu trigger="Copy as">
+          <MenuItem>Text</MenuItem>
+          <MenuItem>Video</MenuItem>
+          <MenuItem>Audio</MenuItem>
+        </Menu>
+        <Menu trigger="Share">
+          <MenuItem>Mail</MenuItem>
+          <MenuItem>Instagram</MenuItem>
+        </Menu>
       </Menu>
-      <Menu trigger="Share">
-        <MenuItem>Mail</MenuItem>
-        <MenuItem>Instagram</MenuItem>
-      </Menu>
-    </Menu>
+    </div>
   );
 };
 

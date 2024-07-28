@@ -1,5 +1,11 @@
 # @jamsr-ui/table
 
+## 0.0.9
+
+### Patch Changes
+
+- fix
+
 ## 0.0.8
 
 ### Patch Changes

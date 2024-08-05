@@ -110,5 +110,6 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "@typescript-eslint/no-explicit-any": "off",
   },
 };

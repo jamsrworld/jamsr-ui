@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { ColumnDef } from "@tanstack/react-table";
+import type { ColumnDef } from "@tanstack/react-table";
 
 type User = {
   userId: string;

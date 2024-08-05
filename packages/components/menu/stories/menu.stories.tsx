@@ -23,7 +23,7 @@ const Template = () => {
           popover: "min-w-[300px]",
         }}
         trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}
-        placement="bottom-end"
+        // placement="bottom-end"
       >
         <MenuItem onClick={handleClick}>Undo</MenuItem>
         <MenuItem startContent={<Info className="size-5" />}>Info</MenuItem>

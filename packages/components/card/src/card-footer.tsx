@@ -1,7 +1,8 @@
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { cn } from "@jamsr-ui/utils";
+import type { ComponentPropsWithRef } from "react";
 
-export type CardFooterProps = {};
+export type CardFooterProps = ComponentPropsWithRef<"div">;
 
 export const CardFooter = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, CardFooterProps>,

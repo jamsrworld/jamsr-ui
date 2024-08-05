@@ -88,7 +88,7 @@ export const MenuComponent = ({
     onOpenChange: setIsOpen,
     placement: isNested
       ? nestedPlacement ?? "right-start"
-      : placement ?? "bottom-start",
+      : placement ?? "bottom-end",
     middleware: [
       offset({
         mainAxis: isNested ? nestedOffset ?? 6 : offsetProp ?? 8,

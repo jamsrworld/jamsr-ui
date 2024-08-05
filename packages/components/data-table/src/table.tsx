@@ -1,13 +1,11 @@
 "use client";
 
 import { Table, type TableProps } from "@jamsr-ui/table";
+import type { ColumnDef, RowData, TableOptions } from "@tanstack/react-table";
 import {
-  type ColumnDef,
   getCoreRowModel,
   getPaginationRowModel,
   getSortedRowModel,
-  RowData,
-  TableOptions,
   useReactTable,
 } from "@tanstack/react-table";
 import { useMemo } from "react";
@@ -22,7 +20,7 @@ export type DataTableProps = Partial<TableProps> & {
     id: string;
     desc: boolean;
   };
-  columns: ColumnDef<unknown, any>[];
+  columns: ColumnDef<any>[];
   isServer?: boolean;
   pagination?: boolean;
   data: unknown[];

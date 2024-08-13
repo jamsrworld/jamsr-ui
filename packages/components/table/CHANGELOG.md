@@ -1,5 +1,13 @@
 # @jamsr-ui/table
 
+## 0.0.14
+
+### Patch Changes
+
+- fix deps
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.35
+
 ## 0.0.13
 
 ### Patch Changes

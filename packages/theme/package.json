@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/theme",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "description": "",
   "main": "src/index.ts",
   "publishConfig": {
@@ -29,6 +29,7 @@
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "react": "19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "19.0.0-rc-68dbd84b-20240812",
     "tailwindcss": "^3.4.3",
     "tw-colors": "^3.3.1",
     "typescript": "^5.4.5"

@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/card",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -26,10 +26,12 @@
     "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
     "react": "19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "19.0.0-rc-68dbd84b-20240812",
     "clean-package": "^2.2.0"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-68dbd84b-20240812"
+    "react": "19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "19.0.0-rc-68dbd84b-20240812"
   },
   "dependencies": {
     "@jamsr-ui/typography": "workspace:^",

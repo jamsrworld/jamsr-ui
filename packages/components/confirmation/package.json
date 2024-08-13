@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/confirmation",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -27,16 +27,18 @@
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.0",
-    "react": "19.0.0-rc-68dbd84b-20240812"
+    "react": "19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "19.0.0-rc-68dbd84b-20240812"
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.0",
-    "react": "19.0.0-rc-68dbd84b-20240812"
+    "react": "19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "19.0.0-rc-68dbd84b-20240812"
   },
   "dependencies": {
-    "@jamsr-ui/button": "^0.0.40",
+    "@jamsr-ui/button": "^0.0.41",
     "@jamsr-ui/dialog": "workspace:^",
-    "@jamsr-ui/divider": "^0.0.37",
+    "@jamsr-ui/divider": "^0.0.38",
     "zustand": "^4.5.4"
   },
   "clean-package": "../../../clean-package.config.json"

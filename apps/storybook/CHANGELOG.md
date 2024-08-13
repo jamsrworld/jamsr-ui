@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.113
+
+### Patch Changes
+
+- fix deps
+- Updated dependencies
+  - @jamsr-ui/react@0.0.111
+
 ## 0.0.112
 
 ### Patch Changes

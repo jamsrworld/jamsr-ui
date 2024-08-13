@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/drawer",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -27,12 +27,14 @@
     "@types/react": "^18.3.3",
     "framer-motion": "12.0.0-alpha.0",
     "react": "19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "19.0.0-rc-68dbd84b-20240812",
     "@jamsr-ui/button": "workspace:^",
     "clean-package": "^2.2.0"
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.0",
-    "react": "19.0.0-rc-68dbd84b-20240812"
+    "react": "19.0.0-rc-68dbd84b-20240812",
+    "react-dom": "19.0.0-rc-68dbd84b-20240812"
   },
   "dependencies": {
     "@jamsr-ui/hooks": "workspace:^",

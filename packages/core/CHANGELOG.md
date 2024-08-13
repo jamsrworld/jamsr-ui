@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.18
+
+### Patch Changes
+
+- fix deps
+
 ## 0.0.17
 
 ### Patch Changes

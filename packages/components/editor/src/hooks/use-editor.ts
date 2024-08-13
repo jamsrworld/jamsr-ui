@@ -17,7 +17,7 @@ import TaskList from "@tiptap/extension-task-list";
 import TextAlign from "@tiptap/extension-text-align";
 import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
-import type { JSONContent, UseEditorOptions } from "@tiptap/react";
+import type { EditorOptions, JSONContent } from "@tiptap/react";
 import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import type { ComponentProps, ComponentPropsWithoutRef } from "react";
@@ -36,7 +36,7 @@ type Props = EditorVariantsProps & {
   value?: JSONContent;
   defaultValue?: JSONContent;
   onValueChange?: (content: JSONContent) => void;
-  options?: Partial<UseEditorOptions>;
+  options?: Partial<EditorOptions>;
   placeholder?: string;
   classNames?: SlotsToClasses<EditorVariantsSlots>;
   helperText?: React.ReactNode;
@@ -109,7 +109,6 @@ export const useEditor = (props: UseEditorProps) => {
     onUpdate({ editor }) {
       setValue?.(editor.getJSON());
     },
-    immediatelyRender: false,
     ...options,
   });
 

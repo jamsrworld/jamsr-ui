@@ -1,5 +1,14 @@
 # @jamsr-ui/menu
 
+## 0.0.42
+
+### Patch Changes
+
+- upgrade react
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.31
+  - @jamsr-ui/utils@0.0.31
+
 ## 0.0.41
 
 ### Patch Changes

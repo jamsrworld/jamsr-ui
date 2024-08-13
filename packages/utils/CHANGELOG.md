@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.31
+
+### Patch Changes
+
+- upgrade react
+
 ## 0.0.30
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @jamsr-ui/alert
 
+## 0.0.44
+
+### Patch Changes
+
+- upgrade react
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.40
+  - @jamsr-ui/shared-icons@0.0.31
+  - @jamsr-ui/utils@0.0.31
+
 ## 0.0.43
 
 ### Patch Changes

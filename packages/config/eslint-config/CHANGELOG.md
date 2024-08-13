@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.26
+
+### Patch Changes
+
+- upgrade react
+
 ## 0.0.25
 
 ### Patch Changes

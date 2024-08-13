@@ -1,5 +1,11 @@
 # @jamsr-ui/toast
 
+## 0.0.4
+
+### Patch Changes
+
+- upgrade react
+
 ## 0.0.3
 
 ### Patch Changes

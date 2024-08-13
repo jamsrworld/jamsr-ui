@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.10
+
+### Patch Changes
+
+- upgrade react
+
 ## 0.0.9
 
 ### Patch Changes

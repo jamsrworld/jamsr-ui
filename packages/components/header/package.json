@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/header",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -29,13 +29,11 @@
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.0",
-    "react": "19.0.0-rc-c21bcd627b-20240624",
-    "react-dom": "19.0.0-rc-c21bcd627b-20240624"
+    "react": "19.0.0-rc-68dbd84b-20240812"
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.0",
-    "react": "19.0.0-rc-c21bcd627b-20240624",
-    "react-dom": "19.0.0-rc-c21bcd627b-20240624"
+    "react": "19.0.0-rc-68dbd84b-20240812"
   },
   "dependencies": {
     "@jamsr-ui/divider": "workspace:*",

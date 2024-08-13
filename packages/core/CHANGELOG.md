@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.14
+
+### Patch Changes
+
+- upgrade react
+
 ## 0.0.13
 
 ### Patch Changes

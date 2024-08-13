@@ -1,5 +1,13 @@
 # @jamsr-ui/typography
 
+## 0.0.40
+
+### Patch Changes
+
+- upgrade react
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.31
+
 ## 0.0.39
 
 ### Patch Changes

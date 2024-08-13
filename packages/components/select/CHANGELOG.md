@@ -1,5 +1,18 @@
 # @jamsr-ui/select
 
+## 0.0.43
+
+### Patch Changes
+
+- upgrade react
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.35
+  - @jamsr-ui/button@0.0.37
+  - @jamsr-ui/chip@0.0.38
+  - @jamsr-ui/shared-icons@0.0.31
+  - @jamsr-ui/hooks@0.0.23
+  - @jamsr-ui/utils@0.0.31
+
 ## 0.0.42
 
 ### Patch Changes

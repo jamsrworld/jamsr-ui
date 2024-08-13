@@ -1,5 +1,13 @@
 # @jamsr-ui/table
 
+## 0.0.10
+
+### Patch Changes
+
+- upgrade react
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.31
+
 ## 0.0.9
 
 ### Patch Changes

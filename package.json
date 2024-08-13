@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
     "build-packages": "turbo build --filter='@jamsr-ui*'",
-    "publish-packages": "turbo build --filter='@jamsr-ui*' && changeset && changeset version && changeset publish"
+    "publish-packages": "turbo build --filter='@jamsr-ui*' && changeset && changeset version && changeset publish",
+    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

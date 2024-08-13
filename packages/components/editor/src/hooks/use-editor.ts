@@ -101,7 +101,6 @@ export const useEditor = (props: UseEditorProps) => {
         placeholder,
       }),
     ],
-
     onCreate({ editor }) {
       if (value) {
         editor.commands.setContent(value);

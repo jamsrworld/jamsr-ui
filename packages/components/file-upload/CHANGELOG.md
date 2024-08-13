@@ -1,5 +1,15 @@
 # @jamsr-ui/file-upload
 
+## 0.0.55
+
+### Patch Changes
+
+- fix deps
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.37
+  - @jamsr-ui/shared-icons@0.0.34
+  - @jamsr-ui/utils@0.0.34
+
 ## 0.0.54
 
 ### Patch Changes

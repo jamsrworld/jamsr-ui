@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/core",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "src/index.tsx",
   "sideEffects": false,
   "keywords": [],

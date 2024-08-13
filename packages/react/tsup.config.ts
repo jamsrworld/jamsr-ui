@@ -7,4 +7,5 @@ export default defineConfig({
   clean: true,
   minify: true,
   splitting: true,
+    external: ["react", "react-dom"],
 });

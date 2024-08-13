@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.25
+
+### Patch Changes
+
+- fix deps
+
 ## 0.0.24
 
 ### Patch Changes

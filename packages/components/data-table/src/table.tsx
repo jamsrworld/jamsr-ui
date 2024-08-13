@@ -65,6 +65,7 @@ export const DataTable = (props: DataTableProps) => {
 
   const table = useReactTable({
     data,
+    // @ts-ignore
     columns: allColumns,
     columnResizeMode: "onChange",
     getCoreRowModel: getCoreRowModel(),

@@ -1,7 +1,7 @@
 {
   "name": "@ui/storybook",
   "private": true,
-  "version": "0.0.110",
+  "version": "0.0.111",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
@@ -12,15 +12,15 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@jamsr-ui/react": "workspace:*",
+    "@jamsr-ui/react": "workspace:^",
     "framer-motion": "12.0.0-alpha.0",
     "react": "19.0.0-rc-68dbd84b-20240812",
     "react-dom": "19.0.0-rc-68dbd84b-20240812"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
-    "@jamsr-ui/tailwind-config": "workspace:*",
-    "@jamsr-ui/theme": "workspace:*",
+    "@jamsr-ui/tailwind-config": "workspace:^",
+    "@jamsr-ui/theme": "workspace:^",
     "@storybook/addon-essentials": "^8.1.1",
     "@storybook/addon-interactions": "^8.1.1",
     "@storybook/addon-links": "^8.1.1",

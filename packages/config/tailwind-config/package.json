@@ -1,7 +1,7 @@
 {
   "name": "@jamsr-ui/tailwind-config",
   "private": true,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "exports": {
     ".": "./tailwind.config.ts"
   },
@@ -12,7 +12,7 @@
   "author": "@jamsrworld",
   "license": "MIT",
   "devDependencies": {
-    "@jamsr-ui/theme": "workspace:*",
+    "@jamsr-ui/theme": "workspace:^",
     "@types/node": "^20.11.24",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"

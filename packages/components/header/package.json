@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/header",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
-    "@jamsr-ui/tailwind-config": "workspace:*",
+    "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.0",
@@ -36,8 +36,8 @@
     "react": "19.0.0-rc-68dbd84b-20240812"
   },
   "dependencies": {
-    "@jamsr-ui/divider": "workspace:*",
-    "@jamsr-ui/utils": "workspace:*"
+    "@jamsr-ui/divider": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^"
   },
   "clean-package": "../../../clean-package.config.json"
 }

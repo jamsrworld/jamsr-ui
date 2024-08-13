@@ -1,5 +1,21 @@
 # @jamsr-ui/data-table
 
+## 0.0.8
+
+### Patch Changes
+
+- fix deps
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.42
+  - @jamsr-ui/progress@0.0.36
+  - @jamsr-ui/skeleton@0.0.36
+  - @jamsr-ui/button@0.0.39
+  - @jamsr-ui/select@0.0.45
+  - @jamsr-ui/utils@0.0.33
+  - @jamsr-ui/repeater@0.0.12
+  - @jamsr-ui/table@0.0.12
+  - @jamsr-ui/shared-icons@0.0.33
+
 ## 0.0.7
 
 ### Patch Changes

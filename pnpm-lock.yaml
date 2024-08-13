@@ -18,10 +18,10 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       '@jamsr-ui/eslint-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/config/eslint-config
       '@jamsr-ui/typescript-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:packages/config/typescript-config
       '@storybook/react':
         specifier: ^8.1.1
@@ -31,7 +31,7 @@ importers:
         version: 8.1.1(vitest@1.6.0(@types/node@20.12.12)(jsdom@24.0.0))
       '@testing-library/react':
         specifier: ^16.0.0
-        version: 16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
+        version: 16.0.0(@testing-library/dom@9.3.4)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -54,7 +54,7 @@ importers:
   apps/storybook:
     dependencies:
       '@jamsr-ui/react':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/react
       framer-motion:
         specifier: 12.0.0-alpha.0
@@ -70,10 +70,10 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0(react@19.0.0-rc-68dbd84b-20240812)
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/config/tailwind-config
       '@jamsr-ui/theme':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/theme
       '@storybook/addon-essentials':
         specifier: ^8.1.1
@@ -166,7 +166,7 @@ importers:
         specifier: '*'
         version: 0.0.62(@types/react-dom@18.3.0)(@types/react@18.3.3)(csstype@3.1.2)(emojibase@15.3.1)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-68dbd84b-20240812(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(katex@0.16.11)(react-dom@19.0.0-rc-68dbd84b-20240812(react@19.0.0-rc-68dbd84b-20240812))(react-dropzone@14.2.3(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5))(y-prosemirror@1.2.9(prosemirror-model@1.21.3)(prosemirror-state@1.4.3)(prosemirror-view@1.33.8)(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18))(y-protocols@1.0.6(yjs@13.6.18))(yjs@13.6.18)
       '@jamsr-ui/theme':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/theme
       clean-package:
         specifier: ^2.2.0
@@ -182,7 +182,7 @@ importers:
         version: 19.0.0-rc-68dbd84b-20240812(react@19.0.0-rc-68dbd84b-20240812)
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../packages/config/tailwind-config
       '@types/node':
         specifier: ^20.12.12
@@ -215,17 +215,17 @@ importers:
         specifier: workspace:^
         version: link:../avatar
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/prettier-config':
         specifier: workspace:^
         version: link:../../config/prettier-config
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.1
@@ -246,20 +246,20 @@ importers:
   packages/components/alert:
     dependencies:
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/typography':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../typography
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -277,26 +277,26 @@ importers:
         specifier: ^0.26.16
         version: 0.26.16(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/chip':
         specifier: workspace:^
         version: link:../chip
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/input':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../input
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -311,11 +311,11 @@ importers:
   packages/components/avatar:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -330,11 +330,11 @@ importers:
   packages/components/badge:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -349,20 +349,20 @@ importers:
   packages/components/button:
     dependencies:
       '@jamsr-ui/progress':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../progress
       '@jamsr-ui/ripple':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../ripple
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -377,14 +377,14 @@ importers:
   packages/components/card:
     dependencies:
       '@jamsr-ui/typography':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../typography
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -399,14 +399,14 @@ importers:
   packages/components/checkbox:
     dependencies:
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -424,17 +424,17 @@ importers:
   packages/components/chip:
     dependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -449,20 +449,20 @@ importers:
   packages/components/confirmation:
     dependencies:
       '@jamsr-ui/button':
-        specifier: ^0.0.37
-        version: 0.0.37(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+        specifier: ^0.0.38
+        version: 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@jamsr-ui/dialog':
         specifier: workspace:^
         version: link:../dialog
       '@jamsr-ui/divider':
-        specifier: ^0.0.34
-        version: 0.0.34(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+        specifier: ^0.0.35
+        version: 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       zustand:
         specifier: ^4.5.4
         version: 4.5.4(@types/react@18.3.3)(react@19.0.0-rc-68dbd84b-20240812)
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -535,20 +535,20 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -566,11 +566,11 @@ importers:
   packages/components/divider:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -585,17 +585,17 @@ importers:
   packages/components/drawer:
     dependencies:
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -722,20 +722,20 @@ importers:
   packages/components/file-upload:
     dependencies:
       '@jamsr-ui/progress':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../progress
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
       react-dropzone:
         specifier: ^14.2.3
         version: 14.2.3(react@19.0.0-rc-68dbd84b-20240812)
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -750,10 +750,10 @@ importers:
   packages/components/header:
     dependencies:
       '@jamsr-ui/divider':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../divider
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/button':
@@ -763,7 +763,7 @@ importers:
         specifier: workspace:^
         version: link:../repeater
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -781,23 +781,23 @@ importers:
   packages/components/input:
     dependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/popover':
         specifier: workspace:^
         version: link:../popover
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -812,11 +812,11 @@ importers:
   packages/components/link:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -834,17 +834,17 @@ importers:
         specifier: ^0.26.16
         version: 0.26.16(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -862,11 +862,11 @@ importers:
   packages/components/otp-input:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -884,23 +884,23 @@ importers:
         specifier: ^0.26.16
         version: 0.26.16(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@jamsr-ui/typography':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../typography
       '@types/react':
         specifier: ^18.3.3
@@ -915,11 +915,11 @@ importers:
   packages/components/progress:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -940,14 +940,14 @@ importers:
         specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/card':
         specifier: workspace:^
         version: link:../card
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -974,14 +974,14 @@ importers:
   packages/components/ripple:
     dependencies:
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1002,19 +1002,19 @@ importers:
         specifier: workspace:^
         version: link:../button
       '@jamsr-ui/chip':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../chip
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/popover':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../popover
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/avatar':
@@ -1024,7 +1024,7 @@ importers:
         specifier: workspace:^
         version: link:../card
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1039,11 +1039,11 @@ importers:
   packages/components/skeleton:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1058,17 +1058,17 @@ importers:
   packages/components/switch:
     dependencies:
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/typography':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../typography
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1086,20 +1086,20 @@ importers:
   packages/components/tab:
     dependencies:
       '@jamsr-ui/card':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../card
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1139,23 +1139,23 @@ importers:
   packages/components/textarea:
     dependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/hooks':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../hooks
       '@jamsr-ui/input':
         specifier: workspace:^
         version: link:../input
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1174,8 +1174,8 @@ importers:
         version: 2.4.1(csstype@3.1.2)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
     devDependencies:
       '@jamsr-ui/button':
-        specifier: ^0.0.37
-        version: 0.0.37(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+        specifier: ^0.0.38
+        version: 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -1192,17 +1192,17 @@ importers:
         specifier: ^0.26.16
         version: 0.26.16(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../button
       '@jamsr-ui/shared-icons':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../shared-icons
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1217,11 +1217,11 @@ importers:
   packages/components/typography:
     dependencies:
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../utils
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../config/tailwind-config
       '@types/react':
         specifier: ^18.3.3
@@ -1298,7 +1298,7 @@ importers:
   packages/config/tailwind-config:
     devDependencies:
       '@jamsr-ui/theme':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../../theme
       '@types/node':
         specifier: ^20.11.24
@@ -1342,125 +1342,125 @@ importers:
   packages/react:
     dependencies:
       '@jamsr-ui/accordion':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/accordion
       '@jamsr-ui/alert':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/alert
       '@jamsr-ui/autocomplete':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/autocomplete
       '@jamsr-ui/avatar':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/avatar
       '@jamsr-ui/badge':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/badge
       '@jamsr-ui/button':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/button
       '@jamsr-ui/card':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/card
       '@jamsr-ui/checkbox':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/checkbox
       '@jamsr-ui/chip':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/chip
       '@jamsr-ui/confirmation':
         specifier: workspace:^
         version: link:../components/confirmation
       '@jamsr-ui/core':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../core
       '@jamsr-ui/data-table':
         specifier: workspace:^
         version: link:../components/data-table
       '@jamsr-ui/dialog':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/dialog
       '@jamsr-ui/divider':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/divider
       '@jamsr-ui/editor':
         specifier: workspace:^
         version: link:../components/editor
       '@jamsr-ui/file-upload':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/file-upload
       '@jamsr-ui/header':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/header
       '@jamsr-ui/input':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/input
       '@jamsr-ui/link':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/link
       '@jamsr-ui/menu':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/menu
       '@jamsr-ui/otp-input':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/otp-input
       '@jamsr-ui/popover':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/popover
       '@jamsr-ui/progress':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/progress
       '@jamsr-ui/radio':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/radio
       '@jamsr-ui/repeater':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/repeater
       '@jamsr-ui/ripple':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/ripple
       '@jamsr-ui/select':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/select
       '@jamsr-ui/skeleton':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/skeleton
       '@jamsr-ui/switch':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/switch
       '@jamsr-ui/tab':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/tab
       '@jamsr-ui/table':
         specifier: workspace:^
         version: link:../components/table
       '@jamsr-ui/textarea':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/textarea
       '@jamsr-ui/toast':
         specifier: workspace:^
         version: link:../components/toast
       '@jamsr-ui/tooltip':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/tooltip
       '@jamsr-ui/typography':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../components/typography
       '@jamsr-ui/utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../utils
       react-dom:
         specifier: 19.0.0-rc-68dbd84b-20240812
         version: 19.0.0-rc-68dbd84b-20240812(react@19.0.0-rc-68dbd84b-20240812)
     devDependencies:
       '@jamsr-ui/eslint-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../config/eslint-config
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../config/tailwind-config
       '@jamsr-ui/typescript-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../config/typescript-config
       '@testing-library/react':
         specifier: ^16.0.0
@@ -1561,7 +1561,7 @@ importers:
         version: 0.2.1(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
     devDependencies:
       '@jamsr-ui/tailwind-config':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../config/tailwind-config
       '@types/node':
         specifier: ^20.12.12
@@ -2989,8 +2989,8 @@ packages:
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624
 
-  '@jamsr-ui/button@0.0.37':
-    resolution: {integrity: sha512-JGoKjXPmVBuY3vD6cdzbeSlrU/Aw2DN/XK3KoXPYvKPLmcciHpyBS6hmBbodrjOX+D1Ir2XRqYSqWXalfQwEZw==}
+  '@jamsr-ui/button@0.0.38':
+    resolution: {integrity: sha512-L+rUC2VH51+kpjytVLFm6jES6IpqfPDdoJpkIb5qnOkWbW8uz9jEBFsZFuduH5HDIKJFCu3/6y6/AWv/Iqo7ug==}
     peerDependencies:
       react: 19.0.0-rc-68dbd84b-20240812
 
@@ -3039,8 +3039,8 @@ packages:
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624
 
-  '@jamsr-ui/divider@0.0.34':
-    resolution: {integrity: sha512-tuklBPR836jvDIoDMZUOB3WAH8hEIbLpYyyVFQYMIJ+Oej8zS10S0QEBPFyunZqAUis7Onl6K7QHLc6HCx+kIQ==}
+  '@jamsr-ui/divider@0.0.35':
+    resolution: {integrity: sha512-DOqYh9gG58DufXUZIXhZkaO/zTWFfyRTeYJzZMBltmhLocwUC326g9xooWH0DyuLSQrpRsKToCgvOzYKMjN8BA==}
     peerDependencies:
       react: 19.0.0-rc-68dbd84b-20240812
 
@@ -3062,10 +3062,10 @@ packages:
     peerDependencies:
       react: 19.0.0-rc-c21bcd627b-20240624
 
-  '@jamsr-ui/hooks@0.0.23':
-    resolution: {integrity: sha512-p/oU1YCvUF/vyLtxyu8mx1fFV7MBQKNKzmE4/hO3pck27naCIsiF82bn0W6LS6NCvdeysb+dPnNoj+lcBVBtuw==}
+  '@jamsr-ui/hooks@0.0.24':
+    resolution: {integrity: sha512-sB1RdBXfa+85vUbfqqiejILAcpIOITZm8qJrX8+P4vQgfEtlAHLAAwN7vi2j8HyUhXlKYign9p/xO9gmWw3Y9w==}
     peerDependencies:
-      react: 19.0.0-rc-c21bcd627b-20240624
+      react: 19.0.0-rc-68dbd84b-20240812
 
   '@jamsr-ui/image-upload@0.0.33':
     resolution: {integrity: sha512-8uVbsxoOo1IGYp0I+S9eKeGfYO9nhuLIpKFbVK9yibGQUSkprRBsnxvA4UNJGvlgLcMP6t5crCGS5GmPBFlEhQ==}
@@ -3112,8 +3112,8 @@ packages:
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624
 
-  '@jamsr-ui/progress@0.0.34':
-    resolution: {integrity: sha512-Kgr8FEkYNx1LQFhj3sHGOxVpQiM5bX1goXPUmYrgn7/HQZMwVI1+0Rroc75U27SWhg1A1ASfjK2jb/wd5C34xQ==}
+  '@jamsr-ui/progress@0.0.35':
+    resolution: {integrity: sha512-Pq/0HfaxSY4jD1XuzUi65hJAppXli+Li0AOtjTi5WSHhR/GH2S/HRvQJs5RH6EE1DBpAJMQzNowLyVk/rUjYfg==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.0
       react: 19.0.0-rc-68dbd84b-20240812
@@ -3142,8 +3142,8 @@ packages:
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624
 
-  '@jamsr-ui/ripple@0.0.35':
-    resolution: {integrity: sha512-MGtZYc2s4aAVj9FhTS1GFcER/QV1nH4vh0i5XuMfBJqUusujBZadkqmvaKwlg8p10yMLcFwwuR3vSQdCbmIGJw==}
+  '@jamsr-ui/ripple@0.0.36':
+    resolution: {integrity: sha512-6iKeNolk+GUhMJ0uYuXV+dM0Wn4Qdp9CjEmnYhCfHVnqtPcy30O9WmFH4cSqdNXRfAjRgQ5HFOUzc3kUQuv2CQ==}
     peerDependencies:
       react: 19.0.0-rc-68dbd84b-20240812
 
@@ -3213,11 +3213,11 @@ packages:
       framer-motion: 12.0.0-alpha.0
       react: 19.0.0-rc-c21bcd627b-20240624
 
-  '@jamsr-ui/utils@0.0.31':
-    resolution: {integrity: sha512-yNR4mqimElyWe4Yi/FH4a8/ShGduR+Fod3sl7xxyPifTey3GfLXe4VNcuuBKTtOgCNoqX0DPmJECxZKhA68pRg==}
+  '@jamsr-ui/utils@0.0.32':
+    resolution: {integrity: sha512-0AUujw/zShQy5IkHY7dtjfDMb0O3zIw6oUWtAdqCn/AGE6yZ2z5cZYpWNqef8DQFwe2kYutIWUiqTRzL7/h8wQ==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-c21bcd627b-20240624
+      react: 19.0.0-rc-68dbd84b-20240812
 
   '@jest/schemas@29.6.3':
     resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
@@ -10679,21 +10679,21 @@ snapshots:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/button@0.0.37(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/button@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
-      '@jamsr-ui/progress': 0.0.34(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
-      '@jamsr-ui/ripple': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
-      '@jamsr-ui/utils': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/progress': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/ripple': 0.0.36(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/utils': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       react: 19.0.0-rc-68dbd84b-20240812
     transitivePeerDependencies:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/button@0.0.37(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/button@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
-      '@jamsr-ui/progress': 0.0.34(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
-      '@jamsr-ui/ripple': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
-      '@jamsr-ui/utils': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/progress': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/ripple': 0.0.36(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/utils': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       react: 19.0.0-rc-68dbd84b-20240812
     transitivePeerDependencies:
       - framer-motion
@@ -10773,9 +10773,9 @@ snapshots:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/divider@0.0.34(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/divider@0.0.35(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
-      '@jamsr-ui/utils': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/utils': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       react: 19.0.0-rc-68dbd84b-20240812
     transitivePeerDependencies:
       - framer-motion
@@ -10876,7 +10876,7 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-68dbd84b-20240812
 
-  '@jamsr-ui/hooks@0.0.23(react@19.0.0-rc-68dbd84b-20240812)':
+  '@jamsr-ui/hooks@0.0.24(react@19.0.0-rc-68dbd84b-20240812)':
     dependencies:
       react: 19.0.0-rc-68dbd84b-20240812
 
@@ -10953,17 +10953,17 @@ snapshots:
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/progress@0.0.34(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/progress@0.0.35(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
-      '@jamsr-ui/utils': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/utils': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       framer-motion: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       react: 19.0.0-rc-68dbd84b-20240812
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/progress@0.0.34(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/progress@0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
-      '@jamsr-ui/utils': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/utils': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       react: 19.0.0-rc-68dbd84b-20240812
     transitivePeerDependencies:
@@ -11049,19 +11049,19 @@ snapshots:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/ripple@0.0.35(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/ripple@0.0.36(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
-      '@jamsr-ui/hooks': 0.0.23(react@19.0.0-rc-68dbd84b-20240812)
-      '@jamsr-ui/utils': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/hooks': 0.0.24(react@19.0.0-rc-68dbd84b-20240812)
+      '@jamsr-ui/utils': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       react: 19.0.0-rc-68dbd84b-20240812
     transitivePeerDependencies:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/ripple@0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/ripple@0.0.36(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
-      '@jamsr-ui/hooks': 0.0.23(react@19.0.0-rc-68dbd84b-20240812)
-      '@jamsr-ui/utils': 0.0.31(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
+      '@jamsr-ui/hooks': 0.0.24(react@19.0.0-rc-68dbd84b-20240812)
+      '@jamsr-ui/utils': 0.0.32(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))
       react: 19.0.0-rc-68dbd84b-20240812
     transitivePeerDependencies:
       - framer-motion
@@ -11175,7 +11175,7 @@ snapshots:
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/utils@0.0.31(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/utils@0.0.32(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
       clsx: 2.1.1
       framer-motion: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
@@ -11185,7 +11185,7 @@ snapshots:
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/utils@0.0.31(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
+  '@jamsr-ui/utils@0.0.32(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)(tailwindcss@3.4.3(ts-node@10.9.1(@swc/core@1.5.7)(@types/node@20.12.12)(typescript@5.4.5)))':
     dependencies:
       clsx: 2.1.1
       framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
@@ -12938,10 +12938,10 @@ snapshots:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
 
-  '@testing-library/react@16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)':
+  '@testing-library/react@16.0.0(@testing-library/dom@9.3.4)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624))(react@19.0.0-rc-c21bcd627b-20240624)':
     dependencies:
       '@babel/runtime': 7.24.5
-      '@testing-library/dom': 10.1.0
+      '@testing-library/dom': 9.3.4
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624)
     optionalDependencies:
@@ -14886,7 +14886,7 @@ snapshots:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.33.2(eslint@8.57.0)
@@ -14914,12 +14914,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0):
+  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0):
     dependencies:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
@@ -14941,14 +14941,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -14972,7 +14972,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3

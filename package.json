@@ -15,8 +15,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@jamsr-ui/eslint-config": "workspace:*",
-    "@jamsr-ui/typescript-config": "workspace:*",
+    "@jamsr-ui/eslint-config": "workspace:^",
+    "@jamsr-ui/typescript-config": "workspace:^",
     "@storybook/react": "^8.1.1",
     "@storybook/test": "^8.1.1",
     "@testing-library/react": "^16.0.0",

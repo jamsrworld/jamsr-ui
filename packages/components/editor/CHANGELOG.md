@@ -1,5 +1,11 @@
 # @jamsr-ui/editor
 
+## 0.0.32
+
+### Patch Changes
+
+- fix types editor
+
 ## 0.0.31
 
 ### Patch Changes

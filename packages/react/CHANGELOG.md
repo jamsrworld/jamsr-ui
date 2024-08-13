@@ -1,5 +1,12 @@
 # @jamsr-ui/react
 
+## 0.0.113
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.32
+
 ## 0.0.112
 
 ### Patch Changes

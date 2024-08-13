@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.32
+
+### Patch Changes
+
+- fix deps
+
 ## 0.0.31
 
 ### Patch Changes

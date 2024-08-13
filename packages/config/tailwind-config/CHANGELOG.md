@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.7
+
+### Patch Changes
+
+- fix deps
+
 ## 0.0.6
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/toast
 
+## 0.0.5
+
+### Patch Changes
+
+- fix deps
+
 ## 0.0.4
 
 ### Patch Changes

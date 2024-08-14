@@ -1,5 +1,14 @@
 # @jamsr-ui/editor
 
+## 0.0.39
+
+### Patch Changes
+
+- fix
+  - @jamsr-ui/popover@0.0.42
+  - @jamsr-ui/switch@0.0.49
+  - @jamsr-ui/select@0.0.50
+
 ## 0.0.38
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @jamsr-ui/data-table
 
+## 0.0.15
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.49
+  - @jamsr-ui/select@0.0.50
+
 ## 0.0.14
 
 ### Patch Changes

@@ -4,12 +4,12 @@ export const typographyVariants = tv({
   base: "subpixel-antialiased",
   variants: {
     variant: {
-      h1: "text-2xl",
-      h2: "text-xl",
-      h3: "text-lg",
-      h4: "text-md",
-      h5: "text-base",
-      h6: "text-sm",
+      h1: "text-4xl",
+      h2: "text-3xl",
+      h3: "text-2xl",
+      h4: "text-xl",
+      h5: "text-lg",
+      h6: "text-md",
       caption: "text-xs",
       paragraph: "text-sm",
       body1: "text-base",
@@ -28,7 +28,7 @@ export const typographyVariants = tv({
     },
     leading: {
       none: "leading-none",
-      md: "!leading-[1.7]",
+      md: "leading-[1.7]",
     },
     gutterBottom: {
       true: "mb-2",

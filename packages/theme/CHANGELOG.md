@@ -1,5 +1,17 @@
 # @jamsr-ui/theme
 
+## 0.0.43
+
+### Patch Changes
+
+- fix package.json
+
+## 0.0.42
+
+### Patch Changes
+
+- fix exports
+
 ## 0.0.41
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/confirmation",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -10,8 +10,7 @@
   "author": "@jamsrworld",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.mjs"
+    "access": "public"
   },
   "files": [
     "dist"
@@ -36,9 +35,9 @@
     "react-dom": "19.0.0-rc-68dbd84b-20240812"
   },
   "dependencies": {
-    "@jamsr-ui/button": "^0.0.42",
+    "@jamsr-ui/button": "^0.0.44",
     "@jamsr-ui/dialog": "workspace:^",
-    "@jamsr-ui/divider": "^0.0.39",
+    "@jamsr-ui/divider": "^0.0.41",
     "zustand": "^4.5.4"
   },
   "clean-package": "../../../clean-package.config.json"

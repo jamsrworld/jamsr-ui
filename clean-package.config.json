@@ -2,15 +2,15 @@
     "remove": [
         "devDependencies",
         "scripts",
+        "main",
         "clean-package"
     ],
     "replace": {
-        "module": "dist/index.mjs",
-        "types": "dist/index.d.ts",
         "exports": {
             ".": {
                 "types": "./dist/index.d.ts",
-                "import": "./dist/index.mjs"
+                "import": "./dist/index.mjs",
+                "require": "./dist/index.js"
             }
         },
         "sideEffects": false,

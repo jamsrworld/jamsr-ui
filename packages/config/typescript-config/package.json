@@ -1,10 +1,9 @@
 {
   "name": "@jamsr-ui/typescript-config",
-  "version": "0.0.26",
+  "version": "0.0.28",
   "private": true,
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.js"
+    "access": "public"
   }
 }

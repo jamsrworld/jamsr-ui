@@ -1,5 +1,17 @@
 # @jamsr-ui/hooks
 
+## 0.0.30
+
+### Patch Changes
+
+- fix package.json
+
+## 0.0.29
+
+### Patch Changes
+
+- fix exports
+
 ## 0.0.28
 
 ### Patch Changes

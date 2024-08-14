@@ -1,5 +1,17 @@
 # @jamsr-ui/utils
 
+## 0.0.38
+
+### Patch Changes
+
+- fix package.json
+
+## 0.0.37
+
+### Patch Changes
+
+- fix exports
+
 ## 0.0.36
 
 ### Patch Changes

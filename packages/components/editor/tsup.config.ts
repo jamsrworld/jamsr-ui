@@ -6,7 +6,6 @@ export default defineConfig({
   dts: true,
   minify: true,
   splitting: true,
-  
   clean: true,
   esbuildOptions(options) {
     options.banner = {

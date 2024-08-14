@@ -1,5 +1,17 @@
 # @jamsr-ui/toast
 
+## 0.0.11
+
+### Patch Changes
+
+- fix package.json
+
+## 0.0.10
+
+### Patch Changes
+
+- fix exports
+
 ## 0.0.9
 
 ### Patch Changes

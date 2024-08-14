@@ -1,5 +1,24 @@
 # web
 
+## 0.1.103
+
+### Patch Changes
+
+- fix package.json
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.38
+  - @jamsr-ui/react@0.0.119
+  - @jamsr-ui/theme@0.0.43
+
+## 0.1.102
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.37
+  - @jamsr-ui/react@0.0.118
+  - @jamsr-ui/theme@0.0.42
+
 ## 0.1.101
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @jamsr-ui/repeater
 
+## 0.0.17
+
+### Patch Changes
+
+- fix package.json
+
+## 0.0.16
+
+### Patch Changes
+
+- fix exports
+
 ## 0.0.15
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.117",
+  "version": "0.0.119",
   "main": "./src/index.ts",
   "description": "A react js ui library with tailwindcss",
   "keywords": [
@@ -10,8 +10,7 @@
   "author": "@jamsrworld",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.js"
+    "access": "public"
   },
   "files": [
     "dist"

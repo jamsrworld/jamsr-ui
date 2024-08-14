@@ -1,14 +1,13 @@
 {
   "name": "@jamsr-ui/core",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "main": "src/index.tsx",
   "sideEffects": false,
   "keywords": [],
   "author": "@jamsrworld",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/index.mjs"
+    "access": "public"
   },
   "files": [
     "dist"

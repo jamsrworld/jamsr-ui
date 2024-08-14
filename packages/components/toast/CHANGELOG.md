@@ -1,5 +1,11 @@
 # @jamsr-ui/toast
 
+## 0.0.9
+
+### Patch Changes
+
+- fix cjs
+
 ## 0.0.8
 
 ### Patch Changes

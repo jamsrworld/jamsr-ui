@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.15
+
+### Patch Changes
+
+- fix cjs
+
 ## 0.0.14
 
 ### Patch Changes

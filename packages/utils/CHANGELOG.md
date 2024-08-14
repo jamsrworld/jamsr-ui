@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.36
+
+### Patch Changes
+
+- fix cjs
+
 ## 0.0.35
 
 ### Patch Changes

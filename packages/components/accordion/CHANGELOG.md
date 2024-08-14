@@ -1,5 +1,15 @@
 # @jamsr-ui/accordion
 
+## 0.0.44
+
+### Patch Changes
+
+- fix cjs
+- Updated dependencies
+  - @jamsr-ui/avatar@0.0.41
+  - @jamsr-ui/shared-icons@0.0.36
+  - @jamsr-ui/utils@0.0.36
+
 ## 0.0.43
 
 ### Patch Changes

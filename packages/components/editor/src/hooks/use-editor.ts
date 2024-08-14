@@ -18,7 +18,6 @@ import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import type { ComponentProps, ComponentPropsWithoutRef } from "react";
 import { useCallback } from "react";
-import ImageResize from "tiptap-extension-resize-image";
 import { ExtendedImage } from "../components/extensions/image";
 import { ImageUpload } from "../components/extensions/image-upload";
 import type { ImageUploadProps } from "../components/extensions/image-upload/view/image-upload";
@@ -75,14 +74,12 @@ export const useEditor = (props: UseEditorProps) => {
       Superscript,
       Link.configure({
         openOnClick: false,
-        HTMLAttributes: ["p"],
-      }),
-      ImageResize,
-      ImageUpload.configure({
-        props: extensionsProps?.imageUpload,
       }),
       ExtendedImage.configure({
         inline: true,
+      }),
+      ImageUpload.configure({
+        props: extensionsProps?.imageUpload,
       }),
       TextAlign.configure({
         types: ["heading", "paragraph"],

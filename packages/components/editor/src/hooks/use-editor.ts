@@ -5,9 +5,6 @@ import {
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { Color } from "@tiptap/extension-color";
-import FontFamily from "@tiptap/extension-font-family";
-import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import Subscript from "@tiptap/extension-subscript";
@@ -15,7 +12,6 @@ import Superscript from "@tiptap/extension-superscript";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import TextAlign from "@tiptap/extension-text-align";
-import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
 import type { EditorOptions, JSONContent } from "@tiptap/react";
 import { useEditor as useEditorBase } from "@tiptap/react";
@@ -72,18 +68,14 @@ export const useEditor = (props: UseEditorProps) => {
 
   const editor = useEditorBase({
     extensions: [
-      StarterKit.configure(),
-      Highlight.configure({
-        multicolor: true,
-      }),
+      StarterKit.configure({}),
       TaskList,
       TaskItem,
-      TextStyle,
-      Color,
       Underline,
       Superscript,
       Link.configure({
         openOnClick: false,
+        HTMLAttributes: ["p"],
       }),
       ImageResize,
       ImageUpload.configure({
@@ -96,7 +88,6 @@ export const useEditor = (props: UseEditorProps) => {
         types: ["heading", "paragraph"],
       }),
       Subscript,
-      FontFamily,
       Placeholder.configure({
         placeholder,
       }),

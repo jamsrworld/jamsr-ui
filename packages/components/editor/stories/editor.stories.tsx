@@ -35,7 +35,7 @@ export const Default: Story = {
         }, 1000);
       });
       return {
-        src: "https://jamsrworld.com/assets/images/users/Generation-mlm-software.png-55109851721120489b3f993cf-4514-42fd-92e7-20b26dfb09af.png",
+        src: "https://cdn.jamsrworld.com/08-10-2024/9618420164849061594cf598a-4370-4a39-a7cf-4b01e75ba089.jpg-17465301660373000303984b3-79eb-4ee9-be9d-fb9efc4bafeb-1723279953883-41662329.jpg",
         width: 300,
         height: 900,
         alt: "hii there",

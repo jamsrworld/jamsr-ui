@@ -7,30 +7,6 @@
     @apply my-6 first:mt-0 last:mb-0;
   }
 
-  h1 {
-    @apply text-3xl;
-  }
-
-  h2 {
-    @apply text-2xl;
-  }
-
-  h3 {
-    @apply text-xl;
-  }
-
-  h4 {
-    @apply text-lg;
-  }
-
-  h5 {
-    @apply text-base;
-  }
-
-  h6 {
-    @apply text-sm;
-  }
-
   h1,
   h2,
   h3,

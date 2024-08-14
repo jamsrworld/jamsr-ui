@@ -45,6 +45,16 @@ export const jamsrui = () => [
           },
           fontSize: {
             "size-inherit": "inherit",
+            xs: "var(--fs-xs)",
+            sm: "var(--fs-sm)",
+            base: "var(--fs-base)",
+            md: "var(--fs-md)",
+            lg: "var(--fs-lg)",
+            xl: "var(--fs-xl)",
+            "2xl": "var(--fs-2xl)",
+            "3xl": "var(--fs-3xl)",
+            "4xl": "var(--fs-4xl)",
+            "5xl": "var(--fs-5xl)",
           },
           animation: {
             progress: "progress 1s infinite linear",

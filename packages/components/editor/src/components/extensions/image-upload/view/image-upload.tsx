@@ -39,6 +39,7 @@ export const ImageUploadComponent = ({
     <NodeViewWrapper>
       <div className="m-0 p-0" data-drag-handle>
         <SingleFileUpload
+          className="max-h-[200px]"
           {...imageUploadProps}
           value={value}
           onValueChange={setValue}

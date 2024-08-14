@@ -52,26 +52,6 @@ export const useTextMenuCommands = (editor: Editor) => {
     [editor],
   );
 
-  const onChangeColor = useCallback(
-    (color: string) => editor.chain().setColor(color).run(),
-    [editor],
-  );
-  const onClearColor = useCallback(
-    () => editor.chain().focus().unsetColor().run(),
-    [editor],
-  );
-
-  const onChangeHighlight = useCallback(
-    (color: string) => {
-      editor.chain().focus().setHighlight({ color }).run();
-    },
-    [editor],
-  );
-
-  const onClearHighlight = useCallback(
-    () => editor.chain().focus().unsetHighlight().run(),
-    [editor],
-  );
 
   const onLink = useCallback(
     (url: string, inNewTab?: boolean) => {
@@ -92,16 +72,6 @@ export const useTextMenuCommands = (editor: Editor) => {
 
   const onUnlink = useCallback(
     () => editor.chain().focus().unsetLink().run(),
-    [editor],
-  );
-
-  const onSetFont = useCallback(
-    (font: string) => {
-      if (!font || font.length === 0) {
-        return editor.chain().focus().unsetFontFamily().run();
-      }
-      return editor.chain().focus().setFontFamily(font).run();
-    },
     [editor],
   );
 
@@ -161,11 +131,6 @@ export const useTextMenuCommands = (editor: Editor) => {
     onAlignCenter,
     onAlignRight,
     onAlignJustify,
-    onChangeColor,
-    onClearColor,
-    onChangeHighlight,
-    onClearHighlight,
-    onSetFont,
     onLink,
     onUnlink,
     onHardBreak,

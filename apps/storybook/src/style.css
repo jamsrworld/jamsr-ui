@@ -10,3 +10,44 @@
 html {
   @apply text-foreground bg-background;
 }
+
+:root {
+  --fs-xs: clamp(0.8rem, 0.07vi + 0.78rem, 0.83rem);
+  --fs-sm: clamp(0.88rem, 0.23vi + 0.82rem, 1rem);
+  --fs-base: clamp(0.96rem, 0.43vi + 0.85rem, 1.2rem);
+  --fs-md: clamp(1.06rem, 0.69vi + 0.89rem, 1.44rem);
+  --fs-lg: clamp(1.16rem, 1.02vi + 0.91rem, 1.73rem);
+  --fs-xl: clamp(1.28rem, 1.44vi + 0.92rem, 2.07rem);
+  --fs-2xl: clamp(1.41rem, 1.96vi + 0.92rem, 2.49rem);
+  --fs-3xl: clamp(1.55rem, 2.61vi + 0.9rem, 2.99rem);
+  --fs-4xl: clamp(1.71rem, 3.41vi + 0.85rem, 3.58rem);
+  --fs-5xl: clamp(1.88rem, 4.41vi + 0.77rem, 4.3rem);
+}
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+h4 {
+  @apply text-md;
+}
+h5 {
+  @apply text-base;
+}
+h6 {
+  @apply text-sm;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold
+}

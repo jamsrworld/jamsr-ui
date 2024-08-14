@@ -1,18 +1,13 @@
 import ToolbarItem from "./menu-item";
 
 type Props = {
-  onImage: (options: { src: string }) => void;
+  onImage: () => void;
 };
-
-const src =
-  "https://jamsrworld.com/assets/images/users/Generation-mlm-software.png-55109851721120489b3f993cf-4514-42fd-92e7-20b26dfb09af.png";
 
 export const ImagePicker = (props: Props) => {
   const { onImage } = props;
-  const handleClick = () => onImage({ src });
+  const handleClick = () => onImage();
   return (
-    <div>
-      <ToolbarItem icon="image" isActive={() => false} onClick={handleClick} />
-    </div>
+    <ToolbarItem icon="image" isActive={() => false} onClick={handleClick} />
   );
 };

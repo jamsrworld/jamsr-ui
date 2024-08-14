@@ -3,9 +3,6 @@ import { type Editor } from "@tiptap/react";
 import React from "react";
 import { useTextMenuCommands } from "../hooks/use-text-menu-commands";
 import { useTextMenuState } from "../hooks/use-text-menu-state";
-import { FontColorPicker } from "./font-color-picker";
-import { FontFamilyPicker } from "./font-family-picker";
-import { FontHighlightPicker } from "./font-highlight-picker";
 import type { IconTypes } from "./Icon/icons";
 import { LinkMenuBarItem } from "./Icon/link-item";
 import { ImagePicker } from "./image-picker";
@@ -35,15 +32,6 @@ const items = (
   {
     type: "custom",
     component: <TextPicker editor={editor} />,
-  },
-  {
-    type: "custom",
-    component: (
-      <FontFamilyPicker
-        value={state.currentFont ?? ""}
-        onChange={commands.onSetFont}
-      />
-    ),
   },
   {
     type: "option",
@@ -91,24 +79,6 @@ const items = (
     onClick: commands.onCodeBlock,
     title: "Code Block",
     isActive: () => state.isCode,
-  },
-  {
-    type: "custom",
-    component: (
-      <FontColorPicker
-        value={state.currentColor ?? ""}
-        onChange={commands.onChangeColor}
-      />
-    ),
-  },
-  {
-    type: "custom",
-    component: (
-      <FontHighlightPicker
-        value={state.currentHighlight ?? ""}
-        onChange={commands.onChangeHighlight}
-      />
-    ),
   },
   {
     type: "divider",

@@ -1,5 +1,21 @@
 # @jamsr-ui/react
 
+## 0.0.116
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.45
+  - @jamsr-ui/editor@0.0.35
+  - @jamsr-ui/alert@0.0.49
+  - @jamsr-ui/card@0.0.46
+  - @jamsr-ui/data-table@0.0.11
+  - @jamsr-ui/popover@0.0.39
+  - @jamsr-ui/switch@0.0.45
+  - @jamsr-ui/radio@0.0.44
+  - @jamsr-ui/select@0.0.47
+  - @jamsr-ui/tab@0.0.52
+
 ## 0.0.115
 
 ### Patch Changes

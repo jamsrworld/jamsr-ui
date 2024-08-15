@@ -7,6 +7,7 @@ export const useTextMenuState = (editor: Editor) => {
     isStrike: editor.isActive("strike"),
     isUnderline: editor.isActive("underline"),
     isCode: editor.isActive("code"),
+    isCodeBlock: editor.isActive("codeBlock"),
     isSubscript: editor.isActive("subscript"),
     isSuperscript: editor.isActive("superscript"),
     isAlignLeft: editor.isActive({ textAlign: "left" }),

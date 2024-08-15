@@ -1,6 +1,13 @@
 import type { Editor } from "@tiptap/react";
 import { useCallback } from "react";
 
+export type SetYoutubeVideoOptions = {
+  src: string;
+  width?: number;
+  height?: number;
+  start?: number;
+};
+
 export const useTextMenuCommands = (editor: Editor) => {
   const onBold = useCallback(
     () => editor.chain().focus().toggleBold().run(),
@@ -23,7 +30,12 @@ export const useTextMenuCommands = (editor: Editor) => {
     [editor],
   );
   const onCodeBlock = useCallback(
-    () => editor.chain().focus().toggleCodeBlock().run(),
+    (language?: string) =>
+      editor
+        .chain()
+        .focus()
+        .toggleCodeBlock(language ? { language } : undefined)
+        .run(),
     [editor],
   );
 
@@ -51,7 +63,6 @@ export const useTextMenuCommands = (editor: Editor) => {
     () => editor.chain().focus().setTextAlign("justify").run(),
     [editor],
   );
-
 
   const onLink = useCallback(
     (url: string, inNewTab?: boolean) => {
@@ -118,6 +129,13 @@ export const useTextMenuCommands = (editor: Editor) => {
     editor.chain().focus().setImageUpload().run();
   }, [editor]);
 
+  const onYoutubeVideo = useCallback(
+    (options: SetYoutubeVideoOptions) => {
+      editor.commands.setYoutubeVideo(options);
+    },
+    [editor.commands],
+  );
+
   return {
     onBold,
     onItalic,
@@ -141,5 +159,6 @@ export const useTextMenuCommands = (editor: Editor) => {
     onHorizontalRule,
     onImage,
     onImageUpload,
+    onYoutubeVideo,
   };
 };

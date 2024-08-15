@@ -5,6 +5,7 @@ import {
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
+import CodeBlock from "@tiptap/extension-code-block-lowlight";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import Subscript from "@tiptap/extension-subscript";
@@ -13,9 +14,11 @@ import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import TextAlign from "@tiptap/extension-text-align";
 import Underline from "@tiptap/extension-underline";
+import Youtube from '@tiptap/extension-youtube';
 import type { EditorOptions, JSONContent } from "@tiptap/react";
 import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import { all, createLowlight } from "lowlight";
 import type { ComponentProps, ComponentPropsWithoutRef } from "react";
 import { useCallback } from "react";
 import { ExtendedImage } from "../components/extensions/image";
@@ -64,10 +67,13 @@ export const useEditor = (props: UseEditorProps) => {
     defaultProp: defaultValue,
     onChange: onValueChange,
   });
+  const lowlight = createLowlight(all);
 
   const editor = useEditorBase({
     extensions: [
-      StarterKit.configure({}),
+      StarterKit.configure({
+        codeBlock: false,
+      }),
       TaskList,
       TaskItem,
       Underline,
@@ -87,6 +93,13 @@ export const useEditor = (props: UseEditorProps) => {
       Subscript,
       Placeholder.configure({
         placeholder,
+      }),
+      CodeBlock.configure({
+        lowlight,
+      }),
+      Youtube.configure({
+        controls: false,
+        nocookie: true,
       }),
     ],
     onCreate({ editor }) {

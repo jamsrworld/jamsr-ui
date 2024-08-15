@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/editor",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -44,6 +44,8 @@
     "@jamsr-ui/utils": "workspace:^",
     "@tiptap/core": "2.5.4",
     "@tiptap/extension-character-count": "2.2.4",
+    "@tiptap/extension-code-block": "^2.6.3",
+    "@tiptap/extension-code-block-lowlight": "^2.6.3",
     "@tiptap/extension-color": "2.5.2",
     "@tiptap/extension-font-family": "2.5.3",
     "@tiptap/extension-highlight": "2.2.4",
@@ -60,6 +62,7 @@
     "@tiptap/extension-youtube": "2.5.2",
     "@tiptap/react": "2.2.4",
     "@tiptap/starter-kit": "2.2.4",
+    "lowlight": "^3.1.0",
     "tiptap-extension-resize-image": "1.1.8"
   },
   "peerDependencies": {

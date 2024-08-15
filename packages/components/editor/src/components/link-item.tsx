@@ -2,7 +2,7 @@ import { Input } from "@jamsr-ui/input";
 import { Popover } from "@jamsr-ui/popover";
 import { Switch } from "@jamsr-ui/switch";
 import { useState } from "react";
-import ToolbarItem from "../menu-item";
+import ToolbarItem from "./menu-item";
 
 type Props = {
   onLink: (url: string, newTab: boolean) => void;

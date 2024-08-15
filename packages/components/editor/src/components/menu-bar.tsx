@@ -3,11 +3,13 @@ import { type Editor } from "@tiptap/react";
 import React from "react";
 import { useTextMenuCommands } from "../hooks/use-text-menu-commands";
 import { useTextMenuState } from "../hooks/use-text-menu-state";
+import { CodeBlockPicker } from "./code-block-picker";
 import type { IconTypes } from "./Icon/icons";
-import { LinkMenuBarItem } from "./Icon/link-item";
 import { ImagePicker } from "./image-picker";
+import { LinkMenuBarItem } from "./link-item";
 import ToolbarItem from "./menu-item";
 import { TextPicker } from "./text-picker";
+import { YoutubeMenuitem } from "./youtube-menuitem";
 
 type Props = {
   editor: Editor;
@@ -74,11 +76,13 @@ const items = (
     isActive: () => state.isCode,
   },
   {
-    type: "option",
-    icon: "code-box-line",
-    onClick: commands.onCodeBlock,
-    title: "Code Block",
-    isActive: () => state.isCode,
+    type: "custom",
+    component: (
+      <CodeBlockPicker
+        onClick={commands.onCodeBlock}
+        isActive={() => state.isCodeBlock}
+      />
+    ),
   },
   {
     type: "divider",
@@ -94,6 +98,10 @@ const items = (
     onClick: commands.onUnlink,
     title: "Unlink",
     isDisabled: () => !editor.isActive("link"),
+  },
+  {
+    type: "custom",
+    component: <YoutubeMenuitem onYoutube={commands.onYoutubeVideo} />,
   },
   {
     type: "option",

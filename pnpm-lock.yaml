@@ -899,6 +899,9 @@ importers:
       '@floating-ui/react':
         specifier: ^0.26.16
         version: 0.26.22(react-dom@19.0.0-rc-68dbd84b-20240812(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
+      '@jamsr-ui/hooks':
+        specifier: ^0.0.30
+        version: 0.0.30(react-dom@19.0.0-rc-68dbd84b-20240812(react@19.0.0-rc-68dbd84b-20240812))(react@19.0.0-rc-68dbd84b-20240812)
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons

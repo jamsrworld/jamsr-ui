@@ -1,5 +1,11 @@
 # @jamsr-ui/menu
 
+## 0.0.50
+
+### Patch Changes
+
+- fix menu controller
+
 ## 0.0.49
 
 ### Patch Changes

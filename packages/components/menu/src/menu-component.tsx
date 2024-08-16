@@ -26,6 +26,7 @@ import {
   useTypeahead,
   type Placement,
 } from "@floating-ui/react";
+import { useControlledState } from "@jamsr-ui/hooks";
 import { ChevronRight } from "@jamsr-ui/shared-icons";
 import { cn } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
@@ -51,6 +52,9 @@ export type MenuProps = {
     popover?: string;
   };
   showArrow?: boolean;
+  isOpen?: boolean;
+  initialOpen?: boolean;
+  onOpenChange?: (open: boolean) => void;
 } & ComponentProps<"div">;
 
 export const MenuComponent = ({
@@ -64,9 +68,16 @@ export const MenuComponent = ({
   offset: offsetProp,
   nestedOffset,
   showArrow = false,
+  isOpen: propOpen,
+  initialOpen,
+  onOpenChange,
   ...restProps
 }: MenuProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useControlledState({
+    prop: propOpen,
+    onChange: onOpenChange,
+    defaultProp: initialOpen,
+  });
   const [hasFocusInside, setHasFocusInside] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -87,11 +98,11 @@ export const MenuComponent = ({
     open: isOpen,
     onOpenChange: setIsOpen,
     placement: isNested
-      ? nestedPlacement ?? "right-start"
-      : placement ?? "bottom-end",
+      ? (nestedPlacement ?? "right-start")
+      : (placement ?? "bottom-end"),
     middleware: [
       offset({
-        mainAxis: isNested ? nestedOffset ?? 6 : offsetProp ?? 8,
+        mainAxis: isNested ? (nestedOffset ?? 6) : (offsetProp ?? 8),
         alignmentAxis: isNested ? -4 : 0,
       }),
       flip(),
@@ -158,7 +169,7 @@ export const MenuComponent = ({
       tree.events.off("click", handleTreeClick);
       tree.events.off("menuopen", onSubMenuOpen);
     };
-  }, [tree, nodeId, parentId]);
+  }, [tree, nodeId, parentId, setIsOpen]);
 
   useEffect(() => {
     if (isOpen && tree) {

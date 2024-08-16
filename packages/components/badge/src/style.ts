@@ -12,7 +12,7 @@ export const badgeVariants = tv({
   ],
   variants: {
     color: {
-      default: "bg-background-muted",
+      default: "bg-background-tertiary",
       primary: "bg-primary text-primary-foreground",
       secondary: "bg-secondary text-secondary-foreground",
       danger: "bg-danger text-danger-foreground",

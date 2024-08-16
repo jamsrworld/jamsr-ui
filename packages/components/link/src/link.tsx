@@ -1,4 +1,5 @@
-import { ComponentPropsWithAs, cn, focusVisibleClasses } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { cn, focusVisibleClasses } from "@jamsr-ui/utils";
 
 type LinkProps = {};
 
@@ -11,7 +12,7 @@ export const Link = <T extends React.ElementType = "a">(
     <Component
       data-component="link"
       className={cn(
-        "text-primary hover:text-primary-dark cursor-pointer text-sm",
+        "cursor-pointer text-sm text-foreground-link hover:underline hover:underline-offset-4",
         focusVisibleClasses,
         className,
       )}

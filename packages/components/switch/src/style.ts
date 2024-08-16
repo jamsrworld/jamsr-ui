@@ -54,7 +54,7 @@ export const switchVariants = tv({
     },
     disabled: {
       true: {
-        wrapper: "pointer-events-none cursor-not-allowed bg-background-muted",
+        wrapper: "pointer-events-none cursor-not-allowed bg-background-tertiary",
       },
     },
   },

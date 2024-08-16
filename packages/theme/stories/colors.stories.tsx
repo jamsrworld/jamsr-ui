@@ -187,9 +187,9 @@ export const SemanticColors = {
             textClassName: "text-foreground-secondary",
           },
           {
-            color: "muted",
-            className: "bg-background-muted",
-            textClassName: "text-foreground-muted",
+            color: "tertiary",
+            className: "bg-background-tertiary",
+            textClassName: "text-foreground-tertiary",
           },
           {
             color: "content1",

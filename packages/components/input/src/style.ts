@@ -4,16 +4,16 @@ export const inputVariants = tv({
   slots: {
     base: "flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
+    label: "shrink-0 select-none text-sm font-normal text-foreground",
     mainWrapper: "flex gap-1",
     inputWrapper:
       "w-full focus-within:border-primary focus-within:ring-primary",
     innerWrapper: "flex items-center px-3 py-2",
     input:
-      "block grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
-    helper: "text-xs text-foreground-500",
-    startContent: "pr-2 text-foreground-muted empty:hidden",
-    endContent: "pl-2 text-foreground-muted",
+      "block grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-500 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+    helper: "text-xs text-foreground-600",
+    startContent: "pr-2 text-foreground-tertiary empty:hidden",
+    endContent: "pl-2 text-foreground-tertiary",
     notation: "",
   },
   variants: {

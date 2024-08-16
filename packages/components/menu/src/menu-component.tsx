@@ -69,7 +69,7 @@ export const MenuComponent = ({
   nestedOffset,
   showArrow = false,
   isOpen: propOpen,
-  initialOpen,
+  initialOpen = false,
   onOpenChange,
   ...restProps
 }: MenuProps) => {

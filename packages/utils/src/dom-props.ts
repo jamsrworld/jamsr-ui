@@ -84,7 +84,6 @@ export const DOMPropNames = new Set([
   "min",
   "minLength",
   "multiple",
-  "muted",
   "name",
   "noValidate",
   "open",

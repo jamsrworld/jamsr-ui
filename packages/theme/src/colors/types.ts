@@ -23,7 +23,7 @@ type Background = ColorScale & {
   content2: string;
   content3: string;
   content4: string;
-  muted: string;
+  tertiary: string;
 };
 
 export type BaseColors = {

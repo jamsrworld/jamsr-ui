@@ -6,7 +6,7 @@ export const table = tv({
     wrapper: "grid w-full gap-2",
     table: "group/table w-full min-w-full",
     thead: "h-10",
-    th: "h-10 grow items-center whitespace-nowrap border-divider bg-background-muted px-3 text-left text-xs uppercase text-foreground-secondary first:rounded-l-lg last:rounded-r-lg",
+    th: "h-10 grow items-center whitespace-nowrap border-divider bg-background-tertiary px-3 text-left text-xs uppercase text-foreground-secondary first:rounded-l-lg last:rounded-r-lg",
     tbody: "",
     tr: "group/tr",
     td: "overflow-hidden whitespace-nowrap px-3 text-sm",

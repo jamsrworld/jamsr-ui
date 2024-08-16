@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.8
+
+### Patch Changes
+
+- improve some themes
+
 ## 0.0.7
 
 ### Patch Changes

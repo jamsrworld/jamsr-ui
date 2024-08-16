@@ -11,12 +11,12 @@ export const themeColorsLight = {
     ...common.zinc,
     DEFAULT: "#000000",
     link: "#007AFF",
-    secondary: "#3C3C43",
-    tertiary: "#fff",
+    secondary: "#8A8A8E",
+    tertiary: "#C4C4C6",
   },
   divider: {
-    DEFAULT: "#f5f5f7",
-    dark: "#f5f5f7",
+    DEFAULT: "#d3d2d2",
+    dark: "#C6C6C8",
   },
   action: {
     hover: "#f5f5f7",

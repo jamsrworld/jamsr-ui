@@ -17,12 +17,8 @@ const Template = () => {
     confirm({
       message: "Are you sure want to delete?",
       title: "Warning!",
-      onConfirm() {
-        alert("confirmed");
-      },
-      onCancel() {
-        alert("cancelled");
-      },
+      onConfirm() {},
+      onCancel() {},
     });
   return (
     <div>

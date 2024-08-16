@@ -191,26 +191,6 @@ export const SemanticColors = {
             className: "bg-background-tertiary",
             textClassName: "text-foreground-tertiary",
           },
-          {
-            color: "content1",
-            className: "bg-background-content1",
-            textClassName: "text-foreground-content1",
-          },
-          {
-            color: "content2",
-            className: "bg-background-content2",
-            textClassName: "text-foreground-content2",
-          },
-          {
-            color: "content3",
-            className: "bg-background-content3",
-            textClassName: "text-foreground-content3",
-          },
-          {
-            color: "content4",
-            className: "bg-background-content4",
-            textClassName: "text-foreground-content4",
-          },
         ],
       },
       {

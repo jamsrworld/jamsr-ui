@@ -24,10 +24,10 @@ export const Confirmation = () => {
   };
   return (
     <Dialog isOpen={isOpen} onOpenChange={onClose} hideCloseButton>
-      <DialogContent className="max-w-[280px] rounded-lg bg-background-content1">
+      <DialogContent className="max-w-[280px] rounded-lg bg-background-secondary">
         <DialogHeader className="text-center">{title}</DialogHeader>
         <DialogBody>
-          <p className="text-center text-foreground-content1">{message}</p>
+          <p className="text-center text-foreground-secondary">{message}</p>
         </DialogBody>
         <Divider />
         <div className="flex">
@@ -35,7 +35,7 @@ export const Confirmation = () => {
             variant="link"
             onClick={handleClose}
             fullWidth
-            className="rounded-none rounded-bl-md hover:bg-background-content1"
+            className="rounded-none rounded-bl-md hover:bg-background-secondary"
             disableAnimation
             autoFocus
           >
@@ -46,7 +46,7 @@ export const Confirmation = () => {
             fullWidth
             variant="link"
             onClick={handleConfirm}
-            className="rounded-none rounded-br-md font-bold hover:bg-background-content1"
+            className="rounded-none rounded-br-md font-bold hover:bg-background-secondary"
             disableAnimation
           >
             Ok

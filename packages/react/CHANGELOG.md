@@ -1,5 +1,54 @@
 # @jamsr-ui/react
 
+## 0.0.125
+
+### Patch Changes
+
+- fix
+
+## 0.0.124
+
+### Patch Changes
+
+- improve some themes
+- Updated dependencies
+  - @jamsr-ui/confirmation@0.0.23
+  - @jamsr-ui/accordion@0.0.47
+  - @jamsr-ui/alert@0.0.54
+  - @jamsr-ui/autocomplete@0.0.51
+  - @jamsr-ui/avatar@0.0.44
+  - @jamsr-ui/badge@0.0.42
+  - @jamsr-ui/button@0.0.45
+  - @jamsr-ui/card@0.0.51
+  - @jamsr-ui/checkbox@0.0.42
+  - @jamsr-ui/chip@0.0.46
+  - @jamsr-ui/data-table@0.0.16
+  - @jamsr-ui/dialog@0.0.47
+  - @jamsr-ui/divider@0.0.42
+  - @jamsr-ui/editor@0.0.43
+  - @jamsr-ui/file-upload@0.0.60
+  - @jamsr-ui/header@0.0.45
+  - @jamsr-ui/input@0.0.48
+  - @jamsr-ui/link@0.0.43
+  - @jamsr-ui/menu@0.0.51
+  - @jamsr-ui/otp-input@0.0.42
+  - @jamsr-ui/popover@0.0.43
+  - @jamsr-ui/progress@0.0.42
+  - @jamsr-ui/radio@0.0.48
+  - @jamsr-ui/repeater@0.0.18
+  - @jamsr-ui/ripple@0.0.43
+  - @jamsr-ui/select@0.0.51
+  - @jamsr-ui/skeleton@0.0.42
+  - @jamsr-ui/switch@0.0.50
+  - @jamsr-ui/tab@0.0.57
+  - @jamsr-ui/table@0.0.18
+  - @jamsr-ui/textarea@0.0.48
+  - @jamsr-ui/toast@0.0.12
+  - @jamsr-ui/tooltip@0.0.42
+  - @jamsr-ui/typography@0.0.50
+  - @jamsr-ui/core@0.0.21
+  - @jamsr-ui/utils@0.0.39
+
 ## 0.0.123
 
 ### Patch Changes

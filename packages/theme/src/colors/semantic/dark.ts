@@ -14,11 +14,11 @@ export const themeColorsDark: typeof themeColorsLight = {
     DEFAULT: "#eaebec",
     link: "#0B84FF",
     secondary: "#9295a5",
-    tertiary: "#888",
+    tertiary: "#F8F8FC",
   },
   divider: {
-    DEFAULT: "#ffffff33",
-    dark: "#ffffff4d",
+    DEFAULT: "#38383A",
+    dark: "#98989B",
   },
   action: {
     hover: common.zinc[800],

@@ -1570,6 +1570,9 @@ importers:
       '@jamsr-ui/radio':
         specifier: workspace:^
         version: link:../components/radio
+      '@jamsr-ui/rating':
+        specifier: workspace:^
+        version: link:../components/rating
       '@jamsr-ui/repeater':
         specifier: workspace:^
         version: link:../components/repeater

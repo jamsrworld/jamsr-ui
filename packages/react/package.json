@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.125",
+  "version": "0.0.126",
   "main": "./src/index.ts",
   "description": "A react js ui library with tailwindcss",
   "keywords": [
@@ -78,6 +78,7 @@
     "@jamsr-ui/popover": "workspace:^",
     "@jamsr-ui/progress": "workspace:^",
     "@jamsr-ui/radio": "workspace:^",
+    "@jamsr-ui/rating": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
     "@jamsr-ui/ripple": "workspace:^",
     "@jamsr-ui/select": "workspace:^",

@@ -21,6 +21,7 @@ export * from "@jamsr-ui/otp-input";
 export * from "@jamsr-ui/popover";
 export * from "@jamsr-ui/progress";
 export * from "@jamsr-ui/radio";
+export * from "@jamsr-ui/rating";
 export * from "@jamsr-ui/repeater";
 export * from "@jamsr-ui/ripple";
 export * from "@jamsr-ui/select";

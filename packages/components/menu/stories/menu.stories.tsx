@@ -49,6 +49,8 @@ const Template = () => {
           <MenuItem>Mail</MenuItem>
           <MenuItem>Instagram</MenuItem>
         </Menu>
+        <MenuItem disabled>Edit</MenuItem>
+        <MenuItem className="data-[active=true]:bg-danger">Delete</MenuItem>
       </Menu>
     </div>
   );

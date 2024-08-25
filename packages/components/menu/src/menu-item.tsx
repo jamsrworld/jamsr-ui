@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable react/prop-types */
 import { useFloatingTree, useListItem } from "@floating-ui/react";
-import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { dataAttr, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { menuVariants } from "./style";
 import { useMenu } from "./use-menu";
 
@@ -44,6 +44,7 @@ export const MenuItem = <T extends React.ElementType = "button">(
       role="menuitem"
       className={menuClasses.menuItem({ className })}
       tabIndex={isActive ? 0 : -1}
+      data-active={dataAttr(isActive)}
       disabled={disabled}
       {...restProps}
       {...menu.getItemProps({

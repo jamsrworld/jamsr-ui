@@ -5,9 +5,17 @@ export type CardHeaderProps = {
   heading?: React.ReactNode;
   subHeading?: React.ReactNode;
   className?: string;
-  action?: React.ReactNode;
   gutterBottom?: boolean;
-  children?: React.ReactNode;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
+  classNames?: {
+    heading?: string;
+    subHeading?: string;
+    base?: string;
+    innerWrapper?: string;
+    startContent?: string;
+    endContent?: string;
+  };
 };
 
 export const CardHeader = <T extends React.ElementType = "div">(
@@ -17,10 +25,11 @@ export const CardHeader = <T extends React.ElementType = "div">(
     as,
     heading,
     className,
-    children,
-    action,
     subHeading,
     gutterBottom,
+    startContent,
+    endContent,
+    classNames,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -28,31 +37,28 @@ export const CardHeader = <T extends React.ElementType = "div">(
     <Component
       data-slot="header"
       className={cn(
-        "relative flex justify-between px-4 pt-4",
+        "relative flex items-center gap-2 px-4 pt-4",
         { "pb-4": gutterBottom },
         className,
       )}
       {...restProps}
     >
-      {children ?? (
-        <>
-          <div className="grid gap-1">
-            <Typography as="h6" variant="h6">
-              {heading}
-            </Typography>
-            {subHeading && (
-              <Typography
-                className="text-foreground-secondary"
-                variant="caption"
-                as="h6"
-              >
-                {subHeading}
-              </Typography>
-            )}
-          </div>
-          {action}
-        </>
-      )}
+      <div className={classNames?.startContent}>{startContent}</div>
+      <div className={cn("grid grow gap-1", classNames?.innerWrapper)}>
+        <Typography as="h3" variant="h6" className={classNames?.heading}>
+          {heading}
+        </Typography>
+        {subHeading && (
+          <Typography
+            className={cn("text-foreground-secondary", classNames?.subHeading)}
+            variant="caption"
+            as="p"
+          >
+            {subHeading}
+          </Typography>
+        )}
+      </div>
+      <div className={classNames?.endContent}>{endContent}</div>
     </Component>
   );
 };

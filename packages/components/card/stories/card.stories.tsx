@@ -1,5 +1,8 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Card, CardContent, type CardProps } from "../src";
+import { Typography } from "@jamsr-ui/typography";
+import { Button } from "@jamsr-ui/button";
+import { Avatar } from "@jamsr-ui/avatar";
+import { Card, CardContent, CardHeader, type CardProps } from "../src";
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
@@ -18,4 +21,22 @@ const Template = (props: CardProps) => (
 export const Primary: Story = {
   render: Template,
   args: {},
+};
+
+export const StartEndContent: Story = {
+  render: () => {
+    return (
+      <Card>
+        <CardHeader
+          heading="Card Header"
+          startContent={<Avatar alt="avatar" src="" />}
+          endContent={<Button isIconOnly />}
+          subHeading="20 Minutes Ago"
+        />
+        <CardContent>
+          <Typography as="p">This is a card. Pretty cool right?</Typography>
+        </CardContent>
+      </Card>
+    );
+  },
 };

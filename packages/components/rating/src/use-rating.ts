@@ -1,0 +1,131 @@
+import { useControlledState } from "@jamsr-ui/hooks";
+import { cn, dataAttr, PropGetter, SlotsToClasses } from "@jamsr-ui/utils";
+import { ComponentProps, useCallback } from "react";
+import { RatingSlots, ratingVariants } from "./style";
+
+export type UseRatingProps = {
+  isReadonly?: boolean;
+  isDisabled?: boolean;
+  defaultValue?: number;
+  value?: number;
+  onValueChange?: (value: number) => void;
+  label?: string;
+  classNames?: SlotsToClasses<RatingSlots>;
+  className?: string;
+  isInvalid?: boolean;
+  helperText?: string;
+};
+
+export const useRating = (props: UseRatingProps) => {
+  const {
+    className,
+    classNames,
+    label,
+    isReadonly,
+    isDisabled,
+    onValueChange,
+    value: propValue,
+    defaultValue,
+    helperText,
+    isInvalid,
+  } = props;
+
+  const styles = ratingVariants({
+    className,
+    isInvalid,
+    isDisabled,
+  });
+  const maxValue = 5;
+
+  const [value = 0, setValue] = useControlledState({
+    prop: propValue,
+    defaultProp: defaultValue,
+    onChange: onValueChange,
+  });
+
+  if (value > maxValue) {
+    console.warn(`Rating max value is ${maxValue}, current value is ${value}`);
+  }
+
+  const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        "data-slot": "base",
+        "data-readonly": dataAttr(isReadonly),
+        className: styles.base({
+          class: cn(classNames?.base, props?.className),
+        }),
+        ...props,
+      };
+    },
+    [styles, classNames?.base],
+  );
+
+  const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "label-wrapper",
+        className: styles.labelWrapper({
+          class: cn(classNames?.labelWrapper, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.labelWrapper],
+  );
+
+  const getLabelProps: PropGetter<ComponentProps<"label">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "label",
+        className: styles.label({
+          class: cn(classNames?.label, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.label],
+  );
+
+  const getInnerWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        "data-slot": "inner-wrapper",
+        className: styles.innerWrapper({
+          class: cn(classNames?.innerWrapper, props?.className),
+        }),
+        ...props,
+      };
+    },
+    [styles, classNames?.innerWrapper],
+  );
+
+  const getHelperProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "helper",
+        className: styles.helper({
+          class: cn(classNames?.helper, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.helper],
+  );
+
+  return {
+    value,
+    label,
+    maxValue,
+    setValue,
+    getBaseProps,
+    getLabelWrapperProps,
+    getLabelProps,
+    getInnerWrapperProps,
+    getHelperProps,
+    helperText,
+    styles,
+    isDisabled,
+    isReadonly,
+  };
+};

@@ -2,7 +2,8 @@ import { Repeater } from "@jamsr-ui/repeater";
 import { useId } from "react";
 import { RatingProvider } from "./rating-context";
 import { RatingItem } from "./rating-item";
-import { useRating, UseRatingProps } from "./use-rating";
+import type { UseRatingProps } from "./use-rating";
+import { useRating } from "./use-rating";
 
 export type RatingProps = UseRatingProps;
 export const Rating = (props: RatingProps) => {
@@ -26,6 +27,7 @@ export const Rating = (props: RatingProps) => {
     <RatingProvider value={{ styles, isDisabled, isReadonly }}>
       <div {...getBaseProps()}>
         <div {...getLabelWrapperProps()}>
+          {/*  eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label {...getLabelProps()}>{label}</label>
         </div>
         <div {...getInnerWrapperProps()}>

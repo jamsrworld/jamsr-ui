@@ -1,5 +1,24 @@
 # @jamsr-ui/react
 
+## 0.0.128
+
+### Patch Changes
+
+- fix issues
+- Updated dependencies
+  - @jamsr-ui/rating@0.0.3
+  - @jamsr-ui/card@0.0.52
+  - @jamsr-ui/radio@0.0.48
+  - @jamsr-ui/select@0.0.52
+  - @jamsr-ui/tab@0.0.58
+
+## 0.0.127
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/rating@0.0.2
+
 ## 0.0.126
 
 ### Patch Changes

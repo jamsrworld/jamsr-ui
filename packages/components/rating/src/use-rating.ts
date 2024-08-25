@@ -1,7 +1,10 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { cn, dataAttr, PropGetter, SlotsToClasses } from "@jamsr-ui/utils";
-import { ComponentProps, useCallback } from "react";
-import { RatingSlots, ratingVariants } from "./style";
+import type { PropGetter, SlotsToClasses } from "@jamsr-ui/utils";
+import { cn, dataAttr } from "@jamsr-ui/utils";
+import type { ComponentProps } from "react";
+import { useCallback } from "react";
+import type { RatingSlots } from "./style";
+import { ratingVariants } from "./style";
 
 export type UseRatingProps = {
   isReadonly?: boolean;
@@ -14,7 +17,7 @@ export type UseRatingProps = {
   className?: string;
   isInvalid?: boolean;
   helperText?: string;
-};
+} & ComponentProps<"div">;
 
 export const useRating = (props: UseRatingProps) => {
   const {
@@ -28,6 +31,7 @@ export const useRating = (props: UseRatingProps) => {
     defaultValue,
     helperText,
     isInvalid,
+    ...restProps
   } = props;
 
   const styles = ratingVariants({
@@ -56,9 +60,10 @@ export const useRating = (props: UseRatingProps) => {
           class: cn(classNames?.base, props?.className),
         }),
         ...props,
+        ...restProps,
       };
     },
-    [styles, classNames?.base],
+    [isReadonly, styles, classNames?.base, restProps],
   );
 
   const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(

@@ -15,7 +15,7 @@ export const RatingItem = (props: Props) => {
     setValue(itemValue);
   };
   const isChecked = value >= itemValue;
-  const { styles, isDisabled, isReadonly } = useRatingContext();
+  const { styles, isDisabled = false, isReadonly = false } = useRatingContext();
   const isInteractive = !isDisabled && !isReadonly;
 
   const handleMouseMove = () => {
@@ -32,7 +32,7 @@ export const RatingItem = (props: Props) => {
       data-interactive={dataAttr(isInteractive)}
     >
       <StarIcon className={styles.star()} />
-      <span className="sr-only"></span>
+      <span className="sr-only" />
       <input
         value={itemValue}
         aria-hidden

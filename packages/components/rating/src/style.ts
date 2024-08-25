@@ -1,4 +1,5 @@
-import { tv, VariantProps } from "@jamsr-ui/utils";
+import type { VariantProps } from "@jamsr-ui/utils";
+import { tv } from "@jamsr-ui/utils";
 
 export const ratingVariants = tv({
   slots: {

@@ -7,14 +7,14 @@ export const themeColorsDark: typeof themeColorsLight = {
   background: {
     DEFAULT: "#000",
     secondary: "#141419",
-    tertiary: "#36363f",
+    tertiary: "#222426",
   },
   foreground: {
     ...common.zinc,
     DEFAULT: "#eaebec",
     link: "#0B84FF",
     secondary: "#9295a5",
-    tertiary: "#F8F8FC",
+    tertiary: "#8A8A8E",
   },
   divider: {
     DEFAULT: "#38383A",

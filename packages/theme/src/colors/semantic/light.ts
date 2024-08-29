@@ -3,8 +3,8 @@ import { commonColors as common } from "../common";
 
 export const themeColorsLight = {
   background: {
-    DEFAULT: "#FFFFFF",
-    secondary: "#F2F2F7",
+    DEFAULT: "#F2F2F7",
+    secondary: "#FFFFFF",
     tertiary: "#E9E9EA"
   },
   foreground: {

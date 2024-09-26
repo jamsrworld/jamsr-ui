@@ -1,5 +1,21 @@
 # @jamsr-ui/data-table
 
+## 0.0.18
+
+### Patch Changes
+
+- updated react version
+- Updated dependencies
+  - @jamsr-ui/button@0.0.46
+  - @jamsr-ui/progress@0.0.43
+  - @jamsr-ui/repeater@0.0.19
+  - @jamsr-ui/select@0.0.53
+  - @jamsr-ui/skeleton@0.0.43
+  - @jamsr-ui/table@0.0.19
+  - @jamsr-ui/typography@0.0.51
+  - @jamsr-ui/shared-icons@0.0.41
+  - @jamsr-ui/utils@0.0.40
+
 ## 0.0.17
 
 ### Patch Changes

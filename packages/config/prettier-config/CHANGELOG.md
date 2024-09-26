@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.9
+
+### Patch Changes
+
+- updated react version
+
 ## 0.0.8
 
 ### Patch Changes

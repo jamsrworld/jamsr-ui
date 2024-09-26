@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.46
+
+### Patch Changes
+
+- updated react version
+
 ## 0.0.45
 
 ### Patch Changes

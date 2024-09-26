@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.41
+
+### Patch Changes
+
+- updated react version
+
 ## 0.0.40
 
 ### Patch Changes

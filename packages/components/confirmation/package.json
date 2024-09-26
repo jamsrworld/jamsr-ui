@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/confirmation",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -35,9 +35,9 @@
     "react-dom": "19.0.0-rc-e4953922-20240919"
   },
   "dependencies": {
-    "@jamsr-ui/button": "^0.0.45",
+    "@jamsr-ui/button": "^0.0.46",
     "@jamsr-ui/dialog": "workspace:^",
-    "@jamsr-ui/divider": "^0.0.43",
+    "@jamsr-ui/divider": "^0.0.44",
     "zustand": "^4.5.4"
   },
   "clean-package": "../../../clean-package.config.json"

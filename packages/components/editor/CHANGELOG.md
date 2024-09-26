@@ -1,5 +1,24 @@
 # @jamsr-ui/editor
 
+## 0.0.46
+
+### Patch Changes
+
+- updated react version
+- Updated dependencies
+  - @jamsr-ui/button@0.0.46
+  - @jamsr-ui/divider@0.0.44
+  - @jamsr-ui/file-upload@0.0.62
+  - @jamsr-ui/input@0.0.51
+  - @jamsr-ui/menu@0.0.53
+  - @jamsr-ui/popover@0.0.44
+  - @jamsr-ui/repeater@0.0.19
+  - @jamsr-ui/select@0.0.53
+  - @jamsr-ui/switch@0.0.51
+  - @jamsr-ui/hooks@0.0.32
+  - @jamsr-ui/shared-icons@0.0.41
+  - @jamsr-ui/utils@0.0.40
+
 ## 0.0.45
 
 ### Patch Changes

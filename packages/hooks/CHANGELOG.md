@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.32
+
+### Patch Changes
+
+- updated react version
+
 ## 0.0.31
 
 ### Patch Changes

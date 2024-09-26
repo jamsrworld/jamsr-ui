@@ -1,5 +1,17 @@
 # @jamsr-ui/input
 
+## 0.0.51
+
+### Patch Changes
+
+- updated react version
+- Updated dependencies
+  - @jamsr-ui/button@0.0.46
+  - @jamsr-ui/input@0.0.51
+  - @jamsr-ui/hooks@0.0.32
+  - @jamsr-ui/shared-icons@0.0.41
+  - @jamsr-ui/utils@0.0.40
+
 ## 0.0.50
 
 ### Patch Changes

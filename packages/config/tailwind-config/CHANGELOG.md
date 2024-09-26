@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.10
+
+### Patch Changes
+
+- updated react version
+
 ## 0.0.9
 
 ### Patch Changes

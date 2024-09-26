@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.30
+
+### Patch Changes
+
+- updated react version
+
 ## 0.0.29
 
 ### Patch Changes

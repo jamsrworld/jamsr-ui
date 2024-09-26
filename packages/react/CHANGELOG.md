@@ -1,5 +1,19 @@
 # @jamsr-ui/react
 
+## 0.0.129
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.43
+  - @jamsr-ui/input@0.0.50
+  - @jamsr-ui/link@0.0.44
+  - @jamsr-ui/confirmation@0.0.25
+  - @jamsr-ui/editor@0.0.45
+  - @jamsr-ui/header@0.0.46
+  - @jamsr-ui/autocomplete@0.0.53
+  - @jamsr-ui/textarea@0.0.50
+
 ## 0.0.128
 
 ### Patch Changes

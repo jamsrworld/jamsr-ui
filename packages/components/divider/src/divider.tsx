@@ -1,8 +1,4 @@
-import {
-  forwardRef,
-  type ComponentPropsWithoutRef,
-  type ForwardedRef,
-} from "react";
+import { type ComponentPropsWithoutRef, type ForwardedRef } from "react";
 import { dividerVariants, type DividerVariants } from "./style";
 
 type Props = ComponentPropsWithoutRef<"div"> &
@@ -10,10 +6,7 @@ type Props = ComponentPropsWithoutRef<"div"> &
     gap?: string;
   };
 
-export const DividerInner = (
-  props: Props,
-  ref: ForwardedRef<HTMLDivElement>,
-) => {
+export const Divider = (props: Props, ref: ForwardedRef<HTMLDivElement>) => {
   const {
     className,
     variant,
@@ -48,5 +41,3 @@ export const DividerInner = (
     </div>
   );
 };
-
-export const Divider = forwardRef(DividerInner);

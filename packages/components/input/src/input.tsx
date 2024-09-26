@@ -50,6 +50,7 @@ export const Input = <T extends React.ElementType = "div">(
           onClick={handleChangeInputType}
           variant="light"
           rounded
+          size="sm"
         >
           {!showPassword ? <EyeOpen /> : <EyeClosed />}
         </Button>

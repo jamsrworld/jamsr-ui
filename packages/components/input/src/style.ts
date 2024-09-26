@@ -40,12 +40,15 @@ export const inputVariants = tv({
       sm: {
         inputWrapper: "rounded-xl",
         innerWrapper: "h-8 min-h-8 px-2.5",
+        input: "text-sm placeholder:text-sm",
       },
       md: {
         innerWrapper: "h-10 min-h-10",
+        input: "text-sm placeholder:text-sm",
       },
       lg: {
         innerWrapper: "h-12 min-h-12",
+        input: "text-base placeholder:text-base",
       },
     },
     isInvalid: {

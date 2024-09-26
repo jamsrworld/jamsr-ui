@@ -51,3 +51,8 @@ h5,
 h6 {
   @apply font-bold;
 }
+
+.debug,
+.debug > * {
+  outline: 1px solid red;
+}

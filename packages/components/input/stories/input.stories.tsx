@@ -114,6 +114,18 @@ export const Sizes: Story = {
   },
 };
 
+export const Placeholder: Story = {
+  render: () => {
+    return (
+      <div className="space-y-4">
+        <Input label="Small" size="sm" placeholder="Input your username" />
+        <Input label="Medium" size="md" placeholder="Input your username" />
+        <Input label="Large" size="lg" placeholder="Input your username" />
+      </div>
+    );
+  },
+};
+
 export const Variant: Story = {
   render: () => {
     return (

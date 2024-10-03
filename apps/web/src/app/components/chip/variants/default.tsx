@@ -1,3 +1,5 @@
+import { Chip } from "@jamsr-ui/react";
+
 export const ChipDefault = () => {
-  return <div>Default</div>;
+  return <Chip>Default</Chip>;
 };

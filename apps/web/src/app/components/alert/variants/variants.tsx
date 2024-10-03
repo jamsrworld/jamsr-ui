@@ -7,7 +7,10 @@ export const AlertVariants = () => {
   return (
     <div className="grid gap-4">
       {variants.map((variant) => (
-        <AlertSeverity variant={variant} />
+        <AlertSeverity
+          key={variant}
+          variant={variant}
+        />
       ))}
     </div>
   );

@@ -1,12 +1,13 @@
 "use client";
+
 import { DataTable } from "@jamsr-ui/react";
 import { COLUMNS, USERS } from "./columns";
 
-export const DataTableDefault = () => {
+export const DataTableServer = () => {
   return (
     <DataTable
       columns={COLUMNS}
-      isServer={false}
+      isServer
       sorting={{
         id: "registeredAt",
         desc: false,

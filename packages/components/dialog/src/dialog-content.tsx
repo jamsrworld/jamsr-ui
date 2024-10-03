@@ -3,7 +3,7 @@ import {
   FloatingOverlay,
   FloatingPortal,
 } from "@floating-ui/react";
-import { ComponentPropsWithAs, type UIProps } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs, UIProps } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import { DialogClose } from "./dialog-close";
 import { useDialogContext } from "./dialog-context";
@@ -24,7 +24,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
     getDialogProps,
     isOpen,
   } = useDialogContext();
-  const Component = as || DialogComponent;
+  const Component = as ?? DialogComponent;
 
   return (
     <AnimatePresence>
@@ -35,10 +35,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
             className={slots.backdrop()}
             lockScroll
           >
-            <FloatingFocusManager
-              context={context}
-              modal
-            >
+            <FloatingFocusManager context={context} modal>
               {/* @ts-ignore */}
               <m.div
                 initial={{ y: 50, opacity: 0 }}

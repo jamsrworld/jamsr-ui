@@ -37,4 +37,4 @@ export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
 
 // Provider
-export { UIProvider as JamsrUIProvider } from "@jamsr-ui/core";
+export { UIProvider } from "@jamsr-ui/core";

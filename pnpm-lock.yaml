@@ -162,9 +162,15 @@ importers:
       '@jamsr-ui/react':
         specifier: workspace:^
         version: link:../../packages/react
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../packages/shared-icons
       '@jamsr-ui/theme':
         specifier: workspace:^
         version: link:../../packages/theme
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../packages/utils
       clean-package:
         specifier: ^2.2.0
         version: 2.2.0

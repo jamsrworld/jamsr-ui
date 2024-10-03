@@ -1,7 +1,7 @@
 import { Accordion, AccordionItem, AccordionProps } from "@jamsr-ui/react";
 import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
-export const SubtitleAccordion = (arg: AccordionProps) => {
+export const AccordionSubtitle = (arg: AccordionProps) => {
   return (
     <Accordion {...arg}>
       <AccordionItem

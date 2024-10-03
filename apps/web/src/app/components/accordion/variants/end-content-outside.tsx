@@ -6,7 +6,7 @@ import {
 } from "@jamsr-ui/react";
 import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
-export const EndContentOutsideAccordion = (arg: AccordionProps) => {
+export const AccordionEndContentOutside = (arg: AccordionProps) => {
   return (
     <Accordion {...arg}>
       <AccordionItem

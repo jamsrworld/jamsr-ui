@@ -1,12 +1,12 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { Metadata } from "next";
-import { DefaultAccordion } from "./variants/default";
-import { EndContentAccordion } from "./variants/end-content";
-import { EndContentOutsideAccordion } from "./variants/end-content-outside";
-import { StartContentAccordion } from "./variants/start-content";
-import { StartContentOutsideAccordion } from "./variants/start-content-outside";
-import { SubtitleAccordion } from "./variants/subtitle";
+import { AccordionDefault } from "./variants/default";
+import { AccordionEndContent } from "./variants/end-content";
+import { AccordionEndContentOutside } from "./variants/end-content-outside";
+import { AccordionStartContent } from "./variants/start-content";
+import { AccordionStartContentOutside } from "./variants/start-content-outside";
+import { AccordionSubtitle } from "./variants/subtitle";
 
 export const metadata: Metadata = {
   title: "Accordion",
@@ -16,28 +16,28 @@ const Accordion = () => {
   return (
     <VariantPage heading="Accordion">
       <VariantWrapper heading="Default">
-        <DefaultAccordion />
+        <AccordionDefault />
       </VariantWrapper>
       <VariantWrapper heading="With Subtitle">
-        <SubtitleAccordion />
+        <AccordionSubtitle />
       </VariantWrapper>
       <VariantWrapper heading="With Start Content">
-        <StartContentAccordion />
+        <AccordionStartContent />
       </VariantWrapper>
       <VariantWrapper heading="With End Content">
-        <EndContentAccordion />
+        <AccordionEndContent />
       </VariantWrapper>
       <VariantWrapper
         heading="With Start Content Outside"
         description="Use case of content outside the trigger is that you can add events on the outside content"
       >
-        <StartContentOutsideAccordion />
+        <AccordionStartContentOutside />
       </VariantWrapper>
       <VariantWrapper
         heading="With End Content Outside"
         description="Use case of content outside the trigger is that you can add events on the outside content"
       >
-        <EndContentOutsideAccordion />
+        <AccordionEndContentOutside />
       </VariantWrapper>
     </VariantPage>
   );

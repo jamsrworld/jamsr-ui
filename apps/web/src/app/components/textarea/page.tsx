@@ -7,9 +7,7 @@ import { TextareaDisabled } from "./variants/disabled";
 import { TextareaErrorState } from "./variants/error-state";
 import { TextareaHelperText } from "./variants/helper-text";
 import { TextareaLabelHelper } from "./variants/label-helper";
-import { TextareaOptional } from "./variants/optional";
 import { TextareaPlaceholder } from "./variants/placeholder";
-import { TextareaRequired } from "./variants/required";
 import { TextareaSizes } from "./variants/sizes";
 import { TextareaVariants } from "./variants/variants";
 import { TextareaWithEndContent } from "./variants/with-end-content";
@@ -54,12 +52,6 @@ const Textarea = () => {
       </VariantWrapper>
       <VariantWrapper heading="WithIcon">
         <TextareaWithIcon />
-      </VariantWrapper>
-      <VariantWrapper heading="Required">
-        <TextareaRequired />
-      </VariantWrapper>
-      <VariantWrapper heading="Optional">
-        <TextareaOptional />
       </VariantWrapper>
       <VariantWrapper heading="Sizes">
         <TextareaSizes />

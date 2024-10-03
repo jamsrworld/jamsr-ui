@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@jamsr-ui/core": "workspace:^",
+    "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/editor": "workspace:^",
     "@jamsr-ui/react": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
@@ -20,7 +22,8 @@
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.0",
     "next": "15.0.0-rc.0",
-    "react": "19.0.0-rc-e4953922-20240919"
+    "react": "19.0.0-rc-e4953922-20240919",
+    "react-dom": "19.0.0-rc-e4953922-20240919"
   },
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:^",

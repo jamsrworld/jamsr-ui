@@ -17,6 +17,7 @@
         "name": "next"
       }
     ],
+    "allowImportingTsExtensions": true,
     "paths": {
       "@/*": ["./src/*", "../../packages/components/editor/src/*"]
     },

@@ -1,6 +1,6 @@
 "use client";
 
-import { UIProvider } from "@jamsr-ui/react";
+import { UIProvider } from "@jamsr-ui/core";
 
 type Props = {
   children: React.ReactNode;
@@ -8,5 +8,7 @@ type Props = {
 
 export const AppProvider = (props: Props) => {
   const { children } = props;
+  // TODO: fix with ui provide
   return <UIProvider>{children}</UIProvider>;
+  // return <FramerMotionProvider>{children}</FramerMotionProvider>;
 };

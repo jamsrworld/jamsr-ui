@@ -1,4 +1,4 @@
-import { JamsrUIProvider } from "@jamsr-ui/react";
+import { UIProvider } from "@jamsr-ui/react";
 import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import "../src/style.css";
@@ -6,9 +6,9 @@ import "../src/style.css";
 const decorators: Preview["decorators"] = [
   (Story) => (
     <div className="text-foreground">
-      <JamsrUIProvider>
+      <UIProvider>
         <Story />
-      </JamsrUIProvider>
+      </UIProvider>
     </div>
   ),
 ];

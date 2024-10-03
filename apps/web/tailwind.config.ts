@@ -1,11 +1,22 @@
-import { sharedConfig, type Config } from "@jamsr-ui/tailwind-config";
+import { type Config } from "@jamsr-ui/tailwind-config";
+import { jamsrui } from "../../packages/theme/src/index";
+// import { jamsrui } from "@jamsr-ui/theme";
 
 const config: Config = {
   darkMode: "class",
   content: [
-    "../../packages/components/**/*.{ts,tsx}",
+    "../../packages/components/*/src/**/*.{ts,tsx}",
     "./src/app/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+    "!./node_modules",
   ],
-  presets: [sharedConfig],
+  theme: {
+    extend: {
+      colors: {
+        jamsr: "blue",
+      },
+    },
+  },
+  plugins: [...jamsrui()],
 };
 export default config;

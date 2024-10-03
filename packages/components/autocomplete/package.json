@@ -26,12 +26,12 @@
     "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "react": "19.0.0-rc-e4953922-20240919",
-    "react-dom": "19.0.0-rc-e4953922-20240919"
+    
+    "react": "19.0.0-rc-e4953922-20240919"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-e4953922-20240919",
-    "react-dom": "19.0.0-rc-e4953922-20240919"
+    
+    "react": "19.0.0-rc-e4953922-20240919"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.16",

@@ -58,13 +58,10 @@ importers:
         version: link:../../packages/react
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^1.4.0
@@ -89,13 +86,13 @@ importers:
         version: 8.2.9(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       '@storybook/blocks':
         specifier: ^8.1.1
-        version: 8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
+        version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       '@storybook/react':
         specifier: ^8.1.1
-        version: 8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)
+        version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)
       '@storybook/react-vite':
         specifier: ^8.1.1
-        version: 8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(rollup@4.20.0)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
+        version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(rollup@4.20.0)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
       '@storybook/test':
         specifier: ^8.1.1
         version: 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(vitest@1.6.0(@types/node@20.14.15)(jsdom@24.1.1))
@@ -143,7 +140,7 @@ importers:
         version: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
       storybook-dark-mode:
         specifier: ^4.0.1
-        version: 4.0.2(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
+        version: 4.0.2(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.9
@@ -163,8 +160,8 @@ importers:
         specifier: workspace:^
         version: link:../../packages/components/editor
       '@jamsr-ui/react':
-        specifier: '*'
-        version: 0.0.113(@tiptap/pm@2.6.2)(@types/react@18.3.3)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react-dropzone@14.2.3(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+        specifier: workspace:^
+        version: link:../../packages/react
       '@jamsr-ui/theme':
         specifier: workspace:^
         version: link:../../packages/theme
@@ -177,9 +174,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -238,13 +232,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/alert:
     dependencies:
@@ -273,9 +264,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/autocomplete:
     dependencies:
@@ -313,9 +301,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/avatar:
     dependencies:
@@ -335,9 +320,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/badge:
     dependencies:
@@ -357,9 +339,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/button:
     dependencies:
@@ -388,9 +367,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/card:
     dependencies:
@@ -419,9 +395,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/checkbox:
     dependencies:
@@ -443,13 +416,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/chip:
     dependencies:
@@ -475,21 +445,18 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/confirmation:
     dependencies:
       '@jamsr-ui/button':
-        specifier: ^0.0.45
-        version: 0.0.45(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+        specifier: ^0.0.46
+        version: 0.0.46(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
       '@jamsr-ui/dialog':
         specifier: workspace:^
         version: link:../dialog
       '@jamsr-ui/divider':
-        specifier: ^0.0.43
-        version: 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+        specifier: ^0.0.44
+        version: 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
       zustand:
         specifier: ^4.5.4
         version: 4.5.4(@types/react@18.3.3)(react@19.0.0-rc-e4953922-20240919)
@@ -509,9 +476,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/data-table:
     dependencies:
@@ -561,9 +525,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/dialog:
     dependencies:
@@ -601,9 +562,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/divider:
     dependencies:
@@ -623,9 +581,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/drawer:
     dependencies:
@@ -650,13 +605,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/editor:
     dependencies:
@@ -775,9 +727,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/file-upload:
     dependencies:
@@ -806,9 +755,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/header:
     dependencies:
@@ -836,13 +782,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/input:
     dependencies:
@@ -874,9 +817,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/link:
     dependencies:
@@ -896,9 +836,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/menu:
     dependencies:
@@ -906,8 +843,8 @@ importers:
         specifier: ^0.26.16
         version: 0.26.22(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       '@jamsr-ui/hooks':
-        specifier: ^0.0.31
-        version: 0.0.31(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        specifier: ^0.0.32
+        version: 0.0.32(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
@@ -933,9 +870,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/otp-input:
     dependencies:
@@ -955,9 +889,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/popover:
     dependencies:
@@ -992,9 +923,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/progress:
     dependencies:
@@ -1013,13 +941,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/radio:
     dependencies:
@@ -1045,9 +970,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/rating:
     dependencies:
@@ -1088,9 +1010,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/ripple:
     dependencies:
@@ -1113,9 +1032,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/select:
     dependencies:
@@ -1159,9 +1075,12 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
+
+  packages/components/sidebar:
+    dependencies:
+      react:
         specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+        version: 19.0.0-rc-e4953922-20240919
 
   packages/components/skeleton:
     dependencies:
@@ -1181,9 +1100,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/switch:
     dependencies:
@@ -1208,13 +1124,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/tab:
     dependencies:
@@ -1245,13 +1158,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/table:
     dependencies:
@@ -1271,9 +1181,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/textarea:
     dependencies:
@@ -1305,19 +1212,16 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/toast:
     dependencies:
       react-hot-toast:
         specifier: ^2.4.1
-        version: 2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 2.4.1(csstype@3.1.3)(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
     devDependencies:
       '@jamsr-ui/button':
-        specifier: ^0.0.45
-        version: 0.0.45(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+        specifier: ^0.0.46
+        version: 0.0.46(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -1327,9 +1231,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/tooltip:
     dependencies:
@@ -1358,9 +1259,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/components/typography:
     dependencies:
@@ -1380,9 +1278,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/config/eslint-config:
     devDependencies:
@@ -1473,13 +1368,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/hooks:
     devDependencies:
@@ -1492,9 +1384,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/react:
     dependencies:
@@ -1661,9 +1550,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
       typescript:
         specifier: ^5.4.5
         version: 5.5.4
@@ -1682,9 +1568,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
   packages/theme:
     dependencies:
@@ -1701,9 +1584,6 @@ importers:
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.9
@@ -1740,13 +1620,10 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.0
-        version: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+        version: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react:
         specifier: 19.0.0-rc-e4953922-20240919
         version: 19.0.0-rc-e4953922-20240919
-      react-dom:
-        specifier: 19.0.0-rc-e4953922-20240919
-        version: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
 packages:
 
@@ -2982,290 +2859,43 @@ packages:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
 
-  '@jamsr-ui/accordion@0.0.43':
-    resolution: {integrity: sha512-icfaEdqMDzxAipgKi1VW0omGG+ZG/MX9mk5zbRX62mm7rfKj2SZkPTBPIStit3nshbYVpViU8VNqN8AsQObbtA==}
+  '@jamsr-ui/button@0.0.46':
+    resolution: {integrity: sha512-wt9hQ2u33VFe3a52ves+288m0hV/TV6aHf8B6bN89G7CrNg1ZEj2sgULrs7mI4dWH4Q6hqzzdJxLuGwtz/CM8Q==}
+    peerDependencies:
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919
+
+  '@jamsr-ui/divider@0.0.44':
+    resolution: {integrity: sha512-Fb4a4gzpC1LXg/95/qloyvKj1MUljEY6WIAIVo2M6CXWjYo1yM9XgLLMOiKyJXYXRYAJs+otA+22I/7leGirTw==}
+    peerDependencies:
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919
+
+  '@jamsr-ui/hooks@0.0.32':
+    resolution: {integrity: sha512-Tr7SJV0CM2p4/mflL+3Ly3lCl+I1tQUZp8p+r7mbY3pO9Sq9Js5k2PE01fAgVBB6T8qiK5YIpOjhxVUO4RDkQQ==}
+    peerDependencies:
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919
+
+  '@jamsr-ui/progress@0.0.43':
+    resolution: {integrity: sha512-51PxI43wwYUvakZazEIbvpfvPqpD6RRnb5RoE+VuZqk5gWmpvTnpUCGgb8/qxvZxp2kYw43z8wJbaGLJa+hPfw==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919
 
-  '@jamsr-ui/alert@0.0.48':
-    resolution: {integrity: sha512-LtK0LNKL0DNFKWR7C+7o8mOpQrQACkYAhE3X0tcjkcESogTsxDAdwIbKUE4IEocELgU54O58k9Qklcbclj+GhA==}
+  '@jamsr-ui/ripple@0.0.44':
+    resolution: {integrity: sha512-lVDTtCWwXyKROjdPVxPhyFj1YUNRi3bvcCaXOTFsNxTNrfbiMQL9Gxg3ElWtus741V+oQBj/ZgkjvXukgXxRrg==}
     peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919
 
-  '@jamsr-ui/autocomplete@0.0.47':
-    resolution: {integrity: sha512-UmON7ipAEimXZaiMMdvPhk6VSnQEI8LHgiBIPfZc9BYm+cJbBI/cLIdtEY6OpK7pUAR3KCFLIFxuOBEQHGDQmw==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/avatar@0.0.40':
-    resolution: {integrity: sha512-v7W3chu51e2iM/9YTEwmZk3U1S/M6DD26T/ysIiWa1z/2Vb97/WoogjJv6L+L0obkMLkCHPe4t/ltt0pKELkpQ==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/badge@0.0.38':
-    resolution: {integrity: sha512-Ymf51Vlt4yyqbOlA45qUgCULjZ+VvhVuwHrhgBJlY1VzjaKQRlSyZh/bXEJduHn9RsH5OoDifCnwY96Y6KTZiw==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/button@0.0.41':
-    resolution: {integrity: sha512-egZjnZo/hKmK9wGzH3RxnxFFpNYbFZFnZWW4xV2hv4kNVmmhq3jvcLIDdFnFnzEeLrXepD4tPpSDd6jhJowayA==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/button@0.0.45':
-    resolution: {integrity: sha512-iEGK8rhZQ2kYy0vS/BJc2psjlMZyCeBeAeAexml9mMf8WmGKZIkabNE0DP70AN1k181XtZSLJmCBF4py7Dd95A==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/card@0.0.45':
-    resolution: {integrity: sha512-N+Ppj4+OcglVGWb4eejsSbOCfwRUnmkzmpYjdaqjbTjTd1C4Y6XPKpxQINrOSYsrsbNRO7dZo0fYVKyMjJG2dA==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/checkbox@0.0.38':
-    resolution: {integrity: sha512-s1A3/73pqMcaULnsHuj1LfwF7g6yDYpCTcMeSsJfKAaKGUsfs82Ttb2MXVBdCSpqUuL6jhu5d/gG+70o9UKYDw==}
+  '@jamsr-ui/utils@0.0.40':
+    resolution: {integrity: sha512-SS2mviWEb6NqgYRBmLKWfsnE7TKp2gO8TAVtgJfB8wJHc2WjUYFrirJ9H2pIRXHRYZKcBmjjAzEZxrdZJNxY7Q==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/chip@0.0.42':
-    resolution: {integrity: sha512-08PVhWR1lgMIU/YR80GzBeZdx+IktQbG0d+P8Q51mPBMNk3kQs5jJUJApyoZ303KSL0tMideRvbvOsuKOKlkog==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/confirmation@0.0.19':
-    resolution: {integrity: sha512-66oDnPkawlec9j+WVcLQkZk1RA+xQf2ZlA26rZ/Nwwq1GVxUVZ7a0ElWVigx7SerjrMmWCS+zYuy3aHN06J8lQ==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/core@0.0.18':
-    resolution: {integrity: sha512-2FuwOoj4gAk7JLCtb4cx7pBW9rUF8yWaYaBIByHgDL99oRFxl4zj7vYunfKx+aEdmIS21nyanb6Qomrqn6bD2A==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/data-table@0.0.10':
-    resolution: {integrity: sha512-Sr+ZfK2CDQqZfWQc8TRyhYl/Rs+ArJLMnwoLY3NRC7h/wNEZeOjbnJvNma1w0rh1lla7Cj8eXxOsQh9s8q90VA==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/dialog@0.0.43':
-    resolution: {integrity: sha512-XZiAO/24JkUIbJSHpsfqdtjqQgs9xbZKziDz1jrhXZEIdOsCc3lwe3HPn+DQ/pc8SxsdS3Jzqft16/z+9rNXmw==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/divider@0.0.38':
-    resolution: {integrity: sha512-or21VCFjlocA+KCaFG4lfQ6i3CgiS1FCXdYbgHPDKqTVROzDzrfw7aZGZ9TZ689TjmDF/YwJAEsPnqsTjBgUAQ==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/divider@0.0.43':
-    resolution: {integrity: sha512-WUFzR8soJQ+i3w/qoypAeZnWZrVMN+nEOG72ShXZicIE50iv9KtYL3C/qLWetJkw/3rBGAWujOUkxunFOoTvoQ==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/editor@0.0.32':
-    resolution: {integrity: sha512-wbV2HjtRpiVz7XMZr/7pez/NLDZNdThcCSm3XkNrJDEb9qZj04FYzSbCDCU4YD78FkacLJs6DdtYYYxlDQvB0Q==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/file-upload@0.0.56':
-    resolution: {integrity: sha512-ubcCLmoWfRoyRSZpMBOD0+KwJv+01MCy02779D0x+1DyCml6F3cGdCnkQevPmo+gBNzUMzNGZBBUDKc58Aa/Ow==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-      react-dropzone: ^14.2.3
-
-  '@jamsr-ui/header@0.0.41':
-    resolution: {integrity: sha512-85qKbCIX1gxsvAQGsufkWqaVfgLEcrviX5muQjjHQgK2+RNmDMGLekcP0CKJIawWcrLGbG0DJakvaT4LJVJ4Ww==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/hooks@0.0.27':
-    resolution: {integrity: sha512-HMg1WT3zYwkBXKVzZmfdDca1sQ8FRvKbcFXwjdWCUI8KkG9aTlC2xw/Jnt5LIxf7xHFYnhokZIlwrzVoocFgOg==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/hooks@0.0.31':
-    resolution: {integrity: sha512-pFwJrQkAkJot+vMkNHh4RgKel/q/a70mVi2jeJUlquTBTpbwbjlgsgPlpjPWleyrx3aO527T8hTSm5RKBQ1DcA==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/input@0.0.44':
-    resolution: {integrity: sha512-yWPul9wjdpWE5J+Mj0fD/8Egk5K7BR2rfoScYjNVnwd/WPOGfSNu0urfOp54AC2y7Mw6DETxAHXWnCVOYXa7kw==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/link@0.0.39':
-    resolution: {integrity: sha512-njubrQoa0T7berSHwo7jm9QvSWRIlOE6s1qrWYtnm9in9/Mq2O00DER+56RAQyQ7rvP/tGT7RuzSsrDG2qncEw==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/menu@0.0.46':
-    resolution: {integrity: sha512-d4lXoFvqySYjXSsqoIlcVN90QdgVzwwe3OrABhlSlb+9iVXDsOe7kqp6olud3XWqZ8xZ2Tn3jaNRBGhzSKSFfw==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/otp-input@0.0.38':
-    resolution: {integrity: sha512-jntN0+DXAiJb47zAM4WkZ0SaBr02MrK1G1UDH/sGTtcI1ArgYroJ+i5ViawcQDCMYZ/qXQAxTl06DKJapWUu3Q==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/popover@0.0.39':
-    resolution: {integrity: sha512-rMgU8cJUySeiC32ysb649pc4KlvImLABYLcOfs+JjzLm4J+Lq1IruA9FHcvHM/EawWybJVCZePvLHkB6cyucYg==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/progress@0.0.38':
-    resolution: {integrity: sha512-tnv8JOkxlS4F/zGPzC551jmniITdZPvIlXM4u2JIZjJ4lR6m43WxPY3JeMkSDppGZVBgHTTFKkHKchXSf1YAbg==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/progress@0.0.42':
-    resolution: {integrity: sha512-DEw8tBB+RUAdMLco2gYVOmYw2HCVydByRdPrnPe1bQaQ6DRrnGP7WVYv/OlpM6DUAt6KLqH/VZmdLO0Bkm5lZw==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/radio@0.0.44':
-    resolution: {integrity: sha512-NgOitSR7FsMpzF3EX7nqma5WK5w1vUH6RwxyUPM4P3U+n0/HLQ2Yq8ADwWAVeWNNrV5ql4GIw4bAgvC5Yag0Ew==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/react@0.0.113':
-    resolution: {integrity: sha512-Uj4n5Z20OTS5zZflwHikFstNbaX6uOFRfLwYDSDuViEJOjGalABqZJFDZOX+X6wbE7BBEEhSmwVQZ/kZPL2tzQ==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/repeater@0.0.14':
-    resolution: {integrity: sha512-099+rh8rmd9Op/rgP1H/Mab7wm+CyKAVx8LKNIWEOVN2tnzuyp8ZcCa2C3NvEeJgsu5L9ep+FJSExNm/z2SKzA==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/ripple@0.0.39':
-    resolution: {integrity: sha512-cs4s4tKqpijqEo7HXlgCNnDJPjBG12KLlGtDUxbgqcL3D59O87WVES571kp3SXTum81JgH7cwQUx67PxJbWWxw==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/ripple@0.0.43':
-    resolution: {integrity: sha512-uk9cUwgBGx80ywWjz8QnPejPnzfeKNMQyTY6B0Yrc3fPLOI4VZgloJCLD6cEl2KTZKSRXbH0c4dvZHAdy9+7rQ==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/select@0.0.47':
-    resolution: {integrity: sha512-O+v+fFJKphcDUNHuCWgpjMwW0Fo9j8SuZW+g1v49AkUvWAX5cM26Y0bo2JV/J2GdeHdEWFHPZxWcVoRPfQ9WsQ==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/shared-icons@0.0.35':
-    resolution: {integrity: sha512-85hT8e2vl1PYYGvutElsoZ2ld6+cIMHXSYD0adH8w5G37lGtsPlijkciYu4FxMiGrIG0JYQmqlH3ZCpMip/zdA==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/skeleton@0.0.38':
-    resolution: {integrity: sha512-saxxZCN6mO71/7MBELLEA3wUlOOLwsPSI5uA9HYgqcrl6QBLiK30+bcGLzQvPXNZWtdjP9wOApGR5OvaIGU31Q==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/switch@0.0.44':
-    resolution: {integrity: sha512-BSRj+Y+bum6y4ne2ngZuRpgUQtqb+r+gQPDoxf/sgdNpDXIr2xkDOa1/d3X3St5/4ZRv8pheSlBsU4e98lIPHw==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/tab@0.0.51':
-    resolution: {integrity: sha512-vfDVkuBA0jmmsqONMFDOOXgA+afh+HBeEirmtk/S+Q9dFLVf9L7H8x7IENma/GrVWV4bsgcGQox1EOtrogzyeQ==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/table@0.0.14':
-    resolution: {integrity: sha512-GtnC8DNqqWfxfLIkkd5PCrw4E6gdfOLbgUrOhShdgeZRz7IGg0eo3fNwQwtiFY4VGOCBS3FITzwHJ09x0daZhg==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/textarea@0.0.44':
-    resolution: {integrity: sha512-+9Z6VK8vxLLV3rsl88/X1xkQrVi8tIIaB/3Tbt1ABGN9CMWAIHPB0CCK7ttIkM/kP3Y1bJmf1kvNf6tS+c2JDA==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/toast@0.0.8':
-    resolution: {integrity: sha512-uGqTwgtdYSxzv/0BpuGCkgLJk59g5MvDY51q6yvhLKRktiov5LysK0HYJFlvGp1DFvDdfWiNmRYGXtyix/0bmg==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/tooltip@0.0.38':
-    resolution: {integrity: sha512-NbO8L2Vx/gAUZpr7uvWJ9xXg5I4Y5yHsqGrr1L4Z3XQkw7MSsBo3tJNf677y0zdtnDsbZX40FXU0ceJPBDruUw==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/typography@0.0.44':
-    resolution: {integrity: sha512-5U4t8djWIaI9JOtb94Yw3eAnXE4J1LQmahVDXzArpnNNOl4wHDT1KiLMJzRzZ4dXdUlmVQdIl38In1h3z5S8xg==}
-    peerDependencies:
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/utils@0.0.35':
-    resolution: {integrity: sha512-ec0ZRDLXb6fkiBDtaWv4pZCuQJ4o2l2Y/EXDFa6AQvZkw+YPzdLHZ6Qeft6OK1pXm8i5LV6Vj5u2HCTMXCN04A==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
-
-  '@jamsr-ui/utils@0.0.39':
-    resolution: {integrity: sha512-x7gtyMjXgJmqWtrWuEqe3HMZN6wSZ+0ouN+ULu0Q+iqK5ZgOHq0DE1+d5DbO26FEZJxgwkHYhtZp/bRED46rQg==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.0
-      react: 19.0.0-rc-68dbd84b-20240812
-      react-dom: 19.0.0-rc-68dbd84b-20240812
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919
 
   '@jest/schemas@29.6.3':
     resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
@@ -3818,11 +3448,6 @@ packages:
     peerDependencies:
       '@tiptap/pm': ^2.5.4
 
-  '@tiptap/core@2.6.2':
-    resolution: {integrity: sha512-Okhh2QddIT86Dm1xBKhD8PLoIRJdlm4uqtvllrOp8Wdp5nkeuanaSFr0pU7BgqIxJ9GkZcoLgqUXj3Q++k5HIA==}
-    peerDependencies:
-      '@tiptap/pm': ^2.6.2
-
   '@tiptap/extension-blockquote@2.6.2':
     resolution: {integrity: sha512-g0k2xAlRBYokWSNKzzAm6lvSZKR8nl1FXnnfDiobaNKBcdlweLhLVSFE6SJlahj/G/FQ7oiAmSfVPfoJAJ54Mw==}
     peerDependencies:
@@ -3850,12 +3475,6 @@ packages:
       '@tiptap/core': ^2.0.0
       '@tiptap/pm': ^2.0.0
 
-  '@tiptap/extension-character-count@2.6.2':
-    resolution: {integrity: sha512-4qKtX3dA5URvVbCr2hENOgzJdCALb/5l+PqGAsYE+WTuS3s+RNtCsXO70gncocw5agV8fJp/pm5cox+QV8x1jQ==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/pm': ^2.6.2
-
   '@tiptap/extension-code-block-lowlight@2.6.3':
     resolution: {integrity: sha512-K7p9zeeE7wrG5eem4bLWCNlUT/wPb9iHEO7MsVqDxUJe+G1iewRZS0Cr8mw4LqdxMcWaH0gft0hzw7lKJZxPyQ==}
     peerDependencies:
@@ -3864,12 +3483,6 @@ packages:
       '@tiptap/pm': ^2.6.3
       highlight.js: ^11
       lowlight: ^2 || ^3
-
-  '@tiptap/extension-code-block@2.6.2':
-    resolution: {integrity: sha512-ismtyjzjaddAD4oWTaogLZmbzqwEo1aMW9pdRf5R/YxKmHcUdMwhrF4C0qYSx1S3mA9ItrdCW6Jhi/Pa95MHnw==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/pm': ^2.6.2
 
   '@tiptap/extension-code-block@2.6.3':
     resolution: {integrity: sha512-RMSX90ZG8a5wnxaId/a9JyjRSuW4YOCkbxYl0jwabQf/3mDYkjo6l3hcI+TGs/K2OWy0jeQXz51F27paaULx0w==}
@@ -3887,12 +3500,6 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.5.2
       '@tiptap/extension-text-style': ^2.5.2
-
-  '@tiptap/extension-color@2.6.2':
-    resolution: {integrity: sha512-W79q7gSVM/dFo7t7zSpr3T0inOIf306QODZNz/X/em/FPvXt20fhoR5Qfp6GjigrtDXwrRflzgXIoH03F0NEFw==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/extension-text-style': ^2.6.2
 
   '@tiptap/extension-document@2.6.2':
     resolution: {integrity: sha512-VPfzL9P5F5fHW6+dNVV9AdZtnA51sXncASUdS55E1ZYaBEEe+BRAHEUfovrO7Djvzy9tzjn8IqGeOkAtwj1HHQ==}
@@ -3917,12 +3524,6 @@ packages:
       '@tiptap/core': ^2.5.3
       '@tiptap/extension-text-style': ^2.5.3
 
-  '@tiptap/extension-font-family@2.6.2':
-    resolution: {integrity: sha512-CbSO3ickxXpcedHoKfm/wSdZpZrAyBczYG85kOro3+dqxJd1N2QwmQ6cmmHCGynJSl2SEMA/pyhcNfFsW1O0LA==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/extension-text-style': ^2.6.2
-
   '@tiptap/extension-gapcursor@2.6.2':
     resolution: {integrity: sha512-08VTvhKSfD+k/76wt5A+Kg7GCA+WqzWylApyXryLShfg1neLU2uul5d/dg4DkxvEeEvdYRzNniLjs2dGkIQsUg==}
     peerDependencies:
@@ -3944,11 +3545,6 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.0.0
 
-  '@tiptap/extension-highlight@2.6.2':
-    resolution: {integrity: sha512-rLXuBLyIbWDncUfFZTFYslSumoAeTVtGa1jXFpoeYC5+9iOhyd3n42CHgr1JW6tNRmL375qXBRGtHJVZBfHUhQ==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-
   '@tiptap/extension-history@2.6.2':
     resolution: {integrity: sha512-0QK/VMIYLwG3Srg7opm82iKkYuzuziFg7DYfx5fKcbYFZ2Sfh4SKaJfawIruCRW5jImyWYHkX5zGc9tRpY9qqw==}
     peerDependencies:
@@ -3966,11 +3562,6 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.5.2
 
-  '@tiptap/extension-image@2.6.2':
-    resolution: {integrity: sha512-EjA6+cGux4hVG2cyaJDzlWtjn7PEuwFoP5pwmUWZCF8UBuKGswKaFZLSnNmgNBaXZkcfB6lub2Rc+kgvE0M/DA==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-
   '@tiptap/extension-italic@2.6.2':
     resolution: {integrity: sha512-YXmuelZRAQuRkMfYG1pk4iEfmpCisX3Zp7ZEzr/v6r5+kNs/lyDLjZ6r5QqsFC9tpHq6DvwcxsXaQrJG2qJNYQ==}
     peerDependencies:
@@ -3981,12 +3572,6 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.5.2
       '@tiptap/pm': ^2.5.2
-
-  '@tiptap/extension-link@2.6.2':
-    resolution: {integrity: sha512-alPl+HvIIbicplPscQ5GHAmzDZUTld5JLm7699Mbijciw5z2LhU8XkI3NRWbSua7nJFGNAdsR1QqUr3JmujuCg==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/pm': ^2.6.2
 
   '@tiptap/extension-list-item@2.6.2':
     resolution: {integrity: sha512-7Spl6UxnxYosnwoSdkK9Sic8ujh5eaTefBs6dvrX22MhX+WrFoINvzP2CcReuXEt+vN15C8sRDji8ckYiOgqWA==}
@@ -4009,12 +3594,6 @@ packages:
       '@tiptap/core': ^2.0.0
       '@tiptap/pm': ^2.0.0
 
-  '@tiptap/extension-placeholder@2.6.2':
-    resolution: {integrity: sha512-Aou6lH456j5mpry36jyAdZzINxFx6fjqvmapmmORJKV+9J889P7RN7laRRsosWHez0Oxg4KuWL3FuDexx6ZJOQ==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/pm': ^2.6.2
-
   '@tiptap/extension-strike@2.6.2':
     resolution: {integrity: sha512-Mzq0PfDN0RTW7cPozSVrsKgmyuFOGfIYOcQx216ooKu77WqjGZw6YT2xDFtBSLQyMUYihKRXbNQ18X17KiZwUg==}
     peerDependencies:
@@ -4025,20 +3604,10 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.5.2
 
-  '@tiptap/extension-subscript@2.6.2':
-    resolution: {integrity: sha512-9Mdb2gJ0Sv61GX2rIo3KmCA/FeXKiC5SeWkM09KSPGoWwjLzHHmbrGnm44q67Az4rCQPKSdrKQvTR7lpyoQpNA==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-
   '@tiptap/extension-superscript@2.5.2':
     resolution: {integrity: sha512-N6uU5NENu3BMZq2dSggASDah3OJNLoRwAmq8Yp/0Fpq3yazXBjXhW/pS0Q773P3YAEc3pPTP4xAm9I3YI8Bd1A==}
     peerDependencies:
       '@tiptap/core': ^2.5.2
-
-  '@tiptap/extension-superscript@2.6.2':
-    resolution: {integrity: sha512-YjHyZyszYCn6okO70ZSQhASgvMBGFkeJVF+eI1a+h3wuLMR7T9aM4vNjvzqCA9zp0aWjmd7Rp0w2mIdJp0HfvA==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
 
   '@tiptap/extension-task-item@2.2.4':
     resolution: {integrity: sha512-Ixzv7bPcgrWelSD0Jy6yAlHxmGWpD5lPt6Ey4POYy7u98duyUFOBMHLcsV24ipQsRacuB+htgmuqOrkiL+hg7w==}
@@ -4046,41 +3615,20 @@ packages:
       '@tiptap/core': ^2.0.0
       '@tiptap/pm': ^2.0.0
 
-  '@tiptap/extension-task-item@2.6.2':
-    resolution: {integrity: sha512-qMTAuXoEcrYHYs8wGmo3dovuLNf2HszN/ChrNqbUEopTnwF9Ea9MWANC+Jm+0oBSO8JGYI9Rbnjdm5iyP371LQ==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/pm': ^2.6.2
-
   '@tiptap/extension-task-list@2.2.4':
     resolution: {integrity: sha512-URh1Yzj/YZBOMkobK4/U8s1QYwIIqHm4b0YadLPPZx9IzTjyV/2bvIakphCmBtxWxeTXW5TbO9eNod3qatq21w==}
     peerDependencies:
       '@tiptap/core': ^2.0.0
-
-  '@tiptap/extension-task-list@2.6.2':
-    resolution: {integrity: sha512-Asj4xlAJJQue1pGArRtHf0on0Q+ewQR3tGW8CUgZQEZrgVRB7a/40Ud071CZEA5LjnMIU/hpybYRxpEsK2tIXQ==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
 
   '@tiptap/extension-text-align@2.5.2':
     resolution: {integrity: sha512-IYgzGSNH9oLEqTiZ4R0WXw2K60OXVeWHzCNDz14W+Bjuutt6CK0NW8/ytARt2ragC7ptJ4MNK2A0rjgn8jd68Q==}
     peerDependencies:
       '@tiptap/core': ^2.5.2
 
-  '@tiptap/extension-text-align@2.6.2':
-    resolution: {integrity: sha512-Yyi/XrUSLjc0O/baHA7/1WyUXRigAfMA97jlv7Iudgpp1aDcRydm0liYQC/7E1Vt/VJfOsfcNXyTQYQ+tQKvbA==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-
   '@tiptap/extension-text-style@2.5.2':
     resolution: {integrity: sha512-zPRFU85PpJ28/5IBq1ZF40EPBoIFaWqsbQDdRth/6iLidGoYyjIEBDxKvzV9fVxu4rUWeQzj6zXFdXnoA/rzCQ==}
     peerDependencies:
       '@tiptap/core': ^2.5.2
-
-  '@tiptap/extension-text-style@2.6.2':
-    resolution: {integrity: sha512-5sTOZtkNBhd+6OJqteFrj1GuySVIQwsbzo2Wn2+JkifkhiqZtZVajW05V0qUNsNEf+5kDGDb+CUesKob9Fly9Q==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
 
   '@tiptap/extension-text@2.6.2':
     resolution: {integrity: sha512-/2kybVwTdTuz/LnuzD062D7XSeAM/8qkuSLU3QlrwPkWcDm8IlE7efJJiN4LEWqgnPxOx1tzPS2inWQqKai3pw==}
@@ -4092,20 +3640,10 @@ packages:
     peerDependencies:
       '@tiptap/core': ^2.5.2
 
-  '@tiptap/extension-underline@2.6.2':
-    resolution: {integrity: sha512-bwbOsd8TR6Wg41LUYfeaWfxYOgQlpt2c/m4I4HRYillTqS0gi4RNkmqapsBT402Z7O8x5YS0Tcq0JLG3TR3nFg==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-
   '@tiptap/extension-youtube@2.5.2':
     resolution: {integrity: sha512-xVrVD15xq3v8lzy8nDCj8C9J9jodUnxxiuVDNBa+UMBIrvKUvb1WeCNWtq7LAdzxIqoafquN9/rvHmF3Zh+mFQ==}
     peerDependencies:
       '@tiptap/core': ^2.5.2
-
-  '@tiptap/extension-youtube@2.6.2':
-    resolution: {integrity: sha512-l+5zOAquf/uhr3uKXZUYqzXRE8JTtROupUxW9GjwXZ13DmtmXF7CBSl9v/dwO6NA+W+2uKgNgD86BEWczan/8Q==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
 
   '@tiptap/pm@2.6.2':
     resolution: {integrity: sha512-bDz/DOsTcZ9YgFe2IuDP6M3w+sF1r41Ir8BK+NvSIW6YsILAPaxe3U21vUrq4pRfg5z69m/4UTsbTp95mg4BJQ==}
@@ -4118,19 +3656,8 @@ packages:
       react: ^17.0.0 || ^18.0.0
       react-dom: ^17.0.0 || ^18.0.0
 
-  '@tiptap/react@2.6.2':
-    resolution: {integrity: sha512-YAMW77j9viEJsNkfJTbmA1tGhXfp0fcQuFgEaZ10RqT32oWtKCP0+Gza7T7IJNhWU5pDF6t6wvobi9LNop8EEQ==}
-    peerDependencies:
-      '@tiptap/core': ^2.6.2
-      '@tiptap/pm': ^2.6.2
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
-
   '@tiptap/starter-kit@2.2.4':
     resolution: {integrity: sha512-Kbk7qUfIZg3+bNa3e/wBeDQt4jJB46uQgM+xy5NSY6H8NZP6gdmmap3aIrn9S/W/hGpxJl4RcXAeaT0CQji9XA==}
-
-  '@tiptap/starter-kit@2.6.2':
-    resolution: {integrity: sha512-jvJQI19GEwjL6047xOCzKCbaRNMM52uMex+887+TrFrpdXDaVGzOVfS0tGkunsiIcpzrozAA0wWE7O6XFeWcYg==}
 
   '@types/aria-query@5.0.4':
     resolution: {integrity: sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==}
@@ -4251,9 +3778,6 @@ packages:
 
   '@types/unist@3.0.2':
     resolution: {integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==}
-
-  '@types/use-sync-external-store@0.0.6':
-    resolution: {integrity: sha512-zFDAD+tlpf2r4asuHEj0XH6pY6i0g5NeAHPn+15wk3BV6JA69eERFXC1gyGThDkVa1zCyKr5jox1+2LbV/AMLg==}
 
   '@types/uuid@9.0.8':
     resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
@@ -7657,11 +7181,6 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
-  use-sync-external-store@1.2.2:
-    resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -9324,523 +8843,97 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@jamsr-ui/accordion@0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+  '@jamsr-ui/button@0.0.46(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
     dependencies:
-      '@jamsr-ui/avatar': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      '@jamsr-ui/progress': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      '@jamsr-ui/ripple': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      '@jamsr-ui/utils': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@19.0.0-rc-e4953922-20240919)
+    transitivePeerDependencies:
+      - framer-motion
+      - tailwindcss
+
+  '@jamsr-ui/button@0.0.46(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+    dependencies:
+      '@jamsr-ui/progress': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      '@jamsr-ui/ripple': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      '@jamsr-ui/utils': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+    transitivePeerDependencies:
+      - framer-motion
+      - tailwindcss
+
+  '@jamsr-ui/divider@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+    dependencies:
+      '@jamsr-ui/utils': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+    transitivePeerDependencies:
+      - framer-motion
+      - tailwindcss
+
+  '@jamsr-ui/hooks@0.0.32(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
+    dependencies:
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@19.0.0-rc-e4953922-20240919)
+
+  '@jamsr-ui/hooks@0.0.32(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
+    dependencies:
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+
+  '@jamsr-ui/progress@0.0.43(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+    dependencies:
+      '@jamsr-ui/utils': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      framer-motion: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@19.0.0-rc-e4953922-20240919)
+    transitivePeerDependencies:
+      - tailwindcss
+
+  '@jamsr-ui/progress@0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+    dependencies:
+      '@jamsr-ui/utils': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
       framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react: 19.0.0-rc-e4953922-20240919
       react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/alert@0.0.48(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+  '@jamsr-ui/ripple@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
     dependencies:
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/typography': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      '@jamsr-ui/hooks': 0.0.32(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+      '@jamsr-ui/utils': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@19.0.0-rc-e4953922-20240919)
+    transitivePeerDependencies:
+      - framer-motion
+      - tailwindcss
+
+  '@jamsr-ui/ripple@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+    dependencies:
+      '@jamsr-ui/hooks': 0.0.32(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+      '@jamsr-ui/utils': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
       react: 19.0.0-rc-e4953922-20240919
       react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
     transitivePeerDependencies:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/autocomplete@0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@floating-ui/react': 0.26.22(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/chip': 0.0.42(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/input': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/avatar@0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/badge@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/button@0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/progress': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/ripple': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/button@0.0.45(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/progress': 0.0.42(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/ripple': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/card@0.0.45(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/typography': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/checkbox@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/chip@0.0.42(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/confirmation@0.0.19(@types/react@18.3.3)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/dialog': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/divider': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-      zustand: 4.5.4(@types/react@18.3.3)(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - '@types/react'
-      - immer
-      - tailwindcss
-
-  '@jamsr-ui/core@0.0.18(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
-    dependencies:
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-
-  '@jamsr-ui/data-table@0.0.10(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/progress': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/repeater': 0.0.14(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/select': 0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/skeleton': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/table': 0.0.14(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/typography': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@tanstack/react-table': 8.20.1(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/dialog@0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@floating-ui/react': 0.26.22(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@floating-ui/react-dom': 2.1.1(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/divider@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/divider@0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/editor@0.0.32(@tiptap/pm@2.6.2)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react-dropzone@14.2.3(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/divider': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/file-upload': 0.0.56(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react-dropzone@14.2.3(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/input': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/menu': 0.0.46(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/popover': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/repeater': 0.0.14(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/select': 0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/switch': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/extension-character-count': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-color': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/extension-text-style@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2)))
-      '@tiptap/extension-font-family': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/extension-text-style@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2)))
-      '@tiptap/extension-highlight': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-image': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-link': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-placeholder': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-subscript': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-superscript': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-task-item': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-task-list': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-text-align': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-text-style': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-underline': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-youtube': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/react': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@tiptap/starter-kit': 2.6.2
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-      tiptap-extension-resize-image: 1.1.8(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/extension-image@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2)))(@tiptap/pm@2.6.2)
-    transitivePeerDependencies:
-      - '@tiptap/pm'
-      - framer-motion
-      - react-dropzone
-      - tailwindcss
-
-  '@jamsr-ui/file-upload@0.0.56(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react-dropzone@14.2.3(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/progress': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-      react-dropzone: 14.2.3(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/header@0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/divider': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/hooks@0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
-    dependencies:
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-
-  '@jamsr-ui/hooks@0.0.31(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
-    dependencies:
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-
-  '@jamsr-ui/input@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/link@0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/menu@0.0.46(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@floating-ui/react': 0.26.22(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/otp-input@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/popover@0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@floating-ui/react': 0.26.22(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/progress@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/progress@0.0.42(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/radio@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/react@0.0.113(@tiptap/pm@2.6.2)(@types/react@18.3.3)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react-dropzone@14.2.3(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/accordion': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/alert': 0.0.48(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/autocomplete': 0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/avatar': 0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/badge': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/card': 0.0.45(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/checkbox': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/chip': 0.0.42(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/confirmation': 0.0.19(@types/react@18.3.3)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/core': 0.0.18(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/data-table': 0.0.10(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/dialog': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/divider': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/editor': 0.0.32(@tiptap/pm@2.6.2)(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react-dropzone@14.2.3(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/file-upload': 0.0.56(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react-dropzone@14.2.3(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/header': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/input': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/link': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/menu': 0.0.46(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/otp-input': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/popover': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/progress': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/radio': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/repeater': 0.0.14(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/ripple': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/select': 0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/skeleton': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/switch': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/tab': 0.0.51(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/table': 0.0.14(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/textarea': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/toast': 0.0.8(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/tooltip': 0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/typography': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - '@tiptap/pm'
-      - '@types/react'
-      - csstype
-      - immer
-      - react-dropzone
-      - tailwindcss
-
-  '@jamsr-ui/repeater@0.0.14(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
-    dependencies:
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-
-  '@jamsr-ui/ripple@0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/ripple@0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/hooks': 0.0.31(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/select@0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@floating-ui/react': 0.26.22(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/chip': 0.0.42(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/popover': 0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/shared-icons@0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
-    dependencies:
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-
-  '@jamsr-ui/skeleton@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/switch@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/typography': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/tab@0.0.51(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/card': 0.0.45(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - tailwindcss
-
-  '@jamsr-ui/table@0.0.14(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/textarea@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/button': 0.0.41(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/hooks': 0.0.27(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/input': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      '@jamsr-ui/shared-icons': 0.0.35(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/toast@0.0.8(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
-    dependencies:
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-      react-hot-toast: 2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - csstype
-
-  '@jamsr-ui/tooltip@0.0.38(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@floating-ui/react': 0.26.22(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/typography@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
-    dependencies:
-      '@jamsr-ui/utils': 0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-    transitivePeerDependencies:
-      - framer-motion
-      - tailwindcss
-
-  '@jamsr-ui/utils@0.0.35(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+  '@jamsr-ui/utils@0.0.40(framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
     dependencies:
       clsx: 2.1.1
-      framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+      framer-motion: 12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
       react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+      react-dom: 18.3.1(react@19.0.0-rc-e4953922-20240919)
       tailwind-merge: 2.5.2
       tailwind-variants: 0.2.1(tailwindcss@3.4.9)
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/utils@0.0.39(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
+  '@jamsr-ui/utils@0.0.40(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919))(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(tailwindcss@3.4.9)':
     dependencies:
       clsx: 2.1.1
       framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
@@ -10154,11 +9247,11 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/blocks@8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))':
+  '@storybook/blocks@8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.10(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+      '@storybook/icons': 1.2.10(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)
       '@types/lodash': 4.17.7
       color-convert: 2.0.1
       dequal: 2.0.3
@@ -10166,14 +9259,14 @@ snapshots:
       markdown-to-jsx: 7.4.7(react@19.0.0-rc-e4953922-20240919)
       memoizerific: 1.11.3
       polished: 4.3.1
-      react-colorful: 5.6.1(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+      react-colorful: 5.6.1(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)
       storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
       telejson: 7.2.0
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
     optionalDependencies:
       react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+      react-dom: 18.3.1(react@18.3.1)
 
   '@storybook/builder-vite@8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))':
     dependencies:
@@ -10259,10 +9352,10 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/icons@1.2.10(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
+  '@storybook/icons@1.2.10(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)':
     dependencies:
       react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+      react-dom: 18.3.1(react@18.3.1)
 
   '@storybook/instrumenter@8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))':
     dependencies:
@@ -10285,23 +9378,29 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
 
+  '@storybook/react-dom-shim@8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))':
+    dependencies:
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@18.3.1)
+      storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
+
   '@storybook/react-dom-shim@8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))':
     dependencies:
       react: 19.0.0-rc-e4953922-20240919
       react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
       storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
 
-  '@storybook/react-vite@8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(rollup@4.20.0)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))':
+  '@storybook/react-vite@8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(rollup@4.20.0)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))':
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
       '@rollup/pluginutils': 5.1.0(rollup@4.20.0)
       '@storybook/builder-vite': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.15))
-      '@storybook/react': 8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)
+      '@storybook/react': 8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)
       find-up: 5.0.0
       magic-string: 0.30.11
       react: 19.0.0-rc-e4953922-20240919
       react-docgen: 7.0.3
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+      react-dom: 18.3.1(react@18.3.1)
       resolve: 1.22.8
       storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
       tsconfig-paths: 4.2.0
@@ -10312,6 +9411,35 @@ snapshots:
       - supports-color
       - typescript
       - vite-plugin-glimmerx
+
+  '@storybook/react@8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)':
+    dependencies:
+      '@storybook/components': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
+      '@storybook/global': 5.0.0
+      '@storybook/manager-api': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
+      '@storybook/preview-api': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
+      '@storybook/react-dom-shim': 8.2.9(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
+      '@storybook/theming': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
+      '@types/escodegen': 0.0.6
+      '@types/estree': 0.0.51
+      '@types/node': 18.19.44
+      acorn: 7.4.1
+      acorn-jsx: 5.3.2(acorn@7.4.1)
+      acorn-walk: 7.2.0
+      escodegen: 2.1.0
+      html-tags: 3.3.1
+      lodash: 4.17.21
+      prop-types: 15.8.1
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@18.3.1)
+      react-element-to-jsx-string: 15.0.0(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)
+      semver: 7.6.3
+      storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
+      ts-dedent: 2.2.0
+      type-fest: 2.19.0
+      util-deprecate: 1.0.2
+    optionalDependencies:
+      typescript: 5.5.4
 
   '@storybook/react@8.2.9(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)':
     dependencies:
@@ -10471,25 +9599,13 @@ snapshots:
     dependencies:
       '@tiptap/pm': 2.6.2
 
-  '@tiptap/core@2.6.2(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/pm': 2.6.2
-
   '@tiptap/extension-blockquote@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-blockquote@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-bold@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-bold@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-bubble-menu@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
@@ -10497,28 +9613,13 @@ snapshots:
       '@tiptap/pm': 2.6.2
       tippy.js: 6.3.7
 
-  '@tiptap/extension-bubble-menu@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-      tippy.js: 6.3.7
-
   '@tiptap/extension-bullet-list@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-bullet-list@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-character-count@2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
-  '@tiptap/extension-character-count@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
       '@tiptap/pm': 2.6.2
 
   '@tiptap/extension-code-block-lowlight@2.6.3(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/extension-code-block@2.6.3(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)(highlight.js@11.9.0)(lowlight@3.1.0)':
@@ -10529,11 +9630,6 @@ snapshots:
       highlight.js: 11.9.0
       lowlight: 3.1.0
 
-  '@tiptap/extension-code-block@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
   '@tiptap/extension-code-block@2.6.3(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
@@ -10543,36 +9639,18 @@ snapshots:
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-code@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-color@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/extension-text-style@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2)))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
       '@tiptap/extension-text-style': 2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))
 
-  '@tiptap/extension-color@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/extension-text-style@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2)))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/extension-text-style': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-
   '@tiptap/extension-document@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-document@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-dropcursor@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
-  '@tiptap/extension-dropcursor@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
       '@tiptap/pm': 2.6.2
 
   '@tiptap/extension-floating-menu@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
@@ -10581,64 +9659,31 @@ snapshots:
       '@tiptap/pm': 2.6.2
       tippy.js: 6.3.7
 
-  '@tiptap/extension-floating-menu@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-      tippy.js: 6.3.7
-
   '@tiptap/extension-font-family@2.5.3(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/extension-text-style@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2)))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
       '@tiptap/extension-text-style': 2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))
-
-  '@tiptap/extension-font-family@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/extension-text-style@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2)))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/extension-text-style': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
 
   '@tiptap/extension-gapcursor@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
       '@tiptap/pm': 2.6.2
 
-  '@tiptap/extension-gapcursor@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
   '@tiptap/extension-hard-break@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-hard-break@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-heading@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-heading@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-highlight@2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-highlight@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-history@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
-  '@tiptap/extension-history@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
       '@tiptap/pm': 2.6.2
 
   '@tiptap/extension-horizontal-rule@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
@@ -10646,26 +9691,13 @@ snapshots:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
       '@tiptap/pm': 2.6.2
 
-  '@tiptap/extension-horizontal-rule@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
   '@tiptap/extension-image@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-image@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-italic@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-italic@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-link@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
@@ -10673,127 +9705,63 @@ snapshots:
       '@tiptap/pm': 2.6.2
       linkifyjs: 4.1.3
 
-  '@tiptap/extension-link@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-      linkifyjs: 4.1.3
-
   '@tiptap/extension-list-item@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-list-item@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-ordered-list@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-ordered-list@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-paragraph@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-paragraph@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-placeholder@2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
       '@tiptap/pm': 2.6.2
 
-  '@tiptap/extension-placeholder@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
   '@tiptap/extension-strike@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-strike@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-subscript@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-subscript@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-superscript@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-superscript@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-task-item@2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
       '@tiptap/pm': 2.6.2
 
-  '@tiptap/extension-task-item@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-
   '@tiptap/extension-task-list@2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-task-list@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-text-align@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-text-align@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-text-style@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-text-style@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/extension-text@2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-text@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-underline@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
 
-  '@tiptap/extension-underline@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-
   '@tiptap/extension-youtube@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
-
-  '@tiptap/extension-youtube@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
 
   '@tiptap/pm@2.6.2':
     dependencies:
@@ -10825,17 +9793,6 @@ snapshots:
       react: 19.0.0-rc-e4953922-20240919
       react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
 
-  '@tiptap/react@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/extension-bubble-menu': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-floating-menu': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/pm': 2.6.2
-      '@types/use-sync-external-store': 0.0.6
-      react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
-      use-sync-external-store: 1.2.2(react@19.0.0-rc-e4953922-20240919)
-
   '@tiptap/starter-kit@2.2.4(@tiptap/pm@2.6.2)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.6.2)
@@ -10859,29 +9816,6 @@ snapshots:
       '@tiptap/extension-text': 2.6.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))
     transitivePeerDependencies:
       - '@tiptap/pm'
-
-  '@tiptap/starter-kit@2.6.2':
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/extension-blockquote': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-bold': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-bullet-list': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-code': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-code-block': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-document': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-dropcursor': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-gapcursor': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-hard-break': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-heading': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-history': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-horizontal-rule': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/pm@2.6.2)
-      '@tiptap/extension-italic': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-list-item': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-ordered-list': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-paragraph': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-strike': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/extension-text': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/pm': 2.6.2
 
   '@types/aria-query@5.0.4': {}
 
@@ -11018,8 +9952,6 @@ snapshots:
       '@types/send': 0.17.4
 
   '@types/unist@3.0.2': {}
-
-  '@types/use-sync-external-store@0.0.6': {}
 
   '@types/uuid@9.0.8': {}
 
@@ -12619,6 +11551,13 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
+  framer-motion@12.0.0-alpha.0(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919):
+    dependencies:
+      tslib: 2.6.3
+    optionalDependencies:
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@19.0.0-rc-e4953922-20240919)
+
   framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919):
     dependencies:
       tslib: 2.6.3
@@ -13933,10 +12872,10 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  react-colorful@5.6.1(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919):
+  react-colorful@5.6.1(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919):
     dependencies:
       react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+      react-dom: 18.3.1(react@18.3.1)
 
   react-confetti@6.1.0(react@19.0.0-rc-e4953922-20240919):
     dependencies:
@@ -13968,6 +12907,12 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
 
+  react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919):
+    dependencies:
+      loose-envify: 1.4.0
+      react: 19.0.0-rc-e4953922-20240919
+      scheduler: 0.23.2
+
   react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919):
     dependencies:
       react: 19.0.0-rc-e4953922-20240919
@@ -13980,6 +12925,14 @@ snapshots:
       prop-types: 15.8.1
       react: 19.0.0-rc-e4953922-20240919
 
+  react-element-to-jsx-string@15.0.0(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919):
+    dependencies:
+      '@base2/pretty-print-object': 1.0.1
+      is-plain-object: 5.0.0
+      react: 19.0.0-rc-e4953922-20240919
+      react-dom: 18.3.1(react@18.3.1)
+      react-is: 18.1.0
+
   react-element-to-jsx-string@15.0.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919):
     dependencies:
       '@base2/pretty-print-object': 1.0.1
@@ -13988,11 +12941,11 @@ snapshots:
       react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
       react-is: 18.1.0
 
-  react-hot-toast@2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919):
+  react-hot-toast@2.4.1(csstype@3.1.3)(react-dom@18.3.1(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919):
     dependencies:
       goober: 2.1.14(csstype@3.1.3)
       react: 19.0.0-rc-e4953922-20240919
-      react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
+      react-dom: 18.3.1(react@19.0.0-rc-e4953922-20240919)
     transitivePeerDependencies:
       - csstype
 
@@ -14356,12 +13309,12 @@ snapshots:
     dependencies:
       internal-slot: 1.0.7
 
-  storybook-dark-mode@4.0.2(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))):
+  storybook-dark-mode@4.0.2(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))):
     dependencies:
       '@storybook/components': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       '@storybook/core-events': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.10(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)
+      '@storybook/icons': 1.2.10(react-dom@18.3.1(react@18.3.1))(react@19.0.0-rc-e4953922-20240919)
       '@storybook/manager-api': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       '@storybook/theming': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       fast-deep-equal: 3.1.3
@@ -14624,12 +13577,6 @@ snapshots:
       '@tiptap/extension-image': 2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.6.2))
       '@tiptap/pm': 2.6.2
 
-  tiptap-extension-resize-image@1.1.8(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))(@tiptap/extension-image@2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2)))(@tiptap/pm@2.6.2):
-    dependencies:
-      '@tiptap/core': 2.6.2(@tiptap/pm@2.6.2)
-      '@tiptap/extension-image': 2.6.2(@tiptap/core@2.6.2(@tiptap/pm@2.6.2))
-      '@tiptap/pm': 2.6.2
-
   tmp@0.0.33:
     dependencies:
       os-tmpdir: 1.0.2
@@ -14884,10 +13831,6 @@ snapshots:
       requires-port: 1.0.0
 
   use-sync-external-store@1.2.0(react@19.0.0-rc-e4953922-20240919):
-    dependencies:
-      react: 19.0.0-rc-e4953922-20240919
-
-  use-sync-external-store@1.2.2(react@19.0.0-rc-e4953922-20240919):
     dependencies:
       react: 19.0.0-rc-e4953922-20240919
 

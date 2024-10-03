@@ -1,3 +1,5 @@
+"use client";
+
 export * from "@jamsr-ui/accordion";
 export * from "@jamsr-ui/alert";
 export * from "@jamsr-ui/autocomplete";
@@ -35,4 +37,4 @@ export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
 
 // Provider
-export { JamsrUIProvider } from "@jamsr-ui/core";
+export { UIProvider as JamsrUIProvider } from "@jamsr-ui/core";

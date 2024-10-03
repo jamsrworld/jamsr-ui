@@ -16,7 +16,7 @@ const FramerMotionProvider = ({ children }: Props) => {
   );
 };
 
-export const JamsrUIProvider = (props: Props) => {
+export const UIProvider = (props: Props) => {
   const { children } = props;
   return <FramerMotionProvider>{children}</FramerMotionProvider>;
 };

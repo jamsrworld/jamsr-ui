@@ -14,8 +14,7 @@
   "dependencies": {
     "@jamsr-ui/react": "workspace:^",
     "framer-motion": "12.0.0-alpha.0",
-    "react": "19.0.0-rc-e4953922-20240919",
-    "react-dom": "19.0.0-rc-e4953922-20240919"
+    "react": "19.0.0-rc-e4953922-20240919"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",

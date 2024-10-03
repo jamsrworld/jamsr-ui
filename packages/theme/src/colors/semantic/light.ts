@@ -3,14 +3,13 @@ import { commonColors as common } from "../common";
 
 export const themeColorsLight = {
   background: {
-    DEFAULT: "#F2F2F7",
-    secondary: "#FFFFFF",
-    tertiary: "#E9E9EA"
+    DEFAULT: "#ffffff",
+    tertiary: "#f4f5f7",
+    secondary: "#fafafa",
   },
   foreground: {
-    ...common.zinc,
-    DEFAULT: "#000000",
-    link: "#007AFF",
+    DEFAULT: "#1d1d1e",
+    link: "#0066cc",
     secondary: "#8A8A8E",
     tertiary: "#C4C4C6",
   },

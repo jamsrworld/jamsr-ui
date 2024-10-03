@@ -1,3 +1,4 @@
+import { VariantPage } from "@/components/variant-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,6 +6,6 @@ export const metadata: Metadata = {
 };
 
 const Table = () => {
-  return <div>Table</div>;
+  return <VariantPage heading="Table">Table</VariantPage>;
 };
 export default Table;

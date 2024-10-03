@@ -1,10 +1,23 @@
+import { VariantPage } from "@/components/variant-page";
+import { VariantWrapper } from "@/components/variant-wrapper";
 import { Metadata } from "next";
+import { BadgeColors } from "./variants/colors";
+import { BadgeDefault } from "./variants/default";
 
 export const metadata: Metadata = {
   title: "Badge",
 };
 
 const Badge = () => {
-  return <div>Badge</div>;
+  return (
+    <VariantPage heading="Badge">
+      <VariantWrapper heading="Default">
+        <BadgeDefault />
+      </VariantWrapper>
+      <VariantWrapper heading="Colors">
+        <BadgeColors />
+      </VariantWrapper>
+    </VariantPage>
+  );
 };
 export default Badge;

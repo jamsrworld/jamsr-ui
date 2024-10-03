@@ -1,3 +1,4 @@
+import { VariantPage } from "@/components/variant-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,6 +6,6 @@ export const metadata: Metadata = {
 };
 
 const Tooltip = () => {
-  return <div>Tooltip</div>;
+  return <VariantPage heading="Tooltip">Tooltip</VariantPage>;
 };
 export default Tooltip;

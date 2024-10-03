@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Alert",
 };
 
-const page = () => {
+const Alert = () => {
   return (
     <VariantPage heading="Alert">
       <VariantWrapper heading="Default">
@@ -36,4 +36,4 @@ const page = () => {
     </VariantPage>
   );
 };
-export default page;
+export default Alert;

@@ -98,7 +98,6 @@ export const Sizes: Story = {
 export const Radius: Story = {
   render: () => {
     const radiusList = ["full", "lg", "md", "sm", "none"] as const;
-
     return (
       <div className="flex flex-wrap gap-4">
         {radiusList.map((radius) => (
@@ -146,7 +145,6 @@ export const Colors: Story = {
 export const Variants: Story = {
   render: () => {
     const variants = ["solid", "underlined", "bordered", "light"] as const;
-
     return (
       <div className="flex flex-wrap gap-4">
         {variants.map((variant) => (

@@ -1,3 +1,4 @@
+import { VariantPage } from "@/components/variant-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,6 +6,6 @@ export const metadata: Metadata = {
 };
 
 const Textarea = () => {
-  return <div>Textarea</div>;
+  return <VariantPage heading="Textarea">Textarea</VariantPage>;
 };
 export default Textarea;

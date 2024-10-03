@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "File-upload",
 };
 
-const File-upload = () => {
+const FileUpload = () => {
   return <div>File-upload</div>;
 };
-export default File-upload;
+export default FileUpload;

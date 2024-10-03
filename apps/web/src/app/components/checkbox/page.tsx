@@ -1,10 +1,23 @@
+import { VariantPage } from "@/components/variant-page";
+import { VariantWrapper } from "@/components/variant-wrapper";
 import { Metadata } from "next";
+import { CheckboxControlled } from "./variants/controlled";
+import { CheckboxDefault } from "./variants/default";
 
 export const metadata: Metadata = {
   title: "Checkbox",
 };
 
 const Checkbox = () => {
-  return <div>Checkbox</div>;
+  return (
+    <VariantPage heading="Checkbox">
+      <VariantWrapper heading="Default">
+        <CheckboxDefault />
+      </VariantWrapper>
+      <VariantWrapper heading="Controlled">
+        <CheckboxControlled />
+      </VariantWrapper>
+    </VariantPage>
+  );
 };
 export default Checkbox;

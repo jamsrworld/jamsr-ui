@@ -1,3 +1,4 @@
+import { VariantPage } from "@/components/variant-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,6 +6,6 @@ export const metadata: Metadata = {
 };
 
 const Typography = () => {
-  return <div>Typography</div>;
+  return <VariantPage heading="Typography">Typography</VariantPage>;
 };
 export default Typography;

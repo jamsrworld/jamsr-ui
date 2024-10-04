@@ -14,10 +14,10 @@ export const MenuDefault = () => {
         <MenuItem startContent={<Info className="size-5" />}>Info</MenuItem>
         <MenuItem
           startContent={
-            <SearchIcon className="text-foreground-secondary size-5" />
+            <SearchIcon className="size-5 text-foreground-secondary" />
           }
           endContent={
-            <div className="bg-background text-foreground-secondary rounded p-0.5 text-xs">
+            <div className="rounded bg-background p-0.5 text-xs text-foreground-secondary">
               Ctrl+K
             </div>
           }

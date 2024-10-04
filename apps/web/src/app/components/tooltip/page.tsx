@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { TooltipDefault } from "./variants/default";
 import { TooltipInteractive } from "./variants/interactive";
 import { TooltipOffset } from "./variants/offset";

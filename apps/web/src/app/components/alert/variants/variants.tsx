@@ -1,4 +1,4 @@
-import { AlertProps } from "@jamsr-ui/react";
+import { type AlertProps } from "@jamsr-ui/react";
 import { AlertSeverity } from "./severity";
 
 export const AlertVariants = () => {
@@ -7,10 +7,7 @@ export const AlertVariants = () => {
   return (
     <div className="grid gap-4">
       {variants.map((variant) => (
-        <AlertSeverity
-          key={variant}
-          variant={variant}
-        />
+        <AlertSeverity key={variant} variant={variant} />
       ))}
     </div>
   );

@@ -1,4 +1,5 @@
 "use client";
+
 import { DataTable } from "@jamsr-ui/react";
 import { COLUMNS, USERS } from "./columns";
 

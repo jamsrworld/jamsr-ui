@@ -1,4 +1,4 @@
-import { Textarea, Popover } from "@jamsr-ui/react";
+import { Popover, Textarea } from "@jamsr-ui/react";
 import { Info } from "@jamsr-ui/shared-icons";
 
 export const TextareaLabelHelper = () => {
@@ -8,7 +8,7 @@ export const TextareaLabelHelper = () => {
         label="Password"
         labelHelperContent={
           <Popover
-            trigger={<Info className="text-foreground-secondary size-4" />}
+            trigger={<Info className="size-4 text-foreground-secondary" />}
           >
             Password must be at least 8 characters
           </Popover>
@@ -16,7 +16,9 @@ export const TextareaLabelHelper = () => {
       />
       <Textarea
         label="Password"
-        labelHelperContent={<a className="ml-auto text-xs">Forgot Password?</a>}
+        labelHelperContent={
+          <div className="ml-auto text-xs">Forgot Password?</div>
+        }
       />
     </div>
   );

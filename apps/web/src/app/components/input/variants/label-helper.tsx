@@ -8,7 +8,7 @@ export const InputLabelHelper = () => {
         label="Password"
         labelHelperContent={
           <Popover
-            trigger={<Info className="text-foreground-secondary size-4" />}
+            trigger={<Info className="size-4 text-foreground-secondary" />}
           >
             Password must be at least 8 characters
           </Popover>
@@ -16,7 +16,9 @@ export const InputLabelHelper = () => {
       />
       <Input
         label="Password"
-        labelHelperContent={<a className="ml-auto text-xs">Forgot Password?</a>}
+        labelHelperContent={
+          <div className="ml-auto text-xs">Forgot Password?</div>
+        }
       />
     </div>
   );

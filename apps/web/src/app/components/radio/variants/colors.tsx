@@ -1,4 +1,4 @@
-import { Radio, RadioGroup, RadioProps } from "@jamsr-ui/react";
+import { Radio, RadioGroup, type RadioProps } from "@jamsr-ui/react";
 
 export const RadioColors = () => {
   const colors: RadioProps["color"][] = [
@@ -10,10 +10,7 @@ export const RadioColors = () => {
     "warning",
   ];
   return (
-    <RadioGroup
-      label="Colors"
-      name="color"
-    >
+    <RadioGroup label="Colors" name="color">
       {colors.map((color) => (
         <Radio
           key={color}

@@ -15,10 +15,7 @@ export const SelectCustomRenderMulti = () => {
             <div className="flex flex-wrap gap-2">
               {selectedUsers.map((item) => {
                 return (
-                  <Chip
-                    key={item.id}
-                    className="flex items-center gap-2"
-                  >
+                  <Chip key={item.id} className="flex items-center gap-2">
                     <Avatar
                       alt={item.name}
                       className="shrink-0"
@@ -27,7 +24,7 @@ export const SelectCustomRenderMulti = () => {
                     />
                     <div className="flex flex-col">
                       <span className="text-left text-sm">{item.name}</span>
-                      <span className="text-default-400 text-xs">
+                      <span className="text-xs text-default-400">
                         {item.email}
                       </span>
                     </div>
@@ -40,11 +37,7 @@ export const SelectCustomRenderMulti = () => {
       >
         {users.map((user) => {
           return (
-            <SelectItem
-              key={user.id}
-              value={user.email}
-              label={user.name}
-            >
+            <SelectItem key={user.id} value={user.email} label={user.name}>
               <div className="flex items-center gap-2">
                 <Avatar
                   alt={user.name}
@@ -54,7 +47,7 @@ export const SelectCustomRenderMulti = () => {
                 />
                 <div className="flex flex-col">
                   <span className="text-left text-sm">{user.name}</span>
-                  <span className="text-default-400 text-xs">{user.email}</span>
+                  <span className="text-xs text-default-400">{user.email}</span>
                 </div>
               </div>
             </SelectItem>

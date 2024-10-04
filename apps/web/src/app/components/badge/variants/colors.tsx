@@ -1,4 +1,4 @@
-import { Badge, BadgeProps } from "@jamsr-ui/react";
+import { Badge, type BadgeProps } from "@jamsr-ui/react";
 
 export const BadgeColors = () => {
   const colors: BadgeProps["color"][] = [
@@ -12,10 +12,7 @@ export const BadgeColors = () => {
   return (
     <div className="flex gap-4">
       {colors.map((color) => (
-        <Badge
-          color={color}
-          key={color}
-        >
+        <Badge color={color} key={color}>
           {color}
         </Badge>
       ))}

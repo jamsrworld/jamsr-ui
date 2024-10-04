@@ -5,5 +5,9 @@ type Props = {
 
 export const VariantPage = (props: Props) => {
   const { children, heading } = props;
-  return <main className="flex flex-col gap-12">{children}</main>;
+  return (
+    <main data-heading={heading} className="flex flex-col gap-12">
+      {children}
+    </main>
+  );
 };

@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { TabAs } from "./variants/as";
 import { TabColors } from "./variants/colors";
 import { TabDefault } from "./variants/default";

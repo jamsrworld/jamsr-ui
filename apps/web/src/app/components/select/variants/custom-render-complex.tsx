@@ -223,7 +223,7 @@ export const SelectCustomRenderComplex = () => {
               />
               <div className="flex flex-col">
                 <span className="text-left text-sm">{selectedUser.name}</span>
-                <span className="text-default-400 text-xs">
+                <span className="text-xs text-default-400">
                   {selectedUser.email}
                 </span>
               </div>
@@ -233,10 +233,7 @@ export const SelectCustomRenderComplex = () => {
       >
         {users.map((user) => {
           return (
-            <SelectItem
-              key={user.id}
-              value={user.email}
-            >
+            <SelectItem key={user.id} value={user.email}>
               <div className="flex items-center gap-2">
                 <Avatar
                   alt={user.name}
@@ -246,7 +243,7 @@ export const SelectCustomRenderComplex = () => {
                 />
                 <div className="flex flex-col">
                   <span className="text-left text-sm">{user.name}</span>
-                  <span className="text-default-400 text-xs">{user.email}</span>
+                  <span className="text-xs text-default-400">{user.email}</span>
                 </div>
               </div>
             </SelectItem>

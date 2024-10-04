@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { SelectControlled } from "./variants/controlled";
 import { SelectCustomRenderComplex } from "./variants/custom-render-complex";
 import { SelectCustomRenderMulti } from "./variants/custom-render-multi";

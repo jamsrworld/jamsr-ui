@@ -431,13 +431,11 @@ export const AutocompleteChooseCountry = (
 ) => {
   return (
     <div className="min-h-[600px]">
-      <Autocomplete
-        label="Country"
-        {...props}
-      >
+      <Autocomplete label="Country" {...props}>
         {countries.map((item) => {
           const content = (
             <div className="flex items-center gap-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 loading="lazy"
                 width="20"

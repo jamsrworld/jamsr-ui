@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { SkeletonDefault } from "./variants/default";
 
 export const metadata: Metadata = {

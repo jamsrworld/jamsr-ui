@@ -12,17 +12,25 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "allowImportingTsExtensions": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "allowImportingTsExtensions": true,
     "paths": {
-      "@/*": ["./src/*", "../../packages/components/editor/src/*"]
+      "@/*": ["./src/*"]
     },
     "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "../../.vscode/codegen-component-code.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "*.config.mjs",
+    "*.config.cjs",
+    ".eslintrc.cjs"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { CardDefault } from "./variants/default";
 import { CardStartEndContent } from "./variants/start-end-content";
 

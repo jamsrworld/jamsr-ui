@@ -9,7 +9,7 @@ type Props = {
 export const VariantWrapper = (props: Props) => {
   const { children, heading, description } = props;
   return (
-    <section className="bg-background w-full rounded-2xl p-8">
+    <section className="w-full rounded-2xl bg-background p-8">
       <div className="mb-4 flex flex-col gap-1">
         <h1 className="text-xl font-medium">{heading}</h1>
         {description && (

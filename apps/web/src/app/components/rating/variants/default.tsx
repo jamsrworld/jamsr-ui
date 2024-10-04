@@ -1,10 +1,5 @@
-import { Rating, RatingProps } from "@jamsr-ui/react";
+import { Rating, type RatingProps } from "@jamsr-ui/react";
 
 export const RatingDefault = (props: RatingProps) => {
-  return (
-    <Rating
-      label="Rate your feedback!"
-      {...props}
-    />
-  );
+  return <Rating label="Rate your feedback!" {...props} />;
 };

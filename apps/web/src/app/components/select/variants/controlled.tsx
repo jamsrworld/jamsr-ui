@@ -1,6 +1,6 @@
 "use client";
 
-import { SelectionSet } from "@jamsr-ui/react";
+import { type SelectionSet } from "@jamsr-ui/react";
 import { useState } from "react";
 import { SelectDefault } from "./default";
 

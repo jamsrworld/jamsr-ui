@@ -1,4 +1,4 @@
-import { Alert, AlertProps } from "@jamsr-ui/react";
+import { Alert, type AlertProps } from "@jamsr-ui/react";
 
 export const AlertSeverity = (props: AlertProps) => {
   const severity: AlertProps["severity"][] = [

@@ -1,4 +1,4 @@
-import { Button, Tooltip, TooltipProps } from "@jamsr-ui/react";
+import { Button, Tooltip, type TooltipProps } from "@jamsr-ui/react";
 import { Info } from "@jamsr-ui/shared-icons";
 
 type Props = TooltipProps;

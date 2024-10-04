@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { RatingControlled } from "./variants/controlled";
 import { RatingDefault } from "./variants/default";
 import { RatingDefaultValue } from "./variants/default-value";

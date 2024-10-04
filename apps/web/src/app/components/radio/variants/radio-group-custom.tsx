@@ -3,8 +3,8 @@
 import {
   Radio,
   RadioGroup,
-  RadioGroupProps,
-  RadioProps,
+  type RadioGroupProps,
+  type RadioProps,
 } from "@jamsr-ui/react";
 import { cn } from "@jamsr-ui/utils";
 import { useState } from "react";

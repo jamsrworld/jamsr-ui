@@ -1,6 +1,6 @@
 "use client";
 
-import { Select, SelectionSet, SelectItem } from "@jamsr-ui/react";
+import { Select, type SelectionSet, SelectItem } from "@jamsr-ui/react";
 import { useState } from "react";
 
 export const SelectMultipleControlled = () => {
@@ -21,10 +21,7 @@ export const SelectMultipleControlled = () => {
           .map((_, idx) => {
             const value = `option${idx}`;
             return (
-              <SelectItem
-                key={value}
-                value={value}
-              >
+              <SelectItem key={value} value={value}>
                 {`Option ${idx}`}
               </SelectItem>
             );

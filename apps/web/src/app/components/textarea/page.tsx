@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { TextareaControlled } from "./variants/controlled";
 import { TextareaDefault } from "./variants/default";
 import { TextareaDisabled } from "./variants/disabled";

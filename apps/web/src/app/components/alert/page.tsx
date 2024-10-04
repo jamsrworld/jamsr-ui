@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { AlertCustomIcon } from "./variants/custom-icon";
 import { AlertDefault } from "./variants/default";
 import { AlertSeverity } from "./variants/severity";

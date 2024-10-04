@@ -1,13 +1,9 @@
-import { Select, SelectItem, SelectProps } from "@jamsr-ui/react";
+import { Select, SelectItem, type SelectProps } from "@jamsr-ui/react";
 
 export const SelectDefault = (props: Partial<SelectProps>) => {
   return (
     <div className="min-h-[200px]">
-      <Select
-        className="max-w-sm"
-        label="Select Label"
-        {...props}
-      >
+      <Select className="max-w-sm" label="Select Label" {...props}>
         <SelectItem value="apple">Apple</SelectItem>
         <SelectItem value="blueberry">Blueberry</SelectItem>
         <SelectItem value="watermelon">Watermelon</SelectItem>

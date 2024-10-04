@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from "@jamsr-ui/react";
+import { Button, type ButtonProps } from "@jamsr-ui/react";
 
 export const ButtonVariants = () => {
   const variants: ButtonProps["variant"][] = [
@@ -22,10 +22,7 @@ export const ButtonVariants = () => {
     <div className="flex flex-col gap-4">
       {variants.map((variant) => {
         return (
-          <div
-            key={variant}
-            className="flex gap-4"
-          >
+          <div key={variant} className="flex gap-4">
             {colors.map((color) => (
               <Button
                 key={`${variant}-${color}`}

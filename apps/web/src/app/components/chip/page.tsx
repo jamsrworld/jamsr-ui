@@ -2,6 +2,7 @@ import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
 import { ChipDefault } from "./variants/default";
+import { ChipOnDelete } from "./variants/on-delete";
 
 export const metadata: Metadata = {
   title: "Chip",
@@ -12,6 +13,9 @@ const Chip = () => {
     <VariantPage heading="Chip">
       <VariantWrapper heading="Default">
         <ChipDefault />
+      </VariantWrapper>
+      <VariantWrapper heading="On Delete">
+        <ChipOnDelete />
       </VariantWrapper>
     </VariantPage>
   );

@@ -6,15 +6,14 @@ import React from "react";
 
 export type ChipProps = {
   children: React.ReactNode;
-  onClose?: () => void;
+  onDelete?: () => void;
 };
 
 export const Chip = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, ChipProps>,
 ) => {
-  const { as, children, onClose, className, ...restProps } = props;
+  const { as, children, onDelete, className, ...restProps } = props;
   const Comp = as ?? "div";
-
   return (
     <Comp
       data-component="chip"
@@ -25,12 +24,12 @@ export const Chip = <T extends React.ElementType = "div">(
       {...restProps}
     >
       {children}
-      {onClose && (
+      {onDelete && (
         <Button
           isIconOnly
           size="xs"
           rounded
-          onClick={onClose}
+          onClick={onDelete}
           className="size-4 shrink-0"
         >
           <Close className="!size-3" />

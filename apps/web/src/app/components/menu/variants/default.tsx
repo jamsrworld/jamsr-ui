@@ -1,7 +1,7 @@
-import { Button, Menu, MenuItem } from "@jamsr-ui/react";
+import { Button, Menu, MenuItem, type MenuProps } from "@jamsr-ui/react";
 import { ChevronUp, Info, SearchIcon } from "@jamsr-ui/shared-icons";
 
-export const MenuDefault = () => {
+export const MenuDefault = (props: Partial<MenuProps>) => {
   return (
     <div className="flex justify-center">
       <Menu
@@ -9,6 +9,7 @@ export const MenuDefault = () => {
           popover: "min-w-[300px]",
         }}
         trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}
+        {...props}
       >
         <MenuItem>Undo</MenuItem>
         <MenuItem startContent={<Info className="size-5" />}>Info</MenuItem>

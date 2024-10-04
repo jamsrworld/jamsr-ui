@@ -21,7 +21,7 @@ import React, {
   useCallback,
   useMemo,
   useRef,
-  useState
+  useState,
 } from "react";
 import type { AutocompleteItemProps } from "./autocomplete-item";
 import type { AutocompleteSlots } from "./style";
@@ -325,7 +325,9 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       inputWrapperRef: setReference,
       classNames: {
         inputWrapper: "select-none",
-        innerWrapper: isMultiple ? "" : "gap-2 flex-wrap h-auto",
+        innerWrapper: cn("h-auto flex-wrap gap-1", {
+          "px-1": isMultiple,
+        }),
       },
       slotProps: {
         inputWrapper: {

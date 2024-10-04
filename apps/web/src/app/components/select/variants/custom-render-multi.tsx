@@ -7,12 +7,12 @@ export const SelectCustomRenderMulti = () => {
   return (
     <div className="min-h-[300px]">
       <Select
-        className="w-full min-w-[300px] max-w-md"
+        className="w-full min-w-[300px]"
         isMultiple
         renderValue={(values) => {
           const selectedUsers = users.filter((u) => values.includes(u.email));
           return (
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1">
               {selectedUsers.map((item) => {
                 return (
                   <Chip key={item.id} className="flex items-center gap-2">

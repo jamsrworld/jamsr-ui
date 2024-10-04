@@ -8,12 +8,13 @@ export const inputVariants = tv({
     mainWrapper: "flex gap-1",
     inputWrapper:
       "w-full focus-within:border-primary focus-within:ring-primary",
-    innerWrapper: "flex items-center px-3 py-2",
+    innerWrapper: "flex items-center",
     input:
-      "block grow bg-transparent text-sm placeholder:text-sm placeholder:text-foreground-500 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+      "block h-full grow bg-transparent px-3 py-2 text-sm placeholder:text-sm placeholder:text-foreground-500 read-only:cursor-not-allowed  focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
     helper: "text-xs text-foreground-600",
-    startContent: "pr-2 text-foreground-tertiary empty:hidden",
-    endContent: "pl-2 text-foreground-tertiary",
+    startContent:
+      "flex h-full items-center pl-2 text-foreground-tertiary empty:hidden",
+    endContent: "flex h-full items-center pr-2 text-foreground-tertiary",
     notation: "",
   },
   variants: {
@@ -39,16 +40,13 @@ export const inputVariants = tv({
       false: {},
       sm: {
         inputWrapper: "rounded-xl",
-        innerWrapper: "h-8 min-h-8 px-2.5",
-        input: "text-sm placeholder:text-sm",
+        input: "h-8 min-h-8 text-sm placeholder:text-sm",
       },
       md: {
-        innerWrapper: "h-10 min-h-10",
-        input: "text-sm placeholder:text-sm",
+        input: "h-10 min-h-10 text-sm placeholder:text-sm",
       },
       lg: {
-        innerWrapper: "h-12 min-h-12",
-        input: "text-base placeholder:text-base",
+        input: "h-12 min-h-12 text-base placeholder:text-base",
       },
     },
     isInvalid: {

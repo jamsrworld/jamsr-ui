@@ -23,7 +23,7 @@
     "postpack": "clean-package restore"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-e4953922-20240919"
+    "react": "19.0.0-rc-0751fac7-20241002"
   },
   "clean-package": "../../../clean-package.config.json"
 }

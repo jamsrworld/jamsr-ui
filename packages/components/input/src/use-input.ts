@@ -83,7 +83,7 @@ export const useInput = (props: UseInputProps) => {
   const InputComponent = "input";
   const inputDOMRef = useDOMRef(ref);
 
-  const slots = inputVariants({
+  const styles = inputVariants({
     variant,
     size,
     isInvalid,
@@ -145,14 +145,14 @@ export const useInput = (props: UseInputProps) => {
     (props) => {
       return {
         "data-slot": "base",
-        className: slots.base({
+        className: styles.base({
           class: cn(classNames?.base, props?.className),
         }),
         ref: baseRef,
         ...props,
       };
     },
-    [slots, classNames?.base, baseRef],
+    [styles, classNames?.base, baseRef],
   );
 
   const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -160,12 +160,12 @@ export const useInput = (props: UseInputProps) => {
       return {
         ...props,
         "data-slot": "label-wrapper",
-        className: slots.labelWrapper({
+        className: styles.labelWrapper({
           class: cn(classNames?.labelWrapper, props?.className),
         }),
       };
     },
-    [slots, classNames?.labelWrapper],
+    [styles, classNames?.labelWrapper],
   );
 
   const getLabelProps: PropGetter<ComponentProps<"label">> = useCallback(
@@ -173,25 +173,25 @@ export const useInput = (props: UseInputProps) => {
       return {
         ...props,
         "data-slot": "label",
-        className: slots.label({
+        className: styles.label({
           class: cn(classNames?.label, props?.className),
         }),
       };
     },
-    [slots, classNames?.label],
+    [styles, classNames?.label],
   );
 
   const getInnerWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
         "data-slot": "inner-wrapper",
-        className: slots.innerWrapper({
+        className: styles.innerWrapper({
           class: cn(classNames?.innerWrapper, props?.className),
         }),
         ...props,
       };
     },
-    [slots, classNames?.innerWrapper],
+    [styles, classNames?.innerWrapper],
   );
 
   const getHelperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -199,12 +199,12 @@ export const useInput = (props: UseInputProps) => {
       return {
         ...props,
         "data-slot": "helper",
-        className: slots.helper({
+        className: styles.helper({
           class: cn(classNames?.helper, props?.className),
         }),
       };
     },
-    [slots, classNames?.helper],
+    [styles, classNames?.helper],
   );
 
   const getMainWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -212,12 +212,12 @@ export const useInput = (props: UseInputProps) => {
       return {
         ...props,
         "data-slot": "main-wrapper",
-        className: slots.mainWrapper({
+        className: styles.mainWrapper({
           class: cn(classNames?.mainWrapper, props?.className),
         }),
       };
     },
-    [slots, classNames?.mainWrapper],
+    [styles, classNames?.mainWrapper],
   );
 
   const getInputWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -227,7 +227,7 @@ export const useInput = (props: UseInputProps) => {
         ...props,
         "data-slot": "input-wrapper",
         ...mergeProps(slotProps.inputWrapper ?? {}, {
-          className: slots.inputWrapper({
+          className: styles.inputWrapper({
             class: cn(classNames?.inputWrapper, props?.className),
           }),
           onClick: handleFocusInput,
@@ -236,7 +236,7 @@ export const useInput = (props: UseInputProps) => {
     },
     [
       inputWrapperRef,
-      slots,
+      styles,
       classNames?.inputWrapper,
       handleFocusInput,
       slotProps.inputWrapper,
@@ -248,12 +248,12 @@ export const useInput = (props: UseInputProps) => {
       return {
         ...props,
         "data-slot": "start-content",
-        className: slots.startContent({
+        className: styles.startContent({
           class: cn(classNames?.startContent, props?.className),
         }),
       };
     },
-    [slots, classNames?.startContent],
+    [styles, classNames?.startContent],
   );
 
   const getEndContentProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -261,12 +261,12 @@ export const useInput = (props: UseInputProps) => {
       return {
         ...props,
         "data-slot": "end-content",
-        className: slots.endContent({
+        className: styles.endContent({
           class: cn(classNames?.endContent, props?.className),
         }),
       };
     },
-    [slots, classNames?.endContent],
+    [styles, classNames?.endContent],
   );
 
   const inputType = useMemo(() => {
@@ -281,7 +281,7 @@ export const useInput = (props: UseInputProps) => {
       const fValue = mask === "currency" ? `$${value}` : value;
       return {
         "data-slot": "input",
-        className: slots.input({
+        className: styles.input({
           class: cn(classNames?.input, props?.className, className),
         }),
         value: fValue,
@@ -295,7 +295,7 @@ export const useInput = (props: UseInputProps) => {
     [
       mask,
       value,
-      slots,
+      styles,
       classNames?.input,
       className,
       handleInputChange,
@@ -310,12 +310,12 @@ export const useInput = (props: UseInputProps) => {
       return {
         ...props,
         "data-slot": "notation",
-        className: slots.notation({
+        className: styles.notation({
           class: cn(classNames?.notation, props?.className),
         }),
       };
     },
-    [slots, classNames?.notation],
+    [styles, classNames?.notation],
   );
 
   const hasNotation = isRequired === true || isOptional === true;

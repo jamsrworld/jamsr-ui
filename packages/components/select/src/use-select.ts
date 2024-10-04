@@ -273,7 +273,11 @@ export const useSelect = (props: UseSelectProps) => {
       "data-slot": "trigger",
       type: "button",
       id,
-      className: styles.trigger({ className: classNames?.trigger }),
+      className: styles.trigger({
+        className: cn(classNames?.trigger, {
+          "h-auto": isMultiple,
+        }),
+      }),
       ...props,
       ...getReferenceProps({
         ref: setReference,

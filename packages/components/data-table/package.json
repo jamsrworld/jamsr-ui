@@ -26,7 +26,7 @@
     "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    
+    "react-dom": "19.0.0-rc-e4953922-20240919",
     "react": "19.0.0-rc-e4953922-20240919"
   },
   "clean-package": "../../../clean-package.config.json",
@@ -43,7 +43,7 @@
     "@tanstack/react-table": "^8.19.3"
   },
   "peerDependencies": {
-    
+    "react-dom": "19.0.0-rc-e4953922-20240919",
     "react": "19.0.0-rc-e4953922-20240919"
   }
 }

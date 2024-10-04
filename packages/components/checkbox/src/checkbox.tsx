@@ -32,7 +32,7 @@ const CheckboxInner = (
     ...restProps
   } = props;
 
-  const [checked, setChecked] = useControlledState({
+  const [checked = false, setChecked] = useControlledState({
     prop: propChecked,
     defaultProp: defaultChecked,
     onChange: onCheckedChange,
@@ -65,10 +65,7 @@ const CheckboxInner = (
           isChecked={Boolean(checked)}
         />
       </div>
-      <Label
-        id={id}
-        {...labelProps}
-      >
+      <Label className="cursor-pointer" id={id} {...labelProps}>
         {label}
       </Label>
     </button>

@@ -14,6 +14,7 @@
     "@jamsr-ui/core": "workspace:^",
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/editor": "workspace:^",
+    "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/react": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/theme": "workspace:^",

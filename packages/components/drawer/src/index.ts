@@ -1,3 +1,3 @@
 "use client";
 
-export { Drawer } from "./drawer";
+export { Drawer, type DrawerProps } from "./drawer";

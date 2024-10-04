@@ -198,7 +198,6 @@ export const MenuComponent = ({
       <div
         ref={useMergeRefs([refs.setReference, item.ref])}
         tabIndex={
-          // eslint-disable-next-line no-nested-ternary
           !isNested ? undefined : parent.activeIndex === item.index ? 0 : -1
         }
         role={isNested ? "menuitem" : undefined}
@@ -247,7 +246,7 @@ export const MenuComponent = ({
                       <FloatingArrow
                         ref={arrowRef}
                         context={context}
-                        className="fill-background-neutral"
+                        className="fill-background-tertiary"
                       />
                     )}
                     {children}

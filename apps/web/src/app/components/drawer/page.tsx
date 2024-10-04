@@ -1,10 +1,19 @@
+import { VariantPage } from "@/components/variant-page";
+import { VariantWrapper } from "@/components/variant-wrapper";
 import { Metadata } from "next";
+import { DrawerDefault } from "./variants/default";
 
 export const metadata: Metadata = {
   title: "Drawer",
 };
 
 const Drawer = () => {
-  return <div>Drawer</div>;
+  return (
+    <VariantPage heading="Drawer">
+      <VariantWrapper heading="Default">
+        <DrawerDefault />
+      </VariantWrapper>
+    </VariantPage>
+  );
 };
 export default Drawer;

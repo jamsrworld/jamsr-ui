@@ -19,13 +19,11 @@ import React, {
   Children,
   isValidElement,
   useCallback,
-  useEffect,
   useMemo,
   useRef,
-  useState,
+  useState
 } from "react";
 import type { AutocompleteItemProps } from "./autocomplete-item";
-import { AutocompleteItem } from "./autocomplete-item";
 import type { AutocompleteSlots } from "./style";
 import { autocompleteVariant } from "./style";
 import type { AutocompleteContextType } from "./use-autocomplete-context";
@@ -87,10 +85,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   });
   const childrenArray = Children.toArray(children);
   const allItems = childrenArray.map((item) => {
-    if (
-      isValidElement<AutocompleteItemProps>(item) &&
-      item.type === AutocompleteItem
-    ) {
+    if (isValidElement<AutocompleteItemProps>(item)) {
       return {
         value: item.props.value,
         children: item.props.children,
@@ -191,7 +186,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
   }, [setIsOpen]);
 
   const {
-    refs: { setReference, setFloating, domReference },
+    refs: { setReference, setFloating },
     floatingStyles,
     context,
   } = useFloating({

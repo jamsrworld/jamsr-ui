@@ -1,8 +1,8 @@
 import { cn } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
-import { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
-type Props = {
+export type DrawerProps = {
   children: React.ReactNode;
   isOpen: boolean;
   onOpenChange: () => void;
@@ -15,7 +15,7 @@ const Backdrop = (props: ComponentPropsWithoutRef<"div">) => {
     <div
       data-component="backdrop"
       className={cn(
-        "bg-overlay/30 z-backdrop fixed inset-0 flex size-full h-full w-full items-center justify-center backdrop-blur-sm backdrop-saturate-150",
+        "bg-overlay/30 fixed inset-0 z-backdrop flex size-full items-center justify-center backdrop-blur-sm backdrop-saturate-150",
         className,
       )}
       {...restProps}
@@ -23,14 +23,11 @@ const Backdrop = (props: ComponentPropsWithoutRef<"div">) => {
   );
 };
 
-export const Drawer = (props: Props) => {
+export const Drawer = (props: DrawerProps) => {
   const { children, isOpen, onOpenChange, className } = props;
   if (!isOpen) return null;
   return (
-    <div
-      data-component="drawer"
-      className="border-divider border"
-    >
+    <div data-component="drawer" className="border border-divider">
       {isOpen && <Backdrop onClick={onOpenChange} />}
       <AnimatePresence>
         {isOpen && (
@@ -40,7 +37,7 @@ export const Drawer = (props: Props) => {
             animate={{ right: 0 }}
             exit={{ right: -900 }}
             className={cn(
-              "bg-background-secondary z-dialog fixed right-0 top-0 h-screen",
+              "fixed right-0 top-0 z-dialog h-screen bg-background-secondary",
               className,
             )}
           >

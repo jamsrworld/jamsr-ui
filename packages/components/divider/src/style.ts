@@ -2,7 +2,7 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const dividerVariants = tv({
   slots: {
-    base: "flex items-center",
+    base: "flex items-center gap-2",
     divider: "",
   },
   variants: {
@@ -16,16 +16,30 @@ export const dividerVariants = tv({
     },
     orientation: {
       vertical: {
-        divider: "h-full w-px bg-gradient-to-b",
+        base: "flex-col",
+        divider: "h-full w-px",
       },
       horizontal: {
-        divider: "h-px w-full bg-gradient-to-r",
+        divider: "h-px w-full",
       },
     },
-    absolute: {
-      true: "absolute",
-    },
   },
+  compoundVariants: [
+    {
+      orientation: "horizontal",
+      variant: "gradient",
+      className: {
+        divider: "bg-gradient-to-r",
+      },
+    },
+    {
+      orientation: "vertical",
+      variant: "gradient",
+      className: {
+        divider: "bg-gradient-to-b",
+      },
+    },
+  ],
   defaultVariants: {
     variant: "default",
     orientation: "horizontal",
@@ -33,3 +47,4 @@ export const dividerVariants = tv({
 });
 
 export type DividerVariants = VariantProps<typeof dividerVariants>;
+export type DividerSlots = keyof ReturnType<typeof dividerVariants>;

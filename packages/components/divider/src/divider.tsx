@@ -1,41 +1,42 @@
-import { type ComponentPropsWithoutRef, type ForwardedRef } from "react";
-import { dividerVariants, type DividerVariants } from "./style";
+import { cn, type SlotsToClasses, type UIProps } from "@jamsr-ui/utils";
+import {
+  type DividerSlots,
+  dividerVariants,
+  type DividerVariants,
+} from "./style";
 
-type Props = ComponentPropsWithoutRef<"div"> &
+type Props = UIProps<"div"> &
   DividerVariants & {
-    gap?: string;
+    classNames?: SlotsToClasses<DividerSlots>;
   };
 
-export const Divider = (props: Props, ref: ForwardedRef<HTMLDivElement>) => {
+export const Divider = (props: Props) => {
   const {
     className,
     variant,
     orientation = "horizontal",
-    absolute,
     children,
-    gap = "px-2",
+    classNames,
     ...restProps
   } = props;
 
-  const slots = dividerVariants({
+  const styles = dividerVariants({
     variant,
     orientation,
-    absolute,
   });
 
   return (
     <div
-      ref={ref}
-      data-component="divider"
-      className={slots.base({ className })}
       {...restProps}
+      data-component="divider"
+      className={styles.base({ className: cn(classNames?.base, className) })}
       data-orientation={orientation}
     >
-      <div className={slots.divider()} />
+      <div className={styles.divider({ className: classNames?.divider })} />
       {children && (
         <>
-          <span className={gap}>{children}</span>
-          <div className={slots.divider()} />
+          {children}
+          <div className={styles.divider({ className: classNames?.divider })} />
         </>
       )}
     </div>

@@ -1,6 +1,7 @@
-import { colorVariants, tv, type VariantProps } from "@jamsr-ui/utils";
+import type { ClassProp, VariantProps } from "@jamsr-ui/utils";
+import { colorVariants, tv } from "@jamsr-ui/utils";
 
-export const buttonVariant = tv({
+const baseVariant = tv({
   base: [
     "z-0",
     "group",
@@ -17,7 +18,6 @@ export const buttonVariant = tv({
     "font-medium",
     "tap-highlight-transparent",
     "subpixel-antialiased",
-    // "overflow-hidden",
     "transition-transform",
     "disabled:opacity-50",
     "focus-visible:ring-2 focus-visible:ring-primary",
@@ -34,10 +34,10 @@ export const buttonVariant = tv({
     },
     variant: {
       solid: "",
-      outline: "border-2 bg-transparent",
+      outlined: "border-2 bg-transparent",
       shadow: "",
-      light: "hover:bg-action-hover",
-      link: "",
+      light: "",
+      link: "!min-w-0 p-0",
     },
     fullWidth: {
       true: "w-full",
@@ -59,163 +59,219 @@ export const buttonVariant = tv({
       false: "data-[pressed=true]:scale-[0.97]",
     },
   },
-  compoundVariants: [
-    {
-      disableAnimation: false,
-      size: "lg",
-      class: "data-[pressed=true]:scale-[0.98]",
-    },
-    // solid / color
-    {
-      variant: "solid",
-      color: "default",
-      class: colorVariants.solid.default,
-    },
-    {
-      variant: "solid",
-      color: "primary",
-      class: colorVariants.solid.primary,
-    },
-    {
-      variant: "solid",
-      color: "secondary",
-      class: colorVariants.solid.secondary,
-    },
-    {
-      variant: "solid",
-      color: "success",
-      class: colorVariants.solid.success,
-    },
-    {
-      variant: "solid",
-      color: "warning",
-      class: colorVariants.solid.warning,
-    },
-    {
-      variant: "solid",
-      color: "danger",
-      class: colorVariants.solid.danger,
-    },
-    // light / color
-    {
-      variant: "light",
-      color: "default",
-    },
-    {
-      variant: "light",
-      color: "primary",
-      class: "text-primary",
-    },
-    {
-      variant: "light",
-      color: "secondary",
-      class: "text-secondary",
-    },
-    {
-      variant: "light",
-      color: "success",
-      class: "text-success",
-    },
-    {
-      variant: "light",
-      color: "warning",
-      class: "text-warning",
-    },
-    {
-      variant: "light",
-      color: "danger",
-      class: "text-danger",
-    },
-    // shadow / color
-    {
-      variant: "shadow",
-      color: "default",
-      class: colorVariants.shadow.default,
-    },
-    {
-      variant: "shadow",
-      color: "primary",
-      class: colorVariants.shadow.primary,
-    },
-    {
-      variant: "shadow",
-      color: "secondary",
-      class: colorVariants.shadow.secondary,
-    },
-    {
-      variant: "shadow",
-      color: "success",
-      class: colorVariants.shadow.success,
-    },
-    {
-      variant: "shadow",
-      color: "warning",
-      class: colorVariants.shadow.warning,
-    },
-    {
-      variant: "shadow",
-      color: "danger",
-      class: colorVariants.shadow.danger,
-    },
-    // outline / color
-    {
-      variant: "outline",
-      color: "default",
-      class: colorVariants.outline.default,
-    },
-    {
-      variant: "outline",
-      color: "primary",
-      class: colorVariants.outline.primary,
-    },
-    {
-      variant: "outline",
-      color: "secondary",
-      class: colorVariants.outline.secondary,
-    },
-    {
-      variant: "outline",
-      color: "success",
-      class: colorVariants.outline.success,
-    },
-    {
-      variant: "outline",
-      color: "warning",
-      class: colorVariants.outline.warning,
-    },
-    {
-      variant: "outline",
-      color: "danger",
-      class: colorVariants.outline.danger,
-    },
-    // Icon Only
-    {
-      isIconOnly: true,
-      size: "xs",
-      class: "size-6",
-    },
-    {
-      isIconOnly: true,
-      size: "sm",
-      class: "size-8 min-w-8 ",
-    },
-    {
-      isIconOnly: true,
-      size: "md",
-      class: "size-10 min-w-10",
-    },
-    {
-      isIconOnly: true,
-      size: "lg",
-      class: "size-12 min-w-12",
-    },
-  ],
   defaultVariants: {
     variant: "solid",
     color: "default",
     size: "md",
     disableAnimation: false,
   },
+});
+
+type CompoundVariant<T> = T & ClassProp;
+
+const solidVariant: CompoundVariant<ButtonVariantProps>[] = [
+  {
+    variant: "solid",
+    color: "default",
+    class: colorVariants.solid.default,
+  },
+  {
+    variant: "solid",
+    color: "primary",
+    class: colorVariants.solid.primary,
+  },
+  {
+    variant: "solid",
+    color: "secondary",
+    class: colorVariants.solid.secondary,
+  },
+  {
+    variant: "solid",
+    color: "success",
+    class: colorVariants.solid.success,
+  },
+  {
+    variant: "solid",
+    color: "warning",
+    class: colorVariants.solid.warning,
+  },
+  {
+    variant: "solid",
+    color: "danger",
+    class: colorVariants.solid.danger,
+  },
+];
+
+const lightVariant: CompoundVariant<ButtonVariantProps>[] = [
+  {
+    variant: "light",
+    color: "default",
+    class: [colorVariants.light.default, "data-[hover=true]:bg-default/40"],
+  },
+  {
+    variant: "light",
+    color: "primary",
+    class: [colorVariants.light.primary, "data-[hover=true]:bg-primary/20"],
+  },
+  {
+    variant: "light",
+    color: "secondary",
+    class: [colorVariants.light.secondary, "data-[hover=true]:bg-secondary/20"],
+  },
+  {
+    variant: "light",
+    color: "success",
+    class: [colorVariants.light.success, "data-[hover=true]:bg-success/20"],
+  },
+  {
+    variant: "light",
+    color: "warning",
+    class: [colorVariants.light.warning, "data-[hover=true]:bg-warning/20"],
+  },
+  {
+    variant: "light",
+    color: "danger",
+    class: [colorVariants.light.danger, "data-[hover=true]:bg-danger/20"],
+  },
+];
+
+const shadowVariant: CompoundVariant<ButtonVariantProps>[] = [
+  {
+    variant: "shadow",
+    color: "default",
+    class: colorVariants.shadow.default,
+  },
+  {
+    variant: "shadow",
+    color: "primary",
+    class: colorVariants.shadow.primary,
+  },
+  {
+    variant: "shadow",
+    color: "secondary",
+    class: colorVariants.shadow.secondary,
+  },
+  {
+    variant: "shadow",
+    color: "success",
+    class: colorVariants.shadow.success,
+  },
+  {
+    variant: "shadow",
+    color: "warning",
+    class: colorVariants.shadow.warning,
+  },
+  {
+    variant: "shadow",
+    color: "danger",
+    class: colorVariants.shadow.danger,
+  },
+];
+
+const outlinedVariant: CompoundVariant<ButtonVariantProps>[] = [
+  {
+    variant: "outlined",
+    color: "default",
+    class: colorVariants.outlined.default,
+  },
+  {
+    variant: "outlined",
+    color: "primary",
+    class: colorVariants.outlined.primary,
+  },
+  {
+    variant: "outlined",
+    color: "secondary",
+    class: colorVariants.outlined.secondary,
+  },
+  {
+    variant: "outlined",
+    color: "success",
+    class: colorVariants.outlined.success,
+  },
+  {
+    variant: "outlined",
+    color: "warning",
+    class: colorVariants.outlined.warning,
+  },
+  {
+    variant: "outlined",
+    color: "danger",
+    class: colorVariants.outlined.danger,
+  },
+];
+
+const iconOnlyVariant: CompoundVariant<ButtonVariantProps>[] = [
+  {
+    isIconOnly: true,
+    size: "xs",
+    class: "size-6",
+  },
+  {
+    isIconOnly: true,
+    size: "sm",
+    class: "size-8 min-w-8 ",
+  },
+  {
+    isIconOnly: true,
+    size: "md",
+    class: "size-10 min-w-10",
+  },
+  {
+    isIconOnly: true,
+    size: "lg",
+    class: "size-12 min-w-12",
+  },
+];
+
+const linkVariant: CompoundVariant<ButtonVariantProps>[] = [
+  {
+    variant: "link",
+    color: "default",
+    class: colorVariants.link.default,
+  },
+  {
+    variant: "link",
+    color: "primary",
+    class: colorVariants.link.primary,
+  },
+  {
+    variant: "link",
+    color: "secondary",
+    class: colorVariants.link.secondary,
+  },
+  {
+    variant: "link",
+    color: "success",
+    class: colorVariants.link.success,
+  },
+  {
+    variant: "link",
+    color: "warning",
+    class: colorVariants.link.warning,
+  },
+  {
+    variant: "link",
+    color: "danger",
+    class: colorVariants.link.danger,
+  },
+];
+
+export const buttonVariant = tv({
+  extend: baseVariant,
+  compoundVariants: [
+    {
+      disableAnimation: false,
+      size: "lg",
+      class: "data-[pressed=true]:scale-[0.98]",
+    },
+    ...solidVariant,
+    ...lightVariant,
+    ...shadowVariant,
+    ...outlinedVariant,
+    ...linkVariant,
+    ...iconOnlyVariant,
+  ],
 });
 
 export const buttonGroup = tv({
@@ -230,5 +286,5 @@ export const buttonGroup = tv({
   },
 });
 
-export type ButtonVariantProps = VariantProps<typeof buttonVariant>;
+export type ButtonVariantProps = VariantProps<typeof baseVariant>;
 export type ButtonGroupVariantProps = VariantProps<typeof buttonGroup>;

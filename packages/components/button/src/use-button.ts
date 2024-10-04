@@ -6,6 +6,7 @@ type Props = UIProps<"button"> & {
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   isLoading?: boolean;
+  isDisabled?: boolean;
   spinnerPlacement?: "start" | "end";
   disableRipple?: boolean;
   disableAnimation?: boolean;
@@ -15,18 +16,26 @@ export type UseButtonProps = Props & ButtonVariantProps;
 
 export const useButton = (props: UseButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
   const handleMouseDown = () => setIsPressed(true);
   const handleMouseUp = () => setIsPressed(false);
+
+  // for hover
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+  const handleMouseOut = () => setIsHovered(false);
 
   const {
     as,
     children,
     startContent,
     endContent,
-    autoFocus,
     className,
     isLoading = false,
     disabled = false,
+    isDisabled = false,
     color,
     size,
     isIconOnly,
@@ -41,7 +50,7 @@ export const useButton = (props: UseButtonProps) => {
   } = props;
 
   const Component = as ?? "button";
-  const isDisabled = isLoading || disabled;
+  const isDisabledState = isLoading || disabled || isDisabled;
 
   const styles = useMemo(
     () =>
@@ -70,13 +79,16 @@ export const useButton = (props: UseButtonProps) => {
   const getButtonProps: PropGetter = useCallback(() => {
     return {
       ...restProps,
-      disabled: isDisabled,
+      disabled: isDisabledState,
       "data-pressed": isPressed,
+      "data-hover": isHovered,
       type,
       onMouseDown: handleMouseDown,
       onMouseUp: handleMouseUp,
+      onMouseOver: handleMouseOver,
+      onMouseOut: handleMouseOut,
     };
-  }, [isDisabled, isPressed, restProps, type]);
+  }, [isDisabledState, isHovered, isPressed, restProps, type]);
 
   return {
     Component,

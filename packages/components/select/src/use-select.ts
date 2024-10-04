@@ -26,7 +26,6 @@ import {
   useState,
 } from "react";
 import type { SelectItemProps } from "./select-item";
-import { SelectItem } from "./select-item";
 import type { SelectSlots, SelectVariantProps } from "./style";
 import { selectVariant } from "./style";
 import type { SelectContextType } from "./use-select-context";
@@ -97,7 +96,7 @@ export const useSelect = (props: UseSelectProps) => {
 
   const childrenArray = Children.toArray(children);
   const selectItems = childrenArray.map((item) => {
-    if (isValidElement<SelectItemProps>(item) && item.type === SelectItem) {
+    if (isValidElement<SelectItemProps>(item)) {
       return {
         value: item.props.value,
         children: item.props.children,
@@ -273,6 +272,7 @@ export const useSelect = (props: UseSelectProps) => {
     return {
       "data-slot": "trigger",
       type: "button",
+      id,
       className: styles.trigger({ className: classNames?.trigger }),
       ...props,
       ...getReferenceProps({

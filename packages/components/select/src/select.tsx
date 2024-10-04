@@ -45,11 +45,10 @@ export const Select = <T extends React.ElementType = "div">(
 
   return (
     <Component {...getBaseProps()}>
-      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+      {/*  eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       {label && <label {...getLabelProps()}>{label}</label>}
       <div {...getMainWrapperProps()}>
-        {/*  eslint-disable-next-line react/button-has-type */}
-        <button {...getTriggerProps()}>
+        <button type="button" {...getTriggerProps()}>
           <div {...getInnerWrapperProps()}>
             {startContent && (
               <div {...getStartContentProps()}>{startContent}</div>

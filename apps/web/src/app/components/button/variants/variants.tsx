@@ -4,7 +4,7 @@ export const ButtonVariants = () => {
   const variants: ButtonProps["variant"][] = [
     "light",
     "link",
-    "outline",
+    "outlined",
     "shadow",
     "solid",
   ];
@@ -31,6 +31,8 @@ export const ButtonVariants = () => {
                 key={`${variant}-${color}`}
                 variant={variant}
                 color={color}
+                className="capitalize"
+                disableRipple={variant === "link"}
               >
                 {variant}
               </Button>

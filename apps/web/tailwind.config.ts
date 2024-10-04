@@ -6,6 +6,7 @@ const config: Config = {
   darkMode: "class",
   content: [
     "../../packages/components/*/src/**/*.{ts,tsx}",
+    "../../packages/utils/src/**/*.{ts,tsx}",
     "./src/app/**/*.{ts,tsx}",
     "./src/components/**/*.{ts,tsx}",
     "!./node_modules",

@@ -10,7 +10,7 @@ type Color = "light" | "dark";
 // type Color = "light" | "dark" | (string & {});
 
 export type UIThemeConfig = {
-  colors: Partial<Record<Color, DeepPartial<ThemeColors>>>;
+  colors?: Partial<Record<Color, DeepPartial<ThemeColors>>>;
 };
 
 export const jamsrui = (config?: UIThemeConfig) => {
@@ -104,6 +104,7 @@ export const jamsrui = (config?: UIThemeConfig) => {
             },
           },
         },
+        plugins: [],
       },
     ),
     createThemes(

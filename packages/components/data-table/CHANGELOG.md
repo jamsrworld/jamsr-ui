@@ -1,5 +1,22 @@
 # @jamsr-ui/data-table
 
+## 0.0.21
+
+### Patch Changes
+
+- theme change
+- Updated dependencies
+  - @jamsr-ui/select@0.0.56
+  - @jamsr-ui/table@0.0.22
+
+## 0.0.20
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/select@0.0.55
+  - @jamsr-ui/table@0.0.21
+
 ## 0.0.19
 
 ### Patch Changes

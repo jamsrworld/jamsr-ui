@@ -1,5 +1,17 @@
 # @jamsr-ui/table
 
+## 0.0.22
+
+### Patch Changes
+
+- theme change
+
+## 0.0.21
+
+### Patch Changes
+
+- added theme change
+
 ## 0.0.20
 
 ### Patch Changes

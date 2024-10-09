@@ -34,7 +34,7 @@ export const table = tv({
     },
     allowHover: {
       true: {
-        td: "md:group-hover/tr:bg-action-hover",
+        td: "md:group-hover/tr:bg-content2",
       },
       false: {
         td: "",

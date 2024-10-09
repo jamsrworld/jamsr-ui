@@ -1,5 +1,23 @@
 # @jamsr-ui/editor
 
+## 0.0.49
+
+### Patch Changes
+
+- theme change
+- Updated dependencies
+  - @jamsr-ui/select@0.0.56
+  - @jamsr-ui/menu@0.0.56
+
+## 0.0.48
+
+### Patch Changes
+
+- added theme change
+- Updated dependencies
+  - @jamsr-ui/select@0.0.55
+  - @jamsr-ui/menu@0.0.55
+
 ## 0.0.47
 
 ### Patch Changes

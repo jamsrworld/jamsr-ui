@@ -46,7 +46,7 @@ export const TextPicker = (props: Props) => {
               onClick={onClick}
               disabled={isDisabled()}
               startContent={<EditorIcon name={icon} />}
-              className={isActive() ? "bg-action-hover" : ""}
+              className={isActive() ? "bg-content2" : ""}
             >
               {label}
             </MenuItem>

@@ -19,10 +19,20 @@ const config: Config = {
   },
   plugins: [
     ...jamsrui({
-      colors: {
-        dark: {},
-        light: {},
-      },
+      // colors: {
+      //   dark: {
+      //     default: {
+      //       DEFAULT: "#fff",
+      //       foreground: "#000",
+      //     },
+      //   },
+      //   light: {
+      //     default: {
+      //       DEFAULT: "#000",
+      //       foreground: "#fff",
+      //     },
+      //   },
+      // },
     }),
   ],
 };

@@ -1,5 +1,30 @@
 # @jamsr-ui/react
 
+## 0.0.133
+
+### Patch Changes
+
+- theme change
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.57
+  - @jamsr-ui/data-table@0.0.21
+  - @jamsr-ui/editor@0.0.49
+  - @jamsr-ui/select@0.0.56
+  - @jamsr-ui/table@0.0.22
+  - @jamsr-ui/menu@0.0.56
+
+## 0.0.132
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.56
+  - @jamsr-ui/editor@0.0.48
+  - @jamsr-ui/select@0.0.55
+  - @jamsr-ui/table@0.0.21
+  - @jamsr-ui/menu@0.0.55
+  - @jamsr-ui/data-table@0.0.20
+
 ## 0.0.131
 
 ### Patch Changes

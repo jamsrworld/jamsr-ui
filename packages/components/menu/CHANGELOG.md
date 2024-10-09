@@ -1,5 +1,17 @@
 # @jamsr-ui/menu
 
+## 0.0.56
+
+### Patch Changes
+
+- theme change
+
+## 0.0.55
+
+### Patch Changes
+
+- added theme change
+
 ## 0.0.54
 
 ### Patch Changes

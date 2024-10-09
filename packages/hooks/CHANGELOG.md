@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.33
+
+### Patch Changes
+
+- new changes
+
 ## 0.0.32
 
 ### Patch Changes

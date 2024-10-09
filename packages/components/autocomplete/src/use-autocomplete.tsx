@@ -139,7 +139,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       };
 
       return (
-        <Chip onClick={handleOnClick} onClose={onClose} key={val}>
+        <Chip onClick={handleOnClick} onDelete={onClose} key={val}>
           {label}
         </Chip>
       );

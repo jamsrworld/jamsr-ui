@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.31
+
+### Patch Changes
+
+- new changes
+
 ## 0.0.30
 
 ### Patch Changes

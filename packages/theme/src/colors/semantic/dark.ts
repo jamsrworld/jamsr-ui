@@ -1,13 +1,13 @@
 import { readableColor } from "color2k";
 import { swapColorValues } from "../../utils";
 import { commonColors as common } from "../common";
-import { themeColorsLight } from "./light";
+import { ThemeColors } from "../types";
 
-export const themeColorsDark: typeof themeColorsLight = {
+export const themeColorsDark: ThemeColors = {
   background: {
     DEFAULT: "#000",
-    secondary: "#141419",
-    tertiary: "#222426",
+    secondary: "#0D0D0D",
+    tertiary: "#010101",
   },
   foreground: {
     ...common.zinc,
@@ -17,11 +17,31 @@ export const themeColorsDark: typeof themeColorsLight = {
     tertiary: "#8A8A8E",
   },
   divider: {
-    DEFAULT: "#38383A",
-    dark: "#98989B",
+    light: "#4a494a",
+    DEFAULT: "#252A2E",
+    dark: "#1d1d1d",
   },
-  action: {
-    hover: common.zinc[800],
+  focus: {
+    DEFAULT: common.blue[500],
+  },
+  overlay: {
+    DEFAULT: "#000000",
+  },
+  content1: {
+    DEFAULT: common.zinc[900],
+    foreground: common.zinc[50],
+  },
+  content2: {
+    DEFAULT: common.zinc[800],
+    foreground: common.zinc[100],
+  },
+  content3: {
+    DEFAULT: common.zinc[700],
+    foreground: common.zinc[200],
+  },
+  content4: {
+    DEFAULT: common.zinc[600],
+    foreground: common.zinc[300],
   },
   default: {
     ...swapColorValues(common.zinc),

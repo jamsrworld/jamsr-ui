@@ -1,6 +1,5 @@
 import { type Config } from "@jamsr-ui/tailwind-config";
 import { jamsrui } from "../../packages/theme/src/index";
-// import { jamsrui } from "@jamsr-ui/theme";
 
 const config: Config = {
   darkMode: "class",
@@ -14,10 +13,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        jamsr: "blue",
+        // background: "red",
       },
     },
   },
-  plugins: [...jamsrui()],
+  plugins: [
+    ...jamsrui({
+      colors: {
+        dark: {},
+        light: {},
+      },
+    }),
+  ],
 };
 export default config;

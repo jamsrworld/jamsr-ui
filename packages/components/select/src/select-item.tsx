@@ -67,7 +67,7 @@ export const SelectItem = <T extends React.ElementType = "button">(
       aria-selected={isSelected}
       tabIndex={isSelected ? 0 : -1}
       className={cn(
-        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-action-hover focus-visible:ring-2 focus-visible:ring-primary",
+        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-content2 focus-visible:ring-2 focus-visible:ring-primary",
         className,
         { "bg-action-hover": isActive },
       )}

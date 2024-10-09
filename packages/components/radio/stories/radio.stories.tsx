@@ -135,7 +135,7 @@ const CustomRadio = (props: RadioProps) => {
       {...props}
       classNames={{
         base: cn(
-          "m-0 inline-flex items-center justify-between border-2 border-divider hover:bg-action-hover",
+          "m-0 inline-flex items-center justify-between border-2 border-divider hover:bg-content2",
           "max-w-[300px] cursor-pointer flex-row-reverse gap-4 rounded-lg p-4",
           "data-[selected=true]:border-primary",
         ),

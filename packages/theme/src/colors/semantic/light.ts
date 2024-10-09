@@ -1,11 +1,12 @@
 import { readableColor } from "color2k";
 import { commonColors as common } from "../common";
+import { ThemeColors } from "../types";
 
-export const themeColorsLight = {
+export const themeColorsLight: ThemeColors = {
   background: {
     DEFAULT: "#ffffff",
-    tertiary: "#f4f5f7",
     secondary: "#fafafa",
+    tertiary: "#f4f5f7",
   },
   foreground: {
     DEFAULT: "#1d1d1e",
@@ -14,16 +15,36 @@ export const themeColorsLight = {
     tertiary: "#C4C4C6",
   },
   divider: {
-    DEFAULT: "#d3d2d2",
-    dark: "#C6C6C8",
+    light: "#c9c8c9",
+    DEFAULT: "#bebdbe",
+    dark: "#b4b2b4",
   },
-  action: {
-    hover: "#f5f5f7",
+  focus: {
+    DEFAULT: common.blue[500],
+  },
+  overlay: {
+    DEFAULT: "#000000",
+  },
+  content1: {
+    DEFAULT: "#FFFFFF",
+    foreground: "#11181C",
+  },
+  content2: {
+    DEFAULT: common.zinc[100],
+    foreground: common.zinc[800],
+  },
+  content3: {
+    DEFAULT: common.zinc[200],
+    foreground: common.zinc[700],
+  },
+  content4: {
+    DEFAULT: common.zinc[300],
+    foreground: common.zinc[600],
   },
   default: {
     ...common.zinc,
     foreground: readableColor(common.zinc[300]),
-    DEFAULT: common.zinc[300],
+    DEFAULT: common.zinc[200],
   },
   primary: {
     ...common.blue,

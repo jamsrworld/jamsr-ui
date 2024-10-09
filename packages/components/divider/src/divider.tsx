@@ -1,14 +1,15 @@
-import { cn, type SlotsToClasses, type UIProps } from "@jamsr-ui/utils";
+import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
 import {
   type DividerSlots,
   dividerVariants,
   type DividerVariants,
 } from "./style";
 
-type Props = UIProps<"div"> &
-  DividerVariants & {
-    classNames?: SlotsToClasses<DividerSlots>;
-  };
+type Props = DividerVariants & {
+  classNames?: SlotsToClasses<DividerSlots>;
+  className?: string;
+  children?: React.ReactNode;
+};
 
 export const Divider = (props: Props) => {
   const {

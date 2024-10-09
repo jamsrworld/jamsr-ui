@@ -47,7 +47,7 @@ export const AutocompleteItem = <T extends React.ElementType = "div">(
       aria-selected={isSelected}
       tabIndex={-1}
       className={cn(
-        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-action-hover",
+        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-content2",
         className,
         { "bg-action-hover": isActive },
       )}

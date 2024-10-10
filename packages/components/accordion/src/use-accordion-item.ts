@@ -6,6 +6,7 @@ import {
   type PropGetter,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
+import { type m } from "framer-motion";
 import { useCallback, useEffect, useRef, type ComponentProps } from "react";
 import { useAccordionContext } from "./accordion-context";
 import {
@@ -37,6 +38,7 @@ type Props = AccordionItemVariantProps & {
   isDisabled?: boolean;
   title: React.ReactNode;
   triggerContent?: React.ReactNode;
+  motionProps?: ComponentProps<typeof m.div>;
 };
 
 export type UseAccordionItemProps = ComponentPropsWithAs<"div", Props>;
@@ -61,6 +63,7 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     isDisabled,
     startContentPlacement = "inside",
     endContentPlacement = "inside",
+    motionProps,
     ...restProps
   } = props;
 
@@ -90,7 +93,7 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
           default:
             null;
         }
-      } else return;
+      }
     },
     [index, onChangeIndex],
   );
@@ -257,6 +260,7 @@ export const useAccordionItem = (props: UseAccordionItemProps) => {
     indicator,
     triggerContent,
     hideIndicator,
+    motionProps,
     getBaseProps,
     getStartContentProps,
     getEndContentProps,

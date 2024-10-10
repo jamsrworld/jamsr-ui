@@ -24,7 +24,8 @@ export const accordionItem = tv({
     title: "text-base font-medium text-foreground",
     subtitle: "text-sm font-normal text-foreground-500",
     content: "py-2 text-foreground-secondary",
-    indicator: "rotate-0 transition-transform data-[open=true]:-rotate-180",
+    indicator:
+      "rotate-0 transition-transform duration-500 data-[open=true]:-rotate-180",
   },
   variants: {
     hideIndicator: {

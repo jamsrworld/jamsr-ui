@@ -38,6 +38,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
     getEndContentProps,
     getStartContentProps,
     getTitleWrapperProps,
+    motionProps,
   } = useAccordionItem(props);
 
   const indicatorContent = useMemo(() => {
@@ -89,6 +90,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
             animate="enter"
             exit="exit"
             variants={TRANSITION_VARIANTS.collapse}
+            {...motionProps}
           >
             <div {...getContentProps()}>{children}</div>
           </m.div>

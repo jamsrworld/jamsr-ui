@@ -5,24 +5,19 @@ export const TRANSITION_VARIANTS = {
     enter: {
       opacity: 1,
       height: "auto",
+      filter: "blur(0px)",
       transition: {
-        height: {
-          type: "spring",
-          bounce: 0,
-          duration: 0.3,
-        },
-        opacity: {
-          easings: "ease",
-          duration: 0.4,
-        },
+        type: "spring",
+        duration: 0.6,
       },
     },
     exit: {
       opacity: 0,
       height: 0,
+      filter: "blur(2px)",
       transition: {
-        easings: "ease",
-        duration: 0.3,
+        type: "spring",
+        duration: 0.6,
       },
     },
   },

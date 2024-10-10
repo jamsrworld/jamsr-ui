@@ -3,7 +3,7 @@
 A react ui library created with tailwindcss. 
 > **NOTE:** Currently work in progress
 > 
-> **NOTE:** This is a community project, not associated with [Jamsrworld](https://jamsrworld.com).
+
 
 ## Getting Started
 

@@ -1,5 +1,14 @@
 # web
 
+## 0.1.120
+
+### Patch Changes
+
+- feat: drawer
+- Updated dependencies
+  - @jamsr-ui/dialog@0.0.54
+  - @jamsr-ui/react@0.0.138
+
 ## 0.1.119
 
 ### Patch Changes

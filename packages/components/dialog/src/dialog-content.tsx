@@ -18,7 +18,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
     interactions,
     context,
     setFloating,
-    slots,
+    slots: styles,
     Component: DialogComponent,
     hideCloseButton,
     getDialogProps,
@@ -32,11 +32,11 @@ export const DialogContent = <T extends React.ElementType = "div">(
         <FloatingPortal>
           <FloatingOverlay
             data-slot="backdrop"
-            className={slots.backdrop()}
+            className={styles.backdrop()}
             lockScroll
           >
             <FloatingFocusManager context={context} modal>
-              {/* @ts-ignore */}
+              {/* @ts-expect-error framer motion error */}
               <m.div
                 initial={{ y: 50, opacity: 0 }}
                 animate={{

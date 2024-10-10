@@ -1,7 +1,7 @@
-import { ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
+import { type ComponentPropsWithAs, cn } from "@jamsr-ui/utils";
 import { useDialogContext } from "./dialog-context";
 
-export type DialogHeaderProps = {};
+export type DialogHeaderProps = NonNullable<unknown>;
 
 export const DialogHeader = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, DialogHeaderProps>,

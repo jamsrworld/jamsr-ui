@@ -1,5 +1,11 @@
 # @jamsr-ui/dialog
 
+## 0.0.54
+
+### Patch Changes
+
+- feat: drawer
+
 ## 0.0.53
 
 ### Patch Changes

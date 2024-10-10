@@ -1,5 +1,14 @@
 # @jamsr-ui/react
 
+## 0.0.138
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/dialog@0.0.54
+  - @jamsr-ui/drawer@1.0.41
+  - @jamsr-ui/confirmation@0.0.31
+
 ## 0.0.137
 
 ### Patch Changes

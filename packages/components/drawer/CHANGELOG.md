@@ -1,5 +1,11 @@
 # @jamsr-ui/drawer
 
+## 1.0.41
+
+### Patch Changes
+
+- feat: drawer
+
 ## 1.0.40
 
 ### Patch Changes

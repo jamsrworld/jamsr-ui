@@ -45,7 +45,7 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     hideCloseButton,
     ...restProps
   } = props;
-  const Component = as || "div";
+  const Component = as ?? "div";
 
   const [isOpen, setIsOpen] = useControlledState({
     defaultProp: defaultOpen,

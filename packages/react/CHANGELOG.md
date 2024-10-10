@@ -1,5 +1,11 @@
 # @jamsr-ui/react
 
+## 0.0.136
+
+### Patch Changes
+
+- fix theme
+
 ## 0.0.135
 
 ### Patch Changes

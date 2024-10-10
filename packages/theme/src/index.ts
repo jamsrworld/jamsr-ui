@@ -117,7 +117,7 @@ export const jamsrui = (config?: UIThemeConfig) => {
         produceCssVariable(colorName) {
           return `--ui-${colorName}`;
         },
-        produceThemeClass: (themeName) => `theme-${themeName}`,
+        produceThemeClass: (themeName) => themeName,
         produceThemeVariant: (themeName) => `theme-${themeName}`,
       },
     ),

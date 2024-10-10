@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.45
+
+### Patch Changes
+
+- fix accordioni
+
 ## 0.0.44
 
 ### Patch Changes

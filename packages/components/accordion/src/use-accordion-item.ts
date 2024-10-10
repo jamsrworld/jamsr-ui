@@ -38,6 +38,7 @@ type Props = AccordionItemVariantProps & {
   isDisabled?: boolean;
   title: React.ReactNode;
   triggerContent?: React.ReactNode;
+  // @ts-expect-error framer-motion type error
   motionProps?: ComponentProps<typeof m.div>;
 };
 

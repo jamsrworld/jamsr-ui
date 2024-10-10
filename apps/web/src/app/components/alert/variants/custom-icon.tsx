@@ -1,11 +1,11 @@
 import { Alert } from "@jamsr-ui/react";
-import { Close } from "@jamsr-ui/shared-icons";
+import { CloseIcon } from "@jamsr-ui/shared-icons";
 
 export const AlertCustomIcon = () => {
   return (
     <Alert
       severity="danger"
-      icon={<Close />}
+      icon={<CloseIcon />}
     >
       This is a error message.
     </Alert>

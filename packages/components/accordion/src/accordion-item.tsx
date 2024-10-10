@@ -1,4 +1,4 @@
-import { ChevronDown } from "@jamsr-ui/shared-icons";
+import { ChevronDownIcon } from "@jamsr-ui/shared-icons";
 import {
   TRANSITION_VARIANTS,
   type ComponentPropsWithAs,
@@ -43,12 +43,12 @@ export const AccordionItem = <T extends React.ElementType = "div">(
   const indicatorContent = useMemo(() => {
     if (typeof indicator === "function") {
       return indicator({
-        indicator: <ChevronDown />,
+        indicator: <ChevronDownIcon />,
         isOpen,
         isDisabled: false,
       });
     }
-    return indicator ?? <ChevronDown />;
+    return indicator ?? <ChevronDownIcon />;
   }, [indicator, isOpen]);
 
   return (

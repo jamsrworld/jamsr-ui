@@ -1,5 +1,5 @@
 import { Button } from "@jamsr-ui/button";
-import { Close } from "@jamsr-ui/shared-icons";
+import { CloseIcon } from "@jamsr-ui/shared-icons";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { cn } from "@jamsr-ui/utils";
 import React from "react";
@@ -32,7 +32,7 @@ export const Chip = <T extends React.ElementType = "div">(
           onClick={onDelete}
           className="size-4 shrink-0"
         >
-          <Close className="!size-3" />
+          <CloseIcon className="!size-3" />
         </Button>
       )}
     </Comp>

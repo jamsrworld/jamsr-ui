@@ -27,7 +27,7 @@ import {
   type Placement,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { ChevronRight } from "@jamsr-ui/shared-icons";
+import { ChevronRightIcon } from "@jamsr-ui/shared-icons";
 import { cn } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import {
@@ -217,7 +217,7 @@ export const MenuComponent = ({
         })}
       >
         <div className="grow text-start">{trigger}</div>
-        {isNested && <ChevronRight aria-hidden className="ml-2" />}
+        {isNested && <ChevronRightIcon aria-hidden className="ml-2" />}
       </div>
       <MenuContext.Provider value={value}>
         <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>

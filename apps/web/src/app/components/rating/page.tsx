@@ -8,6 +8,7 @@ import { RatingDisabled } from "./variants/disabled";
 import { RatingHelperText } from "./variants/helper-text";
 import { RatingInvalid } from "./variants/invalid";
 import { RatingReadonly } from "./variants/readonly";
+import { RatingSize } from "./variants/size";
 
 export const metadata: Metadata = {
   title: "Rating",
@@ -18,6 +19,9 @@ const Rating = () => {
     <VariantPage heading="Rating">
       <VariantWrapper heading="Default">
         <RatingDefault />
+      </VariantWrapper>
+      <VariantWrapper heading="Size">
+        <RatingSize />
       </VariantWrapper>
       <VariantWrapper heading="Readonly">
         <RatingReadonly />

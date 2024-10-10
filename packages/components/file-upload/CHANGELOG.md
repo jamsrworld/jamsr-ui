@@ -1,5 +1,21 @@
 # @jamsr-ui/file-upload
 
+## 0.0.65
+
+### Patch Changes
+
+- fix bug
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.44
+
+## 0.0.64
+
+### Patch Changes
+
+- fix rating
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.43
+
 ## 0.0.63
 
 ### Patch Changes

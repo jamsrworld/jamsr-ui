@@ -1,5 +1,35 @@
 # @jamsr-ui/editor
 
+## 0.0.51
+
+### Patch Changes
+
+- fix bug
+- Updated dependencies
+  - @jamsr-ui/file-upload@0.0.65
+  - @jamsr-ui/repeater@0.0.22
+  - @jamsr-ui/select@0.0.58
+  - @jamsr-ui/input@0.0.54
+  - @jamsr-ui/menu@0.0.58
+  - @jamsr-ui/shared-icons@0.0.44
+  - @jamsr-ui/button@0.0.47
+  - @jamsr-ui/popover@0.0.45
+
+## 0.0.50
+
+### Patch Changes
+
+- fix rating
+- Updated dependencies
+  - @jamsr-ui/file-upload@0.0.64
+  - @jamsr-ui/repeater@0.0.21
+  - @jamsr-ui/select@0.0.57
+  - @jamsr-ui/input@0.0.53
+  - @jamsr-ui/menu@0.0.57
+  - @jamsr-ui/shared-icons@0.0.43
+  - @jamsr-ui/button@0.0.47
+  - @jamsr-ui/popover@0.0.45
+
 ## 0.0.49
 
 ### Patch Changes

@@ -1,5 +1,5 @@
 import { Button } from "@jamsr-ui/button";
-import { EyeClosed, EyeOpen } from "@jamsr-ui/shared-icons";
+import { EyeClosedIcon, EyeOpenIcon } from "@jamsr-ui/shared-icons";
 import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
 import { useInput, type UseInputProps } from "./use-input";
@@ -52,7 +52,7 @@ export const Input = <T extends React.ElementType = "div">(
           rounded
           size="sm"
         >
-          {!showPassword ? <EyeOpen /> : <EyeClosed />}
+          {!showPassword ? <EyeOpenIcon /> : <EyeClosedIcon />}
         </Button>
       )) ||
       (mask === "percent" && "%") ||

@@ -1,8 +1,9 @@
 import { StarIcon } from "@jamsr-ui/shared-icons";
 import { dataAttr } from "@jamsr-ui/utils";
+import { useId, type ComponentProps } from "react";
 import { useRatingContext } from "./rating-context";
 
-type Props = {
+type Props = ComponentProps<"svg"> & {
   value: number;
   index: number;
   setValue: (value: number) => void;
@@ -10,12 +11,17 @@ type Props = {
 };
 
 export const RatingItem = (props: Props) => {
-  const { index: itemValue, value, setValue, id } = props;
+  const { index: itemValue, value, setValue, id, ...restProps } = props;
   const handleOnChange = () => {
     setValue(itemValue);
   };
   const isChecked = value >= itemValue;
-  const { styles, isDisabled = false, isReadonly = false } = useRatingContext();
+  const {
+    styles,
+    isDisabled = false,
+    isReadonly = false,
+    classNames,
+  } = useRatingContext();
   const isInteractive = !isDisabled && !isReadonly;
 
   const handleMouseMove = () => {
@@ -23,17 +29,21 @@ export const RatingItem = (props: Props) => {
     setValue(itemValue);
   };
 
+  const uniqueId = useId();
+
   return (
     <label
+      htmlFor={uniqueId}
       data-checked={dataAttr(isChecked)}
       data-value={itemValue}
-      className={styles.starWrapper()}
       onMouseEnter={handleMouseMove}
       data-interactive={dataAttr(isInteractive)}
+      className={styles.starWrapper({ className: classNames?.starWrapper })}
     >
-      <StarIcon className={styles.star()} />
+      <StarIcon {...restProps} />
       <span className="sr-only" />
       <input
+        id={uniqueId}
         value={itemValue}
         aria-hidden
         type="radio"

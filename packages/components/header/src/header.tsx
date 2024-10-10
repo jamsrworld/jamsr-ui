@@ -1,5 +1,3 @@
-"use client";
-
 import { Divider } from "@jamsr-ui/divider";
 import {
   AnimatePresence,

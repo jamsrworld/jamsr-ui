@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp } from "@jamsr-ui/shared-icons";
+import { ChevronDownIcon, ChevronUpIcon } from "@jamsr-ui/shared-icons";
 import { TableColumn, TableHeader, TableRow } from "@jamsr-ui/table";
 import { cn } from "@jamsr-ui/utils";
 import { flexRender, type HeaderGroup } from "@tanstack/react-table";
@@ -38,8 +38,8 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
                         header.getContext(),
                       )}
                       {{
-                        asc: <ChevronUp className="size-5" />,
-                        desc: <ChevronDown className="size-5" />,
+                        asc: <ChevronUpIcon className="size-5" />,
+                        desc: <ChevronDownIcon className="size-5" />,
                       }[header.column.getIsSorted() as string] ?? null}
                     </span>
                   </span>

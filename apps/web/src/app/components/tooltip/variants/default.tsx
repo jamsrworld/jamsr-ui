@@ -1,5 +1,5 @@
 import { Button, Tooltip, type TooltipProps } from "@jamsr-ui/react";
-import { Info } from "@jamsr-ui/shared-icons";
+import { InfoIcon } from "@jamsr-ui/shared-icons";
 
 type Props = TooltipProps;
 
@@ -14,7 +14,7 @@ export const TooltipDefault = (props: Partial<Props>) => {
           aria-label="Click Me!"
           isIconOnly
         >
-          <Info />
+          <InfoIcon />
         </Button>
       </Tooltip>
     </div>

@@ -1,6 +1,6 @@
 import { type SVGProps } from "react";
 
-export const ChevronDoubleLeft = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronDoubleLeftIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -19,7 +19,7 @@ export const ChevronDoubleLeft = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ChevronDoubleRight = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronDoubleRightIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -38,7 +38,7 @@ export const ChevronDoubleRight = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ChevronDown = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronDownIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
@@ -50,7 +50,7 @@ export const ChevronDown = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ChevronLeft = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronLeftIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
@@ -62,7 +62,7 @@ export const ChevronLeft = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ChevronUp = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronUpIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
@@ -74,7 +74,7 @@ export const ChevronUp = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ChevronRight = (props: SVGProps<SVGSVGElement>) => (
+export const ChevronRightIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg width={24} height={24} fill="none" viewBox="0 0 24 24" {...props}>
     <path
       stroke="currentColor"
@@ -86,7 +86,7 @@ export const ChevronRight = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const Info = (props: SVGProps<SVGSVGElement>) => (
+export const InfoIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -113,7 +113,7 @@ export const Info = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const Check = (props: SVGProps<SVGSVGElement>) => (
+export const CheckIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -133,7 +133,7 @@ export const Check = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const Close = (props: SVGProps<SVGSVGElement>) => (
+export const CloseIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg width={24} height={24} viewBox="0 0 24 24" fill="none" {...props}>
     <path
       stroke="currentColor"
@@ -145,7 +145,7 @@ export const Close = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const EyeClosed = (props: SVGProps<SVGSVGElement>) => (
+export const EyeClosedIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -167,7 +167,7 @@ export const EyeClosed = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const EyeOpen = (props: SVGProps<SVGSVGElement>) => (
+export const EyeOpenIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -186,7 +186,7 @@ export const EyeOpen = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ImageUpload = (props: SVGProps<SVGSVGElement>) => (
+export const ImageUploadIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -221,7 +221,7 @@ export const ImageUpload = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const Email = (props: SVGProps<SVGSVGElement>) => (
+export const EmailIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -367,3 +367,54 @@ export const ZipIcon = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 );
+
+export const PlusIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={24}
+      height={24}
+      color="currentColor"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M12 4V20"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M4 12H20"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const MinusIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={24}
+      height={24}
+      color="currentColor"
+      fill="currentColor"
+      {...props}
+    >
+      <path
+        d="M20 12L4 12"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

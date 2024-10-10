@@ -1,5 +1,17 @@
 # @jamsr-ui/radio
 
+## 0.0.52
+
+### Patch Changes
+
+- fix bug
+
+## 0.0.51
+
+### Patch Changes
+
+- fix rating
+
 ## 0.0.50
 
 ### Patch Changes

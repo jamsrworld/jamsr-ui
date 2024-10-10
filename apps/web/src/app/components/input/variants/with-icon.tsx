@@ -1,5 +1,5 @@
 import { Input } from "@jamsr-ui/react";
-import { Email } from "@jamsr-ui/shared-icons";
+import { EmailIcon } from "@jamsr-ui/shared-icons";
 
 export const InputWithIcon = () => {
   return (
@@ -7,7 +7,7 @@ export const InputWithIcon = () => {
       label="Email"
       placeholder="Enter your email"
       type="email"
-      startContent={<Email />}
+      startContent={<EmailIcon />}
     />
   );
 };

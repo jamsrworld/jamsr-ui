@@ -1,5 +1,5 @@
 import { useListItem } from "@floating-ui/react";
-import { Check } from "@jamsr-ui/shared-icons";
+import { CheckIcon } from "@jamsr-ui/shared-icons";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { cn } from "@jamsr-ui/utils";
 import { useSelectContext } from "./use-select-context";
@@ -80,7 +80,7 @@ export const SelectItem = <T extends React.ElementType = "button">(
       })}
     >
       {children}
-      {isSelected && <Check className="absolute right-1" />}
+      {isSelected && <CheckIcon className="absolute right-1" />}
     </Component>
   );
 };

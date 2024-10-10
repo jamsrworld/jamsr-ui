@@ -1,5 +1,5 @@
 import { Button, Menu, MenuItem, type MenuProps } from "@jamsr-ui/react";
-import { ChevronUp, Info, SearchIcon } from "@jamsr-ui/shared-icons";
+import { ChevronUpIcon, InfoIcon, SearchIcon } from "@jamsr-ui/shared-icons";
 
 export const MenuDefault = (props: Partial<MenuProps>) => {
   return (
@@ -8,11 +8,11 @@ export const MenuDefault = (props: Partial<MenuProps>) => {
         classNames={{
           popover: "min-w-[300px]",
         }}
-        trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}
+        trigger={<Button endContent={<ChevronUpIcon />}>Open Me</Button>}
         {...props}
       >
         <MenuItem>Undo</MenuItem>
-        <MenuItem startContent={<Info className="size-5" />}>Info</MenuItem>
+        <MenuItem startContent={<InfoIcon className="size-5" />}>Info</MenuItem>
         <MenuItem
           startContent={
             <SearchIcon className="size-5 text-foreground-secondary" />

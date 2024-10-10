@@ -1,5 +1,5 @@
 import { Button, Popover, Typography } from "@jamsr-ui/react";
-import { Info } from "@jamsr-ui/shared-icons";
+import { InfoIcon } from "@jamsr-ui/shared-icons";
 
 export const PopoverDefault = () => {
   return (
@@ -7,7 +7,7 @@ export const PopoverDefault = () => {
       <Popover
         trigger={
           <Button isIconOnly>
-            <Info />
+            <InfoIcon />
           </Button>
         }
         className="p-2"

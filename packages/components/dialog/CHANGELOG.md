@@ -1,5 +1,23 @@
 # @jamsr-ui/dialog
 
+## 0.0.52
+
+### Patch Changes
+
+- fix bug
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.44
+  - @jamsr-ui/button@0.0.47
+
+## 0.0.51
+
+### Patch Changes
+
+- fix rating
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.43
+  - @jamsr-ui/button@0.0.47
+
 ## 0.0.50
 
 ### Patch Changes

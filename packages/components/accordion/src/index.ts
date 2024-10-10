@@ -6,4 +6,5 @@ export { useAccordion, type UseAccordionProps } from "./use-accordion";
 export {
   useAccordionItem,
   type UseAccordionItemProps,
+  type AccordionItemIndicatorProps,
 } from "./use-accordion-item";

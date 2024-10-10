@@ -118,6 +118,18 @@ export const useRating = (props: UseRatingProps) => {
     [styles, classNames?.helper],
   );
 
+  const getStarProps: PropGetter<ComponentProps<"svg">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        className: styles.star({
+          class: cn(classNames?.star, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.star],
+  );
+
   return {
     value,
     label,
@@ -128,9 +140,11 @@ export const useRating = (props: UseRatingProps) => {
     getLabelProps,
     getInnerWrapperProps,
     getHelperProps,
+    getStarProps,
     helperText,
     styles,
     isDisabled,
     isReadonly,
+    classNames,
   };
 };

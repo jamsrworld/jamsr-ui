@@ -1,5 +1,29 @@
 # @jamsr-ui/data-table
 
+## 0.0.23
+
+### Patch Changes
+
+- fix bug
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.22
+  - @jamsr-ui/select@0.0.58
+  - @jamsr-ui/table@0.0.24
+  - @jamsr-ui/shared-icons@0.0.44
+  - @jamsr-ui/button@0.0.47
+
+## 0.0.22
+
+### Patch Changes
+
+- fix rating
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.21
+  - @jamsr-ui/select@0.0.57
+  - @jamsr-ui/table@0.0.23
+  - @jamsr-ui/shared-icons@0.0.43
+  - @jamsr-ui/button@0.0.47
+
 ## 0.0.21
 
 ### Patch Changes

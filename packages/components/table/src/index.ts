@@ -1,3 +1,5 @@
+"use client";
+
 export { Table, type TableProps } from "./table";
 export { TableBody, type TableBodyProps } from "./table-body";
 export { TableCell, type TableCellProps } from "./table-cell";

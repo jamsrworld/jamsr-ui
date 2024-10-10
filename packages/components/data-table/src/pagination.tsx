@@ -1,10 +1,10 @@
 import { Button } from "@jamsr-ui/button";
 import { Select, SelectItem } from "@jamsr-ui/select";
 import {
-  ChevronDoubleLeft,
-  ChevronDoubleRight,
-  ChevronLeft,
-  ChevronRight,
+  ChevronDoubleLeftIcon,
+  ChevronDoubleRightIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
 } from "@jamsr-ui/shared-icons";
 import { Typography } from "@jamsr-ui/typography";
 import { type Table } from "@tanstack/react-table";
@@ -70,7 +70,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             className="_md:hidden"
           >
             <span className="sr-only">Go to first page</span>
-            <ChevronDoubleLeft />
+            <ChevronDoubleLeftIcon />
           </Button>
           <Button
             isIconOnly
@@ -79,7 +79,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             size="sm"
           >
             <span className="sr-only">Go to previous page</span>
-            <ChevronLeft />
+            <ChevronLeftIcon />
           </Button>
           <Button
             isIconOnly
@@ -88,7 +88,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             size="sm"
           >
             <span className="sr-only">Go to next page</span>
-            <ChevronRight />
+            <ChevronRightIcon />
           </Button>
           <Button
             isIconOnly
@@ -98,7 +98,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             className="_md:hidden"
           >
             <span className="sr-only">Go to last page</span>
-            <ChevronDoubleRight />
+            <ChevronDoubleRightIcon />
           </Button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
+import { AccordionCustomIcon } from "./variants/custom-icon";
 import { AccordionDefault } from "./variants/default";
 import { AccordionEndContent } from "./variants/end-content";
 import { AccordionEndContentOutside } from "./variants/end-content-outside";
@@ -38,6 +39,9 @@ const Accordion = () => {
         description="Use case of content outside the trigger is that you can add events on the outside content"
       >
         <AccordionEndContentOutside />
+      </VariantWrapper>
+      <VariantWrapper heading="Custom Icon">
+        <AccordionCustomIcon />
       </VariantWrapper>
     </VariantPage>
   );

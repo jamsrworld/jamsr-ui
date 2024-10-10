@@ -1,4 +1,4 @@
-import { Close } from "@jamsr-ui/shared-icons";
+import { CloseIcon } from "@jamsr-ui/shared-icons";
 import type { UseMultiFileUploadProps } from "./use-file-upload";
 import { useMultiFileUpload } from "./use-file-upload";
 
@@ -39,7 +39,7 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
                 onClick={(e) => handleDelete(e, item.id)}
                 {...getDeleteBtnProps()}
               >
-                <Close className="size-4" />
+                <CloseIcon className="size-4" />
               </button>
             )}
           </div>

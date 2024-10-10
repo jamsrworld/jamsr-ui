@@ -1,4 +1,4 @@
-import { Email } from "@jamsr-ui/shared-icons";
+import { EmailIcon } from "@jamsr-ui/shared-icons";
 import { SelectDefault } from "./default";
 
 export const SelectStartEndItems = () => {
@@ -6,11 +6,11 @@ export const SelectStartEndItems = () => {
     <>
       <SelectDefault startContent="$" />
       <SelectDefault endContent="%" />
-      <SelectDefault startContent={<Email />} />
-      <SelectDefault endContent={<Email />} />
+      <SelectDefault startContent={<EmailIcon />} />
+      <SelectDefault endContent={<EmailIcon />} />
       <SelectDefault
-        startContent={<Email />}
-        endContent={<Email />}
+        startContent={<EmailIcon />}
+        endContent={<EmailIcon />}
       />
     </>
   );

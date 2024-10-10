@@ -1,3 +1,3 @@
 "use client";
 
-export * from "./repeater";
+export { Repeater } from "./repeater";

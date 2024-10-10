@@ -1,4 +1,4 @@
-import { ImageUpload as FileUploadIcon } from "@jamsr-ui/shared-icons";
+import { ImageUploadIcon as FileUploadIcon } from "@jamsr-ui/shared-icons";
 import {
   cn,
   dataAttr,

@@ -14,6 +14,7 @@ export const Rating = (props: RatingProps) => {
     getLabelWrapperProps,
     getLabelProps,
     setValue,
+    getStarProps,
     value,
     label,
     helperText,
@@ -21,10 +22,12 @@ export const Rating = (props: RatingProps) => {
     styles,
     isDisabled,
     isReadonly,
+    classNames,
   } = useRating(props);
   const id = useId();
+
   return (
-    <RatingProvider value={{ styles, isDisabled, isReadonly }}>
+    <RatingProvider value={{ styles, isDisabled, isReadonly, classNames }}>
       <div {...getBaseProps()}>
         <div {...getLabelWrapperProps()}>
           {/*  eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -41,6 +44,7 @@ export const Rating = (props: RatingProps) => {
                   index={index}
                   setValue={setValue}
                   id={id}
+                  {...getStarProps()}
                 />
               );
             }}

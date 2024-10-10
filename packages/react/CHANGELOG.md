@@ -1,5 +1,61 @@
 # @jamsr-ui/react
 
+## 0.0.135
+
+### Patch Changes
+
+- fix bug
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.59
+  - @jamsr-ui/confirmation@0.0.29
+  - @jamsr-ui/file-upload@0.0.65
+  - @jamsr-ui/data-table@0.0.23
+  - @jamsr-ui/accordion@0.0.52
+  - @jamsr-ui/repeater@0.0.22
+  - @jamsr-ui/textarea@0.0.54
+  - @jamsr-ui/dialog@0.0.52
+  - @jamsr-ui/editor@0.0.51
+  - @jamsr-ui/header@0.0.50
+  - @jamsr-ui/rating@0.0.7
+  - @jamsr-ui/select@0.0.58
+  - @jamsr-ui/alert@0.0.59
+  - @jamsr-ui/input@0.0.54
+  - @jamsr-ui/radio@0.0.52
+  - @jamsr-ui/table@0.0.24
+  - @jamsr-ui/chip@0.0.51
+  - @jamsr-ui/menu@0.0.58
+  - @jamsr-ui/button@0.0.47
+  - @jamsr-ui/popover@0.0.45
+  - @jamsr-ui/tooltip@0.0.44
+
+## 0.0.134
+
+### Patch Changes
+
+- fix rating
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.58
+  - @jamsr-ui/confirmation@0.0.28
+  - @jamsr-ui/file-upload@0.0.64
+  - @jamsr-ui/data-table@0.0.22
+  - @jamsr-ui/accordion@0.0.51
+  - @jamsr-ui/repeater@0.0.21
+  - @jamsr-ui/dialog@0.0.51
+  - @jamsr-ui/editor@0.0.50
+  - @jamsr-ui/header@0.0.49
+  - @jamsr-ui/rating@0.0.6
+  - @jamsr-ui/select@0.0.57
+  - @jamsr-ui/input@0.0.53
+  - @jamsr-ui/radio@0.0.51
+  - @jamsr-ui/table@0.0.23
+  - @jamsr-ui/chip@0.0.50
+  - @jamsr-ui/menu@0.0.57
+  - @jamsr-ui/textarea@0.0.53
+  - @jamsr-ui/alert@0.0.58
+  - @jamsr-ui/button@0.0.47
+  - @jamsr-ui/popover@0.0.45
+  - @jamsr-ui/tooltip@0.0.44
+
 ## 0.0.133
 
 ### Patch Changes

@@ -1,5 +1,27 @@
 # web
 
+## 0.1.117
+
+### Patch Changes
+
+- fix bug
+- Updated dependencies
+  - @jamsr-ui/dialog@0.0.52
+  - @jamsr-ui/editor@0.0.51
+  - @jamsr-ui/shared-icons@0.0.44
+  - @jamsr-ui/react@0.0.135
+
+## 0.1.116
+
+### Patch Changes
+
+- fix rating
+- Updated dependencies
+  - @jamsr-ui/dialog@0.0.51
+  - @jamsr-ui/editor@0.0.50
+  - @jamsr-ui/shared-icons@0.0.43
+  - @jamsr-ui/react@0.0.133
+
 ## 0.1.115
 
 ### Patch Changes

@@ -1,5 +1,5 @@
 import { Button, Divider } from "@jamsr-ui/react";
-import { Email } from "@jamsr-ui/shared-icons";
+import { EmailIcon } from "@jamsr-ui/shared-icons";
 
 export const DividerOrientation = () => {
   return (
@@ -12,19 +12,19 @@ export const DividerOrientation = () => {
         <h3 className="text-base">Vertical</h3>
         <div className="flex gap-2">
           <Button isIconOnly>
-            <Email />
+            <EmailIcon />
           </Button>
           <Divider orientation="vertical" />
           <Button isIconOnly>
-            <Email />
+            <EmailIcon />
           </Button>
           <Divider orientation="vertical" />
           <Button isIconOnly>
-            <Email />
+            <EmailIcon />
           </Button>
           <Divider orientation="vertical" />
           <Button isIconOnly>
-            <Email />
+            <EmailIcon />
           </Button>
         </div>
       </div>

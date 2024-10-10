@@ -3,7 +3,7 @@ import { type useRating } from "./use-rating";
 
 type ContextType = Pick<
   ReturnType<typeof useRating>,
-  "styles" | "isDisabled" | "isReadonly"
+  "styles" | "isDisabled" | "isReadonly" | "classNames"
 >;
 
 export const [RatingProvider, useRatingContext] = createContext<ContextType>({

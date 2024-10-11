@@ -130,6 +130,7 @@ export const useSelect = (props: UseSelectProps) => {
   });
 
   const {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     refs: { setReference, setFloating },
     floatingStyles,
     context,
@@ -139,11 +140,11 @@ export const useSelect = (props: UseSelectProps) => {
     onOpenChange: setIsOpen,
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset(5),
+      offset(0),
       flip({
         crossAxis: placement.includes("-"),
         // fallbackAxisSideDirection: isMultiple ? "end" : "none",
-        padding: 10,
+        padding: 0,
       }),
       size({
         apply({ rects, elements, availableHeight }) {
@@ -152,7 +153,7 @@ export const useSelect = (props: UseSelectProps) => {
             minWidth: `${rects.reference.width}px`,
           });
         },
-        padding: 10,
+        padding: 0,
       }),
     ],
   });

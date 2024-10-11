@@ -33,6 +33,7 @@ export const Input = <T extends React.ElementType = "div">(
     children,
     getNotationProps,
     hasNotation,
+    labelPlacement,
   } = useInput(props);
   const id = useId();
 
@@ -68,16 +69,31 @@ export const Input = <T extends React.ElementType = "div">(
     showPassword,
   ]);
 
+  const getLabel = useMemo(() => {
+    return (
+      <div {...getLabelWrapperProps()}>
+        <label htmlFor={id} {...getLabelProps()}>
+          {label} {hasNotation && <span {...getNotationProps()}>*</span>}
+        </label>
+        {labelHelper}
+      </div>
+    );
+  }, [
+    getLabelProps,
+    getLabelWrapperProps,
+    getNotationProps,
+    hasNotation,
+    id,
+    label,
+    labelHelper,
+  ]);
+
   return (
     <Component data-component="input" {...getBaseProps()}>
       <div {...getMainWrapperProps()}>
-        <div {...getLabelWrapperProps()}>
-          <label htmlFor={id} {...getLabelProps()}>
-            {label} {hasNotation && <span {...getNotationProps()}>*</span>}
-          </label>
-          {labelHelper}
-        </div>
+        {labelPlacement !== "inside" && getLabel}
         <div {...getInputWrapperProps()}>
+          {labelPlacement === "inside" && getLabel}
           <div {...getInnerWrapperProps()}>
             {getStartContent}
             {children}

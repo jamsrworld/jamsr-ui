@@ -13,6 +13,7 @@ export const themeColorsLight: ThemeColors = {
     link: "#0066cc",
     secondary: "#8A8A8E",
     tertiary: "#C4C4C6",
+    ...common.zinc,
   },
   divider: {
     light: "#c9c8c9",

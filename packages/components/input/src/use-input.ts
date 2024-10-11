@@ -1,13 +1,14 @@
 import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
+  dataAttr,
   mergeProps,
   useDOMRef,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { useCallback, useMemo, type ComponentProps } from "react";
+import { useCallback, useMemo, useState, type ComponentProps } from "react";
 import {
   inputVariants,
   type InputSlots,
@@ -82,6 +83,7 @@ export const useInput = (props: UseInputProps) => {
   const Component = as ?? "div";
   const InputComponent = "input";
   const inputDOMRef = useDOMRef(ref);
+  const [isFocused, setIsFocused] = useState(false);
 
   const styles = inputVariants({
     variant,
@@ -103,6 +105,8 @@ export const useInput = (props: UseInputProps) => {
     prop: propShowPassword,
     onChange: propSetShowPassword,
   });
+
+  const isFilledWithin = value !== "" || isFocused;
 
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -141,6 +145,14 @@ export const useInput = (props: UseInputProps) => {
     inputDOMRef.current?.focus();
   }, [inputDOMRef]);
 
+  const handleOnFocus = useCallback(() => {
+    setIsFocused(true);
+  }, [setIsFocused]);
+
+  const handleOnBlur = useCallback(() => {
+    setIsFocused(false);
+  }, [setIsFocused]);
+
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -149,10 +161,12 @@ export const useInput = (props: UseInputProps) => {
           class: cn(classNames?.base, props?.className),
         }),
         ref: baseRef,
+        "data-focus": dataAttr(isFocused),
+        "data-filled-within": dataAttr(isFilledWithin),
         ...props,
       };
     },
-    [styles, classNames?.base, baseRef],
+    [styles, classNames?.base, baseRef, isFocused, isFilledWithin],
   );
 
   const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -231,15 +245,19 @@ export const useInput = (props: UseInputProps) => {
             class: cn(classNames?.inputWrapper, props?.className),
           }),
           onClick: handleFocusInput,
+          onFocus: handleOnFocus,
+          onBlur: handleOnBlur,
         }),
       };
     },
     [
       inputWrapperRef,
+      slotProps.inputWrapper,
       styles,
       classNames?.inputWrapper,
       handleFocusInput,
-      slotProps.inputWrapper,
+      handleOnFocus,
+      handleOnBlur,
     ],
   );
 

@@ -1,5 +1,11 @@
 # @jamsr-ui/select
 
+## 0.0.60
+
+### Patch Changes
+
+- fix input
+
 ## 0.0.59
 
 ### Patch Changes

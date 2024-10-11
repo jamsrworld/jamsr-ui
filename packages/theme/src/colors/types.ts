@@ -21,7 +21,7 @@ export type BaseColors = {
     secondary: string;
     tertiary: string;
   };
-  foreground: {
+  foreground: ColorScale & {
     DEFAULT: string;
     secondary: string;
     tertiary: string;

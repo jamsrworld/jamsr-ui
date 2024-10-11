@@ -2,34 +2,30 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const inputVariants = tv({
   slots: {
-    base: "flex flex-col gap-1",
+    base: "group flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground",
+    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
     mainWrapper: "flex gap-1",
     inputWrapper:
-      "w-full focus-within:border-primary focus-within:ring-primary",
-    innerWrapper: "flex items-center",
+      "grow overflow-hidden focus-within:border-primary focus-within:ring-primary",
+    innerWrapper: "flex h-full items-center",
     input:
-      "block h-full grow bg-transparent px-3 py-2 text-sm placeholder:text-sm placeholder:text-foreground-500 read-only:cursor-not-allowed  focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+      "block grow bg-transparent px-3 py-2 placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
     helper: "text-xs text-foreground-600",
     startContent:
-      "flex h-full items-center pl-2 text-foreground-tertiary empty:hidden",
-    endContent: "flex h-full items-center pr-2 text-foreground-tertiary",
+      "flex h-full items-center pl-2 text-foreground-500 empty:hidden",
+    endContent: "flex h-full items-center pr-2 text-foreground-500",
     notation: "",
   },
   variants: {
     fullWidth: {
       true: {
-        input: "w-full",
+        base: "w-full",
       },
     },
     variant: {
-      outline: {
+      outlined: {
         inputWrapper: "rounded-xl border-2 border-divider",
-      },
-      transparent: {
-        inputWrapper: "border-none bg-transparent outline-none",
-        input: "p-0",
       },
       filled: {
         inputWrapper:
@@ -39,14 +35,16 @@ export const inputVariants = tv({
     size: {
       false: {},
       sm: {
-        inputWrapper: "rounded-xl",
-        input: "h-8 min-h-8 text-sm placeholder:text-sm",
+        inputWrapper: "h-8 min-h-8 rounded-xl",
+        input: "text-sm placeholder:text-sm",
       },
       md: {
-        input: "h-10 min-h-10 text-sm placeholder:text-sm",
+        inputWrapper: "h-10 min-h-10",
+        input: "text-sm placeholder:text-sm",
       },
       lg: {
-        input: "h-12 min-h-12 text-base placeholder:text-base",
+        inputWrapper: "h-12 min-h-12",
+        input: "text-base placeholder:text-base",
       },
     },
     isInvalid: {
@@ -63,6 +61,14 @@ export const inputVariants = tv({
       },
       start: {
         mainWrapper: "items-center",
+      },
+      inside: {
+        inputWrapper: "relative",
+        innerWrapper: "items-end",
+        labelWrapper:
+          "pointer-events-none absolute inset-0 left-3 flex size-full justify-between",
+        label:
+          "absolute top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 group-data-[filled-within=true]:top-4",
       },
     },
     isTextarea: {
@@ -81,8 +87,34 @@ export const inputVariants = tv({
       },
     },
   },
+  compoundVariants: [
+    {
+      labelPlacement: "inside",
+      size: "sm",
+      className: {
+        inputWrapper: "h-[3.25rem] min-h-[3.25rem]",
+        label: "text-sm group-data-[filled-within=true]:text-xs",
+      },
+    },
+    {
+      labelPlacement: "inside",
+      size: "md",
+      className: {
+        inputWrapper: "h-14 min-h-14",
+        label: "text-sm",
+      },
+    },
+    {
+      labelPlacement: "inside",
+      size: "lg",
+      className: {
+        inputWrapper: "h-14 min-h-14",
+        label: "text-base group-data-[filled-within=true]:text-sm",
+      },
+    },
+  ],
   defaultVariants: {
-    variant: "outline",
+    variant: "outlined",
     size: "md",
     labelPlacement: "top",
   },

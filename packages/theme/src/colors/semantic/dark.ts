@@ -10,11 +10,11 @@ export const themeColorsDark: ThemeColors = {
     tertiary: "#010101",
   },
   foreground: {
-    ...common.zinc,
     DEFAULT: "#eaebec",
     link: "#0B84FF",
     secondary: "#9295a5",
     tertiary: "#8A8A8E",
+    ...swapColorValues(common.zinc),
   },
   divider: {
     light: "#4a494a",

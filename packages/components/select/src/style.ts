@@ -9,18 +9,18 @@ export const selectVariant = tv({
       "pointer-events-none",
       "flex grow flex-wrap",
     ],
-    placeholder: ["text-left", "text-foreground-500", "text-sm", "grow"],
+    placeholder: ["text-left", "text-foreground-400", "text-sm", "grow"],
     mainWrapper: "flex w-full flex-col",
     innerWrapper: "flex w-full items-center gap-2",
-    label: "mb-1 text-sm",
+    label: "mb-1 text-sm text-foreground-400",
     trigger:
       "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus-within:ring-2 focus-within:ring-primary",
     helperText: "mt-1 text-xs text-foreground-500",
     popover:
-      "z-popover flex flex-col overflow-hidden rounded-2xl border border-divider bg-background shadow-card focus:outline-none",
+      "z-popover flex flex-col overflow-hidden rounded-2xl border-2 border-divider bg-background shadow-card focus:outline-none",
     content: "overflow-y-auto p-2",
-    startContent: "",
-    endContent: "",
+    startContent: "text-foreground-500",
+    endContent: "text-foreground-500",
   },
   variants: {
     color: {
@@ -43,7 +43,8 @@ export const selectVariant = tv({
       },
       lg: {
         trigger: "h-12 min-h-12",
-        value: "text-sm",
+        value: "text-base",
+        placeholder: "text-base",
       },
     },
     isInvalid: {

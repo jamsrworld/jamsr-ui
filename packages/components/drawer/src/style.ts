@@ -1,13 +1,25 @@
-import { tv } from "@jamsr-ui/utils";
+import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const drawer = tv({
   slots: {
-    backdrop:
-      "z-backdrop !overflow-hidden backdrop-blur-sm",
-    content:
-      "absolute right-0 top-0 z-dialog h-screen  bg-background-secondary",
+    backdrop: "z-backdrop !overflow-hidden backdrop-blur-sm",
+    content: "absolute z-dialog h-screen  bg-background-secondary",
   },
   variants: {
+    anchor: {
+      left: {
+        content: "left-0 top-0",
+      },
+      right: {
+        content: "right-0 top-0",
+      },
+      top: {
+        content: "left-0 top-0",
+      },
+      bottom: {
+        content: "bottom-0 left-0",
+      },
+    },
     size: {
       xs: {
         content: "max-w-xs",
@@ -52,9 +64,21 @@ export const drawer = tv({
       },
     },
   },
+  compoundVariants: [
+    {
+      anchor: ["top", "bottom"],
+      className: {
+        content: "w-full !max-w-full",
+      },
+    },
+  ],
   defaultVariants: {
     scroll: false,
     size: "lg",
     backdrop: "blur",
+    anchor: "right",
   },
 });
+
+export type DrawerVariants = VariantProps<typeof drawer>;
+export type DrawerSlots = keyof ReturnType<typeof drawer>;

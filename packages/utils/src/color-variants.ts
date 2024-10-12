@@ -38,7 +38,7 @@ const flatClasses = {
 };
 
 const linkClasses = {
-  default: "text-default-foreground",
+  default: "text-foreground",
   primary: "text-primary",
   secondary: "text-secondary",
   success: "text-success",
@@ -47,7 +47,7 @@ const linkClasses = {
 };
 
 const lightClasses = {
-  default: "bg-transparent text-default-foreground",
+  default: "bg-transparent text-foreground",
   primary: "bg-transparent text-primary",
   secondary: "bg-transparent text-secondary",
   success: "bg-transparent text-success",

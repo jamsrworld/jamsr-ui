@@ -1,5 +1,13 @@
 # @jamsr-ui/dialog
 
+## 0.0.55
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/button@0.0.49
+  - @jamsr-ui/utils@0.0.43
+
 ## 0.0.54
 
 ### Patch Changes

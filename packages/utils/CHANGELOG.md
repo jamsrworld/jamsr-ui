@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.43
+
+### Patch Changes
+
+- fix drawer
+
 ## 0.0.42
 
 ### Patch Changes

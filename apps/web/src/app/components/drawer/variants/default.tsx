@@ -1,14 +1,23 @@
 "use client";
 
 import { useDisclosure } from "@jamsr-ui/hooks";
-import { Button, Drawer } from "@jamsr-ui/react";
+import { Button, Drawer, type DrawerProps } from "@jamsr-ui/react";
+import Link from "next/link";
 
-export const DrawerDefault = () => {
-  const { isOpen, onClose, onOpen } = useDisclosure();
+export const DrawerDefault = (props: Partial<DrawerProps>) => {
+  const { isOpen, onClose, onOpenChange, onOpen } = useDisclosure();
+  const { size, anchor } = props;
   return (
     <div>
-      <Button onClick={onOpen}>Click Me!</Button>
-      <Drawer isOpen={isOpen} className="max-w-sm p-8" onOpenChange={onClose}>
+      <Button onClick={onOpen}>{size ?? anchor ?? "Click Me!"}</Button>
+      <Drawer
+        isOpen={isOpen}
+        className="flex flex-col gap-4 p-8"
+        onOpenChange={onOpenChange}
+        {...props}
+      >
+        <Button onClick={onClose}>Close</Button>
+        <Link href="/components/accordion">Home</Link>
         <p className="mb-2 text-gray-600">
           NATURAL AND RECYCLED MATERIALS R-LENO - Recycled wool Soft,
           comfortable and light Designed to last a long time Resistant and

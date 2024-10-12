@@ -9,16 +9,91 @@ import {
   useRole,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { AnimatePresence, m } from "framer-motion";
-import { useState } from "react";
-import { drawer } from "./style";
+import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
+import { AnimatePresence, m, type Variant } from "framer-motion";
+import { type ComponentProps, useState } from "react";
+import { drawer, type DrawerSlots, type DrawerVariants } from "./style";
 
-export type DrawerProps = {
+export type DrawerProps = DrawerVariants & {
   children: React.ReactNode;
   isOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
   className?: string;
   defaultOpen?: boolean;
+  classNames?: SlotsToClasses<DrawerSlots>;
+  // @ts-expect-error framer-motion error
+  motionProps?: Partial<ComponentProps<typeof m.div>>;
+};
+
+type Anchor = NonNullable<DrawerVariants["anchor"]>;
+
+const variants: { initial: Variant; animate: Variant; exit: Variant } = {
+  initial(custom: Anchor) {
+    switch (custom) {
+      case "left":
+        return {
+          x: "-100%",
+        };
+      case "right":
+        return {
+          x: "100%",
+        };
+      case "top":
+        return {
+          y: "-100%",
+        };
+      case "bottom":
+        return {
+          y: "100%",
+        };
+      default:
+        return {};
+    }
+  },
+  animate(custom: Anchor) {
+    switch (custom) {
+      case "left":
+        return {
+          x: 0,
+        };
+      case "right":
+        return {
+          x: 0,
+        };
+      case "top":
+        return {
+          y: 0,
+        };
+      case "bottom":
+        return {
+          y: 0,
+        };
+      default:
+        return {};
+    }
+  },
+  exit(custom: Anchor) {
+    switch (custom) {
+      case "left":
+        return {
+          x: "-100%",
+        };
+      case "right":
+        return {
+          x: "100%",
+        };
+      case "top":
+        return {
+          y: "-100%",
+        };
+      case "bottom":
+        return {
+          y: "100%",
+        };
+      default:
+        return {};
+    }
+  },
 };
 
 export const Drawer = (props: DrawerProps) => {
@@ -29,6 +104,11 @@ export const Drawer = (props: DrawerProps) => {
     defaultOpen,
     onOpenChange,
     className,
+    anchor = "right",
+    backdrop,
+    classNames,
+    size,
+    motionProps,
   } = props;
 
   const [isOpen, setIsOpen] = useControlledState({
@@ -54,7 +134,11 @@ export const Drawer = (props: DrawerProps) => {
   const role = useRole(context);
   const interactions = useInteractions([click, dismiss, role]);
 
-  const styles = drawer({});
+  const styles = drawer({
+    anchor,
+    backdrop,
+    size,
+  });
   const handleAnimationStart = () => {
     setIsAnimating(true);
   };
@@ -65,10 +149,15 @@ export const Drawer = (props: DrawerProps) => {
 
   return (
     <div data-component="drawer">
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {isOpen && (
           <FloatingPortal>
-            <FloatingOverlay lockScroll className={styles.backdrop()}>
+            <FloatingOverlay
+              lockScroll
+              className={styles.backdrop({
+                className: classNames?.backdrop,
+              })}
+            >
               <FloatingFocusManager
                 context={context}
                 disabled={isAnimating}
@@ -76,26 +165,25 @@ export const Drawer = (props: DrawerProps) => {
               >
                 {/* @ts-expect-error framer motion error */}
                 <m.div
+                  variants={variants}
                   key="modal"
-                  initial={{ x: "100%" }}
-                  animate={{
-                    x: 0,
-                  }}
-                  exit={{
-                    x: "100%",
-                  }}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  custom={anchor}
                   className={styles.content({
-                    className,
+                    className: cn(className, classNames?.backdrop),
                   })}
                   transition={{
                     type: "spring",
                     bounce: 0,
-                    duration: 0.4,
+                    duration: 0.6,
                   }}
                   onAnimationStart={handleAnimationStart}
                   onAnimationComplete={handleAnimationComplete}
                   ref={setFloating}
                   {...interactions.getFloatingProps()}
+                  {...motionProps}
                 >
                   {children}
                 </m.div>

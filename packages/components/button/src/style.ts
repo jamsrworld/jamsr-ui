@@ -106,7 +106,7 @@ const lightVariant: CompoundVariant<ButtonVariantProps>[] = [
   {
     variant: "light",
     color: "default",
-    class: [colorVariants.light.default, "data-[hover=true]:bg-default/40"],
+    class: [colorVariants.light.default, "data-[hover=true]:bg-default/20"],
   },
   {
     variant: "light",
@@ -264,6 +264,10 @@ export const buttonVariant = tv({
       disableAnimation: false,
       size: "lg",
       class: "data-[pressed=true]:scale-[0.98]",
+    },
+    {
+      variant: "link",
+      className: "hover:opacity-70",
     },
     ...solidVariant,
     ...lightVariant,

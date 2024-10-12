@@ -1,5 +1,15 @@
 # @jamsr-ui/button
 
+## 0.0.49
+
+### Patch Changes
+
+- fix drawer
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.43
+  - @jamsr-ui/progress@0.0.46
+  - @jamsr-ui/ripple@0.0.47
+
 ## 0.0.48
 
 ### Patch Changes

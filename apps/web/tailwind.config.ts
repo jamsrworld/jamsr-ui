@@ -12,14 +12,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        // background: "red",
-      },
+      colors: {},
     },
   },
   plugins: [
     ...jamsrui({
-      
+      // colors: {
+      //   light: {
+      //     default: {
+      //       foreground: "#fff",
+      //       DEFAULT: "#000",
+      //     },
+      //   },
+      // },
     }),
   ],
 };

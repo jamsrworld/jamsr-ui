@@ -1,5 +1,13 @@
 # @jamsr-ui/tab
 
+## 0.0.64
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.45
+  - @jamsr-ui/card@0.0.58
+
 ## 0.0.63
 
 ### Patch Changes

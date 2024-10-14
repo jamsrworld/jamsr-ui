@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/drawer",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

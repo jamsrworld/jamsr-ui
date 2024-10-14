@@ -4,13 +4,13 @@ import {
   cn,
   dataAttr,
   isEmpty,
+  mergeClassNames,
   mergeProps,
   useDOMRef,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { mergeClassNames } from "@jamsr-ui/utils/src/class-name";
 import { useCallback, useMemo, useState, type ComponentProps } from "react";
 import {
   inputVariants,

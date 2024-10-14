@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/core",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "main": "src/index.tsx",
   "sideEffects": false,
   "keywords": [],
@@ -20,10 +20,11 @@
   },
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:^",
+    "@jamsr-ui/input": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.0",
-    "@jamsr-ui/utils": "workspace:^",
     "react": "19.0.0-rc-0751fac7-20241002",
     "react-dom": "19.0.0-rc-0751fac7-20241002"
   },

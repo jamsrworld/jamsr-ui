@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.25
+
+### Patch Changes
+
+- fix input
+
 ## 0.0.24
 
 ### Patch Changes

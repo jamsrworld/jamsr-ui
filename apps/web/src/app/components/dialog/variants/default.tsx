@@ -8,6 +8,7 @@ import {
   DialogHeader,
 } from "@jamsr-ui/react";
 import { useState } from "react";
+import { AccordionDefault } from "../../accordion/variants/default";
 
 export const DialogDefault = () => {
   const [open, setOpen] = useState(false);
@@ -15,13 +16,13 @@ export const DialogDefault = () => {
   return (
     <div>
       <Button onClick={handleClick}>Open Me</Button>
-      <Dialog
-        isOpen={open}
-        onOpenChange={setOpen}
-      >
+      <Dialog isOpen={open} onOpenChange={setOpen}>
         <DialogContent>
           <DialogHeader>Im am dialog Heading</DialogHeader>
-          <DialogBody>I am dialog content!</DialogBody>
+          <DialogBody>
+            I am dialog content!
+            <AccordionDefault />
+          </DialogBody>
         </DialogContent>
       </Dialog>
     </div>

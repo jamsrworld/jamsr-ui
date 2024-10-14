@@ -2,6 +2,7 @@ import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
   dataAttr,
+  isEmpty,
   mergeProps,
   useDOMRef,
   type PropGetter,
@@ -77,6 +78,7 @@ export const useInput = (props: UseInputProps) => {
     isRequired = false,
     isOptional = false,
     slotProps = {},
+    placeholder,
     ...restProps
   } = props;
 
@@ -106,7 +108,14 @@ export const useInput = (props: UseInputProps) => {
     onChange: propSetShowPassword,
   });
 
-  const isFilledWithin = value !== "" || isFocused;
+  const isFilledWithin =
+    !isEmpty(placeholder) ||
+    !isEmpty(value) ||
+    !isEmpty(startContent) ||
+    isFocused;
+  const hasLabel = !isEmpty(label) || !isEmpty(labelHelperContent);
+  const hasStartContent = !isEmpty(startContent);
+  const hasEndContent = !isEmpty(endContent);
 
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -163,10 +172,22 @@ export const useInput = (props: UseInputProps) => {
         ref: baseRef,
         "data-focus": dataAttr(isFocused),
         "data-filled-within": dataAttr(isFilledWithin),
+        "data-has-label": dataAttr(hasLabel),
+        "data-has-start-content": dataAttr(hasStartContent),
+        "data-has-end-content": dataAttr(hasEndContent),
         ...props,
       };
     },
-    [styles, classNames?.base, baseRef, isFocused, isFilledWithin],
+    [
+      styles,
+      classNames?.base,
+      baseRef,
+      isFocused,
+      isFilledWithin,
+      hasLabel,
+      hasStartContent,
+      hasEndContent,
+    ],
   );
 
   const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -305,6 +326,7 @@ export const useInput = (props: UseInputProps) => {
         value: fValue,
         onChange: handleInputChange,
         type: inputType,
+        placeholder,
         ...restProps,
         ...props,
         ref: inputDOMRef,
@@ -318,6 +340,7 @@ export const useInput = (props: UseInputProps) => {
       className,
       handleInputChange,
       inputType,
+      placeholder,
       restProps,
       inputDOMRef,
     ],

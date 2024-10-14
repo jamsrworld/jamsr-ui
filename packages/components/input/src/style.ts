@@ -9,12 +9,14 @@ export const inputVariants = tv({
     inputWrapper:
       "grow overflow-hidden focus-within:border-primary focus-within:ring-primary",
     innerWrapper: "flex h-full items-center",
-    input:
+    input: [
       "block grow bg-transparent px-3 py-2 placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+      "group-data-[has-start-content=true]:pl-2",
+      "group-data-[has-end-content=true]:pr-2",
+    ],
     helper: "text-xs text-foreground-600",
-    startContent:
-      "flex h-full items-center pl-2 text-foreground-500 empty:hidden",
-    endContent: "flex h-full items-center pr-2 text-foreground-500",
+    startContent: "pl-2 leading-[0] text-foreground-500",
+    endContent: "pr-2 leading-[0] text-foreground-500",
     notation: "",
   },
   variants: {
@@ -64,11 +66,11 @@ export const inputVariants = tv({
       },
       inside: {
         inputWrapper: "relative",
-        innerWrapper: "items-end",
+        innerWrapper: "group-data-[has-label=true]:items-end",
         labelWrapper:
-          "pointer-events-none absolute inset-0 left-3 flex size-full justify-between",
+          "pointer-events-none absolute inset-0 flex size-full items-start justify-between",
         label:
-          "absolute top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 group-data-[filled-within=true]:top-4",
+          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 group-data-[filled-within=true]:top-4",
       },
     },
     isTextarea: {
@@ -101,7 +103,7 @@ export const inputVariants = tv({
       size: "md",
       className: {
         inputWrapper: "h-14 min-h-14",
-        label: "text-sm",
+        label: "text-sm group-data-[filled-within=true]:text-xs",
       },
     },
     {
@@ -109,7 +111,8 @@ export const inputVariants = tv({
       size: "lg",
       className: {
         inputWrapper: "h-14 min-h-14",
-        label: "text-base group-data-[filled-within=true]:text-sm",
+        label: "text-base group-data-[filled-within=true]:text-xs",
+        input: "py-1",
       },
     },
   ],

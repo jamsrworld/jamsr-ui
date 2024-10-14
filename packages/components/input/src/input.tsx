@@ -75,7 +75,8 @@ export const Input = <T extends React.ElementType = "div">(
         <label htmlFor={id} {...getLabelProps()}>
           {label} {hasNotation && <span {...getNotationProps()}>*</span>}
         </label>
-        {labelHelper}
+        <div />
+        <div>{labelHelper}</div>
       </div>
     );
   }, [

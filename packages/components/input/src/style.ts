@@ -6,8 +6,11 @@ export const inputVariants = tv({
     labelWrapper: "flex items-center gap-2",
     label: "shrink-0 select-none text-sm font-normal text-foreground-400",
     mainWrapper: "flex gap-1",
-    inputWrapper:
-      "grow overflow-hidden focus-within:border-primary focus-within:ring-primary",
+    inputWrapper: [
+      "grow overflow-hidden",
+      "hover:border-default-400",
+      "group-data-[focus=true]:border-primary group-data-[focus=true]:ring-primary",
+    ],
     innerWrapper: "flex h-full items-center",
     input: [
       "block grow bg-transparent px-3 py-2 placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
@@ -51,8 +54,7 @@ export const inputVariants = tv({
     },
     isInvalid: {
       true: {
-        inputWrapper:
-          "border-danger focus-within:border-danger focus-within:shadow-danger focus-within:ring-danger",
+        inputWrapper: "!border-danger",
         helper: "text-danger",
         label: "text-danger",
       },

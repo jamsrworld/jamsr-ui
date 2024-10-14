@@ -140,7 +140,7 @@ export const useSelect = (props: UseSelectProps) => {
     onOpenChange: setIsOpen,
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset(0),
+      offset(2),
       flip({
         crossAxis: placement.includes("-"),
         // fallbackAxisSideDirection: isMultiple ? "end" : "none",

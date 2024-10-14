@@ -17,7 +17,7 @@ export const selectVariant = tv({
       "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus-within:ring-2 focus-within:ring-primary",
     helperText: "mt-1 text-xs text-foreground-500",
     popover:
-      "z-popover flex flex-col overflow-hidden rounded-2xl border-2 border-divider bg-background shadow-card focus:outline-none",
+      "z-popover flex flex-col overflow-hidden rounded-2xl border border-divider bg-content1 shadow-sm focus:outline-none",
     content: "overflow-y-auto p-2",
     startContent: "text-foreground-500",
     endContent: "text-foreground-500",

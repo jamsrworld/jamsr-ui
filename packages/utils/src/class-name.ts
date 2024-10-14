@@ -14,3 +14,30 @@ const tw = extendTailwindMerge({
 export const cn = (...inputs: ClassValue[]) => {
   return tw(clsx(inputs));
 };
+
+export const mergeClassNames = <T extends Record<string, any>>(
+  left?: T,
+  right?: T,
+) => {
+  if (!left && !right) return {} as T;
+  if (!left) return right;
+  if (!right) return left;
+  const merged: T = {} as T;
+
+  for (const key in left) {
+    if (right.hasOwnProperty(key)) {
+      // @ts-ignore
+      merged[key] = cn(left[key], right[key]);
+    } else {
+      merged[key] = left[key];
+    }
+  }
+
+  for (const key in right) {
+    if (!left.hasOwnProperty(key)) {
+      merged[key] = right[key];
+    }
+  }
+
+  return merged;
+};

@@ -1,3 +1,4 @@
+import { useUIStyle } from "@jamsr-ui/core";
 import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
@@ -9,6 +10,7 @@ import {
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
+import { mergeClassNames } from "@jamsr-ui/utils/src/class-name";
 import { useCallback, useMemo, useState, type ComponentProps } from "react";
 import {
   inputVariants,
@@ -53,7 +55,7 @@ export const useInput = (props: UseInputProps) => {
     labelPlacement,
     labelHelperContent,
     className,
-    classNames,
+    classNames: propClassNames,
     size,
     mask,
     defaultValue,
@@ -81,6 +83,8 @@ export const useInput = (props: UseInputProps) => {
     placeholder,
     ...restProps
   } = props;
+  const { input } = useUIStyle();
+  const classNames = mergeClassNames(input?.classNames, propClassNames);
 
   const Component = as ?? "div";
   const InputComponent = "input";

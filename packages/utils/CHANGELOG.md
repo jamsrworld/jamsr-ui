@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.44
+
+### Patch Changes
+
+- feat:style theme provider
+
 ## 0.0.43
 
 ### Patch Changes

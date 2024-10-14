@@ -1,5 +1,17 @@
 # web
 
+## 0.1.123
+
+### Patch Changes
+
+- feat:style theme provider
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.44
+  - @jamsr-ui/core@0.0.24
+  - @jamsr-ui/editor@0.0.55
+  - @jamsr-ui/react@0.0.141
+  - @jamsr-ui/dialog@0.0.56
+
 ## 0.1.122
 
 ### Patch Changes

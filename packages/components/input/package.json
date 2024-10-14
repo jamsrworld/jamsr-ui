@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/input",
-  "version": "0.0.57",
+  "version": "0.0.58",
   "description": "",
   "main": "./src/index.ts",
   "sideEffects": false,
@@ -27,15 +27,16 @@
     "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "react-dom": "19.0.0-rc-0751fac7-20241002",
-    "react": "19.0.0-rc-0751fac7-20241002"
+    "react": "19.0.0-rc-0751fac7-20241002",
+    "react-dom": "19.0.0-rc-0751fac7-20241002"
   },
   "peerDependencies": {
-    "react-dom": "19.0.0-rc-0751fac7-20241002",
-    "react": "19.0.0-rc-0751fac7-20241002"
+    "react": "19.0.0-rc-0751fac7-20241002",
+    "react-dom": "19.0.0-rc-0751fac7-20241002"
   },
   "dependencies": {
     "@jamsr-ui/button": "workspace:^",
+    "@jamsr-ui/core": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"

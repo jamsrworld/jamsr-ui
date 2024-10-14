@@ -1,5 +1,16 @@
 # @jamsr-ui/select
 
+## 0.0.62
+
+### Patch Changes
+
+- feat:style theme provider
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.44
+  - @jamsr-ui/button@0.0.50
+  - @jamsr-ui/chip@0.0.54
+  - @jamsr-ui/popover@0.0.48
+
 ## 0.0.61
 
 ### Patch Changes

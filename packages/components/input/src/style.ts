@@ -4,7 +4,7 @@ export const inputVariants = tv({
   slots: {
     base: "group flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
+    label: "text-foreground-400 shrink-0 select-none text-sm font-normal",
     mainWrapper: "flex gap-1",
     inputWrapper: [
       "grow overflow-hidden",
@@ -13,13 +13,13 @@ export const inputVariants = tv({
     ],
     innerWrapper: "flex h-full items-center",
     input: [
-      "block grow bg-transparent px-3 py-2 placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+      "placeholder:text-foreground-400 block grow bg-transparent px-3 py-2 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
       "group-data-[has-start-content=true]:pl-2",
       "group-data-[has-end-content=true]:pr-2",
     ],
-    helper: "text-xs text-foreground-600",
-    startContent: "pl-2 leading-[0] text-foreground-500",
-    endContent: "pr-2 leading-[0] text-foreground-500",
+    helper: "text-foreground-600 text-xs",
+    startContent: "text-foreground-500 pl-2 leading-[0]",
+    endContent: "text-foreground-500 pr-2 leading-[0]",
     notation: "",
   },
   variants: {
@@ -30,11 +30,11 @@ export const inputVariants = tv({
     },
     variant: {
       outlined: {
-        inputWrapper: "rounded-xl border-2 border-divider",
+        inputWrapper: "border-divider rounded-xl border-2",
       },
       filled: {
         inputWrapper:
-          "rounded-xl border-2 border-divider bg-background-secondary",
+          "border-divider bg-background-secondary rounded-xl border-2",
       },
     },
     size: {
@@ -72,7 +72,7 @@ export const inputVariants = tv({
         labelWrapper:
           "pointer-events-none absolute inset-0 flex size-full items-start justify-between",
         label:
-          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 group-data-[filled-within=true]:top-4",
+          "text-foreground-400 absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-200 group-data-[filled-within=true]:top-4",
       },
     },
     isTextarea: {

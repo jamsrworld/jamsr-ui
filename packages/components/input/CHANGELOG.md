@@ -1,5 +1,15 @@
 # @jamsr-ui/input
 
+## 0.0.58
+
+### Patch Changes
+
+- feat:style theme provider
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.44
+  - @jamsr-ui/core@0.0.24
+  - @jamsr-ui/button@0.0.50
+
 ## 0.0.57
 
 ### Patch Changes

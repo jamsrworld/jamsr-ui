@@ -506,14 +506,14 @@ importers:
   packages/components/confirmation:
     dependencies:
       '@jamsr-ui/button':
-        specifier: ^0.0.49
-        version: 0.0.49(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+        specifier: ^0.0.50
+        version: 0.0.50(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
       '@jamsr-ui/dialog':
         specifier: workspace:^
         version: link:../dialog
       '@jamsr-ui/divider':
-        specifier: ^0.0.47
-        version: 0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+        specifier: ^0.0.48
+        version: 0.0.48(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
       zustand:
         specifier: ^4.5.4
         version: 4.5.5(@types/react@18.3.3)(react@19.0.0-rc-0751fac7-20241002)
@@ -876,6 +876,9 @@ importers:
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
+      '@jamsr-ui/core':
+        specifier: workspace:^
+        version: link:../../core
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
@@ -1343,8 +1346,8 @@ importers:
         version: 2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)
     devDependencies:
       '@jamsr-ui/button':
-        specifier: ^0.0.49
-        version: 0.0.49(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+        specifier: ^0.0.50
+        version: 0.0.50(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -1492,6 +1495,12 @@ importers:
 
   packages/core:
     devDependencies:
+      '@jamsr-ui/eslint-config':
+        specifier: workspace:^
+        version: link:../config/eslint-config
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../utils
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -2463,14 +2472,14 @@ packages:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
 
-  '@jamsr-ui/button@0.0.49':
-    resolution: {integrity: sha512-+GRs2eo35vIOF2xg6CK+vMsTpBiXTnvQEuaHJ8dRgTHrjgCpRLTLcZEYv4SqwOyLxmtosKJMOgZvnJHFszECDQ==}
+  '@jamsr-ui/button@0.0.50':
+    resolution: {integrity: sha512-pMrgW2Cg9UHdSAPi7/v1dYyTX9m65OCRkRaQzy6wsV33luE37Xu0+uFD8W6Gnx37ClHauVKDrOcwW1yOf7hdyQ==}
     peerDependencies:
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002
 
-  '@jamsr-ui/divider@0.0.47':
-    resolution: {integrity: sha512-WMS/2raVSwER6zp5q5GN1Cv916JMECpcT+IejhQzrznh2lW7yAEQaBWXFGR2NB7WLjNrEyl9IaGCxu/2+Pw6vw==}
+  '@jamsr-ui/divider@0.0.48':
+    resolution: {integrity: sha512-b/4Z8vxrjTlB2Q1O11QWFBvMC7T3o34TIk1EWPsxNodTqQnmelynCrnEEhv/AOe/wRLW5kwWNEifLJDKNDp1mA==}
     peerDependencies:
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002
@@ -2481,21 +2490,21 @@ packages:
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002
 
-  '@jamsr-ui/progress@0.0.46':
-    resolution: {integrity: sha512-bY8PIBRsyBONfHko0ovUTu46k7DhFgha5lHF1qc80pDkUObnshuMovwKkH9JRC9h2k0p5YC3aM6fF5LwydspEQ==}
+  '@jamsr-ui/progress@0.0.47':
+    resolution: {integrity: sha512-dNDEVBEaPQxQoKN4BbfasDWp4OANS9jrzeL/yCxf3IGFWicP4rz/HTOjuojdu07xngZgflRcNBPBcXSUN1naxQ==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.0
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002
 
-  '@jamsr-ui/ripple@0.0.47':
-    resolution: {integrity: sha512-up6JMdCcrVjyZzGWfsXPVSB1acGtunnNmTbLKu5CaY+PYH/ptsI8Qga+lYy/YwmsP7YI2U/PdJqvZ9FZdrk25w==}
+  '@jamsr-ui/ripple@0.0.48':
+    resolution: {integrity: sha512-h0G1se9nErrcpclqE8w+9gEVr+rsU+Lzil4E43xqQjjS1fiUdIkslYJi7xbLY/pMYEpoatXtnESnEkqJKzjHXQ==}
     peerDependencies:
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002
 
-  '@jamsr-ui/utils@0.0.43':
-    resolution: {integrity: sha512-WoipmBsKf/8cShdhlhFBAT22VPbQgfYGRITpN5HzX61FrMGxFEQVHU85wZnmqHIrkRUcmngzjOKYlxLND6v21g==}
+  '@jamsr-ui/utils@0.0.44':
+    resolution: {integrity: sha512-jaLTU02DPS2lBmi+qj1UzAaZVbjn1JJZUtsKsR6Hm6k9UvFe3quNQhTvObOgk5jV5D/Ipv+F+bF7khI88A1Zrg==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.0
       react: 19.0.0-rc-0751fac7-20241002
@@ -7500,20 +7509,20 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@jamsr-ui/button@0.0.49(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
+  '@jamsr-ui/button@0.0.50(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
     dependencies:
-      '@jamsr-ui/progress': 0.0.46(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
-      '@jamsr-ui/ripple': 0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
-      '@jamsr-ui/utils': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+      '@jamsr-ui/progress': 0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+      '@jamsr-ui/ripple': 0.0.48(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+      '@jamsr-ui/utils': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002)
     transitivePeerDependencies:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/divider@0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
+  '@jamsr-ui/divider@0.0.48(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
     dependencies:
-      '@jamsr-ui/utils': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+      '@jamsr-ui/utils': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002)
     transitivePeerDependencies:
@@ -7525,26 +7534,26 @@ snapshots:
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002)
 
-  '@jamsr-ui/progress@0.0.46(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
+  '@jamsr-ui/progress@0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
     dependencies:
-      '@jamsr-ui/utils': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+      '@jamsr-ui/utils': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
       framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002)
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/ripple@0.0.47(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
+  '@jamsr-ui/ripple@0.0.48(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
     dependencies:
       '@jamsr-ui/hooks': 0.0.33(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)
-      '@jamsr-ui/utils': 0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
+      '@jamsr-ui/utils': 0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)
       react: 19.0.0-rc-0751fac7-20241002
       react-dom: 19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002)
     transitivePeerDependencies:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/utils@0.0.43(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
+  '@jamsr-ui/utils@0.0.44(framer-motion@12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002))(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)(tailwindcss@3.4.13)':
     dependencies:
       clsx: 2.1.1
       framer-motion: 12.0.0-alpha.0(react-dom@19.0.0-rc-0751fac7-20241002(react@19.0.0-rc-0751fac7-20241002))(react@19.0.0-rc-0751fac7-20241002)
@@ -9656,8 +9665,8 @@ snapshots:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.1)(typescript@5.6.2)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.0(eslint@8.57.1)
       eslint-plugin-react: 7.37.1(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
@@ -9685,19 +9694,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 8.57.1
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
@@ -9714,14 +9723,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.1)(typescript@5.6.2)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -9764,7 +9773,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -9775,7 +9784,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3

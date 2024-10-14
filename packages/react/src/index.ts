@@ -1,6 +1,5 @@
 export * from "@jamsr-ui/accordion";
 export * from "@jamsr-ui/alert";
-export * from "@jamsr-ui/drawer";
 export * from "@jamsr-ui/autocomplete";
 export * from "@jamsr-ui/avatar";
 export * from "@jamsr-ui/badge";
@@ -12,6 +11,7 @@ export * from "@jamsr-ui/confirmation";
 export * from "@jamsr-ui/data-table";
 export * from "@jamsr-ui/dialog";
 export * from "@jamsr-ui/divider";
+export * from "@jamsr-ui/drawer";
 export * from "@jamsr-ui/editor";
 export * from "@jamsr-ui/file-upload";
 export * from "@jamsr-ui/header";
@@ -36,4 +36,4 @@ export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
 
 // Provider
-export { UIProvider } from "@jamsr-ui/core";
+export * from "@jamsr-ui/core";

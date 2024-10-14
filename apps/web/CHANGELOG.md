@@ -1,5 +1,15 @@
 # web
 
+## 0.1.125
+
+### Patch Changes
+
+- fix react exporst
+- Updated dependencies
+  - @jamsr-ui/react@0.0.143
+  - @jamsr-ui/core@0.0.26
+  - @jamsr-ui/editor@0.0.57
+
 ## 0.1.124
 
 ### Patch Changes

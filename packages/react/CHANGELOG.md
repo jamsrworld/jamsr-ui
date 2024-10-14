@@ -1,5 +1,17 @@
 # @jamsr-ui/react
 
+## 0.0.143
+
+### Patch Changes
+
+- fix react exporst
+- Updated dependencies
+  - @jamsr-ui/core@0.0.26
+  - @jamsr-ui/input@0.0.60
+  - @jamsr-ui/autocomplete@0.0.65
+  - @jamsr-ui/editor@0.0.57
+  - @jamsr-ui/textarea@0.0.60
+
 ## 0.0.142
 
 ### Patch Changes

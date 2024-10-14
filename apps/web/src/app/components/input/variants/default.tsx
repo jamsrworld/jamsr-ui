@@ -1,5 +1,4 @@
-import { UIStyleProvider } from "@jamsr-ui/core";
-import { Input } from "@jamsr-ui/react";
+import { Input, UIStyleProvider } from "@jamsr-ui/react";
 
 export const InputDefault = () => {
   return (

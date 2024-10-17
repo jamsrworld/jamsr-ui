@@ -9,6 +9,5 @@ type Props = {
 
 export const AppProvider = (props: Props) => {
   const { children } = props;
-  // TODO: fix with ui provide
   return <UIProvider>{children}</UIProvider>;
 };

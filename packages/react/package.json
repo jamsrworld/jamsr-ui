@@ -45,7 +45,7 @@
     "autoprefixer": "^10.4.19",
     "clean-package": "^2.2.0",
     "eslint": "^8",
-    "framer-motion": "12.0.0-alpha.0",
+    "framer-motion": "12.0.0-alpha.1",
     "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
     "react": "19.0.0-rc-0751fac7-20241002",
@@ -94,7 +94,7 @@
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {
-    "framer-motion": "12.0.0-alpha.0",
+    "framer-motion": "12.0.0-alpha.1",
     "react": "19.0.0-rc-0751fac7-20241002"
   },
   "clean-package": "../../clean-package.config.json"

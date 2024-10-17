@@ -18,6 +18,7 @@ export const isEmpty = (value: unknown) => {
   if (Array.isArray(value)) {
     return value.length === 0;
   }
+  if(typeof value === "number" && value === 0) return true;
   if (!value) return true;
   return false;
 };

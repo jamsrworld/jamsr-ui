@@ -52,7 +52,6 @@ export const useInput = (props: UseInputProps) => {
   const {
     as,
     label,
-    labelPlacement,
     labelHelperContent,
     className,
     classNames: propClassNames,
@@ -69,8 +68,8 @@ export const useInput = (props: UseInputProps) => {
     startContent,
     endContent,
     onChange,
-    fullWidth,
-    variant,
+    fullWidth = false,
+    variant = "standard",
     helperText,
     precision = 2,
     baseRef,
@@ -81,6 +80,8 @@ export const useInput = (props: UseInputProps) => {
     isOptional = false,
     slotProps = {},
     placeholder,
+    isFilled,
+    isTextarea,
     ...restProps
   } = props;
   const { input } = useUIStyle();
@@ -95,10 +96,11 @@ export const useInput = (props: UseInputProps) => {
     variant,
     size,
     isInvalid,
-    labelPlacement,
     fullWidth,
     isRequired,
     isOptional,
+    isFilled,
+    isTextarea,
   });
 
   const [value = "", setValue] = useControlledState({
@@ -270,8 +272,6 @@ export const useInput = (props: UseInputProps) => {
             class: cn(classNames?.inputWrapper, props?.className),
           }),
           onClick: handleFocusInput,
-          onFocus: handleOnFocus,
-          onBlur: handleOnBlur,
         }),
       };
     },
@@ -281,8 +281,6 @@ export const useInput = (props: UseInputProps) => {
       styles,
       classNames?.inputWrapper,
       handleFocusInput,
-      handleOnFocus,
-      handleOnBlur,
     ],
   );
 
@@ -334,6 +332,8 @@ export const useInput = (props: UseInputProps) => {
         ...restProps,
         ...props,
         ref: inputDOMRef,
+        onFocus: handleOnFocus,
+        onBlur: handleOnBlur,
       };
     },
     [
@@ -347,6 +347,8 @@ export const useInput = (props: UseInputProps) => {
       placeholder,
       restProps,
       inputDOMRef,
+      handleOnFocus,
+      handleOnBlur,
     ],
   );
 
@@ -374,7 +376,7 @@ export const useInput = (props: UseInputProps) => {
     helperText,
     startContent,
     endContent,
-    labelPlacement,
+    variant,
     isInvalid,
     isSecuredText,
     showPassword,

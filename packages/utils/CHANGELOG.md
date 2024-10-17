@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.46
+
+### Patch Changes
+
+- improvements
+
 ## 0.0.45
 
 ### Patch Changes

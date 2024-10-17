@@ -3,15 +3,14 @@ import {
   forwardRef,
   useId,
   type ChangeEvent,
-  type ComponentPropsWithoutRef,
+  type ComponentProps,
   type ForwardedRef,
 } from "react";
 import { CheckboxCheckIcon } from "./checkbox-check-icon";
 import { Label, type CheckboxLabelProps } from "./label";
 
-export type CheckboxProps = ComponentPropsWithoutRef<"input"> & {
+export type CheckboxProps = ComponentProps<"input"> & {
   label: React.ReactNode;
-  indeterminate?: boolean;
   labelProps?: Omit<CheckboxLabelProps, "id">;
   onCheckedChange: (checked: boolean) => void;
 };
@@ -26,7 +25,6 @@ const CheckboxInner = (
     onChange,
     defaultChecked,
     label,
-    indeterminate,
     labelProps,
     onCheckedChange,
     ...restProps
@@ -44,8 +42,7 @@ const CheckboxInner = (
   };
 
   return (
-    <button
-      type="button"
+    <div
       className="flex items-center gap-2"
       data-component="checkbox"
       data-slot="base"
@@ -60,15 +57,12 @@ const CheckboxInner = (
           onChange={handleChange}
           {...restProps}
         />
-        <CheckboxCheckIcon
-          indeterminate={indeterminate}
-          isChecked={Boolean(checked)}
-        />
+        <CheckboxCheckIcon isChecked={Boolean(checked)} />
       </div>
-      <Label className="cursor-pointer" id={id} {...labelProps}>
+      <Label id={id} {...labelProps}>
         {label}
       </Label>
-    </button>
+    </div>
   );
 };
 

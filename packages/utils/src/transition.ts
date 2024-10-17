@@ -5,7 +5,6 @@ export const TRANSITION_VARIANTS = {
     enter: {
       opacity: 1,
       height: "auto",
-      filter: "blur(0px)",
       transition: {
         type: "spring",
         duration: 0.6,
@@ -14,7 +13,6 @@ export const TRANSITION_VARIANTS = {
     exit: {
       opacity: 0,
       height: 0,
-      filter: "blur(2px)",
       transition: {
         type: "spring",
         duration: 0.6,

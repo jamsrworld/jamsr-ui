@@ -33,7 +33,7 @@ export const Input = <T extends React.ElementType = "div">(
     children,
     getNotationProps,
     hasNotation,
-    labelPlacement,
+    variant,
   } = useInput(props);
   const id = useId();
 
@@ -75,8 +75,7 @@ export const Input = <T extends React.ElementType = "div">(
         <label htmlFor={id} {...getLabelProps()}>
           {label} {hasNotation && <span {...getNotationProps()}>*</span>}
         </label>
-        <div />
-        <div>{labelHelper}</div>
+        {labelHelper}
       </div>
     );
   }, [
@@ -92,9 +91,9 @@ export const Input = <T extends React.ElementType = "div">(
   return (
     <Component data-component="input" {...getBaseProps()}>
       <div {...getMainWrapperProps()}>
-        {labelPlacement !== "inside" && getLabel}
+        {variant === "standard" && getLabel}
         <div {...getInputWrapperProps()}>
-          {labelPlacement === "inside" && getLabel}
+          {variant === "outlined" && getLabel}
           <div {...getInnerWrapperProps()}>
             {getStartContent}
             {children}
@@ -103,7 +102,7 @@ export const Input = <T extends React.ElementType = "div">(
           </div>
         </div>
       </div>
-      <div {...getHelperProps()}>{helperText}</div>
+      {helperText && <div {...getHelperProps()}>{helperText}</div>}
     </Component>
   );
 };

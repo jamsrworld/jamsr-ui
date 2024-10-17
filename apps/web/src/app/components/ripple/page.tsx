@@ -1,6 +1,7 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
+import { RippleAtCenter } from "./variants/center";
 import { RippleDefault } from "./variants/default";
 
 export const metadata: Metadata = {
@@ -12,6 +13,9 @@ const Ripple = () => {
     <VariantPage heading="Ripple">
       <VariantWrapper heading="Default">
         <RippleDefault />
+      </VariantWrapper>
+      <VariantWrapper heading="Center">
+        <RippleAtCenter />
       </VariantWrapper>
     </VariantPage>
   );

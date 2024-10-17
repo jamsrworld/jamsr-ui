@@ -17,7 +17,7 @@ export const Textarea = <T extends React.ElementType = "div">(
     getBaseProps,
     getLabelWrapperProps,
     getLabelProps,
-    labelHelper,
+    labelHelperContent,
     getTextareaProps,
     getTextareaWrapperProps,
     getHelperProps,
@@ -25,6 +25,7 @@ export const Textarea = <T extends React.ElementType = "div">(
     getMainWrapperProps,
     getStartContentProps,
     getEndContentProps,
+    variant,
   } = useTextarea(props);
   const id = useId();
 
@@ -39,16 +40,23 @@ export const Textarea = <T extends React.ElementType = "div">(
     );
   }, [endContent, getEndContentProps]);
 
+  const getLabel = useMemo(() => {
+    return (
+      <div {...getLabelWrapperProps()}>
+        <label htmlFor={id} {...getLabelProps()}>
+          {label}
+        </label>
+        {labelHelperContent}
+      </div>
+    );
+  }, [getLabelProps, getLabelWrapperProps, id, label, labelHelperContent]);
+
   return (
     <Component data-component="textarea" {...getBaseProps()}>
       <div {...getMainWrapperProps()}>
-        <div {...getLabelWrapperProps()}>
-          <label htmlFor={id} {...getLabelProps()}>
-            {label}
-          </label>
-          {labelHelper}
-        </div>
+        {variant === "standard" && getLabel}
         <div {...getTextareaWrapperProps()}>
+          {variant === "outlined" && getLabel}
           <div {...getInnerWrapperProps()}>
             {getStartContent}
             <TextareaComponent id={id} {...getTextareaProps()} />
@@ -56,7 +64,7 @@ export const Textarea = <T extends React.ElementType = "div">(
           </div>
         </div>
       </div>
-      <div {...getHelperProps()}>{helperText}</div>
+      {helperText && <div {...getHelperProps()}>{helperText}</div>}
     </Component>
   );
 };

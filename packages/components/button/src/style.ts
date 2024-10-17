@@ -4,6 +4,7 @@ import { colorVariants, tv } from "@jamsr-ui/utils";
 const baseVariant = tv({
   base: [
     "z-0",
+    "shrink-0",
     "group",
     "relative",
     "inline-flex",

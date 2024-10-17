@@ -177,7 +177,7 @@ export const Drawer = (props: DrawerProps) => {
                   transition={{
                     type: "spring",
                     bounce: 0,
-                    duration: 0.6,
+                    duration: isOpen === true ? 0.3 : 0.6,
                   }}
                   onAnimationStart={handleAnimationStart}
                   onAnimationComplete={handleAnimationComplete}

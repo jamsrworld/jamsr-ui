@@ -2,7 +2,6 @@ import { m, type Variants } from "framer-motion";
 
 type Props = {
   isChecked: boolean;
-  indeterminate?: boolean;
 };
 
 const tickVariants: Variants = {
@@ -14,7 +13,6 @@ const tickVariants: Variants = {
     opacity: 1,
     transition: {
       duration: 0.2,
-      delay: 0.2,
     },
   },
   unchecked: {

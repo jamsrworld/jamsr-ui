@@ -2,11 +2,14 @@ import { useControlledState } from "@jamsr-ui/hooks";
 import { inputVariants } from "@jamsr-ui/input";
 import {
   cn,
+  dataAttr,
+  isEmpty,
+  useDOMRef,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { useCallback, type ComponentProps } from "react";
+import { useCallback, useState, type ComponentProps } from "react";
 
 import { type TextareaSlots, type TextareaVariantProps } from "./style";
 
@@ -22,6 +25,9 @@ type Props = {
   fullWidth?: boolean;
   isInvalid?: boolean;
   helperText?: string;
+  baseRef?: React.Ref<HTMLDivElement>;
+  inputWrapperRef?: React.Ref<HTMLDivElement>;
+  ref?: React.Ref<HTMLInputElement>;
 };
 
 export type UseTextareaProps = Props &
@@ -32,7 +38,6 @@ export const useTextarea = (props: UseTextareaProps) => {
   const {
     as,
     label,
-    labelPlacement,
     labelHelperContent,
     className,
     classNames,
@@ -40,25 +45,36 @@ export const useTextarea = (props: UseTextareaProps) => {
     defaultValue,
     value: propValue,
     onValueChange,
-    isInvalid,
+    isInvalid = false,
     startContent,
     endContent,
     onChange,
-    fullWidth,
-    variant,
+    fullWidth = false,
+    variant = "standard",
     helperText,
+    isFilled = false,
+    isOptional = false,
+    isRequired = false,
+    placeholder,
+    baseRef,
+    inputWrapperRef,
+    ref,
     ...restProps
   } = props;
   const Component = as ?? "div";
   const TextareaComponent = "textarea";
+  const inputDOMRef = useDOMRef(ref);
+  const [isFocused, setIsFocused] = useState(false);
 
   const styles = inputVariants({
     variant,
     size,
     isInvalid,
-    labelPlacement,
     isTextarea: true,
     fullWidth,
+    isFilled,
+    isOptional,
+    isRequired,
   });
 
   const [value, setValue] = useControlledState({
@@ -75,6 +91,27 @@ export const useTextarea = (props: UseTextareaProps) => {
     [onChange, setValue],
   );
 
+  const isFilledWithin =
+    !isEmpty(placeholder) ||
+    !isEmpty(value) ||
+    !isEmpty(startContent) ||
+    isFocused;
+  const hasLabel = !isEmpty(label) || !isEmpty(labelHelperContent);
+  const hasStartContent = !isEmpty(startContent);
+  const hasEndContent = !isEmpty(endContent);
+
+  const handleFocusInput = useCallback(() => {
+    inputDOMRef.current?.focus();
+  }, [inputDOMRef]);
+
+  const handleOnFocus = useCallback(() => {
+    setIsFocused(true);
+  }, [setIsFocused]);
+
+  const handleOnBlur = useCallback(() => {
+    setIsFocused(false);
+  }, [setIsFocused]);
+
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -82,10 +119,25 @@ export const useTextarea = (props: UseTextareaProps) => {
         className: styles.base({
           class: cn(classNames?.base, props?.className),
         }),
+        ref: baseRef,
+        "data-focus": dataAttr(isFocused),
+        "data-filled-within": dataAttr(isFilledWithin),
+        "data-has-label": dataAttr(hasLabel),
+        "data-has-start-content": dataAttr(hasStartContent),
+        "data-has-end-content": dataAttr(hasEndContent),
         ...props,
       };
     },
-    [styles, classNames?.base],
+    [
+      styles,
+      classNames?.base,
+      baseRef,
+      isFocused,
+      isFilledWithin,
+      hasLabel,
+      hasStartContent,
+      hasEndContent,
+    ],
   );
 
   const getLabelWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -157,14 +209,16 @@ export const useTextarea = (props: UseTextareaProps) => {
     useCallback(
       (props) => {
         return {
+          ref: inputWrapperRef,
           ...props,
           "data-slot": "textarea-wrapper",
           className: styles.inputWrapper({
             class: cn(classNames?.inputWrapper, props?.className),
           }),
+          onClick: handleFocusInput,
         };
       },
-      [styles, classNames?.inputWrapper],
+      [inputWrapperRef, styles, classNames?.inputWrapper, handleFocusInput],
     );
 
   const getTextareaProps: PropGetter<ComponentProps<"textarea">> = useCallback(
@@ -175,18 +229,24 @@ export const useTextarea = (props: UseTextareaProps) => {
           class: cn(classNames?.input, props?.className, className),
         }),
         value,
+        placeholder,
         onChange: handleTextareaChange,
         ...restProps,
         ...props,
+        onFocus: handleOnFocus,
+        onBlur: handleOnBlur,
       };
     },
     [
-      value,
       styles,
       classNames?.input,
       className,
+      value,
+      placeholder,
       handleTextareaChange,
       restProps,
+      handleOnFocus,
+      handleOnBlur,
     ],
   );
 
@@ -224,10 +284,10 @@ export const useTextarea = (props: UseTextareaProps) => {
     helperText,
     startContent,
     endContent,
-    labelPlacement,
+    variant,
     isInvalid,
     getBaseProps,
-    labelHelper: labelHelperContent,
+    labelHelperContent,
     getLabelWrapperProps,
     getLabelProps,
     getTextareaProps,

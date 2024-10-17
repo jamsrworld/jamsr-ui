@@ -7,7 +7,7 @@ import { InputDisabled } from "./variants/disabled";
 import { InputErrorState } from "./variants/error-state";
 import { InputHelperText } from "./variants/helper-text";
 import { InputLabelHelper } from "./variants/label-helper";
-import { InputLabelPlacement } from "./variants/label-placement";
+import { InputOutlinedAllProps } from "./variants/outlined-all-props";
 import { InputOptional } from "./variants/optional";
 import { InputPlaceholder } from "./variants/placeholder";
 import { InputRequired } from "./variants/required";
@@ -45,8 +45,8 @@ const Input = () => {
       <VariantWrapper heading="With Placeholder">
         <InputWithPlaceholder />
       </VariantWrapper>
-      <VariantWrapper heading="Label Placement">
-        <InputLabelPlacement />
+      <VariantWrapper heading="Outlined All Props">
+        <InputOutlinedAllProps />
       </VariantWrapper>
       <VariantWrapper heading="WithoutLabel">
         <InputWithoutLabel />

@@ -46,7 +46,7 @@ export const useTable = (originalProps: UseTableProps) => {
       ...restProps,
       "data-slot": "base",
       className: slots.base({
-        class: cn(className, classNames?.base, props?.className),
+        className: cn(className, classNames?.base, props?.className),
       }),
     }),
     [className, classNames?.base, restProps, slots],
@@ -59,7 +59,7 @@ export const useTable = (originalProps: UseTableProps) => {
       ref: wrapperRef,
       "data-slot": "wrapper",
       className: slots.wrapper({
-        class: cn(classNames?.wrapper, props?.className),
+        className: cn(classNames?.wrapper, props?.className),
       }),
     }),
     [classNames?.wrapper, slotProps.wrapperProps, slots, wrapperRef],
@@ -69,7 +69,7 @@ export const useTable = (originalProps: UseTableProps) => {
     (props) => ({
       ...props,
       className: slots.table({
-        class: cn(classNames?.table, props?.className),
+        className: cn(classNames?.table, props?.className),
       }),
     }),
     [classNames?.table, slots],

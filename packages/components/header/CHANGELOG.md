@@ -1,5 +1,13 @@
 # @jamsr-ui/header
 
+## 0.0.57
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.48
+  - @jamsr-ui/divider@0.0.52
+
 ## 0.0.56
 
 ### Patch Changes

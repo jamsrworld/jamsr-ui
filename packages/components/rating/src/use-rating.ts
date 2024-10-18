@@ -57,7 +57,7 @@ export const useRating = (props: UseRatingProps) => {
         "data-slot": "base",
         "data-readonly": dataAttr(isReadonly),
         className: styles.base({
-          class: cn(classNames?.base, props?.className),
+          className: cn(classNames?.base, props?.className),
         }),
         ...props,
         ...restProps,
@@ -72,7 +72,7 @@ export const useRating = (props: UseRatingProps) => {
         ...props,
         "data-slot": "label-wrapper",
         className: styles.labelWrapper({
-          class: cn(classNames?.labelWrapper, props?.className),
+          className: cn(classNames?.labelWrapper, props?.className),
         }),
       };
     },
@@ -85,7 +85,7 @@ export const useRating = (props: UseRatingProps) => {
         ...props,
         "data-slot": "label",
         className: styles.label({
-          class: cn(classNames?.label, props?.className),
+          className: cn(classNames?.label, props?.className),
         }),
       };
     },
@@ -97,7 +97,7 @@ export const useRating = (props: UseRatingProps) => {
       return {
         "data-slot": "inner-wrapper",
         className: styles.innerWrapper({
-          class: cn(classNames?.innerWrapper, props?.className),
+          className: cn(classNames?.innerWrapper, props?.className),
         }),
         ...props,
       };
@@ -111,7 +111,7 @@ export const useRating = (props: UseRatingProps) => {
         ...props,
         "data-slot": "helper",
         className: styles.helper({
-          class: cn(classNames?.helper, props?.className),
+          className: cn(classNames?.helper, props?.className),
         }),
       };
     },
@@ -123,7 +123,7 @@ export const useRating = (props: UseRatingProps) => {
       return {
         ...props,
         className: styles.star({
-          class: cn(classNames?.star, props?.className),
+          className: cn(classNames?.star, props?.className),
         }),
       };
     },

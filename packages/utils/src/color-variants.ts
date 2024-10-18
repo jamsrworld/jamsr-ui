@@ -47,12 +47,12 @@ const linkClasses = {
 };
 
 const lightClasses = {
-  default: "bg-transparent text-foreground",
-  primary: "bg-transparent text-primary",
-  secondary: "bg-transparent text-secondary",
-  success: "bg-transparent text-success",
-  warning: "bg-transparent text-warning",
-  danger: "bg-transparent text-danger",
+  default: "bg-transparent text-foreground data-[hover=true]:bg-default/20",
+  primary: "bg-transparent text-primary data-[hover=true]:bg-primary/20",
+  secondary: "bg-transparent text-secondary data-[hover=true]:bg-secondary/20",
+  success: "bg-transparent text-success data-[hover=true]:bg-success/20",
+  warning: "bg-transparent text-warning data-[hover=true]:bg-warning/20",
+  danger: "bg-transparent text-danger data-[hover=true]:bg-danger/20",
 };
 
 const ghostClasses = {

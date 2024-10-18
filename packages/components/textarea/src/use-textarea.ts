@@ -117,7 +117,7 @@ export const useTextarea = (props: UseTextareaProps) => {
       return {
         "data-slot": "base",
         className: styles.base({
-          class: cn(classNames?.base, props?.className),
+          className: cn(classNames?.base, props?.className),
         }),
         ref: baseRef,
         "data-focus": dataAttr(isFocused),
@@ -146,7 +146,7 @@ export const useTextarea = (props: UseTextareaProps) => {
         ...props,
         "data-slot": "label-wrapper",
         className: styles.labelWrapper({
-          class: cn(classNames?.labelWrapper, props?.className),
+          className: cn(classNames?.labelWrapper, props?.className),
         }),
       };
     },
@@ -159,7 +159,7 @@ export const useTextarea = (props: UseTextareaProps) => {
         ...props,
         "data-slot": "label",
         className: styles.label({
-          class: cn(classNames?.label, props?.className),
+          className: cn(classNames?.label, props?.className),
         }),
       };
     },
@@ -172,7 +172,7 @@ export const useTextarea = (props: UseTextareaProps) => {
         ...props,
         "data-slot": "inner-wrapper",
         className: styles.innerWrapper({
-          class: cn(classNames?.innerWrapper, props?.className),
+          className: cn(classNames?.innerWrapper, props?.className),
         }),
       };
     },
@@ -185,7 +185,7 @@ export const useTextarea = (props: UseTextareaProps) => {
         ...props,
         "data-slot": "helper",
         className: styles.helper({
-          class: cn(classNames?.helper, props?.className),
+          className: cn(classNames?.helper, props?.className),
         }),
       };
     },
@@ -198,7 +198,7 @@ export const useTextarea = (props: UseTextareaProps) => {
         ...props,
         "data-slot": "main-wrapper",
         className: styles.mainWrapper({
-          class: cn(classNames?.mainWrapper, props?.className),
+          className: cn(classNames?.mainWrapper, props?.className),
         }),
       };
     },
@@ -213,7 +213,7 @@ export const useTextarea = (props: UseTextareaProps) => {
           ...props,
           "data-slot": "textarea-wrapper",
           className: styles.inputWrapper({
-            class: cn(classNames?.inputWrapper, props?.className),
+            className: cn(classNames?.inputWrapper, props?.className),
           }),
           onClick: handleFocusInput,
         };
@@ -226,7 +226,7 @@ export const useTextarea = (props: UseTextareaProps) => {
       return {
         "data-slot": "textarea",
         className: styles.input({
-          class: cn(classNames?.input, props?.className, className),
+          className: cn(classNames?.input, props?.className, className),
         }),
         value,
         placeholder,
@@ -256,7 +256,7 @@ export const useTextarea = (props: UseTextareaProps) => {
         ...props,
         "data-slot": "start-content",
         className: styles.startContent({
-          class: cn(classNames?.startContent, props?.className),
+          className: cn(classNames?.startContent, props?.className),
         }),
       };
     },
@@ -269,7 +269,7 @@ export const useTextarea = (props: UseTextareaProps) => {
         ...props,
         "data-slot": "end-content",
         className: styles.endContent({
-          class: cn(classNames?.endContent, props?.className),
+          className: cn(classNames?.endContent, props?.className),
         }),
       };
     },

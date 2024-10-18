@@ -167,7 +167,7 @@ export const tabsVariant = tv({
     {
       variant: ["solid", "bordered", "light"],
       color: "default",
-      class: {
+      className: {
         cursor: ["bg-background", "dark:bg-default", "shadow-small"],
         tabContent: "group-data-[selected=true]:text-default-foreground",
       },
@@ -175,7 +175,7 @@ export const tabsVariant = tv({
     {
       variant: ["solid", "bordered", "light"],
       color: "primary",
-      class: {
+      className: {
         cursor: colorVariants.solid.primary,
         tabContent: "group-data-[selected=true]:text-primary-foreground",
       },
@@ -183,7 +183,7 @@ export const tabsVariant = tv({
     {
       variant: ["solid", "bordered", "light"],
       color: "secondary",
-      class: {
+      className: {
         cursor: colorVariants.solid.secondary,
         tabContent: "group-data-[selected=true]:text-secondary-foreground",
       },
@@ -191,7 +191,7 @@ export const tabsVariant = tv({
     {
       variant: ["solid", "bordered", "light"],
       color: "success",
-      class: {
+      className: {
         cursor: colorVariants.solid.success,
         tabContent: "group-data-[selected=true]:text-success-foreground",
       },
@@ -199,7 +199,7 @@ export const tabsVariant = tv({
     {
       variant: ["solid", "bordered", "light"],
       color: "warning",
-      class: {
+      className: {
         cursor: colorVariants.solid.warning,
         tabContent: "group-data-[selected=true]:text-warning-foreground",
       },
@@ -207,7 +207,7 @@ export const tabsVariant = tv({
     {
       variant: ["solid", "bordered", "light"],
       color: "danger",
-      class: {
+      className: {
         cursor: colorVariants.solid.danger,
         tabContent: "group-data-[selected=true]:text-danger-foreground",
       },
@@ -216,7 +216,7 @@ export const tabsVariant = tv({
     {
       variant: "underlined",
       color: "default",
-      class: {
+      className: {
         cursor: "bg-foreground",
         tabContent: "group-data-[selected=true]:text-foreground",
       },
@@ -224,7 +224,7 @@ export const tabsVariant = tv({
     {
       variant: "underlined",
       color: "primary",
-      class: {
+      className: {
         cursor: "bg-primary",
         tabContent: "group-data-[selected=true]:text-primary",
       },
@@ -232,7 +232,7 @@ export const tabsVariant = tv({
     {
       variant: "underlined",
       color: "secondary",
-      class: {
+      className: {
         cursor: "bg-secondary",
         tabContent: "group-data-[selected=true]:text-secondary",
       },
@@ -240,7 +240,7 @@ export const tabsVariant = tv({
     {
       variant: "underlined",
       color: "success",
-      class: {
+      className: {
         cursor: "bg-success",
         tabContent: "group-data-[selected=true]:text-success",
       },
@@ -248,7 +248,7 @@ export const tabsVariant = tv({
     {
       variant: "underlined",
       color: "warning",
-      class: {
+      className: {
         cursor: "bg-warning",
         tabContent: "group-data-[selected=true]:text-warning",
       },
@@ -256,7 +256,7 @@ export const tabsVariant = tv({
     {
       variant: "underlined",
       color: "danger",
-      class: {
+      className: {
         cursor: "bg-danger",
         tabContent: "group-data-[selected=true]:text-danger",
       },

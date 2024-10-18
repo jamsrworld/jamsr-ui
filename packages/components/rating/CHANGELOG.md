@@ -1,5 +1,11 @@
 # @jamsr-ui/rating
 
+## 0.0.10
+
+### Patch Changes
+
+- fix button
+
 ## 0.0.9
 
 ### Patch Changes

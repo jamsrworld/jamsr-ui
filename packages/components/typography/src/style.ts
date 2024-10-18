@@ -46,7 +46,7 @@ export const typographyVariants = tv({
         "pink",
         "foreground",
       ],
-      class: "bg-gradient-to-b bg-clip-text text-transparent",
+      className: "bg-gradient-to-b bg-clip-text text-transparent",
     },
     {
       variant: ["h1", "h2", "h3", "h4", "h5", "h6"],

@@ -50,7 +50,7 @@ export function useSkeleton(originalProps: UseSkeletonProps) {
     return {
       "data-loaded": dataAttr(!isLoading),
       className: slots.base({
-        class: cn(classNames?.base, className, props?.className as string),
+        className: cn(classNames?.base, className, props?.className as string),
       }),
       ...otherProps,
     };
@@ -59,7 +59,7 @@ export function useSkeleton(originalProps: UseSkeletonProps) {
   const getContentProps: PropGetter = (props) => {
     return {
       className: slots.content({
-        class: cn(classNames?.content, props?.className as string),
+        className: cn(classNames?.content, props?.className as string),
       }),
     };
   };

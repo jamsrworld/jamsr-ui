@@ -34,9 +34,7 @@ export const typographyVariants = tv({
       true: "mb-2",
     },
   },
-  defaultVariants: {
-    variant: "paragraph",
-  },
+  defaultVariants: {},
   compoundVariants: [
     {
       gradient: [

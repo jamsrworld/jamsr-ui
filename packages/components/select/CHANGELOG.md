@@ -1,5 +1,18 @@
 # @jamsr-ui/select
 
+## 0.0.65
+
+### Patch Changes
+
+- fix themes
+- Updated dependencies
+  - @jamsr-ui/button@0.0.53
+  - @jamsr-ui/chip@0.0.57
+  - @jamsr-ui/popover@0.0.51
+  - @jamsr-ui/hooks@0.0.34
+  - @jamsr-ui/shared-icons@0.0.46
+  - @jamsr-ui/utils@0.0.47
+
 ## 0.0.64
 
 ### Patch Changes

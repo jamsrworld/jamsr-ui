@@ -1,5 +1,15 @@
 # @jamsr-ui/rating
 
+## 0.0.9
+
+### Patch Changes
+
+- fix themes
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.23
+  - @jamsr-ui/hooks@0.0.34
+  - @jamsr-ui/shared-icons@0.0.46
+
 ## 0.0.8
 
 ### Patch Changes

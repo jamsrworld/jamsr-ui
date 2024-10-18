@@ -38,7 +38,7 @@ const baseVariant = tv({
       outlined: "border-2 bg-transparent",
       shadow: "",
       light: "",
-      link: "!min-w-0 p-0",
+      link: "!min-w-0 !p-0",
     },
     fullWidth: {
       true: "w-full",

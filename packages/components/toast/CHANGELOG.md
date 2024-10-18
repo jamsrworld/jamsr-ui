@@ -1,5 +1,11 @@
 # @jamsr-ui/toast
 
+## 0.0.15
+
+### Patch Changes
+
+- fix themes
+
 ## 0.0.14
 
 ### Patch Changes

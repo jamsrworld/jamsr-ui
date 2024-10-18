@@ -20,11 +20,10 @@ export const Typography = <T extends React.ElementType = "div">(
     leading,
     ...restProps
   } = props;
-
   const Component = (as ?? "div") as unknown as React.ElementType;
+
   return (
     <Component
-      data-component="typography"
       className={typographyVariants({
         variant,
         leading,

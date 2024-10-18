@@ -33,9 +33,7 @@ export const Button = <T extends React.ElementType = "button">(
       {isLoading && spinnerPlacement === "start" ? spinner : startContent}
       {isLoading && isIconOnly ? null : children}
       {isLoading && spinnerPlacement === "end" ? spinner : endContent}
-      {!isDisabled && !disableRipple && <Ripple />}
+      {!isDisabled && !disableRipple && <Ripple isCenter={isIconOnly} />}
     </Component>
   );
 };
-
-<Button as="a" href="/" />;

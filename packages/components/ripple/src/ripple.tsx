@@ -7,11 +7,10 @@ type Props = {
 } & UseRippleOptions;
 
 export const Ripple = (props: Props) => {
-  const { className, isCenter, maxRipplesCount } = props;
+  const { className, isCenter } = props;
   const ref = useRef<HTMLSpanElement>(null);
   const ripples = useRipple(ref, {
     isCenter,
-    maxRipplesCount,
   });
   return (
     <span

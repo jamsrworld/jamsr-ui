@@ -4,7 +4,7 @@ export const drawer = tv({
   slots: {
     backdrop: "z-backdrop !overflow-x-hidden backdrop-blur-sm",
     content:
-      "absolute z-dialog h-screen overflow-y-auto  bg-background-secondary",
+      "absolute z-dialog h-screen w-full overflow-y-auto  bg-background-secondary",
   },
   variants: {
     anchor: {

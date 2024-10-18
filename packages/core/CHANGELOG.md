@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- fix themes
+
+## 0.0.26
+
+### Patch Changes
+
 - fix react exporst
 
 ## 0.0.25

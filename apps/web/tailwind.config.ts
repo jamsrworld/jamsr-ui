@@ -17,14 +17,14 @@ const config: Config = {
   },
   plugins: [
     ...jamsrui({
-      // colors: {
-      //   light: {
-      //     default: {
-      //       foreground: "#fff",
-      //       DEFAULT: "#000",
-      //     },
-      //   },
-      // },
+      colors: {
+        light: {
+          primary: {
+            DEFAULT: "#000",
+            foreground: "#fff",
+          },
+        },
+      },
     }),
   ],
 };

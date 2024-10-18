@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 export type UseRippleOptions = {
   isCenter?: boolean;
-  maxRipplesCount?: number;
 };
 
 export const useRipple = <T extends HTMLElement>(
@@ -14,12 +13,10 @@ export const useRipple = <T extends HTMLElement>(
   const [ripples, setRipples] = useState<
     (React.CSSProperties & { id: string })[]
   >([]);
-  const { isCenter, maxRipplesCount = 5 } = options;
+  const { isCenter } = options;
   useEffect(() => {
     if (ref.current) {
       const elem = ref.current;
-      console.log("elem:->", elem);
-
       const id = Math.random().toString(36).slice(2, 9);
       const clickHandler = (e: MouseEvent) => {
         const rect = elem.getBoundingClientRect();
@@ -27,24 +24,23 @@ export const useRipple = <T extends HTMLElement>(
         const width = elem.clientWidth;
         const diameter = Math.max(width, height);
 
-        const left = isCenter ? 0 : e.clientX - rect.left - diameter / 2;
+        const left = isCenter
+          ? rect.width / 2 - diameter / 2
+          : e.clientX - rect.left - diameter / 2;
         const top = isCenter
-          ? -(rect.height / 2)
+          ? rect.height / 2 - diameter / 2
           : e.clientY - rect.top - diameter / 2;
 
-        const isMaximum = ripples.length >= maxRipplesCount;
-        if (!isMaximum) {
-          setRipples([
-            ...ripples,
-            {
-              id,
-              top,
-              left,
-              height: Math.max(width, height),
-              width: Math.max(width, height),
-            },
-          ]);
-        }
+        setRipples([
+          ...ripples,
+          {
+            id,
+            top,
+            left,
+            height: Math.max(width, height),
+            width: Math.max(width, height),
+          },
+        ]);
       };
 
       elem.addEventListener("mousedown", clickHandler);
@@ -53,7 +49,7 @@ export const useRipple = <T extends HTMLElement>(
       };
     }
     return () => {};
-  }, [isCenter, maxRipplesCount, ref, ripples]);
+  }, [isCenter, ref, ripples]);
 
   const debounced = useDebounce(ripples, 500);
   useEffect(() => {

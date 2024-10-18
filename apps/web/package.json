@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.126",
+  "version": "0.1.127",
   "private": true,
   "type": "module",
   "scripts": {
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@jamsr-ui/prettier-config": "workspace:^",
     "@jamsr-ui/tailwind-config": "workspace:^",
-    "@types/node": "^20.12.12",
+    "@types/node": "22.7.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8",

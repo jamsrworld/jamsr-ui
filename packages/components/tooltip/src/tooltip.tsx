@@ -103,7 +103,7 @@ export const Tooltip = (props: TooltipProps) => {
           <div
             data-component="tooltip"
             role="tooltip"
-            className="z-popover inline-block rounded-lg bg-background-secondary px-3 py-1.5 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300"
+            className="z-popover inline-block rounded-lg bg-black px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-opacity duration-300 dark:bg-white dark:text-black"
             ref={refs.setFloating}
             style={floatingStyles}
             {...getFloatingProps()}
@@ -112,7 +112,7 @@ export const Tooltip = (props: TooltipProps) => {
               <FloatingArrow
                 ref={arrowRef}
                 context={context}
-                className="fill-background-paper"
+                className="fill-background"
               />
             )}
             {title}

@@ -1,5 +1,16 @@
 # @jamsr-ui/dialog
 
+## 0.0.59
+
+### Patch Changes
+
+- fix themes
+- Updated dependencies
+  - @jamsr-ui/button@0.0.53
+  - @jamsr-ui/hooks@0.0.34
+  - @jamsr-ui/shared-icons@0.0.46
+  - @jamsr-ui/utils@0.0.47
+
 ## 0.0.58
 
 ### Patch Changes

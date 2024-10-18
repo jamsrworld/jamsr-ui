@@ -1,5 +1,15 @@
 # @jamsr-ui/menu
 
+## 0.0.64
+
+### Patch Changes
+
+- fix themes
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.34
+  - @jamsr-ui/shared-icons@0.0.46
+  - @jamsr-ui/utils@0.0.47
+
 ## 0.0.63
 
 ### Patch Changes

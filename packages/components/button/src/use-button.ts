@@ -35,7 +35,7 @@ export const useButton = (props: UseButtonProps) => {
     className,
     isLoading = false,
     disabled = false,
-    isDisabled = false,
+    isDisabled: isDisabledProp = false,
     color,
     size,
     isIconOnly,
@@ -50,7 +50,7 @@ export const useButton = (props: UseButtonProps) => {
   } = props;
 
   const Component = as ?? "button";
-  const isDisabledState = isLoading || disabled || isDisabled;
+  const isDisabled = isLoading || disabled || isDisabledProp;
 
   const styles = useMemo(
     () =>
@@ -79,7 +79,7 @@ export const useButton = (props: UseButtonProps) => {
   const getButtonProps: PropGetter = useCallback(() => {
     return {
       ...restProps,
-      disabled: isDisabledState,
+      disabled: isDisabled,
       "data-pressed": isPressed,
       "data-hover": isHovered,
       type,
@@ -88,7 +88,7 @@ export const useButton = (props: UseButtonProps) => {
       onMouseOver: handleMouseOver,
       onMouseOut: handleMouseOut,
     };
-  }, [isDisabledState, isHovered, isPressed, restProps, type]);
+  }, [isDisabled, isHovered, isPressed, restProps, type]);
 
   return {
     Component,

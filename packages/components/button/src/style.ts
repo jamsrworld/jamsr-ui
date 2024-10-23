@@ -22,7 +22,6 @@ const baseVariant = tv({
     "transition-transform",
     "disabled:opacity-50",
     "focus-visible:ring-2 focus-visible:ring-primary",
-    "hover:opacity-90",
   ],
   variants: {
     color: {
@@ -36,20 +35,19 @@ const baseVariant = tv({
     variant: {
       solid: "",
       outlined: "border-2 bg-transparent",
-      shadow: "",
       light: "",
-      link: "!min-w-0 !p-0",
+      text: "!min-w-0 !p-0",
     },
     fullWidth: {
       true: "w-full",
     },
     size: {
       xs: "rounded-md",
-      sm: "h-8 min-w-16 gap-1 rounded-lg px-3 text-xs",
-      md: "h-10 min-w-20 gap-2 rounded-xl px-4 text-sm",
-      lg: "h-12 min-w-40 gap-2 rounded-2xl px-6 text-base font-medium",
+      sm: "min-w-16 gap-1 rounded-lg px-3 py-1.5 text-xs",
+      md: "min-w-20 gap-2 rounded-xl px-4 py-2 text-sm",
+      lg: "min-w-40 gap-2 rounded-2xl px-6 py-2.5 text-base font-medium",
     },
-    rounded: {
+    isRounded: {
       true: "rounded-full",
     },
     isIconOnly: {
@@ -136,39 +134,6 @@ const lightVariant: CompoundVariant<ButtonVariantProps>[] = [
   },
 ];
 
-const shadowVariant: CompoundVariant<ButtonVariantProps>[] = [
-  {
-    variant: "shadow",
-    color: "default",
-    className: colorVariants.shadow.default,
-  },
-  {
-    variant: "shadow",
-    color: "primary",
-    className: colorVariants.shadow.primary,
-  },
-  {
-    variant: "shadow",
-    color: "secondary",
-    className: colorVariants.shadow.secondary,
-  },
-  {
-    variant: "shadow",
-    color: "success",
-    className: colorVariants.shadow.success,
-  },
-  {
-    variant: "shadow",
-    color: "warning",
-    className: colorVariants.shadow.warning,
-  },
-  {
-    variant: "shadow",
-    color: "danger",
-    className: colorVariants.shadow.danger,
-  },
-];
-
 const outlinedVariant: CompoundVariant<ButtonVariantProps>[] = [
   {
     variant: "outlined",
@@ -225,36 +190,36 @@ const iconOnlyVariant: CompoundVariant<ButtonVariantProps>[] = [
   },
 ];
 
-const linkVariant: CompoundVariant<ButtonVariantProps>[] = [
+const textVariant: CompoundVariant<ButtonVariantProps>[] = [
   {
-    variant: "link",
+    variant: "text",
     color: "default",
-    className: colorVariants.link.default,
+    className: colorVariants.text.default,
   },
   {
-    variant: "link",
+    variant: "text",
     color: "primary",
-    className: colorVariants.link.primary,
+    className: colorVariants.text.primary,
   },
   {
-    variant: "link",
+    variant: "text",
     color: "secondary",
-    className: colorVariants.link.secondary,
+    className: colorVariants.text.secondary,
   },
   {
-    variant: "link",
+    variant: "text",
     color: "success",
-    className: colorVariants.link.success,
+    className: colorVariants.text.success,
   },
   {
-    variant: "link",
+    variant: "text",
     color: "warning",
-    className: colorVariants.link.warning,
+    className: colorVariants.text.warning,
   },
   {
-    variant: "link",
+    variant: "text",
     color: "danger",
-    className: colorVariants.link.danger,
+    className: colorVariants.text.danger,
   },
 ];
 
@@ -266,15 +231,10 @@ export const buttonVariant = tv({
       size: "lg",
       className: "data-[pressed=true]:scale-[0.98]",
     },
-    {
-      variant: "link",
-      className: "hover:opacity-70",
-    },
     ...solidVariant,
     ...lightVariant,
-    ...shadowVariant,
     ...outlinedVariant,
-    ...linkVariant,
+    ...textVariant,
     ...iconOnlyVariant,
   ],
 });

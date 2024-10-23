@@ -51,7 +51,7 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     showDeleteBtn = true,
     progress,
     description = "Choose a file or drag & drop it here",
-    info,
+    info = "Select images",
     dropzoneOptions,
     fileSize,
     fileName,

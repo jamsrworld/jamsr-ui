@@ -1,4 +1,4 @@
-import { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { badgeVariants, type BadgeVariants } from "./style";
 
 export type BadgeProps<T extends React.ElementType = "div"> =
@@ -14,11 +14,7 @@ export const Badge = <T extends React.ElementType = "div">(
     size,
   });
   return (
-    <div
-      data-component="badge"
-      className={style}
-      {...restProps}
-    >
+    <div data-component="badge" className={style} {...restProps}>
       {children}
     </div>
   );

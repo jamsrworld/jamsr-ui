@@ -16,7 +16,7 @@ export const DialogClose = (props: Partial<ButtonProps>) => {
       type="button"
       variant="light"
       onClick={handleClick}
-      rounded
+      isRounded
       className={cn("absolute right-2 top-2 z-10", className)}
       {...restProps}
     >

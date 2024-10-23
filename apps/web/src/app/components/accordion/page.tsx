@@ -5,6 +5,7 @@ import { AccordionCustomIcon } from "./variants/custom-icon";
 import { AccordionDefault } from "./variants/default";
 import { AccordionEndContent } from "./variants/end-content";
 import { AccordionEndContentOutside } from "./variants/end-content-outside";
+import { AccordionMultipleSelection } from "./variants/multiple-selection";
 import { AccordionStartContent } from "./variants/start-content";
 import { AccordionStartContentOutside } from "./variants/start-content-outside";
 import { AccordionSubtitle } from "./variants/subtitle";
@@ -18,6 +19,9 @@ const Accordion = () => {
     <VariantPage heading="Accordion">
       <VariantWrapper heading="Default">
         <AccordionDefault />
+      </VariantWrapper>
+      <VariantWrapper heading="Multiple Selection">
+        <AccordionMultipleSelection />
       </VariantWrapper>
       <VariantWrapper heading="With Subtitle">
         <AccordionSubtitle />

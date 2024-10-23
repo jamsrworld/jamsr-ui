@@ -35,10 +35,10 @@
     "react-dom": "19.0.0-rc-0751fac7-20241002"
   },
   "dependencies": {
-    "@jamsr-ui/button": "^0.0.54",
+    "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/dialog": "workspace:^",
-    "@jamsr-ui/divider": "^0.0.52",
-    "zustand": "^4.5.4"
+    "@jamsr-ui/divider": "workspace:^",
+    "zustand": "5.0.0"
   },
   "clean-package": "../../../clean-package.config.json"
 }

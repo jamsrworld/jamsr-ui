@@ -10,8 +10,8 @@ export const AccordionEndContent = (arg: AccordionProps) => {
   return (
     <Accordion {...arg}>
       <AccordionItem
-        title="Accordion 1"
-        subtitle="Press to expand item 1"
+        heading="Accordion 1"
+        subheading="Press to expand item 1"
         endContent={
           <Avatar alt="avatar" src="https://i.pravatar.cc/300" size="lg" />
         }
@@ -19,8 +19,8 @@ export const AccordionEndContent = (arg: AccordionProps) => {
         {defaultContent}
       </AccordionItem>
       <AccordionItem
-        title="Accordion 2"
-        subtitle="Press to expand item 2"
+        heading="Accordion 2"
+        subheading="Press to expand item 2"
         endContent={
           <Avatar alt="avatar" src="https://i.pravatar.cc/300?2" size="lg" />
         }
@@ -29,8 +29,8 @@ export const AccordionEndContent = (arg: AccordionProps) => {
       </AccordionItem>
       <AccordionItem
         isDisabled
-        title="Accordion 3"
-        subtitle="Disabled Accordion Item"
+        heading="Accordion 3"
+        subheading="Disabled Accordion Item"
         endContent={
           <Avatar alt="avatar" src="https://i.pravatar.cc/300?3" size="lg" />
         }

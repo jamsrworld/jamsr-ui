@@ -21,8 +21,8 @@ export const badgeVariants = tv({
     },
     size: {
       sm: "px-1",
-      md: "px-2",
-      lg: "px-3",
+      md: "px-2 py-1",
+      lg: "px-3 py-1.5",
     },
   },
   defaultVariants: {

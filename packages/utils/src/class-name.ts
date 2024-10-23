@@ -11,9 +11,31 @@ const tw = extendTailwindMerge({
   },
 });
 
+// const customModifier = ["hover", "disabled"];
+// const filterClassName = (className: ClassValue) => {
+//   if (typeof className === "string") {
+//     customModifier.forEach((modifier) => {
+//       className = className.replace(`ui-${modifier}`, modifier);
+//     });
+//     return className;
+//   }
+//   return className;
+// };
+
 export const cn = (...inputs: ClassValue[]) => {
   return tw(clsx(inputs));
 };
+
+// console.log(
+//   cn(
+//     "bg-warning-500",
+//     "bg-warning-600",
+//     "hover:bg-warning-500",
+//     "hover:bg-warning-600",
+//     "ui-hover:bg-warning-500",
+//     "ui-hover:bg-warning-600",
+//   ),
+// );
 
 export const mergeClassNames = <T extends Record<string, any>>(
   left?: T,

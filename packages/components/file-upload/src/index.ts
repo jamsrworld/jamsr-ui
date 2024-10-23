@@ -14,3 +14,5 @@ export {
   type SingleFileUploadProps,
   type UseSingleFileUploadProps,
 } from "./single";
+
+export type { FileError as FileUploadError } from "react-dropzone";

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@jamsr-ui/button";
+import { Button, type ButtonProps } from "@jamsr-ui/button";
 import {
   Dialog,
   DialogBody,
@@ -10,7 +10,13 @@ import {
 import { Divider } from "@jamsr-ui/divider";
 import { useConfirmation } from "./use-confirmation";
 
-export const Confirmation = () => {
+export type ConfirmationProps = {
+  cancelBtnProps?: ButtonProps;
+  successBtnProps?: ButtonProps;
+};
+
+export const Confirmation = (pros: ConfirmationProps) => {
+  const { cancelBtnProps, successBtnProps } = pros;
   const { isOpen, onClose, options: confirmation } = useConfirmation();
   if (!confirmation) return null;
   const { message, onCancel, onConfirm, title } = confirmation;
@@ -32,22 +38,24 @@ export const Confirmation = () => {
         <Divider />
         <div className="flex">
           <Button
-            variant="link"
+            variant="light"
             onClick={handleClose}
             fullWidth
-            className="rounded-none rounded-bl-md hover:bg-background-secondary"
+            className="shrink rounded-none rounded-bl-md"
             disableAnimation
             autoFocus
+            {...cancelBtnProps}
           >
             Cancel
           </Button>
           <Divider orientation="vertical" />
           <Button
             fullWidth
-            variant="link"
+            variant="light"
             onClick={handleConfirm}
-            className="rounded-none rounded-br-md font-bold hover:bg-background-secondary"
+            className="shrink rounded-none rounded-br-md font-bold"
             disableAnimation
+            {...successBtnProps}
           >
             Ok
           </Button>

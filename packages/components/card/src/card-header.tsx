@@ -43,7 +43,9 @@ export const CardHeader = <T extends React.ElementType = "div">(
       )}
       {...restProps}
     >
-      <div className={classNames?.startContent}>{startContent}</div>
+      {startContent && (
+        <div className={classNames?.startContent}>{startContent}</div>
+      )}
       <div className={cn("grid grow gap-1", classNames?.innerWrapper)}>
         <Typography as="h3" variant="h6" className={classNames?.heading}>
           {heading}
@@ -58,7 +60,7 @@ export const CardHeader = <T extends React.ElementType = "div">(
           </Typography>
         )}
       </div>
-      <div className={classNames?.endContent}>{endContent}</div>
+      {endContent && <div className={classNames?.endContent}>{endContent}</div>}
     </Component>
   );
 };

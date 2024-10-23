@@ -17,7 +17,7 @@ type Props = {
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   classNames?: SlotsToClasses<TextareaSlots>;
-  label: string | null;
+  label?: string;
   labelHelperContent?: React.ReactNode;
   value?: string;
   defaultValue?: string;

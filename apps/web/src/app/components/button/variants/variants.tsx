@@ -3,9 +3,8 @@ import { Button, type ButtonProps } from "@jamsr-ui/react";
 export const ButtonVariants = () => {
   const variants: ButtonProps["variant"][] = [
     "light",
-    "link",
+    "text",
     "outlined",
-    "shadow",
     "solid",
   ];
 
@@ -29,7 +28,7 @@ export const ButtonVariants = () => {
                 variant={variant}
                 color={color}
                 className="capitalize"
-                disableRipple={variant === "link"}
+                disableRipple={variant === "text"}
               >
                 {variant}
               </Button>

@@ -21,12 +21,6 @@ export const useButton = (props: UseButtonProps) => {
   const handleMouseDown = () => setIsPressed(true);
   const handleMouseUp = () => setIsPressed(false);
 
-  // for hover
-  const handleMouseOver = () => {
-    setIsHovered(true);
-  };
-  const handleMouseOut = () => setIsHovered(false);
-
   const {
     as,
     children,
@@ -41,7 +35,7 @@ export const useButton = (props: UseButtonProps) => {
     isIconOnly,
     spinnerPlacement = "start",
     fullWidth,
-    rounded,
+    isRounded,
     variant,
     type = "button",
     disableRipple,
@@ -52,6 +46,13 @@ export const useButton = (props: UseButtonProps) => {
   const Component = as ?? "button";
   const isDisabled = isLoading || disabled || isDisabledProp;
 
+  // for hover
+  const handleMouseOver = () => {
+    if (isDisabled) return;
+    setIsHovered(true);
+  };
+  const handleMouseOut = () => setIsHovered(false);
+
   const styles = useMemo(
     () =>
       buttonVariant({
@@ -60,7 +61,7 @@ export const useButton = (props: UseButtonProps) => {
         className,
         isIconOnly,
         fullWidth,
-        rounded,
+        isRounded,
         variant,
         disableAnimation,
       }),
@@ -70,7 +71,7 @@ export const useButton = (props: UseButtonProps) => {
       className,
       isIconOnly,
       fullWidth,
-      rounded,
+      isRounded,
       variant,
       disableAnimation,
     ],
@@ -80,6 +81,7 @@ export const useButton = (props: UseButtonProps) => {
     return {
       ...restProps,
       disabled: isDisabled,
+      "data-disabled": isDisabled,
       "data-pressed": isPressed,
       "data-hover": isHovered,
       type,
@@ -88,7 +90,7 @@ export const useButton = (props: UseButtonProps) => {
       onMouseOver: handleMouseOver,
       onMouseOut: handleMouseOut,
     };
-  }, [isDisabled, isHovered, isPressed, restProps, type]);
+  }, [handleMouseOver, isDisabled, isHovered, isPressed, restProps, type]);
 
   return {
     Component,

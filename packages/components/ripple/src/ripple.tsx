@@ -25,7 +25,7 @@ export const Ripple = (props: Props) => {
         return (
           <span
             key={i}
-            className="absolute origin-center scale-0 animate-ripple rounded-full bg-black/5 opacity-75 dark:bg-white/5"
+            className="absolute origin-center scale-0 animate-ripple rounded-full bg-current opacity-15 dark:bg-white/5"
             style={{
               ...style,
             }}

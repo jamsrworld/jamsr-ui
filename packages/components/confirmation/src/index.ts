@@ -1,4 +1,4 @@
 "use client";
 
-export { Confirmation } from "./confirmation";
+export { Confirmation, type ConfirmationProps } from "./confirmation";
 export { useConfirmation } from "./use-confirmation";

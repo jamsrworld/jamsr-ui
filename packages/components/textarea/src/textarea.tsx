@@ -41,14 +41,14 @@ export const Textarea = <T extends React.ElementType = "div">(
   }, [endContent, getEndContentProps]);
 
   const getLabel = useMemo(() => {
-    return (
+    return (label ?? labelHelperContent) ? (
       <div {...getLabelWrapperProps()}>
         <label htmlFor={id} {...getLabelProps()}>
           {label}
         </label>
         {labelHelperContent}
       </div>
-    );
+    ) : null;
   }, [getLabelProps, getLabelWrapperProps, id, label, labelHelperContent]);
 
   return (

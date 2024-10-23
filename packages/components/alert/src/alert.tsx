@@ -1,13 +1,18 @@
-import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import {
+  cn,
+  type ComponentPropsWithAs,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { useCallback } from "react";
 import { Error, Info, Success, Warning } from "./icons";
-import { alertVariant, type AlertVariantProps } from "./style";
+import { type AlertSlots, alertVariant, type AlertVariantProps } from "./style";
 
 export type AlertProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T, AlertVariantProps> & {
     heading?: React.ReactNode;
     action?: React.ReactNode;
     icon?: React.ReactNode;
+    classNames?: SlotsToClasses<AlertSlots>;
   };
 
 export const Alert = <T extends React.ElementType = "div">(
@@ -17,15 +22,17 @@ export const Alert = <T extends React.ElementType = "div">(
     children,
     severity,
     as,
-    className,
+    className: $className,
     action,
     heading,
     variant,
     icon,
+    classNames,
     ...restProps
   } = props;
 
-  const styles = alertVariant({ severity, variant, className });
+  const styles = alertVariant({ severity, variant });
+  const className = cn($className, classNames?.wrapper);
   const Component = as ?? "div";
 
   const Icon = useCallback(() => {
@@ -55,18 +62,29 @@ export const Alert = <T extends React.ElementType = "div">(
       {...restProps}
     >
       <Icon />
-      <div>
+      <div
+        className={styles.mainContent({ className: classNames?.mainContent })}
+      >
         {heading && (
-          <div data-slot="heading" className={styles.heading()}>
+          <div
+            data-slot="heading"
+            className={styles.heading({ className: classNames?.heading })}
+          >
             {heading}
           </div>
         )}
-        <div data-slot="description" className={styles.description()}>
+        <div
+          data-slot="description"
+          className={styles.description({ className: classNames?.description })}
+        >
           {children}
         </div>
       </div>
       {action && (
-        <div data-slot="action" className={styles.action()}>
+        <div
+          data-slot="action"
+          className={styles.action({ className: classNames?.action })}
+        >
           {action}
         </div>
       )}

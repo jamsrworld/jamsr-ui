@@ -4,15 +4,15 @@ import { tv } from "@jamsr-ui/utils";
 export const alertVariant = tv({
   slots: {
     wrapper: "relative flex gap-2 rounded-lg p-4 text-sm",
-    title: "flex gap-2 font-normal",
+    mainContent: "flex flex-col gap-1",
     description: "flex grow flex-col gap-1 self-center break-all",
     action: "absolute right-2 self-center",
     heading: "font-medium",
   },
   variants: {
     variant: {
-      outline: "",
-      filled: "",
+      outlined: "",
+      solid: "",
     },
     severity: {
       success: {
@@ -27,50 +27,48 @@ export const alertVariant = tv({
     },
   },
   compoundVariants: [
-    // danger
+    // filled
     {
       severity: "danger",
-      variant: "filled",
+      variant: "solid",
       className: {
-        wrapper: "bg-danger-100 text-white",
+        wrapper: "bg-danger-100 text-danger-600",
       },
     },
-    // success
     {
       severity: "success",
-      variant: "filled",
+      variant: "solid",
       className: {
-        wrapper: "bg-success-100 text-white",
+        wrapper: "bg-success-100 text-success-600",
       },
     },
-    // info
     {
       severity: "info",
-      variant: "filled",
+      variant: "solid",
       className: {
-        wrapper: "bg-blue-600 text-white",
+        wrapper: "bg-blue-100 text-blue-600",
       },
     },
-    // warning
     {
       severity: "warning",
-      variant: "filled",
+      variant: "solid",
       className: {
-        wrapper: "bg-warning-100 text-white",
+        wrapper: "bg-warning-100 text-warning-600",
       },
     },
-    // default
     {
       severity: "default",
-      variant: "filled",
+      variant: "solid",
       className: {
-        wrapper: "bg-default-100 text-white",
+        wrapper: "bg-default-100 text-default-600",
       },
     },
   ],
   defaultVariants: {
     severity: "default",
-    variant: "outline",
+    variant: "outlined",
   },
 });
+
 export type AlertVariantProps = VariantProps<typeof alertVariant>;
+export type AlertSlots = keyof ReturnType<typeof alertVariant>;

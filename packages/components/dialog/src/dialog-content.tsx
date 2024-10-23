@@ -27,7 +27,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
   const Component = as ?? DialogComponent;
 
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
       {isOpen && (
         <FloatingPortal>
           <FloatingOverlay
@@ -46,6 +46,10 @@ export const DialogContent = <T extends React.ElementType = "div">(
                 exit={{
                   y: 50,
                   opacity: 0,
+                }}
+                transition={{
+                  type: "spring",
+                  duration: isOpen === true ? 0.3 : 0.6,
                 }}
                 className="flex w-full items-center justify-center"
               >

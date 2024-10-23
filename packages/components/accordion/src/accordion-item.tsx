@@ -23,22 +23,21 @@ export const AccordionItem = <T extends React.ElementType = "div">(
     endContent,
     endContentPlacement,
     hideIndicator,
-    subtitle,
-    title,
+    subheading,
+    heading,
     indicator,
     isOpen,
-    triggerContent = null,
     getBaseProps,
-    getButtonProps,
-    getContentProps,
+    getTriggerProps,
+    getPanelProps,
     getIndicatorProps,
-    getSubtitleProps,
-    getTitleProps,
     getHeadingProps,
     getEndContentProps,
     getStartContentProps,
-    getTitleWrapperProps,
     motionProps,
+    getHeaderProps,
+    getMainContentProps,
+    getSubheadingProps,
   } = useAccordionItem(props);
 
   const indicatorContent = useMemo(() => {
@@ -53,38 +52,34 @@ export const AccordionItem = <T extends React.ElementType = "div">(
   }, [indicator, isOpen]);
 
   return (
-    <Component data-component="accordion-item" {...getBaseProps()}>
-      <div {...getHeadingProps()}>
+    <Component {...getBaseProps()}>
+      <h3 {...getHeaderProps()}>
         {startContent && startContentPlacement === "outside" && (
           <div {...getStartContentProps()}>{startContent}</div>
         )}
-        <button type="button" {...getButtonProps()}>
-          {triggerContent ?? (
-            <>
-              {startContent && startContentPlacement === "inside" && (
-                <div {...getStartContentProps()}>{startContent}</div>
-              )}
-              <div {...getTitleWrapperProps()}>
-                {title && <span {...getTitleProps()}>{title}</span>}
-                {subtitle && <span {...getSubtitleProps()}>{subtitle}</span>}
-              </div>
-              {endContent && endContentPlacement === "inside" && (
-                <div {...getEndContentProps()}>{endContent}</div>
-              )}
-              {!hideIndicator && (
-                <span {...getIndicatorProps()}>{indicatorContent}</span>
-              )}
-            </>
+        <button type="button" {...getTriggerProps()}>
+          {startContent && startContentPlacement === "inside" && (
+            <div {...getStartContentProps()}>{startContent}</div>
+          )}
+          <div {...getMainContentProps()}>
+            {heading && <span {...getHeadingProps()}>{heading}</span>}
+            {subheading && <span {...getSubheadingProps()}>{subheading}</span>}
+          </div>
+          {endContent && endContentPlacement === "inside" && (
+            <div {...getEndContentProps()}>{endContent}</div>
+          )}
+          {!hideIndicator && (
+            <span {...getIndicatorProps()}>{indicatorContent}</span>
           )}
         </button>
         {endContent && endContentPlacement === "outside" && (
           <div {...getEndContentProps()}>{endContent}</div>
         )}
-      </div>
+      </h3>
       <AnimatePresence initial={false}>
         {isOpen && (
           // @ts-expect-error Framer Error
-          <m.div
+          <m.section
             className="overflow-hidden"
             initial="exit"
             animate="enter"
@@ -92,8 +87,8 @@ export const AccordionItem = <T extends React.ElementType = "div">(
             variants={TRANSITION_VARIANTS.collapse}
             {...motionProps}
           >
-            <div {...getContentProps()}>{children}</div>
-          </m.div>
+            <div {...getPanelProps()}>{children}</div>
+          </m.section>
         )}
       </AnimatePresence>
     </Component>

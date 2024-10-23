@@ -88,7 +88,7 @@ export const inputVariants = tv({
       variant: "standard",
       size: "md",
       className: {
-        input: "py-2 text-base placeholder:text-base",
+        input: "py-2 text-base placeholder:text-sm",
       },
     },
     {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/unbound-method */
 import {
   useClick,
   useDismiss,
@@ -19,7 +20,6 @@ import { dialog, type DialogSlots, type DialogVariantProps } from "./style";
 
 type Props = UIProps<"div"> & {
   hideCloseButton?: boolean;
-  onClose?: () => void;
   classNames?: SlotsToClasses<DialogSlots>;
   defaultOpen?: boolean;
   isOpen?: boolean;
@@ -38,7 +38,6 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     as,
     className,
     classNames,
-    onClose,
     isOpen: isOpenProp,
     defaultOpen,
     onOpenChange,

@@ -5,6 +5,7 @@ import { ButtonDefault } from "./variants/default";
 import { ButtonDisabled } from "./variants/disabled";
 import { ButtonIconButton } from "./variants/icon-button";
 import { ButtonLoading } from "./variants/loading";
+import { ButtonSizes } from "./variants/sizes";
 import { ButtonVariants } from "./variants/variants";
 import { ButtonWithIcons } from "./variants/with-icons";
 
@@ -17,6 +18,9 @@ const Button = () => {
     <VariantPage heading="Button">
       <VariantWrapper heading="Default">
         <ButtonDefault />
+      </VariantWrapper>
+      <VariantWrapper heading="Sizes">
+        <ButtonSizes />
       </VariantWrapper>
       <VariantWrapper heading="Disabled">
         <ButtonDisabled />

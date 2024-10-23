@@ -1,7 +1,7 @@
-import { jamsrui } from "@jamsr-ui/theme";
+import { withJamsrUI } from "@jamsr-ui/theme";
 import type { Config } from "tailwindcss";
 
-const config: Config = {
+const config: Config = withJamsrUI({
   content: [
     "../../packages/components/*/src/*.ts",
     "../../packages/components/*/src/**/*.ts",
@@ -9,7 +9,6 @@ const config: Config = {
     "../../packages/components/*/stories/**/*.tsx",
     "../../packages/theme/stories/**/*.tsx",
   ],
-  plugins: [...jamsrui()],
-};
+});
 
 export default config;

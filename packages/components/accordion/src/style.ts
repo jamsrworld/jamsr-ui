@@ -12,18 +12,17 @@ export const accordion = tv({
 export const accordionItem = tv({
   slots: {
     base: "flex flex-col rounded-xl bg-background-secondary px-4",
-    heading: "flex items-center gap-2",
+    header: "flex items-center gap-2",
     trigger: [
       "flex size-full items-center gap-3 py-4 disabled:cursor-not-allowed disabled:opacity-50",
       ...focusVisibleClasses,
     ],
     startContent: "shrink-0",
     endContent: "shrink-0",
-    actionContent: "",
-    titleWrapper: " flex flex-1 flex-col text-start",
-    title: "text-base font-medium text-foreground",
-    subtitle: "text-sm font-normal text-foreground-500",
-    content: "py-2 text-foreground-secondary",
+    mainContent: " flex flex-1 flex-col text-start",
+    heading: "text-base font-medium text-foreground",
+    subheading: "text-sm font-normal text-foreground-500",
+    panel: "py-2 text-foreground-secondary",
     indicator:
       "rotate-0 transition-transform duration-500 data-[open=true]:-rotate-180",
   },

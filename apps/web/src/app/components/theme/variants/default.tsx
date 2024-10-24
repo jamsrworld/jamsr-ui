@@ -153,6 +153,31 @@ const SemanticColors = [
     ],
   },
   {
+    title: "Content",
+    items: [
+      {
+        color: "content1",
+        className: "bg-content1",
+        textClassName: "text-foreground",
+      },
+      {
+        color: "content2",
+        className: "bg-content2",
+        textClassName: "text-foreground",
+      },
+      {
+        color: "content3",
+        className: "bg-content3",
+        textClassName: "text-foreground",
+      },
+      {
+        color: "content4",
+        className: "bg-content4",
+        textClassName: "text-foreground",
+      },
+    ],
+  },
+  {
     title: "Background",
     items: [
       {

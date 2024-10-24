@@ -3,7 +3,7 @@ import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
 export const AccordionDefault = (arg: AccordionProps) => {
   return (
-    <Accordion {...arg}>
+    <Accordion color="secondary" {...arg}>
       <AccordionItem aria-label="Accordion 1" heading="Accordion 1">
         {defaultContent}
       </AccordionItem>

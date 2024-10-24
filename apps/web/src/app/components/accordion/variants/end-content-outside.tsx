@@ -1,15 +1,10 @@
-import {
-  Accordion,
-  AccordionItem,
-  type AccordionProps,
-  Button,
-} from "@jamsr-ui/react";
+import { Accordion, AccordionItem, Button } from "@jamsr-ui/react";
 import { TrashIcon } from "@jamsr-ui/shared-icons";
 import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
-export const AccordionEndContentOutside = (arg: AccordionProps) => {
+export const AccordionEndContentOutside = () => {
   return (
-    <Accordion {...arg}>
+    <Accordion color="secondary">
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"

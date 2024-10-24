@@ -13,8 +13,14 @@ export type AccordionSelectionSet = Set<number>;
 export const Accordion = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, AccordionProps>,
 ) => {
-  const { Component, children, getBaseProps, selectionMode } =
-    useAccordion(props);
+  const {
+    Component,
+    children,
+    getBaseProps,
+    selectionMode,
+    color,
+    hideIndicator,
+  } = useAccordion(props);
   const [selectedKeys, setSelectedKeys] = useState<AccordionSelectionSet>(
     new Set([]),
   );
@@ -78,6 +84,8 @@ export const Accordion = <T extends React.ElementType = "div">(
               onFocusFirst: () => focusFirst(),
               onFocusLast: () => focusLast(),
               ref: (node) => ref(index, node),
+              color,
+              hideIndicator,
             }}
           >
             {child}

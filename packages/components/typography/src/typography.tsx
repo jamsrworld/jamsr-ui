@@ -24,6 +24,7 @@ export const Typography = <T extends React.ElementType = "div">(
 
   return (
     <Component
+      data-component="typography"
       className={typographyVariants({
         variant,
         leading,

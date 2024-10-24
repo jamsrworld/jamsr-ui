@@ -11,7 +11,7 @@ export const accordion = tv({
 
 export const accordionItem = tv({
   slots: {
-    base: "flex flex-col rounded-xl bg-background-secondary px-4",
+    base: "flex flex-col rounded-xl bg-content1 px-4",
     header: "flex items-center gap-2",
     trigger: [
       "flex size-full items-center gap-3 py-4 disabled:cursor-not-allowed disabled:opacity-50",
@@ -27,11 +27,22 @@ export const accordionItem = tv({
       "rotate-0 transition-transform duration-500 data-[open=true]:-rotate-180",
   },
   variants: {
+    color: {
+      default: {
+        base: "bg-content1",
+      },
+      secondary: {
+        base: "bg-background-secondary",
+      },
+    },
     hideIndicator: {
       true: {
         indicator: "hidden",
       },
     },
+  },
+  defaultVariants: {
+    color: "default",
   },
 });
 

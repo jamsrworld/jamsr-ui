@@ -34,7 +34,7 @@ export const Confirmation = (pros: ConfirmationProps) => {
       <DialogContent className="max-w-[280px] rounded-lg bg-background-secondary">
         <DialogHeader className="text-center">{title}</DialogHeader>
         <DialogBody>
-          <Typography as="p" variant="paragraph" className="text-center">
+          <Typography as="p" variant="paragraph2" className="text-center">
             {message}
           </Typography>
         </DialogBody>

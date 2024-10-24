@@ -1,6 +1,10 @@
 import { type PropGetter, type UIProps } from "@jamsr-ui/utils";
 import { useCallback, useMemo } from "react";
-import { accordion, type AccordionGroupVariantProps } from "./style";
+import {
+  accordion,
+  type AccordionItemVariantProps,
+  type AccordionGroupVariantProps,
+} from "./style";
 
 type Props = {
   className?: string;
@@ -9,6 +13,7 @@ type Props = {
 
 export type UseAccordionProps = UIProps<"div"> &
   Props &
+  AccordionItemVariantProps &
   AccordionGroupVariantProps;
 
 export const useAccordion = (props: UseAccordionProps) => {
@@ -18,6 +23,8 @@ export const useAccordion = (props: UseAccordionProps) => {
     className,
     selectionMode = "single",
     fullWidth,
+    color,
+    hideIndicator,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -48,5 +55,7 @@ export const useAccordion = (props: UseAccordionProps) => {
     children,
     getBaseProps,
     selectionMode,
+    color,
+    hideIndicator,
   };
 };

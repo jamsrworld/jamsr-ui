@@ -28,7 +28,7 @@ export const Chip = <T extends React.ElementType = "div">(
         <Button
           isIconOnly
           size="xs"
-          rounded
+          isRounded
           onClick={onDelete}
           className="size-4 shrink-0"
         >

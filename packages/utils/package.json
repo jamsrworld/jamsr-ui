@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@jamsr-ui/tailwind-config": "workspace:^",
-    "@types/node": "^20.12.12",
+    "@types/node": "22.7.9",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.1",

@@ -3,7 +3,9 @@ import {
   FloatingList,
   FloatingPortal,
 } from "@floating-ui/react";
+import { ChevronDownIcon } from "@jamsr-ui/shared-icons";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { m, AnimatePresence } from "framer-motion";
 import type { UseSelectInnerProps } from "./use-select";
 import { useSelect } from "./use-select";
 import { SelectProvider } from "./use-select-context";
@@ -41,6 +43,7 @@ export const Select = <T extends React.ElementType = "div">(
     startContent,
     endContent,
     Component,
+    getIndicatorProps,
   } = useSelect(props);
 
   return (
@@ -59,20 +62,37 @@ export const Select = <T extends React.ElementType = "div">(
               <span {...getPlaceholderProps()}>{placeholder}</span>
             )}
             {endContent && <div {...getEndContentProps()}>{endContent}</div>}
+            <span {...getIndicatorProps()}>
+              <ChevronDownIcon />
+            </span>
           </div>
         </button>
         <SelectProvider value={contextValue}>
-          {isOpen && (
-            <FloatingPortal>
-              <FloatingFocusManager context={context} modal>
-                <div {...getPopoverProps()}>
-                  <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
-                    <div {...getContentProps()}>{children}</div>
-                  </FloatingList>
-                </div>
-              </FloatingFocusManager>
-            </FloatingPortal>
-          )}
+          <AnimatePresence>
+            {isOpen && (
+              <FloatingPortal>
+                <FloatingFocusManager context={context} modal>
+                  <div {...getPopoverProps()}>
+                    <FloatingList
+                      elementsRef={elementsRef}
+                      labelsRef={labelsRef}
+                    >
+                      {/* @ts-expect-error framer-error */}
+                      <m.div
+                        initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                        exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        {...getContentProps()}
+                      >
+                        {children}
+                      </m.div>
+                    </FloatingList>
+                  </div>
+                </FloatingFocusManager>
+              </FloatingPortal>
+            )}
+          </AnimatePresence>
         </SelectProvider>
         {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
       </div>

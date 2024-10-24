@@ -8,6 +8,7 @@ import {
   DialogHeader,
 } from "@jamsr-ui/dialog";
 import { Divider } from "@jamsr-ui/divider";
+import { Typography } from "@jamsr-ui/typography";
 import { useConfirmation } from "./use-confirmation";
 
 export type ConfirmationProps = {
@@ -33,7 +34,9 @@ export const Confirmation = (pros: ConfirmationProps) => {
       <DialogContent className="max-w-[280px] rounded-lg bg-background-secondary">
         <DialogHeader className="text-center">{title}</DialogHeader>
         <DialogBody>
-          <p className="text-center text-foreground-secondary">{message}</p>
+          <Typography as="p" variant="paragraph" className="text-center">
+            {message}
+          </Typography>
         </DialogBody>
         <Divider />
         <div className="flex">

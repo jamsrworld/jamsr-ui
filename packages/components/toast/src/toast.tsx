@@ -7,8 +7,9 @@ const Toast = () => {
     <Toaster
       position="bottom-center"
       toastOptions={{
-        className: "!bg-background border !border-divider !text-foreground",
-        duration: 2_000,
+        className:
+          "!bg-black dark:!bg-background border-none !radius-none dark:!text-foreground  !text-white",
+        duration: 2_00043,
       }}
     />
   );

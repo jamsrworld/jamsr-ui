@@ -65,6 +65,7 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
             },
             fontSize: {
               "size-inherit": "inherit",
+              "2xs": "var(--fs-2xs)",
               xs: "var(--fs-xs)",
               sm: "var(--fs-sm)",
               base: "var(--fs-base)",
@@ -106,6 +107,9 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
             },
             opacity: {
               disabled: "50%",
+            },
+            dropShadow: {
+              menu: "0px 10px 100px rgba(0, 0, 0, 0.3)",
             },
           },
         },

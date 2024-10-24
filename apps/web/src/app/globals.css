@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -25,16 +24,17 @@ html {
 }
 
 :root {
-  --fs-xs: clamp(0.72rem, -0.05vi + 0.74rem, 0.69rem);
-  --fs-sm: clamp(0.8rem, 0.07vi + 0.78rem, 0.83rem);
-  --fs-base: clamp(0.88rem, 0.23vi + 0.82rem, 1rem);
-  --fs-md: clamp(0.96rem, 0.43vi + 0.85rem, 1.2rem);
-  --fs-lg: clamp(1.06rem, 0.69vi + 0.89rem, 1.44rem);
-  --fs-xl: clamp(1.16rem, 1.02vi + 0.91rem, 1.73rem);
-  --fs-2xl: clamp(1.28rem, 1.44vi + 0.92rem, 2.07rem);
-  --fs-3xl: clamp(1.41rem, 1.96vi + 0.92rem, 2.49rem);
-  --fs-4xl: clamp(1.55rem, 2.61vi + 0.9rem, 2.99rem);
-  --fs-5xl: clamp(1.71rem, 3.41vi + 0.85rem, 3.58rem);
+  --fs-2xs: clamp(0.66rem, -0.08vi + 0.68rem, 0.58rem);
+  --fs-xs: clamp(0.72rem, -0.03vi + 0.73rem, 0.69rem);
+  --fs-sm: clamp(0.8rem, 0.04vi + 0.79rem, 0.83rem);
+  --fs-base: clamp(0.88rem, 0.13vi + 0.84rem, 1rem);
+  --fs-md: clamp(0.96rem, 0.25vi + 0.9rem, 1.2rem);
+  --fs-lg: clamp(1.06rem, 0.4vi + 0.96rem, 1.44rem);
+  --fs-xl: clamp(1.16rem, 0.59vi + 1.02rem, 1.73rem);
+  --fs-2xl: clamp(1.28rem, 0.83vi + 1.07rem, 2.07rem);
+  --fs-3xl: clamp(1.41rem, 1.14vi + 1.13rem, 2.49rem);
+  --fs-4xl: clamp(1.55rem, 1.51vi + 1.17rem, 2.99rem);
+  --fs-5xl: clamp(1.71rem, 1.98vi + 1.21rem, 3.58rem);
 }
 
 .debug * {

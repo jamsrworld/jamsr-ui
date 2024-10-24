@@ -14,7 +14,7 @@ import {
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn } from "@jamsr-ui/utils";
+import { cn, dataAttr } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import {
   Children,
@@ -93,6 +93,10 @@ export const useSelect = (props: UseSelectProps) => {
     onChange: onOpenChange,
     defaultProp: defaultOpen,
   });
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
 
   const childrenArray = Children.toArray(children);
   const selectItems = childrenArray.map((item) => {
@@ -236,11 +240,21 @@ export const useSelect = (props: UseSelectProps) => {
     return {
       "data-component": "select",
       "data-slot": "base",
+      "data-open": dataAttr(isOpen),
+      "data-hover": dataAttr(isHovered),
       ...props,
       className: styles.base({
         className: cn(classNames?.base, className),
       }),
       ...restProps,
+    };
+  };
+
+  const getIndicatorProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "indicator",
+      className: styles.indicator({ className: classNames?.indicator }),
+      ...props,
     };
   };
 
@@ -282,6 +296,8 @@ export const useSelect = (props: UseSelectProps) => {
       ...props,
       ...getReferenceProps({
         ref: setReference,
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
       }),
     };
   };
@@ -369,6 +385,7 @@ export const useSelect = (props: UseSelectProps) => {
     getHelperTextProps,
     getStartContentProps,
     getEndContentProps,
+    getIndicatorProps,
     contextValue,
     startContent,
     endContent,

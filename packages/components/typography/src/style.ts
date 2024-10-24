@@ -11,6 +11,7 @@ export const typographyVariants = tv({
       h5: "text-lg",
       h6: "text-md",
       caption: "text-xs",
+      lead: "text-2xs",
       paragraph: "text-sm",
       body1: "text-base",
       body2: "text-md",

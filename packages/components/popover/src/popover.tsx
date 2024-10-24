@@ -125,14 +125,11 @@ export const Popover = (props: PopoverProps) => {
       {triggerContent}
       {open && (
         <FloatingPortal>
-          <FloatingFocusManager
-            context={context}
-            modal={isModal}
-          >
+          <FloatingFocusManager context={context} modal={isModal}>
             <div
               data-component="popover"
               className={cn(
-                "z-popover rounded-2xl border border-divider bg-background p-2 shadow-card focus:outline-none",
+                "z-popover rounded-2xl border border-divider bg-background p-2 drop-shadow-menu backdrop-blur-3xl focus:outline-none",
                 className,
               )}
               ref={refs.setFloating}

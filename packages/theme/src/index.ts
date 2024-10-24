@@ -1,11 +1,11 @@
 import { dirname, sep } from "node:path";
 import { type Config } from "tailwindcss";
 import { createThemes } from "tw-colors";
-import { semanticColors } from "./colors";
+import { semanticColors, commonColors } from "./colors";
 import { DeepPartial, ThemeColors } from "./colors/types";
 import { jamsrUiPlugins } from "./plugin";
 
-export { createThemes, semanticColors };
+export { createThemes, semanticColors, commonColors };
 
 type Color = "light" | "dark";
 // type Color = "light" | "dark" | (string & {});

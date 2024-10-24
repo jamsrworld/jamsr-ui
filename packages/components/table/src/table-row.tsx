@@ -3,7 +3,7 @@ import { useTableContext } from "./table-context";
 
 export type TableRowProps = UIProps<"tr">;
 
-export const TableRow = <T extends React.ElementType = "tbody">(
+export const TableRow = <T extends React.ElementType = "tr">(
   props: ComponentPropsWithAs<T>,
 ) => {
   const { as, children, className, ...restProps } = props as TableRowProps;

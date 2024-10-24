@@ -41,6 +41,7 @@ const components = [
   "toast",
   "tooltip",
   "typography",
+  "theme",
 ];
 
 export const ComponentsSidebar = () => {

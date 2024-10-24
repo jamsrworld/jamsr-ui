@@ -2,11 +2,11 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const table = tv({
   slots: {
-    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl border border-white/20 bg-background-secondary p-4",
+    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl",
     wrapper: "grid w-full gap-2",
     table: "group/table w-full min-w-full",
     thead: "h-10",
-    th: "h-10 grow items-center whitespace-nowrap border-divider bg-background-tertiary px-3 text-left text-xs uppercase text-foreground-secondary first:rounded-l-lg last:rounded-r-lg",
+    th: "h-10 grow items-center whitespace-nowrap px-3 text-left text-xs uppercase text-foreground-secondary first:rounded-l-lg last:rounded-r-lg",
     tbody: "",
     tr: "group/tr",
     td: "overflow-hidden whitespace-nowrap px-3 text-sm",
@@ -16,6 +16,16 @@ export const table = tv({
     loadingWrapper: "",
   },
   variants: {
+    variant: {
+      solid: {
+        th: "border-divider bg-background-tertiary",
+        base: "bg-background-secondary p-4",
+      },
+      outlined: {
+        th: "border-b border-b-black",
+        td: "border-b",
+      },
+    },
     density: {
       compact: {
         td: "py-2",
@@ -57,11 +67,12 @@ export const table = tv({
     },
   },
   defaultVariants: {
-    isHeaderSticky: true,
+    isHeaderSticky: false,
     density: "compact",
-    allowHover: true,
+    allowHover: false,
     isMobileMode: false,
     separateRows: false,
+    variant: "solid",
   },
 });
 

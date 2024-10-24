@@ -1,28 +1,18 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const cardVariants = tv({
-  base: "relative overflow-hidden rounded-2xl bg-background-secondary",
+  base: "relative overflow-hidden rounded-2xl bg-background-secondary transition-colors",
   variants: {
-    variant: {
-      default: "",
-      gradient:
-        "border-[1.2px] border-black/10 bg-[linear-gradient(139deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03)_30%,rgba(255,255,255,0.01)_66%,rgba(255,255,255,0.08))] ",
-    },
     bg: {
-      default: "bg-background-secondary",
-      secondary: "",
+      default: "bg-content1",
+      secondary: "bg-background-secondary",
+      gradient:
+        "border border-divider-light bg-[linear-gradient(139deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03)_30%,rgba(255,255,255,0.01)_66%,rgba(255,255,255,0.08))] ",
     },
     bordered: {
       true: "",
     },
   },
-  compoundVariants: [
-    {
-      variant: "default",
-      bordered: true,
-      className: "border border-white/20",
-    },
-  ],
   defaultVariants: {
     variant: "default",
     bg: "default",

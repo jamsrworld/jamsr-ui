@@ -1,3 +1,4 @@
+import { Card, Typography } from "@jamsr-ui/react";
 import React from "react";
 
 type Props = {
@@ -9,14 +10,22 @@ type Props = {
 export const VariantWrapper = (props: Props) => {
   const { children, heading, description } = props;
   return (
-    <section className="w-full rounded-2xl bg-background p-8">
+    <Card as="section" className="w-full rounded-2xl bg-background p-8">
       <div className="mb-4 flex flex-col gap-1">
-        <h1 className="text-xl font-medium">{heading}</h1>
+        <Typography variant="h6" as="h1" className="text-xl font-medium">
+          {heading}
+        </Typography>
         {description && (
-          <div className="text-foreground-secondary">{description}</div>
+          <Typography
+            as="p"
+            variant="paragraph"
+            className="text-foreground-secondary"
+          >
+            {description}
+          </Typography>
         )}
       </div>
       {children}
-    </section>
+    </Card>
   );
 };

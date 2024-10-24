@@ -9,10 +9,10 @@ export const themeColorsLight: ThemeColors = {
     tertiary: "#f4f5f7",
   },
   foreground: {
-    DEFAULT: "#1d1d1e",
+    DEFAULT: "#1d1d1f",
     link: "#0066cc",
-    secondary: "#8A8A8E",
-    tertiary: "#C4C4C6",
+    secondary: "#6e6e73",
+    tertiary: "#86868B",
     ...common.zinc,
   },
   divider: {

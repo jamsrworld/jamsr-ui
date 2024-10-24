@@ -1,23 +1,23 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
-import { TableDefault } from "./variants/default";
-import { TableOutlined } from "./variants/outlined";
+import { ThemeDefault } from "./variants/default";
+import { ThemeTypography } from "./variants/typography";
 
 export const metadata: Metadata = {
-  title: "Table",
+  title: "Theme",
 };
 
-const Table = () => {
+const Theme = () => {
   return (
-    <VariantPage heading="Table">
+    <VariantPage heading="Theme">
       <VariantWrapper heading="Default">
-        <TableDefault />
+        <ThemeDefault />
       </VariantWrapper>
-      <VariantWrapper heading="Outlined">
-        <TableOutlined />
+      <VariantWrapper heading="Typography">
+        <ThemeTypography />
       </VariantWrapper>
     </VariantPage>
   );
 };
-export default Table;
+export default Theme;

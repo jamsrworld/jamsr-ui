@@ -31,6 +31,9 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
           ".gap-responsive": {
             "@apply gap-1 md:gap-2 lg:gap-4": "",
           },
+          strong: {
+            "@apply font-semibold": "",
+          },
         });
         addUtilities({
           ".tap-highlight-transparent": {

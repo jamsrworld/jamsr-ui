@@ -1,22 +1,26 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const typographyVariants = tv({
-  base: "subpixel-antialiased",
+  base: "subpixel-antialiased transition-colors",
   variants: {
     variant: {
-      h1: "text-4xl",
-      h2: "text-3xl",
-      h3: "text-2xl",
-      h4: "text-xl",
-      h5: "text-lg",
-      h6: "text-md",
-      caption: "text-xs",
+      h1: "text-4xl leading-tight",
+      h2: "text-3xl leading-tight",
+      h3: "text-2xl leading-tight",
+      h4: "text-xl leading-tight",
+      h5: "text-lg leading-tight",
+      h6: "text-md leading-tight",
       lead: "text-2xs",
-      paragraph: "text-sm",
-      body1: "text-base",
-      body2: "text-md",
-      body3: "text-lg",
-      body4: "text-xl",
+      caption: "text-xs",
+      paragraph2: "text-sm leading-[1.7]",
+      paragraph: "text-base leading-[1.7]",
+      body1: "text-md leading-[1.7]",
+      body2: "text-lg leading-[1.7]",
+      body3: "text-xl leading-[1.7]",
+      body4: "text-2xl",
+      body5: "text-3xl",
+      body6: "text-4xl leading-tight",
+      body7: "text-5xl leading-tight",
     },
     gradient: {
       violet: "from-[#FF1CF7] to-[#b249f8]",
@@ -50,7 +54,11 @@ export const typographyVariants = tv({
       className: "bg-gradient-to-b bg-clip-text text-transparent",
     },
     {
-      variant: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      variant: ["h1", "h2", "h3"],
+      className: "font-bold",
+    },
+    {
+      variant: ["h4", "h5", "h6"],
       className: "font-semibold",
     },
     {

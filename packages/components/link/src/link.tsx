@@ -12,7 +12,7 @@ export const Link = <T extends React.ElementType = "a">(
     <Component
       data-component="link"
       className={cn(
-        "cursor-pointer select-none text-sm text-foreground-link hover:underline hover:underline-offset-4",
+        "cursor-pointer select-none text-foreground-link hover:underline hover:underline-offset-4",
         focusVisibleClasses,
         className,
       )}

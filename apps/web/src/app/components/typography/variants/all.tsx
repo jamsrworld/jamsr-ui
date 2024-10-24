@@ -9,12 +9,15 @@ export const TypographyAll = () => {
         return (
           <Typography
             key={item}
-            // @ts-expect-error TypeError 
+            // @ts-expect-error TypeError
             variant={item}
-            className="max-w-screen-md text-balance text-center"
+            className="line-clamp-2"
           >
             I am {item} Typography Variant Create content to help spread the
-            word about Framer and earn 50% of
+            word about Framer and earn 50% of. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Obcaecati sequi repellendus iste
+            recusandae nesciunt! Asperiores officiis dolorum quia maxime harum
+            accusantium ab eos dolorem, nihil, at sed magni minima tenetur!
           </Typography>
         );
       })}

@@ -4,12 +4,13 @@ import {
   TableCell,
   TableColumn,
   TableHeader,
+  type TableProps,
   TableRow,
 } from "@jamsr-ui/react";
 
-export const TableDefault = () => {
+export const TableDefault = (props: Partial<TableProps>) => {
   return (
-    <Table aria-label="Example static collection table">
+    <Table aria-label="Example static collection table" {...props}>
       <TableHeader>
         <TableRow>
           <TableColumn>NAME</TableColumn>

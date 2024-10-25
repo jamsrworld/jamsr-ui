@@ -34,7 +34,7 @@ export const useTable = (originalProps: UseTableProps) => {
   } = props;
   const Component = as ?? "table";
 
-  const slots = useMemo(() => {
+  const styles = useMemo(() => {
     return table({
       ...variantProps,
     });
@@ -45,11 +45,11 @@ export const useTable = (originalProps: UseTableProps) => {
       ...props,
       ...restProps,
       "data-slot": "base",
-      className: slots.base({
+      className: styles.base({
         className: cn(className, classNames?.base, props?.className),
       }),
     }),
-    [className, classNames?.base, restProps, slots],
+    [className, classNames?.base, restProps, styles],
   );
 
   const getWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -58,25 +58,25 @@ export const useTable = (originalProps: UseTableProps) => {
       ...props,
       ref: wrapperRef,
       "data-slot": "wrapper",
-      className: slots.wrapper({
+      className: styles.wrapper({
         className: cn(classNames?.wrapper, props?.className),
       }),
     }),
-    [classNames?.wrapper, slotProps.wrapperProps, slots, wrapperRef],
+    [classNames?.wrapper, slotProps.wrapperProps, styles, wrapperRef],
   );
 
   const getTableProps: PropGetter<ComponentProps<"table">> = useCallback(
     (props) => ({
       ...props,
-      className: slots.table({
+      className: styles.table({
         className: cn(classNames?.table, props?.className),
       }),
     }),
-    [classNames?.table, slots],
+    [classNames?.table, styles],
   );
 
   return {
-    slots,
+    styles,
     Component,
     children,
     topContent,
@@ -85,5 +85,6 @@ export const useTable = (originalProps: UseTableProps) => {
     getWrapperProps,
     getTableProps,
     classNames,
+    variantProps,
   };
 };

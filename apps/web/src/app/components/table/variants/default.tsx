@@ -10,12 +10,16 @@ import {
 
 export const TableDefault = (props: Partial<TableProps>) => {
   return (
-    <Table aria-label="Example static collection table" {...props}>
+    <Table
+      aria-label="Example static collection table"
+      variant="solid"
+      {...props}
+    >
       <TableHeader>
         <TableRow>
-          <TableColumn>NAME</TableColumn>
-          <TableColumn>ROLE</TableColumn>
-          <TableColumn>STATUS</TableColumn>
+          <TableColumn>Name</TableColumn>
+          <TableColumn>Role</TableColumn>
+          <TableColumn>Status</TableColumn>
         </TableRow>
       </TableHeader>
       <TableBody>

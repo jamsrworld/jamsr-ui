@@ -2,11 +2,11 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const table = tv({
   slots: {
-    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl",
+    base: "relative flex flex-col gap-2 overflow-hidden",
     wrapper: "grid w-full gap-2",
     table: "group/table w-full min-w-full",
     thead: "h-10",
-    th: "h-10 grow items-center whitespace-nowrap px-3 text-left text-xs uppercase text-foreground-secondary first:rounded-l-lg last:rounded-r-lg",
+    th: "h-10 grow items-center whitespace-nowrap px-3 text-left text-xs",
     tbody: "",
     tr: "group/tr",
     td: "overflow-hidden whitespace-nowrap px-3 text-sm",
@@ -18,12 +18,13 @@ export const table = tv({
   variants: {
     variant: {
       solid: {
-        th: "border-divider bg-background-tertiary",
-        base: "bg-background-secondary p-4",
+        th: "border-divider bg-background-tertiary first:rounded-l-lg last:rounded-r-lg",
+        base: "rounded-2xl bg-background-secondary p-4",
       },
       outlined: {
-        th: "border-b border-b-black",
-        td: "border-b",
+        th: "border-b border-b-divider",
+        td: "border-b border-divider-light",
+        base: "bg-content1",
       },
     },
     density: {
@@ -39,7 +40,8 @@ export const table = tv({
     },
     isHeaderSticky: {
       true: {
-        thead: "sticky top-0 z-10 [&>tr]:first:shadow-sm",
+        thead: "sticky top-0 z-10 bg-content1 [&>tr]:shadow-sm",
+        wrapper: "flex max-h-[400px] flex-col overflow-auto",
       },
     },
     allowHover: {
@@ -48,14 +50,6 @@ export const table = tv({
       },
       false: {
         td: "",
-      },
-    },
-    isMobileMode: {
-      true: {
-        td: "rounded-none border-b border-divider",
-      },
-      false: {
-        td: "first:rounded-l-lg last:rounded-r-lg",
       },
     },
     separateRows: {
@@ -70,9 +64,8 @@ export const table = tv({
     isHeaderSticky: false,
     density: "compact",
     allowHover: false,
-    isMobileMode: false,
     separateRows: false,
-    variant: "solid",
+    variant: "outlined",
   },
 });
 

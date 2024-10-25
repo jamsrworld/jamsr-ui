@@ -23,14 +23,12 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
             >
               {header.isPlaceholder ? null : (
                 <>
-                  <span
-                    className={cn({
-                      "flex w-full cursor-pointer  select-none gap-1 overflow-hidden pr-1 text-[11px] uppercase":
-                        header.column.getCanSort(),
+                  <button
+                    type="button"
+                    className={cn("flex w-full cursor-pointer  select-none gap-1 overflow-hidden pr-1",{
+                      "": header.column.getCanSort(),
                     })}
                     onClick={header.column.getToggleSortingHandler()}
-                    onKeyDown={header.column.getToggleSortingHandler()}
-                    role="presentation"
                   >
                     <span className="flex w-full grow items-center overflow-hidden">
                       {flexRender(
@@ -42,7 +40,7 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
                         desc: <ChevronDownIcon className="size-5" />,
                       }[header.column.getIsSorted() as string] ?? null}
                     </span>
-                  </span>
+                  </button>
                   <span
                     role="presentation"
                     aria-label="resize"

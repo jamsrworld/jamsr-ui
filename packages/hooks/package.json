@@ -26,12 +26,12 @@
     "@types/node": "^22.7.9",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "react": "19.0.0-rc-0751fac7-20241002",
-    "react-dom": "19.0.0-rc-0751fac7-20241002"
+    "react": "19.0.0-rc-1631855f-20241023",
+    "react-dom": "19.0.0-rc-1631855f-20241023"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-0751fac7-20241002",
-    "react-dom": "19.0.0-rc-0751fac7-20241002"
+    "react": "19.0.0-rc-1631855f-20241023",
+    "react-dom": "19.0.0-rc-1631855f-20241023"
   },
   "clean-package": "../../clean-package.config.json"
 }

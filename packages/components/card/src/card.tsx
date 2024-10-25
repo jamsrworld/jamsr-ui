@@ -11,21 +11,13 @@ export type CardProps = ComponentPropsWithoutRef<"div"> &
 export const Card = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, CardProps>,
 ) => {
-  const {
-    as,
-    className,
-    variant,
-    children,
-    bg,
-    bordered,
-    ...restProps
-  } = props;
+  const { as, className, children, bg, bordered, ...restProps } = props;
   const Component = as ?? "div";
   return (
     <Component
       data-component="card"
       data-slot="base"
-      className={cn(cardVariants({ variant, bg, className, bordered }))}
+      className={cn(cardVariants({ bg, className, bordered }))}
       {...restProps}
     >
       {children}

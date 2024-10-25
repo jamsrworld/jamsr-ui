@@ -1,4 +1,3 @@
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import React from "react";
 import { ComponentsSidebar } from "./(page)/sidebar";
 
@@ -15,9 +14,8 @@ const layout = (props: Props) => {
         style={{
           width: "calc(100% - 240px)",
         }}
-        className="ml-[240px] grow bg-background-secondary px-12"
+        className="grow bg-background-secondary px-2 max-md:!w-full md:ml-[240px] md:px-12"
       >
-        <ThemeSwitcher />
         <div className="container mx-auto max-w-screen-lg py-12">
           {children}
         </div>

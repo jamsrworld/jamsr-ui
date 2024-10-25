@@ -10,11 +10,9 @@ export function useCallbackRef<T extends (...args: any[]) => any>(
   callback: T | undefined,
 ): T {
   const callbackRef = useRef(callback);
-
   useEffect(() => {
     callbackRef.current = callback;
   });
-
   return useMemo(
     () =>
       // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-argument

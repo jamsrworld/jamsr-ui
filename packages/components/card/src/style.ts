@@ -14,7 +14,6 @@ export const cardVariants = tv({
     },
   },
   defaultVariants: {
-    variant: "default",
     bg: "default",
     bordered: true,
   },

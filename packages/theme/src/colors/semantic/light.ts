@@ -16,9 +16,9 @@ export const themeColorsLight: ThemeColors = {
     ...common.zinc,
   },
   divider: {
-    light: "#c9c8c9",
+    light: "#e3e2e3",
     DEFAULT: "#bebdbe",
-    dark: "#b4b2b4",
+    dark: "#969596",
   },
   focus: {
     DEFAULT: common.blue[500],

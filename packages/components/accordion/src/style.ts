@@ -22,7 +22,7 @@ export const accordionItem = tv({
     mainContent: " flex flex-1 flex-col text-start",
     heading: "text-base font-medium text-foreground",
     subheading: "text-sm font-normal text-foreground-500",
-    panel: "py-2 text-foreground-secondary",
+    panel: "py-2",
     indicator:
       "rotate-0 transition-transform duration-500 data-[open=true]:-rotate-180",
   },

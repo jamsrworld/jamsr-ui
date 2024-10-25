@@ -6,7 +6,6 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@jamsr-ui/shared-icons";
-import { Typography } from "@jamsr-ui/typography";
 import { type Table } from "@tanstack/react-table";
 import { useEffect, useState } from "react";
 import { rowPerPageOptions } from "./hooks/use-pagination";
@@ -38,36 +37,39 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between gap-4 border-t border-divider/10 p-3">
-      <div className="flex grow items-center gap-2">
-        <Typography as="p" className="_md:hidden">
-          Rows Per Page:
-        </Typography>
-        <Select
-          className="max-w-[80px]"
-          value={value}
-          onValueChange={setValue}
-          size="sm"
-        >
-          {rowPerPageOptions.map((pageSize) => (
-            <SelectItem key={pageSize.toString()} value={pageSize.toString()}>
-              {pageSize.toString()}
-            </SelectItem>
-          ))}
-        </Select>
-      </div>
+    <div
+      data-slot="pagination"
+      className="flex flex-col justify-between gap-4 border-t border-divider-dark p-3 md:flex-row md:items-center"
+    >
+      <Select
+        classNames={{
+          base: "items-center flex max-w-[80px] flex-row gap-2",
+          label: "shrink-0",
+        }}
+        value={value}
+        onValueChange={setValue}
+        size="sm"
+        label="Rows Per Page:"
+      >
+        {rowPerPageOptions.map((pageSize) => (
+          <SelectItem key={pageSize.toString()} value={pageSize.toString()}>
+            {pageSize.toString()}
+          </SelectItem>
+        ))}
+      </Select>
       <div className="flex gap-1 md:gap-4">
         <div className="flex items-center justify-center text-sm font-medium">
           Page {table.getState().pagination.pageIndex + 1} of{" "}
           {table.getPageCount()}
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center">
           <Button
             isIconOnly
             onClick={onFirstPage}
-            disabled={!table.getCanPreviousPage()}
+            isDisabled={!table.getCanPreviousPage()}
             size="sm"
-            className="_md:hidden"
+            variant="light"
+            isRounded
           >
             <span className="sr-only">Go to first page</span>
             <ChevronDoubleLeftIcon />
@@ -75,8 +77,10 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           <Button
             isIconOnly
             onClick={onPrevious}
-            disabled={!table.getCanPreviousPage()}
+            isDisabled={!table.getCanPreviousPage()}
             size="sm"
+            variant="light"
+            isRounded
           >
             <span className="sr-only">Go to previous page</span>
             <ChevronLeftIcon />
@@ -84,8 +88,10 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           <Button
             isIconOnly
             onClick={onNext}
-            disabled={!table.getCanNextPage()}
+            isDisabled={!table.getCanNextPage()}
             size="sm"
+            variant="light"
+            isRounded
           >
             <span className="sr-only">Go to next page</span>
             <ChevronRightIcon />
@@ -93,9 +99,10 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           <Button
             isIconOnly
             onClick={onEnd}
-            disabled={!table.getCanNextPage()}
+            isDisabled={!table.getCanNextPage()}
             size="sm"
-            className="_md:hidden"
+            variant="light"
+            isRounded
           >
             <span className="sr-only">Go to last page</span>
             <ChevronDoubleRightIcon />

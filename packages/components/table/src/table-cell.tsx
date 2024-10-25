@@ -7,17 +7,19 @@ export type TableCellProps = UIProps<"td">;
 export const TableCell = <T extends React.ElementType = "td">(
   props: ComponentPropsWithAs<T>,
 ) => {
-  const { as, children, className, ...restProps } = props as TableCellProps;
+  const {
+    as,
+    children,
+    className: $className,
+    ...restProps
+  } = props as TableCellProps;
   const Component = as ?? "td";
-  const { slots, classNames } = useTableContext();
-
+  const { styles, classNames } = useTableContext();
+  const className = styles.td({
+    className: cn($className, classNames?.td),
+  });
   return (
-    <Component
-      className={slots.td({
-        className: cn(classNames?.td, className),
-      })}
-      {...restProps}
-    >
+    <Component className={className} {...restProps}>
       {children}
     </Component>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import { cn } from "@jamsr-ui/utils";
 import NextLink, { type LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
@@ -47,7 +48,8 @@ const components = [
 export const ComponentsSidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="fixed flex h-screen min-w-[240px] flex-col gap-1 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 py-12">
+    <div className="fixed flex h-screen min-w-[240px] flex-col gap-1 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 py-12 max-md:hidden">
+      <ThemeSwitcher />
       {components.map((item) => {
         const path = `/components/${item}`;
         const isActive = pathname === path;

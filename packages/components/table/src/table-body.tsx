@@ -7,17 +7,19 @@ export type TableBodyProps = UIProps<"tbody">;
 export const TableBody = <T extends React.ElementType = "tbody">(
   props: ComponentPropsWithAs<T>,
 ) => {
-  const { as, children, className, ...restProps } = props as TableBodyProps;
-
+  const {
+    as,
+    children,
+    className: $className,
+    ...restProps
+  } = props as TableBodyProps;
   const Component = as ?? "tbody";
-  const { slots, classNames } = useTableContext();
+  const { styles, classNames } = useTableContext();
+  const className = styles.tbody({
+    className: cn($className, classNames?.tbody),
+  });
   return (
-    <Component
-      className={slots.tbody({
-        className: cn(className, classNames?.tbody),
-      })}
-      {...restProps}
-    >
+    <Component className={className} {...restProps}>
       {children}
     </Component>
   );

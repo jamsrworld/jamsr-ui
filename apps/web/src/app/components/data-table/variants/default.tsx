@@ -1,9 +1,9 @@
 "use client";
 
-import { DataTable } from "@jamsr-ui/react";
+import { DataTable, type DataTableProps } from "@jamsr-ui/react";
 import { COLUMNS, USERS } from "./columns";
 
-export const DataTableDefault = () => {
+export const DataTableDefault = (props: Partial<DataTableProps>) => {
   return (
     <DataTable
       columns={COLUMNS}
@@ -14,6 +14,7 @@ export const DataTableDefault = () => {
       }}
       data={USERS}
       rowCount={USERS.length}
+      {...props}
     />
   );
 };

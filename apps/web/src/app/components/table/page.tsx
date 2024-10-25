@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const Table = () => {
   return (
     <VariantPage heading="Table">
-      <VariantWrapper heading="Default">
+      <VariantWrapper heading="Solid">
         <TableDefault />
       </VariantWrapper>
       <VariantWrapper heading="Outlined">

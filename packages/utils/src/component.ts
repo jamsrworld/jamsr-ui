@@ -1,5 +1,5 @@
 export type As<Props = any> = React.ElementType<Props>;
-export type PropsOf<T extends As> = React.ComponentProps<T> & {
+export type PropsOf<T extends As> = React.ComponentPropsWithRef<T> & {
   as?: As;
 };
 

@@ -3,16 +3,17 @@ import { useEffect, useRef, useState } from "react";
 export type UseHoverOptions = {
   enterDelay?: number; // delay in milliseconds marking as hovered
   exitDelay?: number; // delay in milliseconds unmarking as hovered
+  isDisabled?: boolean;
 };
 
 export const useHover = <T extends HTMLElement>(options?: UseHoverOptions) => {
-  const { enterDelay = 0, exitDelay = 0 } = options ?? {};
+  const { enterDelay = 0, exitDelay = 0, isDisabled } = options ?? {};
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef<T>(null);
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) return () => {};
+    if (!node || isDisabled) return () => {};
 
     let enterTimeout: NodeJS.Timeout | null = null;
     let exitTimeout: NodeJS.Timeout | null = null;
@@ -39,7 +40,7 @@ export const useHover = <T extends HTMLElement>(options?: UseHoverOptions) => {
       node.removeEventListener("mouseenter", onMouseEnter);
       node.removeEventListener("mouseleave", onMouseLeave);
     };
-  }, [enterDelay, exitDelay]);
+  }, [enterDelay, exitDelay, isDisabled]);
 
   return { ref, isHovered };
 };

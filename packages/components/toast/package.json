@@ -28,12 +28,12 @@
     "@jamsr-ui/button": "^0.0.54",
     "clean-package": "^2.2.0",
     "@types/react": "^18.3.3",
-    "react-dom": "19.0.0-rc-0751fac7-20241002",
-    "react": "19.0.0-rc-0751fac7-20241002"
+    "react-dom": "19.0.0-rc-1631855f-20241023",
+    "react": "19.0.0-rc-1631855f-20241023"
   },
   "peerDependencies": {
-    "react-dom": "19.0.0-rc-0751fac7-20241002",
-    "react": "19.0.0-rc-0751fac7-20241002"
+    "react-dom": "19.0.0-rc-1631855f-20241023",
+    "react": "19.0.0-rc-1631855f-20241023"
   },
   "clean-package": "../../../clean-package.config.json"
 }

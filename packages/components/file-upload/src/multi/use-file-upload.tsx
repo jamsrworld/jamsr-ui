@@ -1,4 +1,4 @@
-import { ImageUploadIcon as FileUploadIcon } from "@jamsr-ui/shared-icons";
+import { ImageAddIcon as FileUploadIcon } from "@jamsr-ui/shared-icons";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import { cn, dataAttr } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";

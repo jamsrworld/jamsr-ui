@@ -2,7 +2,7 @@
 
 import toast, { Toaster, type ToasterProps } from "react-hot-toast";
 
-const Toast = (props: ToasterProps) => {
+const ToastProvider = (props: ToasterProps) => {
   const { toastOptions, ...restProps } = props;
   return (
     <Toaster
@@ -18,4 +18,4 @@ const Toast = (props: ToasterProps) => {
   );
 };
 
-export { Toast, toast };
+export { ToastProvider, toast };

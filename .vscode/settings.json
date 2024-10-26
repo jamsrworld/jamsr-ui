@@ -35,7 +35,8 @@
     "tiptap",
     "tsup",
     "Typeahead",
-    "typecheck"
+    "typecheck",
+    "webp"
   ],
   "workbench.colorCustomizations": {
     "list.warningForeground": "#00eaffcc"

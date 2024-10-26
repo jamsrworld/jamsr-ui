@@ -1,4 +1,5 @@
 import { CircularProgress } from "@jamsr-ui/progress";
+import { TrashIcon } from "@jamsr-ui/shared-icons";
 import { formatFileSize } from "../utils";
 import {
   useSingleFileUpload,
@@ -47,12 +48,15 @@ export const SingleFileUpload = (props: SingleFileUploadProps) => {
         {!isAvatar && (
           <>
             {description && <p {...getDescriptionProps()}>{description}</p>}
-            {description && <p {...getInfoProps()}>{info}</p>}
+            {info && <p {...getInfoProps()}>{info}</p>}
           </>
         )}
-        {/* eslint-disable-next-line jsx-a11y/alt-text */}
-        {previewUrl && isImage && <img {...getImageProps()} />}
-        {!isImage && (
+        {previewUrl && isImage && (
+          <div {...getFileWrapperProps()}>
+            <img alt="" {...getImageProps()} />
+          </div>
+        )}
+        {!isImage && !isEmpty && (
           <div {...getFileWrapperProps()}>
             {fileIcon}
             {fileName && <p {...getFileNameProps()}>{fileName}</p>}
@@ -61,12 +65,14 @@ export const SingleFileUpload = (props: SingleFileUploadProps) => {
             )}
           </div>
         )}
-        {showDeleteBtn && !isDisabled && isEmpty && (
-          <button {...getDeleteBtnProps()} type="button" />
+        {showDeleteBtn && !isDisabled && !isEmpty && (
+          <button {...getDeleteBtnProps()} type="button">
+            <TrashIcon />
+          </button>
         )}
         {!!progress && (
           <div {...getProgressOverlayProps()}>
-            <CircularProgress />
+            <CircularProgress value={progress} />
           </div>
         )}
       </div>

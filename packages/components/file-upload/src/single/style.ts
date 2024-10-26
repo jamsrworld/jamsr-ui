@@ -6,13 +6,13 @@ export const singleUploadVariants = tv({
     base: "group flex flex-col gap-2",
     picker:
       "group relative flex aspect-video select-none flex-col items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-divider",
-    image: "absolute size-full rounded-md object-cover",
+    image: "size-full rounded-md object-cover",
     deleteBtn:
       "absolute right-0 top-0 hidden hover:text-danger group-hover:block",
     description: "text-xs",
     info: "text-xs text-foreground-400",
     fileWrapper:
-      "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 bg-black",
+      "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 bg-content1",
     progressOverlay:
       "absolute inset-0 flex size-full items-center justify-center bg-black/60",
     helperText: "text-xs text-foreground-500",

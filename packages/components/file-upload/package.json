@@ -26,15 +26,16 @@
     "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "react-dom": "19.0.0-rc-1631855f-20241023",
-    "react": "19.0.0-rc-1631855f-20241023"
+    "react": "19.0.0-rc-1631855f-20241023",
+    "react-dom": "19.0.0-rc-1631855f-20241023"
   },
   "peerDependencies": {
-    "react-dom": "19.0.0-rc-1631855f-20241023",
     "react": "19.0.0-rc-1631855f-20241023",
+    "react-dom": "19.0.0-rc-1631855f-20241023",
     "react-dropzone": "^14.2.3"
   },
   "dependencies": {
+    "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/progress": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^",

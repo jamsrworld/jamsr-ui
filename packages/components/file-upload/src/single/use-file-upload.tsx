@@ -1,4 +1,5 @@
-import { ImageUploadIcon as FileUploadIcon } from "@jamsr-ui/shared-icons";
+import { useControlledState } from "@jamsr-ui/hooks";
+import { FileAddIcon } from "@jamsr-ui/shared-icons";
 import {
   cn,
   dataAttr,
@@ -7,7 +8,7 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import type { DropzoneOptions, FileError } from "react-dropzone";
 import { useDropzone } from "react-dropzone";
 import { getFileExtension, getFileIconFromUrl, isImageExt } from "../utils";
@@ -18,30 +19,35 @@ import {
 } from "./style";
 
 type Props = Omit<UploadVariants, "isDragActive"> & {
-  value: string;
-  onValueChange: (value: string) => void;
-  onFileSelect: (file: File) => void | Promise<void>;
+  defaultValue?: null | string;
+  value?: null | string;
+  onValueChange?: (value: null | string) => void;
+  onFileSelect?: (file: File) => void;
+  onUploadSuccess: (response: any) => void;
   className?: string;
   classNames?: SlotsToClasses<UploadSlots>;
   onError?: (error: FileError) => void;
   onDelete?: () => void;
   showDeleteBtn?: boolean;
-  progress?: number;
   description?: React.ReactNode;
   info?: React.ReactNode;
   dropzoneOptions?: DropzoneOptions;
   fileSize?: number;
   fileName?: string;
+  inputName: string;
   helperText?: React.ReactNode;
   uploadIcon?: React.ReactNode;
   getFileIcon?: (ext: string) => React.ReactNode;
+  uploadApiUrl: string;
+  getFileUrlAfterUpload: (response: any) => string;
 };
 
 export type UseSingleFileUploadProps = Props & UIProps<"div", keyof Props>;
 
 export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
   const {
-    value,
+    value: $value,
+    defaultValue,
     onValueChange,
     onFileSelect,
     className,
@@ -49,46 +55,108 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     onError,
     onDelete,
     showDeleteBtn = true,
-    progress,
     description = "Choose a file or drag & drop it here",
     info = "Select images",
     dropzoneOptions,
     fileSize,
     fileName,
     helperText,
-    uploadIcon = <FileUploadIcon className="shrink-0 text-inherit" />,
+    uploadIcon = <FileAddIcon className="shrink-0 text-inherit" />,
     isAvatar,
     isDisabled,
     isInvalid,
     getFileIcon,
+    inputName,
     as,
+    uploadApiUrl,
+    onUploadSuccess,
+    getFileUrlAfterUpload,
     ...restProps
   } = props;
 
-  const [preview, setPreview] = useState("");
-  const isImage = isImageExt(value);
-  const Component = as ?? "div";
-  const isEmpty = value.length === 0;
+  const [value = null, setValue] = useControlledState({
+    defaultProp: defaultValue,
+    onChange: onValueChange,
+    prop: $value,
+  });
+  const [previewUrl, setPreviewUrl] = useState<string | null>(value);
+  const [progress, setProgress] = useState(0);
 
-  const fileIcon = getFileIcon
-    ? getFileIcon?.(getFileExtension(value))
-    : getFileIconFromUrl(value);
+  const isImage = value && isImageExt(value);
+  const Component = as ?? "div";
+  const isEmpty = value ? value.length === 0 : true;
+
+  const fileIcon = useMemo(() => {
+    if (!value) return "";
+    return getFileIcon
+      ? getFileIcon?.(getFileExtension(value))
+      : getFileIconFromUrl(value);
+  }, [getFileIcon, value]);
+
+  const uploadFile = useCallback(
+    (file: File) => {
+      const formData = new FormData();
+      formData.append(inputName, file);
+
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", uploadApiUrl);
+      xhr.upload.onprogress = (event) => {
+        if (event.lengthComputable) {
+          const progress = Math.round((event.loaded / event.total) * 100);
+          setProgress(progress);
+        }
+      };
+
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          const response = JSON.parse(xhr.responseText);
+          setProgress(0);
+          const fileUrl = getFileUrlAfterUpload(response);
+          setValue(fileUrl);
+          setPreviewUrl(fileUrl);
+          onUploadSuccess(response);
+        } else {
+          onError?.({
+            message: "Invalid response received",
+            code: "INVALID_RESPONSE",
+          });
+        }
+      };
+      xhr.onerror = () => {
+        onError?.({ message: "Upload failed", code: "UPLOAD_FAILED" });
+      };
+      xhr.send(formData);
+    },
+    [
+      getFileUrlAfterUpload,
+      inputName,
+      onError,
+      onUploadSuccess,
+      setValue,
+      uploadApiUrl,
+    ],
+  );
+
+  const onDrop = useCallback(
+    (acceptedFiles: File[]) => {
+      const file = acceptedFiles[0];
+      if (!file) return;
+      if (previewUrl) URL.revokeObjectURL(previewUrl);
+      const objectUrl = URL.createObjectURL(file);
+      setPreviewUrl(objectUrl);
+      uploadFile(file);
+      onFileSelect?.(file);
+    },
+    [onFileSelect, previewUrl, uploadFile],
+  );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    ...dropzoneOptions,
     maxFiles: 1,
     multiple: false,
     disabled: isDisabled,
-    onDrop: (acceptedFiles: File[]) => {
-      const file = acceptedFiles[0];
-      if (!file) return;
-      const isFile = file.type.startsWith("file/");
-      if (isFile) {
-        const objectUrl = URL.createObjectURL(file);
-        setPreview(objectUrl);
-      }
-      onValueChange("");
-      void onFileSelect(file);
-    },
+    onDrop,
     onDropRejected(fileRejections) {
       fileRejections.forEach((item) => {
         const { errors } = item;
@@ -96,9 +164,7 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
         if (error) onError?.(error);
       });
     },
-    ...dropzoneOptions,
   });
-  const previewUrl = preview.length > 0 ? preview : value;
 
   const styles = singleUploadVariants({
     isDisabled,
@@ -111,9 +177,9 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
       onDelete?.();
-      onValueChange("");
+      setValue(null);
     },
-    [onDelete, onValueChange],
+    [onDelete, setValue],
   );
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -231,7 +297,7 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
       return {
         "data-slot": "image",
         ...props,
-        src: previewUrl,
+        src: previewUrl ?? undefined,
         className: styles.image({
           className: classNames?.image,
         }),

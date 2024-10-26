@@ -186,37 +186,64 @@ export const EyeOpenIcon = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export const ImageUploadIcon = (props: SVGProps<SVGSVGElement>) => (
+export const FileAddIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
     width={24}
     height={24}
-    fill="none"
-    viewBox="0 0 24 24"
+    color="currentColor"
+    fill={"none"}
     {...props}
   >
     <path
-      fill="currentColor"
-      d="M3.39 4.393C2 5.784 2 8.023 2 12.502c0 4.478 0 6.717 1.39 8.109l1.193.79.789-.951c4.155-5.031 8.875-10.745 15.62-6.394.003-.486.003-1.003.003-1.554 0-4.478 0-6.718-1.391-8.109s-3.63-1.391-8.107-1.391c-4.477 0-6.715 0-8.106 1.391Z"
-      opacity={0.4}
-    />
-    <path
+      d="M4 12.0005L4 14.5446C4 17.7896 4 19.4122 4.88607 20.5111C5.06508 20.7331 5.26731 20.9354 5.48933 21.1144C6.58831 22.0005 8.21082 22.0005 11.4558 22.0005C12.1614 22.0005 12.5141 22.0005 12.8372 21.8865C12.9044 21.8627 12.9702 21.8355 13.0345 21.8047C13.3436 21.6569 13.593 21.4075 14.0919 20.9086L18.8284 16.172C19.4065 15.594 19.6955 15.3049 19.8478 14.9374C20 14.5699 20 14.1611 20 13.3436V10.0005C20 6.22922 20 4.34361 18.8284 3.17203C17.7693 2.11287 16.1265 2.01125 13.0345 2.0015M13 21.5005V21.0005C13 18.172 13 16.7578 13.8787 15.8791C14.7574 15.0005 16.1716 15.0005 19 15.0005H19.5"
       stroke="currentColor"
-      strokeLinecap="round"
-      strokeWidth={1.5}
-      d="M11.497 3.002c-4.477 0-6.715 0-8.106 1.391S2 8.023 2 12.502c0 4.478 0 6.717 1.39 8.109 1.392 1.391 3.63 1.391 8.107 1.391 4.477 0 6.716 0 8.107-1.391 1.39-1.392 1.39-3.63 1.39-8.109v-.5"
-    />
-    <path
-      stroke="currentColor"
-      strokeWidth={1.5}
-      d="M4.999 21.002c4.209-4.751 8.939-11.053 15.996-6.327"
-    />
-    <path
-      stroke="currentColor"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.5}
-      d="M17.996 1.998v8.008M22 5.977l-8.009.015"
+    />
+    <path
+      d="M12 5.99954H4M8 1.99954V9.99954"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const ImageAddIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={24}
+    height={24}
+    color="currentColor"
+    fill={"none"}
+    {...props}
+  >
+    <path
+      d="M22 6.75C22.4142 6.75 22.75 6.41421 22.75 6C22.75 5.58579 22.4142 5.25 22 5.25V6.75ZM14 5.25C13.5858 5.25 13.25 5.58579 13.25 6C13.25 6.41421 13.5858 6.75 14 6.75V5.25ZM18.75 2C18.75 1.58579 18.4142 1.25 18 1.25C17.5858 1.25 17.25 1.58579 17.25 2H18.75ZM17.25 10C17.25 10.4142 17.5858 10.75 18 10.75C18.4142 10.75 18.75 10.4142 18.75 10H17.25ZM22 5.25H18V6.75H22V5.25ZM18 5.25H14V6.75H18V5.25ZM17.25 2V6H18.75V2H17.25ZM17.25 6V10H18.75V6H17.25Z"
+      fill="currentColor"
+    />
+    <path
+      d="M11.5 3C7.02166 3 4.78249 3 3.39124 4.39124C2 5.78249 2 8.02166 2 12.5C2 16.9783 2 19.2175 3.39124 20.6088C4.78249 22 7.02166 22 11.5 22C15.9783 22 18.2175 22 19.6088 20.6088C21 19.2175 21 16.9783 21 12.5V12"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M2 14.1354C2.61902 14.0455 3.24484 14.0011 3.87171 14.0027C6.52365 13.9466 9.11064 14.7729 11.1711 16.3342C13.082 17.7821 14.4247 19.7749 15 22"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M21 16.8962C19.8246 16.3009 18.6088 15.9988 17.3862 16.0001C15.5345 15.9928 13.7015 16.6733 12 18"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
     />
   </svg>
 );

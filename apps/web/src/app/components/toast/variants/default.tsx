@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, toast, Toast } from "@jamsr-ui/react";
+import { Button, toast, ToastProvider } from "@jamsr-ui/react";
 
 export const DefaultToast = () => {
   const handleClick = () => {
@@ -8,7 +8,7 @@ export const DefaultToast = () => {
   };
   return (
     <div>
-      <Toast />
+      <ToastProvider />
       <Button onClick={handleClick}>Toast</Button>
     </div>
   );

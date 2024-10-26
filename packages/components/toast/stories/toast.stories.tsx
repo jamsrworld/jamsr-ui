@@ -1,10 +1,10 @@
 import { Button } from "@jamsr-ui/button";
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Toast, toast } from "../src";
+import { ToastProvider, toast } from "../src";
 
-const meta: Meta<typeof Toast> = {
+const meta: Meta<typeof ToastProvider> = {
   title: "Components/Toast",
-  component: Toast,
+  component: ToastProvider,
 };
 
 export default meta;
@@ -25,7 +25,7 @@ export const Default: Story = {
   render: () => {
     return (
       <div>
-        <Toast />
+        <ToastProvider />
         <Template />
       </div>
     );

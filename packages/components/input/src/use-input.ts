@@ -103,16 +103,16 @@ export const useInput = (props: UseInputProps) => {
     isTextarea,
   });
 
-  const [value = "", setValue] = useControlledState({
-    prop: propValue,
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-  });
-
-  const [showPassword, setShowPassword] = useControlledState({
-    prop: propShowPassword,
-    onChange: propSetShowPassword,
-  });
+  const [value = "", setValue] = useControlledState(
+    defaultValue,
+    propValue,
+    onValueChange,
+  );
+  const [showPassword, setShowPassword] = useControlledState(
+    false,
+    propShowPassword,
+    propSetShowPassword,
+  );
 
   const isFilledWithin =
     !isEmpty(placeholder) ||

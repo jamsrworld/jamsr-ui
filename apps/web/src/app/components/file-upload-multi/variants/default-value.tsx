@@ -2,9 +2,13 @@
 
 "use client";
 
-import TvImg from "@/../public/tv.webp";
+import { MultiFileUploadState } from "@jamsr-ui/react";
 import { FileUploadDefault } from "./default";
+import TvImg from "@/../public/tv.webp";
 
 export const FileUploadDefaultValue = () => {
-  return <FileUploadDefault defaultValue={TvImg.src} />;
+  const defaultValue: MultiFileUploadState[] = [
+    { id: "asdfjlaf", preview: TvImg.src, progress: "COMPLETE", file: null },
+  ];
+  return <FileUploadDefault defaultValue={defaultValue} />;
 };

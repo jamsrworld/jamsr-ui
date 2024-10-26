@@ -5,7 +5,7 @@ import { Button, Drawer, Repeater, type DrawerProps } from "@jamsr-ui/react";
 import Link from "next/link";
 
 export const DrawerDefault = (props: Partial<DrawerProps>) => {
-  const { isOpen, onClose, onOpenChange, onOpen } = useDisclosure();
+  const { isOpen, onClose, setIsOpen, onOpen } = useDisclosure();
   const { size, anchor } = props;
   return (
     <div>
@@ -13,7 +13,7 @@ export const DrawerDefault = (props: Partial<DrawerProps>) => {
       <Drawer
         isOpen={isOpen}
         className="flex flex-col gap-4 p-8"
-        onOpenChange={onOpenChange}
+        onOpenChange={setIsOpen}
         {...props}
       >
         <Button onClick={onClose}>Close</Button>

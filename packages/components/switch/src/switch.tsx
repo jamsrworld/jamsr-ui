@@ -48,12 +48,11 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
     ...restProps
   } = props;
 
-  const [checked, setChecked] = useControlledState({
-    defaultProp: defaultChecked,
-    onChange: onCheckedChange,
-    prop: propChecked,
-  });
-
+  const [checked, setChecked] = useControlledState(
+    defaultChecked,
+    propChecked,
+    onCheckedChange,
+  );
   const { thumb, wrapper } = switchVariants({
     checked,
     disabled,

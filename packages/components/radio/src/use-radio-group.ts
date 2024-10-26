@@ -57,11 +57,11 @@ export const useRadioGroup = <T extends string>(
 
   const Component = as ?? "div";
 
-  const [selectedValue = "", setSelectedValue] = useControlledState({
-    prop: propValue,
-    defaultProp: propDefaultValue,
-    onChange: onValueChange,
-  });
+  const [selectedValue = "", setSelectedValue] = useControlledState(
+    propDefaultValue,
+    propValue,
+    onValueChange,
+  );
 
   const context: ContextType = {
     isInvalid,

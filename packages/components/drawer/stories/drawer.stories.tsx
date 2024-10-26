@@ -12,11 +12,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template = () => {
-  const { isOpen, onClose, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onClose, onOpen, setIsOpen } = useDisclosure();
   return (
     <div>
       <Button onClick={onOpen}>Click Me!</Button>
-      <Drawer isOpen={isOpen} onOpenChange={onClose}>
+      <Drawer isOpen={isOpen} onOpenChange={setIsOpen}>
         HIi i am drawer
       </Drawer>
     </div>

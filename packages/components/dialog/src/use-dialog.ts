@@ -46,11 +46,11 @@ export const UseDialog = (originalProps: UseDialogProps) => {
   } = props;
   const Component = as ?? "div";
 
-  const [isOpen, setIsOpen] = useControlledState({
-    defaultProp: defaultOpen,
-    onChange: onOpenChange,
-    prop: isOpenProp,
-  });
+  const [isOpen, setIsOpen] = useControlledState(
+    defaultOpen,
+    isOpenProp,
+    onOpenChange,
+  );
 
   const slots = useMemo(() => {
     return dialog(variantProps);

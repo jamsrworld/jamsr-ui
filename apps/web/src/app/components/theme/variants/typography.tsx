@@ -27,9 +27,9 @@ export const ThemeTypography = () => {
 
   return (
     <div>
-      {classNames.map(({ className, name }) => {
+      {classNames.map(({ className, name }, idx) => {
         return (
-          <Typography as="p" className={className}>
+          <Typography as="p" key={idx} className={className}>
             {name}
           </Typography>
         );

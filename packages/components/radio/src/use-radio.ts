@@ -1,3 +1,4 @@
+import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
   dataAttr,
@@ -7,7 +8,6 @@ import {
 } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import { useCallback } from "react";
-import { useControlledState } from "@jamsr-ui/hooks";
 import { useRadioGroupContext } from "./radio-group-context";
 import type { RadioSlots, RadioVariantProps } from "./style";
 import { radioVariant } from "./style";
@@ -45,10 +45,7 @@ export const useRadio = (props: UseRadioProps) => {
   const [
     isChecked = context ? context.selectedValue === value : false,
     setChecked,
-  ] = useControlledState({
-    prop: checked,
-    defaultProp: defaultChecked,
-  });
+  ] = useControlledState(defaultChecked, checked);
 
   const Component = as ?? "label";
   const inputName = name ?? context?.name;

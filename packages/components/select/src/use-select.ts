@@ -82,21 +82,20 @@ export const useSelect = (props: UseSelectProps) => {
   } = props;
 
   const Component = as ?? "div";
-  const [value = new Set([]), setValue] = useControlledState({
-    prop: propValue,
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-  });
+  const [value = new Set([]), setValue] = useControlledState(
+    defaultValue,
+    propValue,
+    onValueChange,
+  );
 
-  const [isOpen, setIsOpen] = useControlledState({
-    prop: propOpen,
-    onChange: onOpenChange,
-    defaultProp: defaultOpen,
-  });
+  const [isOpen, setIsOpen] = useControlledState(
+    defaultOpen,
+    propOpen,
+    onOpenChange,
+  );
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
-
 
   const childrenArray = Children.toArray(children);
   const selectItems = childrenArray.map((item) => {

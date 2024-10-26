@@ -30,7 +30,7 @@ export const ProgressView = (props: Props) => {
 
     if (progress === "ERROR") {
       return (
-        <div>
+        <div className="flex flex-col">
           <span>failed</span>
           <button onClick={() => handleRetry()} type="button">
             <RefreshIcon />

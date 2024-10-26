@@ -77,12 +77,11 @@ export const useTextarea = (props: UseTextareaProps) => {
     isRequired,
   });
 
-  const [value, setValue] = useControlledState({
-    prop: propValue,
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-  });
-
+  const [value, setValue] = useControlledState(
+    defaultValue,
+    propValue,
+    onValueChange,
+  );
   const handleTextareaChange = useCallback(
     (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       onChange?.(e);

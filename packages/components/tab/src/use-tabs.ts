@@ -47,11 +47,11 @@ export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
 
   const Component = as ?? "div";
 
-  const [value = "", setValue] = useControlledState({
-    defaultProp: defaultValue,
-    prop: propValue,
-    onChange: onValueChange,
-  });
+  const [value = "", setValue] = useControlledState(
+    defaultValue,
+    propValue,
+    onValueChange,
+  );
 
   const selectedTabContent = useMemo(() => {
     const childrenArray = Children.toArray(children);

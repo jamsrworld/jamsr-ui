@@ -133,7 +133,7 @@ const CommonColors = [
 
 const SemanticColors = [
   {
-    title: "Base",
+    title: "Background2",
     items: [
       {
         color: "background",

@@ -54,11 +54,11 @@ export const Popover = (props: PopoverProps) => {
     offset: offsetValue = 4,
   } = props;
 
-  const [open, setOpen] = useControlledState({
-    prop: propOpen,
-    onChange: onOpenChange,
-    defaultProp: initialOpen,
-  });
+  const [open, setOpen] = useControlledState(
+    initialOpen,
+    propOpen,
+    onOpenChange,
+  );
   const arrowRef = useRef(null);
 
   const { refs, floatingStyles, context } = useFloating({

@@ -41,12 +41,11 @@ export const useRating = (props: UseRatingProps) => {
   });
   const maxValue = 5;
 
-  const [value = 0, setValue] = useControlledState({
-    prop: propValue,
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-  });
-
+  const [value = 0, setValue] = useControlledState(
+    defaultValue,
+    propValue,
+    onValueChange,
+  );
   if (value > maxValue) {
     console.warn(`Rating max value is ${maxValue}, current value is ${value}`);
   }

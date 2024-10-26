@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/unbound-method */
 import type { Placement } from "@floating-ui/react";
 import {
   autoUpdate,
@@ -78,11 +79,11 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
   const [isFocused, setIsFocused] = useState(false);
-  const [value = new Set([]), setValue] = useControlledState({
-    prop: propValue,
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-  });
+  const [value = new Set([]), setValue] = useControlledState(
+    defaultValue,
+    propValue,
+    onValueChange,
+  );
   const childrenArray = Children.toArray(children);
   const allItems = childrenArray.map((item) => {
     if (isValidElement<AutocompleteItemProps>(item)) {
@@ -146,11 +147,11 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
     });
   }, [allItems, children, getNewValue, isMultiple, setValue, value]);
 
-  const [isOpen = false, setIsOpen] = useControlledState({
-    prop: propOpen,
-    onChange: onOpenChange,
-    defaultProp: defaultOpen,
-  });
+  const [isOpen = false, setIsOpen] = useControlledState(
+    defaultOpen,
+    propOpen,
+    onOpenChange,
+  );
 
   const [inputValue, setInputValue] = useState(
     !isMultiple && typeof selectedItemsContent === "string"

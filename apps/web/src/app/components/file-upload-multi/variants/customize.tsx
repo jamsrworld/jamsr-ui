@@ -10,12 +10,10 @@ export const FileUploadCustomized = () => {
     <FileUploadDefault
       className="w-full"
       classNames={{
-        description: "text-primary",
         info: "text-secondary",
         picker: "bg-gray-100 border-primary max-h-[200px]",
       }}
-      description="Please upload the image here"
-      info="Maximum 1 image (png, webp, jpg) and maximum size of 1MB"
+      info="1 image"
       uploadIcon={<ImageAddIcon />}
       dropzoneOptions={{
         accept: {

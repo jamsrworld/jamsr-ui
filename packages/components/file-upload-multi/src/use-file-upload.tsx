@@ -70,11 +70,12 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     getFileUrlAfterUpload,
     ...restProps
   } = props;
-  const [value = [], setValue] = useControlledState({
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-    prop: $value,
-  });
+
+  const [value, setValue] = useControlledState(
+    defaultValue ?? [],
+    $value,
+    onValueChange,
+  );
   const xhrRefs = useRef<{ id: string; xhr: XMLHttpRequest }[]>([]);
 
   const Component = as ?? "div";
@@ -84,7 +85,7 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
   const updateState = useCallback(
     (id: string, state: Partial<MultiFileUploadState>) => {
       setValue((prev) => {
-        const updated = prev.map((item) => {
+        return prev.map((item) => {
           if (item.id === id) {
             return {
               ...item,
@@ -93,7 +94,6 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
           }
           return item;
         });
-        return updated;
       });
     },
     [setValue],
@@ -101,8 +101,6 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
 
   const uploadFile = useCallback(
     (id: string, file: File) => {
-      updateState(id, { progress: "PENDING" });
-
       const formData = new FormData();
       formData.append(inputName, file);
 
@@ -163,18 +161,13 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     }
   };
   const cancelUpload = (id: string) => {
-    // find xhr
     const xhr = xhrRefs.current.find((item) => item.id === id)?.xhr;
     xhr?.abort();
-    // delete from ref
     xhrRefs.current = xhrRefs.current.filter((item) => item.id !== id);
   };
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    maxFiles,
-    multiple: true,
-    disabled: isDisabled,
-    onDrop: (acceptedFiles: File[]) => {
+  const onDrop = useCallback(
+    (acceptedFiles: File[]) => {
       const files = acceptedFiles;
       const remainingFiles = maxFiles - value.length;
       if (maxFiles && files.length > remainingFiles) {
@@ -191,12 +184,20 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
           progress: "PENDING",
         };
       });
-      setValue([...value, ...selectedFiles]);
+      setValue((prev) => [...prev, ...selectedFiles]);
       selectedFiles.forEach((file) => {
         if (file.file) uploadFile(file.id, file.file);
       });
       void onFilesSelect?.(files);
     },
+    [maxFiles, onError, onFilesSelect, setValue, uploadFile, value],
+  );
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    maxFiles,
+    multiple: true,
+    disabled: isDisabled,
+    onDrop,
     onDropRejected(fileRejections) {
       fileRejections.forEach((item) => {
         const { errors } = item;
@@ -227,7 +228,7 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     onDelete?.(id);
     cancelUpload(id);
     e.stopPropagation();
-    setValue(value.filter((item) => item.id !== id));
+    setValue((value) => value.filter((item) => item.id !== id));
   };
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(

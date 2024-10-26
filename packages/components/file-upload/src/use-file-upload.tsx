@@ -74,11 +74,11 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     ...restProps
   } = props;
 
-  const [value = null, setValue] = useControlledState({
-    defaultProp: defaultValue,
-    onChange: onValueChange,
-    prop: $value,
-  });
+  const [value = null, setValue] = useControlledState(
+    defaultValue,
+    $value,
+    onValueChange,
+  );
   const [previewUrl, setPreviewUrl] = useState<string | null>(value);
   const [progress, setProgress] = useState(0);
 

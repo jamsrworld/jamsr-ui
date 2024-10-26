@@ -111,11 +111,11 @@ export const Drawer = (props: DrawerProps) => {
     motionProps,
   } = props;
 
-  const [isOpen, setIsOpen] = useControlledState({
-    defaultProp: defaultOpen,
-    onChange: onOpenChange,
-    prop: isOpenProp,
-  });
+  const [isOpen, setIsOpen] = useControlledState(
+    defaultOpen,
+    isOpenProp,
+    onOpenChange,
+  );
 
   const { context, refs } = useFloating({
     open: isOpen,

@@ -30,11 +30,11 @@ const CheckboxInner = (
     ...restProps
   } = props;
 
-  const [checked = false, setChecked] = useControlledState({
-    prop: propChecked,
-    defaultProp: defaultChecked,
-    onChange: onCheckedChange,
-  });
+  const [checked = false, setChecked] = useControlledState(
+    defaultChecked,
+    propChecked,
+    onCheckedChange,
+  );
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);

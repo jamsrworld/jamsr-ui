@@ -73,11 +73,11 @@ export const MenuComponent = ({
   onOpenChange,
   ...restProps
 }: MenuProps) => {
-  const [isOpen, setIsOpen] = useControlledState({
-    prop: propOpen,
-    onChange: onOpenChange,
-    defaultProp: initialOpen,
-  });
+  const [isOpen, setIsOpen] = useControlledState(
+    initialOpen,
+    propOpen,
+    onOpenChange,
+  );
   const [hasFocusInside, setHasFocusInside] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 

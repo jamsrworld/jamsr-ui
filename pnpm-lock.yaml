@@ -162,6 +162,9 @@ importers:
       '@faker-js/faker':
         specifier: 9.0.3
         version: 9.0.3
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../packages/hooks
       '@jamsr-ui/react':
         specifier: workspace:*
         version: link:../../packages/react
@@ -967,8 +970,8 @@ importers:
         specifier: ^0.26.16
         version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
       '@jamsr-ui/hooks':
-        specifier: ^0.0.34
-        version: 0.0.34(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
@@ -1550,6 +1553,9 @@ importers:
 
   packages/hooks:
     devDependencies:
+      '@jamsr-ui/eslint-config':
+        specifier: workspace:^
+        version: link:../config/eslint-config
       '@types/node':
         specifier: ^22.7.9
         version: 22.7.9

@@ -5,19 +5,25 @@
 import { ImageMetadata, uploadApiUrl } from "@/app/config";
 import {
   type FileUploadError,
-  SingleFileUpload,
-  type SingleFileUploadProps,
+  MultiFileUpload,
+  MultiFileUploadProps,
   toast,
 } from "@jamsr-ui/react";
 
-export const FileUploadDefault = (props: Partial<SingleFileUploadProps>) => {
+export const FileUploadDefault = (props: Partial<MultiFileUploadProps>) => {
   const { dropzoneOptions, ...restProps } = props;
   const handleOnError = ({ message }: FileUploadError) => {
     console.log("error:->", message);
     toast.error(message);
   };
 
-  const onUploadSuccess = (response: ImageMetadata) => {
+  const onUploadSuccess = ({
+    id,
+    response,
+  }: {
+    id: string;
+    response: ImageMetadata;
+  }) => {
     console.log("response:->", response);
   };
 
@@ -30,17 +36,17 @@ export const FileUploadDefault = (props: Partial<SingleFileUploadProps>) => {
   };
 
   return (
-    <SingleFileUpload
+    <MultiFileUpload
       onUploadSuccess={onUploadSuccess}
       getFileUrlAfterUpload={getFileUrlAfterUpload}
       uploadApiUrl={uploadApiUrl}
       inputName="file"
-      className="aspect-video h-40"
       onError={handleOnError}
       onDelete={handleOnDelete}
       showDeleteBtn
       {...restProps}
       dropzoneOptions={{
+        maxFiles: 40,
         ...dropzoneOptions,
       }}
     />

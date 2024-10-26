@@ -1,23 +1,19 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
-import { FileUploadControlled } from "./variants/controlled";
-import { FileUploadCustomized } from "./variants/customize";
 import { FileUploadDefault } from "./variants/default";
-import { FileUploadDefaultValue } from "./variants/default-value";
-import { FileUploadDisabled } from "./variants/disabled";
 
 export const metadata: Metadata = {
-  title: "Single File Upload",
+  title: "Multi File Upload",
 };
 
 const FileUpload = () => {
   return (
-    <VariantPage heading="Single File Upload">
+    <VariantPage heading="Multi File Upload">
       <VariantWrapper heading="Default">
         <FileUploadDefault />
       </VariantWrapper>
-      <VariantWrapper heading="Disabled">
+      {/* <VariantWrapper heading="Disabled">
         <FileUploadDisabled />
       </VariantWrapper>
       <VariantWrapper heading="Default Value">
@@ -28,7 +24,7 @@ const FileUpload = () => {
       </VariantWrapper>
       <VariantWrapper heading="Customized">
         <FileUploadCustomized />
-      </VariantWrapper>
+      </VariantWrapper> */}
     </VariantPage>
   );
 };

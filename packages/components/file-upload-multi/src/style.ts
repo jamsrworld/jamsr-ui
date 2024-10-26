@@ -3,16 +3,19 @@ import { tv } from "@jamsr-ui/utils";
 
 export const multiUploadVariant = tv({
   slots: {
-    base: "flex flex-col gap-1",
+    base: "flex w-full flex-col gap-1",
     innerWrapper: "flex flex-wrap gap-2",
     fileView: "group relative size-20",
     file: "size-full rounded-lg object-cover",
     deleteBtn:
-      "absolute right-1 top-1 hidden size-4 rounded-full bg-danger text-white hover:bg-danger-300 group-hover:block",
+      "absolute right-1 top-1 z-1 hidden size-4 rounded-full bg-danger text-white hover:bg-danger-300 group-hover:block",
     picker:
-      "group relative flex aspect-video select-none flex-col items-center justify-center rounded-lg border-2 border-dashed border-divider",
+      "group relative flex aspect-square size-20 select-none flex-col items-center justify-center rounded-lg border-2 border-dashed border-divider",
     helperText: "text-xs text-foreground-400",
     info: "text-xs",
+    overlayWrapper:
+      "absolute inset-0 z-1 flex size-full items-center justify-center overflow-hidden rounded-lg text-white",
+    overlay: "absolute inset-0 -z-1 flex size-full bg-black/50",
   },
   variants: {
     isDisabled: {

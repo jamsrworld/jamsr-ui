@@ -1,4 +1,5 @@
 import { CloseIcon } from "@jamsr-ui/shared-icons";
+import { ProgressView } from "./progress-view";
 import type { UseMultiFileUploadProps } from "./use-file-upload";
 import { useMultiFileUpload } from "./use-file-upload";
 
@@ -25,6 +26,9 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
     getInfoProps,
     uploadIcon,
     Component,
+    retryUpload,
+    overlayWrapperClassName,
+    overlayClassName,
   } = useMultiFileUpload(props);
 
   return (
@@ -33,6 +37,13 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
         {value.map((item) => (
           <div key={item.id} {...getFileViewProps()}>
             <img src={item.preview} alt="" {...getFileProps()} />
+            <ProgressView
+              id={item.id}
+              onRetry={retryUpload}
+              progress={item.progress}
+              overlayWrapperClassName={overlayWrapperClassName}
+              overlayClassName={overlayClassName}
+            />
             {showDeleteBtn && !isDisabled && (
               <button
                 type="button"

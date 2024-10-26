@@ -11,12 +11,12 @@ import type { ComponentProps } from "react";
 import { useCallback, useMemo, useState } from "react";
 import type { DropzoneOptions, FileError } from "react-dropzone";
 import { useDropzone } from "react-dropzone";
-import { getFileExtension, getFileIconFromUrl, isImageExt } from "../utils";
 import {
   singleUploadVariants,
   type UploadSlots,
   type UploadVariants,
 } from "./style";
+import { getFileExtension, getFileIconFromUrl, isImageExt } from "./utils";
 
 type Props = Omit<UploadVariants, "isDragActive"> & {
   defaultValue?: null | string;
@@ -66,8 +66,8 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     isDisabled,
     isInvalid,
     getFileIcon,
-    inputName,
     as,
+    inputName,
     uploadApiUrl,
     onUploadSuccess,
     getFileUrlAfterUpload,

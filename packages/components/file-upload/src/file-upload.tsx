@@ -1,10 +1,10 @@
 import { CircularProgress } from "@jamsr-ui/progress";
 import { TrashIcon } from "@jamsr-ui/shared-icons";
-import { formatFileSize } from "../utils";
 import {
   useSingleFileUpload,
   type UseSingleFileUploadProps,
 } from "./use-file-upload";
+import { formatFileSize } from "./utils";
 
 export type SingleFileUploadProps = UseSingleFileUploadProps;
 

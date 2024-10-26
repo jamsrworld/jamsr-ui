@@ -3,11 +3,11 @@
 "use client";
 
 import { ImageAddIcon } from "@jamsr-ui/shared-icons";
-import { FileUploadSingleDefault } from "./default";
+import { FileUploadDefault } from "./default";
 
-export const FileUploadSingleCustomized = () => {
+export const FileUploadCustomized = () => {
   return (
-    <FileUploadSingleDefault
+    <FileUploadDefault
       className="w-full"
       classNames={{
         description: "text-primary",

@@ -1,5 +1,4 @@
-import type { SingleFileUploadProps } from "@jamsr-ui/file-upload";
-import { SingleFileUpload } from "@jamsr-ui/file-upload";
+import { SingleFileUpload, type SingleFileUploadProps } from "@jamsr-ui/file-upload";
 import type { Editor } from "@tiptap/react";
 import { NodeViewWrapper } from "@tiptap/react";
 import { useState } from "react";

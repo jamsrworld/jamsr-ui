@@ -1,46 +1,57 @@
-import { ImageAddIcon as FileUploadIcon } from "@jamsr-ui/shared-icons";
+import { useControlledState } from "@jamsr-ui/hooks";
+import { FileAddIcon } from "@jamsr-ui/shared-icons";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import { cn, dataAttr } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
-import { useCallback } from "react";
-import { useDropzone, type DropzoneOptions } from "react-dropzone";
+import { useCallback, useRef } from "react";
+import {
+  useDropzone,
+  type DropzoneOptions,
+  type FileError,
+} from "react-dropzone";
 import {
   multiUploadVariant,
   type MultiUploadSlots,
   type MultiUploadVariants,
 } from "./style";
 
+export type FileUploadProgress = "PENDING" | "COMPLETE" | "ERROR" | number;
 export type MultiFileUploadState = {
-  file?: File;
+  file: null | File;
   preview: string;
   id: string;
-  progress: "PENDING" | "COMPLETE" | "ERROR" | number;
+  progress: FileUploadProgress;
 };
 
 type Props = MultiUploadVariants & {
-  value: MultiFileUploadState[];
-  onValueChange: (value: MultiFileUploadState[]) => void;
-  onFilesSelect: (file: MultiFileUploadState[]) => void | Promise<void>;
+  defaultValue?: MultiFileUploadState[];
+  value?: MultiFileUploadState[];
+  onValueChange?: (value: MultiFileUploadState[]) => void;
+  onFilesSelect?: (file: File[]) => void | Promise<void>;
+  onUploadSuccess: (_: { id: string; response: any }) => void;
   className?: string;
   classNames?: SlotsToClasses<MultiUploadSlots>;
   isDisabled?: boolean;
-  onError?: (error: string) => void;
+  onError?: (error: FileError) => void;
+  onDelete?: (id: string) => void;
   showDeleteBtn?: boolean;
   dropzoneOptions?: DropzoneOptions;
-  onDelete?: (id: string) => void;
-  maxFileSize?: number;
   isInvalid?: boolean;
   helperText?: React.ReactNode;
   uploadIcon?: React.ReactNode;
   info?: React.ReactNode;
+  uploadApiUrl: string;
+  getFileUrlAfterUpload: (response: any) => string;
+  inputName: string;
 };
 
 export type UseMultiFileUploadProps = Props & UIProps<"div", keyof Props>;
 export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
   const {
-    value,
+    defaultValue,
+    value: $value,
     className,
-    classNames,
+    classNames = {},
     isDisabled = false,
     onFilesSelect,
     onValueChange,
@@ -51,14 +62,113 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     isInvalid,
     helperText,
     info,
-    uploadIcon = <FileUploadIcon className="shrink-0 text-inherit" />,
+    uploadIcon = <FileAddIcon className="shrink-0 text-inherit" />,
     as,
+    inputName,
+    uploadApiUrl,
+    onUploadSuccess,
+    getFileUrlAfterUpload,
     ...restProps
   } = props;
+  const [value = [], setValue] = useControlledState({
+    defaultProp: defaultValue,
+    onChange: onValueChange,
+    prop: $value,
+  });
+  const xhrRefs = useRef<{ id: string; xhr: XMLHttpRequest }[]>([]);
 
   const Component = as ?? "div";
-  const { maxFiles } = dropzoneOptions;
-  const canUploadFile = maxFiles ? value.length < maxFiles : true;
+  const { maxFiles = 5 } = dropzoneOptions;
+  const canUploadFile = value.length < maxFiles;
+
+  const updateState = useCallback(
+    (id: string, state: Partial<MultiFileUploadState>) => {
+      setValue((prev) => {
+        const updated = prev.map((item) => {
+          if (item.id === id) {
+            return {
+              ...item,
+              ...state,
+            };
+          }
+          return item;
+        });
+        return updated;
+      });
+    },
+    [setValue],
+  );
+
+  const uploadFile = useCallback(
+    (id: string, file: File) => {
+      updateState(id, { progress: "PENDING" });
+
+      const formData = new FormData();
+      formData.append(inputName, file);
+
+      const xhr = new XMLHttpRequest();
+      xhrRefs.current.push({ id, xhr });
+      xhr.open("POST", uploadApiUrl);
+      xhr.upload.onprogress = (event) => {
+        if (event.lengthComputable) {
+          const progress = Math.round((event.loaded / event.total) * 100);
+          updateState(id, { progress });
+        }
+      };
+
+      xhr.onload = () => {
+        if (xhr.status === 200) {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          const response = JSON.parse(xhr.responseText);
+          const fileUrl = getFileUrlAfterUpload(response);
+          const successItem = value.find((item) => item.id === id);
+          if (successItem) {
+            URL.revokeObjectURL(successItem.preview);
+          }
+          updateState(id, {
+            progress: "COMPLETE",
+            file: null,
+            preview: fileUrl,
+          });
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          onUploadSuccess({ id, response });
+        } else {
+          updateState(id, { progress: "ERROR" });
+          onError?.({
+            message: "Invalid response received",
+            code: "INVALID_RESPONSE",
+          });
+        }
+      };
+      xhr.onerror = () => {
+        updateState(id, { progress: "ERROR" });
+        onError?.({ message: "Upload failed", code: "UPLOAD_FAILED" });
+      };
+      xhr.send(formData);
+    },
+    [
+      getFileUrlAfterUpload,
+      inputName,
+      onError,
+      onUploadSuccess,
+      updateState,
+      uploadApiUrl,
+      value,
+    ],
+  );
+  const retryUpload = (id: string) => {
+    const item = value.find((item) => item.id === id);
+    if (item?.file) {
+      uploadFile(id, item.file);
+    }
+  };
+  const cancelUpload = (id: string) => {
+    // find xhr
+    const xhr = xhrRefs.current.find((item) => item.id === id)?.xhr;
+    xhr?.abort();
+    // delete from ref
+    xhrRefs.current = xhrRefs.current.filter((item) => item.id !== id);
+  };
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     maxFiles,
@@ -66,12 +176,12 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     disabled: isDisabled,
     onDrop: (acceptedFiles: File[]) => {
       const files = acceptedFiles;
-      if (maxFiles && value.length + files.length > maxFiles) {
-        const message = `You can only upload ${maxFiles} files`;
-        onError?.(message);
+      const remainingFiles = maxFiles - value.length;
+      if (maxFiles && files.length > remainingFiles) {
+        const message = `You can only upload ${maxFiles} files. Remaining ${remainingFiles}`;
+        onError?.({ message, code: "MAXIMUM_LIMIT_REACHED" });
         return;
       }
-
       const selectedFiles = files.map<MultiFileUploadState>((file) => {
         const objectUrl = URL.createObjectURL(file);
         return {
@@ -81,17 +191,18 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
           progress: "PENDING",
         };
       });
-
-      onValueChange([...value, ...selectedFiles]);
-      void onFilesSelect(selectedFiles);
+      setValue([...value, ...selectedFiles]);
+      selectedFiles.forEach((file) => {
+        if (file.file) uploadFile(file.id, file.file);
+      });
+      void onFilesSelect?.(files);
     },
     onDropRejected(fileRejections) {
       fileRejections.forEach((item) => {
         const { errors } = item;
         const error = errors[0];
         if (error) {
-          const { message } = error;
-          onError?.(message);
+          onError?.(error);
         }
       });
     },
@@ -102,12 +213,21 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     isDisabled,
     isDragActive,
     isInvalid,
+    className,
+  });
+
+  const overlayWrapperClassName = styles.overlayWrapper({
+    className: classNames.overlayWrapper,
+  });
+  const overlayClassName = styles.overlay({
+    className: classNames.overlay,
   });
 
   const handleDelete = (e: React.MouseEvent<HTMLButtonElement>, id: string) => {
     onDelete?.(id);
+    cancelUpload(id);
     e.stopPropagation();
-    onValueChange(value.filter((item) => item.id !== id));
+    setValue(value.filter((item) => item.id !== id));
   };
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -241,5 +361,8 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     info,
     getInfoProps,
     uploadIcon,
+    retryUpload,
+    overlayWrapperClassName,
+    overlayClassName,
   };
 };

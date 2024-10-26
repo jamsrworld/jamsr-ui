@@ -56,7 +56,6 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
             },
             zIndex: {
               "1": "1",
-              "-1": "-1",
               backdrop: "98",
               popover: "99",
               dialog: "99",

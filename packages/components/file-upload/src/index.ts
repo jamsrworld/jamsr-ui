@@ -1,18 +1,9 @@
 "use client";
 
+export { SingleFileUpload, type SingleFileUploadProps } from "./file-upload";
 export {
-  MultiFileUpload,
-  useMultiFileUpload,
-  type MultiFileUploadProps,
-  type UseMultiFileUploadProps,
-  type MultiFileUploadState,
-} from "./multi";
-
-export {
-  SingleFileUpload,
-  useSingleFileUpload,
-  type SingleFileUploadProps,
   type UseSingleFileUploadProps,
-} from "./single";
+  useSingleFileUpload,
+} from "./use-file-upload";
 
 export type { FileError as FileUploadError } from "react-dropzone";

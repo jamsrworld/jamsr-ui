@@ -14,6 +14,7 @@ export * from "@jamsr-ui/divider";
 export * from "@jamsr-ui/drawer";
 export * from "@jamsr-ui/editor";
 export * from "@jamsr-ui/file-upload";
+export * from "@jamsr-ui/file-upload-multi";
 export * from "@jamsr-ui/header";
 export * from "@jamsr-ui/input";
 export * from "@jamsr-ui/link";

@@ -22,6 +22,7 @@ const components = [
   "drawer",
   "editor",
   "file-upload",
+  "file-upload-multi",
   "header",
   "input",
   "link",

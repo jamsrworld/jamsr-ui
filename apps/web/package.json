@@ -10,11 +10,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@faker-js/faker": "9.0.3",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/react": "workspace:*",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/theme": "workspace:*",
+    "@jamsr-ui/utils": "workspace:^",
     "@tanstack/react-table": "8.20.5",
     "clean-package": "2.2.0",
     "color2k": "2.0.3",

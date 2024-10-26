@@ -44,6 +44,7 @@ const components = [
   "tooltip",
   "typography",
   "theme",
+  "dnd",
 ];
 
 export const ComponentsSidebar = () => {

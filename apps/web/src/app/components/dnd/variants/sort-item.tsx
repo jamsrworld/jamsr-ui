@@ -7,7 +7,7 @@ type Props = {
   isDragging?: boolean;
 } & ComponentProps<"div">;
 
-const Item = ({
+export const SortItem = ({
   item,
   isOpacityEnabled,
   isDragging,
@@ -40,4 +40,3 @@ const Item = ({
     </div>
   );
 };
-export default Item;

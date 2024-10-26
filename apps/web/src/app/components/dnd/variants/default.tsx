@@ -17,7 +17,7 @@ import {
   SortableContext,
 } from "@dnd-kit/sortable";
 import { useState } from "react";
-import Item from "./Item";
+import { SortItem } from "./sort-item";
 import { SortableItem } from "./sortable-item";
 
 const defaultItems = [
@@ -162,7 +162,7 @@ export const DndDefault = () => {
         </div>
       </SortableContext>
       <DragOverlay adjustScale style={{ transformOrigin: "0 0 " }}>
-        {activeItem ? <Item item={activeItem} isDragging /> : null}
+        {activeItem ? <SortItem item={activeItem} isDragging /> : null}
       </DragOverlay>
     </DndContext>
   );

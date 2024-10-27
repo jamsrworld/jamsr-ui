@@ -5,9 +5,7 @@ import {
   Card,
   CardContent,
   Sortable,
-  SortableItem,
   SortableItemProps,
-  UniqueIdentifier,
 } from "@jamsr-ui/react";
 import { useState } from "react";
 
@@ -124,26 +122,11 @@ export const DndGrid = (props: Props) => {
   const { isDisabled = false } = props;
   const [items, setItems] = useState<SortItem[]>(defaultItems);
   console.log("items:->", items);
-  const getActiveItem = (id: UniqueIdentifier) => {
-    const activeItem = items.find((item) => item.id === id);
-    if (!activeItem) return null;
-    return <Item item={activeItem} />;
-  };
   return (
     <Card>
-      <CardContent>
-        <Sortable
-          items={items}
-          setItems={setItems}
-          getActiveItem={getActiveItem}
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
-            {items.map((item) => (
-              <SortableItem key={item.id} id={item.id} isDisabled={isDisabled}>
-                {(props) => <Item {...props} item={item} />}
-              </SortableItem>
-            ))}
-          </div>
+      <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+        <Sortable items={items} setItems={setItems} isDisabled={isDisabled}>
+          {(props) => <Item {...props} />}
         </Sortable>
       </CardContent>
     </Card>

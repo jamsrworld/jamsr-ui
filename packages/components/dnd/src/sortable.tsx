@@ -13,6 +13,7 @@ import {
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
+import { restrictToWindowEdges } from "@dnd-kit/modifiers";
 import {
   arrayMove,
   rectSortingStrategy,
@@ -20,19 +21,19 @@ import {
   sortableKeyboardCoordinates,
 } from "@dnd-kit/sortable";
 import { useState } from "react";
-import { restrictToWindowEdges } from "./utils";
+import { SortableItem, type SortableItemProps } from "./sortable-item";
 
 type Props<T> = {
   items: T[];
   setItems: React.Dispatch<React.SetStateAction<T[]>>;
-  children: React.ReactNode;
-  getActiveItem: (id: UniqueIdentifier) => React.ReactNode;
+  children: (_: SortableItemProps & { item: T }) => React.ReactNode;
+  isDisabled?: boolean;
 };
 
 export const Sortable = <T extends { id: UniqueIdentifier }>(
   props: Props<T>,
 ) => {
-  const { items, children, getActiveItem, setItems } = props;
+  const { items, children, setItems, isDisabled } = props;
   // for drag overlay
   const [activeId, setActiveId] = useState<null | string | number>(null);
 
@@ -75,6 +76,7 @@ export const Sortable = <T extends { id: UniqueIdentifier }>(
     setActiveId(null);
   };
 
+  const activeItem = items.find((item) => item.id === activeId);
   return (
     <DndContext
       sensors={sensors}
@@ -85,10 +87,14 @@ export const Sortable = <T extends { id: UniqueIdentifier }>(
       modifiers={[restrictToWindowEdges]}
     >
       <SortableContext items={items} strategy={rectSortingStrategy}>
-        {children}
+        {items.map((item) => (
+          <SortableItem key={item.id} id={item.id} isDisabled={isDisabled}>
+            {(props) => children({ item, ...props })}
+          </SortableItem>
+        ))}
       </SortableContext>
       <DragOverlay adjustScale style={{ transformOrigin: "0 0 " }}>
-        {!!activeId && getActiveItem(activeId)}
+        {!!activeItem && children({ item: activeItem })}
       </DragOverlay>
     </DndContext>
   );

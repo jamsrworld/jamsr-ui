@@ -1,4 +1,5 @@
 import {
+  type UniqueIdentifier,
   type DraggableAttributes,
   type DraggableSyntheticListeners,
 } from "@dnd-kit/core";
@@ -17,7 +18,7 @@ export type SortableItemProps = {
 };
 
 type Props = {
-  id: string;
+  id: UniqueIdentifier;
   isDisabled?: boolean;
   children: (props: SortableItemProps) => React.ReactNode;
 };

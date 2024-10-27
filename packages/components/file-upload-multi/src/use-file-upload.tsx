@@ -353,6 +353,7 @@ export const useMultiFileUpload = (props: UseMultiFileUploadProps) => {
     getPickerProps,
     handleDelete,
     value,
+    setValue,
     showDeleteBtn,
     isDisabled,
     canUploadFile,

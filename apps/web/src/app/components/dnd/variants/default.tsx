@@ -6,6 +6,7 @@ import {
   DragEndEvent,
   DragOverlay,
   DragStartEvent,
+  KeyboardSensor,
   PointerSensor,
   TouchSensor,
   useSensor,
@@ -15,10 +16,12 @@ import {
   arrayMove,
   rectSortingStrategy,
   SortableContext,
+  sortableKeyboardCoordinates,
 } from "@dnd-kit/sortable";
 import { useState } from "react";
 import { SortItem } from "./sort-item";
 import { SortableItem } from "./sortable-item";
+import { restrictToWindowEdges } from "./utils";
 
 const defaultItems = [
   {
@@ -76,19 +79,26 @@ export const DndDefault = () => {
   const [items, setItems] = useState<TItem[]>(defaultItems);
   console.log("items:->", items);
   // for drag overlay
-  const [activeItem, setActiveItem] = useState<TItem>();
+  const [activeItem, setActiveItem] = useState<TItem | null>(null);
 
   // for input methods detection
-  const sensors = useSensors(useSensor(PointerSensor), useSensor(TouchSensor));
+  const pointerSensor = useSensor(PointerSensor, {});
+  const touchSensor = useSensor(TouchSensor, {});
+  const keyboardSensor = useSensor(KeyboardSensor, {
+    coordinateGetter: sortableKeyboardCoordinates,
+  });
+  const sensors = useSensors(pointerSensor, touchSensor, keyboardSensor);
 
   // triggered when dragging starts
   const handleDragStart = (event: DragStartEvent) => {
     const { active } = event;
-    setActiveItem(items.find((item) => item.id === active.id));
+    const activeItem = items.find((item) => item.id === active.id);
+    setActiveItem(activeItem ?? null);
   };
 
   // triggered when dragging ends
   const handleDragEnd = (event: DragEndEvent) => {
+    setActiveItem(null);
     const { active, over } = event;
     if (!over) return;
 
@@ -105,11 +115,11 @@ export const DndDefault = () => {
     if (activeIndex !== overIndex) {
       setItems((prev) => arrayMove<TItem>(prev, activeIndex, overIndex));
     }
-    setActiveItem(undefined);
+    setActiveItem(null);
   };
 
   const handleDragCancel = () => {
-    setActiveItem(undefined);
+    setActiveItem(null);
   };
 
   const handleButtonClick = () => {
@@ -124,6 +134,7 @@ export const DndDefault = () => {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
       onDragCancel={handleDragCancel}
+      modifiers={[restrictToWindowEdges]}
     >
       <SortableContext items={items} strategy={rectSortingStrategy}>
         <div
@@ -162,7 +173,7 @@ export const DndDefault = () => {
         </div>
       </SortableContext>
       <DragOverlay adjustScale style={{ transformOrigin: "0 0 " }}>
-        {activeItem ? <SortItem item={activeItem} isDragging /> : null}
+        {activeItem ? <SortItem handle item={activeItem} isDragging /> : null}
       </DragOverlay>
     </DndContext>
   );

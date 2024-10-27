@@ -5,19 +5,19 @@ export type UsePressOptions = {
   onPressStart?: () => void; // Callback when pressing starts
   onPressEnd?: () => void; // Callback when pressing ends successfully
   onPressCancel?: () => void; // Callback if press is canceled
-  isDisable?: boolean;
+  isDisabled?: boolean;
 };
 
 export const usePress = <T extends HTMLElement>(
   options: UsePressOptions = {},
 ) => {
-  const { onPressStart, onPressEnd, onPressCancel, isDisable } = options;
+  const { onPressStart, onPressEnd, onPressCancel, isDisabled } = options;
   const [isPressed, setIsPressed] = useState(false);
   const ref = useRef<T>(null);
 
   useEffect(() => {
     const node = ref.current;
-    if (!node || isDisable) return () => {};
+    if (!node || isDisabled) return () => {};
 
     const onPointerDown = () => {
       setIsPressed(true);
@@ -53,7 +53,7 @@ export const usePress = <T extends HTMLElement>(
     return () => {
       node.removeEventListener("pointerdown", onPointerDown);
     };
-  }, [onPressStart, onPressEnd, onPressCancel, isDisable]);
+  }, [onPressStart, onPressEnd, onPressCancel, isDisabled]);
 
   return { ref, isPressed };
 };

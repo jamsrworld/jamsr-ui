@@ -11,6 +11,7 @@ export * from "@jamsr-ui/confirmation";
 export * from "@jamsr-ui/data-table";
 export * from "@jamsr-ui/dialog";
 export * from "@jamsr-ui/divider";
+export * from "@jamsr-ui/dnd";
 export * from "@jamsr-ui/drawer";
 export * from "@jamsr-ui/editor";
 export * from "@jamsr-ui/file-upload";

@@ -68,6 +68,7 @@
     "@jamsr-ui/data-table": "workspace:^",
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
+    "@jamsr-ui/dnd": "workspace:^",
     "@jamsr-ui/drawer": "workspace:^",
     "@jamsr-ui/editor": "workspace:^",
     "@jamsr-ui/file-upload": "workspace:^",

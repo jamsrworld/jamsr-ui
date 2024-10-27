@@ -1,180 +1,151 @@
 "use client";
 
 import {
-  closestCenter,
-  DndContext,
-  DragEndEvent,
-  DragOverlay,
-  DragStartEvent,
-  KeyboardSensor,
-  PointerSensor,
-  TouchSensor,
-  useSensor,
-  useSensors,
-} from "@dnd-kit/core";
-import {
-  arrayMove,
-  rectSortingStrategy,
-  SortableContext,
-  sortableKeyboardCoordinates,
-} from "@dnd-kit/sortable";
+  Button,
+  Card,
+  CardContent,
+  Sortable,
+  SortableItem,
+  SortableItemProps,
+  UniqueIdentifier,
+} from "@jamsr-ui/react";
 import { useState } from "react";
-import { SortItem } from "./sort-item";
-import { SortableItem } from "./sortable-item";
-import { restrictToWindowEdges } from "./utils";
 
 const defaultItems = [
   {
-    id: 2,
+    id: "2",
     imageUrl: `https://picsum.photos/id/2/300/200`,
   },
   {
-    id: 15,
+    id: "15",
     imageUrl: `https://picsum.photos/id/15/300/200`,
   },
   {
-    id: 20,
+    id: "20",
     imageUrl: `https://picsum.photos/id/20/300/200`,
   },
   {
-    id: 24,
+    id: "24",
     imageUrl: `https://picsum.photos/id/24/300/200`,
   },
   {
-    id: 32,
+    id: "32",
     imageUrl: `https://picsum.photos/id/13/300/200`,
   },
   {
-    id: 35,
+    id: "35",
     imageUrl: `https://picsum.photos/id/48/300/200`,
   },
   {
-    id: 39,
+    id: "39",
     imageUrl: `https://picsum.photos/id/40/300/200`,
   },
   {
-    id: 43,
+    id: "43",
     imageUrl: `https://picsum.photos/id/43/300/200`,
   },
   {
-    id: 46,
+    id: "46",
     imageUrl: `https://picsum.photos/id/46/300/200`,
   },
   {
-    id: 52,
+    id: "52",
     imageUrl: `https://picsum.photos/id/52/300/200`,
   },
   {
-    id: 56,
+    id: "56",
     imageUrl: `https://picsum.photos/id/60/300/200`,
   },
 ];
 
-export type TItem = {
-  id: number;
+export type SortItem = {
+  id: string;
   imageUrl: string;
 };
 
-export const DndDefault = () => {
-  const [items, setItems] = useState<TItem[]>(defaultItems);
-  console.log("items:->", items);
-  // for drag overlay
-  const [activeItem, setActiveItem] = useState<TItem | null>(null);
+type ItemProps = SortableItemProps & { item: SortItem };
 
-  // for input methods detection
-  const pointerSensor = useSensor(PointerSensor, {});
-  const touchSensor = useSensor(TouchSensor, {});
-  const keyboardSensor = useSensor(KeyboardSensor, {
-    coordinateGetter: sortableKeyboardCoordinates,
-  });
-  const sensors = useSensors(pointerSensor, touchSensor, keyboardSensor);
-
-  // triggered when dragging starts
-  const handleDragStart = (event: DragStartEvent) => {
-    const { active } = event;
-    const activeItem = items.find((item) => item.id === active.id);
-    setActiveItem(activeItem ?? null);
-  };
-
-  // triggered when dragging ends
-  const handleDragEnd = (event: DragEndEvent) => {
-    setActiveItem(null);
-    const { active, over } = event;
-    if (!over) return;
-
-    const activeItem = items.find((item) => item.id === active.id);
-    const overItem = items.find((item) => item.id === over.id);
-
-    if (!activeItem || !overItem) {
-      return;
-    }
-
-    const activeIndex = items.findIndex((item) => item.id === active.id);
-    const overIndex = items.findIndex((item) => item.id === over.id);
-
-    if (activeIndex !== overIndex) {
-      setItems((prev) => arrayMove<TItem>(prev, activeIndex, overIndex));
-    }
-    setActiveItem(null);
-  };
-
-  const handleDragCancel = () => {
-    setActiveItem(null);
-  };
-
-  const handleButtonClick = () => {
-    const itemIds = items.map((item) => item.id);
-    alert(itemIds);
-  };
-
+const Item = (props: ItemProps) => {
+  const {
+    attributes,
+    isDragging,
+    listeners,
+    setActivatorNodeRef,
+    setNodeRef,
+    styles,
+    item,
+    isDisabled,
+  } = props;
   return (
-    <DndContext
-      sensors={sensors}
-      collisionDetection={closestCenter}
-      onDragStart={handleDragStart}
-      onDragEnd={handleDragEnd}
-      onDragCancel={handleDragCancel}
-      modifiers={[restrictToWindowEdges]}
-    >
-      <SortableContext items={items} strategy={rectSortingStrategy}>
-        <div
+    <div className="relative group">
+      <div
+        suppressHydrationWarning
+        ref={setNodeRef}
+        style={styles}
+        {...attributes}
+      >
+        <img
+          src={item.imageUrl}
+          alt={`${item.id}`}
           style={{
-            display: "grid",
-            gridTemplateColumns: `repeat(4, 1fr)`,
-            gridGap: 16,
-            maxWidth: "800px",
-            margin: "16px auto 48px",
+            borderRadius: "8px",
+            boxShadow: isDragging
+              ? "none"
+              : "rgb(63 63 68 / 5%) 0px 0px 0px 1px, rgb(34 33 81 / 15%) 0px 1px 3px 0px",
+            maxWidth: "100%",
+            objectFit: "cover",
           }}
+        />
+      </div>
+      <Button
+        className="absolute top-2 left-2 hidden group-hover:flex"
+        isIconOnly
+        size="sm"
+        ref={setActivatorNodeRef}
+        isDisabled={isDisabled}
+        {...listeners}
+      >
+        <svg viewBox="0 0 20 20" width="12" color="currentColor">
+          <path
+            fill="currentColor"
+            d="M7 2a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 2zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 8zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 14zm6-8a2 2 0 1 0-.001-4.001A2 2 0 0 0 13 6zm0 2a2 2 0 1 0 .001 4.001A2 2 0 0 0 13 8zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 13 14z"
+          ></path>
+        </svg>
+      </Button>
+    </div>
+  );
+};
+
+type Props = {
+  isDisabled?: boolean;
+};
+
+export const DndGrid = (props: Props) => {
+  const { isDisabled = false } = props;
+  const [items, setItems] = useState<SortItem[]>(defaultItems);
+  console.log("items:->", items);
+  const getActiveItem = (id: UniqueIdentifier) => {
+    const activeItem = items.find((item) => item.id === id);
+    if (!activeItem) return null;
+    return <Item item={activeItem} />;
+  };
+  return (
+    <Card>
+      <CardContent>
+        <Sortable
+          items={items}
+          setItems={setItems}
+          getActiveItem={getActiveItem}
         >
-          {items.map((item) => (
-            <SortableItem key={item.id} item={item} />
-          ))}
-        </div>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <button
-            onClick={handleButtonClick}
-            style={{
-              appearance: "none",
-              fontFamily: "inherit",
-              display: "inline-block",
-              border: "0",
-              borderRadius: "5px",
-              background: "#14af21",
-              color: "#fff",
-              padding: "10px 16px",
-              fontSize: "1rem",
-              textDecoration: "none",
-              cursor: "pointer",
-              width: "100%",
-            }}
-          >
-            Save this order
-          </button>
-        </div>
-      </SortableContext>
-      <DragOverlay adjustScale style={{ transformOrigin: "0 0 " }}>
-        {activeItem ? <SortItem handle item={activeItem} isDragging /> : null}
-      </DragOverlay>
-    </DndContext>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+            {items.map((item) => (
+              <SortableItem key={item.id} id={item.id} isDisabled={isDisabled}>
+                {(props) => <Item {...props} item={item} />}
+              </SortableItem>
+            ))}
+          </div>
+        </Sortable>
+      </CardContent>
+    </Card>
   );
 };

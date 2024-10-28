@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.24
+
+### Patch Changes
+
+- improvements
+
 ## 0.0.23
 
 ### Patch Changes

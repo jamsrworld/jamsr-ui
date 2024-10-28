@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/theme",
-  "version": "0.0.52",
+  "version": "0.0.53",
   "description": "",
   "main": "src/index.ts",
   "publishConfig": {
@@ -26,6 +26,7 @@
     "deepmerge": "^4.3.1"
   },
   "devDependencies": {
+    "@types/node": "^22.8.1",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "react": "19.0.0-rc-1631855f-20241023",

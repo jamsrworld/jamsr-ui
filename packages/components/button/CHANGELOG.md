@@ -1,5 +1,16 @@
 # @jamsr-ui/button
 
+## 0.0.55
+
+### Patch Changes
+
+- improvements
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.52
+  - @jamsr-ui/ripple@0.0.53
+  - @jamsr-ui/hooks@0.0.35
+  - @jamsr-ui/utils@0.0.49
+
 ## 0.0.54
 
 ### Patch Changes

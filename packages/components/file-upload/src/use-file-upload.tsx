@@ -8,7 +8,7 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import type { DropzoneOptions, FileError } from "react-dropzone";
 import { useDropzone } from "react-dropzone";
 import {
@@ -58,8 +58,8 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     description = "Choose a file or drag & drop it here",
     info = "Select images",
     dropzoneOptions,
-    fileSize,
-    fileName,
+    fileSize: $fileSize,
+    fileName: $fileName,
     helperText,
     uploadIcon = <FileAddIcon className="shrink-0 text-inherit" />,
     isAvatar,
@@ -73,7 +73,7 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     getFileUrlAfterUpload,
     ...restProps
   } = props;
-
+  const xhrRef = useRef<XMLHttpRequest | null>(null);
   const [value = null, setValue] = useControlledState(
     defaultValue,
     $value,
@@ -81,10 +81,14 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
   );
   const [previewUrl, setPreviewUrl] = useState<string | null>(value);
   const [progress, setProgress] = useState(0);
+  const [isFailed, setIsFailed] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
 
-  const isImage = value && isImageExt(value);
+  const fileName = file ? file.name : $fileName;
+  const fileSize = file ? file.size : $fileSize;
+  const isImage = fileName && isImageExt(fileName);
   const Component = as ?? "div";
-  const isEmpty = value ? value.length === 0 : true;
+  const isEmpty = !fileName;
 
   const fileIcon = useMemo(() => {
     if (!value) return "";
@@ -93,12 +97,58 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
       : getFileIconFromUrl(value);
   }, [getFileIcon, value]);
 
+  const revokePreviewUrl = useCallback(() => {
+    if (previewUrl?.startsWith("blob:")) URL.revokeObjectURL(previewUrl);
+  }, [previewUrl]);
+
+  const resetUpload = useCallback(() => {
+    setValue(null);
+    setPreviewUrl(null);
+    setProgress(0);
+    setFile(null);
+    setIsFailed(false);
+    revokePreviewUrl();
+  }, [revokePreviewUrl, setValue]);
+
+  const onSuccess = useCallback(
+    (fileUrl: string) => {
+      setProgress(0);
+      setIsFailed(false);
+      xhrRef.current = null;
+      revokePreviewUrl();
+      setValue(fileUrl);
+      setPreviewUrl(fileUrl);
+    },
+    [revokePreviewUrl, setValue],
+  );
+
+  const onUploadFailed = useCallback(() => {
+    setProgress(0);
+    setIsFailed(true);
+    onError?.({
+      message: "Invalid response received",
+      code: "INVALID_RESPONSE",
+    });
+  }, [onError]);
+
+  const handleDeleteFile = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+      onDelete?.();
+      resetUpload();
+      if (xhrRef.current) xhrRef.current.abort();
+    },
+    [onDelete, resetUpload],
+  );
+
   const uploadFile = useCallback(
     (file: File) => {
       const formData = new FormData();
       formData.append(inputName, file);
 
       const xhr = new XMLHttpRequest();
+      xhrRef.current = xhr;
+
       xhr.open("POST", uploadApiUrl);
       xhr.upload.onprogress = (event) => {
         if (event.lengthComputable) {
@@ -111,44 +161,53 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
         if (xhr.status === 200) {
           // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           const response = JSON.parse(xhr.responseText);
-          setProgress(0);
           const fileUrl = getFileUrlAfterUpload(response);
-          setValue(fileUrl);
-          setPreviewUrl(fileUrl);
+          onSuccess(fileUrl);
           onUploadSuccess(response);
         } else {
-          onError?.({
-            message: "Invalid response received",
-            code: "INVALID_RESPONSE",
-          });
+          onUploadFailed();
         }
       };
       xhr.onerror = () => {
-        onError?.({ message: "Upload failed", code: "UPLOAD_FAILED" });
+        onUploadFailed();
+      };
+      xhr.onabort = () => {
+        resetUpload();
       };
       xhr.send(formData);
     },
     [
       getFileUrlAfterUpload,
       inputName,
-      onError,
+      onSuccess,
+      onUploadFailed,
       onUploadSuccess,
-      setValue,
+      resetUpload,
       uploadApiUrl,
     ],
+  );
+
+  const onRetry = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (file) uploadFile(file);
+    },
+    [file, uploadFile],
   );
 
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
       const file = acceptedFiles[0];
       if (!file) return;
-      if (previewUrl) URL.revokeObjectURL(previewUrl);
+      setFile(file);
+      revokePreviewUrl();
       const objectUrl = URL.createObjectURL(file);
       setPreviewUrl(objectUrl);
       uploadFile(file);
       onFileSelect?.(file);
     },
-    [onFileSelect, previewUrl, uploadFile],
+    [onFileSelect, revokePreviewUrl, uploadFile],
   );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -172,15 +231,6 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     isDragActive,
     isInvalid,
   });
-
-  const handleDeleteFile = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
-      onDelete?.();
-      setValue(null);
-    },
-    [onDelete, setValue],
-  );
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props = {}) => {
@@ -226,19 +276,18 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     [classNames?.picker, styles],
   );
 
-  const getProgressOverlayProps: PropGetter<ComponentProps<"div">> =
-    useCallback(
-      (props = {}) => {
-        return {
-          "data-slot": "progress-overlay",
-          ...props,
-          className: styles.progressOverlay({
-            className: classNames?.progressOverlay,
-          }),
-        };
-      },
-      [classNames?.progressOverlay, styles],
-    );
+  const getOverlayProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props = {}) => {
+      return {
+        "data-slot": "progress-overlay",
+        ...props,
+        className: styles.overlay({
+          className: classNames?.overlay,
+        }),
+      };
+    },
+    [classNames?.overlay, styles],
+  );
 
   const getHelperTextProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props = {}) => {
@@ -338,7 +387,7 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     getInputProps,
     getDeleteBtnProps,
     getPickerProps,
-    getProgressOverlayProps,
+    getOverlayProps,
     getHelperTextProps,
     getFileWrapperProps,
     getInfoProps,
@@ -361,5 +410,7 @@ export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
     progress,
     helperText,
     isEmpty,
+    isFailed,
+    onRetry,
   };
 };

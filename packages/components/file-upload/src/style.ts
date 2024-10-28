@@ -8,13 +8,13 @@ export const singleUploadVariants = tv({
       "group relative flex aspect-video select-none flex-col items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-divider",
     image: "size-full rounded-md object-cover",
     deleteBtn:
-      "absolute right-0 top-0 hidden hover:text-danger group-hover:block",
+      "absolute right-0 top-0 z-1 hidden hover:text-danger group-hover:block",
     description: "text-xs",
     info: "text-xs text-foreground-400",
     fileWrapper:
       "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 bg-content1",
-    progressOverlay:
-      "absolute inset-0 flex size-full items-center justify-center bg-black/60",
+    overlay:
+      "absolute inset-0 flex size-full items-center justify-center bg-black/60 text-white",
     helperText: "text-xs text-foreground-500",
     fileName: "max-w-[90%] truncate text-center text-xs",
     fileSize: "text-xs text-foreground-400",

@@ -1,5 +1,5 @@
 import { CircularProgress } from "@jamsr-ui/progress";
-import { TrashIcon } from "@jamsr-ui/shared-icons";
+import { RefreshIcon, TrashIcon } from "@jamsr-ui/shared-icons";
 import {
   useSingleFileUpload,
   type UseSingleFileUploadProps,
@@ -14,7 +14,7 @@ export const SingleFileUpload = (props: SingleFileUploadProps) => {
     getInputProps,
     getDeleteBtnProps,
     getPickerProps,
-    getProgressOverlayProps,
+    getOverlayProps,
     getHelperTextProps,
     getFileWrapperProps,
     getInfoProps,
@@ -38,6 +38,8 @@ export const SingleFileUpload = (props: SingleFileUploadProps) => {
     getBaseProps,
     helperText,
     isEmpty,
+    isFailed,
+    onRetry,
   } = useSingleFileUpload(props);
 
   return (
@@ -71,8 +73,16 @@ export const SingleFileUpload = (props: SingleFileUploadProps) => {
           </button>
         )}
         {!!progress && (
-          <div {...getProgressOverlayProps()}>
+          <div {...getOverlayProps()}>
             <CircularProgress value={progress} />
+          </div>
+        )}
+        {isFailed && (
+          <div {...getOverlayProps()}>
+            <span>failed</span>
+            <button type="button" onClick={onRetry}>
+              <RefreshIcon />
+            </button>
           </div>
         )}
       </div>

@@ -16,7 +16,7 @@ const Indicator = (props: AccordionItemIndicatorProps) => {
 
 export const AccordionCustomIcon = (arg: AccordionProps) => {
   return (
-    <Accordion color="secondary" {...arg}>
+    <Accordion {...arg}>
       <AccordionItem heading="Accordion 1" indicator={Indicator}>
         {defaultContent}
       </AccordionItem>

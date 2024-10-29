@@ -4,7 +4,7 @@ import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
 export const AccordionEndContentOutside = () => {
   return (
-    <Accordion color="secondary">
+    <Accordion>
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"

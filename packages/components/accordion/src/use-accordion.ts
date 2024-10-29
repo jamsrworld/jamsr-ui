@@ -8,7 +8,7 @@ import {
 
 type Props = {
   className?: string;
-  selectionMode?: "single" | "multiple";
+  isMultiple?: boolean;
 };
 
 export type UseAccordionProps = UIProps<"div"> &
@@ -21,7 +21,7 @@ export const useAccordion = (props: UseAccordionProps) => {
     as,
     children,
     className,
-    selectionMode = "single",
+    isMultiple = false,
     fullWidth,
     color,
     hideIndicator,
@@ -54,7 +54,7 @@ export const useAccordion = (props: UseAccordionProps) => {
     Component,
     children,
     getBaseProps,
-    selectionMode,
+    isMultiple,
     color,
     hideIndicator,
   };

@@ -32,6 +32,5 @@
     "react": "19.0.0-rc-1631855f-20241023",
     "react-dom": "19.0.0-rc-1631855f-20241023"
   },
-  "clean-package": "../../clean-package.config.json",
-  "dependencies": {}
+  "clean-package": "../../clean-package.config.json"
 }

@@ -5,7 +5,7 @@ import { ThemeColors } from "../types";
 export const themeColorsLight: ThemeColors = {
   background: {
     DEFAULT: "#ffffff",
-    secondary: "#fafafa",
+    secondary: "#efefef",
     tertiary: "#f4f5f7",
   },
   foreground: {

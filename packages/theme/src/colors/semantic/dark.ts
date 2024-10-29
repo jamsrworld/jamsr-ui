@@ -6,7 +6,7 @@ import { ThemeColors } from "../types";
 export const themeColorsDark: ThemeColors = {
   background: {
     DEFAULT: "#000",
-    secondary: "#0D0D0D",
+    secondary: "#030303",
     tertiary: "#010101",
   },
   foreground: {

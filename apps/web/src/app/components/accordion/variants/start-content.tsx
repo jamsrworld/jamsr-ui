@@ -8,7 +8,7 @@ import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
 export const AccordionStartContent = (arg: AccordionProps) => {
   return (
-    <Accordion color="secondary" {...arg}>
+    <Accordion {...arg}>
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"

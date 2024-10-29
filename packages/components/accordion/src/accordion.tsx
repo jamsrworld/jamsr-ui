@@ -17,7 +17,7 @@ export const Accordion = <T extends React.ElementType = "div">(
     Component,
     children,
     getBaseProps,
-    selectionMode,
+    isMultiple,
     color,
     hideIndicator,
   } = useAccordion(props);
@@ -29,9 +29,9 @@ export const Accordion = <T extends React.ElementType = "div">(
   const handleToggle = useCallback(
     (index: number) => {
       const isOpen = selectedKeys.has(index);
-      if (selectionMode === "single") {
+      if (!isMultiple) {
         setSelectedKeys(isOpen ? new Set() : new Set([index]));
-      } else if (selectionMode === "multiple") {
+      } else if (isMultiple) {
         const newKeys = new Set(selectedKeys);
         if (newKeys.has(index)) {
           newKeys.delete(index);
@@ -41,7 +41,7 @@ export const Accordion = <T extends React.ElementType = "div">(
         setSelectedKeys(newKeys);
       }
     },
-    [selectedKeys, selectionMode],
+    [selectedKeys, isMultiple],
   );
 
   const moveFocus = (currentIdx: number, direction: number) => {

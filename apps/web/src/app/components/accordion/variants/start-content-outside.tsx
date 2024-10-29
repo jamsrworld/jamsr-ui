@@ -2,18 +2,21 @@ import {
   Accordion,
   AccordionItem,
   type AccordionProps,
-  Avatar,
+  Button
 } from "@jamsr-ui/react";
+import { TrashIcon } from "@jamsr-ui/shared-icons";
 import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
 export const AccordionStartContentOutside = (arg: AccordionProps) => {
   return (
-    <Accordion color="secondary" {...arg}>
+    <Accordion {...arg}>
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"
         startContent={
-          <Avatar alt="avatar" src="https://i.pravatar.cc/300" size="lg" />
+          <Button aria-label="Delete" isIconOnly color="danger">
+            <TrashIcon />
+          </Button>
         }
         startContentPlacement="outside"
       >
@@ -23,7 +26,9 @@ export const AccordionStartContentOutside = (arg: AccordionProps) => {
         heading="Accordion 2"
         subheading="Press to expand item 2"
         startContent={
-          <Avatar alt="avatar" src="https://i.pravatar.cc/300?2" size="lg" />
+          <Button aria-label="Delete" isIconOnly color="danger">
+            <TrashIcon />
+          </Button>
         }
         startContentPlacement="outside"
       >
@@ -34,7 +39,9 @@ export const AccordionStartContentOutside = (arg: AccordionProps) => {
         heading="Accordion 3"
         subheading="Disabled Accordion Item"
         startContent={
-          <Avatar alt="avatar" src="https://i.pravatar.cc/300?3" size="lg" />
+          <Button aria-label="Delete" isIconOnly color="danger">
+            <TrashIcon />
+          </Button>
         }
         startContentPlacement="outside"
       >

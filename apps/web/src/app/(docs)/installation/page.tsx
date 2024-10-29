@@ -100,7 +100,7 @@ module.exports = withJamsrUI({
     content: (
       <div className="flex flex-col gap-4">
         <Typography as="p">
-          It is essential to add the NextUIProvider at the root of your
+          It is essential to add the JamsrUIProvider at the root of your
           application.
         </Typography>
         <CodeSnippet>

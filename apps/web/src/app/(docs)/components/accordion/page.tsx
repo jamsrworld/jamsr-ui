@@ -20,6 +20,16 @@ export const metadata: Metadata = {
   description,
 };
 
+type CodeProps = {
+  children: React.ReactNode;
+};
+const Code = (props: CodeProps) => {
+  const { children } = props;
+  return (
+    <code className="bg-content2 p-1 mx-1 rounded-lg text-sm">{children}</code>
+  );
+};
+
 const Accordion = () => {
   return (
     <VariantPage heading={title} description={description}>
@@ -30,11 +40,8 @@ const Accordion = () => {
         heading="Multiple Selection"
         description={
           <div>
-            Use the{" "}
-            <code className="bg-content2 p-1 mx-1 rounded-lg text-sm">
-              isMultiple
-            </code>{" "}
-            prop to allow multiple items to be expanded at once.
+            Use the <Code>isMultiple</Code> prop to allow multiple items to be
+            expanded at once.
           </div>
         }
       >
@@ -44,12 +51,8 @@ const Accordion = () => {
         heading="Disabled Items"
         description={
           <div>
-            Use the{" "}
-            <code className="bg-content2 p-1 mx-1 rounded-lg text-sm">
-              isDisabled
-            </code>{" "}
-            prop to disable an accordion item to prevent it from being expanded
-            or collapsed.
+            Use the <Code>isDisabled</Code> prop to disable an accordion item to
+            prevent it from being expanded or collapsed.
           </div>
         }
       >
@@ -59,11 +62,7 @@ const Accordion = () => {
         heading="With Subheading"
         description={
           <div>
-            Use the{" "}
-            <code className="bg-content2 p-1 mx-1 rounded-lg text-sm">
-              subheading
-            </code>{" "}
-            prop to add subheading.
+            Use the <Code>subheading</Code> prop to add subheading.
           </div>
         }
       >
@@ -73,11 +72,8 @@ const Accordion = () => {
         heading="With Start Content"
         description={
           <div>
-            Use the{" "}
-            <code className="bg-content2 p-1 mx-1 rounded-lg text-sm">
-              startContent
-            </code>{" "}
-            prop if you want to display some content before the accordion items.
+            Use the <Code>startContent</Code> prop if you want to display some
+            content before the accordion items.
           </div>
         }
       >
@@ -87,11 +83,8 @@ const Accordion = () => {
         heading="With End Content"
         description={
           <div>
-            Use the{" "}
-            <code className="bg-content2 p-1 mx-1 rounded-lg text-sm">
-              endContent
-            </code>{" "}
-            prop if you want to display some content after the accordion items.
+            Use the <Code>endContent</Code> prop if you want to display some
+            content after the accordion items.
           </div>
         }
       >
@@ -99,18 +92,35 @@ const Accordion = () => {
       </VariantWrapper>
       <VariantWrapper
         heading="With Start Content Outside"
-        description="Use case of content outside the trigger is that you can add events on the outside content"
+        description={
+          <div>
+            Use <Code>startContentPlacement</Code> prop to change the placement.
+            Use case of content outside the trigger is that you can add events
+            on the outside content
+          </div>
+        }
       >
         <AccordionStartContentOutside />
       </VariantWrapper>
       <VariantWrapper
         heading="With End Content Outside"
-        description="Use case of content outside the trigger is that you can add events on the outside content"
+        description={
+          <div>
+            Use <Code>endContentPlacement</Code> prop to change the placement.
+            Use case of content outside the trigger is that you can add events
+            on the outside content
+          </div>
+        }
       >
         <AccordionEndContentOutside />
       </VariantWrapper>
       <VariantWrapper
-        description="Pass indicator prop to change the default icon"
+        description={
+          <div>
+            Use <Code>indicator</Code> prop to change the default icon. You can
+            use it to customize the open/close indicator.
+          </div>
+        }
         heading="Custom Icon"
       >
         <AccordionCustomIcon />

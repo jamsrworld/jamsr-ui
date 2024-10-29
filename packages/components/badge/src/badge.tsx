@@ -7,10 +7,11 @@ export type BadgeProps<T extends React.ElementType = "div"> =
 export const Badge = <T extends React.ElementType = "div">(
   props: BadgeProps<T>,
 ) => {
-  const { children, className, color, size, ...restProps } = props;
+  const { children, className, color, size, isRounded, ...restProps } = props;
   const style = badgeVariants({
     color,
     className,
+    isRounded,
     size,
   });
   return (

@@ -20,7 +20,7 @@ export const tabsVariant = tv({
       "w-full",
       "px-3",
       "py-1",
-      "flex",
+      "flex flex-row gap-2",
       "group",
       "relative",
       "justify-center",

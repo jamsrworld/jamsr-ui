@@ -60,7 +60,7 @@ export const alertVariant = tv({
       severity: "default",
       variant: "solid",
       className: {
-        wrapper: "bg-default-100 text-default-600",
+        wrapper: "border-divider bg-default-100 text-default-600",
       },
     },
   ],

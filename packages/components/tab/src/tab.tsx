@@ -5,6 +5,8 @@ import { useTabsContext } from "./tabs-context";
 type Props = {
   heading: React.ReactNode;
   value: string;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
 };
 
 export type TabProps<T extends React.ElementType = "button"> =
@@ -13,7 +15,17 @@ export type TabProps<T extends React.ElementType = "button"> =
 export const Tab = <T extends React.ElementType = "button">(
   props: TabProps<T>,
 ) => {
-  const { heading, value, children, onClick, as } = props as TabProps;
+  const {
+    heading,
+    value,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    children,
+    onClick,
+    as,
+    startContent,
+    endContent,
+    ...restProps
+  } = props as TabProps;
   const { selectedValue, onValueChange, getTabProps, getTabContentProps } =
     useTabsContext();
   const isActive = value === selectedValue;
@@ -25,8 +37,14 @@ export const Tab = <T extends React.ElementType = "button">(
   const Component = as ?? "button";
 
   return (
-    <Component {...getTabProps(props as TabProps)} onClick={handleClick}>
+    <Component
+      {...restProps}
+      {...getTabProps(props as TabProps)}
+      onClick={handleClick}
+    >
+      {startContent}
       <div {...getTabContentProps()}>{heading}</div>
+      {endContent}
       {isActive && <Cursor />}
     </Component>
   );

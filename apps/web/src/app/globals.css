@@ -40,3 +40,8 @@ html {
 .debug * {
   outline: 1px solid red;
 }
+
+.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}

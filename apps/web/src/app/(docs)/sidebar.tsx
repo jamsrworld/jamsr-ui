@@ -6,6 +6,7 @@ import NextLink, { type LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 
 const components = [
+  "installation",
   "accordion",
   "alert",
   "autocomplete",
@@ -53,15 +54,16 @@ export const ComponentsSidebar = () => {
     <div className="fixed flex h-screen min-w-[240px] flex-col gap-1 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 py-12 max-md:hidden">
       <ThemeSwitcher />
       {components.map((item) => {
-        const path = `/components/${item}`;
+        const path =
+          item === "installation" ? "/installation" : `/components/${item}`;
         const isActive = pathname === path;
         return (
           <NextLink
             key={item}
-            href={`/components/${item}` as LinkProps<never>["href"]}
+            href={path as LinkProps<never>["href"]}
             className={cn(
-              "rounded-lg px-1 py-2 text-sm font-normal capitalize hover:bg-background-secondary",
-              isActive && "bg-primary text-white hover:bg-primary-600",
+              "rounded-lg p-2 text-sm font-normal capitalize hover:bg-content1",
+              isActive && "bg-primary text-white hover:bg-primary-300",
             )}
           >
             {item}

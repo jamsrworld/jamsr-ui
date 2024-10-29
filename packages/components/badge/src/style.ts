@@ -7,12 +7,12 @@ export const badgeVariants = tv({
     "text-xs",
     "font-semibold",
     "cursor-default",
-    "capitalize",
+    "shrink-0 capitalize",
     "py-0.5",
   ],
   variants: {
     color: {
-      default: "bg-background-tertiary",
+      default: "bg-content1",
       primary: "bg-primary text-primary-foreground",
       secondary: "bg-secondary text-secondary-foreground",
       danger: "bg-danger text-danger-foreground",
@@ -23,6 +23,9 @@ export const badgeVariants = tv({
       sm: "px-1",
       md: "px-2 py-1",
       lg: "px-3 py-1.5",
+    },
+    isRounded: {
+      true: "rounded-full",
     },
   },
   defaultVariants: {

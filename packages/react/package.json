@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/jamsrworld/jamsr-ui/issues"
   },
-  "homepage": "https://jamsr-ui.vercel.app",
+  "homepage": "https://jamsr-ui.jamsrworld.com",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "test": "vitest",

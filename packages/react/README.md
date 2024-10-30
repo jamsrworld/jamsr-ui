@@ -7,7 +7,7 @@ A react ui library created with tailwindcss.
 
 ## Getting Started
 
-Visit <a aria-label="jamsrui learn" href="https://jamsr-ui.vercel.app">https://jamsr-ui.vercel.app</a> to get started with JamsrUI.
+Visit <a aria-label="jamsrui learn" href="https://jamsr-ui.jamsrworld.com">https://jamsr-ui.jamsrworld.com</a> to get started with JamsrUI.
 
 
 ## Community

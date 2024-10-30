@@ -1,5 +1,5 @@
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { Cursor } from "./cursor";
+import { TabIndicator } from "./indicator";
 import { useTabsContext } from "./tabs-context";
 
 type Props = {
@@ -7,6 +7,7 @@ type Props = {
   value: string;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
+  isDisabled?: boolean;
 };
 
 export type TabProps<T extends React.ElementType = "button"> =
@@ -45,7 +46,7 @@ export const Tab = <T extends React.ElementType = "button">(
       {startContent}
       <div {...getTabContentProps()}>{heading}</div>
       {endContent}
-      {isActive && <Cursor />}
+      {isActive && <TabIndicator />}
     </Component>
   );
 };

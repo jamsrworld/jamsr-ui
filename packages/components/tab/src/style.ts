@@ -1,5 +1,5 @@
 import type { VariantProps } from "@jamsr-ui/utils";
-import { colorVariants, dataFocusVisibleClasses, tv } from "@jamsr-ui/utils";
+import { colorVariants, dataFocusVisibleClasses, focusVisibleClasses, tv } from "@jamsr-ui/utils";
 
 export const tabsVariant = tv({
   slots: {
@@ -33,7 +33,7 @@ export const tabsVariant = tv({
       "data-[disabled=true]:opacity-30",
       "data-[hover-unselected=true]:opacity-disabled",
       // focus ring
-      ...dataFocusVisibleClasses,
+      ...focusVisibleClasses,
     ],
     tabContent: [
       "relative",

@@ -2,7 +2,7 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const badgeVariants = tv({
   base: [
-    "w-max",
+    "flex w-max",
     "rounded-lg",
     "text-xs",
     "font-semibold",
@@ -25,7 +25,7 @@ export const badgeVariants = tv({
       lg: "px-3 py-1.5",
     },
     isRounded: {
-      true: "rounded-full",
+      true: "aspect-square rounded-full",
     },
   },
   defaultVariants: {

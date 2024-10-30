@@ -9,6 +9,7 @@ export const accordion = tv({
   },
 });
 
+export const test = "";
 export const accordionItem = tv({
   slots: {
     base: "flex flex-col rounded-xl bg-content1 px-4",

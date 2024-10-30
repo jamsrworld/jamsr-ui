@@ -20,7 +20,7 @@ export const CodeSnippet = (props: Props) => {
   }, []);
 
   return (
-    <Card className="w-full">
+    <Card className="w-full bg-black dark:bg-content1">
       <CardContent>
         <pre>
           <code className="language-javascript">{children}</code>

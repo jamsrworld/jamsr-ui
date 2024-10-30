@@ -3,6 +3,7 @@ import {
   cn,
   dataAttr,
   filterDOMProps,
+  isEmpty,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -30,7 +31,7 @@ export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
   const {
     classNames,
     className,
-    value: propValue,
+    value: $value,
     defaultValue,
     onValueChange,
     children,
@@ -47,9 +48,23 @@ export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
 
   const Component = as ?? "div";
 
-  const [value = "", setValue] = useControlledState(
-    defaultValue,
-    propValue,
+  const childrenArray = Children.toArray(children);
+  const tabItems = childrenArray.map((item) => {
+    if (isValidElement<TabProps>(item)) {
+      const { heading, value } = item.props;
+      return { heading, value };
+    }
+    return null;
+  });
+
+  const $defaultValue =
+    isEmpty(defaultValue) && isEmpty($value)
+      ? tabItems[0]?.value
+      : defaultValue;
+
+  const [value = "", setValue] = useControlledState<T>(
+    $defaultValue as T,
+    $value,
     onValueChange,
   );
 
@@ -104,12 +119,13 @@ export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
 
   const getTabProps: PropGetter<Partial<TabProps>> = useCallback(
     (props) => {
+      const $isDisabled = isDisabled ?? props?.isDisabled ?? props?.disabled;
       return {
         "data-slot": "tab",
         "data-selected": dataAttr(props?.value === value),
-        "data-disabled": dataAttr(props?.disabled),
-        disabled: props?.disabled,
-        "aria-disabled": props?.disabled,
+        "data-disabled": dataAttr($isDisabled),
+        disabled: $isDisabled,
+        "aria-disabled": $isDisabled,
         ...filterDOMProps(props ?? {}, {
           omitPropNames: new Set(["value"]),
         }),
@@ -118,7 +134,7 @@ export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
         }),
       };
     },
-    [classNames?.tab, styles, value],
+    [classNames?.tab, isDisabled, styles, value],
   );
 
   const getPanelProps: PropGetter<ComponentProps<"div">> = useCallback(

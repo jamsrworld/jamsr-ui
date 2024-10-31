@@ -14,9 +14,9 @@ const OtpInput = () => {
       <VariantWrapper heading="Default">
         <OtpInputDefault />
       </VariantWrapper>
-      <VariantWrapper heading="6 Digits">
+      {/* <VariantWrapper heading="6 Digits">
         <OtpInput6Digits />
-      </VariantWrapper>
+      </VariantWrapper> */}
     </VariantPage>
   );
 };

@@ -47,6 +47,7 @@ const components = [
   "theme",
   "dnd",
   "rhf",
+  "tag-input",
 ];
 
 export const ComponentsSidebar = () => {

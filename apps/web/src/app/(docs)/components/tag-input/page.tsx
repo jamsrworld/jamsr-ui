@@ -1,7 +1,7 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
-import { EditorDefault } from "./variants/default";
+import { TagInputDefault } from "./variants/default";
 
 export const metadata: Metadata = {
   title: "Editor",
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const Editor = () => {
   return (
-    <VariantPage heading="Editor">
+    <VariantPage heading="Tag Input">
       <VariantWrapper heading="Default">
-        <EditorDefault />
+        <TagInputDefault />
       </VariantWrapper>
     </VariantPage>
   );

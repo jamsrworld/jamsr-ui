@@ -1,5 +1,5 @@
-import { OTPInput } from "@jamsr-ui/react";
+import { OtpInput } from "@jamsr-ui/react";
 
 export const OtpInput6Digits = () => {
-  return <OTPInput numberOfDigits={6} />;
+  return <OtpInput numberOfDigits={6} />;
 };

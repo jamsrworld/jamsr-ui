@@ -1,24 +1,17 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import {
-  forwardRef,
-  useId,
-  type ChangeEvent,
-  type ComponentProps,
-  type ForwardedRef,
-} from "react";
+import { useId, type ChangeEvent, type ComponentProps } from "react";
 import { CheckboxCheckIcon } from "./checkbox-check-icon";
 import { Label, type CheckboxLabelProps } from "./label";
 
 export type CheckboxProps = ComponentProps<"input"> & {
-  label: React.ReactNode;
+  label?: React.ReactNode;
   labelProps?: Omit<CheckboxLabelProps, "id">;
   onCheckedChange: (checked: boolean) => void;
+  isInvalid?: boolean;
+  helperText?: string;
 };
 
-const CheckboxInner = (
-  props: CheckboxProps,
-  ref: ForwardedRef<HTMLInputElement>,
-) => {
+export const Checkbox = (props: CheckboxProps) => {
   const id = useId();
   const {
     checked: propChecked,
@@ -27,6 +20,8 @@ const CheckboxInner = (
     label,
     labelProps,
     onCheckedChange,
+    isInvalid,
+    helperText,
     ...restProps
   } = props;
 
@@ -52,7 +47,6 @@ const CheckboxInner = (
           id={id}
           type="checkbox"
           className="relative size-5 cursor-pointer appearance-none rounded-md border-2 transition-all duration-500 checked:border-blue-500 checked:bg-blue-500"
-          ref={ref}
           checked={checked}
           onChange={handleChange}
           {...restProps}
@@ -62,8 +56,7 @@ const CheckboxInner = (
       <Label id={id} {...labelProps}>
         {label}
       </Label>
+      {helperText && <div>{helperText}</div>}
     </div>
   );
 };
-
-export const Checkbox = forwardRef(CheckboxInner);

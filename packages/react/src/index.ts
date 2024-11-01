@@ -26,6 +26,7 @@ export * from "@jamsr-ui/progress";
 export * from "@jamsr-ui/radio";
 export * from "@jamsr-ui/rating";
 export * from "@jamsr-ui/repeater";
+export * from "@jamsr-ui/rhf";
 export * from "@jamsr-ui/ripple";
 export * from "@jamsr-ui/select";
 export * from "@jamsr-ui/skeleton";

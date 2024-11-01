@@ -1,7 +1,4 @@
-import {
-  useCallback,
-  useState
-} from "react";
+import { useCallback, useState } from "react";
 
 export const useControlledState = <T>(
   defaultValue?: T,
@@ -46,3 +43,67 @@ export const useControlledState = <T>(
 
   return [currentValue, setValue];
 };
+
+import * as React from "react";
+import { useCallbackRef } from "./use-callback-ref";
+
+type UseControllableStateParams<T> = {
+  prop?: T | undefined;
+  defaultProp?: T | undefined;
+  onChange?: (state: T) => void;
+};
+
+type SetStateFn<T> = (prevState?: T) => T;
+
+function useUncontrolledState<T>({
+  defaultProp,
+  onChange,
+}: Omit<UseControllableStateParams<T>, "prop">) {
+  const uncontrolledState = React.useState<T | undefined>(defaultProp);
+  const [value] = uncontrolledState;
+  const prevValueRef = React.useRef(value);
+  const handleChange = useCallbackRef(onChange);
+
+  React.useEffect(() => {
+    if (prevValueRef.current !== value) {
+      handleChange(value as T);
+      prevValueRef.current = value;
+    }
+  }, [value, prevValueRef, handleChange]);
+
+  return uncontrolledState;
+}
+
+export function useControlledState2<T>({
+  prop,
+  defaultProp,
+  onChange = () => {},
+}: UseControllableStateParams<T>) {
+  const [uncontrolledProp, setUncontrolledProp] = useUncontrolledState({
+    defaultProp,
+    onChange,
+  });
+  const isControlled = prop !== undefined;
+  const value = isControlled ? prop : uncontrolledProp;
+  const handleChange = useCallbackRef(onChange);
+
+  const setValue: React.Dispatch<React.SetStateAction<T | undefined>> =
+    React.useCallback(
+      (nextValue) => {
+        if (isControlled) {
+          const setter = nextValue as SetStateFn<T>;
+          const value =
+            typeof nextValue === "function" ? setter(prop) : nextValue;
+          if (value !== prop) handleChange(value as T);
+        } else {
+          setUncontrolledProp(nextValue);
+        }
+      },
+      [isControlled, prop, setUncontrolledProp, handleChange],
+    );
+
+  return [
+    value as T,
+    setValue as React.Dispatch<React.SetStateAction<T>>,
+  ] as const;
+}

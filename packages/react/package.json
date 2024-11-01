@@ -48,8 +48,8 @@
     "framer-motion": "12.0.0-alpha.1",
     "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
-    "react": "19.0.0-rc-1631855f-20241023",
-    "react-dom": "19.0.0-rc-1631855f-20241023",
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   },
@@ -83,6 +83,7 @@
     "@jamsr-ui/radio": "workspace:^",
     "@jamsr-ui/rating": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
+    "@jamsr-ui/rhf": "workspace:^",
     "@jamsr-ui/ripple": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
@@ -97,7 +98,7 @@
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.1",
-    "react": "19.0.0-rc-1631855f-20241023"
+    "react": "19.0.0-rc-603e6108-20241029"
   },
   "clean-package": "../../clean-package.config.json"
 }

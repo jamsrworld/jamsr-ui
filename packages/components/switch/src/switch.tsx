@@ -1,4 +1,4 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import { useControlledState2 } from "@jamsr-ui/hooks/src/use-controlled-state";
 import { Typography } from "@jamsr-ui/typography";
 import { cn, type VariantProps } from "@jamsr-ui/utils";
 import { m, type Variants } from "framer-motion";
@@ -26,15 +26,16 @@ type Props = {
   onCheckedChange?: (checked: boolean) => void;
   labelPlacement?: "top" | "bottom" | "start" | "end";
   onBlur?: () => void;
+  isInvalid?: boolean;
+  helperText?: string;
 };
 
 export type SwitchProps = VariantProps<typeof switchVariants> & Props;
 
 const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
   const id = useId();
-
   const {
-    checked: propChecked,
+    checked: $checked,
     defaultChecked,
     onCheckedChange,
     label,
@@ -45,14 +46,22 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
     onBlur,
     onChange,
     size,
+    isInvalid,
+    helperText,
     ...restProps
   } = props;
 
-  const [checked, setChecked] = useControlledState(
-    defaultChecked,
-    propChecked,
-    onCheckedChange,
-  );
+  // const [checked, setChecked] = useControlledState(
+  //   defaultChecked,
+  //   $checked,
+  //   onCheckedChange,
+  // );
+
+  const [checked, setChecked] = useControlledState2({
+    defaultProp: defaultChecked,
+    prop: $checked,
+    onChange: onCheckedChange,
+  });
   const { thumb, wrapper } = switchVariants({
     checked,
     disabled,
@@ -120,6 +129,7 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
             : description}
         </Typography>
       </label>
+      {helperText && <div>{helperText}</div>}
     </div>
   );
 };

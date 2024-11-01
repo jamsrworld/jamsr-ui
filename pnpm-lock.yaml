@@ -58,17 +58,17 @@ importers:
         version: link:../../packages/react
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^1.4.0
-        version: 1.9.0(react@19.0.0-rc-1631855f-20241023)
+        version: 1.9.0(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
         version: link:../../packages/config/tailwind-config
@@ -83,19 +83,19 @@ importers:
         version: 8.3.4(storybook@8.3.4)
       '@storybook/addon-links':
         specifier: ^8.1.1
-        version: 8.3.4(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)
+        version: 8.3.4(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)
       '@storybook/addon-onboarding':
         specifier: ^8.1.1
-        version: 8.3.4(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)
+        version: 8.3.4(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)
       '@storybook/blocks':
         specifier: ^8.1.1
-        version: 8.3.4(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)
+        version: 8.3.4(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)
       '@storybook/react':
         specifier: ^8.1.1
-        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)(typescript@5.6.2)
+        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)(typescript@5.6.2)
       '@storybook/react-vite':
         specifier: ^8.1.1
-        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(rollup@4.24.0)(storybook@8.3.4)(typescript@5.6.2)(vite@5.4.8(@types/node@22.8.1))
+        version: 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(rollup@4.24.0)(storybook@8.3.4)(typescript@5.6.2)(vite@5.4.8(@types/node@22.8.1))
       '@storybook/test':
         specifier: ^8.1.1
         version: 8.3.4(storybook@8.3.4)
@@ -143,7 +143,7 @@ importers:
         version: 8.3.4
       storybook-dark-mode:
         specifier: ^4.0.1
-        version: 4.0.2(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)
+        version: 4.0.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.13
@@ -161,19 +161,19 @@ importers:
     dependencies:
       '@dnd-kit/core':
         specifier: ^6.1.0
-        version: 6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@dnd-kit/sortable':
         specifier: ^8.0.0
-        version: 8.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        version: 8.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@dnd-kit/utilities':
         specifier: ^3.2.2
-        version: 3.2.2(react@18.3.1)
+        version: 3.2.2(react@19.0.0-rc-603e6108-20241029)
       '@faker-js/faker':
         specifier: 9.0.3
         version: 9.0.3
       '@hookform/resolvers':
         specifier: ^3.9.0
-        version: 3.9.0(react-hook-form@7.53.1(react@18.3.1))
+        version: 3.9.0(react-hook-form@7.53.1(react@19.0.0-rc-603e6108-20241029))
       '@jamsr-ui/dnd':
         specifier: workspace:^
         version: link:../../packages/components/dnd
@@ -194,7 +194,7 @@ importers:
         version: link:../../packages/utils
       '@tanstack/react-table':
         specifier: 8.20.5
-        version: 8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 8.20.5(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       clean-package:
         specifier: 2.2.0
         version: 2.2.0
@@ -203,22 +203,22 @@ importers:
         version: 2.0.3
       framer-motion:
         specifier: 11.11.10
-        version: 11.11.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 11.11.10(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
       next:
         specifier: 15.0.1
-        version: 15.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 15.0.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 18.3.1
-        version: 18.3.1
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 18.3.1
-        version: 18.3.1(react@18.3.1)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       react-hook-form:
         specifier: ^7.53.1
-        version: 7.53.1(react@18.3.1)
+        version: 7.53.1(react@19.0.0-rc-603e6108-20241029)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -280,13 +280,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/alert:
     dependencies:
@@ -313,17 +313,17 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/autocomplete:
     dependencies:
       '@floating-ui/react':
         specifier: ^0.26.16
-        version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
@@ -353,11 +353,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/avatar:
     dependencies:
@@ -375,11 +375,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/badge:
     dependencies:
@@ -397,11 +397,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/button:
     dependencies:
@@ -431,11 +431,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/card:
     dependencies:
@@ -462,11 +462,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/checkbox:
     dependencies:
@@ -488,13 +488,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/chip:
     dependencies:
@@ -518,11 +518,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/confirmation:
     dependencies:
@@ -540,7 +540,7 @@ importers:
         version: link:../typography
       zustand:
         specifier: 5.0.0
-        version: 5.0.0(@types/react@18.3.3)(react@19.0.0-rc-1631855f-20241023)(use-sync-external-store@1.2.2(react@19.0.0-rc-1631855f-20241023))
+        version: 5.0.0(@types/react@18.3.3)(react@19.0.0-rc-603e6108-20241029)(use-sync-external-store@1.2.2(react@19.0.0-rc-603e6108-20241029))
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -553,13 +553,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/data-table:
     dependencies:
@@ -592,7 +592,7 @@ importers:
         version: link:../../utils
       '@tanstack/react-table':
         specifier: ^8.19.3
-        version: 8.20.5(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 8.20.5(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
     devDependencies:
       '@faker-js/faker':
         specifier: ^8.4.1
@@ -607,20 +607,20 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/dialog:
     dependencies:
       '@floating-ui/react':
         specifier: ^0.26.16
-        version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@floating-ui/react-dom':
         specifier: ^2.1.0
-        version: 2.1.2(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 2.1.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
@@ -645,13 +645,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/divider:
     dependencies:
@@ -669,26 +669,26 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/dnd:
     dependencies:
       '@dnd-kit/core':
         specifier: ^6.1.0
-        version: 6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@dnd-kit/modifiers':
         specifier: ^7.0.0
-        version: 7.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 7.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@dnd-kit/sortable':
         specifier: ^8.0.0
-        version: 8.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 8.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@dnd-kit/utilities':
         specifier: ^3.2.2
-        version: 3.2.2(react@19.0.0-rc-1631855f-20241023)
+        version: 3.2.2(react@19.0.0-rc-603e6108-20241029)
     devDependencies:
       '@jamsr-ui/prettier-config':
         specifier: workspace:^
@@ -703,17 +703,17 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/drawer:
     dependencies:
       '@floating-ui/react':
         specifier: ^0.26.16
-        version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
@@ -735,13 +735,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/editor:
     dependencies:
@@ -837,7 +837,7 @@ importers:
         version: 2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))
       '@tiptap/react':
         specifier: 2.2.4
-        version: 2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))(@tiptap/pm@2.8.0)(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))(@tiptap/pm@2.8.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@tiptap/starter-kit':
         specifier: 2.2.4
         version: 2.2.4(@tiptap/extension-text-style@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.8.0)))(@tiptap/pm@2.8.0)
@@ -858,11 +858,11 @@ importers:
         specifier: 2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/file-upload:
     dependencies:
@@ -880,7 +880,7 @@ importers:
         version: link:../../utils
       react-dropzone:
         specifier: ^14.2.3
-        version: 14.2.9(react@19.0.0-rc-1631855f-20241023)
+        version: 14.2.9(react@19.0.0-rc-603e6108-20241029)
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -892,11 +892,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/file-upload-multi:
     dependencies:
@@ -917,7 +917,7 @@ importers:
         version: link:../../utils
       react-dropzone:
         specifier: ^14.2.3
-        version: 14.2.9(react@19.0.0-rc-1631855f-20241023)
+        version: 14.2.9(react@19.0.0-rc-603e6108-20241029)
     devDependencies:
       '@jamsr-ui/tailwind-config':
         specifier: workspace:^
@@ -929,11 +929,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/header:
     dependencies:
@@ -961,13 +961,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/input:
     dependencies:
@@ -1000,11 +1000,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/link:
     dependencies:
@@ -1022,17 +1022,17 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/menu:
     dependencies:
       '@floating-ui/react':
         specifier: ^0.26.16
-        version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
@@ -1057,16 +1057,19 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/otp-input:
     dependencies:
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1081,17 +1084,17 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/popover:
     dependencies:
       '@floating-ui/react':
         specifier: ^0.26.16
-        version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
@@ -1118,11 +1121,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/progress:
     dependencies:
@@ -1141,13 +1144,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/radio:
     dependencies:
@@ -1171,11 +1174,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/rating:
     dependencies:
@@ -1202,8 +1205,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
 
   packages/components/repeater:
     devDependencies:
@@ -1214,11 +1217,69 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
+
+  packages/components/rhf:
+    dependencies:
+      '@jamsr-ui/checkbox':
+        specifier: workspace:^
+        version: link:../checkbox
+      '@jamsr-ui/editor':
+        specifier: workspace:^
+        version: link:../editor
+      '@jamsr-ui/input':
+        specifier: workspace:^
+        version: link:../input
+      '@jamsr-ui/otp-input':
+        specifier: workspace:^
+        version: link:../otp-input
+      '@jamsr-ui/radio':
+        specifier: workspace:^
+        version: link:../radio
+      '@jamsr-ui/rating':
+        specifier: workspace:^
+        version: link:../rating
+      '@jamsr-ui/select':
+        specifier: workspace:^
+        version: link:../select
+      '@jamsr-ui/switch':
+        specifier: workspace:^
+        version: link:../switch
+      '@jamsr-ui/textarea':
+        specifier: workspace:^
+        version: link:../textarea
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
+    devDependencies:
+      '@jamsr-ui/prettier-config':
+        specifier: workspace:^
+        version: link:../../config/prettier-config
+      '@jamsr-ui/tailwind-config':
+        specifier: workspace:^
+        version: link:../../config/tailwind-config
+      '@types/react':
+        specifier: ^18.3.1
+        version: 18.3.12
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      framer-motion:
+        specifier: 12.0.0-alpha.1
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      react:
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
+      react-dom:
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
+      react-hook-form:
+        specifier: ^7.53.1
+        version: 7.53.1(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/ripple:
     dependencies:
@@ -1239,17 +1300,17 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/select:
     dependencies:
       '@floating-ui/react':
         specifier: ^0.26.16
-        version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
@@ -1286,13 +1347,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/sidebar:
     dependencies:
@@ -1320,13 +1381,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/skeleton:
     dependencies:
@@ -1344,11 +1405,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/switch:
     dependencies:
@@ -1373,13 +1434,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/tab:
     dependencies:
@@ -1407,13 +1468,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/table:
     dependencies:
@@ -1431,11 +1492,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/textarea:
     dependencies:
@@ -1465,21 +1526,21 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/toast:
     dependencies:
       react-hot-toast:
         specifier: ^2.4.1
-        version: 2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
     devDependencies:
       '@jamsr-ui/button':
         specifier: ^0.0.55
-        version: 0.0.55(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)
+        version: 0.0.55(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -1487,17 +1548,17 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/tooltip:
     dependencies:
       '@floating-ui/react':
         specifier: ^0.26.16
-        version: 0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1518,11 +1579,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/components/typography:
     dependencies:
@@ -1540,11 +1601,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/config/eslint-config:
     devDependencies:
@@ -1641,13 +1702,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/hooks:
     devDependencies:
@@ -1664,11 +1725,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/react:
     dependencies:
@@ -1759,6 +1820,9 @@ importers:
       '@jamsr-ui/repeater':
         specifier: workspace:^
         version: link:../components/repeater
+      '@jamsr-ui/rhf':
+        specifier: workspace:^
+        version: link:../components/rhf
       '@jamsr-ui/ripple':
         specifier: workspace:^
         version: link:../components/ripple
@@ -1804,7 +1868,7 @@ importers:
         version: link:../config/typescript-config
       '@testing-library/react':
         specifier: ^16.0.0
-        version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.1)(@types/react@18.3.3)(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.1)(@types/react@18.3.3)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@types/eslint':
         specifier: ^8.56.5
         version: 8.56.12
@@ -1831,7 +1895,7 @@ importers:
         version: 8.57.1
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       jsdom:
         specifier: ^24.0.0
         version: 24.1.3
@@ -1839,11 +1903,11 @@ importers:
         specifier: ^8.4.38
         version: 8.4.47
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       typescript:
         specifier: ^5.4.5
         version: 5.6.2
@@ -1860,11 +1924,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   packages/theme:
     dependencies:
@@ -1885,11 +1949,11 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.13
@@ -1926,13 +1990,13 @@ importers:
         version: 2.2.0
       framer-motion:
         specifier: 12.0.0-alpha.1
-        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+        version: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
       react-dom:
-        specifier: 19.0.0-rc-1631855f-20241023
-        version: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.13
@@ -6089,10 +6153,10 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  react-dom@19.0.0-rc-1631855f-20241023:
-    resolution: {integrity: sha512-9L3iceg5wGF9QZCjYKgPrar5mjPtPJ/R4yZa7w/E06utqJRO48EWhFrqs71tFWCeM4ehmitQCxkuDk7IW47xUA==}
+  react-dom@19.0.0-rc-603e6108-20241029:
+    resolution: {integrity: sha512-1jaWZcv3V6R39ZnDU3FtGSXtEm/z/lCRFnWmvbp019wPffFGKoXDv+i5KoyQ5yUBpwumImFrKTWXYQluOnm7Jw==}
     peerDependencies:
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
 
   react-dom@19.0.0-rc-e4953922-20240919:
     resolution: {integrity: sha512-E8jZqdTPvWQ4SRH29nKwwMUmlnyYdx1YPWDBXfeEC5LL92Tq7qQC1Tjh75Zr1zgNsxp1c5YpyWyQTYmpeIdXQg==}
@@ -6144,8 +6208,8 @@ packages:
     resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
 
-  react@19.0.0-rc-1631855f-20241023:
-    resolution: {integrity: sha512-2kP1KI+/cI4WQ8taRm4572pnyY7FbdQqAJgtPNl/Uiiq+lIGZjloEeX5IcShWP/wBmlhm91/NCCeWs7rtm3jFw==}
+  react@19.0.0-rc-603e6108-20241029:
+    resolution: {integrity: sha512-NXn7GRnAqiL12ZxUJCUjKT5T7jtqHzYp/4moEYZ4Uv0mUhBT4kFbuYQcPSAJTuP67kENUw79DgWfGbqg5qnh1w==}
     engines: {node: '>=0.10.0'}
 
   react@19.0.0-rc-e4953922-20240919:
@@ -6266,8 +6330,8 @@ packages:
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
-  scheduler@0.25.0-rc-1631855f-20241023:
-    resolution: {integrity: sha512-2s9EC24hDG8cuGleyCZRpmzt7aiPMjr54Z7dvE0iSTowzzy33pyySHY/CofKbRX1I/wQMKD0I8i/gPgcc3dUxA==}
+  scheduler@0.25.0-rc-603e6108-20241029:
+    resolution: {integrity: sha512-pFwF6H1XrSdYYNLfOcGlM28/j8CGLu8IvdrxqhjWULe2bPcKiKW4CV+OWqR/9fT52mywx65l7ysNkjLKBda7eA==}
 
   scheduler@0.25.0-rc-e4953922-20240919:
     resolution: {integrity: sha512-6l7cfQOmb5n350VJp8/CIejjEqB/1niPiwsooAHcH81ia/rMbZrzLChl14FOS6tJr0H+9P9rvgnAA6/pFHj2Mg==}
@@ -7341,12 +7405,12 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@chromatic-com/storybook@1.9.0(react@19.0.0-rc-1631855f-20241023)':
+  '@chromatic-com/storybook@1.9.0(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
       chromatic: 11.11.0
       filesize: 10.1.6
       jsonfile: 6.1.0
-      react-confetti: 6.1.0(react@19.0.0-rc-1631855f-20241023)
+      react-confetti: 6.1.0(react@19.0.0-rc-603e6108-20241029)
       strip-ansi: 7.1.0
     transitivePeerDependencies:
       - '@chromatic-com/cypress'
@@ -7463,61 +7527,36 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.3.0
 
-  '@dnd-kit/accessibility@3.1.0(react@18.3.1)':
+  '@dnd-kit/accessibility@3.1.0(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      react: 18.3.1
+      react: 19.0.0-rc-603e6108-20241029
       tslib: 2.7.0
 
-  '@dnd-kit/accessibility@3.1.0(react@19.0.0-rc-1631855f-20241023)':
+  '@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
+      '@dnd-kit/accessibility': 3.1.0(react@19.0.0-rc-603e6108-20241029)
+      '@dnd-kit/utilities': 3.2.2(react@19.0.0-rc-603e6108-20241029)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       tslib: 2.7.0
 
-  '@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@dnd-kit/modifiers@7.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@dnd-kit/accessibility': 3.1.0(react@18.3.1)
-      '@dnd-kit/utilities': 3.2.2(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      '@dnd-kit/core': 6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@dnd-kit/utilities': 3.2.2(react@19.0.0-rc-603e6108-20241029)
+      react: 19.0.0-rc-603e6108-20241029
       tslib: 2.7.0
 
-  '@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@dnd-kit/sortable@8.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@dnd-kit/accessibility': 3.1.0(react@19.0.0-rc-1631855f-20241023)
-      '@dnd-kit/utilities': 3.2.2(react@19.0.0-rc-1631855f-20241023)
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      '@dnd-kit/core': 6.1.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@dnd-kit/utilities': 3.2.2(react@19.0.0-rc-603e6108-20241029)
+      react: 19.0.0-rc-603e6108-20241029
       tslib: 2.7.0
 
-  '@dnd-kit/modifiers@7.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@dnd-kit/utilities@3.2.2(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@dnd-kit/core': 6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
-      '@dnd-kit/utilities': 3.2.2(react@19.0.0-rc-1631855f-20241023)
-      react: 19.0.0-rc-1631855f-20241023
-      tslib: 2.7.0
-
-  '@dnd-kit/sortable@8.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@dnd-kit/core': 6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@dnd-kit/utilities': 3.2.2(react@18.3.1)
-      react: 18.3.1
-      tslib: 2.7.0
-
-  '@dnd-kit/sortable@8.0.0(@dnd-kit/core@6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
-    dependencies:
-      '@dnd-kit/core': 6.1.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
-      '@dnd-kit/utilities': 3.2.2(react@19.0.0-rc-1631855f-20241023)
-      react: 19.0.0-rc-1631855f-20241023
-      tslib: 2.7.0
-
-  '@dnd-kit/utilities@3.2.2(react@18.3.1)':
-    dependencies:
-      react: 18.3.1
-      tslib: 2.7.0
-
-  '@dnd-kit/utilities@3.2.2(react@19.0.0-rc-1631855f-20241023)':
-    dependencies:
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
       tslib: 2.7.0
 
   '@emnapi/runtime@1.2.0':
@@ -7702,25 +7741,25 @@ snapshots:
       '@floating-ui/core': 1.6.8
       '@floating-ui/utils': 0.2.8
 
-  '@floating-ui/react-dom@2.1.2(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@floating-ui/react-dom@2.1.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
       '@floating-ui/dom': 1.6.11
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
-  '@floating-ui/react@0.26.24(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@floating-ui/react@0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      '@floating-ui/react-dom': 2.1.2(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+      '@floating-ui/react-dom': 2.1.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@floating-ui/utils': 0.2.8
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       tabbable: 6.2.0
 
   '@floating-ui/utils@0.2.8': {}
 
-  '@hookform/resolvers@3.9.0(react-hook-form@7.53.1(react@18.3.1))':
+  '@hookform/resolvers@3.9.0(react-hook-form@7.53.1(react@19.0.0-rc-603e6108-20241029))':
     dependencies:
-      react-hook-form: 7.53.1(react@18.3.1)
+      react-hook-form: 7.53.1(react@19.0.0-rc-603e6108-20241029)
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
@@ -7818,48 +7857,48 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@jamsr-ui/button@0.0.55(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)':
+  '@jamsr-ui/button@0.0.55(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
-      '@jamsr-ui/hooks': 0.0.35(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
-      '@jamsr-ui/progress': 0.0.52(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)
-      '@jamsr-ui/ripple': 0.0.53(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)
-      '@jamsr-ui/utils': 0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      '@jamsr-ui/hooks': 0.0.35(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@jamsr-ui/progress': 0.0.52(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      '@jamsr-ui/ripple': 0.0.53(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      '@jamsr-ui/utils': 0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     transitivePeerDependencies:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/hooks@0.0.35(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@jamsr-ui/hooks@0.0.35(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
-  '@jamsr-ui/progress@0.0.52(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)':
+  '@jamsr-ui/progress@0.0.52(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
-      '@jamsr-ui/utils': 0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)
-      framer-motion: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      '@jamsr-ui/utils': 0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      framer-motion: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/ripple@0.0.53(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)':
+  '@jamsr-ui/ripple@0.0.53(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
-      '@jamsr-ui/hooks': 0.0.35(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
-      '@jamsr-ui/utils': 0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      '@jamsr-ui/hooks': 0.0.35(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@jamsr-ui/utils': 0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     transitivePeerDependencies:
       - framer-motion
       - tailwindcss
 
-  '@jamsr-ui/utils@0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(tailwindcss@3.4.14)':
+  '@jamsr-ui/utils@0.0.49(framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
       clsx: 2.1.1
-      framer-motion: 12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      framer-motion: 12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       tailwind-merge: 2.5.3
       tailwind-variants: 0.2.1(tailwindcss@3.4.14)
     transitivePeerDependencies:
@@ -8107,14 +8146,14 @@ snapshots:
       storybook: 8.3.4
       ts-dedent: 2.2.0
 
-  '@storybook/addon-links@8.3.4(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)':
+  '@storybook/addon-links@8.3.4(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       storybook: 8.3.4
       ts-dedent: 2.2.0
     optionalDependencies:
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
 
   '@storybook/addon-measure@8.3.4(storybook@8.3.4)':
     dependencies:
@@ -8122,9 +8161,9 @@ snapshots:
       storybook: 8.3.4
       tiny-invariant: 1.3.3
 
-  '@storybook/addon-onboarding@8.3.4(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)':
+  '@storybook/addon-onboarding@8.3.4(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)':
     dependencies:
-      react-confetti: 6.1.0(react@19.0.0-rc-1631855f-20241023)
+      react-confetti: 6.1.0(react@19.0.0-rc-603e6108-20241029)
       storybook: 8.3.4
     transitivePeerDependencies:
       - react
@@ -8165,26 +8204,26 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/blocks@8.3.4(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)':
+  '@storybook/blocks@8.3.4(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.12(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+      '@storybook/icons': 1.2.12(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@types/lodash': 4.17.10
       color-convert: 2.0.1
       dequal: 2.0.3
       lodash: 4.17.21
-      markdown-to-jsx: 7.5.0(react@19.0.0-rc-1631855f-20241023)
+      markdown-to-jsx: 7.5.0(react@19.0.0-rc-603e6108-20241029)
       memoizerific: 1.11.3
       polished: 4.3.1
-      react-colorful: 5.6.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+      react-colorful: 5.6.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       storybook: 8.3.4
       telejson: 7.2.0
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
     optionalDependencies:
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   '@storybook/builder-vite@8.3.4(storybook@8.3.4)(typescript@5.6.2)(vite@5.4.8(@types/node@22.8.1))':
     dependencies:
@@ -8255,10 +8294,10 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/icons@1.2.12(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@storybook/icons@1.2.12(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   '@storybook/instrumenter@8.3.4(storybook@8.3.4)':
     dependencies:
@@ -8281,10 +8320,10 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       storybook: 8.3.4
 
-  '@storybook/react-dom-shim@8.3.4(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)':
+  '@storybook/react-dom-shim@8.3.4(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)':
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       storybook: 8.3.4
 
   '@storybook/react-dom-shim@8.3.4(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919)(storybook@8.3.4)':
@@ -8293,17 +8332,17 @@ snapshots:
       react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
       storybook: 8.3.4
 
-  '@storybook/react-vite@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(rollup@4.24.0)(storybook@8.3.4)(typescript@5.6.2)(vite@5.4.8(@types/node@22.8.1))':
+  '@storybook/react-vite@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(rollup@4.24.0)(storybook@8.3.4)(typescript@5.6.2)(vite@5.4.8(@types/node@22.8.1))':
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.0(typescript@5.6.2)(vite@5.4.8(@types/node@22.8.1))
       '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@storybook/builder-vite': 8.3.4(storybook@8.3.4)(typescript@5.6.2)(vite@5.4.8(@types/node@22.8.1))
-      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)(typescript@5.6.2)
+      '@storybook/react': 8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)(typescript@5.6.2)
       find-up: 5.0.0
       magic-string: 0.30.11
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
       react-docgen: 7.0.3
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       resolve: 1.22.8
       storybook: 8.3.4
       tsconfig-paths: 4.2.0
@@ -8317,13 +8356,13 @@ snapshots:
       - vite-plugin-glimmerx
       - webpack-sources
 
-  '@storybook/react@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)(typescript@5.6.2)':
+  '@storybook/react@8.3.4(@storybook/test@8.3.4(storybook@8.3.4))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)(typescript@5.6.2)':
     dependencies:
       '@storybook/components': 8.3.4(storybook@8.3.4)
       '@storybook/global': 5.0.0
       '@storybook/manager-api': 8.3.4(storybook@8.3.4)
       '@storybook/preview-api': 8.3.4(storybook@8.3.4)
-      '@storybook/react-dom-shim': 8.3.4(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4)
+      '@storybook/react-dom-shim': 8.3.4(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4)
       '@storybook/theming': 8.3.4(storybook@8.3.4)
       '@types/escodegen': 0.0.6
       '@types/estree': 0.0.51
@@ -8334,9 +8373,9 @@ snapshots:
       escodegen: 2.1.0
       html-tags: 3.3.1
       prop-types: 15.8.1
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
-      react-element-to-jsx-string: 15.0.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
+      react-element-to-jsx-string: 15.0.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       semver: 7.6.3
       storybook: 8.3.4
       ts-dedent: 2.2.0
@@ -8449,17 +8488,11 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
 
-  '@tanstack/react-table@8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-table@8.20.5(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
       '@tanstack/table-core': 8.20.5
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@tanstack/react-table@8.20.5(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
-    dependencies:
-      '@tanstack/table-core': 8.20.5
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   '@tanstack/table-core@8.20.5': {}
 
@@ -8494,12 +8527,12 @@ snapshots:
       '@types/react': 18.3.12
       '@types/react-dom': 18.3.1
 
-  '@testing-library/react@16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.1)(@types/react@18.3.3)(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@testing-library/react@16.0.1(@testing-library/dom@10.4.0)(@types/react-dom@18.3.1)(@types/react@18.3.3)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
       '@babel/runtime': 7.25.7
       '@testing-library/dom': 10.4.0
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     optionalDependencies:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.1
@@ -8701,14 +8734,14 @@ snapshots:
       prosemirror-transform: 1.10.0
       prosemirror-view: 1.34.3
 
-  '@tiptap/react@2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))(@tiptap/pm@2.8.0)(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)':
+  '@tiptap/react@2.2.4(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))(@tiptap/pm@2.8.0)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)':
     dependencies:
       '@tiptap/core': 2.5.4(@tiptap/pm@2.8.0)
       '@tiptap/extension-bubble-menu': 2.8.0(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))(@tiptap/pm@2.8.0)
       '@tiptap/extension-floating-menu': 2.8.0(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))(@tiptap/pm@2.8.0)
       '@tiptap/pm': 2.8.0
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   '@tiptap/starter-kit@2.2.4(@tiptap/extension-text-style@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.8.0)))(@tiptap/pm@2.8.0)':
     dependencies:
@@ -10611,19 +10644,19 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.11.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.11.10(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       tslib: 2.7.0
     optionalDependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
-  framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023):
+  framer-motion@12.0.0-alpha.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       tslib: 2.7.0
     optionalDependencies:
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
   fresh@0.5.2: {}
 
@@ -11261,9 +11294,9 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  markdown-to-jsx@7.5.0(react@19.0.0-rc-1631855f-20241023):
+  markdown-to-jsx@7.5.0(react@19.0.0-rc-603e6108-20241029):
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
 
   mdurl@2.0.0: {}
 
@@ -11343,7 +11376,7 @@ snapshots:
 
   negotiator@0.6.3: {}
 
-  next@15.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next@15.0.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       '@next/env': 15.0.1
       '@swc/counter': 0.1.3
@@ -11351,9 +11384,9 @@ snapshots:
       busboy: 1.6.0
       caniuse-lite: 1.0.30001666
       postcss: 8.4.31
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.6(react@18.3.1)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
+      styled-jsx: 5.1.6(react@19.0.0-rc-603e6108-20241029)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.0.1
       '@next/swc-darwin-x64': 15.0.1
@@ -11797,14 +11830,14 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  react-colorful@5.6.1(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023):
+  react-colorful@5.6.1(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029):
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
-  react-confetti@6.1.0(react@19.0.0-rc-1631855f-20241023):
+  react-confetti@6.1.0(react@19.0.0-rc-603e6108-20241029):
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
       tween-functions: 1.2.0
 
   react-docgen-typescript@2.2.2(typescript@5.6.2):
@@ -11832,29 +11865,29 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
 
-  react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023):
+  react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029):
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
-      scheduler: 0.25.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
+      scheduler: 0.25.0-rc-603e6108-20241029
 
   react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919):
     dependencies:
       react: 19.0.0-rc-e4953922-20240919
       scheduler: 0.25.0-rc-e4953922-20240919
 
-  react-dropzone@14.2.9(react@19.0.0-rc-1631855f-20241023):
+  react-dropzone@14.2.9(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       attr-accept: 2.2.2
       file-selector: 0.6.0
       prop-types: 15.8.1
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
 
-  react-element-to-jsx-string@15.0.0(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023):
+  react-element-to-jsx-string@15.0.0(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       '@base2/pretty-print-object': 1.0.1
       is-plain-object: 5.0.0
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
       react-is: 18.1.0
 
   react-element-to-jsx-string@15.0.0(react-dom@19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919))(react@19.0.0-rc-e4953922-20240919):
@@ -11865,15 +11898,15 @@ snapshots:
       react-dom: 19.0.0-rc-e4953922-20240919(react@19.0.0-rc-e4953922-20240919)
       react-is: 18.1.0
 
-  react-hook-form@7.53.1(react@18.3.1):
+  react-hook-form@7.53.1(react@19.0.0-rc-603e6108-20241029):
     dependencies:
-      react: 18.3.1
+      react: 19.0.0-rc-603e6108-20241029
 
-  react-hot-toast@2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023):
+  react-hot-toast@2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       goober: 2.1.14(csstype@3.1.3)
-      react: 19.0.0-rc-1631855f-20241023
-      react-dom: 19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     transitivePeerDependencies:
       - csstype
 
@@ -11891,7 +11924,7 @@ snapshots:
     dependencies:
       loose-envify: 1.4.0
 
-  react@19.0.0-rc-1631855f-20241023: {}
+  react@19.0.0-rc-603e6108-20241029: {}
 
   react@19.0.0-rc-e4953922-20240919: {}
 
@@ -12046,7 +12079,7 @@ snapshots:
     dependencies:
       loose-envify: 1.4.0
 
-  scheduler@0.25.0-rc-1631855f-20241023: {}
+  scheduler@0.25.0-rc-603e6108-20241029: {}
 
   scheduler@0.25.0-rc-e4953922-20240919: {}
 
@@ -12186,12 +12219,12 @@ snapshots:
     dependencies:
       internal-slot: 1.0.7
 
-  storybook-dark-mode@4.0.2(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)(storybook@8.3.4):
+  storybook-dark-mode@4.0.2(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(storybook@8.3.4):
     dependencies:
       '@storybook/components': 8.3.4(storybook@8.3.4)
       '@storybook/core-events': 8.3.4(storybook@8.3.4)
       '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.12(react-dom@19.0.0-rc-1631855f-20241023(react@19.0.0-rc-1631855f-20241023))(react@19.0.0-rc-1631855f-20241023)
+      '@storybook/icons': 1.2.12(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@storybook/manager-api': 8.3.4(storybook@8.3.4)
       '@storybook/theming': 8.3.4(storybook@8.3.4)
       fast-deep-equal: 3.1.3
@@ -12295,10 +12328,10 @@ snapshots:
     dependencies:
       js-tokens: 9.0.0
 
-  styled-jsx@5.1.6(react@18.3.1):
+  styled-jsx@5.1.6(react@19.0.0-rc-603e6108-20241029):
     dependencies:
       client-only: 0.0.1
-      react: 18.3.1
+      react: 19.0.0-rc-603e6108-20241029
 
   sucrase@3.35.0:
     dependencies:
@@ -12681,9 +12714,9 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
-  use-sync-external-store@1.2.2(react@19.0.0-rc-1631855f-20241023):
+  use-sync-external-store@1.2.2(react@19.0.0-rc-603e6108-20241029):
     dependencies:
-      react: 19.0.0-rc-1631855f-20241023
+      react: 19.0.0-rc-603e6108-20241029
     optional: true
 
   util-deprecate@1.0.2: {}
@@ -12965,8 +12998,8 @@ snapshots:
 
   zod@3.23.8: {}
 
-  zustand@5.0.0(@types/react@18.3.3)(react@19.0.0-rc-1631855f-20241023)(use-sync-external-store@1.2.2(react@19.0.0-rc-1631855f-20241023)):
+  zustand@5.0.0(@types/react@18.3.3)(react@19.0.0-rc-603e6108-20241029)(use-sync-external-store@1.2.2(react@19.0.0-rc-603e6108-20241029)):
     optionalDependencies:
       '@types/react': 18.3.3
-      react: 19.0.0-rc-1631855f-20241023
-      use-sync-external-store: 1.2.2(react@19.0.0-rc-1631855f-20241023)
+      react: 19.0.0-rc-603e6108-20241029
+      use-sync-external-store: 1.2.2(react@19.0.0-rc-603e6108-20241029)

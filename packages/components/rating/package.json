@@ -25,10 +25,10 @@
     "@jamsr-ui/utils": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "react": "19.0.0-rc-1631855f-20241023"
+    "react": "19.0.0-rc-603e6108-20241029"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-1631855f-20241023"
+    "react": "19.0.0-rc-603e6108-20241029"
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {

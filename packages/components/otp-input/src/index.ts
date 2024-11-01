@@ -1,3 +1,3 @@
 "use client";
 
-export { OTPInput } from "./otp-input";
+export { OtpInput, type OtpInputProps } from "./otp-input";

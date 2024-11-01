@@ -11,5 +11,3 @@ export type FileMetadata = {
   url: string;
   size: number;
 };
-
-export const uploadApiUrl = "http://localhost:7000/upload";

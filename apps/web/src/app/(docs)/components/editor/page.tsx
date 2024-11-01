@@ -5,6 +5,6 @@ export const metadata: Metadata = {
 };
 
 const Editor = () => {
-  return <div>Editor</div>;
+  return <div>Coming Soon!</div>;
 };
 export default Editor;

@@ -1,30 +1,53 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useControlledState } from "@jamsr-ui/hooks";
+import { cn } from "@jamsr-ui/utils";
+import {
+  type InputHTMLAttributes,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from "react";
 
-type Props = {
-  inputType?: "tel" | "text" | "password" | "number";
+export type OtpInputProps = {
+  label?: string;
   placeholder?: string;
-  className?: string;
+  defaultValue?: string;
   value?: string;
+  onValueChange?: (value: string) => void;
   numberOfDigits?: number;
-  onValueChange: (value: string) => void;
   autoFocus?: boolean;
+  className?: string;
+  inputProps?: React.HTMLProps<HTMLInputElement>;
+  isNumeric?: boolean;
+  isInvalid?: boolean;
+  onBlur?: InputHTMLAttributes<HTMLInputElement>["onBlur"];
+  helperText?: string;
 };
 
-export const OTPInput = (props: Props) => {
+export const OtpInput = (props: OtpInputProps) => {
   const {
     numberOfDigits = 4,
-    inputType = "text",
-    value,
+    value: $value,
     onValueChange,
     className,
     placeholder,
     autoFocus,
+    defaultValue,
+    inputProps,
+    isNumeric = true,
+    helperText,
+    isInvalid,
+    label,
+    onBlur,
   } = props;
 
-  const [otp, setOtp] = useState<string>("");
-  console.log("otp:->", otp);
+  const [value = "", setValue] = useControlledState(
+    defaultValue,
+    $value,
+    onValueChange,
+  );
   const valueItems = useMemo(() => {
-    const valueArray = otp.split("");
+    const valueArray = value.split("");
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < numberOfDigits; i++) {
       const char = valueArray[i];
@@ -35,7 +58,7 @@ export const OTPInput = (props: Props) => {
       }
     }
     return valueArray;
-  }, [numberOfDigits, otp]);
+  }, [numberOfDigits, value]);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
@@ -47,28 +70,32 @@ export const OTPInput = (props: Props) => {
       inputRefs.current[0]?.focus();
     }
   }, [autoFocus]);
+  const isNumInput = isNumeric;
 
-  const isNumInput = inputType === "number" || inputType === "tel";
+  const isValidValueType = useCallback(
+    (value: string) => {
+      return isNumInput ? /^[0-9]*$/.test(value) : typeof value === "string";
+    },
+    [isNumInput],
+  );
 
   const isInputValueValid = useCallback(
     (value: string) => {
-      const isValidType = isNumInput
-        ? /^[0-9]*$/.test(value)
-        : typeof value === "string";
+      const isValidType = isValidValueType(value);
       return isValidType && value.length === 1;
     },
-    [isNumInput],
+    [isValidValueType],
   );
 
   const focusInput = (idx: number) => {
     inputRefs.current[idx]?.focus();
   };
 
-  const changeCodeAtIdx = (idx: number, value: string) => {
-    const newOtp = [...otp];
-    newOtp[idx] = value || " ";
+  const changeCodeAtIdx = (idx: number, str: string) => {
+    const newOtp = [...value];
+    newOtp[idx] = str || " ";
     const newValue = newOtp.join("");
-    setOtp(newValue);
+    setValue(newValue);
   };
 
   const handleChange = (
@@ -85,18 +112,19 @@ export const OTPInput = (props: Props) => {
     e: React.KeyboardEvent<HTMLInputElement>,
     idx: number,
   ) => {
-    const { code, key } = e;
+    const { key } = e;
     const target = e.target as HTMLInputElement;
     const targetValue = target.value;
 
     // React don't trigger on change when same value is entered so handle change onKeyDown
-    if (key === otp[idx]) {
+    if (key === value[idx]) {
       e.preventDefault();
       focusInput(idx + 1);
       return;
     }
 
-    switch (code) {
+    switch (key) {
+      case "Delete":
       case "Backspace":
         if (targetValue === "") {
           changeCodeAtIdx(idx - 1, "");
@@ -119,9 +147,6 @@ export const OTPInput = (props: Props) => {
         target.setSelectionRange(0, target.value.length);
         break;
     }
-
-    // when user input new char it overwrite the current char
-    target.setSelectionRange(0, target.value.length);
   };
 
   const ref = useCallback((el: HTMLInputElement | null, idx: number) => {
@@ -131,9 +156,9 @@ export const OTPInput = (props: Props) => {
   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();
     const text = e.clipboardData?.getData("text/plain");
-    if (!text) return;
+    if (!text || !isValidValueType(text)) return;
     const newOtp = text.slice(0, numberOfDigits);
-    setOtp(newOtp);
+    setValue(newOtp);
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>, idx: number) => {
@@ -145,24 +170,33 @@ export const OTPInput = (props: Props) => {
   };
 
   return (
-    <div className="flex gap-2">
-      {valueItems.map((digit, idx) => (
-        <input
-          key={idx}
-          type="text"
-          className="size-12 rounded border-2 border-divider text-center text-base outline-none hover:border-gray-400 focus:border-primary"
-          inputMode="numeric"
-          autoComplete="one-time-code"
-          pattern="\d{1}"
-          maxLength={numberOfDigits}
-          ref={(el) => ref(el, idx)}
-          value={digit}
-          onChange={(e) => handleChange(e, idx)}
-          onKeyDown={(e) => handleKeyDown(e, idx)}
-          onPaste={handlePaste}
-          onFocus={(e) => handleFocus(e, idx)}
-        />
-      ))}
+    <div>
+      {label && <div>{label}</div>}
+      <div className="flex gap-2">
+        {valueItems.map((digit, idx) => (
+          <input
+            {...inputProps}
+            placeholder={placeholder}
+            key={idx}
+            className={cn(
+              "size-12 rounded border-2 border-divider bg-transparent text-center text-base outline-none hover:border-gray-400 focus:border-primary",
+              inputProps?.className,
+              className,
+            )}
+            inputMode="numeric"
+            autoComplete="one-time-code"
+            pattern="\d{1}"
+            maxLength={numberOfDigits}
+            ref={(el) => ref(el, idx)}
+            value={digit}
+            onChange={(e) => handleChange(e, idx)}
+            onKeyDown={(e) => handleKeyDown(e, idx)}
+            onPaste={handlePaste}
+            onFocus={(e) => handleFocus(e, idx)}
+          />
+        ))}
+      </div>
+      {helperText && <div>{helperText}</div>}
     </div>
   );
 };

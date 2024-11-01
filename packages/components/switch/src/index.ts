@@ -1,3 +1,3 @@
 "use client";
 
-export { Switch } from "./switch";
+export { Switch, type SwitchProps } from "./switch";

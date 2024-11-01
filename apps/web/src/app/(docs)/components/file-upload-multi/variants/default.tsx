@@ -2,7 +2,8 @@
 
 "use client";
 
-import { ImageMetadata, uploadApiUrl } from "@/app/config";
+import { ImageMetadata } from "@/app/config";
+import { CDN_API_URL, CDN_UPLOAD_URL } from "@/utils/config";
 import {
   type FileUploadError,
   MultiFileUpload,
@@ -32,14 +33,14 @@ export const FileUploadDefault = (props: Partial<MultiFileUploadProps>) => {
   };
 
   const getFileUrlAfterUpload = (response: ImageMetadata) => {
-    return `http://localhost:7000/${response.url}`;
+    return `${CDN_API_URL}/${response.url}`;
   };
 
   return (
     <MultiFileUpload
       onUploadSuccess={onUploadSuccess}
       getFileUrlAfterUpload={getFileUrlAfterUpload}
-      uploadApiUrl={uploadApiUrl}
+      uploadApiUrl={CDN_UPLOAD_URL}
       inputName="file"
       onError={handleOnError}
       onDelete={handleOnDelete}

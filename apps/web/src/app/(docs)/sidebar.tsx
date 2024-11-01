@@ -46,6 +46,7 @@ const components = [
   "typography",
   "theme",
   "dnd",
+  "rhf",
 ];
 
 export const ComponentsSidebar = () => {

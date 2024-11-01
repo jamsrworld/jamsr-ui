@@ -38,6 +38,9 @@ const DragDropDndKit = () => {
       <VariantWrapper heading="Otp Input">
         <RHFDemoOtpInput />
       </VariantWrapper>
+      <VariantWrapper heading="Tags Input">
+        <RHFDemoOtpInput />
+      </VariantWrapper>
       <VariantWrapper heading="Rating">
         <RHFDemoRating />
       </VariantWrapper>

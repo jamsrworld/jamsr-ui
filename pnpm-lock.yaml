@@ -174,6 +174,9 @@ importers:
       '@hookform/resolvers':
         specifier: ^3.9.0
         version: 3.9.0(react-hook-form@7.53.1(react@19.0.0-rc-603e6108-20241029))
+      '@jamsr-ui/core':
+        specifier: workspace:^
+        version: link:../../packages/core
       '@jamsr-ui/dnd':
         specifier: workspace:^
         version: link:../../packages/components/dnd
@@ -1498,6 +1501,43 @@ importers:
         specifier: 19.0.0-rc-603e6108-20241029
         version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
+  packages/components/tag-input:
+    dependencies:
+      '@jamsr-ui/button':
+        specifier: workspace:^
+        version: link:../button
+      '@jamsr-ui/chip':
+        specifier: workspace:^
+        version: link:../chip
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
+      '@jamsr-ui/input':
+        specifier: workspace:^
+        version: link:../input
+    devDependencies:
+      '@jamsr-ui/avatar':
+        specifier: workspace:^
+        version: link:../avatar
+      '@jamsr-ui/prettier-config':
+        specifier: workspace:^
+        version: link:../../config/prettier-config
+      '@jamsr-ui/tailwind-config':
+        specifier: workspace:^
+        version: link:../../config/tailwind-config
+      '@types/react':
+        specifier: ^18.3.1
+        version: 18.3.12
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      react:
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029
+      react-dom:
+        specifier: 19.0.0-rc-603e6108-20241029
+        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
+
   packages/components/textarea:
     dependencies:
       '@jamsr-ui/button':
@@ -1841,6 +1881,9 @@ importers:
       '@jamsr-ui/table':
         specifier: workspace:^
         version: link:../components/table
+      '@jamsr-ui/tag-input':
+        specifier: workspace:^
+        version: link:../components/tag-input
       '@jamsr-ui/textarea':
         specifier: workspace:^
         version: link:../components/textarea

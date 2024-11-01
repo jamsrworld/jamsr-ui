@@ -352,6 +352,19 @@ export const useInput = (props: UseInputProps) => {
     ],
   );
 
+  const getContentWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "content-wrapper",
+        className: styles.contentWrapper({
+          className: cn(classNames?.contentWrapper, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.contentWrapper],
+  );
+
   const getNotationProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -395,5 +408,6 @@ export const useInput = (props: UseInputProps) => {
     getStartContentProps,
     getEndContentProps,
     getNotationProps,
+    getContentWrapperProps,
   };
 };

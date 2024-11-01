@@ -6,7 +6,6 @@ import NextLink, { type LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 
 const components = [
-  "installation",
   "accordion",
   "alert",
   "autocomplete",
@@ -20,12 +19,14 @@ const components = [
   "data-table",
   "dialog",
   "divider",
+  "dnd",
   "drawer",
   "editor",
-  "file-upload",
   "file-upload-multi",
+  "file-upload",
   "header",
   "input",
+  "installation",
   "link",
   "menu",
   "otp-input",
@@ -34,20 +35,19 @@ const components = [
   "radio",
   "rating",
   "repeater",
+  "rhf",
   "ripple",
   "select",
   "skeleton",
   "switch",
   "tab",
   "table",
+  "tags-input",
   "textarea",
+  "theme",
   "toast",
   "tooltip",
   "typography",
-  "theme",
-  "dnd",
-  "rhf",
-  "tag-input",
 ];
 
 export const ComponentsSidebar = () => {
@@ -68,7 +68,7 @@ export const ComponentsSidebar = () => {
               isActive && "bg-primary text-white hover:bg-primary-300",
             )}
           >
-            {item}
+            {item.replace("-", " ")}
           </NextLink>
         );
       })}

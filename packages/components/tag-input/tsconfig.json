@@ -1,0 +1,13 @@
+{
+  "extends": "@jamsr-ui/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": [
+    "**/**/*.tsx",
+    "**/**/*.ts",
+    ".eslintrc.cjs",
+    "prettier.config.cjs"
+, "src/index.txs"  ],
+  "exclude": ["node_modules", "dist"]
+}

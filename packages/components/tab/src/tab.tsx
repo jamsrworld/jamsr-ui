@@ -39,8 +39,7 @@ export const Tab = <T extends React.ElementType = "button">(
 
   return (
     <Component
-      {...restProps}
-      {...getTabProps(props as TabProps)}
+      {...getTabProps(restProps as TabProps)}
       onClick={handleClick}
     >
       {startContent}

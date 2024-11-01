@@ -37,6 +37,7 @@ export * from "@jamsr-ui/textarea";
 export * from "@jamsr-ui/toast";
 export * from "@jamsr-ui/tooltip";
 export * from "@jamsr-ui/typography";
+export * from "@jamsr-ui/tag-input";
 
 // Provider
 export * from "@jamsr-ui/core";

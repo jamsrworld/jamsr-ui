@@ -15,6 +15,7 @@
     "@dnd-kit/utilities": "^3.2.2",
     "@faker-js/faker": "9.0.3",
     "@hookform/resolvers": "^3.9.0",
+    "@jamsr-ui/core": "workspace:^",
     "@jamsr-ui/dnd": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/react": "workspace:*",

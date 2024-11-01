@@ -34,6 +34,7 @@ export const Input = <T extends React.ElementType = "div">(
     getNotationProps,
     hasNotation,
     variant,
+    getContentWrapperProps,
   } = useInput(props);
   const id = useId();
 
@@ -96,8 +97,10 @@ export const Input = <T extends React.ElementType = "div">(
           {variant === "outlined" && getLabel}
           <div {...getInnerWrapperProps()}>
             {getStartContent}
-            {children}
-            <InputComponent id={id} {...getInputProps()} />
+            <div {...getContentWrapperProps()}>
+              {children}
+              <InputComponent id={id} {...getInputProps()} />
+            </div>
             {getEndContent}
           </div>
         </div>

@@ -1,5 +1,7 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
+export const test = "";
+
 export const inputVariants = tv({
   slots: {
     base: "group flex flex-col gap-1",
@@ -18,9 +20,10 @@ export const inputVariants = tv({
       "group-data-[has-end-content=true]:pr-2",
     ],
     helper: "text-xs text-foreground-600",
-    startContent: "pl-2 leading-[0] text-foreground-500",
-    endContent: "pr-2 leading-[0] text-foreground-500",
+    startContent: "pl-2 text-foreground-500",
+    endContent: "pr-2 text-foreground-500",
     notation: "",
+    contentWrapper: "flex h-full grow items-center",
   },
   variants: {
     fullWidth: {

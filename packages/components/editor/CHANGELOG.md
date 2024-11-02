@@ -1,5 +1,12 @@
 # @jamsr-ui/editor
 
+## 0.0.65
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/switch@0.0.64
+
 ## 0.0.64
 
 ### Patch Changes

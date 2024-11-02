@@ -1,5 +1,13 @@
 # @jamsr-ui/rhf
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/switch@0.0.64
+  - @jamsr-ui/editor@0.0.65
+
 ## 0.0.3
 
 ### Patch Changes

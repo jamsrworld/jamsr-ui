@@ -1,5 +1,13 @@
 # @jamsr-ui/avatar
 
+## 0.0.57
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.56
 
 ### Patch Changes

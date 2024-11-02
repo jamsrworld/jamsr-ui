@@ -1,5 +1,21 @@
 # @jamsr-ui/data-table
 
+## 0.0.35
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/button@0.0.58
+  - @jamsr-ui/progress@0.0.55
+  - @jamsr-ui/repeater@0.0.27
+  - @jamsr-ui/select@0.0.70
+  - @jamsr-ui/skeleton@0.0.55
+  - @jamsr-ui/table@0.0.35
+  - @jamsr-ui/typography@0.0.63
+  - @jamsr-ui/shared-icons@0.0.50
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.34
 
 ### Patch Changes

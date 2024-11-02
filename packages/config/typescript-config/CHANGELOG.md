@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.36
+
+### Patch Changes
+
+- fix global style types issue
+
 ## 0.0.35
 
 ### Patch Changes

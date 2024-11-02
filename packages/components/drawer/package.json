@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/drawer",
-  "version": "1.0.50",
+  "version": "1.0.51",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@jamsr-ui/button": "workspace:^",
-    
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.1",

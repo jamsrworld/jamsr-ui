@@ -1,7 +1,7 @@
 {
   "name": "@jamsr-ui/tailwind-config",
   "private": true,
-  "version": "0.0.15",
+  "version": "0.0.16",
   "exports": {
     ".": "./tailwind.config.ts"
   },

@@ -1,5 +1,11 @@
 # @jamsr-ui/toast
 
+## 0.0.19
+
+### Patch Changes
+
+- fix global style types issue
+
 ## 0.0.18
 
 ### Patch Changes

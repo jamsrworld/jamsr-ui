@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.38
+
+### Patch Changes
+
+- fix global style types issue
+
 ## 0.0.37
 
 ### Patch Changes

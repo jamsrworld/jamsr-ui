@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.27
+
+### Patch Changes
+
+- fix global style types issue
+
 ## 0.0.26
 
 ### Patch Changes

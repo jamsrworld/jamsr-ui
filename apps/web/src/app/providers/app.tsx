@@ -2,11 +2,15 @@
 
 import { UIProvider, UIStyleProvider } from "@jamsr-ui/core";
 import { ToastProvider } from "@jamsr-ui/react";
-import {} from "framer-motion";
+import type { UIStyleType } from "@jamsr-ui/types";
 
 type Props = {
   children: React.ReactNode;
 };
+
+declare module "@jamsr-ui/core" {
+  export interface UIStyleContextType extends UIStyleType {}
+}
 
 export const AppProvider = (props: Props) => {
   const { children } = props;

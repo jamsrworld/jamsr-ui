@@ -1,5 +1,19 @@
 # web
 
+## 0.1.132
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/core@0.0.31
+  - @jamsr-ui/dnd@0.0.4
+  - @jamsr-ui/hooks@0.0.38
+  - @jamsr-ui/react@0.0.150
+  - @jamsr-ui/shared-icons@0.0.50
+  - @jamsr-ui/theme@0.0.56
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.1.131
 
 ### Patch Changes

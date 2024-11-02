@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/core",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "main": "src/index.tsx",
   "sideEffects": false,
   "keywords": [],
@@ -19,7 +19,6 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.1",

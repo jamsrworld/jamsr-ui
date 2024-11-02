@@ -1,5 +1,14 @@
 # @jamsr-ui/drawer
 
+## 1.0.51
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.38
+  - @jamsr-ui/utils@0.0.52
+
 ## 1.0.50
 
 ### Patch Changes

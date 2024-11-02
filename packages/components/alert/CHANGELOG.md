@@ -1,5 +1,15 @@
 # @jamsr-ui/alert
 
+## 0.0.70
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.63
+  - @jamsr-ui/shared-icons@0.0.50
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.69
 
 ### Patch Changes

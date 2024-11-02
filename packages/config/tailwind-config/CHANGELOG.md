@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.16
+
+### Patch Changes
+
+- fix global style types issue
+
 ## 0.0.15
 
 ### Patch Changes

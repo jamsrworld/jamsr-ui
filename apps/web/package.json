@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.131",
+  "version": "0.1.132",
   "private": true,
   "type": "module",
   "scripts": {
@@ -34,8 +34,6 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    
-    
     "@types/node": "22.8.1",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",

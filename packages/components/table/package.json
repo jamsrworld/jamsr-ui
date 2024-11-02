@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/table",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "main": "src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -22,7 +22,6 @@
     "@jamsr-ui/utils": "workspace:^"
   },
   "devDependencies": {
-    
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "react-dom": "19.0.0-rc-603e6108-20241029",

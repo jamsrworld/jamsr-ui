@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/header",
-  "version": "0.0.60",
+  "version": "0.0.61",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -24,7 +24,6 @@
   "devDependencies": {
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
-    
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.1",

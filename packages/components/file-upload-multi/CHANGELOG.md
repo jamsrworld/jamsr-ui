@@ -1,5 +1,17 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.76
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/dnd@0.0.4
+  - @jamsr-ui/progress@0.0.55
+  - @jamsr-ui/hooks@0.0.38
+  - @jamsr-ui/shared-icons@0.0.50
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.75
 
 ### Patch Changes

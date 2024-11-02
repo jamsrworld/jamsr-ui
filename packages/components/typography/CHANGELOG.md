@@ -1,5 +1,13 @@
 # @jamsr-ui/typography
 
+## 0.0.63
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.62
 
 ### Patch Changes

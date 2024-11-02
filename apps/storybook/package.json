@@ -1,7 +1,7 @@
 {
   "name": "@ui/storybook",
   "private": true,
-  "version": "0.0.151",
+  "version": "0.0.152",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
-    
     "@jamsr-ui/theme": "workspace:^",
     "@storybook/addon-essentials": "^8.1.1",
     "@storybook/addon-interactions": "^8.1.1",

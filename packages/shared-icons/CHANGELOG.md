@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.50
+
+### Patch Changes
+
+- fix global style types issue
+
 ## 0.0.49
 
 ### Patch Changes

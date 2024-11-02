@@ -1,5 +1,23 @@
 # @jamsr-ui/rhf
 
+## 0.0.3
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/checkbox@0.0.55
+  - @jamsr-ui/editor@0.0.64
+  - @jamsr-ui/input@0.0.67
+  - @jamsr-ui/otp-input@0.0.55
+  - @jamsr-ui/radio@0.0.63
+  - @jamsr-ui/rating@0.0.14
+  - @jamsr-ui/select@0.0.70
+  - @jamsr-ui/switch@0.0.63
+  - @jamsr-ui/tags-input@0.0.3
+  - @jamsr-ui/textarea@0.0.67
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.2
 
 ### Patch Changes

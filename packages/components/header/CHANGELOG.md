@@ -1,5 +1,14 @@
 # @jamsr-ui/header
 
+## 0.0.61
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.56
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.60
 
 ### Patch Changes

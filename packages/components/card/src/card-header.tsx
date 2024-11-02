@@ -6,25 +6,26 @@ import {
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
 
-export type CardHeaderProps = {
-  heading?: React.ReactNode;
-  subHeading?: React.ReactNode;
-  className?: string;
-  gutterBottom?: boolean;
-  startContent?: React.ReactNode;
-  endContent?: React.ReactNode;
-  classNames?: {
-    heading?: string;
-    subHeading?: string;
-    base?: string;
-    innerWrapper?: string;
-    startContent?: string;
-    endContent?: string;
+export type CardHeaderProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T> & {
+    heading?: React.ReactNode;
+    subHeading?: React.ReactNode;
+    className?: string;
+    gutterBottom?: boolean;
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
+    classNames?: {
+      heading?: string;
+      subHeading?: string;
+      base?: string;
+      innerWrapper?: string;
+      startContent?: string;
+      endContent?: string;
+    };
   };
-};
 
 export const CardHeader = <T extends React.ElementType = "div">(
-  props: ComponentPropsWithAs<T, CardHeaderProps>,
+  props: CardHeaderProps<T>,
 ) => {
   const {
     as,

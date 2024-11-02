@@ -1,14 +1,17 @@
-import { AccordionItemProps, type AccordionProps } from "@jamsr-ui/accordion";
+import {
+  type AccordionItemProps,
+  type AccordionProps,
+} from "@jamsr-ui/accordion";
 import { type AlertProps } from "@jamsr-ui/alert";
 import { type AutocompleteProps } from "@jamsr-ui/autocomplete";
 import { type AvatarProps } from "@jamsr-ui/avatar";
 import { type BadgeProps } from "@jamsr-ui/badge";
 import { type ButtonProps } from "@jamsr-ui/button";
-import {
-  type CardContentProps,
-  type CardFooterProps,
-  type CardHeaderProps,
-  type CardProps,
+import type {
+  CardContentProps,
+  CardFooterProps,
+  CardHeaderProps,
+  CardProps,
 } from "@jamsr-ui/card";
 import { type CheckboxProps } from "@jamsr-ui/checkbox";
 import { type ChipProps } from "@jamsr-ui/chip";
@@ -38,7 +41,7 @@ import { type TextareaProps } from "@jamsr-ui/textarea";
 import { type TooltipProps } from "@jamsr-ui/tooltip";
 import { type TypographyProps } from "@jamsr-ui/typography";
 
-export type UIStyleContextType = {
+export interface UIStyleType {
   input?: Pick<InputProps, "className" | "classNames">;
   button?: Pick<ButtonProps, "className">;
   select?: Pick<SelectProps, "className" | "classNames">;
@@ -77,4 +80,4 @@ export type UIStyleContextType = {
   textarea?: Pick<TextareaProps, "className" | "classNames">;
   tooltip?: Pick<TooltipProps, "className" | "classNames">;
   typography?: Pick<TypographyProps, "className">;
-};
+}

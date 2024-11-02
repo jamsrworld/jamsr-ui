@@ -1,5 +1,15 @@
 # @jamsr-ui/tab
 
+## 0.0.71
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/card@0.0.65
+  - @jamsr-ui/hooks@0.0.38
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.70
 
 ### Patch Changes

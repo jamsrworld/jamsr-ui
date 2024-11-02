@@ -1,5 +1,16 @@
 # @jamsr-ui/button
 
+## 0.0.58
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.55
+  - @jamsr-ui/ripple@0.0.56
+  - @jamsr-ui/hooks@0.0.38
+  - @jamsr-ui/utils@0.0.52
+
 ## 0.0.57
 
 ### Patch Changes

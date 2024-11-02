@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.52
+
+### Patch Changes
+
+- fix global style types issue
+
 ## 0.0.51
 
 ### Patch Changes

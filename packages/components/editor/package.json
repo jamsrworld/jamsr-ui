@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/editor",
-  "version": "0.0.63",
+  "version": "0.0.64",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -22,7 +22,6 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    
     "@types/react": "18.3.3",
     "clean-package": "2.2.0",
     "react": "19.0.0-rc-603e6108-20241029",

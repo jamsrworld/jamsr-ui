@@ -1,5 +1,15 @@
 # @jamsr-ui/tags-input
 
+## 0.0.3
+
+### Patch Changes
+
+- fix global style types issue
+- Updated dependencies
+  - @jamsr-ui/chip@0.0.62
+  - @jamsr-ui/input@0.0.67
+  - @jamsr-ui/hooks@0.0.38
+
 ## 0.0.2
 
 ### Patch Changes

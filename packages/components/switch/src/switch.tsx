@@ -1,4 +1,4 @@
-import { useControlledState } from "@jamsr-ui/hooks/src/use-controlled-state";
+import { useControlledState } from "@jamsr-ui/hooks";
 import { Typography } from "@jamsr-ui/typography";
 import { type SlotsToClasses } from "@jamsr-ui/utils";
 import { m, type Variants } from "framer-motion";

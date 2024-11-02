@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@jamsr-ui/button": "workspace:^",
-    "@jamsr-ui/tailwind-config": "workspace:^",
+    
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "react-dom": "19.0.0-rc-603e6108-20241029",

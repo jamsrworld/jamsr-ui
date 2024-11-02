@@ -1,3 +1,3 @@
 "use client";
 
-export { Divider } from "./divider";
+export { Divider, type DividerProps } from "./divider";

@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",
-    "@jamsr-ui/tailwind-config": "workspace:^",
+    
     "@jamsr-ui/theme": "workspace:^",
     "@storybook/addon-essentials": "^8.1.1",
     "@storybook/addon-interactions": "^8.1.1",

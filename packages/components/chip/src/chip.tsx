@@ -4,13 +4,14 @@ import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { cn } from "@jamsr-ui/utils";
 import React from "react";
 
-export type ChipProps = {
-  children: React.ReactNode;
-  onDelete?: () => void;
-};
+export type ChipProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T> & {
+    children: React.ReactNode;
+    onDelete?: () => void;
+  };
 
 export const Chip = <T extends React.ElementType = "div">(
-  props: ComponentPropsWithAs<T, ChipProps>,
+  props: ChipProps<T>,
 ) => {
   const { as, children, onDelete, className, ...restProps } = props;
   const Comp = as ?? "div";

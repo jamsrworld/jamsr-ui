@@ -15,6 +15,7 @@ import {
   useRole,
   type Placement,
 } from "@floating-ui/react";
+import { cn } from "@jamsr-ui/utils";
 import { cloneElement, useRef, useState } from "react";
 
 export type TooltipProps = {
@@ -27,6 +28,11 @@ export type TooltipProps = {
   isInteractive?: boolean;
   openDelay?: number;
   closeDelay?: number;
+  className?: string;
+  classNames?: {
+    base?: string;
+    arrow?: string;
+  };
 };
 
 export const Tooltip = (props: TooltipProps) => {
@@ -40,6 +46,8 @@ export const Tooltip = (props: TooltipProps) => {
     isInteractive = false,
     closeDelay = 100,
     openDelay = 400,
+    className,
+    classNames,
   } = props;
   const [isOpen, setIsOpen] = useState(false);
   const arrowRef = useRef(null);
@@ -103,16 +111,20 @@ export const Tooltip = (props: TooltipProps) => {
           <div
             data-component="tooltip"
             role="tooltip"
-            className="z-popover inline-block rounded-lg bg-black px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-opacity duration-300 dark:bg-white dark:text-black"
             ref={refs.setFloating}
             style={floatingStyles}
             {...getFloatingProps()}
+            className={cn(
+              "z-popover inline-block rounded-lg bg-black px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-opacity duration-300 dark:bg-white dark:text-black",
+              className,
+              classNames?.base,
+            )}
           >
             {showArrow && (
               <FloatingArrow
                 ref={arrowRef}
                 context={context}
-                className="fill-background"
+                className={cn("fill-background", classNames?.arrow)}
               />
             )}
             {title}

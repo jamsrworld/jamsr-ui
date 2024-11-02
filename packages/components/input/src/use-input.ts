@@ -54,7 +54,7 @@ export const useInput = (props: UseInputProps) => {
     label,
     labelHelperContent,
     className,
-    classNames: propClassNames,
+    classNames: $classNames,
     size,
     mask,
     defaultValue,
@@ -85,7 +85,7 @@ export const useInput = (props: UseInputProps) => {
     ...restProps
   } = props;
   const { input } = useUIStyle();
-  const classNames = mergeClassNames(input?.classNames, propClassNames);
+  const classNames = mergeClassNames(input?.classNames, $classNames);
 
   const Component = as ?? "div";
   const InputComponent = "input";

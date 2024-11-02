@@ -1,3 +1,4 @@
+import { Code } from "@/components/code";
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
@@ -18,16 +19,6 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-};
-
-type CodeProps = {
-  children: React.ReactNode;
-};
-const Code = (props: CodeProps) => {
-  const { children } = props;
-  return (
-    <code className="bg-content2 p-1 mx-1 rounded-lg text-sm">{children}</code>
-  );
 };
 
 const Accordion = () => {

@@ -1,5 +1,5 @@
 import { Popover } from "@jamsr-ui/popover";
-import { Email, Info } from "@jamsr-ui/shared-icons";
+import { EmailIcon, InfoIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { Input, type InputProps } from "../src/input";
@@ -84,7 +84,7 @@ export const WithIcon: Story = {
   args: {
     label: "Email",
     type: "email",
-    startContent: <Email />,
+    startContent: <EmailIcon />,
   },
 };
 
@@ -130,9 +130,8 @@ export const Variant: Story = {
   render: () => {
     return (
       <div className="space-y-4">
-        <Input label="Outline" variant="outline" />
-        <Input label="Filled" variant="filled" />
-        <Input label="Transparent" variant="transparent" />
+        <Input label="Outline" variant="outlined" />
+        <Input label="standard" variant="standard" />
       </div>
     );
   },
@@ -145,7 +144,7 @@ export const LabelHelper: Story = {
         label="Password"
         labelHelperContent={
           <Popover
-            trigger={<Info className="size-4 text-foreground-secondary" />}
+            trigger={<InfoIcon className="size-4 text-foreground-secondary" />}
           >
             Password must be at least 8 characters
           </Popover>

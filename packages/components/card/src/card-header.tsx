@@ -1,5 +1,10 @@
+import { useUIStyle } from "@jamsr-ui/core";
 import { Typography } from "@jamsr-ui/typography";
-import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import {
+  cn,
+  mergeClassNames,
+  type ComponentPropsWithAs,
+} from "@jamsr-ui/utils";
 
 export type CardHeaderProps = {
   heading?: React.ReactNode;
@@ -29,16 +34,21 @@ export const CardHeader = <T extends React.ElementType = "div">(
     gutterBottom,
     startContent,
     endContent,
-    classNames,
+    classNames: $classNames,
     ...restProps
   } = props;
   const Component = as ?? "div";
+
+  const { cardHeader } = useUIStyle();
+  const classNames = mergeClassNames(cardHeader?.classNames, $classNames);
   return (
     <Component
       data-slot="header"
       className={cn(
         "relative flex items-center gap-2 px-4 pt-4",
         { "pb-4": gutterBottom },
+        cardHeader?.className,
+        classNames?.base,
         className,
       )}
       {...restProps}

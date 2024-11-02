@@ -5,13 +5,13 @@ import {
   type DividerVariants,
 } from "./style";
 
-type Props = DividerVariants & {
+export type DividerProps = DividerVariants & {
   classNames?: SlotsToClasses<DividerSlots>;
   className?: string;
   children?: React.ReactNode;
 };
 
-export const Divider = (props: Props) => {
+export const Divider = (props: DividerProps) => {
   const {
     className,
     variant,

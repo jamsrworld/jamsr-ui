@@ -23,7 +23,7 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@jamsr-ui/eslint-config": "workspace:^",
+    
     "@types/node": "^22.7.9",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",

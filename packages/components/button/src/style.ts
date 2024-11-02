@@ -223,7 +223,7 @@ const textVariant: CompoundVariant<ButtonVariantProps>[] = [
   },
 ];
 
-export const buttonVariant = tv({
+export const button = tv({
   extend: baseVariant,
   compoundVariants: [
     {

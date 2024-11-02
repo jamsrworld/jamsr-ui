@@ -22,7 +22,6 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@jamsr-ui/tailwind-config": "workspace:^",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
     "framer-motion": "12.0.0-alpha.1",
@@ -39,6 +38,7 @@
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^",
     "zustand": "5.0.0"
   },
   "clean-package": "../../../clean-package.config.json"

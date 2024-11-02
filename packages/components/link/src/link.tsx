@@ -1,10 +1,13 @@
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { cn, focusVisibleClasses } from "@jamsr-ui/utils";
 
-type LinkProps = NonNullable<unknown>;
+export type LinkProps<T extends React.ElementType = "a"> =
+  ComponentPropsWithAs<T> & {
+    underline?: "hover" | "always" | "never";
+  };
 
 export const Link = <T extends React.ElementType = "a">(
-  props: ComponentPropsWithAs<T, LinkProps>,
+  props: LinkProps<T>,
 ) => {
   const { as, children, className, ...restProps } = props;
   const Component = as ?? "a";

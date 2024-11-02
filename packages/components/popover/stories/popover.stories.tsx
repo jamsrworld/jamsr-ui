@@ -1,5 +1,5 @@
 import { Button } from "@jamsr-ui/button";
-import { Info } from "@jamsr-ui/shared-icons";
+import { InfoIcon } from "@jamsr-ui/shared-icons";
 import { Typography } from "@jamsr-ui/typography";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Popover, type PopoverProps } from "../src/popover";
@@ -17,13 +17,13 @@ const Template = (props: Partial<PopoverProps>) => {
       <Popover
         trigger={
           <Button isIconOnly>
-            <Info />
+            <InfoIcon />
           </Button>
         }
         className="p-2"
         {...props}
       >
-        <Typography>This is a Popover content</Typography>
+        <Typography as="p">This is a Popover content</Typography>
       </Popover>
     </div>
   );

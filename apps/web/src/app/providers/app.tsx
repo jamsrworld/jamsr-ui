@@ -1,6 +1,6 @@
 "use client";
 
-import { UIProvider } from "@jamsr-ui/core";
+import { UIProvider, UIStyleProvider } from "@jamsr-ui/core";
 import { ToastProvider } from "@jamsr-ui/react";
 import {} from "framer-motion";
 
@@ -13,7 +13,21 @@ export const AppProvider = (props: Props) => {
   return (
     <UIProvider>
       <ToastProvider />
-      {children}
+      <UIStyleProvider
+      // input={{
+      //   classNames: {
+      //     label: "text-white",
+      //   },
+      // }}
+      // card={{
+      //   className: "!bg-red-500",
+      // }}
+      // cardHeader={{
+      //   className: "bg-gray-500",
+      // }}
+      >
+        {children}
+      </UIStyleProvider>
     </UIProvider>
   );
 };

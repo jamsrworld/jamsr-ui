@@ -11,13 +11,19 @@ import { AutocompleteMultipleControlled } from "./variants/multiple-controlled";
 import { AutocompleteMultipleCustomRender } from "./variants/multiple-custom-render";
 import { AutocompleteStartEndContent } from "./variants/start-end-content";
 
+
+const title = "Autocomplete";
+const description =
+  "The autocomplete is a normal text input enhanced by a panel of suggested options.";
+
 export const metadata: Metadata = {
-  title: "Autocomplete",
+  title,
+  description,
 };
 
 const Autocomplete = () => {
   return (
-    <VariantPage heading="Autocomplete">
+    <VariantPage heading="Autocomplete" description={description}>
       <VariantWrapper heading="Default">
         <AutocompleteDefault />
       </VariantWrapper>

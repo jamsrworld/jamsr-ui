@@ -1,4 +1,4 @@
-import { Email, EyeOpen } from "@jamsr-ui/shared-icons";
+import { EmailIcon, EyeOpenIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { Autocomplete } from "../src/autocomplete";
@@ -53,7 +53,7 @@ export const ErrorState: Story = {
 
 export const StartEndContent: Story = {
   render: () => (
-    <DefaultAutocomplete startContent={<Email />} endContent={<EyeOpen />} />
+    <DefaultAutocomplete startContent={<EmailIcon />} endContent={<EyeOpenIcon />} />
   ),
 };
 

@@ -1,4 +1,4 @@
-import { Email } from "@jamsr-ui/shared-icons";
+import { EmailIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 import { Textarea, type TextareaProps } from "../src/textarea";
@@ -82,6 +82,6 @@ export const WithEndContent: Story = {
 export const WithIcon: Story = {
   args: {
     label: "Email",
-    startContent: <Email />,
+    startContent: <EmailIcon />,
   },
 };

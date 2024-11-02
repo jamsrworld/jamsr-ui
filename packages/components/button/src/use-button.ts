@@ -1,7 +1,7 @@
 import { useHover, useMergeRefs, usePress } from "@jamsr-ui/hooks";
 import { type PropGetter, type UIProps } from "@jamsr-ui/utils";
 import { useCallback, useMemo } from "react";
-import { buttonVariant, type ButtonVariantProps } from "./style";
+import { button, type ButtonVariantProps } from "./style";
 
 type Props = UIProps<"button"> & {
   startContent?: React.ReactNode;
@@ -52,7 +52,7 @@ export const useButton = (props: UseButtonProps) => {
 
   const styles = useMemo(
     () =>
-      buttonVariant({
+      button({
         size,
         color,
         className,

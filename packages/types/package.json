@@ -1,56 +1,18 @@
 {
-  "name": "@jamsr-ui/react",
-  "version": "0.0.149",
-  "main": "./src/index.ts",
-  "description": "A react js ui library with tailwindcss",
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jamsrworld/jamsr-ui"
-  },
-  "bugs": {
-    "url": "https://github.com/jamsrworld/jamsr-ui/issues"
-  },
-  "homepage": "https://jamsr-ui.jamsrworld.com",
-  "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "build": "tsup",
-    "typecheck": "tsc --noEmit",
-    "prepack": "clean-package",
-    "postpack": "clean-package restore"
+  "name": "@jamsr-ui/types",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/index.ts"
   },
   "devDependencies": {
-    "@testing-library/react": "^16.0.0",
-    "@types/eslint": "^8.56.5",
-    "@types/node": "22.7.9",
+    "@types/node": "^22.8.1",
     "@types/react": "^18.3.3",
-    "@typescript-eslint/parser": "^7.10.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
     "clean-package": "^2.2.0",
-    "eslint": "^8",
-    "framer-motion": "12.0.0-alpha.1",
-    "jsdom": "^24.0.0",
-    "postcss": "^8.4.38",
     "react": "19.0.0-rc-603e6108-20241029",
     "react-dom": "19.0.0-rc-603e6108-20241029",
+    "tailwindcss": "^3.4.3",
+    "tw-colors": "^3.3.1",
     "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
-  },
-  "dependencies": {
     "@jamsr-ui/accordion": "workspace:^",
     "@jamsr-ui/alert": "workspace:^",
     "@jamsr-ui/autocomplete": "workspace:^",
@@ -95,8 +57,7 @@
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {
-    "framer-motion": "12.0.0-alpha.1",
-    "react": "19.0.0-rc-603e6108-20241029"
-  },
-  "clean-package": "../../clean-package.config.json"
+    "react": "19.0.0-rc-7c8e5e7a-20241101",
+    "react-dom": "19.0.0-rc-7c8e5e7a-20241101"
+  }
 }

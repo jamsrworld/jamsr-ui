@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@jamsr-ui/card";
-import { Email } from "@jamsr-ui/shared-icons";
+import { EmailIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { useState } from "react";
 import type { SelectionSet, SelectProps } from "../src";
@@ -53,9 +53,9 @@ export const StartEndItems: Story = {
     <>
       <Template startContent="$" />
       <Template endContent="%" />
-      <Template startContent={<Email />} />
-      <Template endContent={<Email />} />
-      <Template startContent={<Email />} endContent={<Email />} />
+      <Template startContent={<EmailIcon />} />
+      <Template endContent={<EmailIcon />} />
+      <Template startContent={<EmailIcon />} endContent={<EmailIcon />} />
     </>
   ),
 };

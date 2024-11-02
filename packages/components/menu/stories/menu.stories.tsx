@@ -1,5 +1,5 @@
 import { Button } from "@jamsr-ui/button";
-import { ChevronUp, InfoIcon, SearchIcon } from "@jamsr-ui/shared-icons";
+import { ChevronUpIcon, InfoIcon, SearchIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Menu, MenuItem } from "../src";
 
@@ -22,7 +22,7 @@ const Template = () => {
         classNames={{
           popover: "min-w-[300px]",
         }}
-        trigger={<Button endContent={<ChevronUp />}>Open Me</Button>}
+        trigger={<Button endContent={<ChevronUpIcon />}>Open Me</Button>}
       >
         <MenuItem onClick={handleClick}>Undo</MenuItem>
         <MenuItem startContent={<InfoIcon className="size-5" />}>Info</MenuItem>

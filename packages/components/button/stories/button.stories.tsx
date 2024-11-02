@@ -1,4 +1,4 @@
-import { Info } from "@jamsr-ui/shared-icons";
+import { InfoIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import type { ButtonProps } from "../src/button";
 import { Button } from "../src/button";
@@ -29,14 +29,14 @@ export const Disabled: Story = {
 export const WithIcons: Story = {
   args: {
     children: "Button",
-    startContent: <Info />,
-    endContent: <Info />,
+    startContent: <InfoIcon />,
+    endContent: <InfoIcon />,
   },
 };
 
 export const IconButton: Story = {
   args: {
-    children: <Info />,
+    children: <InfoIcon />,
     isIconOnly: true,
   },
   parameters: {
@@ -54,9 +54,8 @@ export const Variants: Story = {
   render: () => {
     const variants: ButtonProps["variant"][] = [
       "light",
-      "link",
-      "outline",
-      "shadow",
+      "text",
+      "outlined",
       "solid",
     ];
 

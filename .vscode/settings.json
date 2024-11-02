@@ -38,7 +38,8 @@
     "tsup",
     "Typeahead",
     "typecheck",
-    "webp"
+    "webp",
+    "zustand"
   ],
   "workbench.colorCustomizations": {
     "list.warningForeground": "#00eaffcc"

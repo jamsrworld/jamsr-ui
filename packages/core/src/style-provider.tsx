@@ -1,14 +1,7 @@
 "use client";
 
-import { type InputSlots } from "@jamsr-ui/input";
-import { type SlotsToClasses } from "@jamsr-ui/utils";
-import { createContext, useContext, useMemo } from "react";
-
-export type UIStyleContextType = {
-  input?: {
-    classNames: SlotsToClasses<InputSlots>;
-  };
-};
+import { type UIStyleContextType } from "@jamsr-ui/types";
+import { createContext, useContext } from "react";
 
 const UIStyleContext = createContext<UIStyleContextType>(
   {} as unknown as UIStyleContextType,
@@ -18,11 +11,11 @@ type Props = {
   children: React.ReactNode;
 } & UIStyleContextType;
 
+export { type UIStyleContextType } from "@jamsr-ui/types";
 export const UIStyleProvider = (props: Props) => {
-  const { children, input } = props;
-  const value = useMemo(() => ({ input }), [input]);
+  const { children, ...restProps } = props;
   return (
-    <UIStyleContext.Provider value={value}>{children}</UIStyleContext.Provider>
+    <UIStyleContext.Provider value={restProps}>{children}</UIStyleContext.Provider>
   );
 };
 

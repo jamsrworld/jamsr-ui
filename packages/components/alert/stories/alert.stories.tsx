@@ -1,5 +1,5 @@
 import { Button } from "@jamsr-ui/button";
-import { Close } from "@jamsr-ui/shared-icons";
+import { CloseIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Alert, type AlertProps } from "../src/alert";
 import type { AlertVariantProps } from "../src/style";
@@ -31,7 +31,7 @@ export const CustomIcon: Story = {
   args: {
     children: "This is a error message.",
     severity: "danger",
-    icon: <Close />,
+    icon: <CloseIcon />,
   },
 };
 
@@ -87,7 +87,7 @@ export const Severity: Story = {
 };
 
 const VariantTemplate = () => {
-  const variants: AlertVariantProps["variant"][] = ["filled", "outline"];
+  const variants: AlertVariantProps["variant"][] = ["solid", "outlined"];
 
   return (
     <div className="grid gap-4">

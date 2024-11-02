@@ -1,5 +1,5 @@
 import { Button } from "@jamsr-ui/button";
-import { Info } from "@jamsr-ui/shared-icons";
+import { InfoIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Tooltip, type TooltipProps } from "../src";
 
@@ -14,15 +14,9 @@ type Story = StoryObj<typeof meta>;
 const Template = (props: Partial<TooltipProps>) => {
   return (
     <div className="grid min-h-[100px] place-items-center">
-      <Tooltip
-        title="I am tooltip"
-        {...props}
-      >
-        <Button
-          aria-label="Click Me!"
-          isIconOnly
-        >
-          <Info />
+      <Tooltip title="I am tooltip" {...props}>
+        <Button aria-label="Click Me!" isIconOnly>
+          <InfoIcon />
         </Button>
       </Tooltip>
     </div>
@@ -47,10 +41,5 @@ export const Interactive: Story = {
 };
 
 export const Offset: Story = {
-  render: () => (
-    <Template
-      offset={20}
-      title="This tooltip has offset 20"
-    />
-  ),
+  render: () => <Template offset={20} title="This tooltip has offset 20" />,
 };

@@ -1,3 +1,4 @@
+import { useUIStyle } from "@jamsr-ui/core";
 import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { type ComponentPropsWithoutRef } from "react";
 import { cardVariants, type CardVariants } from "./style";
@@ -11,13 +12,26 @@ export type CardProps = ComponentPropsWithoutRef<"div"> &
 export const Card = <T extends React.ElementType = "div">(
   props: ComponentPropsWithAs<T, CardProps>,
 ) => {
-  const { as, className, children, bg, bordered, ...restProps } = props;
+  const {
+    as,
+    className: $className,
+    children,
+    bg,
+    bordered,
+    ...restProps
+  } = props;
   const Component = as ?? "div";
+  const { card } = useUIStyle();
+  const className = cardVariants({
+    bg,
+    className: cn(card?.className, $className),
+    bordered,
+  });
   return (
     <Component
       data-component="card"
       data-slot="base"
-      className={cn(cardVariants({ bg, className, bordered }))}
+      className={className}
       {...restProps}
     >
       {children}

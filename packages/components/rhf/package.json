@@ -48,6 +48,7 @@
     "@jamsr-ui/rating": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/switch": "workspace:^",
+    "@jamsr-ui/tags-input": "workspace:^",
     "@jamsr-ui/textarea": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }

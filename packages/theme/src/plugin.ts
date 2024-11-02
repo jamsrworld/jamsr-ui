@@ -15,9 +15,10 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
       ({ addUtilities, addComponents, addVariant }) => {
         // variants
         addVariant("ui-disabled", "&[data-disabled=true]");
-        addVariant("ui-hover", "&[data-hover=true]");
+        addVariant("ui-readonly", "&[data-readonly=true]");
+        addVariant("ui-hover", "&[data-hovered=true]");
         addVariant("ui-pressed", "&[data-pressed=true]");
-        addVariant("ui-focus", "&[data-focus=true]");
+        addVariant("ui-focus", "&[data-focused=true]");
         addVariant("ui-active", "&[data-active=true]");
         addVariant("ui-open", "&[data-open=true]");
         addVariant("ui-checked", "&[data-checked=true]");

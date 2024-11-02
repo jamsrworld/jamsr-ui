@@ -1,6 +1,7 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallbackRef } from "./use-callback-ref";
 
-export const useControlledState = <T>(
+export const useControlledState2 = <T>(
   defaultValue?: T,
   value?: T,
   onValueChange?: (value: T) => void,
@@ -44,9 +45,6 @@ export const useControlledState = <T>(
   return [currentValue, setValue];
 };
 
-import * as React from "react";
-import { useCallbackRef } from "./use-callback-ref";
-
 type UseControllableStateParams<T> = {
   prop?: T | undefined;
   defaultProp?: T | undefined;
@@ -59,12 +57,12 @@ function useUncontrolledState<T>({
   defaultProp,
   onChange,
 }: Omit<UseControllableStateParams<T>, "prop">) {
-  const uncontrolledState = React.useState<T | undefined>(defaultProp);
+  const uncontrolledState = useState<T | undefined>(defaultProp);
   const [value] = uncontrolledState;
-  const prevValueRef = React.useRef(value);
+  const prevValueRef = useRef(value);
   const handleChange = useCallbackRef(onChange);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (prevValueRef.current !== value) {
       handleChange(value as T);
       prevValueRef.current = value;
@@ -74,11 +72,11 @@ function useUncontrolledState<T>({
   return uncontrolledState;
 }
 
-export function useControlledState2<T>({
-  prop,
-  defaultProp,
-  onChange = () => {},
-}: UseControllableStateParams<T>) {
+export function useControlledState<T>(
+  defaultProp?: T | undefined,
+  prop?: T | undefined,
+  onChange?: (state: T) => void,
+) {
   const [uncontrolledProp, setUncontrolledProp] = useUncontrolledState({
     defaultProp,
     onChange,
@@ -88,7 +86,7 @@ export function useControlledState2<T>({
   const handleChange = useCallbackRef(onChange);
 
   const setValue: React.Dispatch<React.SetStateAction<T | undefined>> =
-    React.useCallback(
+    useCallback(
       (nextValue) => {
         if (isControlled) {
           const setter = nextValue as SetStateFn<T>;

@@ -4,12 +4,13 @@ import { Checkbox } from "@jamsr-ui/react";
 import { useState } from "react";
 
 export const CheckboxControlled = () => {
-  const [checked, setChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <Checkbox
       label="Controlled Checkbox"
-      checked={checked}
-      onCheckedChange={setChecked}
+      isChecked={isChecked}
+      onCheckedChange={setIsChecked}
+      helperText={isChecked ? "Checked" : "Unchecked"}
     />
   );
 };

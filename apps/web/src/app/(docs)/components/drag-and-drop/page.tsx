@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const DragDropDndKit = () => {
   return (
-    <VariantPage heading="Dnd">
+    <VariantPage heading="Drag and Drop">
       <VariantWrapper heading="Grid">
         <DndGrid />
       </VariantWrapper>

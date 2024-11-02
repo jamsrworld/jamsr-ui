@@ -10,9 +10,9 @@ type Props = {
   showClearButton?: boolean;
 };
 
-export type TagInputProps = Omit<InputProps, keyof Props> & Props;
+export type TagsInputProps = Omit<InputProps, keyof Props> & Props;
 
-export const TagInput = (props: TagInputProps) => {
+export const TagsInput = (props: TagsInputProps) => {
   const { onValueChange, defaultValue, value, classNames, ...restProps } =
     props;
   const delimiters = ["Enter", ","];

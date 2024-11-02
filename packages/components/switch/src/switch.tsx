@@ -1,4 +1,4 @@
-import { useControlledState2 } from "@jamsr-ui/hooks/src/use-controlled-state";
+import { useControlledState } from "@jamsr-ui/hooks/src/use-controlled-state";
 import { Typography } from "@jamsr-ui/typography";
 import { cn, type VariantProps } from "@jamsr-ui/utils";
 import { m, type Variants } from "framer-motion";
@@ -57,7 +57,7 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
   //   onCheckedChange,
   // );
 
-  const [checked, setChecked] = useControlledState2({
+  const [checked, setChecked] = useControlledState({
     defaultProp: defaultChecked,
     prop: $checked,
     onChange: onCheckedChange,

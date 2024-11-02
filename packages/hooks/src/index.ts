@@ -1,5 +1,8 @@
 export { useCallbackRef } from "./use-callback-ref";
-export { useControlledState } from "./use-controlled-state";
+export {
+  useControlledState,
+  useControlledState2
+} from "./use-controlled-state";
 export { useDebounce } from "./use-debounce";
 export { useDisclosure } from "./use-disclosure";
 export { useEventListener } from "./use-event-listener";
@@ -10,3 +13,4 @@ export { useKeyPress } from "./use-keypress";
 export { useMergeRefs } from "./use-merge-refs";
 export { usePress } from "./use-press";
 export { usePrevious } from "./use-previous";
+

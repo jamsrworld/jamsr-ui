@@ -8,10 +8,11 @@ import { RHFDemoRadioGroup } from "./variants/radio-group";
 import { RHFDemoRating } from "./variants/rating";
 import { RHFDemoSelect } from "./variants/select";
 import { RHFDemoSwitch } from "./variants/switch";
+import { RHFDemoTagsInput } from "./variants/tags-input";
 import { RHFDemoTextarea } from "./variants/textarea";
 
 export const metadata: Metadata = {
-  title: "Drag and Drop (Dnd-Kit)",
+  title: "React Hook Form",
 };
 
 const DragDropDndKit = () => {
@@ -39,7 +40,7 @@ const DragDropDndKit = () => {
         <RHFDemoOtpInput />
       </VariantWrapper>
       <VariantWrapper heading="Tags Input">
-        <RHFDemoOtpInput />
+        <RHFDemoTagsInput />
       </VariantWrapper>
       <VariantWrapper heading="Rating">
         <RHFDemoRating />

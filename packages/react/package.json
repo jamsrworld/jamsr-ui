@@ -90,7 +90,7 @@
     "@jamsr-ui/switch": "workspace:^",
     "@jamsr-ui/tab": "workspace:^",
     "@jamsr-ui/table": "workspace:^",
-    "@jamsr-ui/tag-input": "workspace:^",
+    "@jamsr-ui/tags-input": "workspace:^",
     "@jamsr-ui/textarea": "workspace:^",
     "@jamsr-ui/toast": "workspace:^",
     "@jamsr-ui/tooltip": "workspace:^",

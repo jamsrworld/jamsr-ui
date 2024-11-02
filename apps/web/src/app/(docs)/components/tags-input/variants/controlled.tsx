@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, TagInput } from "@jamsr-ui/react";
+import { Button, TagsInput } from "@jamsr-ui/react";
 import { TrashIcon } from "@jamsr-ui/shared-icons";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ export const TagInputControlled = () => {
     setTags(new Set([]));
   };
   return (
-    <TagInput
+    <TagsInput
       value={tags}
       onValueChange={setTags}
       helperText={`Tags are ${[...tags]}`}

@@ -9,4 +9,6 @@ export { RHFRadioGroup } from "./radio-group";
 export { RHFRating } from "./rating";
 export { RHFSelect } from "./select";
 export { RHFSwitch } from "./switch";
+export { RHFTagsInput } from "./tags-input";
 export { RHFTextarea } from "./textarea";
+

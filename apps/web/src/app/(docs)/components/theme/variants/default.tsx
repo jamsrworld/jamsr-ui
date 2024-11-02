@@ -1,6 +1,6 @@
-import { parseToRgba, readableColor } from "color2k";
-import { commonColors, semanticColors } from "@jamsr-ui/theme";
 import { Divider } from "@jamsr-ui/react";
+import { commonColors } from "@jamsr-ui/theme";
+import { parseToRgba, readableColor } from "color2k";
 
 type ColorsItem = {
   color: string;

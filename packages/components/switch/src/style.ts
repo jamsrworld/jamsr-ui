@@ -1,71 +1,96 @@
-import { focusVisibleClasses, tv } from "@jamsr-ui/utils";
+import { focusVisibleClasses, tv, type VariantProps } from "@jamsr-ui/utils";
 
-// eslint-disable-next-line tailwindcss/no-custom-classname
+export const test = "";
+
 export const switchVariants = tv({
   slots: {
-    wrapper: [
+    base: "flex flex-col gap-2",
+    switch: [
       "flex cursor-pointer items-center rounded-full p-1",
       focusVisibleClasses,
     ],
     thumb: "size-8 rounded-full bg-white shadow-md",
+    helperText: "text-xs text-foreground-400",
+    label: "grid grow cursor-pointer select-none gap-1",
+    labelText: "font-medium",
+    description: "text-xs text-foreground-500",
+    mainWrapper: "flex items-center justify-between gap-2",
+    switchWrapper: "",
   },
   variants: {
     color: {
       default: {
-        wrapper: "bg-default",
+        switch: "bg-default",
       },
       primary: {
-        wrapper: "bg-primary",
+        switch: "bg-primary",
       },
       secondary: {
-        wrapper: "bg-secondary",
+        switch: "bg-secondary",
       },
       success: {
-        wrapper: "bg-success",
+        switch: "bg-success",
       },
       warning: {
-        wrapper: "bg-warning",
+        switch: "bg-warning",
       },
       error: {
-        wrapper: "bg-danger",
+        switch: "bg-danger",
       },
     },
     size: {
       sm: {
-        wrapper: "h-6 w-10",
+        switch: "h-6 w-10",
         thumb: "size-4",
       },
       md: {
-        wrapper: "mr-2 h-7 w-12",
+        switch: "mr-2 h-7 w-12",
         thumb: "size-5",
       },
       lg: {
-        wrapper: "mr-2 h-8 w-14",
+        switch: "mr-2 h-8 w-14",
         thumb: "size-6",
       },
     },
     checked: {
       true: {
-        wrapper: "justify-end",
+        switch: "justify-end",
       },
       false: {
-        wrapper: "justify-start !bg-default-200",
+        switch: "justify-start !bg-default-200",
       },
     },
-    disabled: {
+    labelPlacement: {
+      start: {
+        mainWrapper: "flex-row",
+      },
+      end: {
+        mainWrapper: "flex-row-reverse",
+      },
+      top: {
+        mainWrapper: "flex-col",
+      },
+      bottom: {
+        mainWrapper: "flex-col-reverse",
+      },
+    },
+    isDisabled: {
       true: {
-        wrapper: "pointer-events-none cursor-not-allowed bg-background-tertiary",
+        switch: "pointer-events-none cursor-not-allowed bg-background-tertiary",
+      },
+    },
+    isInvalid: {
+      true: {
+        helperText: "text-danger",
       },
     },
   },
-  compoundSlots: [
-    {
-      checked: false,
-      slots: ["wrapper"],
-    },
-  ],
   defaultVariants: {
     size: "md",
     color: "success",
+    labelPlacement: "start",
   },
 });
+
+export type SwitchVariantProps = VariantProps<typeof switchVariants>;
+export type SwitchSlots = keyof ReturnType<typeof switchVariants>;

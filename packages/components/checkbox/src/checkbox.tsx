@@ -19,6 +19,7 @@ export type CheckboxProps = CheckboxVariantProps & {
   classNames?: SlotsToClasses<CheckboxSlots>;
   isReadonly?: boolean;
   isDisabled?: boolean;
+  onBlur?: () => void;
 };
 
 export const Checkbox = (props: CheckboxProps) => {

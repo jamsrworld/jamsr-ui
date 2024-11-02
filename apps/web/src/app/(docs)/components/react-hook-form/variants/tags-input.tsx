@@ -24,9 +24,7 @@ export const RHFDemoTagsInput = () => {
     defaultValues,
     resolver: zodResolver(schema),
   });
-  const { handleSubmit, watch } = methods;
-  console.log(watch());
-
+  const { handleSubmit } = methods;
   const onSubmit = handleSubmit((values) => {
     console.log(values);
   });

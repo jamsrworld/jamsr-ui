@@ -23,7 +23,7 @@ export const RHFProvider = <T extends FieldValues>(
     onSubmit,
     methods,
     className,
-    disabled,
+    isDisabled,
     isPending,
     ...restProps
   } = props;
@@ -36,7 +36,7 @@ export const RHFProvider = <T extends FieldValues>(
         {...restProps}
       >
         <fieldset
-          disabled={isPending || disabled}
+          disabled={isPending || isDisabled}
           className={cn("flex flex-col gap-4", className)}
         >
           {children}

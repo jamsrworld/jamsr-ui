@@ -1,12 +1,14 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { cn } from "@jamsr-ui/utils";
+import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
 import {
   type InputHTMLAttributes,
   useCallback,
   useEffect,
+  useId,
   useMemo,
   useRef,
 } from "react";
+import { otpInput, type OtpInputSlots } from "./style";
 
 export type OtpInputProps = {
   label?: string;
@@ -17,6 +19,7 @@ export type OtpInputProps = {
   numberOfDigits?: number;
   autoFocus?: boolean;
   className?: string;
+  classNames?: SlotsToClasses<OtpInputSlots>;
   inputProps?: React.HTMLProps<HTMLInputElement>;
   isNumeric?: boolean;
   isInvalid?: boolean;
@@ -39,6 +42,7 @@ export const OtpInput = (props: OtpInputProps) => {
     isInvalid,
     label,
     onBlur,
+    classNames,
   } = props;
 
   const [value = "", setValue] = useControlledState(
@@ -169,34 +173,61 @@ export const OtpInput = (props: OtpInputProps) => {
     e.target.setSelectionRange(0, e.target.value.length);
   };
 
+  const styles = otpInput({
+    className,
+    isInvalid,
+  });
+
+  const id = useId();
   return (
-    <div>
-      {label && <div>{label}</div>}
-      <div className="flex gap-2">
-        {valueItems.map((digit, idx) => (
-          <input
-            {...inputProps}
-            placeholder={placeholder}
-            key={idx}
-            className={cn(
-              "size-12 rounded border-2 border-divider bg-transparent text-center text-base outline-none hover:border-gray-400 focus:border-primary",
-              inputProps?.className,
-              className,
-            )}
-            inputMode="numeric"
-            autoComplete="one-time-code"
-            pattern="\d{1}"
-            maxLength={numberOfDigits}
-            ref={(el) => ref(el, idx)}
-            value={digit}
-            onChange={(e) => handleChange(e, idx)}
-            onKeyDown={(e) => handleKeyDown(e, idx)}
-            onPaste={handlePaste}
-            onFocus={(e) => handleFocus(e, idx)}
-          />
-        ))}
+    <div
+      data-component="otp-input"
+      data-slot="base"
+      className={styles?.base({ className: classNames?.base })}
+    >
+      <div className={styles.wrapper({ className: classNames?.wrapper })}>
+        {label && (
+          <label
+            htmlFor={id}
+            className={styles?.label({ className: classNames?.label })}
+            data-slot="label"
+          >
+            {label}
+          </label>
+        )}
+        <div
+          className={styles.inputsWrapper({
+            className: classNames?.inputsWrapper,
+          })}
+        >
+          {valueItems.map((digit, idx) => (
+            <input
+              {...inputProps}
+              placeholder={placeholder}
+              key={idx}
+              className={styles?.input({ className: classNames?.input })}
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              pattern="\d{1}"
+              maxLength={numberOfDigits}
+              ref={(el) => ref(el, idx)}
+              value={digit}
+              onChange={(e) => handleChange(e, idx)}
+              onKeyDown={(e) => handleKeyDown(e, idx)}
+              onPaste={handlePaste}
+              onFocus={(e) => handleFocus(e, idx)}
+            />
+          ))}
+        </div>
       </div>
-      {helperText && <div>{helperText}</div>}
+      {helperText && (
+        <div
+          className={styles?.helperText({ className: classNames?.helperText })}
+          data-slot="helper-text"
+        >
+          {helperText}
+        </div>
+      )}
     </div>
   );
 };

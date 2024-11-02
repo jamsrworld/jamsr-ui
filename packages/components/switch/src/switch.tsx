@@ -1,14 +1,13 @@
 import { useControlledState } from "@jamsr-ui/hooks/src/use-controlled-state";
 import { Typography } from "@jamsr-ui/typography";
-import { cn, type VariantProps } from "@jamsr-ui/utils";
+import { type SlotsToClasses } from "@jamsr-ui/utils";
 import { m, type Variants } from "framer-motion";
+import { useId } from "react";
 import {
-  forwardRef,
-  useId,
-  type ForwardedRef,
-  type SetStateAction,
-} from "react";
-import { switchVariants } from "./style";
+  switchVariants,
+  type SwitchSlots,
+  type SwitchVariantProps,
+} from "./style";
 
 const variants: Variants = {
   initial: {},
@@ -18,7 +17,6 @@ const variants: Variants = {
 };
 
 type Props = {
-  onChange?: (value: SetStateAction<boolean>) => void;
   label?: string;
   description?: string | ((checked: boolean) => string);
   checked?: boolean;
@@ -28,11 +26,13 @@ type Props = {
   onBlur?: () => void;
   isInvalid?: boolean;
   helperText?: string;
+  className?: string;
+  classNames?: SlotsToClasses<SwitchSlots>;
 };
 
-export type SwitchProps = VariantProps<typeof switchVariants> & Props;
+export type SwitchProps = SwitchVariantProps & Props;
 
-const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
+export const Switch = (props: SwitchProps) => {
   const id = useId();
   const {
     checked: $checked,
@@ -40,33 +40,32 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
     onCheckedChange,
     label,
     description,
-    labelPlacement = "end",
-    disabled,
+    labelPlacement,
+    isDisabled,
     color,
     onBlur,
-    onChange,
     size,
     isInvalid,
     helperText,
+    className,
+    classNames,
     ...restProps
   } = props;
 
-  // const [checked, setChecked] = useControlledState(
-  //   defaultChecked,
-  //   $checked,
-  //   onCheckedChange,
-  // );
+  const [checked, setChecked] = useControlledState(
+    defaultChecked,
+    $checked,
+    onCheckedChange,
+  );
 
-  const [checked, setChecked] = useControlledState({
-    defaultProp: defaultChecked,
-    prop: $checked,
-    onChange: onCheckedChange,
-  });
-  const { thumb, wrapper } = switchVariants({
+  const styles = switchVariants({
     checked,
-    disabled,
+    isDisabled,
     color,
     size,
+    labelPlacement,
+    className,
+    isInvalid,
   });
 
   const onClick = () => setChecked((prev) => !prev);
@@ -78,60 +77,83 @@ const SwitchInner = (props: SwitchProps, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <div
       data-component="switch"
-      ref={ref}
-      className={cn("flex items-center justify-between gap-2", {
-        "flex-row": labelPlacement === "start",
-        "flex-row-reverse": labelPlacement === "end",
-        "flex-col": labelPlacement === "top",
-        "flex-col-reverse": labelPlacement === "bottom",
-      })}
+      className={styles.base({ className: classNames?.base })}
       onBlur={onBlur}
     >
-      <input
-        type="checked"
-        className="sr-only"
-        aria-hidden="true"
-        disabled={disabled}
-        {...restProps}
-      />
-      {/* @ts-expect-error FramerError */}
-      <m.button
-        data-slot="wrapper"
-        type="button"
-        className={wrapper()}
-        onClick={onClick}
-        layout
-        initial="initial"
-        whileTap="tapped"
-        animate="initial"
-        disabled={disabled}
-        id={id}
-        onKeyPress={handleKeyPress}
+      <div
+        data-slot="main-wrapper"
+        className={styles.mainWrapper({ className: classNames?.mainWrapper })}
       >
-        {/* @ts-expect-error FramerError */}
-        <m.div
-          data-slot="thumb"
-          variants={variants}
-          layoutId={id}
-          className={thumb()}
-        />
-      </m.button>
-      <label
-        htmlFor={id}
-        className="grid grow cursor-pointer select-none gap-1"
-      >
-        <Typography as="p" className="font-medium">
-          {label}
-        </Typography>
-        <Typography as="p" className="text-xs text-foreground-500">
-          {typeof description === "function"
-            ? description(checked)
-            : description}
-        </Typography>
-      </label>
-      {helperText && <div>{helperText}</div>}
+        <label
+          htmlFor={id}
+          data-slot="label"
+          className={styles.label({ className: classNames?.label })}
+        >
+          <Typography
+            as="p"
+            data-slot="label-text"
+            className={styles.labelText({ className: classNames?.labelText })}
+          >
+            {label}
+          </Typography>
+          {description && (
+            <Typography
+              as="p"
+              data-slot="description"
+              className={styles.description({
+                className: classNames?.description,
+              })}
+            >
+              {typeof description === "function"
+                ? description(checked)
+                : description}
+            </Typography>
+          )}
+        </label>
+        <div
+          data-slot="switch-wrapper"
+          className={styles.switchWrapper({
+            className: classNames?.switchWrapper,
+          })}
+        >
+          <input
+            type="checked"
+            className="sr-only"
+            aria-hidden="true"
+            {...restProps}
+          />
+          {/* @ts-expect-error FramerError */}
+          <m.button
+            data-slot="switch"
+            type="button"
+            className={styles.switch({ className: classNames?.switch })}
+            onClick={onClick}
+            layout
+            initial="initial"
+            whileTap="tapped"
+            animate="initial"
+            disabled={isDisabled}
+            id={id}
+            onKeyPress={handleKeyPress}
+          >
+            {/* @ts-expect-error FramerError */}
+            <m.div
+              data-slot="thumb"
+              variants={variants}
+              layoutId={id}
+              className={styles.thumb({ className: classNames?.thumb })}
+            />
+          </m.button>
+        </div>
+      </div>
+      {helperText && (
+        <div
+          data-slot="helper-text"
+          className={styles.helperText({ className: classNames?.helperText })}
+        >
+          {helperText}
+        </div>
+      )}
     </div>
   );
 };
-
-export const Switch = forwardRef(SwitchInner);

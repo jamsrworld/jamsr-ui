@@ -4,7 +4,7 @@ import { Button, TagsInput } from "@jamsr-ui/react";
 import { TrashIcon } from "@jamsr-ui/shared-icons";
 import { useState } from "react";
 
-export const TagInputControlled = () => {
+export const TagsInputControlled = () => {
   const [tags, setTags] = useState<Set<string>>(new Set([]));
   const handleClearValue = () => {
     setTags(new Set([]));

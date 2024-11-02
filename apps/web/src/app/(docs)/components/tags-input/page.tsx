@@ -1,9 +1,10 @@
 import { VariantPage } from "@/components/variant-page";
 import { VariantWrapper } from "@/components/variant-wrapper";
 import { type Metadata } from "next";
-import { TagInputControlled } from "./variants/controlled";
-import { TagInputDefault } from "./variants/default";
-import { TagInputDefaultValue } from "./variants/default-value";
+import { TagsInputControlled } from "./variants/controlled";
+import { TagsInputDefault } from "./variants/default";
+import { TagsInputDefaultValue } from "./variants/default-value";
+import { TagsInputInvalidState } from "./variants/invalid-state";
 
 export const metadata: Metadata = {
   title: "Editor",
@@ -13,13 +14,16 @@ const Editor = () => {
   return (
     <VariantPage heading="Tags Input">
       <VariantWrapper heading="Default">
-        <TagInputDefault />
+        <TagsInputDefault />
       </VariantWrapper>
       <VariantWrapper heading="Default Value">
-        <TagInputDefaultValue />
+        <TagsInputDefaultValue />
       </VariantWrapper>
       <VariantWrapper heading="Controlled">
-        <TagInputControlled />
+        <TagsInputControlled />
+      </VariantWrapper>
+      <VariantWrapper heading="Invalid State">
+        <TagsInputInvalidState />
       </VariantWrapper>
     </VariantPage>
   );

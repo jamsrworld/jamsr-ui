@@ -5,13 +5,19 @@ import { OtpInput6Digits } from "./variants/6-digits";
 import { OtpInputControlled } from "./variants/controlled";
 import { OtpInputDefault } from "./variants/default";
 
+
+const title = "OTP Input";
+const description =
+  "The One-Time Password (OTP) component is designed to facilitate secure, user-friendly and enhancing the user experience during multi-factor authentication.";
+
 export const metadata: Metadata = {
-  title: "Otp Input",
+  title,
+  description,
 };
 
 const OtpInput = () => {
   return (
-    <VariantPage heading="Otp Input">
+    <VariantPage heading="OTP Input" description={description}>
       <VariantWrapper heading="Default">
         <OtpInputDefault />
       </VariantWrapper>

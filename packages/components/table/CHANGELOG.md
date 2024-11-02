@@ -1,5 +1,13 @@
 # @jamsr-ui/table
 
+## 0.0.33
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.50
+
 ## 0.0.32
 
 ### Patch Changes

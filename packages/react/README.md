@@ -1,14 +1,12 @@
 # JamsrUI
 
-A react ui library created with tailwindcss. 
+A next.js UI components library created with tailwindcss.
 > **NOTE:** Currently work in progress
-> 
-
+>
 
 ## Getting Started
 
-Visit <a aria-label="jamsrui learn" href="https://jamsr-ui.jamsrworld.com">https://jamsr-ui.jamsrworld.com</a> to get started with JamsrUI.
-
+Visit [https://jamsr-ui.jamsrworld.com](https://jamsr-ui.jamsrworld.com) to get started with JamsrUI.
 
 ## Community
 
@@ -16,6 +14,7 @@ We're excited to see the community adopt JamsrUI, raise issues, and provide feed
 Whether it's a feature request, bug report, or a project to showcase, please get involved!
 
 ## Contributing
+
 Contributions are always welcome!
 
 ## License

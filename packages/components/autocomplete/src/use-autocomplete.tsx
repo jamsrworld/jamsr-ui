@@ -326,7 +326,7 @@ export const useAutocomplete = (props: UseAutocompleteProps) => {
       inputWrapperRef: setReference,
       classNames: {
         inputWrapper: "select-none",
-        innerWrapper: cn("h-auto flex-wrap gap-1", {
+        contentWrapper: cn("h-auto flex-wrap gap-1", {
           "px-1": isMultiple,
         }),
       },

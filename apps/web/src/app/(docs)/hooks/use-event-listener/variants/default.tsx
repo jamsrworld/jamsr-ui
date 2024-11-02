@@ -17,7 +17,7 @@ export const UseEventListenerDefault = () => {
   useEventListener(ref, "pointerdown", handlePointerDown);
   useEventListener(ref, "pointerup", handlePointerUp);
   return (
-    <div ref={setRef} className="flex flex-col items-start gap-2 bg-red-50">
+    <div ref={setRef} className="flex flex-col items-start gap-2 bg-red-500">
       <div>Use Event listener. Start pressing </div>
       <div>You pressed {isPointDown ? "true" : "false"}</div>
     </div>

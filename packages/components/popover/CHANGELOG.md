@@ -1,5 +1,14 @@
 # @jamsr-ui/popover
 
+## 0.0.55
+
+### Patch Changes
+
+- added Readme
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.37
+  - @jamsr-ui/utils@0.0.51
+
 ## 0.0.54
 
 ### Patch Changes

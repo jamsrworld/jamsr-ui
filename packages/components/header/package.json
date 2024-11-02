@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/header",
-  "version": "0.0.59",
+  "version": "0.0.60",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

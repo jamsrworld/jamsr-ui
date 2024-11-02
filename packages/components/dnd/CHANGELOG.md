@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.0.3
+
+### Patch Changes
+
+- added Readme
+
 ## 0.0.2
 
 ### Patch Changes

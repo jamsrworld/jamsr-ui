@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.30
+
+### Patch Changes
+
+- added Readme
+
 ## 0.0.29
 
 ### Patch Changes

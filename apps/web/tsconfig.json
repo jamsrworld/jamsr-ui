@@ -27,9 +27,11 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.tsx",
     ".next/types/**/*.ts",
     "*.config.mjs",
     "*.config.cjs",
+    "../../packages/types/*.d.ts",
     ".eslintrc.cjs"
   ],
   "exclude": ["node_modules"]

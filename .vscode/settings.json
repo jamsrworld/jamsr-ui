@@ -13,7 +13,7 @@
     "**/Thumbs.db": true,
     "**/node_modules": true,
     "**/.turbo": true,
-    "**/dist": true,
+    "**/dist": false,
     "**/.next": true
   },
   "explorerExclude.backup": {},
@@ -30,6 +30,7 @@
     "labelledby",
     "listbox",
     "Lowlight",
+    "nextjs",
     "postpack",
     "svgr",
     "tailwindcss",

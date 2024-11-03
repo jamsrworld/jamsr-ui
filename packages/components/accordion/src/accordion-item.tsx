@@ -39,7 +39,6 @@ export const AccordionItem = <T extends React.ElementType = "div">(
     getMainContentProps,
     getSubheadingProps,
   } = useAccordionItem(props);
-
   const indicatorContent = useMemo(() => {
     if (typeof indicator === "function") {
       return indicator({

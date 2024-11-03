@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.133",
+  "version": "0.1.134",
   "private": true,
   "type": "module",
   "scripts": {
@@ -34,11 +34,12 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@jamsr-ui/eslint-config": "workspace:^",
     "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/types": "workspace:^",
     "@types/node": "22.8.1",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
-    "eslint": "^8",
     "eslint-config-next": "15.0.1",
     "postcss": "^8.4.38",
     "tailwindcss": "3.4.14",

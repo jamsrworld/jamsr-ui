@@ -1,5 +1,22 @@
 # @jamsr-ui/react
 
+## 0.0.152
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/input@0.0.68
+  - @jamsr-ui/card@0.0.66
+  - @jamsr-ui/core@0.0.32
+  - @jamsr-ui/autocomplete@0.0.73
+  - @jamsr-ui/editor@0.0.66
+  - @jamsr-ui/rhf@0.0.5
+  - @jamsr-ui/tags-input@0.0.4
+  - @jamsr-ui/textarea@0.0.68
+  - @jamsr-ui/radio@0.0.63
+  - @jamsr-ui/select@0.0.70
+  - @jamsr-ui/tab@0.0.72
+
 ## 0.0.151
 
 ### Patch Changes

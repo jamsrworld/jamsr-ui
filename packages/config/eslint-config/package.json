@@ -3,9 +3,7 @@
   "version": "0.0.36",
   "private": true,
   "files": [
-    "library.js",
-    "next.js",
-    "react-library.js"
+    "next.js"
   ],
   "devDependencies": {
     "@types/eslint": "^8.56.2",

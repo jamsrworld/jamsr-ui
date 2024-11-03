@@ -121,7 +121,6 @@ type Props = {
 export const DndGrid = (props: Props) => {
   const { isDisabled = false } = props;
   const [items, setItems] = useState<SortItem[]>(defaultItems);
-  console.log("items:->", items);
   return (
     <Card>
       <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">

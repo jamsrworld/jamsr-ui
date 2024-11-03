@@ -13,17 +13,17 @@ export const AppProvider = (props: Props) => {
     <UIProvider>
       <ToastProvider />
       <UIStylesProvider
-      // input={{
-      //   classNames: {
-      //     label: "text-white",
-      //   },
-      // }}
-      // card={{
-      //   className: "!bg-red-500",
-      // }}
-      // cardHeader={{
-      //   className: "bg-gray-500",
-      // }}
+        input={{
+          classNames: {
+            label: "text-white",
+          },
+        }}
+        card={{
+          className: "!bg-red-500",
+        }}
+        cardHeader={{
+          className: "bg-gray-500",
+        }}
       >
         {children}
       </UIStylesProvider>

@@ -15,7 +15,7 @@ module.exports = {
     "airbnb",
     "airbnb-base",
     "airbnb-typescript",
-    "airbnb/hooks",
+    // "airbnb/hooks",
     "prettier",
   ],
   globals: {

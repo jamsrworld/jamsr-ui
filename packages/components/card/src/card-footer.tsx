@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/core";
+import { useUIStyle } from "@jamsr-ui/styles";
 import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 
 export type CardFooterProps<T extends React.ElementType = "div"> =

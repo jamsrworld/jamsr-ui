@@ -2,16 +2,16 @@
 
 import { createContext, useContext } from "react";
 
-export interface UIStyleContextType {}
-const UIStyleContext = createContext<UIStyleContextType>(
-  {} as unknown as UIStyleContextType,
+export interface UIStylesType {}
+const UIStyleContext = createContext<UIStylesType>(
+  {} as unknown as UIStylesType,
 );
 
 type Props = {
   children: React.ReactNode;
-} & UIStyleContextType;
+} & UIStylesType;
 
-export const UIStyleProvider = (props: Props) => {
+export const UIStylesProvider = (props: Props) => {
   const { children, ...restProps } = props;
   return (
     <UIStyleContext.Provider value={restProps}>
@@ -20,7 +20,7 @@ export const UIStyleProvider = (props: Props) => {
   );
 };
 
-export const useUIStyle = (): UIStyleContextType => {
+export const useUIStyle = (): UIStylesType => {
   const context = useContext(UIStyleContext);
   if (!context) {
     throw new Error("useUIStyle must be used within a UIStyleProvider");

@@ -8,6 +8,6 @@
     "**/**/*.ts",
     ".eslintrc.cjs",
     "prettier.config.cjs"
-  ],
+, "../core/src/styles.ts"  ],
   "exclude": ["node_modules", "dist"]
 }

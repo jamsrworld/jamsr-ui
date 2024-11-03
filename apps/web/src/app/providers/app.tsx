@@ -1,23 +1,18 @@
 "use client";
 
-import { UIProvider, UIStyleProvider } from "@jamsr-ui/core";
-import { ToastProvider } from "@jamsr-ui/react";
-import type { UIStyleType } from "@jamsr-ui/types";
+import { ToastProvider, UIProvider } from "@jamsr-ui/react";
+import { UIStylesProvider } from "@jamsr-ui/styles";
 
 type Props = {
   children: React.ReactNode;
 };
-
-declare module "@jamsr-ui/core" {
-  export interface UIStyleContextType extends UIStyleType {}
-}
 
 export const AppProvider = (props: Props) => {
   const { children } = props;
   return (
     <UIProvider>
       <ToastProvider />
-      <UIStyleProvider
+      <UIStylesProvider
       // input={{
       //   classNames: {
       //     label: "text-white",
@@ -31,7 +26,7 @@ export const AppProvider = (props: Props) => {
       // }}
       >
         {children}
-      </UIStyleProvider>
+      </UIStylesProvider>
     </UIProvider>
   );
 };

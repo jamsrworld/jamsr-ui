@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/core";
+import { useUIStyle } from "@jamsr-ui/styles";
 import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,

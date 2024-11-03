@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/core";
+import { useUIStyle } from "@jamsr-ui/styles";
 import { Typography } from "@jamsr-ui/typography";
 import {
   cn,

@@ -41,7 +41,7 @@ import { type TextareaProps } from "@jamsr-ui/textarea";
 import { type TooltipProps } from "@jamsr-ui/tooltip";
 import { type TypographyProps } from "@jamsr-ui/typography";
 
-export interface UIStyleType {
+export interface UIStyleConfig {
   input?: Pick<InputProps, "className" | "classNames">;
   button?: Pick<ButtonProps, "className">;
   select?: Pick<SelectProps, "className" | "classNames">;
@@ -80,4 +80,8 @@ export interface UIStyleType {
   textarea?: Pick<TextareaProps, "className" | "classNames">;
   tooltip?: Pick<TooltipProps, "className" | "classNames">;
   typography?: Pick<TypographyProps, "className">;
+}
+
+declare module "@jamsr-ui/styles" {
+  interface UIStylesType extends UIStyleConfig {}
 }

@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@jamsr-ui/button": "workspace:^",
-    "@jamsr-ui/core": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"

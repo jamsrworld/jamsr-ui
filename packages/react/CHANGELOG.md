@@ -1,5 +1,30 @@
 # @jamsr-ui/react
 
+## 0.0.154
+
+### Patch Changes
+
+- @jamsr-ui/accordion@0.0.65
+- @jamsr-ui/alert@0.0.72
+- @jamsr-ui/autocomplete@0.0.75
+- @jamsr-ui/button@0.0.59
+- @jamsr-ui/chip@0.0.64
+- @jamsr-ui/data-table@0.0.37
+- @jamsr-ui/dialog@0.0.66
+- @jamsr-ui/editor@0.0.68
+- @jamsr-ui/file-upload@0.0.78
+- @jamsr-ui/file-upload-multi@0.0.78
+- @jamsr-ui/input@0.0.70
+- @jamsr-ui/menu@0.0.71
+- @jamsr-ui/popover@0.0.57
+- @jamsr-ui/rating@0.0.16
+- @jamsr-ui/select@0.0.72
+- @jamsr-ui/textarea@0.0.70
+- @jamsr-ui/tooltip@0.0.56
+- @jamsr-ui/tags-input@0.0.6
+- @jamsr-ui/confirmation@0.0.43
+- @jamsr-ui/rhf@0.0.7
+
 ## 0.0.153
 
 ### Patch Changes

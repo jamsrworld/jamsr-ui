@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.153",
+  "version": "0.0.154",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"

@@ -1,5 +1,12 @@
 # @jamsr-ui/tags-input
 
+## 0.0.6
+
+### Patch Changes
+
+- @jamsr-ui/chip@0.0.64
+- @jamsr-ui/input@0.0.70
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.76
+
+### Patch Changes
+
+- @jamsr-ui/input@0.0.71
+
 ## 0.0.75
 
 ### Patch Changes

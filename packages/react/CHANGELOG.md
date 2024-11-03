@@ -1,5 +1,21 @@
 # @jamsr-ui/react
 
+## 0.0.155
+
+### Patch Changes
+
+- @jamsr-ui/accordion@0.0.66
+- @jamsr-ui/card@0.0.68
+- @jamsr-ui/input@0.0.71
+- @jamsr-ui/radio@0.0.64
+- @jamsr-ui/select@0.0.72
+- @jamsr-ui/tab@0.0.74
+- @jamsr-ui/autocomplete@0.0.76
+- @jamsr-ui/editor@0.0.69
+- @jamsr-ui/rhf@0.0.8
+- @jamsr-ui/tags-input@0.0.7
+- @jamsr-ui/textarea@0.0.71
+
 ## 0.0.154
 
 ### Patch Changes

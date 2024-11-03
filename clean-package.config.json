@@ -13,8 +13,28 @@
                 "require": "./dist/index.js"
             }
         },
+        "description": "A react js ui library with tailwindcss",
+        "keywords": [
+            "react",
+            "ui"
+        ],
         "sideEffects": false,
         "license": "MIT",
-        "author": "@jamsrworld"
+        "author": "@jamsrworld",
+        "repository": {
+            "type": "git",
+            "url": "https://github.com/jamsrworld/jamsr-ui"
+        },
+        "bugs": {
+            "url": "https://github.com/jamsrworld/jamsr-ui/issues"
+        },
+        "homepage": "https://jamsr-ui.jamsrworld.com",
+        "files": [
+            "dist",
+            "README",
+            "README.md",
+            "package.json",
+            "LICENSE"
+        ]
     }
 }

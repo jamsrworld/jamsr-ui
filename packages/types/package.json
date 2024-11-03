@@ -1,11 +1,10 @@
 {
   "name": "@jamsr-ui/types",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "files": [
     "styles.d.ts"
   ],
   "scripts": {
-    "build": "tsup",
     "typecheck": "tsc --noEmit",
     "prepack": "clean-package",
     "postpack": "clean-package restore"

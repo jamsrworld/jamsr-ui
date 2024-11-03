@@ -1,28 +1,10 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.152",
+  "version": "0.0.153",
   "main": "./src/index.ts",
-  "description": "A react js ui library with tailwindcss",
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jamsrworld/jamsr-ui"
-  },
-  "bugs": {
-    "url": "https://github.com/jamsrworld/jamsr-ui/issues"
-  },
-  "homepage": "https://jamsr-ui.jamsrworld.com",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "test": "vitest",

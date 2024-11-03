@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.16
+
+### Patch Changes
+
+- fix types
+
 ## 0.0.15
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @jamsr-ui/chip
 
+## 0.0.63
+
+### Patch Changes
+
+- fix types
+- Updated dependencies
+  - @jamsr-ui/button@0.0.59
+  - @jamsr-ui/shared-icons@0.0.51
+  - @jamsr-ui/utils@0.0.53
+
 ## 0.0.62
 
 ### Patch Changes

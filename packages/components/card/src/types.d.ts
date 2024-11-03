@@ -1,13 +1,15 @@
-import { CardProps } from "./card";
-import { CardContentProps } from "./card-content";
-import { CardFooterProps } from "./card-footer";
-import { CardHeaderProps } from "./card-header";
+import {
+  type CardContentProps,
+  type CardFooterProps,
+  type CardHeaderProps,
+  type CardProps,
+} from ".";
 
-// declare module "@jamsr-ui/styles" {
-//   export interface UIStylesType {
-//     card?: Pick<CardProps, "className">;
-//     cardContent?: Pick<CardContentProps, "className">;
-//     cardFooter?: Pick<CardFooterProps, "className">;
-//     cardHeader?: Pick<CardHeaderProps, "className" | "classNames">;
-//   }
-// }
+declare module "@jamsr-ui/styles" {
+  export interface UIStylesType {
+    card?: Pick<CardProps, "className" | "classNames">;
+    cardHeader?: Pick<CardHeaderProps, "className" | "classNames">;
+    cardFooter?: Pick<CardFooterProps, "className" | "classNames">;
+    cardContent?: Pick<CardContentProps, "className" | "classNames">;
+  }
+}

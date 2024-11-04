@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.60
+
+### Patch Changes
+
+- added global types
+
 ## 0.0.59
 
 ### Patch Changes

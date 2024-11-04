@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.40
+
+### Patch Changes
+
+- added global types
+
 ## 0.0.39
 
 ### Patch Changes

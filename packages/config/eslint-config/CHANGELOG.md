@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.38
+
+### Patch Changes
+
+- added global types
+
 ## 0.0.37
 
 ### Patch Changes

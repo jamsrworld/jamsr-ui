@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.29
+
+### Patch Changes
+
+- added global types
+
 ## 0.0.28
 
 ### Patch Changes

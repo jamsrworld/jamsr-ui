@@ -1,5 +1,15 @@
 # @jamsr-ui/radio
 
+## 0.0.66
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.40
+  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/utils@0.0.55
+
 ## 0.0.65
 
 ### Patch Changes

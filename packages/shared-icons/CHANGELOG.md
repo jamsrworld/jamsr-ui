@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.53
+
+### Patch Changes
+
+- added global types
+
 ## 0.0.52
 
 ### Patch Changes

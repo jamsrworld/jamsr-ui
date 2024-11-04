@@ -12,32 +12,32 @@ export const AppProvider = (props: Props) => {
   const { children } = props;
   return (
     <UIProvider>
+      <Analytics />
       <ToastProvider />
       <UIStylesProvider
-        button={{
-          className: "",
-          color: "danger",
-          size: "lg",
-          variant: "outlined",
-          onClick: () => {
-            console.log("first click");
-          },
-        }}
-        input={{
-          className: "shadow-lg",
-          classNames: {
-            label: "text-red-500",
-          },
-          variant: "outlined",
-        }}
-        card={{
-          className: "!bg-red-500",
-        }}
-        // cardHeader={{
-        //   className: "bg-gray-500",
-        // }}
+      // button={{
+      //   className: "",
+      //   color: "danger",
+      //   size: "lg",
+      //   variant: "outlined",
+      //   onClick: () => {
+      //     console.log("first click");
+      //   },
+      // }}
+      // input={{
+      //   className: "shadow-lg",
+      //   classNames: {
+      //     label: "text-red-500",
+      //   },
+      //   variant: "outlined",
+      // }}
+      // card={{
+      //   className: "!bg-red-500",
+      // }}
+      // cardHeader={{
+      //   className: "bg-gray-500",
+      // }}
       >
-        <Analytics />
         {children}
       </UIStylesProvider>
     </UIProvider>

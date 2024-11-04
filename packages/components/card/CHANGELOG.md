@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.71
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.66
+  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/utils@0.0.55
+
 ## 0.0.70
 
 ### Patch Changes

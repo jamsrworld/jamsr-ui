@@ -1,5 +1,14 @@
 # @jamsr-ui/table
 
+## 0.0.38
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/utils@0.0.55
+
 ## 0.0.37
 
 ### Patch Changes

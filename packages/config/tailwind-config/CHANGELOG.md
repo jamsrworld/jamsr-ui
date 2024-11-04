@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.18
+
+### Patch Changes
+
+- added global types
+
 ## 0.0.17
 
 ### Patch Changes

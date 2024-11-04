@@ -1,5 +1,23 @@
 # @jamsr-ui/rhf
 
+## 0.0.11
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/checkbox@0.0.58
+  - @jamsr-ui/editor@0.0.72
+  - @jamsr-ui/input@0.0.74
+  - @jamsr-ui/otp-input@0.0.58
+  - @jamsr-ui/radio@0.0.66
+  - @jamsr-ui/rating@0.0.17
+  - @jamsr-ui/select@0.0.74
+  - @jamsr-ui/switch@0.0.67
+  - @jamsr-ui/tags-input@0.0.10
+  - @jamsr-ui/textarea@0.0.74
+  - @jamsr-ui/utils@0.0.55
+
 ## 0.0.10
 
 ### Patch Changes

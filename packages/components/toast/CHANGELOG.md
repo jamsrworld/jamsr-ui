@@ -1,5 +1,13 @@
 # @jamsr-ui/toast
 
+## 0.0.21
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.5
+
 ## 0.0.20
 
 ### Patch Changes

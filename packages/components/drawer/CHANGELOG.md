@@ -1,5 +1,15 @@
 # @jamsr-ui/drawer
 
+## 1.0.54
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.40
+  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/utils@0.0.55
+
 ## 1.0.53
 
 ### Patch Changes

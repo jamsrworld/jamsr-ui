@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.163
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/react@0.0.161
+
 ## 0.0.162
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.34
+
+### Patch Changes
+
+- added global types
+
 ## 0.0.33
 
 ### Patch Changes

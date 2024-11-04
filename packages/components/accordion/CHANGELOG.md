@@ -1,5 +1,15 @@
 # @jamsr-ui/accordion
 
+## 0.0.68
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.53
+  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/utils@0.0.55
+
 ## 0.0.67
 
 ### Patch Changes

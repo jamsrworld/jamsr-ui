@@ -1,5 +1,20 @@
 # web
 
+## 0.1.143
+
+### Patch Changes
+
+- added global types
+- Updated dependencies
+  - @jamsr-ui/dnd@0.0.6
+  - @jamsr-ui/core@0.0.34
+  - @jamsr-ui/hooks@0.0.40
+  - @jamsr-ui/react@0.0.161
+  - @jamsr-ui/shared-icons@0.0.53
+  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/theme@0.0.60
+  - @jamsr-ui/utils@0.0.55
+
 ## 0.1.142
 
 ### Patch Changes

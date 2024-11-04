@@ -1,4 +1,5 @@
-import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { typographyVariants, type TypographyVariants } from "./style";
 
 export type TypographyProps<T extends React.ElementType = "div"> = Omit<
@@ -9,8 +10,11 @@ export type TypographyProps<T extends React.ElementType = "div"> = Omit<
 };
 
 export const Typography = <T extends React.ElementType = "div">(
-  props: TypographyProps<T>,
+  $props: TypographyProps<T>,
 ) => {
+  const { typography: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     as,
     className,

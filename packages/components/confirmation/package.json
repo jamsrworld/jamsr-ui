@@ -34,6 +34,7 @@
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",

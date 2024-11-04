@@ -1,6 +1,8 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
+  deepMergeProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -45,7 +47,10 @@ type Props = EditorVariantsProps & {
 };
 
 export type UseEditorProps = Props & UIProps<"div", keyof Props>;
-export const useEditor = (props: UseEditorProps) => {
+export const useEditor = ($props: UseEditorProps) => {
+  const { editor: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     defaultValue,
     onValueChange,

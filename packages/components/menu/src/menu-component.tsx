@@ -28,7 +28,8 @@ import {
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { ChevronRightIcon } from "@jamsr-ui/shared-icons";
-import { cn } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import {
   useEffect,
@@ -57,22 +58,27 @@ export type MenuProps = {
   onOpenChange?: (open: boolean) => void;
 } & ComponentProps<"div">;
 
-export const MenuComponent = ({
-  children,
-  trigger,
-  triggerOn = "click",
-  placement,
-  nestedPlacement,
-  className,
-  classNames,
-  offset: offsetProp,
-  nestedOffset,
-  showArrow = false,
-  isOpen: propOpen,
-  initialOpen = false,
-  onOpenChange,
-  ...restProps
-}: MenuProps) => {
+export const MenuComponent = ($props: MenuProps) => {
+  const { menu: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
+  const {
+    children,
+    trigger,
+    triggerOn = "click",
+    placement,
+    nestedPlacement,
+    className,
+    classNames,
+    offset: offsetProp,
+    nestedOffset,
+    showArrow = false,
+    isOpen: propOpen,
+    initialOpen = false,
+    onOpenChange,
+    ...restProps
+  } = props;
+
   const [isOpen, setIsOpen] = useControlledState(
     initialOpen,
     propOpen,

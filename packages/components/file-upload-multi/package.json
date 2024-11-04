@@ -34,6 +34,7 @@
     "react-dropzone": "^14.2.3"
   },
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/dnd": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/progress": "workspace:^",

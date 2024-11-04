@@ -1,5 +1,6 @@
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { isEmpty } from "@jamsr-ui/utils";
+import { deepMergeProps, isEmpty } from "@jamsr-ui/utils";
 import { avatarVariants, type AvatarVariants } from "./style";
 
 export type AvatarProps<T extends React.ElementType = "img"> =
@@ -9,8 +10,10 @@ export type AvatarProps<T extends React.ElementType = "img"> =
   };
 
 export const Avatar = <T extends React.ElementType = "img">(
-  props: AvatarProps<T>,
+  $props: AvatarProps<T>,
 ) => {
+  const { avatar: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
   const {
     size,
     alt,

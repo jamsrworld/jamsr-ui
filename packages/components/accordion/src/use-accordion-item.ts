@@ -1,6 +1,8 @@
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
+  deepMergeProps,
   includes,
   type ComponentPropsWithAs,
   type PropGetter,
@@ -52,7 +54,10 @@ export type UseAccordionItemProps = ComponentPropsWithAs<"div", Props>;
 
 const accessKeys = ["Home", "End", "ArrowUp", "ArrowDown"] as const;
 
-export const useAccordionItem = (props: UseAccordionItemProps) => {
+export const useAccordionItem = ($props: UseAccordionItemProps) => {
+  const { accordionItem: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 
   //

@@ -1,5 +1,6 @@
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { cn, focusVisibleClasses } from "@jamsr-ui/utils";
+import { cn, deepMergeProps, focusVisibleClasses } from "@jamsr-ui/utils";
 
 export type LinkProps<T extends React.ElementType = "a"> =
   ComponentPropsWithAs<T> & {
@@ -7,8 +8,11 @@ export type LinkProps<T extends React.ElementType = "a"> =
   };
 
 export const Link = <T extends React.ElementType = "a">(
-  props: LinkProps<T>,
+  $props: LinkProps<T>,
 ) => {
+  const { link: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const { as, children, className, ...restProps } = props;
   const Component = as ?? "a";
   return (

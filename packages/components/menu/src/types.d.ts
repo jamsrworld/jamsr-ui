@@ -1,7 +1,8 @@
-import { type MenuProps } from ".";
+import { type MenuItemProps, type MenuProps } from ".";
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    menu?: Pick<MenuProps, "className" | "classNames">;
+    menu?: Partial<MenuProps>;
+    menuItem?: Partial<MenuItemProps>;
   }
 }

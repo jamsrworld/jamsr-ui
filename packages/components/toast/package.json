@@ -22,6 +22,7 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {

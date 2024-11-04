@@ -1,7 +1,9 @@
 import { Chip } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { Input, type InputProps } from "@jamsr-ui/input";
+import { useUIStyle } from "@jamsr-ui/styles";
 import { useCallback, useMemo, useState } from "react";
+import { deepMergeProps } from "@jamsr-ui/utils";
 
 type Props = {
   value?: Set<string>;
@@ -12,7 +14,10 @@ type Props = {
 
 export type TagsInputProps = Omit<InputProps, keyof Props> & Props;
 
-export const TagsInput = (props: TagsInputProps) => {
+export const TagsInput = ($props: TagsInputProps) => {
+  const { tagsInput: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const { onValueChange, defaultValue, value, classNames, ...restProps } =
     props;
   const delimiters = ["Enter", ","];

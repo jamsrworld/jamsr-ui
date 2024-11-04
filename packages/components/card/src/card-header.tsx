@@ -2,6 +2,7 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import { Typography } from "@jamsr-ui/typography";
 import {
   cn,
+  deepMergeProps,
   mergeClassNames,
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
@@ -25,8 +26,10 @@ export type CardHeaderProps<T extends React.ElementType = "div"> =
   };
 
 export const CardHeader = <T extends React.ElementType = "div">(
-  props: CardHeaderProps<T>,
+  $props: CardHeaderProps<T>,
 ) => {
+  const { cardHeader: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
   const {
     as,
     heading,

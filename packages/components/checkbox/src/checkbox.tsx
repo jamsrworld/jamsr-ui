@@ -1,5 +1,6 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { dataAttr, type SlotsToClasses } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { useId, type ChangeEvent, type ComponentProps } from "react";
 import { CheckboxCheckIcon } from "./checkbox-check-icon";
 import {
@@ -22,7 +23,10 @@ export type CheckboxProps = CheckboxVariantProps & {
   onBlur?: () => void;
 };
 
-export const Checkbox = (props: CheckboxProps) => {
+export const Checkbox = ($props: CheckboxProps) => {
+  const { checkbox: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const id = useId();
   const {
     isChecked: $checked,

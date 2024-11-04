@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable react/prop-types */
 import { useFloatingTree, useListItem } from "@floating-ui/react";
-import { dataAttr, type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import {
+  dataAttr,
+  deepMergeProps,
+  type ComponentPropsWithAs,
+} from "@jamsr-ui/utils";
 import { menuVariants } from "./style";
 import { useMenu } from "./use-menu";
 
@@ -16,8 +21,11 @@ export type MenuItemProps<T extends React.ElementType = "button"> =
   ComponentPropsWithAs<T, InternalProps>;
 
 export const MenuItem = <T extends React.ElementType = "button">(
-  props: MenuItemProps<T>,
+  $props: MenuItemProps<T>,
 ) => {
+  const { menuItem: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     children,
     disabled,

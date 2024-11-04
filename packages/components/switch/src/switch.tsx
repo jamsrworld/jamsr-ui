@@ -1,6 +1,7 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import { Typography } from "@jamsr-ui/typography";
-import { type SlotsToClasses } from "@jamsr-ui/utils";
+import { deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { m, type Variants } from "framer-motion";
 import { useId } from "react";
 import {
@@ -32,7 +33,10 @@ type Props = {
 
 export type SwitchProps = SwitchVariantProps & Props;
 
-export const Switch = (props: SwitchProps) => {
+export const Switch = ($props: SwitchProps) => {
+  const { switch: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const id = useId();
   const {
     checked: $checked,

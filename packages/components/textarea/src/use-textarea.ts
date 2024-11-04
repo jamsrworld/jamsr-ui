@@ -3,6 +3,7 @@ import { inputVariants } from "@jamsr-ui/input";
 import {
   cn,
   dataAttr,
+  deepMergeProps,
   isEmpty,
   useDOMRef,
   type PropGetter,
@@ -11,6 +12,7 @@ import {
 } from "@jamsr-ui/utils";
 import { useCallback, useState, type ComponentProps } from "react";
 
+import { useUIStyle } from "@jamsr-ui/styles";
 import { type TextareaSlots, type TextareaVariantProps } from "./style";
 
 type Props = {
@@ -34,7 +36,10 @@ export type UseTextareaProps = Props &
   UIProps<"textarea"> &
   TextareaVariantProps;
 
-export const useTextarea = (props: UseTextareaProps) => {
+export const useTextarea = ($props: UseTextareaProps) => {
+  const { textarea: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     as,
     label,

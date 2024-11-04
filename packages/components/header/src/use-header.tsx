@@ -1,5 +1,6 @@
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, UIProps } from "@jamsr-ui/utils";
-import { cn } from "@jamsr-ui/utils";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useCallback } from "react";
 import { header, type HeaderVariantProps } from "./style";
 
@@ -10,7 +11,10 @@ type Props = UIProps<"header"> & {
 
 export type UseHeaderProps = Props & HeaderVariantProps;
 
-export const useHeader = (props: UseHeaderProps) => {
+export const useHeader = ($props: UseHeaderProps) => {
+  const { header: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     blur,
     className,
@@ -19,7 +23,6 @@ export const useHeader = (props: UseHeaderProps) => {
     hideOnScroll = false,
     ...restProps
   } = props;
-
 
   const style = header({
     blur,

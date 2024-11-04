@@ -18,7 +18,8 @@ import {
   type Placement,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { cn } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { cloneElement, useRef } from "react";
 
 export type PopoverProps = {
@@ -37,7 +38,10 @@ export type PopoverProps = {
   offset?: number;
 };
 
-export const Popover = (props: PopoverProps) => {
+export const Popover = ($props: PopoverProps) => {
+  const { popover: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     trigger,
     children,

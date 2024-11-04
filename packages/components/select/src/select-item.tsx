@@ -1,7 +1,8 @@
 import { useListItem } from "@floating-ui/react";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { cn } from "@jamsr-ui/utils";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useSelectContext } from "./use-select-context";
 
 type Props = {
@@ -13,8 +14,11 @@ export type SelectItemProps<T extends React.ElementType = "button"> =
   ComponentPropsWithAs<T, Props>;
 
 export const SelectItem = <T extends React.ElementType = "button">(
-  props: SelectItemProps<T>,
+  $props: SelectItemProps<T>,
 ) => {
+  const { selectItem: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const { children, className, value, as, label, ...restProps } = props;
   const {
     activeIndex,

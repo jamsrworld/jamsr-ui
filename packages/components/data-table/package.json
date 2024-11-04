@@ -30,6 +30,7 @@
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/progress": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",

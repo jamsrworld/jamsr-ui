@@ -1,7 +1,9 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
+  deepMergeProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -22,9 +24,11 @@ interface Props extends UIProps<"input", keyof RadioVariantProps> {
 
 export type UseRadioProps = Props & RadioVariantProps;
 
-export const useRadio = (props: UseRadioProps) => {
-  const context = useRadioGroupContext();
+export const useRadio = ($props: UseRadioProps) => {
+  const { radio: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
+  const context = useRadioGroupContext();
   const {
     as,
     children,

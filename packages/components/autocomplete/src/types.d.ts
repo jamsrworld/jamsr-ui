@@ -1,7 +1,8 @@
-import { type AutocompleteProps } from ".";
+import { type AutocompleteItemProps, type AutocompleteProps } from ".";
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    autocomplete?: Pick<AutocompleteProps, "className" | "classNames">;
+    autocomplete?: Partial<AutocompleteProps>;
+    autocompleteItem?: Partial<AutocompleteItemProps>;
   }
 }

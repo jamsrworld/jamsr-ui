@@ -1,4 +1,5 @@
-import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import {
   type DividerSlots,
   dividerVariants,
@@ -11,7 +12,10 @@ export type DividerProps = DividerVariants & {
   children?: React.ReactNode;
 };
 
-export const Divider = (props: DividerProps) => {
+export const Divider = ($props: DividerProps) => {
+  const { divider: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     className,
     variant,

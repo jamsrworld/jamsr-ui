@@ -1,5 +1,6 @@
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn, mapPropsVariants } from "@jamsr-ui/utils";
+import { cn, deepMergeProps, mapPropsVariants } from "@jamsr-ui/utils";
 import { useCallback, useMemo, type ComponentProps } from "react";
 import { table, type TableSlots, type TableVariantProps } from "./style";
 
@@ -15,12 +16,11 @@ export type UseTableProps = TableVariantProps &
     };
   };
 
-export const useTable = (originalProps: UseTableProps) => {
-  const [props, variantProps] = mapPropsVariants(
-    originalProps,
-    table.variantKeys,
-  );
+export const useTable = ($props: UseTableProps) => {
+  const { table: Props = {} } = useUIStyle();
+  const $$props = deepMergeProps(Props, $props);
 
+  const [props, variantProps] = mapPropsVariants($$props, table.variantKeys);
   const {
     as,
     className,

@@ -1,5 +1,6 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import {
   type InputHTMLAttributes,
   useCallback,
@@ -27,7 +28,10 @@ export type OtpInputProps = {
   helperText?: string;
 };
 
-export const OtpInput = (props: OtpInputProps) => {
+export const OtpInput = ($props: OtpInputProps) => {
+  const { otpInput: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     numberOfDigits = 4,
     value: $value,

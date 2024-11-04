@@ -15,7 +15,8 @@ import {
   useRole,
   type Placement,
 } from "@floating-ui/react";
-import { cn } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { cloneElement, useRef, useState } from "react";
 
 export type TooltipProps = {
@@ -35,7 +36,10 @@ export type TooltipProps = {
   };
 };
 
-export const Tooltip = (props: TooltipProps) => {
+export const Tooltip = ($props: TooltipProps) => {
+  const { tooltip: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     title,
     children,

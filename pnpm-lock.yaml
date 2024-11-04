@@ -293,6 +293,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography
@@ -336,6 +339,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -355,6 +361,9 @@ importers:
 
   packages/components/avatar:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -374,6 +383,9 @@ importers:
 
   packages/components/badge:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -461,6 +473,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -489,6 +504,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -517,6 +535,9 @@ importers:
       '@jamsr-ui/divider':
         specifier: workspace:^
         version: link:../divider
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography
@@ -563,6 +584,9 @@ importers:
       '@jamsr-ui/skeleton':
         specifier: workspace:^
         version: link:../skeleton
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/table':
         specifier: workspace:^
         version: link:../table
@@ -609,6 +633,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -631,6 +658,9 @@ importers:
 
   packages/components/divider:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -684,6 +714,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -739,6 +772,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/switch':
         specifier: workspace:^
         version: link:../switch
@@ -836,6 +872,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -870,6 +909,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -895,6 +937,9 @@ importers:
       '@jamsr-ui/divider':
         specifier: workspace:^
         version: link:../divider
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -957,6 +1002,9 @@ importers:
 
   packages/components/link:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -985,6 +1033,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1013,6 +1064,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1038,6 +1092,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1066,6 +1123,9 @@ importers:
 
   packages/components/progress:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1091,6 +1151,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1122,6 +1185,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
     devDependencies:
       '@jamsr-ui/utils':
         specifier: workspace:^
@@ -1211,6 +1277,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1248,6 +1317,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1279,6 +1351,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1304,6 +1379,9 @@ importers:
 
   packages/components/skeleton:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1326,6 +1404,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography
@@ -1357,6 +1438,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1382,6 +1466,9 @@ importers:
 
   packages/components/table:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1410,6 +1497,12 @@ importers:
       '@jamsr-ui/input':
         specifier: workspace:^
         version: link:../input
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@jamsr-ui/avatar':
         specifier: workspace:^
@@ -1441,6 +1534,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1460,6 +1556,9 @@ importers:
 
   packages/components/toast:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       react-hot-toast:
         specifier: ^2.4.1
         version: 2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
@@ -1485,6 +1584,9 @@ importers:
       '@floating-ui/react':
         specifier: ^0.26.16
         version: 0.26.24(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1510,6 +1612,9 @@ importers:
 
   packages/components/typography:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils

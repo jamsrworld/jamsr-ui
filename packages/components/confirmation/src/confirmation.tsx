@@ -8,8 +8,9 @@ import {
   DialogHeader,
 } from "@jamsr-ui/dialog";
 import { Divider } from "@jamsr-ui/divider";
+import { useUIStyle } from "@jamsr-ui/styles";
 import { Typography } from "@jamsr-ui/typography";
-import { cn } from "@jamsr-ui/utils";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useConfirmation } from "./use-confirmation";
 
 export type ConfirmationProps = {
@@ -27,8 +28,11 @@ export type ConfirmationProps = {
   };
 };
 
-export const Confirmation = (pros: ConfirmationProps) => {
-  const { cancelBtnProps, successBtnProps, classNames, className } = pros;
+export const Confirmation = ($props: ConfirmationProps) => {
+  const { confirmation: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
+  const { cancelBtnProps, successBtnProps, classNames, className } = props;
   const { isOpen, onClose, options: confirmation } = useConfirmation();
   if (!confirmation) return null;
   const { message, onCancel, onConfirm, title } = confirmation;
@@ -46,7 +50,7 @@ export const Confirmation = (pros: ConfirmationProps) => {
       <DialogContent
         className={cn(
           "max-w-[280px] rounded-lg bg-background-secondary",
-          classNames,
+          className,
           classNames?.content,
         )}
       >

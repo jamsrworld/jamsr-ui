@@ -1,7 +1,8 @@
 import { Button } from "@jamsr-ui/button";
 import { CloseIcon } from "@jamsr-ui/shared-icons";
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { cn } from "@jamsr-ui/utils";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import React from "react";
 
 export type ChipProps<T extends React.ElementType = "div"> =
@@ -11,8 +12,11 @@ export type ChipProps<T extends React.ElementType = "div"> =
   };
 
 export const Chip = <T extends React.ElementType = "div">(
-  props: ChipProps<T>,
+  $props: ChipProps<T>,
 ) => {
+  const { chip: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const { as, children, onDelete, className, ...restProps } = props;
   const Comp = as ?? "div";
   return (

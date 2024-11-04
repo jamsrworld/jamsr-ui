@@ -33,6 +33,7 @@
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },

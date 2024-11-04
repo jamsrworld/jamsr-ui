@@ -31,6 +31,7 @@
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^"

@@ -1,7 +1,8 @@
-import { type RadioProps } from ".";
+import { type RadioGroupProps, type RadioProps } from ".";
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    radio?: Pick<RadioProps, "className" | "classNames">;
+    radio?: Partial<RadioProps>;
+    radioGroup?: Partial<RadioGroupProps>;
   }
 }

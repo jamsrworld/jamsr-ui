@@ -1,11 +1,20 @@
-import { cn, type ComponentPropsWithAs, type UIProps } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import {
+  cn,
+  deepMergeProps,
+  type ComponentPropsWithAs,
+  type UIProps,
+} from "@jamsr-ui/utils";
 import { useTableContext } from "./table-context";
 
 export type TableColumnProps = UIProps<"th">;
 
 export const TableColumn = <T extends React.ElementType = "th">(
-  props: ComponentPropsWithAs<T>,
+  $props: ComponentPropsWithAs<T>,
 ) => {
+  const { tableColumn: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     as,
     children,

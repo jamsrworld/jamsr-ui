@@ -1,8 +1,10 @@
 import { useControlledState } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
+  deepMergeProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -44,7 +46,10 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
 
 export type UseSingleFileUploadProps = Props & UIProps<"div", keyof Props>;
 
-export const useSingleFileUpload = (props: UseSingleFileUploadProps) => {
+export const useSingleFileUpload = ($props: UseSingleFileUploadProps) => {
+  const { fileUpload: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     value: $value,
     defaultValue,

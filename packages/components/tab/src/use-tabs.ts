@@ -1,7 +1,9 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
+  deepMergeProps,
   filterDOMProps,
   isEmpty,
   type PropGetter,
@@ -27,7 +29,10 @@ export type UseTabsProps<T extends string> = UIProps<"div"> &
   TabVariants &
   Props<T>;
 
-export const useTabs = <T extends string>(props: UseTabsProps<T>) => {
+export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
+  const { tab: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     classNames,
     className,

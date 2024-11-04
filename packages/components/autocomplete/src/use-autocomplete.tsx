@@ -14,7 +14,13 @@ import {
 import { Chip } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import type { InputProps } from "@jamsr-ui/input";
-import { cn, type PropGetter, type SlotsToClasses } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import {
+  cn,
+  deepMergeProps,
+  type PropGetter,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import React, {
   Children,
@@ -54,7 +60,9 @@ export type UseAutocompleteProps = Pick<
   inputProps?: Partial<InputProps>;
 };
 
-export const useAutocomplete = (props: UseAutocompleteProps) => {
+export const useAutocomplete = ($props: UseAutocompleteProps) => {
+  const { autocomplete: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const {
     className,

@@ -9,7 +9,8 @@ import {
   useRole,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { AnimatePresence, m, type Variant } from "framer-motion";
 import { type ComponentProps, useState } from "react";
 import { drawer, type DrawerSlots, type DrawerVariants } from "./style";
@@ -96,7 +97,10 @@ const variants: { initial: Variant; animate: Variant; exit: Variant } = {
   },
 };
 
-export const Drawer = (props: DrawerProps) => {
+export const Drawer = ($props: DrawerProps) => {
+  const { drawer: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const [isAnimating, setIsAnimating] = useState(false);
   const {
     children,

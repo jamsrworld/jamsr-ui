@@ -3,7 +3,12 @@ import {
   FloatingOverlay,
   FloatingPortal,
 } from "@floating-ui/react";
-import type { ComponentPropsWithAs, UIProps } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import {
+  deepMergeProps,
+  type ComponentPropsWithAs,
+  type UIProps,
+} from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import { DialogClose } from "./dialog-close";
 import { useDialogContext } from "./dialog-context";
@@ -11,8 +16,11 @@ import { useDialogContext } from "./dialog-context";
 export type DialogContentProps = UIProps<"div">;
 
 export const DialogContent = <T extends React.ElementType = "div">(
-  props: ComponentPropsWithAs<T, DialogContentProps>,
+  $props: ComponentPropsWithAs<T, DialogContentProps>,
 ) => {
+  const { dialogContent: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const { as, children, className } = props;
   const {
     interactions,

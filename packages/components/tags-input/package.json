@@ -35,7 +35,9 @@
   "dependencies": {
     "@jamsr-ui/chip": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
-    "@jamsr-ui/input": "workspace:^"
+    "@jamsr-ui/input": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^"
   },
   "clean-package": "../../../clean-package.config.json"
 }

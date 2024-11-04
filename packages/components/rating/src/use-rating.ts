@@ -1,6 +1,7 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses } from "@jamsr-ui/utils";
-import { cn, dataAttr } from "@jamsr-ui/utils";
+import { cn, dataAttr, deepMergeProps } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import { useCallback } from "react";
 import type { RatingSlots } from "./style";
@@ -19,7 +20,10 @@ export type UseRatingProps = {
   helperText?: string;
 } & ComponentProps<"div">;
 
-export const useRating = (props: UseRatingProps) => {
+export const useRating = ($props: UseRatingProps) => {
+  const { rating: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     className,
     classNames,

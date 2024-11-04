@@ -1,7 +1,8 @@
-import { type AccordionProps } from ".";
+import { type AccordionItemProps, type AccordionProps } from ".";
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    accordion?: Pick<AccordionProps, "className">;
+    accordion?: Partial<AccordionProps>;
+    accordionItem?: Partial<AccordionItemProps>;
   }
 }

@@ -13,8 +13,9 @@ import {
   useTypeahead,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn, dataAttr } from "@jamsr-ui/utils";
+import { cn, dataAttr, deepMergeProps } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import {
   Children,
@@ -55,7 +56,10 @@ type Props = SelectVariantProps & {
 export type UseSelectInnerProps = Props;
 export type UseSelectProps = Props & UIProps<"div", keyof Props>;
 
-export const useSelect = (props: UseSelectProps) => {
+export const useSelect = ($props: UseSelectProps) => {
+  const { select: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     label,
     children,

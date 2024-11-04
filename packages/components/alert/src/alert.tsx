@@ -1,11 +1,13 @@
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
+  deepMergeProps,
   type ComponentPropsWithAs,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
 import { useCallback } from "react";
 import { Error, Info, Success, Warning } from "./icons";
-import { type AlertSlots, alertVariant, type AlertVariantProps } from "./style";
+import { alertVariant, type AlertSlots, type AlertVariantProps } from "./style";
 
 export type AlertProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T, AlertVariantProps> & {
@@ -16,8 +18,10 @@ export type AlertProps<T extends React.ElementType = "div"> =
   };
 
 export const Alert = <T extends React.ElementType = "div">(
-  props: AlertProps<T>,
+  $props: AlertProps<T>,
 ) => {
+  const { alert: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
   const {
     children,
     severity,

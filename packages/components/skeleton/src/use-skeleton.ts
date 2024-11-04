@@ -1,6 +1,8 @@
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
+  deepMergeProps,
   mapPropsVariants,
   type PropGetter,
   type SlotsToClasses,
@@ -21,12 +23,11 @@ interface Props extends UIProps<"div"> {
 
 export type UseSkeletonProps = Props & SkeletonVariantProps;
 
-export function useSkeleton(originalProps: UseSkeletonProps) {
-  const [props, variantProps] = mapPropsVariants(
-    originalProps,
-    skeleton.variantKeys,
-  );
+export function useSkeleton($props: UseSkeletonProps) {
+  const { skeleton: Props = {} } = useUIStyle();
+  const $$props = deepMergeProps(Props, $props);
 
+  const [props, variantProps] = mapPropsVariants($$props, skeleton.variantKeys);
   const {
     as,
     children,

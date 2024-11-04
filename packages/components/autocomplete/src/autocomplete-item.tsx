@@ -1,7 +1,8 @@
 import { useListItem } from "@floating-ui/react";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
+import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { cn } from "@jamsr-ui/utils";
+import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useAutocompleteContext } from "./use-autocomplete-context";
 
 type Props = {
@@ -14,8 +15,11 @@ export type AutocompleteItemProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T, Props>;
 
 export const AutocompleteItem = <T extends React.ElementType = "div">(
-  props: AutocompleteItemProps<T>,
+  $props: AutocompleteItemProps<T>,
 ) => {
+  const { autocompleteItem: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const { children, className, value, as, label, renderLabel, ...restProps } =
     props;
 

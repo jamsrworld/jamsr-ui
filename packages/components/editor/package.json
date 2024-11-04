@@ -29,6 +29,7 @@
   },
   "clean-package": "../../../clean-package-css.config.json",
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
     "@jamsr-ui/file-upload": "workspace:^",

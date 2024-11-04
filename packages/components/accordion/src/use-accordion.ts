@@ -1,9 +1,10 @@
-import { type PropGetter, type UIProps } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import { deepMergeProps, type PropGetter, type UIProps } from "@jamsr-ui/utils";
 import { useCallback, useMemo } from "react";
 import {
   accordion,
-  type AccordionItemVariantProps,
   type AccordionGroupVariantProps,
+  type AccordionItemVariantProps,
 } from "./style";
 
 type Props = {
@@ -16,7 +17,10 @@ export type UseAccordionProps = UIProps<"div"> &
   AccordionItemVariantProps &
   AccordionGroupVariantProps;
 
-export const useAccordion = (props: UseAccordionProps) => {
+export const useAccordion = ($props: UseAccordionProps) => {
+  const { accordion: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     as,
     children,

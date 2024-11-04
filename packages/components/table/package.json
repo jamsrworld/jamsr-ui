@@ -19,6 +19,7 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "devDependencies": {

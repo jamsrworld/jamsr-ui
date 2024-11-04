@@ -1,0 +1,1 @@
+turbo build --filter='@jamsr-ui/alert*' && npx changeset && npx changeset version && npx changeset publish

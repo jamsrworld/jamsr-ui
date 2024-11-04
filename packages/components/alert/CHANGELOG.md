@@ -1,5 +1,11 @@
 # @jamsr-ui/alert
 
+## 0.0.74
+
+### Patch Changes
+
+- fix alertr
+
 ## 0.0.73
 
 ### Patch Changes

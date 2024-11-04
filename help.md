@@ -1,1 +1,1 @@
-turbo build --filter='@jamsr-ui/card*' && npx changeset && npx changeset version && npx changeset publish
+turbo build --filter='@jamsr-ui/input*' && npx changeset && npx changeset version && npx changeset publish

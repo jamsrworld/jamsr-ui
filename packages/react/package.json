@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.158",
+  "version": "0.0.159",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"
@@ -72,6 +72,7 @@
     "@jamsr-ui/table": "workspace:^",
     "@jamsr-ui/tags-input": "workspace:^",
     "@jamsr-ui/textarea": "workspace:^",
+    "@jamsr-ui/theme": "workspace:^",
     "@jamsr-ui/toast": "workspace:^",
     "@jamsr-ui/tooltip": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",

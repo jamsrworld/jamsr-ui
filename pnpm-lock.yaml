@@ -229,9 +229,6 @@ importers:
       '@jamsr-ui/eslint-config':
         specifier: workspace:^
         version: link:../../packages/config/eslint-config
-      '@jamsr-ui/types':
-        specifier: workspace:^
-        version: link:../../packages/types
       '@types/node':
         specifier: 22.8.1
         version: 22.8.1
@@ -1758,6 +1755,9 @@ importers:
       '@jamsr-ui/textarea':
         specifier: workspace:^
         version: link:../components/textarea
+      '@jamsr-ui/theme':
+        specifier: workspace:^
+        version: link:../theme
       '@jamsr-ui/toast':
         specifier: workspace:^
         version: link:../components/toast
@@ -1895,138 +1895,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.6.2
-
-  packages/types:
-    devDependencies:
-      '@jamsr-ui/accordion':
-        specifier: workspace:^
-        version: link:../components/accordion
-      '@jamsr-ui/alert':
-        specifier: workspace:^
-        version: link:../components/alert
-      '@jamsr-ui/autocomplete':
-        specifier: workspace:^
-        version: link:../components/autocomplete
-      '@jamsr-ui/avatar':
-        specifier: workspace:^
-        version: link:../components/avatar
-      '@jamsr-ui/badge':
-        specifier: workspace:^
-        version: link:../components/badge
-      '@jamsr-ui/button':
-        specifier: workspace:^
-        version: link:../components/button
-      '@jamsr-ui/card':
-        specifier: workspace:^
-        version: link:../components/card
-      '@jamsr-ui/checkbox':
-        specifier: workspace:^
-        version: link:../components/checkbox
-      '@jamsr-ui/chip':
-        specifier: workspace:^
-        version: link:../components/chip
-      '@jamsr-ui/confirmation':
-        specifier: workspace:^
-        version: link:../components/confirmation
-      '@jamsr-ui/data-table':
-        specifier: workspace:^
-        version: link:../components/data-table
-      '@jamsr-ui/dialog':
-        specifier: workspace:^
-        version: link:../components/dialog
-      '@jamsr-ui/divider':
-        specifier: workspace:^
-        version: link:../components/divider
-      '@jamsr-ui/dnd':
-        specifier: workspace:^
-        version: link:../components/dnd
-      '@jamsr-ui/drawer':
-        specifier: workspace:^
-        version: link:../components/drawer
-      '@jamsr-ui/editor':
-        specifier: workspace:^
-        version: link:../components/editor
-      '@jamsr-ui/file-upload':
-        specifier: workspace:^
-        version: link:../components/file-upload
-      '@jamsr-ui/file-upload-multi':
-        specifier: workspace:^
-        version: link:../components/file-upload-multi
-      '@jamsr-ui/header':
-        specifier: workspace:^
-        version: link:../components/header
-      '@jamsr-ui/input':
-        specifier: workspace:^
-        version: link:../components/input
-      '@jamsr-ui/link':
-        specifier: workspace:^
-        version: link:../components/link
-      '@jamsr-ui/menu':
-        specifier: workspace:^
-        version: link:../components/menu
-      '@jamsr-ui/otp-input':
-        specifier: workspace:^
-        version: link:../components/otp-input
-      '@jamsr-ui/popover':
-        specifier: workspace:^
-        version: link:../components/popover
-      '@jamsr-ui/progress':
-        specifier: workspace:^
-        version: link:../components/progress
-      '@jamsr-ui/radio':
-        specifier: workspace:^
-        version: link:../components/radio
-      '@jamsr-ui/rating':
-        specifier: workspace:^
-        version: link:../components/rating
-      '@jamsr-ui/repeater':
-        specifier: workspace:^
-        version: link:../components/repeater
-      '@jamsr-ui/rhf':
-        specifier: workspace:^
-        version: link:../components/rhf
-      '@jamsr-ui/ripple':
-        specifier: workspace:^
-        version: link:../components/ripple
-      '@jamsr-ui/select':
-        specifier: workspace:^
-        version: link:../components/select
-      '@jamsr-ui/skeleton':
-        specifier: workspace:^
-        version: link:../components/skeleton
-      '@jamsr-ui/styles':
-        specifier: workspace:^
-        version: link:../styles
-      '@jamsr-ui/switch':
-        specifier: workspace:^
-        version: link:../components/switch
-      '@jamsr-ui/tab':
-        specifier: workspace:^
-        version: link:../components/tab
-      '@jamsr-ui/table':
-        specifier: workspace:^
-        version: link:../components/table
-      '@jamsr-ui/tags-input':
-        specifier: workspace:^
-        version: link:../components/tags-input
-      '@jamsr-ui/textarea':
-        specifier: workspace:^
-        version: link:../components/textarea
-      '@jamsr-ui/toast':
-        specifier: workspace:^
-        version: link:../components/toast
-      '@jamsr-ui/tooltip':
-        specifier: workspace:^
-        version: link:../components/tooltip
-      '@jamsr-ui/typography':
-        specifier: workspace:^
-        version: link:../components/typography
-      '@jamsr-ui/utils':
-        specifier: workspace:^
-        version: link:../utils
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
 
   packages/utils:
     dependencies:

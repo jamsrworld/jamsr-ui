@@ -11,7 +11,7 @@ export const inputVariants = tv({
     inputWrapper: [
       "grow overflow-hidden",
       "hover:border-default-400",
-      "group-data-[focus=true]:border-primary group-data-[focus=true]:ring-primary",
+      "group-data-[focused=true]:border-primary group-data-[focused=true]:ring-primary",
     ],
     innerWrapper: "flex h-full items-center",
     input: [

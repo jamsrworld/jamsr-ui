@@ -1,3 +1,4 @@
+/* eslint-disable */
 import clsx, { type ClassValue } from "clsx";
 import { extendTailwindMerge } from "tailwind-merge";
 
@@ -11,31 +12,56 @@ const tw = extendTailwindMerge({
   },
 });
 
-// const customModifier = ["hover", "disabled"];
-// const filterClassName = (className: ClassValue) => {
-//   if (typeof className === "string") {
-//     customModifier.forEach((modifier) => {
-//       className = className.replace(`ui-${modifier}`, modifier);
-//     });
-//     return className;
-//   }
-//   return className;
-// };
-
 export const cn = (...inputs: ClassValue[]) => {
   return tw(clsx(inputs));
 };
 
-// console.log(
-//   cn(
-//     "bg-warning-500",
-//     "bg-warning-600",
-//     "hover:bg-warning-500",
-//     "hover:bg-warning-600",
-//     "ui-hover:bg-warning-500",
-//     "ui-hover:bg-warning-600",
-//   ),
-// );
+export function deepMergeProps<T extends object, U extends object>(
+  obj1: T,
+  obj2: U,
+): U {
+  const result = { ...obj1 } as any;
+
+  for (const key in obj2) {
+    if (obj2.hasOwnProperty(key)) {
+      if (key === "className") {
+        // For className (string), concatenate the Tailwind classes
+        result[key] = cn(result[key], obj2[key] as string);
+      } else if (
+        key === "classNames" &&
+        typeof obj2[key] === "object" &&
+        !Array.isArray(obj2[key])
+      ) {
+        // For classNames (object), merge the properties
+        result[key] = { ...result[key] }; // Ensure classNames exists in result
+
+        for (const subKey in obj2[key]) {
+          if (obj2[key].hasOwnProperty(subKey)) {
+            // Concatenate Tailwind classes for each key
+            result[key][subKey] = cn(
+              result[key][subKey],
+              obj2[key][subKey] as string,
+            );
+          }
+        }
+      } else if (
+        typeof obj2[key] === "object" &&
+        obj2[key] !== null &&
+        !Array.isArray(obj2[key]) &&
+        typeof result[key] === "object" &&
+        result[key] !== null
+      ) {
+        // For other objects, perform a deep merge
+        result[key] = deepMergeProps(result[key], obj2[key]);
+      } else {
+        // Otherwise, directly assign obj2's value
+        result[key] = obj2[key];
+      }
+    }
+  }
+
+  return result;
+}
 
 export const mergeClassNames = <T extends Record<string, any>>(
   left?: T,

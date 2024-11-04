@@ -31,7 +31,7 @@
     ".next/types/**/*.ts",
     "*.config.mjs",
     "*.config.cjs",
-    "../../packages/types/*.d.ts",
+    "../../packages/components/*/src/*.d.ts",
     ".eslintrc.cjs"
   ],
   "exclude": ["node_modules"]

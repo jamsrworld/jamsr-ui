@@ -7,9 +7,9 @@ import {
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    card?: Pick<CardProps, "className">;
-    cardHeader?: Pick<CardHeaderProps, "className" | "classNames">;
-    cardFooter?: Pick<CardFooterProps, "className">;
-    cardContent?: Pick<CardContentProps, "className">;
+    card?: CardProps;
+    cardHeader?: CardHeaderProps;
+    cardFooter?: CardFooterProps;
+    cardContent?: CardContentProps;
   }
 }

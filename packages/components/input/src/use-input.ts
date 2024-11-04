@@ -1,10 +1,10 @@
-import { useUIStyle } from "@jamsr-ui/styles";
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
+  deepMergeProps,
   isEmpty,
-  mergeClassNames,
   mergeProps,
   useDOMRef,
   type PropGetter,
@@ -48,13 +48,15 @@ type Props = {
 type InputProps = UIProps<"input">;
 export type UseInputProps = InputProps & Props & InputVariantProps;
 
-export const useInput = (props: UseInputProps) => {
+export const useInput = ($props: UseInputProps) => {
+  const { input = {} } = useUIStyle();
+  const props = deepMergeProps(input, $props);
   const {
     as,
     label,
     labelHelperContent,
     className,
-    classNames: $classNames,
+    classNames,
     size,
     mask,
     defaultValue,
@@ -84,8 +86,6 @@ export const useInput = (props: UseInputProps) => {
     isTextarea,
     ...restProps
   } = props;
-  const { input } = useUIStyle();
-  const classNames = mergeClassNames(input?.classNames, $classNames);
 
   const Component = as ?? "div";
   const InputComponent = "input";

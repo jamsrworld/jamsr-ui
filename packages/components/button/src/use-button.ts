@@ -1,5 +1,11 @@
 import { useHover, useMergeRefs, usePress } from "@jamsr-ui/hooks";
-import { type PropGetter, type UIProps } from "@jamsr-ui/utils";
+import { useUIStyle } from "@jamsr-ui/styles";
+import {
+  dataAttr,
+  deepMergeProps,
+  type PropGetter,
+  type UIProps,
+} from "@jamsr-ui/utils";
 import { useCallback, useMemo } from "react";
 import { button, type ButtonVariantProps } from "./style";
 
@@ -16,7 +22,9 @@ type Props = UIProps<"button"> & {
 
 export type UseButtonProps = Props & ButtonVariantProps;
 
-export const useButton = (props: UseButtonProps) => {
+export const useButton = ($props: UseButtonProps) => {
+  const { button: buttonStyles = {} } = useUIStyle();
+  const props = deepMergeProps(buttonStyles, $props);
   const {
     as,
     children,
@@ -40,6 +48,7 @@ export const useButton = (props: UseButtonProps) => {
     ...restProps
   } = props;
   const isDisabled = isLoading || disabled || $isDisabled;
+
   const { isPressed, ref: pressRef } = usePress({
     isDisabled,
   });
@@ -49,7 +58,6 @@ export const useButton = (props: UseButtonProps) => {
   const ref = useMergeRefs([pressRef, hoverRef, $ref]);
 
   const Component = as ?? "button";
-
   const styles = useMemo(
     () =>
       button({
@@ -78,9 +86,10 @@ export const useButton = (props: UseButtonProps) => {
     return {
       ...restProps,
       disabled: isDisabled,
-      "data-disabled": isDisabled,
-      "data-pressed": isPressed,
-      "data-hovered": isHovered,
+      "data-disabled": dataAttr(isDisabled),
+      "aria-disabled": dataAttr(isDisabled),
+      "data-pressed": dataAttr(isPressed),
+      "data-hovered": dataAttr(isHovered),
       type,
       ref,
     };

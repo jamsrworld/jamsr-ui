@@ -1,7 +1,16 @@
 import { CodeSnippet } from "@/components/code-snippet";
 import { VariantPage } from "@/components/variant-page";
-import { Alert, Badge, Divider, Tab, Tabs, Typography } from "@jamsr-ui/react";
-import { Metadata } from "next";
+import { JAMSR_UI_TEMPLATE_GITHUB_URL } from "@/config";
+import {
+  Alert,
+  Badge,
+  Divider,
+  Link,
+  Tab,
+  Tabs,
+  Typography,
+} from "@jamsr-ui/react";
+import { type Metadata } from "next";
 import { NpmIcon, PnpmIcon, YarnIcon } from "./assets/icons";
 
 const title = "Installation";
@@ -52,8 +61,9 @@ const items: { heading: string; content: React.ReactNode }[] = [
         </Typography>
         <CodeSnippet>public-hoist-pattern[]=*@jamsr-ui/*</CodeSnippet>
         <Typography as="p">
-          After modifying the .npmrc file, you need to run pnpm install again to
-          ensure that the dependencies are installed correctly
+          After modifying the .npmrc file, you need to delete the previous
+          node_modules and reinstall again to ensure that the dependencies are
+          installed correctly
         </Typography>
       </div>
     ),
@@ -84,12 +94,9 @@ const config = withJamsrUI({
   content: [
     // ...
     // make sure it's pointing to the ROOT node_module
-    "./node_modules/@jamsr-ui/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@jamsr-ui/*/dist/*.js",
   ],
-  theme: {
-    extend: {},
-  },
-  darkMode: "class",
+  ...
 });
 export default config;
 
@@ -107,13 +114,9 @@ export default config;
           application.
         </Typography>
         <CodeSnippet>
-          {`import * as React from "react";
-
-// 1. import \`UIProvider\` component
-import { UIProvider } from "@jamsr-ui/react";
-
+          {`import { UIProvider } from "@jamsr-ui/react";
+          
 function App() {
-  // 2. Wrap UIProvider at the root of your app
   return (
     <UIProvider>
       <YourApplication />
@@ -132,10 +135,19 @@ const Page = () => {
       <Alert variant="solid" severity="default">
         Jamsr UI is only supported in Next.js
       </Alert>
-      <div className="flex flex-col my-8 gap-8 relative">
+
+      <Typography as="p" variant="body1">
+        Get started with{" "}
+        <Link href={JAMSR_UI_TEMPLATE_GITHUB_URL} target="_blank">
+          JamsrUI Next.js template
+        </Link>{" "}
+      </Typography>
+
+      <Divider>OR</Divider>
+      <div className="relative my-8 flex flex-col gap-8">
         <Divider
           orientation="vertical"
-          className="absolute h-full top-0 left-4 -z-1"
+          className="absolute left-4 top-0 -z-1 h-full"
         />
         {items.map((item, idx) => {
           const { content, heading } = item;

@@ -1,7 +1,7 @@
 export { tv, type VariantProps, type ClassProp } from "tailwind-variants";
 export * from "./array";
 export * from "./assertion";
-export { cn, mergeClassNames } from "./class-name";
+export { cn, mergeClassNames, deepMergeProps } from "./class-name";
 export * from "./classes";
 export * from "./color-variants";
 export * from "./component";

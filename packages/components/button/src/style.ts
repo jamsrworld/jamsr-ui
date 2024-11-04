@@ -20,8 +20,8 @@ const baseVariant = tv({
     "tap-highlight-transparent",
     "subpixel-antialiased",
     "transition-transform",
-    "disabled:opacity-50",
     "focus-visible:ring-2 focus-visible:ring-primary",
+    "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
   ],
   variants: {
     color: {

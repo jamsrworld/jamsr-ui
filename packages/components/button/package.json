@@ -37,6 +37,7 @@
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/progress": "workspace:^",
     "@jamsr-ui/ripple": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "clean-package": "../../../clean-package.config.json"

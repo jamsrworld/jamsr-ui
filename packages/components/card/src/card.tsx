@@ -1,31 +1,25 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { type ComponentPropsWithoutRef } from "react";
+import { cn, deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { cardVariants, type CardVariants } from "./style";
 
-export type CardProps = ComponentPropsWithoutRef<"div"> &
-  CardVariants & {
-    isPending?: boolean;
-    isLoading?: boolean;
-  };
+export type CardProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T> &
+    CardVariants & {
+      isPending?: boolean;
+      isLoading?: boolean;
+    };
 
 export const Card = <T extends React.ElementType = "div">(
-  props: ComponentPropsWithAs<T, CardProps>,
+  $props: CardProps<T>,
 ) => {
-  const {
-    as,
-    className: $className,
-    children,
-    bg,
-    bordered,
-    ...restProps
-  } = props;
+  const { card: $styles = {} } = useUIStyle();
+  const props = deepMergeProps($styles, $props);
+  const { as, className: $className, children, bg, ...restProps } = props;
   const Component = as ?? "div";
   const { card } = useUIStyle();
   const className = cardVariants({
     bg,
     className: cn(card?.className, $className),
-    bordered,
   });
   return (
     <Component

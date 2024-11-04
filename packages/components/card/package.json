@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/card",
-  "version": "0.0.69",
+  "version": "0.0.70",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -34,6 +34,7 @@
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "dependencies": {
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },

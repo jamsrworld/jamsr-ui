@@ -424,6 +424,9 @@ importers:
 
   packages/components/card:
     dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography

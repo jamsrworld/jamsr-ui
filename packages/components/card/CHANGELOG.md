@@ -1,5 +1,11 @@
 # @jamsr-ui/card
 
+## 0.0.70
+
+### Patch Changes
+
+- fix deps
+
 ## 0.0.69
 
 ### Patch Changes

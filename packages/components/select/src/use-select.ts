@@ -240,7 +240,7 @@ export const useSelect = (props: UseSelectProps) => {
       "data-component": "select",
       "data-slot": "base",
       "data-open": dataAttr(isOpen),
-      "data-hover": dataAttr(isHovered),
+      "data-hovered": dataAttr(isHovered),
       ...props,
       className: styles.base({
         className: cn(classNames?.base, className),

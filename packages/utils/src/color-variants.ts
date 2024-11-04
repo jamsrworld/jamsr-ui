@@ -29,12 +29,12 @@ const textClasses = {
 };
 
 const lightClasses = {
-  default: "bg-transparent text-foreground data-[hover=true]:bg-default-100",
-  primary: "bg-transparent text-primary data-[hover=true]:bg-primary-50",
-  secondary: "bg-transparent text-secondary data-[hover=true]:bg-secondary-50",
-  success: "bg-transparent text-success data-[hover=true]:bg-success-50",
-  warning: "bg-transparent text-warning data-[hover=true]:bg-warning-50",
-  danger: "bg-transparent text-danger data-[hover=true]:bg-danger-50",
+  default: "bg-transparent text-foreground ui-hover:bg-default-100",
+  primary: "bg-transparent text-primary ui-hover:bg-primary-50",
+  secondary: "bg-transparent text-secondary ui-hover:bg-secondary-50",
+  success: "bg-transparent text-success ui-hover:bg-success-50",
+  warning: "bg-transparent text-warning ui-hover:bg-warning-50",
+  danger: "bg-transparent text-danger ui-hover:bg-danger-50",
 };
 
 export const colorVariants = {

@@ -119,7 +119,7 @@ export const useTextarea = (props: UseTextareaProps) => {
           className: cn(classNames?.base, props?.className),
         }),
         ref: baseRef,
-        "data-focus": dataAttr(isFocused),
+        "data-focused": dataAttr(isFocused),
         "data-filled-within": dataAttr(isFilledWithin),
         "data-has-label": dataAttr(hasLabel),
         "data-has-start-content": dataAttr(hasStartContent),

@@ -80,7 +80,7 @@ export const useButton = (props: UseButtonProps) => {
       disabled: isDisabled,
       "data-disabled": isDisabled,
       "data-pressed": isPressed,
-      "data-hover": isHovered,
+      "data-hovered": isHovered,
       type,
       ref,
     };

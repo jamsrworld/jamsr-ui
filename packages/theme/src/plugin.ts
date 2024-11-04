@@ -3,7 +3,7 @@ import plugin from "tailwindcss/plugin";
 import { createThemes } from "tw-colors";
 import { type UIThemeConfig } from ".";
 import { semanticColors } from "./colors";
-import { SemanticBaseColors } from "./colors/types";
+import { type SemanticBaseColors } from "./colors/types";
 
 export const jamsrUiPlugins = (config?: UIThemeConfig) => {
   const finalColors = deepMerge(
@@ -12,7 +12,8 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
   ) as SemanticBaseColors;
   return [
     plugin(
-      ({ addUtilities, addComponents, addVariant }) => {
+      // eslint-disable-next-line @typescript-eslint/unbound-method
+      ({ addUtilities, addVariant }) => {
         // variants
         addVariant("ui-disabled", "&[data-disabled=true]");
         addVariant("ui-readonly", "&[data-readonly=true]");
@@ -27,15 +28,6 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
         addVariant("ui-selected", "&[data-selected=true]");
         addVariant("ui-filled-within", "&[data-filled-within=true]");
         addVariant("ui-focus-visible", "&[data-focus-visible=true]");
-
-        addComponents({
-          ".gap-responsive": {
-            "@apply gap-1 md:gap-2 lg:gap-4": "",
-          },
-          strong: {
-            "@apply font-semibold": "",
-          },
-        });
         addUtilities({
           ".tap-highlight-transparent": {
             "-webkit-tap-highlight-color": "transparent",
@@ -62,9 +54,6 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
               dialog: "99",
               header: "50",
               drawer: "60",
-            },
-            boxShadow: {
-              card: "inset 0 0 90px rgba(255,255,255,.15)",
             },
             fontSize: {
               "size-inherit": "inherit",

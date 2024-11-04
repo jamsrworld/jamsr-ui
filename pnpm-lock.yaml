@@ -186,6 +186,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../packages/shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../packages/styles
       '@jamsr-ui/theme':
         specifier: workspace:*
         version: link:../../packages/theme
@@ -226,9 +229,6 @@ importers:
       '@jamsr-ui/eslint-config':
         specifier: workspace:^
         version: link:../../packages/config/eslint-config
-      '@jamsr-ui/styles':
-        specifier: workspace:^
-        version: link:../../packages/styles
       '@jamsr-ui/types':
         specifier: workspace:^
         version: link:../../packages/types
@@ -424,9 +424,6 @@ importers:
 
   packages/components/card:
     dependencies:
-      '@jamsr-ui/styles':
-        specifier: workspace:^
-        version: link:../../styles
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography
@@ -1740,6 +1737,9 @@ importers:
       '@jamsr-ui/skeleton':
         specifier: workspace:^
         version: link:../components/skeleton
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../styles
       '@jamsr-ui/switch':
         specifier: workspace:^
         version: link:../components/switch

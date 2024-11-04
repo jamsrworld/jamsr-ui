@@ -1,8 +1,9 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
+export const test = "";
 export const table = tv({
   slots: {
-    base: "relative flex flex-col gap-2 overflow-hidden",
+    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl",
     wrapper: "grid w-full gap-2",
     table: "group/table w-full min-w-full",
     thead: "h-10",

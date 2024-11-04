@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.155",
+  "version": "0.0.156",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"
@@ -66,6 +66,7 @@
     "@jamsr-ui/ripple": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/switch": "workspace:^",
     "@jamsr-ui/tab": "workspace:^",
     "@jamsr-ui/table": "workspace:^",

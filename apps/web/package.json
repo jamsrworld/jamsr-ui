@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.137",
+  "version": "0.1.138",
   "private": true,
   "type": "module",
   "scripts": {
@@ -20,6 +20,7 @@
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/react": "workspace:*",
     "@jamsr-ui/shared-icons": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/theme": "workspace:*",
     "@jamsr-ui/utils": "workspace:^",
     "@tanstack/react-table": "8.20.5",
@@ -35,7 +36,6 @@
   },
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:^",
-    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/types": "workspace:^",
     "@types/node": "22.8.1",
     "@types/react": "18.3.12",

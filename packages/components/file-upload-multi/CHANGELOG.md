@@ -1,5 +1,14 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.79
+
+### Patch Changes
+
+- fix
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.54
+  - @jamsr-ui/progress@0.0.57
+
 ## 0.0.78
 
 ### Patch Changes

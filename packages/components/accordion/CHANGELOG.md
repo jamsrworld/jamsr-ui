@@ -1,5 +1,13 @@
 # @jamsr-ui/accordion
 
+## 0.0.67
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.4
+  - @jamsr-ui/utils@0.0.54
+
 ## 0.0.66
 
 ### Patch Changes

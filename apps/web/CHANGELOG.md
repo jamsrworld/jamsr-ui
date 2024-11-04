@@ -1,5 +1,12 @@
 # web
 
+## 0.1.141
+
+### Patch Changes
+
+- fix input styles
+  - @jamsr-ui/react@0.0.159
+
 ## 0.1.140
 
 ### Patch Changes

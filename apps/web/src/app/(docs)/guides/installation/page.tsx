@@ -76,11 +76,11 @@ const items: { heading: string; content: React.ReactNode }[] = [
           </div>
         </Alert>
         <CodeSnippet>
-          {`// tailwind.config.js
-const {withJamsrUI} = require("@jamsr-ui/react");
+          {`// tailwind.config.ts
+import { withJamsrUI } from "@jamsr-ui/theme";
+import type { Config } from "tailwindcss";
 
-/** @type {import('tailwindcss').Config} */
-module.exports = withJamsrUI({
+const config = withJamsrUI({
   content: [
     // ...
     // make sure it's pointing to the ROOT node_module
@@ -90,7 +90,10 @@ module.exports = withJamsrUI({
     extend: {},
   },
   darkMode: "class",
-});`}
+});
+export default config;
+
+`}
         </CodeSnippet>
       </div>
     ),
@@ -106,15 +109,15 @@ module.exports = withJamsrUI({
         <CodeSnippet>
           {`import * as React from "react";
 
-// 1. import \`JamsrUIProvider\` component
-import {JamsrUIProvider} from "@jamsr-ui/react";
+// 1. import \`UIProvider\` component
+import { UIProvider } from "@jamsr-ui/react";
 
 function App() {
-  // 2. Wrap JamsrUIProvider at the root of your app
+  // 2. Wrap UIProvider at the root of your app
   return (
-    <JamsrUIProvider>
+    <UIProvider>
       <YourApplication />
-    </JamsrUIProvider>
+    </UIProvider>
   );
 }`}
         </CodeSnippet>

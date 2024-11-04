@@ -10,7 +10,7 @@ export const InputDefault = () => {
 //       input={{
 //         classNames: {
 //           inputWrapper:
-//             "border-gray-400 hover:border-gray-500 group-data-[focus=true]:border-black",
+//             "border-gray-400 hover:border-gray-500 group-data-[focused=true]:border-black",
 //         },
 //       }}
 //     >

@@ -1,5 +1,14 @@
 # web
 
+## 0.1.144
+
+### Patch Changes
+
+- fix input
+- Updated dependencies
+  - @jamsr-ui/theme@0.0.61
+  - @jamsr-ui/react@0.0.162
+
 ## 0.1.143
 
 ### Patch Changes

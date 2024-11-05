@@ -1,8 +1,10 @@
 "use client";
 
+import logoImg from "@/../public/full-logo.png";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Typography } from "@jamsr-ui/react";
 import { cn } from "@jamsr-ui/utils";
+import Image from "next/image";
 import NextLink, { type LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -91,9 +93,15 @@ const items = [
 export const ComponentsSidebar = () => {
   const pathname = usePathname();
   return (
-    <div className="fixed flex h-screen min-w-[240px] flex-col gap-1 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 py-12 max-md:hidden">
+    <div className="fixed flex h-screen min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 py-12 max-md:hidden">
+      <Image
+        src={logoImg}
+        className="grayscale dark:invert"
+        alt="logo"
+        height={40}
+      />
       <ThemeSwitcher />
-      <div className="flex flex-col gap-4 mt-4">
+      <div className="mt-4 flex flex-col gap-4">
         {items.map((item, idx) => {
           const { heading, items } = item;
           return (

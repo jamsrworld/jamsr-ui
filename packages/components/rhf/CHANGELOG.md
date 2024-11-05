@@ -1,5 +1,15 @@
 # @jamsr-ui/rhf
 
+## 0.0.12
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/input@0.0.75
+  - @jamsr-ui/editor@0.0.73
+  - @jamsr-ui/tags-input@0.0.11
+  - @jamsr-ui/textarea@0.0.75
+
 ## 0.0.11
 
 ### Patch Changes

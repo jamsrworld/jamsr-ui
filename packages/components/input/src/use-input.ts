@@ -24,7 +24,8 @@ type Props = {
   classNames?: SlotsToClasses<InputSlots>;
   label?: string;
   labelHelperContent?: React.ReactNode;
-  mask?: "number" | "percent" | "currency";
+  isNumberInput?: boolean;
+  decimalPrecision?: number;
   isSecuredText?: boolean;
   value?: string;
   defaultValue?: string;
@@ -34,7 +35,6 @@ type Props = {
   setShowPassword?: React.Dispatch<React.SetStateAction<boolean>>;
   isInvalid?: boolean;
   helperText?: string;
-  precision?: number;
   baseRef?: React.Ref<HTMLDivElement>;
   inputWrapperRef?: React.Ref<HTMLDivElement>;
   ref?: React.Ref<HTMLInputElement>;
@@ -58,7 +58,7 @@ export const useInput = ($props: UseInputProps) => {
     className,
     classNames,
     size,
-    mask,
+    isNumberInput,
     defaultValue,
     value: propValue,
     onValueChange,
@@ -73,7 +73,7 @@ export const useInput = ($props: UseInputProps) => {
     fullWidth = false,
     variant = "standard",
     helperText,
-    precision = 2,
+    decimalPrecision = 2,
     baseRef,
     inputWrapperRef,
     children,
@@ -128,27 +128,26 @@ export const useInput = ($props: UseInputProps) => {
       let { value: crrValue } = e.target;
       crrValue = String(crrValue);
 
-      if (precision < 1) {
-        const newValue = crrValue.replace(/\D/g, "");
-        crrValue = newValue;
-      } else if (
-        mask === "number" ||
-        mask === "currency" ||
-        mask === "percent"
-      ) {
-        const regexString = `^\\$?\\d*\\.?\\d{0,${precision}}$`;
-        const regex = new RegExp(regexString);
-
-        if (!regex.test(crrValue)) {
-          crrValue = value;
+      if (isNumberInput) {
+        if (decimalPrecision < 1) {
+          const newValue = crrValue.replace(/\D/g, "");
+          crrValue = newValue;
         } else {
-          crrValue = crrValue.replace(/^\$/, "");
+          const regexString = `^\\$?\\d*\\.?\\d{0,${decimalPrecision}}$`;
+          const regex = new RegExp(regexString);
+
+          if (!regex.test(crrValue)) {
+            crrValue = value;
+          } else {
+            crrValue = crrValue.replace(/^\$/, "");
+          }
         }
       }
+
       onChange?.(e);
       setValue(crrValue);
     },
-    [mask, onChange, precision, setValue, value],
+    [isNumberInput, onChange, setValue, decimalPrecision, value],
   );
 
   const handleChangeInputType = useCallback(
@@ -319,13 +318,12 @@ export const useInput = ($props: UseInputProps) => {
 
   const getInputProps: PropGetter<ComponentProps<"input">> = useCallback(
     (props) => {
-      const fValue = mask === "currency" ? `$${value}` : value;
       return {
         "data-slot": "input",
         className: styles.input({
           className: cn(classNames?.input, props?.className, className),
         }),
-        value: fValue,
+        value,
         onChange: handleInputChange,
         type: inputType,
         placeholder,
@@ -337,7 +335,6 @@ export const useInput = ($props: UseInputProps) => {
       };
     },
     [
-      mask,
       value,
       styles,
       classNames?.input,
@@ -394,7 +391,6 @@ export const useInput = ($props: UseInputProps) => {
     isSecuredText,
     showPassword,
     hasNotation,
-    mask,
     getBaseProps,
     labelHelper: labelHelperContent,
     getLabelWrapperProps,

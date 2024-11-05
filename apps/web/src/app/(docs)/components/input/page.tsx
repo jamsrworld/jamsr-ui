@@ -7,8 +7,9 @@ import { InputDisabled } from "./variants/disabled";
 import { InputErrorState } from "./variants/error-state";
 import { InputHelperText } from "./variants/helper-text";
 import { InputLabelHelper } from "./variants/label-helper";
-import { InputOutlinedAllProps } from "./variants/outlined-all-props";
+import { InputNumberOnly } from "./variants/number-only";
 import { InputOptional } from "./variants/optional";
+import { InputOutlinedAllProps } from "./variants/outlined-all-props";
 import { InputPlaceholder } from "./variants/placeholder";
 import { InputRequired } from "./variants/required";
 import { InputSecuredText } from "./variants/secured-text";
@@ -33,6 +34,9 @@ const Input = () => {
       <VariantWrapper heading="Controlled">
         <InputControlled />
       </VariantWrapper>
+      <VariantWrapper heading="Variant">
+        <InputVariants />
+      </VariantWrapper>
       <VariantWrapper heading="Helper Text">
         <InputHelperText />
       </VariantWrapper>
@@ -44,9 +48,6 @@ const Input = () => {
       </VariantWrapper>
       <VariantWrapper heading="With Placeholder">
         <InputWithPlaceholder />
-      </VariantWrapper>
-      <VariantWrapper heading="Outlined All Props">
-        <InputOutlinedAllProps />
       </VariantWrapper>
       <VariantWrapper heading="WithoutLabel">
         <InputWithoutLabel />
@@ -72,14 +73,17 @@ const Input = () => {
       <VariantWrapper heading="Placeholder">
         <InputPlaceholder />
       </VariantWrapper>
-      <VariantWrapper heading="Variant">
-        <InputVariants />
-      </VariantWrapper>
       <VariantWrapper heading="LabelHelper">
         <InputLabelHelper />
       </VariantWrapper>
       <VariantWrapper heading="SecuredText">
         <InputSecuredText />
+      </VariantWrapper>
+        <VariantWrapper heading="Numbers Only">
+        <InputNumberOnly />
+      </VariantWrapper>
+      <VariantWrapper heading="Outlined All Props">
+        <InputOutlinedAllProps />
       </VariantWrapper>
     </VariantPage>
   );

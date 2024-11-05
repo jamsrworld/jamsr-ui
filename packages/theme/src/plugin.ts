@@ -55,6 +55,7 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
               header: "50",
               drawer: "60",
             },
+            lineHeight: { 0: "0" },
             fontSize: {
               "size-inherit": "inherit",
               "2xs": "var(--fs-2xs)",

@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.61
+
+### Patch Changes
+
+- fix input
+
 ## 0.0.60
 
 ### Patch Changes

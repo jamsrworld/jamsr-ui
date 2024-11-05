@@ -17,7 +17,6 @@ export const Input = <T extends React.ElementType = "div">(
     endContent,
     isSecuredText,
     showPassword,
-    mask,
     getBaseProps,
     getLabelWrapperProps,
     getLabelProps,
@@ -57,7 +56,6 @@ export const Input = <T extends React.ElementType = "div">(
           {!showPassword ? <EyeOpenIcon /> : <EyeClosedIcon />}
         </Button>
       )) ||
-      (mask === "percent" && "%") ||
       endContent;
 
     return !content ? null : <div {...getEndContentProps()}>{content}</div>;
@@ -66,7 +64,6 @@ export const Input = <T extends React.ElementType = "div">(
     getEndContentProps,
     handleChangeInputType,
     isSecuredText,
-    mask,
     showPassword,
   ]);
 

@@ -1,17 +1,19 @@
+import { toSlug } from "@/utils/fns";
 import { Tab, Tabs, Typography } from "@jamsr-ui/react";
 import React from "react";
 
-type Props = {
+export type VariantWrapperProps = {
   children: React.ReactNode;
   heading: string;
   description?: React.ReactNode;
 };
 
-export const VariantWrapper = (props: Props) => {
+export const VariantWrapper = (props: VariantWrapperProps) => {
   const { children, heading, description } = props;
+  const id = toSlug(heading);
   return (
-    <section>
-      <div className="mb-6">
+    <section id={id}>
+      <div className="mb-2">
         <Typography variant="h6" as="h1" className="text-xl font-medium">
           {heading}
         </Typography>
@@ -28,7 +30,7 @@ export const VariantWrapper = (props: Props) => {
       <div>
         <Tabs defaultValue="preview" variant="underlined">
           <Tab heading="Preview" value="preview">
-            <div className="border bg-background-secondary border-divider rounded-xl p-4">
+            <div className="rounded-xl border border-divider bg-background-secondary p-4">
               {children}
             </div>
           </Tab>

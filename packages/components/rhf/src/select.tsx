@@ -19,13 +19,13 @@ export const RHFSelect = <T extends FieldValues>(props: Props<T>) => {
         field: { value, onChange, onBlur },
         fieldState: { error },
       }) => {
-        const val = new Set([value]);
+        const $value = new Set([value]);
         const onValueChange = (value: Set<string>) => {
           onChange(Array.from(value)[0]);
         };
         return (
           <Select
-            value={val}
+            value={$value}
             onValueChange={onValueChange}
             onBlur={onBlur}
             isInvalid={!!error}

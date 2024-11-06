@@ -1,5 +1,5 @@
 import { CodeSnippet } from "@/components/code-snippet";
-import { VariantPage } from "@/components/variant-page";
+import { VariantPage } from "@/components/docs/variant-page";
 import { JAMSR_UI_TEMPLATE_GITHUB_URL } from "@/config";
 import {
   Alert,

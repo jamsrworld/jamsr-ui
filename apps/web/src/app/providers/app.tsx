@@ -15,6 +15,7 @@ export const AppProvider = (props: Props) => {
       <Analytics />
       <ToastProvider />
       <UIStylesProvider
+      
       // button={{
       //   className: "",
       //   color: "danger",

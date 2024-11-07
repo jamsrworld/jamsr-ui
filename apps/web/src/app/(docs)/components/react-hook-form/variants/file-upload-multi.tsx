@@ -26,8 +26,7 @@ export const RHFDemoFileUploadMulti = () => {
     resolver: zodResolver(schema),
   });
   const { handleSubmit, watch } = methods;
-  console.log(watch());
-
+  console.log("watch:->", watch())
   const onSubmit = handleSubmit((values) => {
     console.log(values);
   });

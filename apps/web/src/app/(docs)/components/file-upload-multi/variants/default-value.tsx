@@ -2,9 +2,9 @@
 
 "use client";
 
-import { FileUploadMultiState } from "@jamsr-ui/react";
-import { FileUploadDefault } from "./default";
 import TvImg from "@/../public/tv.webp";
+import { type FileUploadMultiState } from "@jamsr-ui/react";
+import { FileUploadDefault } from "./default";
 
 export const FileUploadDefaultValue = () => {
   const defaultValue: FileUploadMultiState[] = [

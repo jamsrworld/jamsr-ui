@@ -17,7 +17,6 @@ export const FileUploadControlled = () => {
     },
   ]);
   const onValueChange = (newValue: FileUploadMultiState[]) => {
-    console.log("onValueChange", newValue);
     setValue(newValue);
   };
   return (

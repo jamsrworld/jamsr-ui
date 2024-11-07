@@ -1,4 +1,4 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import { useControlledState2 } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
@@ -75,11 +75,12 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     ...restProps
   } = props;
 
-  const [value, setValue] = useControlledState(
+  const [value, setValue] = useControlledState2(
     defaultValue ?? [],
     $value,
     onValueChange,
   );
+
   const xhrRefs = useRef<{ id: string; xhr: XMLHttpRequest }[]>([]);
 
   const Component = as ?? "div";

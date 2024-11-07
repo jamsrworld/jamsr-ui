@@ -1,7 +1,9 @@
 import {
   FileUploadMulti,
   type FileUploadMultiProps,
+  type FileUploadMultiState,
 } from "@jamsr-ui/file-upload-multi";
+import { useEffect, useRef, useState } from "react";
 import {
   Controller,
   useFormContext,
@@ -19,19 +21,37 @@ type Props<T extends FieldValues> = UseControllerProps<T> &
 export const RHFFileUploadMulti = <T extends FieldValues>(props: Props<T>) => {
   const { name, uploadApiUrl, inputName, getFileUrlAfterUpload, ...restProps } =
     props;
-  const { control } = useFormContext<T>();
+  const { control, setValue } = useFormContext<T>();
+  const uploadsRef = useRef<{ id: string; response: Record<string, string> }[]>(
+    [],
+  );
+  const [stateValue, setStateValue] = useState<FileUploadMultiState[]>([]);
+
+  useEffect(() => {
+    const finalValue = uploadsRef.current
+      .filter(
+        (item) => stateValue.findIndex((value) => value.id === item.id) >= 0,
+      )
+      .map((item) => item.response);
+    // @ts-expect-error typeError
+    setValue(name, finalValue);
+  }, [stateValue, name, setValue]);
   return (
     <Controller
       name={name}
       control={control}
-      render={({
-        field: { value, onChange, onBlur },
-        fieldState: { error },
-      }) => {
+      render={({ field: { onBlur }, fieldState: { error } }) => {
+        const onUploadSuccess = (data: {
+          id: string;
+          response: Record<string, string>;
+        }) => {
+          uploadsRef.current.push(data);
+        };
         return (
           <FileUploadMulti
-            value={value}
-            onValueChange={onChange}
+            value={stateValue}
+            onValueChange={setStateValue}
+            onUploadSuccess={onUploadSuccess}
             onBlur={onBlur}
             showDeleteBtn
             isInvalid={!!error}

@@ -13,6 +13,7 @@ import { RHFDemoFileUploadSingle } from "./variants/file-upload-single";
 import { RHFDemoSwitch } from "./variants/switch";
 import { RHFDemoTagsInput } from "./variants/tags-input";
 import { RHFDemoTextarea } from "./variants/textarea";
+import { RHFDemoFileUploadMultiDefaultValue } from "./variants/file-upload-multi-default-value";
 
 export const metadata: Metadata = {
   title: "React Hook Form",
@@ -56,6 +57,9 @@ const DragDropDndKit = () => {
       </VariantWrapper>
       <VariantWrapper heading="Multi File Upload">
         <RHFDemoFileUploadMulti />
+      </VariantWrapper>
+      <VariantWrapper heading="Multi File Upload Default Value">
+        <RHFDemoFileUploadMultiDefaultValue />
       </VariantWrapper>
     </VariantPage>
   );

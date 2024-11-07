@@ -11,3 +11,4 @@ export { filterDOMProps } from "./filter-dom-props";
 export * from "./merge-props";
 export * from "./transition";
 export * from "./tv";
+export * from "./fns";

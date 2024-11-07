@@ -3,11 +3,15 @@ import {
   type FileUploadMultiProps,
   type FileUploadMultiState,
 } from "@jamsr-ui/file-upload-multi";
+import { randomId } from "@jamsr-ui/utils";
 import { useEffect, useRef, useState } from "react";
 import {
   Controller,
   useFormContext,
+  type ControllerFieldState,
+  type ControllerRenderProps,
   type FieldValues,
+  type Path,
   type UseControllerProps,
 } from "react-hook-form";
 
@@ -16,16 +20,46 @@ type Props<T extends FieldValues> = UseControllerProps<T> &
   Pick<
     FileUploadMultiProps,
     "uploadApiUrl" | "inputName" | "getFileUrlAfterUpload"
-  >;
+  > & {
+    getPreviewUrlFromValue: (value: any) => string | null;
+  };
 
-export const RHFFileUploadMulti = <T extends FieldValues>(props: Props<T>) => {
-  const { name, uploadApiUrl, inputName, getFileUrlAfterUpload, ...restProps } =
-    props;
-  const { control, setValue } = useFormContext<T>();
-  const uploadsRef = useRef<{ id: string; response: Record<string, string> }[]>(
-    [],
-  );
-  const [stateValue, setStateValue] = useState<FileUploadMultiState[]>([]);
+export const RenderController = <
+  TFieldValues extends FieldValues,
+  TName extends Path<TFieldValues>,
+>(
+  props: Props<TFieldValues> & {
+    field: ControllerRenderProps<TFieldValues, TName>;
+    fieldState: ControllerFieldState;
+  },
+) => {
+  const {
+    field: { onChange, onBlur, value: $value },
+    fieldState: { error },
+    uploadApiUrl,
+    inputName,
+    getFileUrlAfterUpload,
+    getPreviewUrlFromValue,
+    ...restProps
+  } = props;
+
+  const value = Array.isArray($value) ? $value : [];
+
+  const uploadsDefault = value.map((item) => ({
+    id: randomId(),
+    response: item,
+  }));
+  const defaultState: FileUploadMultiState[] = uploadsDefault.map((item) => ({
+    file: null,
+    id: item.id,
+    preview: getPreviewUrlFromValue(item.response),
+    progress: "COMPLETE",
+  }));
+
+  const uploadsRef =
+    useRef<{ id: string; response: Record<string, string> }[]>(uploadsDefault);
+  const [stateValue, setStateValue] =
+    useState<FileUploadMultiState[]>(defaultState);
 
   useEffect(() => {
     const finalValue = uploadsRef.current
@@ -33,36 +67,44 @@ export const RHFFileUploadMulti = <T extends FieldValues>(props: Props<T>) => {
         (item) => stateValue.findIndex((value) => value.id === item.id) >= 0,
       )
       .map((item) => item.response);
-    // @ts-expect-error typeError
-    setValue(name, finalValue);
-  }, [stateValue, name, setValue]);
+    onChange(finalValue);
+  }, [stateValue, onChange]);
+
+  const onUploadSuccess = (data: {
+    id: string;
+    response: Record<string, string>;
+  }) => {
+    uploadsRef.current.push(data);
+  };
+
+  return (
+    <FileUploadMulti
+      value={stateValue}
+      onValueChange={setStateValue}
+      onUploadSuccess={onUploadSuccess}
+      onBlur={onBlur}
+      showDeleteBtn
+      isInvalid={!!error}
+      helperText={error?.message}
+      data-invalid={!!error}
+      uploadApiUrl={uploadApiUrl}
+      inputName={inputName}
+      getFileUrlAfterUpload={getFileUrlAfterUpload}
+      {...restProps}
+    />
+  );
+};
+
+export const RHFFileUploadMulti = <T extends FieldValues>(props: Props<T>) => {
+  const { name } = props;
+  const { control } = useFormContext<T>();
   return (
     <Controller
       name={name}
       control={control}
-      render={({ field: { onBlur }, fieldState: { error } }) => {
-        const onUploadSuccess = (data: {
-          id: string;
-          response: Record<string, string>;
-        }) => {
-          uploadsRef.current.push(data);
-        };
+      render={({ field, fieldState }) => {
         return (
-          <FileUploadMulti
-            value={stateValue}
-            onValueChange={setStateValue}
-            onUploadSuccess={onUploadSuccess}
-            onBlur={onBlur}
-            showDeleteBtn
-            isInvalid={!!error}
-            helperText={error?.message}
-            data-invalid={!!error}
-            uploadApiUrl={uploadApiUrl}
-            inputName={inputName}
-            getFileUrlAfterUpload={getFileUrlAfterUpload}
-            className="aspect-video h-40"
-            {...restProps}
-          />
+          <RenderController field={field} fieldState={fieldState} {...props} />
         );
       }}
     />

@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.57
+
+### Patch Changes
+
+- fix file upload multi
+
 ## 0.0.56
 
 ### Patch Changes

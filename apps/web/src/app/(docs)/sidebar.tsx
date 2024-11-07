@@ -84,10 +84,10 @@ const items = [
     heading: "Components",
     items: formatPaths(components, "components"),
   },
-  {
-    heading: "Hooks",
-    items: formatPaths(hooks, "hooks"),
-  },
+  // {
+  //   heading: "Hooks",
+  //   items: formatPaths(hooks, "hooks"),
+  // },
 ];
 
 export const ComponentsSidebar = () => {

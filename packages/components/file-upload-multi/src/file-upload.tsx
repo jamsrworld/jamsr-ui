@@ -60,7 +60,7 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
                 >
                   <DragDropHorizontalIcon />
                 </button>
-                <img src={item.preview} alt="" {...getFileProps()} />
+                <img src={item.preview!} alt="" {...getFileProps()} />
                 <ProgressView
                   id={item.id}
                   onRetry={retryUpload}

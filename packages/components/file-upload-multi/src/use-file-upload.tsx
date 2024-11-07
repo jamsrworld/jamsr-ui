@@ -2,7 +2,7 @@ import { useControlledState2 } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn, dataAttr, deepMergeProps } from "@jamsr-ui/utils";
+import { cn, dataAttr, deepMergeProps, randomId } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import { useCallback, useRef } from "react";
 import {
@@ -19,7 +19,7 @@ import {
 export type FileUploadProgress = "PENDING" | "COMPLETE" | "ERROR" | number;
 export type FileUploadMultiState = {
   file: null | File;
-  preview: string;
+  preview: string | null;
   id: string;
   progress: FileUploadProgress;
 };
@@ -125,7 +125,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
           const response = JSON.parse(xhr.responseText);
           const fileUrl = getFileUrlAfterUpload(response);
           const successItem = value.find((item) => item.id === id);
-          if (successItem) {
+          if (successItem?.preview) {
             URL.revokeObjectURL(successItem.preview);
           }
           updateState(id, {
@@ -185,7 +185,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
         return {
           preview: objectUrl,
           file,
-          id: Math.random().toString(36).slice(2),
+          id: randomId(),
           progress: "PENDING",
         };
       });

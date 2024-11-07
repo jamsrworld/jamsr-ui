@@ -1,5 +1,14 @@
 # web
 
+## 0.1.146
+
+### Patch Changes
+
+- fix file upload multi
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.57
+  - @jamsr-ui/react@0.0.164
+
 ## 0.1.145
 
 ### Patch Changes

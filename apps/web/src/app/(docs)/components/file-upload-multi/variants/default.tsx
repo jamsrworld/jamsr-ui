@@ -2,12 +2,12 @@
 
 "use client";
 
-import { ImageMetadata } from "@/app/config";
+import { type ImageMetadata } from "@/app/config";
 import { CDN_API_URL, CDN_UPLOAD_URL } from "@/utils/config";
 import {
   type FileUploadError,
   FileUploadMulti,
-  FileUploadMultiProps,
+  type FileUploadMultiProps,
   toast,
 } from "@jamsr-ui/react";
 
@@ -47,7 +47,7 @@ export const FileUploadDefault = (props: Partial<FileUploadMultiProps>) => {
       showDeleteBtn
       {...restProps}
       dropzoneOptions={{
-        maxFiles: 40,
+        maxFiles: 4,
         ...dropzoneOptions,
       }}
     />

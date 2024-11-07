@@ -6,12 +6,12 @@ import { ImageMetadata } from "@/app/config";
 import { CDN_API_URL, CDN_UPLOAD_URL } from "@/utils/config";
 import {
   type FileUploadError,
-  MultiFileUpload,
-  MultiFileUploadProps,
+  FileUploadMulti,
+  FileUploadMultiProps,
   toast,
 } from "@jamsr-ui/react";
 
-export const FileUploadDefault = (props: Partial<MultiFileUploadProps>) => {
+export const FileUploadDefault = (props: Partial<FileUploadMultiProps>) => {
   const { dropzoneOptions, ...restProps } = props;
   const handleOnError = ({ message }: FileUploadError) => {
     console.log("error:->", message);
@@ -37,7 +37,7 @@ export const FileUploadDefault = (props: Partial<MultiFileUploadProps>) => {
   };
 
   return (
-    <MultiFileUpload
+    <FileUploadMulti
       onUploadSuccess={onUploadSuccess}
       getFileUrlAfterUpload={getFileUrlAfterUpload}
       uploadApiUrl={CDN_UPLOAD_URL}

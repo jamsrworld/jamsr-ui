@@ -8,7 +8,7 @@ import { FileUploadDefaultValue } from "./variants/default-value";
 import { FileUploadDisabled } from "./variants/disabled";
 
 export const metadata: Metadata = {
-  title: "Single File Upload",
+  title: "File Upload Single",
 };
 
 const FileUpload = () => {

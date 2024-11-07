@@ -39,7 +39,7 @@ export const useControlledState2 = <T>(
         }
       }
     },
-    [value, currentValue], // Depend on these values to update correctly
+    [onValueChange, value], // Depend on these values to update correctly
   );
 
   return [currentValue, setValue];

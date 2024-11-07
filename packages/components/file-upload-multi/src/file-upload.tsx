@@ -1,12 +1,12 @@
 import { Sortable } from "@jamsr-ui/dnd";
 import { CloseIcon, DragDropHorizontalIcon } from "@jamsr-ui/shared-icons";
 import { ProgressView } from "./progress-view";
-import type { UseMultiFileUploadProps } from "./use-file-upload";
-import { useMultiFileUpload } from "./use-file-upload";
+import type { UseFileUploadMultiProps } from "./use-file-upload";
+import { useFileUploadMulti } from "./use-file-upload";
 
-export type MultiFileUploadProps = UseMultiFileUploadProps;
+export type FileUploadMultiProps = UseFileUploadMultiProps;
 
-export const MultiFileUpload = (props: MultiFileUploadProps) => {
+export const FileUploadMulti = (props: FileUploadMultiProps) => {
   const {
     getRootProps,
     getInputProps,
@@ -30,7 +30,7 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
     overlayWrapperClassName,
     overlayClassName,
     setValue,
-  } = useMultiFileUpload(props);
+  } = useFileUploadMulti(props);
   return (
     <Component {...getBaseProps()}>
       <div {...getInnerWrapperProps()}>
@@ -52,6 +52,14 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
               suppressHydrationWarning
             >
               <div {...getFileViewProps()}>
+                <button
+                  ref={setActivatorNodeRef}
+                  {...listeners}
+                  className="absolute left-1 top-1 z-10 hidden rounded bg-content1 group-hover:block"
+                  type="button"
+                >
+                  <DragDropHorizontalIcon />
+                </button>
                 <img src={item.preview} alt="" {...getFileProps()} />
                 <ProgressView
                   id={item.id}
@@ -69,11 +77,6 @@ export const MultiFileUpload = (props: MultiFileUploadProps) => {
                     <CloseIcon className="size-4" />
                   </button>
                 )}
-              </div>
-              <div className="flex w-full items-center justify-center bg-gray-100">
-                <button ref={setActivatorNodeRef} {...listeners} type="button">
-                  <DragDropHorizontalIcon />
-                </button>
               </div>
             </div>
           )}

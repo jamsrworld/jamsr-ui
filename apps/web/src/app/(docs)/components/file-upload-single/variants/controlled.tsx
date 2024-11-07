@@ -3,8 +3,8 @@
 "use client";
 
 import TvImg from "@/../public/tv.webp";
-import { FileUploadDefault } from "./default";
 import { useState } from "react";
+import { FileUploadDefault } from "./default";
 
 export const FileUploadControlled = () => {
   const [value, setValue] = useState<string | null>(TvImg.src);

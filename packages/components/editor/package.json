@@ -32,7 +32,7 @@
     "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
-    "@jamsr-ui/file-upload": "workspace:^",
+    "@jamsr-ui/file-upload-single": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/input": "workspace:^",
     "@jamsr-ui/menu": "workspace:^",

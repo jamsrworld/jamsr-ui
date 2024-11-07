@@ -1,9 +1,9 @@
-import { type SingleFileUploadProps } from "@jamsr-ui/file-upload";
+import { type FileUploadSingleProps } from "@jamsr-ui/file-upload-single";
 import type { Editor } from "@tiptap/react";
 import { NodeViewWrapper } from "@tiptap/react";
 import { useState } from "react";
 
-export type ImageUploadProps = Omit<SingleFileUploadProps, "onFileSelect"> & {
+export type ImageUploadProps = Omit<FileUploadSingleProps, "onFileSelect"> & {
   onFileSelect: (file: File) => Promise<{
     src: string;
     width: number;
@@ -37,7 +37,7 @@ export const ImageUploadComponent = ({
   return (
     <NodeViewWrapper>
       <div className="m-0 p-0" data-drag-handle>
-        {/* <SingleFileUpload
+        {/* <FileUploadSingle
           className="max-h-[200px]"
           {...imageUploadProps}
           value={value}

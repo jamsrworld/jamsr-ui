@@ -40,6 +40,8 @@
   "dependencies": {
     "@jamsr-ui/checkbox": "workspace:^",
     "@jamsr-ui/editor": "workspace:^",
+    "@jamsr-ui/file-upload-multi": "workspace:^",
+    "@jamsr-ui/file-upload-single": "workspace:^",
     "@jamsr-ui/input": "workspace:^",
     "@jamsr-ui/otp-input": "workspace:^",
     "@jamsr-ui/radio": "workspace:^",

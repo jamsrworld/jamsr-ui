@@ -3,12 +3,12 @@
 "use client";
 
 import TvImg from "@/../public/tv.webp";
-import { FileUploadDefault } from "./default";
+import { type FileUploadMultiState } from "@jamsr-ui/react";
 import { useState } from "react";
-import { MultiFileUploadState } from "@jamsr-ui/react";
+import { FileUploadDefault } from "./default";
 
 export const FileUploadControlled = () => {
-  const [value, setValue] = useState<MultiFileUploadState[]>([
+  const [value, setValue] = useState<FileUploadMultiState[]>([
     {
       id: "asdfjlaf",
       preview: TvImg.src,
@@ -16,7 +16,7 @@ export const FileUploadControlled = () => {
       file: null,
     },
   ]);
-  const onValueChange = (newValue: MultiFileUploadState[]) => {
+  const onValueChange = (newValue: FileUploadMultiState[]) => {
     console.log("onValueChange", newValue);
     setValue(newValue);
   };

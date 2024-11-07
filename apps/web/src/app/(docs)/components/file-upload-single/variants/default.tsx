@@ -2,16 +2,16 @@
 
 "use client";
 
-import { ImageMetadata } from "@/app/config";
+import { type ImageMetadata } from "@/app/config";
 import { CDN_API_URL, CDN_UPLOAD_URL } from "@/utils/config";
 import {
   type FileUploadError,
-  SingleFileUpload,
-  type SingleFileUploadProps,
+  FileUploadSingle,
+  type FileUploadSingleProps,
   toast,
 } from "@jamsr-ui/react";
 
-export const FileUploadDefault = (props: Partial<SingleFileUploadProps>) => {
+export const FileUploadDefault = (props: Partial<FileUploadSingleProps>) => {
   const { dropzoneOptions, ...restProps } = props;
   const handleOnError = ({ message }: FileUploadError) => {
     console.log("error:->", message);
@@ -31,7 +31,7 @@ export const FileUploadDefault = (props: Partial<SingleFileUploadProps>) => {
   };
 
   return (
-    <SingleFileUpload
+    <FileUploadSingle
       onUploadSuccess={onUploadSuccess}
       getFileUrlAfterUpload={getFileUrlAfterUpload}
       uploadApiUrl={CDN_UPLOAD_URL}

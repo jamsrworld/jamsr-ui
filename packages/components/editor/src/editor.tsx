@@ -15,9 +15,13 @@ export const Editor = (props: EditorProps) => {
     getHelperTextProps,
     editor,
     helperText,
+    getLabelProps,
+    label,
   } = useEditor(props);
   return (
     <Component {...getBaseProps()}>
+      {/*  eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+      <label {...getLabelProps()}> {label}</label>
       <div {...getEditorProps()}>
         {editor && <EditorMenuBar editor={editor} />}
         <EditorContent editor={editor} {...getContentProps()} />

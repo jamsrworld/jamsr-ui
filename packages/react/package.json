@@ -50,7 +50,7 @@
     "@jamsr-ui/dnd": "workspace:^",
     "@jamsr-ui/drawer": "workspace:^",
     "@jamsr-ui/editor": "workspace:^",
-    "@jamsr-ui/file-upload": "workspace:^",
+    "@jamsr-ui/file-upload-single": "workspace:^",
     "@jamsr-ui/file-upload-multi": "workspace:^",
     "@jamsr-ui/header": "workspace:^",
     "@jamsr-ui/input": "workspace:^",

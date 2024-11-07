@@ -25,7 +25,7 @@ const components = [
   "drag-and-drop",
   "drawer",
   "editor",
-  "file-upload",
+  "file-upload-single",
   "file-upload-multi",
   "header",
   "input",

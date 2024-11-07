@@ -2,6 +2,7 @@ import { useControlledState } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
+  dataAttr,
   deepMergeProps,
   type PropGetter,
   type SlotsToClasses,
@@ -44,6 +45,7 @@ type Props = EditorVariantsProps & {
   extensionsProps?: {
     imageUpload?: Partial<ImageUploadProps>;
   };
+  label?: string;
 };
 
 export type UseEditorProps = Props & UIProps<"div", keyof Props>;
@@ -63,6 +65,7 @@ export const useEditor = ($props: UseEditorProps) => {
     as,
     className,
     extensionsProps,
+    label,
     ...restProps
   } = props;
 
@@ -132,6 +135,7 @@ export const useEditor = ($props: UseEditorProps) => {
       return {
         "data-component": "editor",
         "data-slot": "base",
+        "data-focused": dataAttr(editor?.isFocused),
         ...props,
         className: styles.base({
           className: cn(classNames?.base, className),
@@ -139,7 +143,7 @@ export const useEditor = ($props: UseEditorProps) => {
         ...restProps,
       };
     },
-    [className, classNames?.base, restProps, styles],
+    [className, classNames?.base, editor?.isFocused, restProps, styles],
   );
 
   const getEditorProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -186,13 +190,29 @@ export const useEditor = ($props: UseEditorProps) => {
     [classNames?.helperText, restProps, styles],
   );
 
+  const getLabelProps: PropGetter<ComponentProps<"label">> = useCallback(
+    (props = {}) => {
+      return {
+        "data-slot": "label",
+        ...props,
+        className: styles.label({
+          className: cn(classNames?.label, props.className),
+        }),
+        onClick: handleOnClick,
+      };
+    },
+    [classNames?.label, handleOnClick, styles],
+  );
+
   return {
+    label,
     editor,
     Component,
     getBaseProps,
     getEditorProps,
     getContentProps,
     getHelperTextProps,
+    getLabelProps,
     helperText,
   };
 };

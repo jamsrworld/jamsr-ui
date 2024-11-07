@@ -1,14 +1,14 @@
 import { CircularProgress } from "@jamsr-ui/progress";
 import { RefreshIcon, TrashIcon } from "@jamsr-ui/shared-icons";
 import {
-  useSingleFileUpload,
-  type UseSingleFileUploadProps,
+  useFileUploadSingle,
+  type UseFileUploadSingleProps,
 } from "./use-file-upload";
 import { formatFileSize } from "./utils";
 
-export type SingleFileUploadProps = UseSingleFileUploadProps;
+export type FileUploadSingleProps = UseFileUploadSingleProps;
 
-export const SingleFileUpload = (props: SingleFileUploadProps) => {
+export const FileUploadSingle = (props: FileUploadSingleProps) => {
   const {
     getRootProps,
     getInputProps,
@@ -40,7 +40,7 @@ export const SingleFileUpload = (props: SingleFileUploadProps) => {
     isEmpty,
     isFailed,
     onRetry,
-  } = useSingleFileUpload(props);
+  } = useFileUploadSingle(props);
 
   return (
     <Component {...getBaseProps()}>

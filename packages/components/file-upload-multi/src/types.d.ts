@@ -1,7 +1,7 @@
-import { type MultiFileUploadProps } from ".";
+import { type FileUploadMultiProps } from ".";
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    fileUploadMulti?: Partial<MultiFileUploadProps>;
+    fileUploadMulti?: Partial<FileUploadMultiProps>;
   }
 }

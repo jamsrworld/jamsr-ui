@@ -15,7 +15,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.61
   - @jamsr-ui/divider@0.0.59
-  - @jamsr-ui/file-upload@0.0.80
+  - @jamsr-ui/file-upload-single@0.0.80
   - @jamsr-ui/input@0.0.74
   - @jamsr-ui/menu@0.0.73
   - @jamsr-ui/popover@0.0.59
@@ -46,7 +46,7 @@
   - @jamsr-ui/menu@0.0.72
   - @jamsr-ui/popover@0.0.58
   - @jamsr-ui/divider@0.0.58
-  - @jamsr-ui/file-upload@0.0.79
+  - @jamsr-ui/file-upload-single@0.0.79
   - @jamsr-ui/switch@0.0.66
 
 ## 0.0.69
@@ -63,7 +63,7 @@
 - Updated dependencies
   - @jamsr-ui/shared-icons@0.0.52
   - @jamsr-ui/button@0.0.59
-  - @jamsr-ui/file-upload@0.0.78
+  - @jamsr-ui/file-upload-single@0.0.78
   - @jamsr-ui/input@0.0.70
   - @jamsr-ui/menu@0.0.71
   - @jamsr-ui/popover@0.0.57
@@ -75,7 +75,7 @@
 
 - fix types
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.77
+  - @jamsr-ui/file-upload-single@0.0.77
   - @jamsr-ui/divider@0.0.57
   - @jamsr-ui/popover@0.0.57
   - @jamsr-ui/button@0.0.59
@@ -111,7 +111,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.58
   - @jamsr-ui/divider@0.0.56
-  - @jamsr-ui/file-upload@0.0.76
+  - @jamsr-ui/file-upload-single@0.0.76
   - @jamsr-ui/input@0.0.67
   - @jamsr-ui/menu@0.0.69
   - @jamsr-ui/popover@0.0.56
@@ -130,7 +130,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.57
   - @jamsr-ui/divider@0.0.55
-  - @jamsr-ui/file-upload@0.0.75
+  - @jamsr-ui/file-upload-single@0.0.75
   - @jamsr-ui/input@0.0.66
   - @jamsr-ui/menu@0.0.68
   - @jamsr-ui/popover@0.0.55
@@ -150,7 +150,7 @@
   - @jamsr-ui/switch@0.0.61
   - @jamsr-ui/button@0.0.56
   - @jamsr-ui/divider@0.0.54
-  - @jamsr-ui/file-upload@0.0.74
+  - @jamsr-ui/file-upload-single@0.0.74
   - @jamsr-ui/input@0.0.65
   - @jamsr-ui/menu@0.0.67
   - @jamsr-ui/popover@0.0.54
@@ -168,7 +168,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.55
   - @jamsr-ui/divider@0.0.53
-  - @jamsr-ui/file-upload@0.0.73
+  - @jamsr-ui/file-upload-single@0.0.73
   - @jamsr-ui/input@0.0.64
   - @jamsr-ui/menu@0.0.66
   - @jamsr-ui/popover@0.0.53
@@ -192,7 +192,7 @@
   - @jamsr-ui/menu@0.0.65
   - @jamsr-ui/select@0.0.66
   - @jamsr-ui/divider@0.0.52
-  - @jamsr-ui/file-upload@0.0.72
+  - @jamsr-ui/file-upload-single@0.0.72
 
 ## 0.0.59
 
@@ -202,7 +202,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.53
   - @jamsr-ui/divider@0.0.51
-  - @jamsr-ui/file-upload@0.0.71
+  - @jamsr-ui/file-upload-single@0.0.71
   - @jamsr-ui/input@0.0.62
   - @jamsr-ui/menu@0.0.64
   - @jamsr-ui/popover@0.0.51
@@ -225,7 +225,7 @@
   - @jamsr-ui/popover@0.0.50
   - @jamsr-ui/select@0.0.64
   - @jamsr-ui/divider@0.0.50
-  - @jamsr-ui/file-upload@0.0.70
+  - @jamsr-ui/file-upload-single@0.0.70
   - @jamsr-ui/switch@0.0.57
 
 ## 0.0.57
@@ -243,7 +243,7 @@
   - @jamsr-ui/utils@0.0.45
   - @jamsr-ui/button@0.0.51
   - @jamsr-ui/divider@0.0.49
-  - @jamsr-ui/file-upload@0.0.69
+  - @jamsr-ui/file-upload-single@0.0.69
   - @jamsr-ui/menu@0.0.62
   - @jamsr-ui/popover@0.0.49
   - @jamsr-ui/select@0.0.63
@@ -259,7 +259,7 @@
   - @jamsr-ui/select@0.0.62
   - @jamsr-ui/button@0.0.50
   - @jamsr-ui/divider@0.0.48
-  - @jamsr-ui/file-upload@0.0.68
+  - @jamsr-ui/file-upload-single@0.0.68
   - @jamsr-ui/menu@0.0.61
   - @jamsr-ui/popover@0.0.48
   - @jamsr-ui/switch@0.0.55
@@ -276,7 +276,7 @@
   - @jamsr-ui/popover@0.0.47
   - @jamsr-ui/select@0.0.61
   - @jamsr-ui/divider@0.0.47
-  - @jamsr-ui/file-upload@0.0.67
+  - @jamsr-ui/file-upload-single@0.0.67
   - @jamsr-ui/switch@0.0.54
 
 ## 0.0.53
@@ -295,7 +295,7 @@
   - @jamsr-ui/shared-icons@0.0.45
   - @jamsr-ui/utils@0.0.42
   - @jamsr-ui/button@0.0.48
-  - @jamsr-ui/file-upload@0.0.66
+  - @jamsr-ui/file-upload-single@0.0.66
   - @jamsr-ui/input@0.0.55
   - @jamsr-ui/menu@0.0.59
   - @jamsr-ui/popover@0.0.46
@@ -309,7 +309,7 @@
 
 - fix bug
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.65
+  - @jamsr-ui/file-upload-single@0.0.65
   - @jamsr-ui/repeater@0.0.22
   - @jamsr-ui/select@0.0.58
   - @jamsr-ui/input@0.0.54
@@ -324,7 +324,7 @@
 
 - fix rating
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.64
+  - @jamsr-ui/file-upload-single@0.0.64
   - @jamsr-ui/repeater@0.0.21
   - @jamsr-ui/select@0.0.57
   - @jamsr-ui/input@0.0.53
@@ -359,7 +359,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.47
   - @jamsr-ui/divider@0.0.45
-  - @jamsr-ui/file-upload@0.0.63
+  - @jamsr-ui/file-upload-single@0.0.63
   - @jamsr-ui/input@0.0.52
   - @jamsr-ui/menu@0.0.54
   - @jamsr-ui/popover@0.0.45
@@ -378,7 +378,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.46
   - @jamsr-ui/divider@0.0.44
-  - @jamsr-ui/file-upload@0.0.62
+  - @jamsr-ui/file-upload-single@0.0.62
   - @jamsr-ui/input@0.0.51
   - @jamsr-ui/menu@0.0.53
   - @jamsr-ui/popover@0.0.44
@@ -405,7 +405,7 @@
   - @jamsr-ui/menu@0.0.52
   - @jamsr-ui/shared-icons@0.0.40
   - @jamsr-ui/button@0.0.45
-  - @jamsr-ui/file-upload@0.0.61
+  - @jamsr-ui/file-upload-single@0.0.61
   - @jamsr-ui/input@0.0.49
   - @jamsr-ui/popover@0.0.43
   - @jamsr-ui/select@0.0.52
@@ -418,7 +418,7 @@
 - Updated dependencies
   - @jamsr-ui/button@0.0.45
   - @jamsr-ui/divider@0.0.42
-  - @jamsr-ui/file-upload@0.0.60
+  - @jamsr-ui/file-upload-single@0.0.60
   - @jamsr-ui/input@0.0.48
   - @jamsr-ui/menu@0.0.51
   - @jamsr-ui/popover@0.0.43
@@ -463,7 +463,7 @@
 
 - fix package.json
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.59
+  - @jamsr-ui/file-upload-single@0.0.59
   - @jamsr-ui/repeater@0.0.17
   - @jamsr-ui/divider@0.0.41
   - @jamsr-ui/popover@0.0.42
@@ -482,7 +482,7 @@
 
 - fix exports
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.58
+  - @jamsr-ui/file-upload-single@0.0.58
   - @jamsr-ui/repeater@0.0.16
   - @jamsr-ui/divider@0.0.40
   - @jamsr-ui/popover@0.0.41
@@ -501,7 +501,7 @@
 
 - fix cjs
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.57
+  - @jamsr-ui/file-upload-single@0.0.57
   - @jamsr-ui/repeater@0.0.15
   - @jamsr-ui/divider@0.0.39
   - @jamsr-ui/popover@0.0.40
@@ -553,7 +553,7 @@
 
 - fix deps
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.56
+  - @jamsr-ui/file-upload-single@0.0.56
   - @jamsr-ui/repeater@0.0.14
   - @jamsr-ui/divider@0.0.38
   - @jamsr-ui/popover@0.0.39
@@ -572,7 +572,7 @@
 
 - fix deps
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.55
+  - @jamsr-ui/file-upload-single@0.0.55
   - @jamsr-ui/repeater@0.0.13
   - @jamsr-ui/divider@0.0.37
   - @jamsr-ui/popover@0.0.38
@@ -591,7 +591,7 @@
 
 - fix deps
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.54
+  - @jamsr-ui/file-upload-single@0.0.54
   - @jamsr-ui/divider@0.0.36
   - @jamsr-ui/popover@0.0.37
   - @jamsr-ui/button@0.0.39
@@ -616,7 +616,7 @@
   - @jamsr-ui/utils@0.0.32
   - @jamsr-ui/button@0.0.38
   - @jamsr-ui/divider@0.0.35
-  - @jamsr-ui/file-upload@0.0.53
+  - @jamsr-ui/file-upload-single@0.0.53
   - @jamsr-ui/input@0.0.41
   - @jamsr-ui/menu@0.0.43
   - @jamsr-ui/popover@0.0.36
@@ -629,7 +629,7 @@
 
 - upgrade react
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.52
+  - @jamsr-ui/file-upload-single@0.0.52
   - @jamsr-ui/repeater@0.0.10
   - @jamsr-ui/divider@0.0.34
   - @jamsr-ui/popover@0.0.35
@@ -667,7 +667,7 @@
 
 - improvements
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.51
+  - @jamsr-ui/file-upload-single@0.0.51
   - @jamsr-ui/button@0.0.35
   - @jamsr-ui/select@0.0.41
   - @jamsr-ui/switch@0.0.39
@@ -742,7 +742,7 @@
 
 - fix editor
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.50
+  - @jamsr-ui/file-upload-single@0.0.50
 
 ## 0.0.14
 
@@ -750,7 +750,7 @@
 
 - fix
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.49
+  - @jamsr-ui/file-upload-single@0.0.49
 
 ## 0.0.13
 
@@ -758,7 +758,7 @@
 
 - improve editor
 - Updated dependencies
-  - @jamsr-ui/file-upload@0.0.48
+  - @jamsr-ui/file-upload-single@0.0.48
   - @jamsr-ui/button@0.0.34
   - @jamsr-ui/divider@0.0.32
   - @jamsr-ui/menu@0.0.38

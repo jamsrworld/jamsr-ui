@@ -32,14 +32,12 @@ export const OnThisPage = (props: Props) => {
     );
     const observer = new IntersectionObserver(
       (entries) => {
-        console.log("entries:->", entries);
         const visibleEntry = entries.find((entry) => entry.isIntersecting);
         if (visibleEntry) {
           setActiveId(visibleEntry.target.id);
         }
       },
       {
-        // root: document.querySelector("main"),
         root: null,
         rootMargin: "0% 0% -80% 0%",
         threshold: 0,

@@ -69,7 +69,7 @@
       "path": "packages/components/header"
     },
     {
-      "name": "📦 @jamsr-ui/file-upload",
+      "name": "📦 @jamsr-ui/file-upload-single",
       "path": "packages/components/image-upload"
     },
     {

@@ -17,7 +17,7 @@ import {
 } from "./style";
 
 export type FileUploadProgress = "PENDING" | "COMPLETE" | "ERROR" | number;
-export type MultiFileUploadState = {
+export type FileUploadMultiState = {
   file: null | File;
   preview: string;
   id: string;
@@ -25,11 +25,11 @@ export type MultiFileUploadState = {
 };
 
 type Props = MultiUploadVariants & {
-  defaultValue?: MultiFileUploadState[];
-  value?: MultiFileUploadState[];
-  onValueChange?: (value: MultiFileUploadState[]) => void;
+  defaultValue?: FileUploadMultiState[];
+  value?: FileUploadMultiState[];
+  onValueChange?: (value: FileUploadMultiState[]) => void;
   onFilesSelect?: (file: File[]) => void | Promise<void>;
-  onUploadSuccess: (_: { id: string; response: any }) => void;
+  onUploadSuccess?: (_: { id: string; response: any }) => void;
   className?: string;
   classNames?: SlotsToClasses<MultiUploadSlots>;
   isDisabled?: boolean;
@@ -46,8 +46,8 @@ type Props = MultiUploadVariants & {
   inputName: string;
 };
 
-export type UseMultiFileUploadProps = Props & UIProps<"div", keyof Props>;
-export const useMultiFileUpload = ($props: UseMultiFileUploadProps) => {
+export type UseFileUploadMultiProps = Props & UIProps<"div", keyof Props>;
+export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
   const { fileUploadMulti: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
@@ -87,7 +87,7 @@ export const useMultiFileUpload = ($props: UseMultiFileUploadProps) => {
   const canUploadFile = value.length < maxFiles;
 
   const updateState = useCallback(
-    (id: string, state: Partial<MultiFileUploadState>) => {
+    (id: string, state: Partial<FileUploadMultiState>) => {
       setValue((prev) => {
         return prev.map((item) => {
           if (item.id === id) {
@@ -133,7 +133,7 @@ export const useMultiFileUpload = ($props: UseMultiFileUploadProps) => {
             preview: fileUrl,
           });
           // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-          onUploadSuccess({ id, response });
+          onUploadSuccess?.({ id, response });
         } else {
           updateState(id, { progress: "ERROR" });
           onError?.({
@@ -179,7 +179,7 @@ export const useMultiFileUpload = ($props: UseMultiFileUploadProps) => {
         onError?.({ message, code: "MAXIMUM_LIMIT_REACHED" });
         return;
       }
-      const selectedFiles = files.map<MultiFileUploadState>((file) => {
+      const selectedFiles = files.map<FileUploadMultiState>((file) => {
         const objectUrl = URL.createObjectURL(file);
         return {
           preview: objectUrl,

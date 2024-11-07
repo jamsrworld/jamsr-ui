@@ -18,8 +18,8 @@ import { type DialogProps } from "@jamsr-ui/dialog";
 import { type DividerProps } from "@jamsr-ui/divider";
 import { type DrawerProps } from "@jamsr-ui/drawer";
 import { type EditorProps } from "@jamsr-ui/editor";
-import { type SingleFileUploadProps } from "@jamsr-ui/file-upload";
-import { type MultiFileUploadProps } from "@jamsr-ui/file-upload-multi";
+import { type FileUploadSingleProps } from "@jamsr-ui/file-upload-single";
+import { type FileUploadMultiProps } from "@jamsr-ui/file-upload-multi";
 import { type HeaderProps } from "@jamsr-ui/header";
 import { type InputProps } from "@jamsr-ui/input";
 import { type LinkProps } from "@jamsr-ui/link";
@@ -139,13 +139,13 @@ declare module "@jamsr-ui/styles" {
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    fileUpload?: Pick<SingleFileUploadProps, "className" | "classNames">;
+    fileUpload?: Pick<FileUploadSingleProps, "className" | "classNames">;
   }
 }
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
-    fileUploadMulti?: Pick<MultiFileUploadProps, "className" | "classNames">;
+    fileUploadMulti?: Pick<FileUploadMultiProps, "className" | "classNames">;
   }
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "@jamsr-ui/file-upload",
+  "name": "@jamsr-ui/file-upload-single",
   "version": "0.0.80",
   "description": "",
   "main": "./src/index.ts",

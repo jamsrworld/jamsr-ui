@@ -25,7 +25,7 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
   value?: null | string;
   onValueChange?: (value: null | string) => void;
   onFileSelect?: (file: File) => void;
-  onUploadSuccess: (response: any) => void;
+  onUploadSuccess?: (response: any) => void;
   className?: string;
   classNames?: SlotsToClasses<UploadSlots>;
   onError?: (error: FileError) => void;
@@ -44,10 +44,10 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
   getFileUrlAfterUpload: (response: any) => string;
 };
 
-export type UseSingleFileUploadProps = Props & UIProps<"div", keyof Props>;
+export type UseFileUploadSingleProps = Props & UIProps<"div", keyof Props>;
 
-export const useSingleFileUpload = ($props: UseSingleFileUploadProps) => {
-  const { fileUpload: Props = {} } = useUIStyle();
+export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
+  const { fileUploadSingle: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
   const {
@@ -168,7 +168,7 @@ export const useSingleFileUpload = ($props: UseSingleFileUploadProps) => {
           const response = JSON.parse(xhr.responseText);
           const fileUrl = getFileUrlAfterUpload(response);
           onSuccess(fileUrl);
-          onUploadSuccess(response);
+          onUploadSuccess?.(response);
         } else {
           onUploadFailed();
         }

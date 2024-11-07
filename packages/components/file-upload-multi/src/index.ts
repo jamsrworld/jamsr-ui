@@ -1,8 +1,8 @@
 "use client";
 
-export { MultiFileUpload, type MultiFileUploadProps } from "./file-upload";
+export { FileUploadMulti, type FileUploadMultiProps } from "./file-upload";
 export {
-  type UseMultiFileUploadProps,
-  useMultiFileUpload,
-  type MultiFileUploadState,
+  type UseFileUploadMultiProps,
+  useFileUploadMulti,
+  type FileUploadMultiState,
 } from "./use-file-upload";

@@ -2,11 +2,14 @@ import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { RHFDemoCheckbox } from "./variants/checkbox";
+import { RHFDemoEditor } from "./variants/editor";
 import { RHFDemoInput } from "./variants/input";
+import { RHFDemoFileUploadMulti } from "./variants/file-upload-multi";
 import { RHFDemoOtpInput } from "./variants/otp-input";
 import { RHFDemoRadioGroup } from "./variants/radio-group";
 import { RHFDemoRating } from "./variants/rating";
 import { RHFDemoSelect } from "./variants/select";
+import { RHFDemoFileUploadSingle } from "./variants/file-upload-single";
 import { RHFDemoSwitch } from "./variants/switch";
 import { RHFDemoTagsInput } from "./variants/tags-input";
 import { RHFDemoTextarea } from "./variants/textarea";
@@ -33,9 +36,6 @@ const DragDropDndKit = () => {
       <VariantWrapper heading="Radio Group">
         <RHFDemoRadioGroup />
       </VariantWrapper>
-      <VariantWrapper heading="Editor">
-        <RHFDemoCheckbox />
-      </VariantWrapper>
       <VariantWrapper heading="Otp Input">
         <RHFDemoOtpInput />
       </VariantWrapper>
@@ -47,6 +47,15 @@ const DragDropDndKit = () => {
       </VariantWrapper>
       <VariantWrapper heading="Select">
         <RHFDemoSelect />
+      </VariantWrapper>
+      <VariantWrapper heading="Editor">
+        <RHFDemoEditor />
+      </VariantWrapper>
+      <VariantWrapper heading="Single File Upload">
+        <RHFDemoFileUploadSingle />
+      </VariantWrapper>
+      <VariantWrapper heading="Multi File Upload">
+        <RHFDemoFileUploadMulti />
       </VariantWrapper>
     </VariantPage>
   );

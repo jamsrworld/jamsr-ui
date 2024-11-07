@@ -1,5 +1,18 @@
 # @jamsr-ui/confirmation
 
+## 0.0.46
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/button@0.0.62
+  - @jamsr-ui/dialog@0.0.69
+  - @jamsr-ui/divider@0.0.60
+  - @jamsr-ui/typography@0.0.67
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/utils@0.0.56
+
 ## 0.0.45
 
 ### Patch Changes

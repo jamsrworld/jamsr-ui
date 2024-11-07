@@ -1,5 +1,17 @@
 # @jamsr-ui/dialog
 
+## 0.0.69
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/button@0.0.62
+  - @jamsr-ui/hooks@0.0.41
+  - @jamsr-ui/shared-icons@0.0.54
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/utils@0.0.56
+
 ## 0.0.68
 
 ### Patch Changes

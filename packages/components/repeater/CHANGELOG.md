@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.30
+
+### Patch Changes
+
+- fix file upload
+
 ## 0.0.29
 
 ### Patch Changes

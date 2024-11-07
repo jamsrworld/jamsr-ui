@@ -1,5 +1,16 @@
 # @jamsr-ui/rating
 
+## 0.0.18
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.30
+  - @jamsr-ui/hooks@0.0.41
+  - @jamsr-ui/shared-icons@0.0.54
+  - @jamsr-ui/styles@0.0.6
+
 ## 0.0.17
 
 ### Patch Changes

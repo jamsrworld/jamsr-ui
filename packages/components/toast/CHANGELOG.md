@@ -1,5 +1,13 @@
 # @jamsr-ui/toast
 
+## 0.0.22
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.6
+
 ## 0.0.21
 
 ### Patch Changes

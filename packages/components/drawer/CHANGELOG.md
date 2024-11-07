@@ -1,5 +1,15 @@
 # @jamsr-ui/drawer
 
+## 1.0.55
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.41
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/utils@0.0.56
+
 ## 1.0.54
 
 ### Patch Changes

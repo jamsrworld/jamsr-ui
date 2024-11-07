@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.72
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.67
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/utils@0.0.56
+
 ## 0.0.71
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @jamsr-ui/header
 
+## 0.0.65
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.60
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/utils@0.0.56
+
 ## 0.0.64
 
 ### Patch Changes

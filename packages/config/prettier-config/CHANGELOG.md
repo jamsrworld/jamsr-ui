@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.18
+
+### Patch Changes
+
+- fix file upload
+
 ## 0.0.17
 
 ### Patch Changes

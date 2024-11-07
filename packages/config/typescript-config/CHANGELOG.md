@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.39
+
+### Patch Changes
+
+- fix file upload
+
 ## 0.0.38
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.19
+
+### Patch Changes
+
+- fix file upload
+
 ## 0.0.18
 
 ### Patch Changes

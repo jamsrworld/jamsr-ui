@@ -1,5 +1,15 @@
 # @jamsr-ui/checkbox
 
+## 0.0.59
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.41
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/utils@0.0.56
+
 ## 0.0.58
 
 ### Patch Changes

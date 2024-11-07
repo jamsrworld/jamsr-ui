@@ -1,5 +1,14 @@
 # @jamsr-ui/typography
 
+## 0.0.67
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/utils@0.0.56
+
 ## 0.0.66
 
 ### Patch Changes

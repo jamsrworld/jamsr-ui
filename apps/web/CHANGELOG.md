@@ -1,5 +1,20 @@
 # web
 
+## 0.1.145
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/dnd@0.0.7
+  - @jamsr-ui/core@0.0.35
+  - @jamsr-ui/hooks@0.0.41
+  - @jamsr-ui/react@0.0.163
+  - @jamsr-ui/shared-icons@0.0.54
+  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/theme@0.0.62
+  - @jamsr-ui/utils@0.0.56
+
 ## 0.1.144
 
 ### Patch Changes

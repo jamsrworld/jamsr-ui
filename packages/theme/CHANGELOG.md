@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.62
+
+### Patch Changes
+
+- fix file upload
+
 ## 0.0.61
 
 ### Patch Changes

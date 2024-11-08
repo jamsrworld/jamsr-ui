@@ -1,5 +1,11 @@
 # @jamsr-ui/avatar
 
+## 0.0.64
+
+### Patch Changes
+
+- fix base
+
 ## 0.0.63
 
 ### Patch Changes

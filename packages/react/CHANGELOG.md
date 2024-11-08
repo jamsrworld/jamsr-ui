@@ -1,5 +1,16 @@
 # @jamsr-ui/react
 
+## 0.0.166
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/avatar@0.0.64
+  - @jamsr-ui/accordion@0.0.71
+  - @jamsr-ui/card@0.0.74
+  - @jamsr-ui/select@0.0.77
+  - @jamsr-ui/tags-input@0.0.14
+
 ## 0.0.165
 
 ### Patch Changes

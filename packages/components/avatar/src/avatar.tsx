@@ -43,14 +43,13 @@ export const Avatar = ($props: AvatarProps) => {
   };
 
   return (
-    <div data-component="avatar">
-      <NextImage
-        src={imgSrc}
-        alt={alt}
-        className={styles}
-        onError={handleOnError}
-        {...restProps}
-      />
-    </div>
+    <NextImage
+      data-component="avatar"
+      src={imgSrc}
+      alt={alt}
+      className={styles}
+      onError={handleOnError}
+      {...restProps}
+    />
   );
 };

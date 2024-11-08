@@ -4,7 +4,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { AlertCustomIcon } from "./variants/custom-icon";
 import { AlertDefault } from "./variants/default";
-import { AlertSeverity } from "./variants/severity";
+import { AlertStatus } from "./variants/status";
 import { AlertVariants } from "./variants/variants";
 import { AlertWithAction } from "./variants/with-action";
 import { AlertWithDescription } from "./variants/with-description";
@@ -53,7 +53,6 @@ const Alert = () => {
         description={
           <div>
             Use the <Code>icon</Code> prop to override the Alert's icon.
-            
           </div>
         }
       >
@@ -63,8 +62,8 @@ const Alert = () => {
         heading="Without Icon"
         description={
           <div>
-            Use the <Code>icon={`{null}`}</Code> prop to override the Alert's icon.
-            
+            Use the <Code>icon={`{null}`}</Code> prop to override the Alert's
+            icon.
           </div>
         }
       >
@@ -74,13 +73,14 @@ const Alert = () => {
         heading="Status"
         description={
           <div>
-            Use the <Code>status</Code> prop for different states:: <Code>success</Code>(the
-            default), <Code>info</Code>, <Code>warning</Code> and <Code>danger</Code> with corresponding icon and color
-            combinations for each.
+            Use the <Code>status</Code> prop for different states::{" "}
+            <Code>success</Code>(the default), <Code>info</Code>,{" "}
+            <Code>warning</Code> and <Code>danger</Code> with corresponding icon
+            and color combinations for each.
           </div>
         }
       >
-        <AlertSeverity />
+        <AlertStatus />
       </VariantWrapper>
       <VariantWrapper
         heading="Variants"

@@ -19,7 +19,7 @@ export const DrawerDefault = (props: Partial<DrawerProps>) => {
         <Button onClick={onClose}>Close</Button>
         <Link href="/components/accordion">Home</Link>
         <Repeater count={10}>
-          <p className="mb-2 text-gray-600">
+          <p className="mb-2">
             NATURAL AND RECYCLED MATERIALS R-LENO - Recycled wool Soft,
             comfortable and light Designed to last a long time Resistant and
             easily washable materials Waterproof To accompany you everywhere
@@ -28,7 +28,7 @@ export const DrawerDefault = (props: Partial<DrawerProps>) => {
             ergonomic Drytech™
           </p>
         </Repeater>
-        <p className="mb-2 text-gray-600">
+        <p className="mb-2 text-foreground-secondary">
           This one specifically is the most simplest setup you can have, just a
           simple drawer with a trigger.
         </p>

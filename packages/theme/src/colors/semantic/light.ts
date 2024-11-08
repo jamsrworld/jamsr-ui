@@ -1,18 +1,20 @@
 import { readableColor } from "color2k";
 import { commonColors as common } from "../common";
-import { ThemeColors } from "../types";
+import { type ThemeColors } from "../types";
 
 export const themeColorsLight: ThemeColors = {
   background: {
     DEFAULT: "#ffffff",
     secondary: "#efefef",
     tertiary: "#f4f5f7",
+    inverse: "#000000",
   },
   foreground: {
     DEFAULT: "#1d1d1f",
     link: "#0066cc",
     secondary: "#6e6e73",
     tertiary: "#86868B",
+    inverse: "#ffffff",
     ...common.zinc,
   },
   divider: {

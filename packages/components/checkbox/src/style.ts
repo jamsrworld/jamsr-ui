@@ -9,8 +9,8 @@ export const checkbox = tv({
       "ui-readonly:pointer-events-none",
     ],
     wrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground",
-    helperText: "text-xs text-foreground-600",
+    label: "text-foreground shrink-0 select-none text-sm font-normal subpixel-antialiased",
+    helperText: "text-foreground-600 text-xs",
     checkbox: [
       "relative size-5 cursor-pointer appearance-none rounded-md border-2 transition-all duration-500 checked:border-blue-500 checked:bg-blue-500",
     ],

@@ -10,7 +10,7 @@ const ToastProvider = (props: ToasterProps) => {
       {...restProps}
       toastOptions={{
         className:
-          "!bg-black dark:!bg-background border-none !radius-none dark:!text-foreground  !text-white",
+          "!bg-background-inverse border-none !radius-none !text-foreground-inverse",
         duration: 2_000,
         ...toastOptions,
       }}

@@ -48,7 +48,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
     heading: "Hoisted Dependencies Setup",
     content: (
       <div className="flex flex-col gap-4">
-        <Alert variant="solid" severity="default">
+        <Alert variant="solid" status="default">
           <div>
             <strong>Note:</strong> This step is only for those who use pnpm to
             install. If you install JamsrUI using other package managers, please
@@ -78,7 +78,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
           install Tailwind CSS. Then you need to add the following code to your
           tailwind.config.js file:
         </Typography>
-        <Alert variant="solid" severity="default">
+        <Alert variant="solid" status="default">
           <div>
             <strong>Note:</strong> If you are using pnpm and monorepo
             architecture, please make sure you are pointing to the ROOT
@@ -132,8 +132,12 @@ function App() {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <Alert variant="solid" severity="default">
-        Jamsr UI is only supported in Next.js
+      <Alert variant="outlined" status="danger">
+        JamsrUI is currently in development and it is not recommended to use it
+        in production.
+      </Alert>
+      <Alert variant="solid" status="default">
+        JamsrUI is only supported in Next.js
       </Alert>
 
       <Typography as="p" variant="body1">

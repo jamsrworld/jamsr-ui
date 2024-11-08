@@ -1,5 +1,11 @@
 # @jamsr-ui/rating
 
+## 0.0.19
+
+### Patch Changes
+
+- fix themes
+
 ## 0.0.18
 
 ### Patch Changes

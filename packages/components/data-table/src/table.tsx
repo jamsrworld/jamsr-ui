@@ -42,8 +42,7 @@ export const DataTable = (props: DataTableProps) => {
   } = props;
 
   const { pagination, take, onPaginationChange } = usePagination();
-  const { sorting, field, order, onSortingChange } =
-    useSorting<string>(propSorting);
+  const { sorting, onSortingChange } = useSorting<string>(propSorting);
 
   const allColumns = useMemo(() => {
     return [

@@ -1,7 +1,7 @@
 import { type Config } from "tailwindcss";
 import { createThemes } from "tw-colors";
 import { commonColors, semanticColors } from "./colors";
-import { DeepPartial, ThemeColors } from "./colors/types";
+import { type DeepPartial, type ThemeColors } from "./colors/types";
 import { jamsrUiPlugins } from "./plugin";
 
 export { commonColors, createThemes, semanticColors };

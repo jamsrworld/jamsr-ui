@@ -5,7 +5,7 @@ import { users } from "./custom-render-complex";
 
 export const SelectCustomRenderMulti = () => {
   return (
-    <div className="min-h-[300px]">
+    <div >
       <Select
         className="w-full min-w-[300px]"
         isMultiple

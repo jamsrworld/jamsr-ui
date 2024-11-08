@@ -156,7 +156,8 @@ export const useSelect = ($props: UseSelectProps) => {
       size({
         apply({ rects, elements, availableHeight }) {
           Object.assign(elements.floating.style, {
-            maxHeight: `${Math.max(250, availableHeight)}px`,
+            height: `${rects.floating.height}px`,
+            maxHeight: `${Math.max(50, Math.min(rects.floating.height, 400, availableHeight))}px`,
             minWidth: `${rects.reference.width}px`,
           });
         },

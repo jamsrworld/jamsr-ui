@@ -1,11 +1,10 @@
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { cn, deepMergeProps, focusVisibleClasses } from "@jamsr-ui/utils";
+import { deepMergeProps } from "@jamsr-ui/utils";
+import { link, type LinkVariants } from "./styles";
 
 export type LinkProps<T extends React.ElementType = "a"> =
-  ComponentPropsWithAs<T> & {
-    underline?: "hover" | "always" | "never";
-  };
+  ComponentPropsWithAs<T> & LinkVariants;
 
 export const Link = <T extends React.ElementType = "a">(
   $props: LinkProps<T>,
@@ -13,18 +12,15 @@ export const Link = <T extends React.ElementType = "a">(
   const { link: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
-  const { as, children, className, ...restProps } = props;
+  const { as, children, className, underline, ...restProps } = props;
   const Component = as ?? "a";
+
+  const styles = link({
+    className,
+    underline,
+  });
   return (
-    <Component
-      data-component="link"
-      className={cn(
-        "cursor-pointer select-none text-foreground-link hover:underline hover:underline-offset-4",
-        focusVisibleClasses,
-        className,
-      )}
-      {...restProps}
-    >
+    <Component data-component="link" className={styles} {...restProps}>
       {children}
     </Component>
   );

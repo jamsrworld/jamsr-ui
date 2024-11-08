@@ -1,9 +1,9 @@
 import {
   Accordion,
   AccordionItem,
-  type AccordionProps,
-  Avatar,
+  type AccordionProps
 } from "@jamsr-ui/react";
+import { AvatarDefault } from "../../avatar/variants/default";
 import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
 export const AccordionStartContent = (arg: AccordionProps) => {
@@ -12,18 +12,14 @@ export const AccordionStartContent = (arg: AccordionProps) => {
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"
-        startContent={
-          <Avatar alt="avatar" src="https://i.pravatar.cc/300" size="lg" />
-        }
+        startContent={<AvatarDefault />}
       >
         {defaultContent}
       </AccordionItem>
       <AccordionItem
         heading="Accordion 2"
         subheading="Press to expand item 2"
-        startContent={
-          <Avatar alt="avatar" src="https://i.pravatar.cc/300?2" size="lg" />
-        }
+        startContent={<AvatarDefault />}
       >
         {defaultContent2}
       </AccordionItem>
@@ -31,9 +27,7 @@ export const AccordionStartContent = (arg: AccordionProps) => {
         isDisabled
         heading="Accordion 3"
         subheading="Disabled Accordion Item"
-        startContent={
-          <Avatar alt="avatar" src="https://i.pravatar.cc/300?3" size="lg" />
-        }
+        startContent={<AvatarDefault />}
       >
         {defaultContent3}
       </AccordionItem>

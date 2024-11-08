@@ -1,8 +1,9 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
+import { TableAllowHover } from "./variants/allow-hover";
+import { TableBordered } from "./variants/bordered";
 import { TableDefault } from "./variants/default";
-import { TableOutlined } from "./variants/outlined";
 
 export const metadata: Metadata = {
   title: "Table",
@@ -11,11 +12,14 @@ export const metadata: Metadata = {
 const Table = () => {
   return (
     <VariantPage heading="Table">
-      <VariantWrapper heading="Solid">
-        <TableDefault />
+    <VariantWrapper heading="Solid  (Default)">
+      <TableDefault />
+    </VariantWrapper>
+      <VariantWrapper heading="Bordered">
+        <TableBordered />
       </VariantWrapper>
-      <VariantWrapper heading="Outlined">
-        <TableOutlined />
+      <VariantWrapper heading="Allow Hover">
+        <TableAllowHover />
       </VariantWrapper>
     </VariantPage>
   );

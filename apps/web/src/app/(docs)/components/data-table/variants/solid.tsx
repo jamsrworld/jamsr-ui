@@ -2,6 +2,6 @@
 
 import { DataTableDefault } from "./default";
 
-export const DataTableSolid = () => {
-  return <DataTableDefault variant="solid" />;
+export const DataTableBorder = () => {
+  return <DataTableDefault variant="bordered" />;
 };

@@ -20,11 +20,13 @@ export type BaseColors = {
     DEFAULT: string;
     secondary: string;
     tertiary: string;
+    inverse: string;
   };
   foreground: ColorScale & {
     DEFAULT: string;
     secondary: string;
     tertiary: string;
+    inverse: string;
     link: string;
   };
   divider: {

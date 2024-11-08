@@ -75,7 +75,7 @@ const Animals = [
 
 export const AutocompleteDefault = (props: Partial<AutocompleteProps>) => {
   return (
-    <div className="min-h-[300px]">
+    <div >
       <Autocomplete
         label="Animal"
         {...props}

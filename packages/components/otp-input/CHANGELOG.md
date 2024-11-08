@@ -1,5 +1,13 @@
 # @jamsr-ui/otp-input
 
+## 0.0.61
+
+### Patch Changes
+
+- fix themes
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.58
+
 ## 0.0.60
 
 ### Patch Changes

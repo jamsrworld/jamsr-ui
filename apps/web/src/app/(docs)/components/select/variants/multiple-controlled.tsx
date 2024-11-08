@@ -8,7 +8,7 @@ export const SelectMultipleControlled = () => {
     new Set(["option1", "option2"]),
   );
   return (
-    <div className="min-h-[300px]">
+    <div >
       <Select
         className="max-w-md"
         label="Select Label"

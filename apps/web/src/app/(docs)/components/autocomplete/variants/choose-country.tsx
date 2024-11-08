@@ -430,7 +430,7 @@ export const AutocompleteChooseCountry = (
   props: Partial<AutocompleteProps>,
 ) => {
   return (
-    <div className="min-h-[600px]">
+    <div>
       <Autocomplete label="Country" {...props}>
         {countries.map((item) => {
           const content = (

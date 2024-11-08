@@ -2,9 +2,9 @@ import { Alert, Button } from "@jamsr-ui/react";
 
 export const AlertWithAction = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-4">
       <Alert 
-      severity="warning"
+      status="warning"
       heading="Warning!"
       action={
         <Button
@@ -18,7 +18,7 @@ export const AlertWithAction = () => {
       Your plan will expire soon, please renew your plan.
     </Alert>
     <Alert
-      severity="success"
+      status="success"
       heading="Success"
       action={
         <Button

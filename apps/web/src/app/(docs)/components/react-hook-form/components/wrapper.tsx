@@ -1,4 +1,4 @@
-import { Button, RHFProvider, RHFProviderProps } from "@jamsr-ui/react";
+import { Button, RHFProvider, type RHFProviderProps } from "@jamsr-ui/react";
 import { type FieldValues } from "react-hook-form";
 
 type Props<T extends FieldValues> = {

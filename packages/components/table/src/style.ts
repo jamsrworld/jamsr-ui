@@ -3,11 +3,11 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 export const test = "";
 export const table = tv({
   slots: {
-    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl",
+    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl font-medium",
     wrapper: "grid w-full gap-2",
     table: "group/table w-full min-w-full",
     thead: "h-10",
-    th: "h-10 grow items-center whitespace-nowrap px-3 text-left text-xs",
+    th: "h-10 grow items-center whitespace-nowrap px-3 text-left text-sm",
     tbody: "",
     tr: "group/tr",
     td: "overflow-hidden whitespace-nowrap px-3 text-sm",
@@ -19,10 +19,10 @@ export const table = tv({
   variants: {
     variant: {
       solid: {
-        th: "border-divider bg-background-tertiary first:rounded-l-lg last:rounded-r-lg",
-        base: "rounded-2xl bg-background-secondary p-4",
+        th: "border-divider bg-default first:rounded-l-lg last:rounded-r-lg",
+        base: "rounded-2xl bg-content1 p-4",
       },
-      outlined: {
+      bordered: {
         th: "border-b border-b-divider",
         td: "border-b border-divider-light",
         base: "bg-content1",
@@ -66,7 +66,7 @@ export const table = tv({
     density: "compact",
     allowHover: false,
     separateRows: false,
-    variant: "outlined",
+    variant: "solid",
   },
 });
 

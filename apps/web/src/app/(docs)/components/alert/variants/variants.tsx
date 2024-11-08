@@ -1,5 +1,5 @@
 import { type AlertProps } from "@jamsr-ui/react";
-import { AlertSeverity } from "./severity";
+import { AlertStatus } from "./status";
 
 export const AlertVariants = () => {
   const variants: AlertProps["variant"][] = ["outlined", "solid"];
@@ -7,7 +7,7 @@ export const AlertVariants = () => {
   return (
     <div className="grid gap-4">
       {variants.map((variant) => (
-        <AlertSeverity key={variant} variant={variant} />
+        <AlertStatus key={variant} variant={variant} />
       ))}
     </div>
   );

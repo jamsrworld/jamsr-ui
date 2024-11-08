@@ -14,7 +14,7 @@ export const alertVariant = tv({
       outlined: "",
       solid: "",
     },
-    severity: {
+    status: {
       success: {
         wrapper: "border border-success-600 text-success-600",
       },
@@ -29,35 +29,35 @@ export const alertVariant = tv({
   compoundVariants: [
     // filled
     {
-      severity: "danger",
+      status: "danger",
       variant: "solid",
       className: {
         wrapper: "bg-danger-100 text-danger-600",
       },
     },
     {
-      severity: "success",
+      status: "success",
       variant: "solid",
       className: {
         wrapper: "bg-success-100 text-success-600",
       },
     },
     {
-      severity: "info",
+      status: "info",
       variant: "solid",
       className: {
         wrapper: "bg-blue-100 text-blue-600",
       },
     },
     {
-      severity: "warning",
+      status: "warning",
       variant: "solid",
       className: {
         wrapper: "bg-warning-100 text-warning-600",
       },
     },
     {
-      severity: "default",
+      status: "default",
       variant: "solid",
       className: {
         wrapper: "border-divider bg-default-100 text-default-600",
@@ -65,7 +65,7 @@ export const alertVariant = tv({
     },
   ],
   defaultVariants: {
-    severity: "default",
+    status: "default",
     variant: "outlined",
   },
 });

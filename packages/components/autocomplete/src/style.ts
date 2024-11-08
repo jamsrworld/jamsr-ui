@@ -1,6 +1,7 @@
 import type { VariantProps } from "@jamsr-ui/utils";
 import { tv } from "@jamsr-ui/utils";
 
+export const test = "";
 export const autocompleteVariant = tv({
   slots: {
     base: ["group relative flex w-full flex-col text-sm"],

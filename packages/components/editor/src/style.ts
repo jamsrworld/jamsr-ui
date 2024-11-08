@@ -10,7 +10,7 @@ export const editorVariants = tv({
     content:
       "max-h-[400px] min-h-[200px] overflow-y-auto border-t border-divider py-2",
     helperText: "text-xs text-foreground-400",
-    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
+    label: "shrink-0 select-none text-sm font-normal text-foreground-400 subpixel-antialiased",
   },
   variants: {
     isInvalid: {

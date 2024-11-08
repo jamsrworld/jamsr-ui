@@ -207,16 +207,16 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       offset(2),
       flip({
         crossAxis: placement.includes("-"),
-        padding: 10,
+        padding: 0,
       }),
       size({
         apply({ rects, elements, availableHeight }) {
           Object.assign(elements.floating.style, {
-            maxHeight: `${Math.max(50, availableHeight)}px`,
+            maxHeight: `${Math.max(50, Math.min(400, availableHeight))}px`,
             minWidth: `${rects.reference.width}px`,
           });
         },
-        padding: 10,
+        padding: 0,
       }),
     ],
   });

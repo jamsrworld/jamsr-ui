@@ -207,7 +207,7 @@ export const users = [
 
 export const SelectCustomRenderComplex = () => {
   return (
-    <div className="min-h-[300px]">
+    <div >
       <Select
         renderValue={(values) => {
           const value = values[0];

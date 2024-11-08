@@ -1,19 +1,21 @@
 import { readableColor } from "color2k";
 import { swapColorValues } from "../../utils";
 import { commonColors as common } from "../common";
-import { ThemeColors } from "../types";
+import { type ThemeColors } from "../types";
 
 export const themeColorsDark: ThemeColors = {
   background: {
     DEFAULT: "#000",
     secondary: "#030303",
     tertiary: "#010101",
+    inverse: "#ffffff",
   },
   foreground: {
     DEFAULT: "#eaebec",
     link: "#0B84FF",
     secondary: "#9295a5",
     tertiary: "#8A8A8E",
+    inverse: "#000000",
     ...swapColorValues(common.zinc),
   },
   divider: {

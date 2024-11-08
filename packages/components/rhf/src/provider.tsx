@@ -5,9 +5,13 @@ import {
   type UseFormReturn,
 } from "react-hook-form";
 
-export type RHFProviderProps<T extends FieldValues> = {
+export type RHFProviderProps<
+  TFieldValues extends FieldValues,
+  TContext = any,
+  TTransformedValues extends FieldValues | undefined = undefined,
+> = {
   children: React.ReactNode;
-  methods: UseFormReturn<T>;
+  methods: UseFormReturn<TFieldValues, TContext, TTransformedValues>;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void | Promise<void>;
   isPending: boolean;
 } & {
@@ -15,8 +19,12 @@ export type RHFProviderProps<T extends FieldValues> = {
   className?: string;
 };
 
-export const RHFProvider = <T extends FieldValues>(
-  props: RHFProviderProps<T>,
+export const RHFProvider = <
+  TFieldValues extends FieldValues,
+  TContext = any,
+  TTransformedValues extends FieldValues | undefined = undefined,
+>(
+  props: RHFProviderProps<TFieldValues, TContext, TTransformedValues>,
 ) => {
   const {
     children,

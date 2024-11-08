@@ -1,7 +1,7 @@
 import { Alert, type AlertProps } from "@jamsr-ui/react";
 
-export const AlertSeverity = (props: AlertProps) => {
-  const severity: AlertProps["severity"][] = [
+export const AlertStatus = (props: AlertProps) => {
+  const statuses: AlertProps["status"][] = [
     "info",
     "success",
     "warning",
@@ -11,15 +11,15 @@ export const AlertSeverity = (props: AlertProps) => {
 
   return (
     <div className="grid gap-4">
-      {severity.map((severity) => (
+      {statuses.map((status) => (
         <Alert
-          key={severity}
-          severity={severity}
+          key={status}
+          status={status}
           className="capitalize"
-          heading={severity}
+          heading={status}
           {...props}
         >
-          This is a description message for {severity}
+          This is a description message for {status}
         </Alert>
       ))}
     </div>

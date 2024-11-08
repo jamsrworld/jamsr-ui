@@ -1,5 +1,6 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
+export const test = "";
 export const selectVariant = tv({
   slots: {
     base: ["group relative flex w-full select-none flex-col text-sm"],
@@ -12,15 +13,15 @@ export const selectVariant = tv({
     placeholder: ["text-left", "text-foreground-400", "text-sm", "grow"],
     mainWrapper: "flex w-full flex-col",
     innerWrapper: "flex w-full items-center gap-2",
-    label: "mb-1 text-sm text-foreground-400",
+    label: "mb-1 text-sm text-foreground-400 subpixel-antialiased",
     trigger:
       "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus:!border-primary group-data-[hovered=true]:border-gray-400 group-data-[open=true]:!border-primary",
     helperText: "mt-1 text-xs text-foreground-500",
-    popover: "",
     indicator:
       "transition-transform duration-300 group-data-[open=true]:rotate-180",
+    popover: "overflow-hidden rounded-2xl",
     content:
-      "z-popover flex flex-col overflow-y-auto rounded-2xl bg-content1 p-2 drop-shadow-menu backdrop-blur-3xl",
+      "z-popover flex h-full flex-col overflow-y-auto bg-content1 p-2 drop-shadow-menu backdrop-blur-3xl",
     startContent: "text-foreground-500",
     endContent: "text-foreground-500",
   },

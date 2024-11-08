@@ -4,7 +4,7 @@ export const AlertWithDescription = () => {
   return (
     <Alert
       heading="Warning!"
-      severity="warning"
+      status="warning"
     >
       This is a warning message.
     </Alert>

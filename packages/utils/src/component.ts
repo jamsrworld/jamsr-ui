@@ -17,7 +17,10 @@ export type UIProps<
   | OmitKeys
 >;
 
-export type ComponentPropsWithAs<T extends React.ElementType, Y = {}> = Y & {
+export type ComponentPropsWithAs<
+  T extends React.ElementType,
+  Y = NonNullable<unknown>,
+> = Y & {
   as?: T;
 } & Omit<React.ComponentProps<T>, "as" | keyof Y>;
 

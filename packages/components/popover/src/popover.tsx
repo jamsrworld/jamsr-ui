@@ -144,7 +144,7 @@ export const Popover = ($props: PopoverProps) => {
                 <FloatingArrow
                   ref={arrowRef}
                   context={context}
-                  className="fill-background-neutral"
+                  className="fill-background-tertiary"
                 />
               )}
               {children}

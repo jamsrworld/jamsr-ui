@@ -24,7 +24,7 @@ export const Alert = <T extends React.ElementType = "div">(
   const props = deepMergeProps(Props, $props);
   const {
     children,
-    severity,
+    status,
     as,
     className: $className,
     action,
@@ -35,13 +35,13 @@ export const Alert = <T extends React.ElementType = "div">(
     ...restProps
   } = props;
 
-  const styles = alertVariant({ severity, variant });
+  const styles = alertVariant({ status, variant });
   const className = cn($className, classNames?.wrapper);
   const Component = as ?? "div";
 
   const Icon = useCallback(() => {
     if (typeof icon !== "undefined") return icon;
-    switch (severity) {
+    switch (status) {
       case "default":
         return <Info />;
       case "danger":
@@ -56,7 +56,7 @@ export const Alert = <T extends React.ElementType = "div">(
         null;
     }
     return null;
-  }, [icon, severity]);
+  }, [icon, status]);
 
   return (
     <Component

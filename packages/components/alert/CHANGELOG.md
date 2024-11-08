@@ -1,5 +1,14 @@
 # @jamsr-ui/alert
 
+## 0.0.78
+
+### Patch Changes
+
+- fix themes
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.58
+  - @jamsr-ui/typography@0.0.69
+
 ## 0.0.77
 
 ### Patch Changes

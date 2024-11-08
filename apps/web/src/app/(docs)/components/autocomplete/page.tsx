@@ -48,7 +48,7 @@ const Autocomplete = () => {
       <VariantWrapper heading="Multiple Controlled">
         <AutocompleteMultipleControlled />
       </VariantWrapper>
-      <VariantWrapper heading="Multiple CustomRender">
+      <VariantWrapper heading="Multiple Custom Render">
         <AutocompleteMultipleCustomRender />
       </VariantWrapper>
     </VariantPage>

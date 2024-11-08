@@ -1,4 +1,4 @@
-import { NextConfig } from "next";
+import { type NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   eslint: { ignoreDuringBuilds: true },
@@ -7,6 +7,16 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     typedRoutes: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "i.pravatar.cc",
+      },
+      {
+        hostname: "*.jamsrworld.com",
+      },
+    ],
   },
 };
 

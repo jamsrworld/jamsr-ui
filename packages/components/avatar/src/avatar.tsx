@@ -1,46 +1,56 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { deepMergeProps, isEmpty } from "@jamsr-ui/utils";
-import { avatarVariants, type AvatarVariants } from "./style";
+import { deepMergeProps } from "@jamsr-ui/utils";
+import NextImage, { type ImageProps } from "next/image";
+import { useState } from "react";
+import { type AvatarVariants, avatarVariants } from "./style";
 
-export type AvatarProps<T extends React.ElementType = "img"> =
-  ComponentPropsWithAs<T, AvatarVariants> & {
-    alt: string;
-    placeholderType?: "avatar" | "name";
-  };
+type Props = {
+  name?: string;
+  fallback?: string | ((_: { alt: string; name?: string }) => string);
+};
 
-export const Avatar = <T extends React.ElementType = "img">(
-  $props: AvatarProps<T>,
-) => {
+export type AvatarProps = ImageProps & AvatarVariants & Props;
+export const Avatar = ($props: AvatarProps) => {
   const { avatar: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
+
   const {
     size,
     alt,
     src,
-    bordered,
+    isBordered,
     className,
-    placeholderType = "avatar",
-    as,
+    fallback,
+    name,
+    onError,
+    radius = "full",
     ...restProps
   } = props;
-  const source = !isEmpty(src)
-    ? src
-    : `https://avatars.jamsrworld.com/${placeholderType === "avatar" ? "public" : "username"}?username=${alt}`;
 
-  const Component = as ?? "img";
+  const [imgSrc, setImgSrc] = useState<ImageProps["src"]>(src);
+  const styles = avatarVariants({
+    size,
+    isBordered,
+    className,
+    radius,
+  });
+
+  const handleOnError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    onError?.(e);
+    const url =
+      typeof fallback === "function" ? fallback({ alt, name }) : fallback;
+    if (url) setImgSrc(url);
+  };
+
   return (
-    <Component
-      data-component="avatar"
-      src={source}
-      alt={alt}
-      className={avatarVariants({
-        size,
-        bordered,
-        className,
-      })}
-      sizes="100vw"
-      {...restProps}
-    />
+    <div data-component="avatar">
+      <NextImage
+        src={imgSrc}
+        alt={alt}
+        className={styles}
+        onError={handleOnError}
+        {...restProps}
+      />
+    </div>
   );
 };

@@ -1,6 +1,11 @@
-import { Link } from "@jamsr-ui/react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link, type LinkProps } from "@jamsr-ui/react";
 
-export const LinkDefault = () => {
-  // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  return <Link href="#">Go to homepage</Link>;
+export const LinkDefault = (props: Partial<LinkProps>) => {
+  const { children = "Go to homepage", ...restProps } = props;
+  return (
+    <Link href="#" {...restProps}>
+      {children}
+    </Link>
+  );
 };

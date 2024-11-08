@@ -26,7 +26,6 @@ export type TooltipProps = {
   enabled?: boolean;
   offset?: number;
   showArrow?: boolean;
-  isInteractive?: boolean;
   openDelay?: number;
   closeDelay?: number;
   className?: string;
@@ -47,7 +46,6 @@ export const Tooltip = ($props: TooltipProps) => {
     enabled = true,
     offset: offsetVal = 8,
     showArrow = false,
-    isInteractive = false,
     closeDelay = 100,
     openDelay = 400,
     className,
@@ -79,9 +77,7 @@ export const Tooltip = ($props: TooltipProps) => {
 
   const hover = useHover(context, {
     move: false,
-    ...(isInteractive && {
-      handleClose: safePolygon({ blockPointerEvents: true }),
-    }),
+    handleClose: safePolygon({ blockPointerEvents: true }),
     delay: {
       open: openDelay,
       close: closeDelay,
@@ -119,7 +115,7 @@ export const Tooltip = ($props: TooltipProps) => {
             style={floatingStyles}
             {...getFloatingProps()}
             className={cn(
-              "z-popover inline-block rounded-lg bg-black px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-opacity duration-300 dark:bg-white dark:text-black",
+              "text-foreground-inverse z-popover inline-block rounded-lg bg-background-inverse px-3 py-1.5 text-sm font-medium shadow-sm transition-opacity duration-300",
               className,
               classNames?.base,
             )}
@@ -128,7 +124,7 @@ export const Tooltip = ($props: TooltipProps) => {
               <FloatingArrow
                 ref={arrowRef}
                 context={context}
-                className={cn("fill-background", classNames?.arrow)}
+                className={cn("fill-background-inverse", classNames?.arrow)}
               />
             )}
             {title}

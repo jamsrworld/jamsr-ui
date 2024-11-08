@@ -110,7 +110,7 @@ export const CustomRenderValue: Story = {
 
 const MultipleTemplate = () => {
   return (
-    <div className="min-h-[300px]">
+    <div >
       <Select className="max-w-md" label="Select Label" isMultiple>
         {Array(20)
           .fill(null)
@@ -132,7 +132,7 @@ const MultipleControlledTemplate = () => {
     new Set(["option1", "option2"]),
   );
   return (
-    <div className="min-h-[300px]">
+    <div >
       <Select
         className="max-w-md"
         label="Select Label"

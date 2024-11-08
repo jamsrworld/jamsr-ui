@@ -11,7 +11,7 @@ export const switchVariants = tv({
     ],
     thumb: "size-8 rounded-full bg-white shadow-md",
     helperText: "text-xs text-foreground-400",
-    label: "grid grow cursor-pointer select-none gap-1",
+    label: "grid grow cursor-pointer select-none gap-1 subpixel-antialiased",
     labelText: "font-medium",
     description: "text-xs text-foreground-500",
     mainWrapper: "flex items-center justify-between gap-2",

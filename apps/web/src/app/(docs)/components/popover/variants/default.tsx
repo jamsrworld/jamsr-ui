@@ -1,7 +1,12 @@
-import { Button, Popover, Typography } from "@jamsr-ui/react";
+import {
+  Button,
+  Popover,
+  type PopoverProps,
+  Typography,
+} from "@jamsr-ui/react";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
 
-export const PopoverDefault = () => {
+export const PopoverDefault = (props: Partial<PopoverProps>) => {
   return (
     <div className="grid min-h-[120px] place-content-center">
       <Popover
@@ -11,6 +16,7 @@ export const PopoverDefault = () => {
           </Button>
         }
         className="p-2"
+        {...props}
       >
         <Typography as="p">This is a Popover content</Typography>
       </Popover>

@@ -5,7 +5,7 @@ export const test = "";
 export const otpInput = tv({
   slots: {
     base: "flex flex-col gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
+    label: "shrink-0 select-none text-sm font-normal text-foreground-400 subpixel-antialiased",
     wrapper: "flex flex-col gap-1",
     inputsWrapper: "flex gap-2",
     helperText: "text-xs text-foreground-600",

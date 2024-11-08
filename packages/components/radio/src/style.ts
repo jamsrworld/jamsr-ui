@@ -32,7 +32,7 @@ export const radioVariant = tv({
       "group-data-[selected=true]:opacity-100",
       "group-data-[selected=true]:scale-100",
     ],
-    label: "relative select-none text-foreground",
+    label: "relative select-none text-foreground subpixel-antialiased",
     description: "relative text-foreground-400",
   },
   variants: {

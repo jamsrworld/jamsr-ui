@@ -1,6 +1,8 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
+import { readVariantCode } from "@/utils/read-code";
+import { type VariantTypes } from "@/types/variants";
 import { RatingControlled } from "./variants/controlled";
 import { RatingDefault } from "./variants/default";
 import { RatingDefaultValue } from "./variants/default-value";
@@ -14,31 +16,34 @@ export const metadata: Metadata = {
   title: "Rating",
 };
 
+const code = <T extends VariantTypes["rating"][number]>(variant: T) =>
+  readVariantCode("rating", variant);
+
 const Rating = () => {
   return (
     <VariantPage heading="Rating">
-      <VariantWrapper heading="Default">
+      <VariantWrapper heading="Default" code={code("default")}>
         <RatingDefault />
       </VariantWrapper>
-      <VariantWrapper heading="Size">
+      <VariantWrapper heading="Size" code={code("size")}>
         <RatingSize />
       </VariantWrapper>
-      <VariantWrapper heading="Readonly">
+      <VariantWrapper heading="Readonly" code={code("readonly")}>
         <RatingReadonly />
       </VariantWrapper>
-      <VariantWrapper heading="Disabled">
+      <VariantWrapper heading="Disabled" code={code("disabled")}>
         <RatingDisabled />
       </VariantWrapper>
-      <VariantWrapper heading="Default Value">
+      <VariantWrapper heading="Default Value" code={code("default-value")}>
         <RatingDefaultValue />
       </VariantWrapper>
-      <VariantWrapper heading="Controlled">
+      <VariantWrapper heading="Controlled" code={code("controlled")}>
         <RatingControlled />
       </VariantWrapper>
-      <VariantWrapper heading="Helper Text">
+      <VariantWrapper heading="Helper Text" code={code("helper-text")}>
         <RatingHelperText />
       </VariantWrapper>
-      <VariantWrapper heading="Invalid">
+      <VariantWrapper heading="Invalid" code={code("invalid")}>
         <RatingInvalid />
       </VariantWrapper>
     </VariantPage>

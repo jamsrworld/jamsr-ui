@@ -1,6 +1,7 @@
 import { AppFooter } from "@/components/footer";
 import React from "react";
 import { ComponentsSidebar } from "./sidebar";
+import "highlight.js/styles/github-dark.css";
 
 type Props = {
   children: React.ReactNode;

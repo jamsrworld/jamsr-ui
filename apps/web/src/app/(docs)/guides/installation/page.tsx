@@ -1,4 +1,4 @@
-import { CodeSnippet } from "@/components/code-snippet";
+import { CodeBlock } from "@/components/code-block";
 import { VariantPage } from "@/components/docs/variant-page";
 import { JAMSR_UI_TEMPLATE_GITHUB_URL } from "@/config";
 import {
@@ -32,13 +32,13 @@ const items: { heading: string; content: React.ReactNode }[] = [
         </Typography>
         <Tabs variant="underlined" defaultValue="pnpm">
           <Tab startContent={<NpmIcon />} value="npm" heading="npm">
-            <CodeSnippet>npm install @jamsr-ui/react framer-motion</CodeSnippet>
+            <CodeBlock>npm install @jamsr-ui/react framer-motion</CodeBlock>
           </Tab>
           <Tab startContent={<YarnIcon />} value="yarn" heading="yarn">
-            <CodeSnippet>yarn add @jamsr-ui/react framer-motion</CodeSnippet>
+            <CodeBlock>yarn add @jamsr-ui/react framer-motion</CodeBlock>
           </Tab>
           <Tab startContent={<PnpmIcon />} value="pnpm" heading="pnpm">
-            <CodeSnippet>pnpm add @jamsr-ui/react framer-motion</CodeSnippet>
+            <CodeBlock>pnpm add @jamsr-ui/react framer-motion</CodeBlock>
           </Tab>
         </Tabs>
       </div>
@@ -59,7 +59,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
           If you are using pnpm, you need to add the following line to your
           .npmrc file to hoist our packages to the root node_modules.
         </Typography>
-        <CodeSnippet>public-hoist-pattern[]=*@jamsr-ui/*</CodeSnippet>
+        <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
         <Typography as="p">
           After modifying the .npmrc file, you need to delete the previous
           node_modules and reinstall again to ensure that the dependencies are
@@ -85,7 +85,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
             node_modules
           </div>
         </Alert>
-        <CodeSnippet>
+        <CodeBlock>
           {`// tailwind.config.ts
 import { withJamsrUI } from "@jamsr-ui/theme";
 import type { Config } from "tailwindcss";
@@ -101,7 +101,7 @@ const config = withJamsrUI({
 export default config;
 
 `}
-        </CodeSnippet>
+        </CodeBlock>
       </div>
     ),
   },
@@ -113,7 +113,7 @@ export default config;
           It is essential to add the JamsrUIProvider at the root of your
           application.
         </Typography>
-        <CodeSnippet>
+        <CodeBlock>
           {`import { UIProvider } from "@jamsr-ui/react";
           
 function App() {
@@ -123,7 +123,7 @@ function App() {
     </UIProvider>
   );
 }`}
-        </CodeSnippet>
+        </CodeBlock>
       </div>
     ),
   },
@@ -133,8 +133,7 @@ const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
       <Alert variant="outlined" status="danger">
-        JamsrUI is currently in development and it is not recommended to use it
-        in production.
+        JamsrUI is currently in development and it is not stable.
       </Alert>
       <Alert variant="solid" status="default">
         JamsrUI is only supported in Next.js

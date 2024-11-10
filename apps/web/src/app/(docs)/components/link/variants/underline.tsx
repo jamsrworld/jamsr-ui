@@ -8,7 +8,7 @@ export const LinkUnderline = () => {
       {underlines.map((item) => {
         return (
           <LinkDefault key={item} underline={item}>
-            variant="{item}"
+            underline="{item}"
           </LinkDefault>
         );
       })}

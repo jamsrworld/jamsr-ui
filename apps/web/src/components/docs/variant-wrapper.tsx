@@ -1,15 +1,17 @@
 import { toSlug } from "@/utils/fns";
 import { Tab, Tabs, Typography } from "@jamsr-ui/react";
 import React from "react";
+import { CodeBlock } from "../code-block";
 
 export type VariantWrapperProps = {
   children: React.ReactNode;
   heading: string;
   description?: React.ReactNode;
+  code?: string;
 };
 
 export const VariantWrapper = (props: VariantWrapperProps) => {
-  const { children, heading, description } = props;
+  const { children, heading, description, code } = props;
   const id = toSlug(heading);
   return (
     <section id={id}>
@@ -35,7 +37,11 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
             </div>
           </Tab>
           <Tab heading="Code" value="code">
-            <Typography as="p">Coming soon</Typography>
+            {code ? (
+              <CodeBlock>{code}</CodeBlock>
+            ) : (
+              <Typography as="p">Coming Soon</Typography>
+            )}
           </Tab>
         </Tabs>
       </div>

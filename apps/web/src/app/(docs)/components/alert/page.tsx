@@ -2,6 +2,8 @@ import { Code } from "@/components/code";
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
+import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
 import { AlertCustomIcon } from "./variants/custom-icon";
 import { AlertDefault } from "./variants/default";
 import { AlertStatus } from "./variants/status";
@@ -19,10 +21,13 @@ export const metadata: Metadata = {
   description,
 };
 
+const code = <T extends VariantTypes["alert"][number]>(variant: T) =>
+  readVariantCode("alert", variant);
+
 const Alert = () => {
   return (
     <VariantPage heading="Alert" description={description}>
-      <VariantWrapper heading="Default">
+      <VariantWrapper heading="Default" code={code("default")}>
         <AlertDefault />
       </VariantWrapper>
       <VariantWrapper
@@ -33,6 +38,7 @@ const Alert = () => {
             the alert. This will be displayed below the alert message.
           </div>
         }
+        code={code("with-description")}
       >
         <AlertWithDescription />
       </VariantWrapper>
@@ -44,6 +50,7 @@ const Alert = () => {
             expanded at once.
           </div>
         }
+        code={code("with-action")}
       >
         <AlertWithAction />
       </VariantWrapper>
@@ -55,6 +62,7 @@ const Alert = () => {
             Use the <Code>icon</Code> prop to override the Alert's icon.
           </div>
         }
+        code={code("custom-icon")}
       >
         <AlertCustomIcon />
       </VariantWrapper>
@@ -66,6 +74,7 @@ const Alert = () => {
             icon.
           </div>
         }
+        code={code("without-icon")}
       >
         <WithoutIcon />
       </VariantWrapper>
@@ -79,6 +88,7 @@ const Alert = () => {
             and color combinations for each.
           </div>
         }
+        code={code("status")}
       >
         <AlertStatus />
       </VariantWrapper>
@@ -90,6 +100,7 @@ const Alert = () => {
             alert. Values can be <Code>outlined</Code> or <Code>solid</Code>
           </div>
         }
+        code={code("variants")}
       >
         <AlertVariants />
       </VariantWrapper>

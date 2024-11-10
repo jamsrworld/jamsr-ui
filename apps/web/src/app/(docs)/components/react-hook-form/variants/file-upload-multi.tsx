@@ -30,8 +30,7 @@ export const RHFDemoFileUploadMulti = (props: Props) => {
     defaultValues,
     resolver: zodResolver(schema),
   });
-  const { handleSubmit, watch } = methods;
-  console.log("watch:->", watch());
+  const { handleSubmit } = methods;
   const onSubmit = handleSubmit((values) => {
     console.log(values);
   });

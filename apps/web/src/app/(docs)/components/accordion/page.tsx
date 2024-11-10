@@ -1,7 +1,9 @@
 import { Code } from "@/components/code";
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
+import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
+import { type VariantTypes } from "@/types/variants";
 import { AccordionCustomIcon } from "./variants/custom-icon";
 import { AccordionDefault } from "./variants/default";
 import { AccordionDisabled } from "./variants/disabled";
@@ -21,10 +23,13 @@ export const metadata: Metadata = {
   description,
 };
 
+const code = <T extends VariantTypes["accordion"][number]>(variant: T) =>
+  readVariantCode("accordion", variant);
+
 const Accordion = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default">
+      <VariantWrapper heading="Default" code={code("default")}>
         <AccordionDefault />
       </VariantWrapper>
       <VariantWrapper
@@ -35,6 +40,7 @@ const Accordion = () => {
             expanded at once.
           </div>
         }
+        code={code("multiple-selection")}
       >
         <AccordionMultipleSelection />
       </VariantWrapper>
@@ -46,6 +52,7 @@ const Accordion = () => {
             prevent it from being expanded or collapsed.
           </div>
         }
+        code={code("disabled")}
       >
         <AccordionDisabled />
       </VariantWrapper>
@@ -56,6 +63,7 @@ const Accordion = () => {
             Use the <Code>subheading</Code> prop to add subheading.
           </div>
         }
+        code={code("subheading")}
       >
         <AccordionSubheading />
       </VariantWrapper>
@@ -67,6 +75,7 @@ const Accordion = () => {
             content before the accordion items.
           </div>
         }
+        code={code("start-content")}
       >
         <AccordionStartContent />
       </VariantWrapper>
@@ -78,6 +87,7 @@ const Accordion = () => {
             content after the accordion items.
           </div>
         }
+        code={code("end-content")}
       >
         <AccordionEndContent />
       </VariantWrapper>
@@ -90,6 +100,7 @@ const Accordion = () => {
             on the outside content
           </div>
         }
+        code={code("start-content-outside")}
       >
         <AccordionStartContentOutside />
       </VariantWrapper>
@@ -102,6 +113,7 @@ const Accordion = () => {
             on the outside content
           </div>
         }
+        code={code("end-content-outside")}
       >
         <AccordionEndContentOutside />
       </VariantWrapper>
@@ -113,6 +125,7 @@ const Accordion = () => {
           </div>
         }
         heading="Custom Icon"
+        code={code("custom-icon")}
       >
         <AccordionCustomIcon />
       </VariantWrapper>

@@ -1,6 +1,8 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
+import { readVariantCode } from "@/utils/read-code";
+import { type VariantTypes } from "@/types/variants";
 import { TextareaControlled } from "./variants/controlled";
 import { TextareaDefault } from "./variants/default";
 import { TextareaDisabled } from "./variants/disabled";
@@ -20,49 +22,61 @@ export const metadata: Metadata = {
   title: "Textarea",
 };
 
+const code = <T extends VariantTypes["textarea"][number]>(variant: T) =>
+  readVariantCode("textarea", variant);
+
 const Textarea = () => {
   return (
     <VariantPage heading="Textarea">
-      <VariantWrapper heading="Default">
+      <VariantWrapper heading="Default" code={code("default")}>
         <TextareaDefault />
       </VariantWrapper>
-      <VariantWrapper heading="Controlled">
+      <VariantWrapper heading="Controlled" code={code("controlled")}>
         <TextareaControlled />
       </VariantWrapper>
-      <VariantWrapper heading="Helper Text">
+      <VariantWrapper heading="Helper Text" code={code("helper-text")}>
         <TextareaHelperText />
       </VariantWrapper>
-      <VariantWrapper heading="Error State">
+      <VariantWrapper heading="Error State" code={code("error-state")}>
         <TextareaErrorState />
       </VariantWrapper>
-      <VariantWrapper heading="Disabled">
+      <VariantWrapper heading="Disabled" code={code("disabled")}>
         <TextareaDisabled />
       </VariantWrapper>
-      <VariantWrapper heading="With Placeholder">
+      <VariantWrapper
+        heading="With Placeholder"
+        code={code("with-placeholder")}
+      >
         <TextareaWithPlaceholder />
       </VariantWrapper>
-      <VariantWrapper heading="WithoutLabel">
+      <VariantWrapper heading="WithoutLabel" code={code("without-label")}>
         <TextareaWithoutLabel />
       </VariantWrapper>
-      <VariantWrapper heading="With Start Content">
+      <VariantWrapper
+        heading="With Start Content"
+        code={code("with-start-content")}
+      >
         <TextareaWithStartContent />
       </VariantWrapper>
-      <VariantWrapper heading="With End Content">
+      <VariantWrapper
+        heading="With End Content"
+        code={code("with-end-content")}
+      >
         <TextareaWithEndContent />
       </VariantWrapper>
-      <VariantWrapper heading="WithIcon">
+      <VariantWrapper heading="WithIcon" code={code("with-icon")}>
         <TextareaWithIcon />
       </VariantWrapper>
-      <VariantWrapper heading="Sizes">
+      <VariantWrapper heading="Sizes" code={code("sizes")}>
         <TextareaSizes />
       </VariantWrapper>
-      <VariantWrapper heading="Placeholder">
+      <VariantWrapper heading="Placeholder" code={code("placeholder")}>
         <TextareaPlaceholder />
       </VariantWrapper>
-      <VariantWrapper heading="Variant">
+      <VariantWrapper heading="Variant" code={code("variants")}>
         <TextareaVariants />
       </VariantWrapper>
-      <VariantWrapper heading="LabelHelper">
+      <VariantWrapper heading="LabelHelper" code={code("label-helper")}>
         <TextareaLabelHelper />
       </VariantWrapper>
     </VariantPage>

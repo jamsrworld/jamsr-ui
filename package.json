@@ -12,7 +12,8 @@
     "prepare": "husky",
     "build-packages": "turbo build --filter='@jamsr-ui*'",
     "publish-packages": "turbo build --filter='@jamsr-ui*' && changeset && changeset version && changeset publish",
-    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
+    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
+    "typegen:variants": "tsx typegen/main.ts"
   },
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:^",

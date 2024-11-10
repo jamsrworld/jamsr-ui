@@ -23,6 +23,7 @@
     "Booleanish",
     "clsx",
     "commitlint",
+    "hljs",
     "hookform",
     "jamsr",
     "jamsrui",

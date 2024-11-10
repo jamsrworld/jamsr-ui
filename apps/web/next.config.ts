@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
       {
         hostname: "*.jamsrworld.com",
       },
+      {
+        hostname: "*.cloudfront.net",
+      },
     ],
   },
 };

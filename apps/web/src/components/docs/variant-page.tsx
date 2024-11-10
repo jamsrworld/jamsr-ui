@@ -21,7 +21,7 @@ export const VariantPage = (props: Props) => {
 
   return (
     <main className="flex">
-      <article className="container mx-auto flex max-w-screen-md flex-col gap-8 pb-6 pt-12">
+      <article className="container mx-auto flex w-full max-w-screen-md flex-col gap-8 pb-6 pt-12">
         <div className="flex flex-col gap-2">
           <Typography variant="h4" as="h1">
             {heading}
@@ -34,9 +34,7 @@ export const VariantPage = (props: Props) => {
             {description}
           </Typography>
         </div>
-        <div className="flex gap-4">
-          <div className="flex grow flex-col gap-4">{children}</div>
-        </div>
+        <div className="flex grow flex-col gap-4">{children}</div>
       </article>
       <OnThisPage headings={headingsList} />
     </main>

@@ -1,9 +1,9 @@
 import { Code } from "@/components/code";
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
+import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { type VariantTypes } from "@/types/variants";
 import { AccordionCustomIcon } from "./variants/custom-icon";
 import { AccordionDefault } from "./variants/default";
 import { AccordionDisabled } from "./variants/disabled";
@@ -13,6 +13,7 @@ import { AccordionMultipleSelection } from "./variants/multiple-selection";
 import { AccordionStartContent } from "./variants/start-content";
 import { AccordionStartContentOutside } from "./variants/start-content-outside";
 import { AccordionSubheading } from "./variants/subheading";
+import { AccordionWithoutIcon } from "./variants/without-icon";
 
 const title = "Accordion";
 const description =
@@ -128,6 +129,9 @@ const Accordion = () => {
         code={code("custom-icon")}
       >
         <AccordionCustomIcon />
+      </VariantWrapper>
+      <VariantWrapper heading="Without Icon" code={code("without-icon")}>
+        <AccordionWithoutIcon />
       </VariantWrapper>
     </VariantPage>
   );

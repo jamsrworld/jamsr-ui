@@ -207,8 +207,9 @@ export const users = [
 
 export const SelectCustomRenderComplex = () => {
   return (
-    <div >
+    <div>
       <Select
+        size="lg"
         renderValue={(values) => {
           const value = values[0];
           const selectedUser = users.find((u) => u.email === value);
@@ -220,6 +221,8 @@ export const SelectCustomRenderComplex = () => {
                 className="shrink-0"
                 size="sm"
                 src={selectedUser.avatar}
+                width={100}
+                height={100}
               />
               <div className="flex flex-col">
                 <span className="text-left text-sm">{selectedUser.name}</span>
@@ -240,6 +243,8 @@ export const SelectCustomRenderComplex = () => {
                   className="shrink-0"
                   size="sm"
                   src={user.avatar}
+                  width={100}
+                  height={100}
                 />
                 <div className="flex flex-col">
                   <span className="text-left text-sm">{user.name}</span>

@@ -4,7 +4,7 @@ import {
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
-import { useMemo } from "react";
+import { isValidElement, useMemo } from "react";
 import {
   useAccordionItem,
   type UseAccordionItemProps,
@@ -47,7 +47,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
         isDisabled: false,
       });
     }
-    return indicator ?? <ChevronDownIcon />;
+    return (indicator ?? indicator === null) ? indicator : <ChevronDownIcon />;
   }, [indicator, isOpen]);
 
   return (

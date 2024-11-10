@@ -5,7 +5,7 @@ import { users } from "./custom-render-complex";
 
 export const SelectCustomRenderMulti = () => {
   return (
-    <div >
+    <div>
       <Select
         className="w-full min-w-[300px]"
         isMultiple
@@ -21,6 +21,8 @@ export const SelectCustomRenderMulti = () => {
                       className="shrink-0"
                       size="sm"
                       src={item.avatar}
+                      width={100}
+                      height={100}
                     />
                     <div className="flex flex-col">
                       <span className="text-left text-sm">{item.name}</span>
@@ -44,6 +46,8 @@ export const SelectCustomRenderMulti = () => {
                   className="shrink-0"
                   size="sm"
                   src={user.avatar}
+                  width={100}
+                  height={100}
                 />
                 <div className="flex flex-col">
                   <span className="text-left text-sm">{user.name}</span>

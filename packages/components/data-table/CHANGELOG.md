@@ -1,5 +1,22 @@
 # @jamsr-ui/data-table
 
+## 0.0.43
+
+### Patch Changes
+
+- fix theme
+- Updated dependencies
+  - @jamsr-ui/button@0.0.65
+  - @jamsr-ui/progress@0.0.62
+  - @jamsr-ui/repeater@0.0.31
+  - @jamsr-ui/select@0.0.78
+  - @jamsr-ui/skeleton@0.0.62
+  - @jamsr-ui/table@0.0.42
+  - @jamsr-ui/typography@0.0.70
+  - @jamsr-ui/shared-icons@0.0.55
+  - @jamsr-ui/styles@0.0.7
+  - @jamsr-ui/utils@0.0.59
+
 ## 0.0.42
 
 ### Patch Changes

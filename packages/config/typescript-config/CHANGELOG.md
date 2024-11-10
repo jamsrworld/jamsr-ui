@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.40
+
+### Patch Changes
+
+- fix theme
+
 ## 0.0.39
 
 ### Patch Changes

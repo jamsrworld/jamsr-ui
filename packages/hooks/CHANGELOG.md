@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.42
+
+### Patch Changes
+
+- fix theme
+
 ## 0.0.41
 
 ### Patch Changes

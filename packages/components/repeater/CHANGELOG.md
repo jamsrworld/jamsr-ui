@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.31
+
+### Patch Changes
+
+- fix theme
+
 ## 0.0.30
 
 ### Patch Changes

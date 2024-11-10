@@ -1,5 +1,14 @@
 # @jamsr-ui/badge
 
+## 0.0.62
+
+### Patch Changes
+
+- fix theme
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.7
+  - @jamsr-ui/utils@0.0.59
+
 ## 0.0.61
 
 ### Patch Changes

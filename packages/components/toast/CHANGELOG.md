@@ -1,5 +1,13 @@
 # @jamsr-ui/toast
 
+## 0.0.24
+
+### Patch Changes
+
+- fix theme
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.7
+
 ## 0.0.23
 
 ### Patch Changes

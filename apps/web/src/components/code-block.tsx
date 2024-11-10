@@ -22,16 +22,18 @@ export const CodeBlock = (props: Props) => {
     language: "typescript",
   }).value;
   return (
-    <Card className="group relative w-full bg-content2 dark:bg-content1">
-      <div className="absolute -top-9 right-1">
-        {/* <div className="absolute right-1 top-1 hidden group-hover:block"> */}
-        <CopyToClipboard text={children} />
-      </div>
-      <CardContent className="max-h-[700px] w-full overflow-auto">
-        <pre className="language-typescript">
-          <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
-        </pre>
-      </CardContent>
-    </Card>
+    <div className="relative">
+      <Card className="group static w-full bg-content2 dark:bg-content1">
+        <div className="absolute -top-9 right-1">
+          {/* <div className="absolute right-1 top-1 hidden group-hover:block"> */}
+          <CopyToClipboard text={children} />
+        </div>
+        <CardContent className="max-h-[700px] w-full overflow-auto">
+          <pre className="language-typescript">
+            <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
+          </pre>
+        </CardContent>
+      </Card>
+    </div>
   );
 };

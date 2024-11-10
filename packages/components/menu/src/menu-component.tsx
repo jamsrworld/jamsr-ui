@@ -70,8 +70,8 @@ export const MenuComponent = ($props: MenuProps) => {
     nestedPlacement,
     className,
     classNames,
-    offset: offsetProp,
-    nestedOffset,
+    offset: offsetProp = 4,
+    nestedOffset = 2,
     showArrow = false,
     isOpen: propOpen,
     initialOpen = false,
@@ -108,7 +108,7 @@ export const MenuComponent = ($props: MenuProps) => {
       : (placement ?? "bottom-end"),
     middleware: [
       offset({
-        mainAxis: isNested ? (nestedOffset ?? 6) : (offsetProp ?? 8),
+        mainAxis: isNested ? nestedOffset : offsetProp,
         alignmentAxis: isNested ? -4 : 0,
       }),
       flip(),
@@ -252,7 +252,7 @@ export const MenuComponent = ($props: MenuProps) => {
                       <FloatingArrow
                         ref={arrowRef}
                         context={context}
-                        className="fill-background-tertiary"
+                        className="fill-content2"
                       />
                     )}
                     {children}

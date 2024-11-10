@@ -2,7 +2,7 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const cardVariants = tv({
-  base: "relative rounded-2xl bg-background-secondary transition-colors",
+  base: "relative overflow-hidden rounded-2xl bg-background-secondary transition-colors",
   variants: {
     bg: {
       default: "bg-content1",

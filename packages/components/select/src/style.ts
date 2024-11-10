@@ -15,13 +15,14 @@ export const selectVariant = tv({
     innerWrapper: "flex w-full items-center gap-2",
     label: "mb-1 text-sm text-foreground-400 subpixel-antialiased",
     trigger:
-      "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus:!border-primary group-data-[hovered=true]:border-gray-400 group-data-[open=true]:!border-primary",
+      "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus:border-primary group-data-[hovered=true]:border-gray-400 group-data-[open=true]:border-primary",
     helperText: "mt-1 text-xs text-foreground-500",
     indicator:
       "transition-transform duration-300 group-data-[open=true]:rotate-180",
-    popover: "overflow-hidden rounded-2xl",
+    popover: "",
     content:
-      "z-popover flex h-full flex-col overflow-y-auto bg-content1 p-2 drop-shadow-menu backdrop-blur-3xl",
+      "z-popover flex h-full flex-col overflow-hidden rounded-2xl bg-content1 shadow-md backdrop-blur-3xl",
+    scrollArea: "overflow-y-auto p-2",
     startContent: "text-foreground-500",
     endContent: "text-foreground-500",
   },
@@ -54,7 +55,7 @@ export const selectVariant = tv({
       true: {
         helperText: "text-danger",
         label: "text-danger",
-        trigger: "border-danger",
+        trigger: "!border-danger",
       },
     },
   },

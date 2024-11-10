@@ -1,9 +1,9 @@
 import deepMerge from "deepmerge";
 import plugin from "tailwindcss/plugin";
-import { createThemes } from "tw-colors";
 import { type UIThemeConfig } from ".";
 import { semanticColors } from "./colors";
 import { type SemanticBaseColors } from "./colors/types";
+import { createThemes } from "./tw-colors";
 
 export const jamsrUiPlugins = (config?: UIThemeConfig) => {
   const finalColors = deepMerge(
@@ -13,7 +13,41 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
   return [
     plugin(
       // eslint-disable-next-line @typescript-eslint/unbound-method
-      ({ addUtilities, addVariant }) => {
+      ({ addUtilities, addVariant, addBase }) => {
+        // fontSize
+        addBase({
+          ":root": {
+            color: "hsl(var(--ui-foreground))",
+            backgroundColor: "hsl(var(--ui-background))",
+            "--fs-2xs": "clamp(0.66rem, -0.08vi + 0.68rem, 0.58rem)",
+            "--fs-xs": "clamp(0.72rem, -0.03vi + 0.73rem, 0.69rem)",
+            "--fs-sm": "clamp(0.8rem, 0.04vi + 0.79rem, 0.83rem)",
+            "--fs-base": "clamp(0.88rem, 0.13vi + 0.84rem, 1rem)",
+            "--fs-md": "clamp(0.96rem, 0.25vi + 0.9rem, 1.2rem)",
+            "--fs-lg": "clamp(1.06rem, 0.4vi + 0.96rem, 1.44rem)",
+            "--fs-xl": "clamp(1.16rem, 0.59vi + 1.02rem, 1.73rem)",
+            "--fs-2xl": "clamp(1.28rem, 0.83vi + 1.07rem, 2.07rem)",
+            "--fs-3xl": "clamp(1.41rem, 1.14vi + 1.13rem, 2.49rem)",
+            "--fs-4xl": "clamp(1.55rem, 1.51vi + 1.17rem, 2.99rem)",
+            "--fs-5xl": "clamp(1.71rem, 1.98vi + 1.21rem, 3.58rem)",
+          },
+          ":root, .light, [data-theme=light]": {
+            "--ui-box-shadow-sm":
+              "0px 0px 5px 0px rgba(0,0,0,.02),0px 2px 10px 0px rgba(0,0,0,.06),0px 0px 1px 0px rgba(0,0,0,.3)",
+            "--ui-box-shadow-md":
+              "0px 0px 15px 0px rgba(0,0,0,.03),0px 2px 30px 0px rgba(0,0,0,.08),0px 0px 1px 0px rgba(0,0,0,.3)",
+            "--ui-box-shadow-lg":
+              "0px 0px 30px 0px rgba(0,0,0,.04),0px 30px 60px 0px rgba(0,0,0,.12),0px 0px 1px 0px rgba(0,0,0,.3)",
+          },
+          ".dark, [data-theme=dark]": {
+            "--ui-box-shadow-sm":
+              "0px 0px 5px 0px rgba(0,0,0,.05),0px 2px 10px 0px rgba(0,0,0,.2),inset 0px 0px 1px 0px hsla(0,0%,100%,.15)",
+            "--ui-box-shadow-md":
+              "0px 0px 15px 0px rgba(0,0,0,.06),0px 2px 30px 0px rgba(0,0,0,.22),inset 0px 0px 1px 0px hsla(0,0%,100%,.15)",
+            "--ui-box-shadow-lg":
+              "0px 0px 30px 0px rgba(0,0,0,.07),0px 30px 60px 0px rgba(0,0,0,.26),inset 0px 0px 1px 0px hsla(0,0%,100%,.15)",
+          },
+        });
         // variants
         addVariant("ui-disabled", "&[data-disabled=true]");
         addVariant("ui-readonly", "&[data-readonly=true]");
@@ -101,8 +135,10 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
             opacity: {
               disabled: "50%",
             },
-            dropShadow: {
-              menu: "0px 10px 100px rgba(0, 0, 0, 0.3)",
+            boxShadow: {
+              sm: "var(--ui-box-shadow-sm)",
+              md: "var(--ui-box-shadow-md)",
+              lg: "var(--ui-box-shadow-lg)",
             },
           },
         },
@@ -114,7 +150,8 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
         dark: dark(finalColors.dark),
       }),
       {
-        strict: true,
+        defaultTheme: "light",
+        strict: false,
         produceCssVariable(colorName) {
           return `--ui-${colorName}`;
         },

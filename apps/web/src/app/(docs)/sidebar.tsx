@@ -46,7 +46,7 @@ const components = [
   "table",
   "tags-input",
   "textarea",
-  "theme",
+  // "theme",
   "toast",
   "tooltip",
   "typography",

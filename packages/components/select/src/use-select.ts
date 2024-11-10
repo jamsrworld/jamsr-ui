@@ -341,6 +341,14 @@ export const useSelect = ($props: UseSelectProps) => {
     };
   };
 
+  const getScrollAreaProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "scroll-area",
+      className: styles.scrollArea({ className: classNames?.scrollArea }),
+      ...props,
+    };
+  };
+
   const getHelperTextProps: PropGetter<ComponentProps<"div">> = (props) => {
     return {
       "data-slot": "helper-text",
@@ -390,6 +398,7 @@ export const useSelect = ($props: UseSelectProps) => {
     getStartContentProps,
     getEndContentProps,
     getIndicatorProps,
+    getScrollAreaProps,
     contextValue,
     startContent,
     endContent,

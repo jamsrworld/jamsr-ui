@@ -30,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${inter.className} bg-background text-base text-foreground`}
-      >
+      <body className={`${inter.className} text-base`}>
         <AppProvider>{children}</AppProvider>
       </body>
     </html>

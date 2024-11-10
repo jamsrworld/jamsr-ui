@@ -1,10 +1,9 @@
 import { type Config } from "tailwindcss";
-import { createThemes } from "tw-colors";
 import { commonColors, semanticColors } from "./colors";
 import { type DeepPartial, type ThemeColors } from "./colors/types";
 import { jamsrUiPlugins } from "./plugin";
 
-export { commonColors, createThemes, semanticColors };
+export { commonColors, semanticColors };
 
 type Color = "light" | "dark";
 // type Color = "light" | "dark" | (string & {});

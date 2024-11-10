@@ -115,7 +115,7 @@ export const Tooltip = ($props: TooltipProps) => {
             style={floatingStyles}
             {...getFloatingProps()}
             className={cn(
-              "text-foreground-inverse z-popover inline-block rounded-lg bg-background-inverse px-3 py-1.5 text-sm font-medium shadow-sm transition-opacity duration-300",
+              "z-popover inline-block rounded-lg bg-content1 px-3 py-1.5 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300",
               className,
               classNames?.base,
             )}
@@ -124,7 +124,7 @@ export const Tooltip = ($props: TooltipProps) => {
               <FloatingArrow
                 ref={arrowRef}
                 context={context}
-                className={cn("fill-background-inverse", classNames?.arrow)}
+                className={cn("fill-content1", classNames?.arrow)}
               />
             )}
             {title}

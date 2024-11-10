@@ -44,7 +44,7 @@ export const ChevronDownIcon = (props: SVGProps<SVGSVGElement>) => (
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2}
+      strokeWidth={1}
       d="M8 10.14a20.36 20.36 0 0 0 3.702 3.893c.175.141.42.141.596 0A20.361 20.361 0 0 0 16 10.14"
     />
   </svg>
@@ -154,7 +154,7 @@ export const DragDropHorizontalIcon = (
     width={24}
     height={24}
     color="currentColor"
-    fill={"none"}
+    fill="none"
     {...props}
   >
     <path
@@ -215,7 +215,7 @@ export const FileAddIcon = (props: React.SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     color="currentColor"
-    fill={"none"}
+    fill="none"
     {...props}
   >
     <path
@@ -242,7 +242,7 @@ export const ImageAddIcon = (props: SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     color="currentColor"
-    fill={"none"}
+    fill="none"
     {...props}
   >
     <path
@@ -514,7 +514,7 @@ export const RefreshIcon = (props: React.SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     color="currentColor"
-    fill={"none"}
+    fill="none"
     {...props}
   >
     <path

@@ -133,7 +133,7 @@ export const Popover = ($props: PopoverProps) => {
             <div
               data-component="popover"
               className={cn(
-                "z-popover rounded-2xl border border-divider bg-background p-2 drop-shadow-menu backdrop-blur-3xl focus:outline-none",
+                "z-popover rounded-2xl bg-content1 p-2 text-sm shadow-md backdrop-blur-3xl focus:outline-none",
                 className,
               )}
               ref={refs.setFloating}

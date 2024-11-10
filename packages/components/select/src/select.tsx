@@ -44,6 +44,7 @@ export const Select = <T extends React.ElementType = "div">(
     endContent,
     Component,
     getIndicatorProps,
+    getScrollAreaProps,
   } = useSelect(props);
 
   return (
@@ -85,7 +86,7 @@ export const Select = <T extends React.ElementType = "div">(
                         transition={{ duration: 0.2, ease: "easeOut" }}
                         {...getContentProps()}
                       >
-                        {children}
+                        <div {...getScrollAreaProps()}>{children}</div>
                       </m.div>
                     </FloatingList>
                   </div>

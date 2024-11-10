@@ -4,7 +4,7 @@ import { DrawerDefault } from "./default";
 
 export const DrawerSize = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-wrap gap-4">
       <DrawerDefault size="sm" />
       <DrawerDefault size="md" />
       <DrawerDefault size="lg" />

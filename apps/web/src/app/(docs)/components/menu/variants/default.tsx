@@ -15,10 +15,10 @@ export const MenuDefault = (props: Partial<MenuProps>) => {
         <MenuItem startContent={<InfoIcon className="size-5" />}>Info</MenuItem>
         <MenuItem
           startContent={
-            <SearchIcon className="size-5 text-foreground-secondary" />
+            <SearchIcon className="text-foreground-secondary size-5" />
           }
           endContent={
-            <div className="rounded bg-background p-0.5 text-xs text-foreground-secondary">
+            <div className="bg-background text-foreground-secondary rounded p-0.5 text-xs">
               Ctrl+K
             </div>
           }
@@ -37,7 +37,7 @@ export const MenuDefault = (props: Partial<MenuProps>) => {
           <MenuItem>Instagram</MenuItem>
         </Menu>
         <MenuItem disabled>Edit</MenuItem>
-        <MenuItem className="data-[active=true]:bg-danger">Delete</MenuItem>
+        <MenuItem className="ui-active:bg-danger">Delete</MenuItem>
       </Menu>
     </div>
   );

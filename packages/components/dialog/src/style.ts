@@ -1,12 +1,13 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
+export const test = "";
 export const dialog = tv({
   slots: {
     backdrop: "z-backdrop grid place-items-center backdrop-blur-sm",
     header: "px-4 pt-4 text-base font-bold",
     body: "m-auto w-full flex-1 overflow-y-auto p-2 md:p-4",
     content:
-      "relative z-dialog flex  w-full flex-col rounded-3xl bg-background-secondary drop-shadow-menu backdrop-blur-3xl",
+      "relative z-dialog flex  w-full flex-col rounded-3xl bg-background-secondary shadow-lg backdrop-blur-3xl",
     footer: "bottom-0 flex w-full justify-end p-2",
   },
   variants: {

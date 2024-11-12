@@ -1,5 +1,6 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
+export const test = "";
 export const typographyVariants = tv({
   base: "subpixel-antialiased transition-colors",
   variants: {
@@ -29,7 +30,8 @@ export const typographyVariants = tv({
       cyan: "from-[#00b7fa] to-[#01cfea]",
       green: "from-[#6FEE8D] to-[#17c964]",
       pink: "from-[#FF72E1] to-[#F54C7A]",
-      foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
+      foreground:
+        "from-neutral-800 via-neutral-600 to-neutral-400 dark:from-neutral-600 dark:via-neutral-400 dark:to-white",
     },
     leading: {
       none: "leading-none",

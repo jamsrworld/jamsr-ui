@@ -1,5 +1,6 @@
 "use client";
 
+import { JAMSR_UI_GITHUB_URL } from "@/config";
 import { Divider, Link, Typography } from "@jamsr-ui/react";
 
 export const AppFooter = () => {
@@ -24,7 +25,7 @@ export const AppFooter = () => {
             underline="always"
             target="_blank"
             className="underline"
-            href="https://github.com/jamsrworld/jamsr-ui"
+            href={JAMSR_UI_GITHUB_URL}
           >
             Github
           </Link>

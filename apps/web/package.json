@@ -30,9 +30,11 @@
     "framer-motion": "11.11.10",
     "highlight.js": "^11.10.0",
     "next": "15.0.1",
+    "prism-react-renderer": "^2.4.0",
     "react": "19.0.0-rc-603e6108-20241029",
     "react-dom": "19.0.0-rc-603e6108-20241029",
     "react-hook-form": "^7.53.1",
+    "react-live": "^4.1.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {

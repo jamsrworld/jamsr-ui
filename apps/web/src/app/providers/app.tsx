@@ -1,5 +1,6 @@
 "use client";
 
+import { AppHeader } from "@/layouts/app-header";
 import { ToastProvider, UIProvider } from "@jamsr-ui/react";
 import { UIStylesProvider } from "@jamsr-ui/styles";
 import { Analytics } from "@vercel/analytics/react";
@@ -15,7 +16,7 @@ export const AppProvider = (props: Props) => {
       <Analytics />
       <ToastProvider />
       <UIStylesProvider
-      
+
       // button={{
       //   className: "",
       //   color: "danger",
@@ -39,6 +40,7 @@ export const AppProvider = (props: Props) => {
       //   className: "bg-gray-500",
       // }}
       >
+        <AppHeader />
         {children}
       </UIStylesProvider>
     </UIProvider>

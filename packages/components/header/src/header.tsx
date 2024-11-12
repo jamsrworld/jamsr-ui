@@ -18,7 +18,6 @@ export const Header = (props: HeaderProps) => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const previous = scrollYProgress.getPrevious();
     const isScrollingUp = previous && previous > latest;
-
     if (hideOnScroll) {
       if (scrollYProgress.get() < 0.02) {
         setIsVisible(true);
@@ -28,7 +27,6 @@ export const Header = (props: HeaderProps) => {
         setIsVisible(false);
       }
     }
-    
   });
 
   return (

@@ -1,5 +1,5 @@
 import { type Config } from "@jamsr-ui/tailwind-config";
-import { withJamsrUI } from "../../packages/theme/src/index";
+import { withJamsrUI } from "@jamsr-ui/theme";
 
 const config: Config = withJamsrUI(
   {
@@ -7,8 +7,7 @@ const config: Config = withJamsrUI(
     content: [
       "../../packages/components/*/src/**/*.{ts,tsx}",
       "../../packages/utils/src/**/*.{ts,tsx}",
-      "./src/app/**/*.{ts,tsx}",
-      "./src/components/**/*.{ts,tsx}",
+      "./src/**/*.{ts,tsx}",
       "!./node_modules",
     ],
   },

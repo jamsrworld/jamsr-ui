@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import "../styles/globals.css";
 import "../styles/github.css";
+import "../styles/globals.css";
 import { AppProvider } from "./providers/app";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,7 +12,20 @@ export const metadata: Metadata = {
     default: "Jamsr UI",
   },
   description:
-    "A set of UI beautiful and customizable components created with tailwindcss and react.",
+    "JamsrUI is a comprehensive, customizable UI components library for building modern web applications with Next.js. Designed for developers looking for fast, responsive, and scalable components.",
+  applicationName: "Jamsr UI",
+  category: "technology",
+  publisher: "jamsrworld",
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [
+    "Next.js UI components",
+    "UI components library",
+    "React UI components",
+    "JamsrUI",
+    "JavaScript UI library",
+  ],
 };
 
 export const viewport: Viewport = {

@@ -32,7 +32,8 @@
     "*.config.mjs",
     "*.config.cjs",
     "../../packages/components/*/src/*.d.ts",
-    ".eslintrc.cjs"
+    ".eslintrc.cjs",
+    "next-sitemap.config.js"
   ],
   "exclude": ["node_modules"]
 }

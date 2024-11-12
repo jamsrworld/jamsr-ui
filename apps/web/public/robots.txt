@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jamsr-ui.jamsrworld.com
+
+# Sitemaps
+Sitemap: https://jamsr-ui.jamsrworld.com/sitemap.xml

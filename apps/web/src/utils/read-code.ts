@@ -10,6 +10,7 @@ export const readVariantCode = <T extends keyof VariantTypes>(
     process.cwd(),
     "src",
     "app",
+    "(main)",
     "(docs)",
     "components",
     component,

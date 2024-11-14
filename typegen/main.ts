@@ -8,6 +8,7 @@ const componentsDir = path.join(
   "web",
   "src",
   "app",
+  "(main)",
   "(docs)",
   "components",
 );

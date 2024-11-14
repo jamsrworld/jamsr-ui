@@ -40,7 +40,6 @@ export const AppProvider = (props: Props) => {
       //   className: "bg-gray-500",
       // }}
       >
-        <AppHeader />
         {children}
       </UIStylesProvider>
     </UIProvider>

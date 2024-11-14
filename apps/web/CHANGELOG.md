@@ -1,5 +1,12 @@
 # web
 
+## 0.1.150
+
+### Patch Changes
+
+- fix header
+  - @jamsr-ui/react@0.0.168
+
 ## 0.1.149
 
 ### Patch Changes

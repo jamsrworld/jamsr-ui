@@ -8,10 +8,7 @@ import Link from "next/link";
 
 export const AppHeader = () => {
   return (
-    <Header
-      isBordered={false}
-      className="mx-auto flex justify-between px-4"
-    >
+    <Header isBordered={false} className="mx-auto flex justify-between px-4">
       <Link href="/">
         <Image
           src={logoImg}

@@ -1,10 +1,9 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
+import { IFrameExample } from "@/components/iframe-example";
 import { type VariantTypes } from "@/types/variants";
-import { HeaderDefault } from "./variants/default";
-import { HeaderHideOnScroll } from "./variants/hide-on-scroll";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Header",
@@ -17,10 +16,16 @@ const Header = () => {
   return (
     <VariantPage heading="Header">
       <VariantWrapper heading="Default" code={code("default")}>
-        <HeaderDefault />
+        <IFrameExample src="/examples/header/default" />
       </VariantWrapper>
       <VariantWrapper heading="Hide On Scroll" code={code("hide-on-scroll")}>
-        <HeaderHideOnScroll />
+        <IFrameExample src="/examples/header/hide-on-scroll" />
+      </VariantWrapper>
+      <VariantWrapper heading="Static" code={code("static")}>
+        <IFrameExample src="/examples/header/static" />
+      </VariantWrapper>
+      <VariantWrapper heading="With Border" code={code("static")}>
+        <IFrameExample src="/examples/header/with-border" />
       </VariantWrapper>
     </VariantPage>
   );

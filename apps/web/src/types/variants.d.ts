@@ -17,7 +17,7 @@ export type VariantTypes = {
   "editor": ["controlled", "default", "invalid"];
   "file-upload-multi": ["controlled", "customized", "default-value", "default", "disabled"];
   "file-upload-single": ["controlled", "customized", "default-value", "default", "disabled"];
-  "header": ["default", "hide-on-scroll"];
+  "header": ["default", "hide-on-scroll", "static"];
   "input": ["controlled", "default", "disabled", "error-state", "helper-text", "label-helper", "numbers-only", "optional", "outlined-all-props", "placeholder", "required", "secured-text", "sizes", "standard-all-props", "variants", "with-end-content", "with-icon", "with-placeholder", "with-start-content", "without-label"];
   "link": ["default", "underline"];
   "menu": ["controlled", "default", "with-arrow"];

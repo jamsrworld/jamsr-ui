@@ -1,1 +1,1 @@
-turbo build --filter='@jamsr-ui/avatar' && npx changeset && npx changeset version && npx changeset publish
+turbo build --filter='@jamsr-ui/header' && npx changeset && npx changeset version && npx changeset publish

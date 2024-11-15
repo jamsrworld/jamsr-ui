@@ -1,5 +1,12 @@
 # @jamsr-ui/progress
 
+## 0.0.63
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.60
+
 ## 0.0.62
 
 ### Patch Changes

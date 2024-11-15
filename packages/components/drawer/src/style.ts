@@ -1,10 +1,10 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
+export const test = "";
 export const drawer = tv({
   slots: {
     backdrop: "z-backdrop !overflow-x-hidden backdrop-blur-sm",
-    content:
-      "absolute z-dialog h-screen w-full overflow-y-auto  bg-background-secondary",
+    content: "absolute z-dialog h-dvh w-full overflow-y-auto bg-content1",
   },
   variants: {
     anchor: {

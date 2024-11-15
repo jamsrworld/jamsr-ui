@@ -8,7 +8,10 @@ import Link from "next/link";
 
 export const AppHeader = () => {
   return (
-    <Header isBordered={false} className="mx-auto flex justify-between px-4">
+    <Header
+      isBordered={false}
+      className="mx-auto flex w-full justify-between px-4"
+    >
       <Link href="/">
         <Image
           src={logoImg}
@@ -18,6 +21,7 @@ export const AppHeader = () => {
         />
       </Link>
       <div className="flex items-center gap-2">
+        {/* <SearchBar /> */}
         <Button isIconOnly as="a" href={JAMSR_UI_TWITTER_URL} target="_blank">
           <TwitterIcon />
         </Button>

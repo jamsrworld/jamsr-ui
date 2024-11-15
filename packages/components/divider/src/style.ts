@@ -23,6 +23,11 @@ export const dividerVariants = tv({
         divider: "h-px w-full",
       },
     },
+    color: {
+      light: { divider: "bg-divider-light" },
+      dark: { divider: "bg-divider-dark" },
+      default: { divider: "bg-divider" },
+    },
   },
   compoundVariants: [
     {
@@ -43,6 +48,7 @@ export const dividerVariants = tv({
   defaultVariants: {
     variant: "default",
     orientation: "horizontal",
+    color: "default",
   },
 });
 

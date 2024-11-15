@@ -23,7 +23,7 @@ export const useHeader = ($props: UseHeaderProps) => {
     children,
     isBordered = false,
     hideOnScroll = false,
-    visibleBound = 0.06,
+    visibleBound = 80,
     position,
     ...restProps
   } = props;
@@ -33,16 +33,15 @@ export const useHeader = ($props: UseHeaderProps) => {
     position,
   });
 
-  const { scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(true);
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const previous = scrollYProgress.getPrevious();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
     const diff = latest - (previous ?? 0);
-    const isScrollingDown = diff > 0 && diff < 1;
-
+    const isScrollingDown = diff > 0;
     if (hideOnScroll) {
-      if (scrollYProgress.get() < visibleBound) {
+      if (scrollY.get() < visibleBound) {
         setIsVisible(true);
       } else if (isScrollingDown) {
         setIsVisible(false);

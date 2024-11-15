@@ -22,26 +22,32 @@ export const Divider = ($props: DividerProps) => {
     orientation = "horizontal",
     children,
     classNames,
+    color,
     ...restProps
   } = props;
 
   const styles = dividerVariants({
     variant,
     orientation,
+    color,
+  });
+
+  const dividerClassNames = styles.divider({
+    className: cn(classNames?.divider, className),
   });
 
   return (
     <div
       {...restProps}
       data-component="divider"
-      className={styles.base({ className: cn(classNames?.base, className) })}
+      className={styles.base({ className: classNames?.base })}
       data-orientation={orientation}
     >
-      <div className={styles.divider({ className: classNames?.divider })} />
-      {children && (
+      <div className={dividerClassNames} />
+      {!!children && (
         <>
           {children}
-          <div className={styles.divider({ className: classNames?.divider })} />
+          <div className={dividerClassNames} />
         </>
       )}
     </div>

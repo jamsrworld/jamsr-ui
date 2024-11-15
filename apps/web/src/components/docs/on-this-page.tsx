@@ -56,7 +56,7 @@ export const OnThisPage = (props: Props) => {
   }, [headings]);
 
   return (
-    <aside className="fixed right-0 h-screen w-full max-w-[300px] overflow-scroll px-4 py-12 scrollbar-hide max-xl:hidden">
+    <aside className="fixed right-0 h-dvh w-full max-w-[300px] overflow-scroll px-4 py-12 scrollbar-hide max-xl:hidden">
       <Typography as="h3" className="text-foreground-tertiary">
         On this page
       </Typography>

@@ -34,8 +34,8 @@ export const CodeBlock = (props: Props) => {
             <CopyToClipboard text={children} />
           </div>
         )}
-        <CardContent className="flex max-h-[700px] w-full items-center gap-2 overflow-auto p-3 text-sm">
-          <pre className="language-typescript">
+        <CardContent className="flex max-h-[700px] w-full flex-col items-center gap-2 overflow-auto p-3 text-sm">
+          <pre className="language-typescript w-full">
             <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
           </pre>
           {copyPosition === "right" && (

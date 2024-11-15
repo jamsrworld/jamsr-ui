@@ -160,6 +160,7 @@ export const useInput = ($props: UseInputProps) => {
   }, [inputDOMRef]);
 
   const handleOnFocus = useCallback(() => {
+    console.log("inner focused")
     setIsFocused(true);
   }, [setIsFocused]);
 
@@ -327,11 +328,11 @@ export const useInput = ($props: UseInputProps) => {
         onChange: handleInputChange,
         type: inputType,
         placeholder,
-        ...restProps,
-        ...props,
+        ...mergeProps(restProps, props ?? {}, {
+          onFocus: handleOnFocus,
+          onBlur: handleOnBlur,
+        }),
         ref: inputDOMRef,
-        onFocus: handleOnFocus,
-        onBlur: handleOnBlur,
       };
     },
     [

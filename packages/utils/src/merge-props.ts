@@ -4,11 +4,7 @@ type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (
   ? I
   : never;
 
-function pushProp(
-  target: { [key: string]: any },
-  key: string,
-  value: any,
-): void {
+function pushProp(target: Record<string, any>, key: string, value: any): void {
   if (key === "className") {
     target.className = [target.className, value].join(" ").trim();
   } else if (key === "style") {
@@ -27,7 +23,6 @@ function pushProp(
     // skip if both value are the same primitive value
     (typeof value !== "object" && value === target[key])
   ) {
-    return;
   } else if (!(key in target)) {
     target[key] = value;
   } else {

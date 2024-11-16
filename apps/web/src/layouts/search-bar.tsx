@@ -199,6 +199,7 @@ export const SearchBar = () => {
     url: Route,
   ) => {
     e.preventDefault();
+    onClearSearch();
     onClose();
     router.push(url);
   };

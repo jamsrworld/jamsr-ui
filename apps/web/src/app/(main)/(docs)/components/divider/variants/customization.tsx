@@ -4,9 +4,9 @@ export const DividerCustomization = () => {
   return (
     <div className="flex flex-col gap-4">
       <Divider
-        className="h-1 rounded"
         classNames={{
           base: "gap-4",
+          divider: "h-1 rounded",
         }}
       >
         OR

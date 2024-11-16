@@ -1,5 +1,22 @@
 # @jamsr-ui/editor
 
+## 0.0.80
+
+### Patch Changes
+
+- fixes
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.66
+  - @jamsr-ui/input@0.0.82
+
+## 0.0.79
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.65
+  - @jamsr-ui/input@0.0.81
+
 ## 0.0.78
 
 ### Patch Changes

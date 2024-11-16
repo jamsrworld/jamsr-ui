@@ -5,6 +5,7 @@ import { JAMSR_UI_GITHUB_URL, JAMSR_UI_TWITTER_URL } from "@/config";
 import { Button, Header } from "@jamsr-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { SearchBar } from "./search-bar";
 
 export const AppHeader = () => {
   return (
@@ -21,7 +22,7 @@ export const AppHeader = () => {
         />
       </Link>
       <div className="flex items-center gap-2">
-        {/* <SearchBar /> */}
+        <SearchBar />
         <Button isIconOnly as="a" href={JAMSR_UI_TWITTER_URL} target="_blank">
           <TwitterIcon />
         </Button>

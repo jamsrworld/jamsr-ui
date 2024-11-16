@@ -6,7 +6,8 @@ export const inputVariants = tv({
   slots: {
     base: "group flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground-400 subpixel-antialiased",
+    label:
+      "shrink-0 select-none text-sm font-normal text-foreground-400 subpixel-antialiased",
     mainWrapper: "flex flex-col gap-1",
     inputWrapper: [
       "grow overflow-hidden",
@@ -15,7 +16,8 @@ export const inputVariants = tv({
     ],
     innerWrapper: "flex h-full items-center",
     input: [
-      "block grow bg-transparent px-3 placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+      "block grow bg-transparent px-3 font-normal",
+      "placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
       "group-data-[has-start-content=true]:pl-2",
       "group-data-[has-end-content=true]:pr-2",
     ],

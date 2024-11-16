@@ -43,11 +43,11 @@ const components = [
   "table",
   "tags-input",
   "textarea",
-  // "theme",
   "toast",
   "tooltip",
   "typography",
 ];
+
 const guides = ["installation"];
 const hooks = [
   "use-disclosure",

@@ -1,5 +1,17 @@
 # @jamsr-ui/divider
 
+## 0.0.66
+
+### Patch Changes
+
+- fixes
+
+## 0.0.65
+
+### Patch Changes
+
+- fix divider
+
 ## 0.0.64
 
 ### Patch Changes

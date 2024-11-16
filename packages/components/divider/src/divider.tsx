@@ -33,14 +33,14 @@ export const Divider = ($props: DividerProps) => {
   });
 
   const dividerClassNames = styles.divider({
-    className: cn(classNames?.divider, className),
+    className: cn(classNames?.divider),
   });
 
   return (
     <div
       {...restProps}
       data-component="divider"
-      className={styles.base({ className: classNames?.base })}
+      className={styles.base({ className: cn(classNames?.base, className) })}
       data-orientation={orientation}
     >
       <div className={dividerClassNames} />

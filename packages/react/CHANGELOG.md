@@ -1,5 +1,36 @@
 # @jamsr-ui/react
 
+## 0.0.171
+
+### Patch Changes
+
+- fixes
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.87
+  - @jamsr-ui/confirmation@0.0.52
+  - @jamsr-ui/tags-input@0.0.18
+  - @jamsr-ui/textarea@0.0.82
+  - @jamsr-ui/divider@0.0.66
+  - @jamsr-ui/editor@0.0.80
+  - @jamsr-ui/header@0.0.72
+  - @jamsr-ui/input@0.0.82
+  - @jamsr-ui/rhf@0.0.19
+
+## 0.0.170
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.65
+  - @jamsr-ui/input@0.0.81
+  - @jamsr-ui/confirmation@0.0.51
+  - @jamsr-ui/editor@0.0.79
+  - @jamsr-ui/header@0.0.71
+  - @jamsr-ui/autocomplete@0.0.86
+  - @jamsr-ui/rhf@0.0.18
+  - @jamsr-ui/tags-input@0.0.17
+  - @jamsr-ui/textarea@0.0.81
+
 ## 0.0.169
 
 ### Patch Changes

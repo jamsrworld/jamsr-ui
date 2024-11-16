@@ -1,5 +1,20 @@
 # web
 
+## 0.1.153
+
+### Patch Changes
+
+- fixes
+- Updated dependencies
+  - @jamsr-ui/react@0.0.171
+
+## 0.1.152
+
+### Patch Changes
+
+- fix divider
+  - @jamsr-ui/react@0.0.170
+
 ## 0.1.151
 
 ### Patch Changes

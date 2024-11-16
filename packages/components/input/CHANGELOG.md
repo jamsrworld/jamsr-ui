@@ -1,5 +1,17 @@
 # @jamsr-ui/input
 
+## 0.0.82
+
+### Patch Changes
+
+- fixes
+
+## 0.0.81
+
+### Patch Changes
+
+- fix divider
+
 ## 0.0.80
 
 ### Patch Changes

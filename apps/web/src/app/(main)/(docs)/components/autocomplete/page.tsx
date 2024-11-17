@@ -31,11 +31,11 @@ const Autocomplete = () => {
       <VariantWrapper heading="Default" code={code("default")}>
         <AutocompleteDefault />
       </VariantWrapper>
-      <VariantWrapper heading="Controlled" code={code("controlled")}>
-        <AutocompleteControlled />
-      </VariantWrapper>
       <VariantWrapper heading="Helper Text" code={code("helper-text")}>
         <AutocompleteHelperText />
+      </VariantWrapper>
+      <VariantWrapper heading="Controlled" code={code("controlled")}>
+        <AutocompleteControlled />
       </VariantWrapper>
       <VariantWrapper heading="Error State" code={code("error-state")}>
         <AutocompleteErrorState />
@@ -46,18 +46,18 @@ const Autocomplete = () => {
       >
         <AutocompleteStartEndContent />
       </VariantWrapper>
-      <VariantWrapper heading="Choose Country" code={code("choose-country")}>
+      <VariantWrapper heading="Select Country" code={code("choose-country")}>
         <AutocompleteChooseCountry />
       </VariantWrapper>
-      <VariantWrapper heading="Multiple" code={code("multiple")}>
+      <VariantWrapper heading="Multiple Values" code={code("multiple")}>
         <AutocompleteMultiple />
       </VariantWrapper>
-      <VariantWrapper
+      {/* <VariantWrapper
         heading="Multiple Controlled"
         code={code("multiple-controlled")}
       >
         <AutocompleteMultipleControlled />
-      </VariantWrapper>
+      </VariantWrapper> */}
       <VariantWrapper
         heading="Multiple Custom Render"
         code={code("multiple-custom-render")}

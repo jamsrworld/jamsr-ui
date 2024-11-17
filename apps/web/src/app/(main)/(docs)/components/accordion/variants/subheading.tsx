@@ -14,7 +14,7 @@ export const AccordionSubheading = () => {
       </AccordionItem>
       <AccordionItem
         isDisabled
-        heading="Accordion 3"
+        heading="Disabled Accordion"
         subheading="Disabled Accordion Item"
       >
         {content}

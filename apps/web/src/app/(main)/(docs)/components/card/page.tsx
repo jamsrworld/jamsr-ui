@@ -6,16 +6,23 @@ import { readVariantCode } from "@/utils/read-code";
 import { CardDefault } from "./variants/default";
 import { CardStartEndContent } from "./variants/start-end-content";
 
+
+const title = "Card";
+const description =
+  "A card presents focused content and actionable items related to a single subject .";
+
 export const metadata: Metadata = {
-  title: "Card",
+  title,
+  description,
 };
+
 
 const code = <T extends VariantTypes["card"][number]>(variant: T) =>
   readVariantCode("card", variant);
 
 const Card = () => {
   return (
-    <VariantPage heading="Card">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Default" code={code("default")}>
         <CardDefault />
       </VariantWrapper>

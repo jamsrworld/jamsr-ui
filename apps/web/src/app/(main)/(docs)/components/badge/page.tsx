@@ -7,8 +7,13 @@ import { BadgeColors } from "./variants/colors";
 import { BadgeDefault } from "./variants/default";
 import { BadgeSizes } from "./variants/sizes";
 
+const title = "Badge";
+const description =
+  "Badge is a small label used to highlight an item's status for quick recognition.";
+
 export const metadata: Metadata = {
-  title: "Badge",
+  title,
+  description,
 };
 
 const code = <T extends VariantTypes["badge"][number]>(variant: T) =>
@@ -16,7 +21,7 @@ const code = <T extends VariantTypes["badge"][number]>(variant: T) =>
 
 const Badge = () => {
   return (
-    <VariantPage heading="Badge">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Default" code={code("default")}>
         <BadgeDefault />
       </VariantWrapper>

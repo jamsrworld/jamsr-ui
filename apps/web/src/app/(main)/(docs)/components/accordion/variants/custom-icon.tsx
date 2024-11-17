@@ -24,7 +24,11 @@ export const AccordionCustomIcon = () => {
       <AccordionItem heading="Accordion 2" indicator={Indicator}>
         {content}
       </AccordionItem>
-      <AccordionItem isDisabled heading="Accordion 3" indicator={Indicator}>
+      <AccordionItem
+        isDisabled
+        heading="Disabled Accordion"
+        indicator={Indicator}
+      >
         {content}
       </AccordionItem>
     </Accordion>

@@ -30,10 +30,7 @@ const code = <T extends VariantTypes["accordion"][number]>(variant: T) =>
 const Accordion = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper
-        heading="Default"
-        code={code("default")}
-      >
+      <VariantWrapper heading="Default" code={code("default")}>
         <AccordionDefault />
       </VariantWrapper>
       <VariantWrapper
@@ -49,6 +46,30 @@ const Accordion = () => {
         <AccordionDisabled />
       </VariantWrapper>
       <VariantWrapper
+        description={
+          <div>
+            Use <Code>indicator</Code> prop to change the default icon. You can
+            use it to customize the open/close indicator.
+          </div>
+        }
+        heading="Custom Icon"
+        code={code("custom-icon")}
+      >
+        <AccordionCustomIcon />
+      </VariantWrapper>
+      <VariantWrapper
+        description={
+          <div>
+            Use <Code>indicator={`{null}`}</Code> prop to remove the default
+            icon.
+          </div>
+        }
+        heading="Without Icon"
+        code={code("without-icon")}
+      >
+        <AccordionWithoutIcon />
+      </VariantWrapper>
+      <VariantWrapper
         heading="Multiple Selection"
         description={
           <div>
@@ -60,7 +81,7 @@ const Accordion = () => {
       >
         <AccordionMultipleSelection />
       </VariantWrapper>
-      
+
       <VariantWrapper
         heading="With Subheading"
         description={
@@ -121,21 +142,6 @@ const Accordion = () => {
         code={code("end-content-outside")}
       >
         <AccordionEndContentOutside />
-      </VariantWrapper>
-      <VariantWrapper
-        description={
-          <div>
-            Use <Code>indicator</Code> prop to change the default icon. You can
-            use it to customize the open/close indicator.
-          </div>
-        }
-        heading="Custom Icon"
-        code={code("custom-icon")}
-      >
-        <AccordionCustomIcon />
-      </VariantWrapper>
-      <VariantWrapper heading="Without Icon" code={code("without-icon")}>
-        <AccordionWithoutIcon />
       </VariantWrapper>
     </VariantPage>
   );

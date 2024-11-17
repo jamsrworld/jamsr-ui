@@ -30,60 +30,13 @@ const Alert = () => {
       <VariantWrapper heading="Default" code={code("default")}>
         <AlertDefault />
       </VariantWrapper>
-      <VariantWrapper
-        heading="With Description"
-        description={
-          <div>
-            Use the <Code>children</Code> prop to provide additional context to
-            the alert. This will be displayed below the alert message.
-          </div>
-        }
-        code={code("with-description")}
-      >
-        <AlertWithDescription />
-      </VariantWrapper>
-      <VariantWrapper
-        heading="With Action"
-        description={
-          <div>
-            Use the <Code>isMultiple</Code> prop to allow multiple items to be
-            expanded at once.
-          </div>
-        }
-        code={code("with-action")}
-      >
-        <AlertWithAction />
-      </VariantWrapper>
 
-      <VariantWrapper
-        heading="Custom Icon"
-        description={
-          <div>
-            Use the <Code>icon</Code> prop to override the Alert's icon.
-          </div>
-        }
-        code={code("custom-icon")}
-      >
-        <AlertCustomIcon />
-      </VariantWrapper>
-      <VariantWrapper
-        heading="Without Icon"
-        description={
-          <div>
-            Use the <Code>icon={`{null}`}</Code> prop to override the Alert's
-            icon.
-          </div>
-        }
-        code={code("without-icon")}
-      >
-        <WithoutIcon />
-      </VariantWrapper>
       <VariantWrapper
         heading="Status"
         description={
           <div>
-            Use the <Code>status</Code> prop for different states::{" "}
-            <Code>success</Code>(the default), <Code>info</Code>,{" "}
+            Use the <Code>status</Code> prop for different states ::{" "}
+            <Code>success</Code>, <Code>info</Code>, <Code>default</Code>,
             <Code>warning</Code> and <Code>danger</Code> with corresponding icon
             and color combinations for each.
           </div>
@@ -92,6 +45,7 @@ const Alert = () => {
       >
         <AlertStatus />
       </VariantWrapper>
+
       <VariantWrapper
         heading="Variants"
         description={
@@ -103,6 +57,52 @@ const Alert = () => {
         code={code("variants")}
       >
         <AlertVariants />
+      </VariantWrapper>
+
+      <VariantWrapper
+        heading="With Heading"
+        description={
+          <div>
+            Use the <Code>heading</Code> prop to add a heading to an Alert.
+          </div>
+        }
+        code={code("with-description")}
+      >
+        <AlertWithDescription />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Custom Icon"
+        description={
+          <div>
+            Use the <Code>icon</Code> prop to override the Alert's default icon.
+          </div>
+        }
+        code={code("custom-icon")}
+      >
+        <AlertCustomIcon />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Without Icon"
+        description={
+          <div>
+            Use the <Code>icon={`{null}`}</Code> prop to remove the Alert's
+            icon.
+          </div>
+        }
+        code={code("without-icon")}
+      >
+        <WithoutIcon />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="With Action"
+        description={
+          <div>
+            Use the <Code>action</Code> prop to allow actions in an Alert.
+          </div>
+        }
+        code={code("with-action")}
+      >
+        <AlertWithAction />
       </VariantWrapper>
     </VariantPage>
   );

@@ -23,7 +23,7 @@ export const AccordionEndContent = () => {
       </AccordionItem>
       <AccordionItem
         isDisabled
-        heading="Accordion 3"
+        heading="Disabled Accordion"
         subheading="Disabled Accordion Item"
         endContent={<AvatarDefault />}
       >

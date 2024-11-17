@@ -33,8 +33,8 @@ export const AccordionEndContentOutside = () => {
       </AccordionItem>
       <AccordionItem
         isDisabled
-        heading="Accordion 3"
-        subheading="Disabled Accordion Item"
+        heading="Disabled Accordion"
+        subheading="Press to expand item 3"
         endContent={
           <Button variant="outlined" color="danger" isIconOnly>
             <TrashIcon />

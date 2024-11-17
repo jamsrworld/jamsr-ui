@@ -14,7 +14,7 @@ export const AccordionWithoutIcon = () => {
       <AccordionItem heading="Accordion 2" indicator={null}>
         {content}
       </AccordionItem>
-      <AccordionItem isDisabled heading="Accordion 3" indicator={null}>
+      <AccordionItem isDisabled heading="Disabled Accordion" indicator={null}>
         {content}
       </AccordionItem>
     </Accordion>

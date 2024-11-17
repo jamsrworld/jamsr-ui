@@ -1,4 +1,9 @@
-import { Accordion, AccordionItem, Avatar, type AvatarProps } from "@jamsr-ui/react";
+import {
+  Accordion,
+  AccordionItem,
+  Avatar,
+  type AvatarProps,
+} from "@jamsr-ui/react";
 import { useId } from "react";
 
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -37,7 +42,7 @@ export const AccordionStartContent = () => {
       </AccordionItem>
       <AccordionItem
         isDisabled
-        heading="Accordion 3"
+        heading="Disabled Accordion"
         subheading="Disabled Accordion Item"
         startContent={<AvatarDefault />}
       >

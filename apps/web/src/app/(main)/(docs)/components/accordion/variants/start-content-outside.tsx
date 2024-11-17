@@ -33,7 +33,7 @@ export const AccordionStartContentOutside = () => {
       </AccordionItem>
       <AccordionItem
         isDisabled
-        heading="Accordion 3"
+        heading="Disabled Accordion"
         subheading="Disabled Accordion Item"
         startContent={
           <Button aria-label="Delete" isIconOnly color="danger">

@@ -9,8 +9,13 @@ import { AvatarPlaceholders } from "./variants/placeholders";
 import { AvatarRadius } from "./variants/radius";
 import { AvatarSizes } from "./variants/sizes";
 
+const title = "Avatar";
+const description =
+  "Avatar is used to represent a user and displays the profile picture.";
+
 export const metadata: Metadata = {
-  title: "Avatar",
+  title,
+  description,
 };
 
 const code = <T extends VariantTypes["avatar"][number]>(variant: T) =>
@@ -18,7 +23,7 @@ const code = <T extends VariantTypes["avatar"][number]>(variant: T) =>
 
 const Avatar = () => {
   return (
-    <VariantPage heading="Avatar">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Default" code={code("default")}>
         <AvatarDefault />
       </VariantWrapper>

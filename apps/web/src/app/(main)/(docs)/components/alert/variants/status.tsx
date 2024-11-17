@@ -1,27 +1,13 @@
-import { Alert, type AlertProps } from "@jamsr-ui/react";
+import { Alert } from "@jamsr-ui/react";
 
-export const AlertStatus = (props: AlertProps) => {
-  const statuses: AlertProps["status"][] = [
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "default",
-  ];
-
+export const AlertStatus = () => {
   return (
     <div className="grid gap-4">
-      {statuses.map((status) => (
-        <Alert
-          key={status}
-          status={status}
-          className="capitalize"
-          heading={status}
-          {...props}
-        >
-          This is a description message for {status}
-        </Alert>
-      ))}
+      <Alert status="warning">This is a warning message.</Alert>
+      <Alert status="info">This is a info message.</Alert>
+      <Alert status="success">This is a success message.</Alert>
+      <Alert status="danger">This is a danger message.</Alert>
+      <Alert status="default">This is a default message.</Alert>
     </div>
   );
 };

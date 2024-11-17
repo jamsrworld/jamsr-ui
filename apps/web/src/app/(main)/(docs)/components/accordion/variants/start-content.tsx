@@ -1,27 +1,39 @@
-import {
-  Accordion,
-  AccordionItem,
-  type AccordionProps
-} from "@jamsr-ui/react";
-import { AvatarDefault } from "../../avatar/variants/default";
-import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
+import { Accordion, AccordionItem, Avatar, type AvatarProps } from "@jamsr-ui/react";
+import { useId } from "react";
 
-export const AccordionStartContent = (arg: AccordionProps) => {
+const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
+
+const AvatarDefault = (props: Partial<AvatarProps>) => {
+  const id = useId();
   return (
-    <Accordion {...arg}>
+    <Avatar
+      alt="image"
+      className="flex"
+      src={`https://i.pravatar.cc/300?u=${id}`}
+      width={100}
+      height={100}
+      {...props}
+    />
+  );
+};
+
+export const AccordionStartContent = () => {
+  return (
+    <Accordion>
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"
         startContent={<AvatarDefault />}
       >
-        {defaultContent}
+        {content}
       </AccordionItem>
       <AccordionItem
         heading="Accordion 2"
         subheading="Press to expand item 2"
         startContent={<AvatarDefault />}
       >
-        {defaultContent2}
+        {content}
       </AccordionItem>
       <AccordionItem
         isDisabled
@@ -29,7 +41,7 @@ export const AccordionStartContent = (arg: AccordionProps) => {
         subheading="Disabled Accordion Item"
         startContent={<AvatarDefault />}
       >
-        {defaultContent3}
+        {content}
       </AccordionItem>
     </Accordion>
   );

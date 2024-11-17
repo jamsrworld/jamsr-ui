@@ -1,6 +1,8 @@
 import { Accordion, AccordionItem, Button } from "@jamsr-ui/react";
 import { TrashIcon } from "@jamsr-ui/shared-icons";
-import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
+
+const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
 
 export const AccordionEndContentOutside = () => {
   return (
@@ -15,7 +17,7 @@ export const AccordionEndContentOutside = () => {
         }
         endContentPlacement="outside"
       >
-        {defaultContent}
+        {content}
       </AccordionItem>
       <AccordionItem
         heading="Accordion 2"
@@ -27,7 +29,7 @@ export const AccordionEndContentOutside = () => {
         }
         endContentPlacement="outside"
       >
-        {defaultContent2}
+        {content}
       </AccordionItem>
       <AccordionItem
         isDisabled
@@ -40,7 +42,7 @@ export const AccordionEndContentOutside = () => {
         }
         endContentPlacement="outside"
       >
-        {defaultContent3}
+        {content}
       </AccordionItem>
     </Accordion>
   );

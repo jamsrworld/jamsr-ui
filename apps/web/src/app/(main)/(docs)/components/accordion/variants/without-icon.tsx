@@ -1,19 +1,21 @@
 "use client";
 
-import { Accordion, AccordionItem, type AccordionProps } from "@jamsr-ui/react";
-import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
+import { Accordion, AccordionItem } from "@jamsr-ui/react";
 
-export const AccordionWithoutIcon = (arg: AccordionProps) => {
+const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
+
+export const AccordionWithoutIcon = () => {
   return (
-    <Accordion {...arg}>
+    <Accordion>
       <AccordionItem heading="Accordion 1" indicator={null}>
-        {defaultContent}
+        {content}
       </AccordionItem>
       <AccordionItem heading="Accordion 2" indicator={null}>
-        {defaultContent2}
+        {content}
       </AccordionItem>
       <AccordionItem isDisabled heading="Accordion 3" indicator={null}>
-        {defaultContent3}
+        {content}
       </AccordionItem>
     </Accordion>
   );

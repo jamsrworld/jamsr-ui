@@ -65,6 +65,8 @@ export const CopyToClipboard = (props: Props) => {
         setIsCopied(false);
       }, 2000);
       toast.success("Copied to clipboard");
+      const audio = new Audio("/copy.mp3");
+      void audio.play();
     } catch (err) {
       toast.error("Failed to copy");
     }

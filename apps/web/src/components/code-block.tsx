@@ -22,6 +22,9 @@ type Props = {
 
 export const CodeBlock = (props: Props) => {
   const { children, copyPosition = "top", language = "typescript" } = props;
+
+  // return typeof
+
   const highlightedCode = hljs.highlight(children, {
     language,
   }).value;
@@ -39,7 +42,7 @@ export const CodeBlock = (props: Props) => {
             <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
           </pre>
           {copyPosition === "right" && (
-            <div className="absolute right-1 hidden group-hover:block">
+            <div className="absolute right-1 top-1/2 hidden -translate-y-1/2 group-hover:block">
               <CopyToClipboard text={children} />
             </div>
           )}

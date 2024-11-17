@@ -118,7 +118,10 @@ export const useInput = ($props: UseInputProps) => {
     !isEmpty(placeholder) ||
     !isEmpty(value) ||
     !isEmpty(startContent) ||
-    isFocused;
+    isFocused ||
+    // if input type number has invalid value then value becomes empty string
+    (type === "number" && inputDOMRef.current?.validity.badInput === true);
+
   const hasLabel = !isEmpty(label) || !isEmpty(labelHelperContent);
   const hasStartContent = !isEmpty(startContent);
   const hasEndContent = !isEmpty(endContent);
@@ -160,7 +163,6 @@ export const useInput = ($props: UseInputProps) => {
   }, [inputDOMRef]);
 
   const handleOnFocus = useCallback(() => {
-    console.log("inner focused")
     setIsFocused(true);
   }, [setIsFocused]);
 

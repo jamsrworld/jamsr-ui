@@ -1,6 +1,7 @@
+import { Code } from "@/components/code";
 import { CodeBlock } from "@/components/code-block";
 import { VariantPage } from "@/components/docs/variant-page";
-import { JAMSR_UI_TEMPLATE_GITHUB_URL } from "@/config";
+import { JAMSR_UI_TEMPLATE_GITHUB_URL, TAILWIND_WEB_URL } from "@/config";
 import {
   Alert,
   Badge,
@@ -50,20 +51,20 @@ const items: { heading: string; content: React.ReactNode }[] = [
       <div className="flex flex-col gap-4">
         <Alert variant="solid" status="default">
           <div>
-            <strong>Note:</strong> This step is only for those who use pnpm to
-            install. If you install JamsrUI using other package managers, please
-            skip this step.
+            <strong>Note:</strong> This step is only for those who are using
+            pnpm to install.
           </div>
         </Alert>
         <Typography as="p">
           If you are using pnpm, you need to add the following line to your
-          .npmrc file to hoist our packages to the root node_modules.
+          <Code>.npmrc</Code> file to hoist our packages to the root
+          node_modules.
         </Typography>
         <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
         <Typography as="p">
-          After modifying the .npmrc file, you need to delete the previous
-          node_modules and reinstall again to ensure that the dependencies are
-          installed correctly
+          After modifying the <Code>.npmrc</Code> file, you need to delete the
+          previous node_modules and reinstall again to ensure that the
+          dependencies are installed correctly
         </Typography>
       </div>
     ),
@@ -73,9 +74,16 @@ const items: { heading: string; content: React.ReactNode }[] = [
     content: (
       <div className="flex flex-col gap-4">
         <Typography as="p">
-          JamsrUI is built on top of Tailwind CSS, so you need to install
-          Tailwind CSS first. You can follow the official installation guide to
-          install Tailwind CSS. Then you need to add the following code to your
+          JamsrUI is built on top of{" "}
+          <Link target="_blank" href={TAILWIND_WEB_URL}>
+            Tailwind CSS
+          </Link>
+          , so you need to install{" "}
+          <Link target="_blank" href={TAILWIND_WEB_URL}>
+            Tailwind CSS
+          </Link>{" "}
+          first. You can follow the official installation guide to install
+          Tailwind CSS. Then you need to add the following code to your
           tailwind.config.js file:
         </Typography>
         <Alert variant="solid" status="default">

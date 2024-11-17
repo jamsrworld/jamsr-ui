@@ -57,7 +57,7 @@ const Input = () => {
       >
         <InputWithPlaceholder />
       </VariantWrapper>
-      <VariantWrapper heading="WithoutLabel" code={code("without-label")}>
+      <VariantWrapper heading="Without Label" code={code("without-label")}>
         <InputWithoutLabel />
       </VariantWrapper>
       <VariantWrapper
@@ -72,7 +72,7 @@ const Input = () => {
       >
         <InputWithEndContent />
       </VariantWrapper>
-      <VariantWrapper heading="WithIcon" code={code("with-icon")}>
+      <VariantWrapper heading="With Icon" code={code("with-icon")}>
         <InputWithIcon />
       </VariantWrapper>
       <VariantWrapper heading="Required" code={code("required")}>
@@ -87,10 +87,10 @@ const Input = () => {
       <VariantWrapper heading="Placeholder" code={code("placeholder")}>
         <InputPlaceholder />
       </VariantWrapper>
-      <VariantWrapper heading="LabelHelper" code={code("label-helper")}>
+      <VariantWrapper heading="Label Helper" code={code("label-helper")}>
         <InputLabelHelper />
       </VariantWrapper>
-      <VariantWrapper heading="SecuredText" code={code("secured-text")}>
+      <VariantWrapper heading="Secured Text" code={code("secured-text")}>
         <InputSecuredText />
       </VariantWrapper>
       <VariantWrapper heading="Numbers Only" code={code("numbers-only")}>

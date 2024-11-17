@@ -1,21 +1,23 @@
-import { Accordion, AccordionItem, type AccordionProps } from "@jamsr-ui/react";
-import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
+import { Accordion, AccordionItem } from "@jamsr-ui/react";
 
-export const AccordionSubheading = (arg: AccordionProps) => {
+const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
+
+export const AccordionSubheading = () => {
   return (
-    <Accordion {...arg}>
+    <Accordion>
       <AccordionItem heading="Accordion 1" subheading="Press to expand item 1">
-        {defaultContent}
+        {content}
       </AccordionItem>
       <AccordionItem heading="Accordion 2" subheading="Press to expand item 2">
-        {defaultContent2}
+        {content}
       </AccordionItem>
       <AccordionItem
         isDisabled
         heading="Accordion 3"
         subheading="Disabled Accordion Item"
       >
-        {defaultContent3}
+        {content}
       </AccordionItem>
     </Accordion>
   );

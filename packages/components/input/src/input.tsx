@@ -68,7 +68,7 @@ export const Input = <T extends React.ElementType = "div">(
   ]);
 
   const getLabel = useMemo(() => {
-    return (
+    return !label ? null : (
       <div {...getLabelWrapperProps()}>
         <label htmlFor={id} {...getLabelProps()}>
           {label} {hasNotation && <span {...getNotationProps()}>*</span>}

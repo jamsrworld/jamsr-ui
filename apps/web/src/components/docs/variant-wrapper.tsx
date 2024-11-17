@@ -7,14 +7,14 @@ export type VariantWrapperProps = {
   children: React.ReactNode;
   heading: string;
   description?: React.ReactNode;
-  code?: string;
+  code?: string | string[];
 };
 
 export const VariantWrapper = (props: VariantWrapperProps) => {
   const { children, heading, description, code } = props;
   const id = toSlug(heading);
   return (
-    <section id={id}>
+    <section className="scroll-mt-20" id={id}>
       <div className="mb-2">
         <Typography variant="h6" as="h1" className="text-xl font-medium">
           {heading}
@@ -37,10 +37,13 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
             </div>
           </Tab>
           <Tab heading="Code" value="code">
-            {code ? (
-              <CodeBlock>{code}</CodeBlock>
-            ) : (
-              <Typography as="p">Coming Soon</Typography>
+            {typeof code === "string" && <CodeBlock>{code}</CodeBlock>}
+            {Array.isArray(code) && (
+              <div className="flex flex-col gap-2">
+                {code.map((c, idx) => (
+                  <CodeBlock key={idx}>{c}</CodeBlock>
+                ))}
+              </div>
             )}
           </Tab>
         </Tabs>

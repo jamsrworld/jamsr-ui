@@ -22,8 +22,8 @@ export const inputVariants = tv({
       "group-data-[has-end-content=true]:pr-2",
     ],
     helper: "text-xs text-foreground-600",
-    startContent: "pl-2 leading-0 text-foreground-500",
-    endContent: "pr-2 leading-0 text-foreground-500",
+    startContent: "pl-2 text-foreground-500",
+    endContent: "pr-2 text-foreground-500",
     notation: "",
     contentWrapper: "flex h-full grow items-center",
   },
@@ -49,7 +49,7 @@ export const inputVariants = tv({
         labelWrapper:
           "pointer-events-none absolute inset-0 flex size-full items-start justify-between",
         label:
-          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 group-data-[filled-within=true]:top-4",
+          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 group-data-[filled-within=true]:top-3.5",
       },
     },
     size: {

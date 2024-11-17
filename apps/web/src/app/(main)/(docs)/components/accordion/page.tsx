@@ -30,20 +30,11 @@ const code = <T extends VariantTypes["accordion"][number]>(variant: T) =>
 const Accordion = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <AccordionDefault />
-      </VariantWrapper>
       <VariantWrapper
-        heading="Multiple Selection"
-        description={
-          <div>
-            Use the <Code>isMultiple</Code> prop to allow multiple items to be
-            expanded at once.
-          </div>
-        }
-        code={code("multiple-selection")}
+        heading="Default"
+        code={code("default")}
       >
-        <AccordionMultipleSelection />
+        <AccordionDefault />
       </VariantWrapper>
       <VariantWrapper
         heading="Disabled Items"
@@ -57,6 +48,19 @@ const Accordion = () => {
       >
         <AccordionDisabled />
       </VariantWrapper>
+      <VariantWrapper
+        heading="Multiple Selection"
+        description={
+          <div>
+            Use the <Code>isMultiple</Code> prop to allow multiple items to be
+            expanded at once.
+          </div>
+        }
+        code={code("multiple-selection")}
+      >
+        <AccordionMultipleSelection />
+      </VariantWrapper>
+      
       <VariantWrapper
         heading="With Subheading"
         description={

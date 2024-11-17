@@ -98,5 +98,6 @@ module.exports = {
     "react/no-array-index-key": "off",
     "@typescript-eslint/no-unused-expressions": "off",
     "no-underscore-dangle": "off",
+    "no-void": "off",
   },
 };

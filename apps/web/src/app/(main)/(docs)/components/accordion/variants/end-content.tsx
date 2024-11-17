@@ -1,27 +1,25 @@
-import {
-  Accordion,
-  AccordionItem,
-  type AccordionProps
-} from "@jamsr-ui/react";
+import { Accordion, AccordionItem } from "@jamsr-ui/react";
 import { AvatarDefault } from "../../avatar/variants/default";
-import { defaultContent, defaultContent2, defaultContent3 } from "../shared";
 
-export const AccordionEndContent = (arg: AccordionProps) => {
+const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
+
+export const AccordionEndContent = () => {
   return (
-    <Accordion {...arg}>
+    <Accordion>
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"
         endContent={<AvatarDefault />}
       >
-        {defaultContent}
+        {content}
       </AccordionItem>
       <AccordionItem
         heading="Accordion 2"
         subheading="Press to expand item 2"
         endContent={<AvatarDefault />}
       >
-        {defaultContent2}
+        {content}
       </AccordionItem>
       <AccordionItem
         isDisabled
@@ -29,7 +27,7 @@ export const AccordionEndContent = (arg: AccordionProps) => {
         subheading="Disabled Accordion Item"
         endContent={<AvatarDefault />}
       >
-        {defaultContent3}
+        {content}
       </AccordionItem>
     </Accordion>
   );

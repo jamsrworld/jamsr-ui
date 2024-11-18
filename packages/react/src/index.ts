@@ -1,3 +1,5 @@
+import "./types";
+
 export * from "@jamsr-ui/accordion";
 export * from "@jamsr-ui/alert";
 export * from "@jamsr-ui/autocomplete";

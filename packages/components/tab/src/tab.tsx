@@ -20,17 +20,8 @@ export const Tab = <T extends React.ElementType = "button">(
   const { tab: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
-  const {
-    heading,
-    value,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    children,
-    onClick,
-    as,
-    startContent,
-    endContent,
-    ...restProps
-  } = props as TabProps;
+  const { heading, value, onClick, as, startContent, endContent } =
+    props as TabProps;
   const { selectedValue, onValueChange, getTabProps, getTabContentProps } =
     useTabsContext();
   const isActive = value === selectedValue;
@@ -42,10 +33,12 @@ export const Tab = <T extends React.ElementType = "button">(
   const Component = as ?? "button";
 
   return (
-    <Component {...getTabProps(restProps as TabProps)} onClick={handleClick}>
-      {startContent}
-      <div {...getTabContentProps()}>{heading}</div>
-      {endContent}
+    <Component {...getTabProps(props as TabProps)} onClick={handleClick}>
+      <div {...getTabContentProps()}>
+        {startContent}
+        {heading}
+        {endContent}
+      </div>
       {isActive && <TabIndicator />}
     </Component>
   );

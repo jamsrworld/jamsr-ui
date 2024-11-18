@@ -1,6 +1,12 @@
 import type { VariantProps } from "@jamsr-ui/utils";
-import { colorVariants, dataFocusVisibleClasses, focusVisibleClasses, tv } from "@jamsr-ui/utils";
+import {
+  colorVariants,
+  dataFocusVisibleClasses,
+  focusVisibleClasses,
+  tv,
+} from "@jamsr-ui/utils";
 
+export const test = "";
 export const tabsVariant = tv({
   slots: {
     base: "",
@@ -16,35 +22,33 @@ export const tabsVariant = tv({
       "bg-default-100",
     ],
     tab: [
-      "z-0",
+      "z-0 text-default-500",
       "w-full",
       "px-3",
       "py-1",
-      "flex flex-row gap-2",
+      "flex flex-row items-center justify-center gap-2",
       "group",
       "relative",
-      "justify-center",
-      "items-center",
       "outline-none",
       "cursor-pointer",
       "transition-opacity",
       "tap-highlight-transparent",
-      "data-[disabled=true]:cursor-not-allowed",
-      "data-[disabled=true]:opacity-30",
-      "data-[hover-unselected=true]:opacity-disabled",
+      "ui-disabled:cursor-not-allowed",
+      "ui-disabled:opacity-30",
+      "ui-disabled:text-foreground",
       // focus ring
       ...focusVisibleClasses,
     ],
     tabContent: [
       "relative",
       "z-10",
-      "text-inherit",
       "whitespace-nowrap",
       "transition-colors",
       "text-default-500",
       "group-data-[selected=true]:text-foreground",
+      "flex flex-row items-center justify-center gap-2",
     ],
-    cursor: ["absolute", "z-0", "bg-white"],
+    cursor: ["absolute", "-z-1", "bg-white"],
     panel: [
       "py-3",
       "px-1",
@@ -90,7 +94,7 @@ export const tabsVariant = tv({
       md: {
         tabList: "rounded-xl",
         tab: "h-8 rounded text-sm",
-        cursor: "rounded",
+        cursor: "rounded-md",
       },
       lg: {
         tabList: "rounded-lg",
@@ -105,17 +109,22 @@ export const tabsVariant = tv({
         cursor: "rounded-none",
       },
       sm: {
-        tabList: "rounded-xl",
+        tabList: "rounded",
         tab: "rounded",
         cursor: "rounded",
       },
       md: {
-        tabList: "rounded-xl",
-        tab: "rounded",
-        cursor: "rounded",
+        tabList: "rounded-md",
+        tab: "rounded-md",
+        cursor: "rounded-md",
       },
       lg: {
         tabList: "rounded-lg",
+        tab: "rounded-lg",
+        cursor: "rounded-lg",
+      },
+      xl: {
+        tabList: "rounded-xl",
         tab: "rounded-xl",
         cursor: "rounded-xl",
       },
@@ -168,7 +177,7 @@ export const tabsVariant = tv({
       variant: ["solid", "bordered", "light"],
       color: "default",
       className: {
-        cursor: ["bg-background", "dark:bg-default", "shadow-small"],
+        cursor: ["bg-background", "dark:bg-default", "shadow-sm"],
         tabContent: "group-data-[selected=true]:text-default-foreground",
       },
     },

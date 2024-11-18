@@ -11,28 +11,16 @@ export const TabOutside = () => {
     <>
       <div>
         {/* tabs */}
-        <Tabs
-          value={activeTab}
-          onValueChange={setActiveTab}
-        >
-          <Tab
-            value="photos"
-            heading="Photos"
-          />
-          <Tab
-            value="music"
-            heading="Music"
-          />
-          <Tab
-            value="videos"
-            heading="Videos"
-          />
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
+          <Tab value="photos" heading="Photos" />
+          <Tab value="music" heading="Music" />
+          <Tab value="videos" heading="Videos" />
         </Tabs>
       </div>
       <div>
-        {activeTab === "photos" && "photos"}
-        {activeTab === "music" && "music"}
-        {activeTab === "videos" && "videos"}
+        {activeTab === "photos" && "photos content"}
+        {activeTab === "music" && "music content"}
+        {activeTab === "videos" && "videos content"}
         {/* content */}
       </div>
     </>

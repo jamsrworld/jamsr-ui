@@ -1,5 +1,14 @@
 # web
 
+## 0.1.155
+
+### Patch Changes
+
+- fix types
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.56
+  - @jamsr-ui/react@0.0.173
+
 ## 0.1.154
 
 ### Patch Changes

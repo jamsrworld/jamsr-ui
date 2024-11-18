@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.56
+
+### Patch Changes
+
+- fix types
+
 ## 0.0.55
 
 ### Patch Changes

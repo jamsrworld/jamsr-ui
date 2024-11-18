@@ -1,18 +1,16 @@
 import { Tab, Tabs } from "@jamsr-ui/react";
-import { TabContent } from "../shared";
 
 export const TabDisabledItem = () => {
+  const variants = ["underlined", "bordered", "solid", "light"] as const;
   return (
-    <Tabs defaultValue="photos">
-      <Tab value="photos" heading="Photos">
-        <TabContent />
-      </Tab>
-      <Tab value="music" heading="Music" isDisabled>
-        <TabContent />
-      </Tab>
-      <Tab value="videos" heading="Videos">
-        <TabContent />
-      </Tab>
-    </Tabs>
+    <div className="flex flex-wrap gap-4">
+      {variants.map((variant) => (
+        <Tabs key={variant} variant={variant} aria-label="Tabs variants">
+          <Tab value="photos" heading="Photos" />
+          <Tab value="music" heading="Music" isDisabled />
+          <Tab value="videos" heading="Videos" />
+        </Tabs>
+      ))}
+    </div>
   );
 };

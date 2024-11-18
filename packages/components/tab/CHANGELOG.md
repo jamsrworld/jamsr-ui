@@ -1,5 +1,11 @@
 # @jamsr-ui/tab
 
+## 0.0.83
+
+### Patch Changes
+
+- fix types
+
 ## 0.0.82
 
 ### Patch Changes

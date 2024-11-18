@@ -175,6 +175,7 @@ export type VariantTypes = {
     "radius",
     "sizes",
     "variants",
+    "with-icons",
   ];
   table: ["allow-hover", "bordered", "default"];
   "tags-input": ["controlled", "default-value", "default", "invalid-state"];

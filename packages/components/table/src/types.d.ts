@@ -13,7 +13,7 @@ declare module "@jamsr-ui/styles" {
     tableBody?: Partial<TableBodyProps>;
     tableCell?: Partial<TableCellProps>;
     tableColumn?: Partial<TableColumnProps>;
-    tableHead?: Partial<TableHeaderProps>;
+    tableHeader?: Partial<TableHeaderProps>;
     tableRow?: Partial<TableRowProps>;
   }
 }

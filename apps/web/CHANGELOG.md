@@ -1,5 +1,13 @@
 # web
 
+## 0.1.154
+
+### Patch Changes
+
+- fixes
+- Updated dependencies
+  - @jamsr-ui/react@0.0.172
+
 ## 0.1.153
 
 ### Patch Changes

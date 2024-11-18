@@ -116,7 +116,7 @@ const Button = () => {
         <ButtonLoading />
       </VariantWrapper>
 
-      <VariantWrapper
+      {/* <VariantWrapper
         heading="Button Group"
         code={code("loading")}
         description={
@@ -126,7 +126,7 @@ const Button = () => {
         }
       >
         <ButtonLoading />
-      </VariantWrapper>
+      </VariantWrapper> */}
     </VariantPage>
   );
 };

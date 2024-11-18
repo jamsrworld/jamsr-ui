@@ -1,8 +1,6 @@
 "use client";
 
-import { AppHeader } from "@/layouts/app-header";
-import { ToastProvider, UIProvider } from "@jamsr-ui/react";
-import { UIStylesProvider } from "@jamsr-ui/styles";
+import { ToastProvider, UIProvider, UIStylesProvider } from "@jamsr-ui/react";
 import { Analytics } from "@vercel/analytics/react";
 
 type Props = {
@@ -16,7 +14,6 @@ export const AppProvider = (props: Props) => {
       <Analytics />
       <ToastProvider />
       <UIStylesProvider
-
       // button={{
       //   className: "",
       //   color: "danger",
@@ -25,19 +22,6 @@ export const AppProvider = (props: Props) => {
       //   onClick: () => {
       //     console.log("first click");
       //   },
-      // }}
-      // input={{
-      //   className: "shadow-lg",
-      //   classNames: {
-      //     label: "text-red-500",
-      //   },
-      //   variant: "outlined",
-      // }}
-      // card={{
-      //   className: "!bg-red-500",
-      // }}
-      // cardHeader={{
-      //   className: "bg-gray-500",
       // }}
       >
         {children}

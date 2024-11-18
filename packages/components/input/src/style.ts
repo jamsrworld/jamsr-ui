@@ -1,7 +1,6 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
-
 export const inputVariants = tv({
   slots: {
     base: "group flex flex-col gap-1",

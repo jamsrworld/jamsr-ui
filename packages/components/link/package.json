@@ -1,21 +1,7 @@
 {
   "name": "@jamsr-ui/link",
-  "version": "0.0.65",
-  "description": "",
+  "version": "0.0.66",
   "main": "./src/index.ts",
-  "sideEffects": false,
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",

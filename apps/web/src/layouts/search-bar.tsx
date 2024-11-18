@@ -98,6 +98,10 @@ const items: { label: string; url: Route }[] = [
     url: "/components/input",
   },
   {
+    label: "Kbd",
+    url: "/components/kbd",
+  },
+  {
     label: "Link",
     url: "/components/link",
   },

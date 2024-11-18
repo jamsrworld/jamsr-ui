@@ -1,5 +1,11 @@
 # @jamsr-ui/link
 
+## 0.0.66
+
+### Patch Changes
+
+- fixes
+
 ## 0.0.65
 
 ### Patch Changes

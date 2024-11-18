@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.171",
+  "version": "0.0.172",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"
@@ -50,10 +50,11 @@
     "@jamsr-ui/dnd": "workspace:^",
     "@jamsr-ui/drawer": "workspace:^",
     "@jamsr-ui/editor": "workspace:^",
-    "@jamsr-ui/file-upload-single": "workspace:^",
     "@jamsr-ui/file-upload-multi": "workspace:^",
+    "@jamsr-ui/file-upload-single": "workspace:^",
     "@jamsr-ui/header": "workspace:^",
     "@jamsr-ui/input": "workspace:^",
+    "@jamsr-ui/kbd": "workspace:^",
     "@jamsr-ui/link": "workspace:^",
     "@jamsr-ui/menu": "workspace:^",
     "@jamsr-ui/otp-input": "workspace:^",

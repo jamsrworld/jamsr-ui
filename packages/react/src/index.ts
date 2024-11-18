@@ -33,6 +33,7 @@ export * from "@jamsr-ui/rhf";
 export * from "@jamsr-ui/ripple";
 export * from "@jamsr-ui/select";
 export * from "@jamsr-ui/skeleton";
+export * from "@jamsr-ui/stepper";
 export * from "@jamsr-ui/styles";
 export * from "@jamsr-ui/switch";
 export * from "@jamsr-ui/tab";

@@ -40,6 +40,7 @@ const components = [
   "select",
   "skeleton",
   "switch",
+  "stepper",
   "tab",
   "table",
   "tags-input",

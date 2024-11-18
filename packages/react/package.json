@@ -67,6 +67,7 @@
     "@jamsr-ui/ripple": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
+    "@jamsr-ui/stepper": "workspace:^",
     "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/switch": "workspace:^",
     "@jamsr-ui/tab": "workspace:^",

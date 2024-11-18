@@ -29,7 +29,7 @@ const code = <T extends VariantTypes["tab"][number]>(variant: T) =>
 
 const Tab = () => {
   return (
-    <VariantPage heading="Alert" description={description}>
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Default" code={code("default")}>
         <TabDefault />
       </VariantWrapper>

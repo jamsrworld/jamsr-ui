@@ -9,8 +9,14 @@ import { CheckboxDisabled } from "./variants/disabled";
 import { CheckboxInvalidState } from "./variants/invalid-state";
 import { CheckboxReadonly } from "./variants/readonly";
 
+
+const title = "Checkbox";
+const description =
+  "Checkboxes enable users to select multiple items from a list or to indicate a single item as selected.";
+
 export const metadata: Metadata = {
-  title: "Checkbox",
+  title,
+  description,
 };
 
 const code = <T extends VariantTypes["checkbox"][number]>(variant: T) =>
@@ -18,7 +24,7 @@ const code = <T extends VariantTypes["checkbox"][number]>(variant: T) =>
 
 const Checkbox = () => {
   return (
-    <VariantPage heading="Checkbox">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Default" code={code("default")}>
         <CheckboxDefault />
       </VariantWrapper>

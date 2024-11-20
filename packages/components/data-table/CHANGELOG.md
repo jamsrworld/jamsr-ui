@@ -1,5 +1,11 @@
 # @jamsr-ui/data-table
 
+## 0.0.46
+
+### Patch Changes
+
+- @jamsr-ui/select@0.0.81
+
 ## 0.0.45
 
 ### Patch Changes

@@ -34,6 +34,10 @@ export type PopoverProps = {
   triggerOn?: "click" | "hover";
   showArrow?: boolean;
   className?: string;
+  classNames?: {
+    popover?: string;
+    arrow?: string;
+  };
   applyWidth?: boolean;
   offset?: number;
 };
@@ -56,6 +60,7 @@ export const Popover = ($props: PopoverProps) => {
     className,
     applyWidth,
     offset: offsetValue = 4,
+    classNames,
   } = props;
 
   const [open, setOpen] = useControlledState(
@@ -135,6 +140,7 @@ export const Popover = ($props: PopoverProps) => {
               className={cn(
                 "z-popover rounded-2xl bg-content1 p-2 text-sm shadow-md backdrop-blur-3xl focus:outline-none",
                 className,
+                classNames?.popover,
               )}
               ref={refs.setFloating}
               style={floatingStyles}
@@ -144,7 +150,7 @@ export const Popover = ($props: PopoverProps) => {
                 <FloatingArrow
                   ref={arrowRef}
                   context={context}
-                  className="fill-content1"
+                  className={cn("fill-content1", classNames?.arrow)}
                 />
               )}
               {children}

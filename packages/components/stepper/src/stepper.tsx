@@ -1,5 +1,10 @@
 import { MinusIcon, PlusIcon } from "@jamsr-ui/shared-icons";
-import { AnimatePresence, m, type MotionProps, type Variants } from "framer-motion";
+import {
+  AnimatePresence,
+  m,
+  type MotionProps,
+  type Variants,
+} from "framer-motion";
 import { useState } from "react";
 import { useStepper, type UseStepperProps } from "./use-stepper";
 
@@ -69,6 +74,7 @@ export const Stepper = (props: StepperProps) => {
         <MinusIcon width={20} height={20} />
       </button>
       <AnimatePresence mode="popLayout" initial={false} custom={action}>
+        {/* @ts-expect-error framer-error */}
         <m.div key={value} custom={action} {...getValueProps()} {...valueProps}>
           {value}
         </m.div>

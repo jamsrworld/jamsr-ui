@@ -1,4 +1,4 @@
-import { Button, Menu, MenuItem, type MenuProps } from "@jamsr-ui/react";
+import { Button, Kbd, Menu, MenuItem, type MenuProps } from "@jamsr-ui/react";
 import { ChevronUpIcon, InfoIcon, SearchIcon } from "@jamsr-ui/shared-icons";
 
 export const MenuDefault = (props: Partial<MenuProps>) => {
@@ -15,13 +15,9 @@ export const MenuDefault = (props: Partial<MenuProps>) => {
         <MenuItem startContent={<InfoIcon className="size-5" />}>Info</MenuItem>
         <MenuItem
           startContent={
-            <SearchIcon className="text-foreground-secondary size-5" />
+            <SearchIcon className="size-5 text-foreground-secondary" />
           }
-          endContent={
-            <div className="bg-background text-foreground-secondary rounded p-0.5 text-xs">
-              Ctrl+K
-            </div>
-          }
+          endContent={<Kbd keys={["command"]}>K</Kbd>}
         >
           Search
         </MenuItem>

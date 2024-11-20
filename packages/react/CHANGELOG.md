@@ -1,5 +1,19 @@
 # @jamsr-ui/react
 
+## 0.0.175
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.65
+  - @jamsr-ui/stepper@0.0.1
+  - @jamsr-ui/menu@0.0.80
+  - @jamsr-ui/editor@0.0.83
+  - @jamsr-ui/input@0.0.84
+  - @jamsr-ui/select@0.0.81
+  - @jamsr-ui/rhf@0.0.22
+  - @jamsr-ui/data-table@0.0.46
+
 ## 0.0.174
 
 ### Patch Changes

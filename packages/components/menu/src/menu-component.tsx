@@ -51,6 +51,8 @@ export type MenuProps = {
   nestedOffset?: number;
   classNames?: {
     popover?: string;
+    arrow?: string;
+    triggerWrapper?: string;
   };
   showArrow?: boolean;
   isOpen?: boolean;
@@ -220,10 +222,11 @@ export const MenuComponent = ($props: MenuProps) => {
         className={cn({
           [menuItemClass]: isNested,
           "inline-block": !isNested,
+          [classNames?.triggerWrapper ?? ""]: isNested,
         })}
       >
-        <div className="grow text-start">{trigger}</div>
-        {isNested && <ChevronRightIcon aria-hidden className="ml-2" />}
+        {trigger}
+        {isNested && <ChevronRightIcon aria-hidden className="ml-auto" />}
       </div>
       <MenuContext.Provider value={value}>
         <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
@@ -241,7 +244,7 @@ export const MenuComponent = ($props: MenuProps) => {
                     ref={refs.setFloating}
                     style={floatingStyles}
                     className={menuClasses.menu({
-                      className: cn(classNames?.popover, className),
+                      className: cn(className, classNames?.popover),
                     })}
                     initial={{ opacity: 0, top: -10 }}
                     animate={{ opacity: 1, top: 0 }}
@@ -252,7 +255,7 @@ export const MenuComponent = ($props: MenuProps) => {
                       <FloatingArrow
                         ref={arrowRef}
                         context={context}
-                        className="fill-content2"
+                        className={cn("fill-content2", classNames?.arrow)}
                       />
                     )}
                     {children}

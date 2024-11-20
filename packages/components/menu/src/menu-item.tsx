@@ -67,7 +67,7 @@ export const MenuItem = <T extends React.ElementType = "button">(
       })}
     >
       {startContent}
-      <div className="grow text-left">{children}</div>
+      <div className="grow">{children}</div>
       {endContent}
     </Component>
   );

@@ -1,5 +1,11 @@
 # @jamsr-ui/menu
 
+## 0.0.80
+
+### Patch Changes
+
+- fix popover,menu
+
 ## 0.0.79
 
 ### Patch Changes

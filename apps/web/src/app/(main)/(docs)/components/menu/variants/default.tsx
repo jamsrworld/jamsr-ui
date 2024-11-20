@@ -6,6 +6,7 @@ export const MenuDefault = (props: Partial<MenuProps>) => {
     <div className="flex justify-center">
       <Menu
         classNames={{
+          // base: "bg-red-500",
           popover: "min-w-[300px]",
         }}
         trigger={<Button endContent={<ChevronUpIcon />}>Open Me</Button>}

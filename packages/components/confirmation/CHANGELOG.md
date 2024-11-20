@@ -1,5 +1,12 @@
 # @jamsr-ui/confirmation
 
+## 0.0.54
+
+### Patch Changes
+
+- @jamsr-ui/button@0.0.67
+- @jamsr-ui/dialog@0.0.75
+
 ## 0.0.53
 
 ### Patch Changes

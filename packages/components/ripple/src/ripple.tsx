@@ -4,10 +4,14 @@ import { useRipple, type UseRippleOptions } from "./use-ripple";
 
 type Props = {
   className?: string;
+  classNames?: {
+    base?: string;
+    ripple?: string;
+  };
 } & UseRippleOptions;
 
 export const Ripple = (props: Props) => {
-  const { className, isCenter } = props;
+  const { className, isCenter, classNames } = props;
   const ref = useRef<HTMLSpanElement>(null);
   const ripples = useRipple(ref, {
     isCenter,
@@ -18,6 +22,7 @@ export const Ripple = (props: Props) => {
       className={cn(
         "absolute inset-0 size-full overflow-hidden rounded-inherit",
         className,
+        classNames?.base,
       )}
       ref={ref}
     >
@@ -25,7 +30,10 @@ export const Ripple = (props: Props) => {
         return (
           <span
             key={i}
-            className="absolute origin-center scale-0 animate-ripple rounded-full bg-current opacity-15 dark:bg-white/5"
+            className={cn(
+              "absolute origin-center scale-0 animate-ripple rounded-full bg-current opacity-15",
+              classNames?.ripple,
+            )}
             style={{
               ...style,
             }}

@@ -1,5 +1,11 @@
 # @jamsr-ui/ripple
 
+## 0.0.65
+
+### Patch Changes
+
+- fix menu, ripple
+
 ## 0.0.64
 
 ### Patch Changes

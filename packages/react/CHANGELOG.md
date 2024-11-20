@@ -1,5 +1,33 @@
 # @jamsr-ui/react
 
+## 0.0.177
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/ripple@0.0.65
+  - @jamsr-ui/menu@0.0.82
+  - @jamsr-ui/button@0.0.67
+  - @jamsr-ui/editor@0.0.85
+  - @jamsr-ui/alert@0.0.81
+  - @jamsr-ui/autocomplete@0.0.90
+  - @jamsr-ui/card@0.0.76
+  - @jamsr-ui/chip@0.0.73
+  - @jamsr-ui/confirmation@0.0.54
+  - @jamsr-ui/data-table@0.0.47
+  - @jamsr-ui/dialog@0.0.75
+  - @jamsr-ui/drawer@1.0.59
+  - @jamsr-ui/header@0.0.72
+  - @jamsr-ui/input@0.0.85
+  - @jamsr-ui/popover@0.0.65
+  - @jamsr-ui/select@0.0.82
+  - @jamsr-ui/tab@0.0.83
+  - @jamsr-ui/textarea@0.0.85
+  - @jamsr-ui/toast@0.0.25
+  - @jamsr-ui/tooltip@0.0.63
+  - @jamsr-ui/rhf@0.0.24
+  - @jamsr-ui/tags-input@0.0.21
+
 ## 0.0.176
 
 ### Patch Changes

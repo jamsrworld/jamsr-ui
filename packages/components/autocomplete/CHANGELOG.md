@@ -1,5 +1,13 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.90
+
+### Patch Changes
+
+- @jamsr-ui/button@0.0.67
+- @jamsr-ui/chip@0.0.73
+- @jamsr-ui/input@0.0.85
+
 ## 0.0.89
 
 ### Patch Changes

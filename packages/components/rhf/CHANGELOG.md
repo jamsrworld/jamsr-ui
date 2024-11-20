@@ -1,5 +1,11 @@
 # @jamsr-ui/rhf
 
+## 0.0.23
+
+### Patch Changes
+
+- @jamsr-ui/editor@0.0.84
+
 ## 0.0.22
 
 ### Patch Changes

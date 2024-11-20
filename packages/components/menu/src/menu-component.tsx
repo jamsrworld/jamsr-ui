@@ -52,7 +52,7 @@ export type MenuProps = {
   classNames?: {
     popover?: string;
     arrow?: string;
-    triggerWrapper?: string;
+    menu?: string;
   };
   showArrow?: boolean;
   isOpen?: boolean;
@@ -222,7 +222,7 @@ export const MenuComponent = ($props: MenuProps) => {
         className={cn({
           [menuItemClass]: isNested,
           "inline-block": !isNested,
-          [classNames?.triggerWrapper ?? ""]: isNested,
+          [classNames?.menu ?? ""]: isNested,
         })}
       >
         {trigger}

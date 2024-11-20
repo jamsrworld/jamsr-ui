@@ -1,1 +1,1 @@
-turbo build --filter='@jamsr-ui/toast' && npx changeset && npx changeset version && npx changeset publish
+turbo build --filter='@jamsr-ui/menu' && npx changeset && npx changeset version && npx changeset publish

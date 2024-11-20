@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/toast",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "main": "src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -23,18 +23,19 @@
   },
   "dependencies": {
     "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^",
     "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@jamsr-ui/button": "^0.0.66",
-    "clean-package": "^2.2.0",
     "@types/react": "^18.3.3",
-    "react-dom": "19.0.0-rc-603e6108-20241029",
-    "react": "19.0.0-rc-603e6108-20241029"
+    "clean-package": "^2.2.0",
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "peerDependencies": {
-    "react-dom": "19.0.0-rc-603e6108-20241029",
-    "react": "19.0.0-rc-603e6108-20241029"
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "clean-package": "../../../clean-package.config.json"
 }

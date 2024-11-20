@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@jamsr-ui/utils";
 import toast, { Toaster, type ToasterProps } from "react-hot-toast";
 
 const ToastProvider = (props: ToasterProps) => {
@@ -9,13 +10,15 @@ const ToastProvider = (props: ToasterProps) => {
       position="bottom-center"
       {...restProps}
       toastOptions={{
-        className:
-          "!bg-content1 border-none !radius-none !shadow-lg !text-foreground",
         duration: 2_000,
         ...toastOptions,
+        className: cn(
+          "!max-w-[unset] !rounded-none border-none !bg-content1 !text-foreground !shadow-lg",
+          toastOptions?.className,
+        ),
       }}
     />
   );
 };
 
-export { ToastProvider, toast };
+export { toast, ToastProvider };

@@ -1,5 +1,13 @@
 # @jamsr-ui/rhf
 
+## 0.0.27
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/rating@0.0.23
+  - @jamsr-ui/editor@0.0.88
+
 ## 0.0.26
 
 ### Patch Changes

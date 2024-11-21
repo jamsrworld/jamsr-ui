@@ -1,5 +1,11 @@
 # @jamsr-ui/editor
 
+## 0.0.87
+
+### Patch Changes
+
+- editor
+
 ## 0.0.86
 
 ### Patch Changes

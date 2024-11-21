@@ -39,7 +39,7 @@ import {
   type ComponentProps,
 } from "react";
 import { menuVariants } from "./style";
-import { MenuContext, useMenu } from "./use-menu";
+import { MenuContext, useMenu, type MenuContextType } from "./use-menu";
 
 export type MenuProps = {
   trigger: React.ReactNode;
@@ -53,6 +53,7 @@ export type MenuProps = {
     popover?: string;
     arrow?: string;
     base?: string;
+    menuItem?: string;
   };
   showArrow?: boolean;
   isOpen?: boolean;
@@ -185,15 +186,16 @@ export const MenuComponent = ($props: MenuProps) => {
     }
   }, [tree, isOpen, nodeId, parentId]);
 
-  const value = useMemo(
+  const value: MenuContextType = useMemo(
     () => ({
       activeIndex,
       setActiveIndex,
       getItemProps,
       setHasFocusInside,
       isOpen,
+      classNames,
     }),
-    [activeIndex, getItemProps, isOpen],
+    [activeIndex, classNames, getItemProps, isOpen],
   );
 
   const menuClasses = menuVariants();

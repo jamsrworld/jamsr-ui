@@ -1,5 +1,11 @@
 # @jamsr-ui/toast
 
+## 0.0.26
+
+### Patch Changes
+
+- fix drawer,repeater
+
 ## 0.0.25
 
 ### Patch Changes

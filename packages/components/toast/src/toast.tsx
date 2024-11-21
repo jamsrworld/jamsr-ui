@@ -13,7 +13,7 @@ const ToastProvider = (props: ToasterProps) => {
         duration: 2_000,
         ...toastOptions,
         className: cn(
-          "!max-w-[unset] !rounded-none border-none !bg-content1 !text-foreground !shadow-lg",
+          "!max-w-[unset] border-none !bg-content1 !text-foreground !shadow-lg",
           toastOptions?.className,
         ),
       }}

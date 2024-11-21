@@ -3,6 +3,7 @@
 import { useFloatingTree, useListItem } from "@floating-ui/react";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
+  cn,
   dataAttr,
   deepMergeProps,
   type ComponentPropsWithAs,
@@ -30,7 +31,7 @@ export const MenuItem = <T extends React.ElementType = "button">(
     children,
     disabled,
     as,
-    className,
+    className: $className,
     startContent,
     endContent,
     label,
@@ -45,12 +46,16 @@ export const MenuItem = <T extends React.ElementType = "button">(
   const isActive = item.index === menu.activeIndex;
   const menuClasses = menuVariants();
   const Component = as ?? "button";
+  const className = cn(
+    menuClasses.menuItem({ className: $className }),
+    menu.classNames?.menuItem,
+  );
   return (
     <Component
       data-slot="item"
       ref={item.ref}
       role="menuitem"
-      className={menuClasses.menuItem({ className })}
+      className={className}
       tabIndex={isActive ? 0 : -1}
       data-active={dataAttr(isActive)}
       disabled={disabled}

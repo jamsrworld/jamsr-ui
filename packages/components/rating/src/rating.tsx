@@ -35,13 +35,12 @@ export const Rating = (props: RatingProps) => {
         </div>
         <div {...getInnerWrapperProps()}>
           <Repeater count={maxValue}>
-            {(idx) => {
-              const index = idx + 1;
+            {({ count }) => {
               return (
                 <RatingItem
-                  key={index}
+                  key={count}
                   value={value}
-                  index={index}
+                  index={count}
                   setValue={setValue}
                   id={id}
                   {...getStarProps()}

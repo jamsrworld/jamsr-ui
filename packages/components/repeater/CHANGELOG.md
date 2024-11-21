@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.32
+
+### Patch Changes
+
+- fix drawer,repeater
+
 ## 0.0.31
 
 ### Patch Changes

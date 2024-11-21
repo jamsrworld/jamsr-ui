@@ -1,5 +1,12 @@
 # @jamsr-ui/data-table
 
+## 0.0.48
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.32
+
 ## 0.0.47
 
 ### Patch Changes

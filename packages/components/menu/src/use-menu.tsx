@@ -1,12 +1,17 @@
 import { createContext, useContext } from "react";
+import { type MenuProps } from "./menu-component";
 
-export const MenuContext = createContext<{
-  getItemProps: (userProps?: React.HTMLProps<HTMLElement>) => Record<string, unknown>;
+export type MenuContextType = {
+  getItemProps: (
+    userProps?: React.HTMLProps<HTMLElement>,
+  ) => Record<string, unknown>;
   activeIndex: number | null;
   setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>;
   setHasFocusInside: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
-}>({
+  classNames?: MenuProps["classNames"];
+};
+export const MenuContext = createContext<MenuContextType>({
   getItemProps: () => ({}),
   activeIndex: null,
   setActiveIndex: () => {},

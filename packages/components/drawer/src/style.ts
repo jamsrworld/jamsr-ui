@@ -4,7 +4,8 @@ export const test = "";
 export const drawer = tv({
   slots: {
     backdrop: "z-backdrop !overflow-x-hidden backdrop-blur-sm",
-    content: "absolute z-dialog h-dvh w-full overflow-y-auto bg-content1",
+    content:
+      "absolute z-dialog h-dvh w-full overflow-y-auto bg-content1 shadow-sm",
   },
   variants: {
     anchor: {

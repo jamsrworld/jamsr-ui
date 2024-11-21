@@ -58,8 +58,9 @@
   "tailwindCSS.classAttributes": [
     "class",
     "className",
-    "ngClass",
-    ".*Classes.*"
+    "classNames",
+    ".*Classes.*",
+    ".*classNames.*"
   ],
   "files.autoSave": "onFocusChange"
 }

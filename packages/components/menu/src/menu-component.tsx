@@ -4,6 +4,7 @@ import {
   FloatingFocusManager,
   FloatingList,
   FloatingNode,
+  FloatingOverlay,
   FloatingPortal,
   arrow,
   autoUpdate,
@@ -29,7 +30,12 @@ import {
 import { useControlledState } from "@jamsr-ui/hooks";
 import { ChevronRightIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps } from "@jamsr-ui/utils";
+import {
+  cn,
+  dataAttr,
+  deepMergeProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import {
   useEffect,
@@ -38,10 +44,10 @@ import {
   useState,
   type ComponentProps,
 } from "react";
-import { menuVariants } from "./style";
+import { menuVariants, type MenuSlots, type MenuVariantProps } from "./style";
 import { MenuContext, useMenu, type MenuContextType } from "./use-menu";
 
-export type MenuProps = {
+export type MenuProps = MenuVariantProps & {
   trigger: React.ReactNode;
   children?: React.ReactNode;
   triggerOn?: "hover" | "click";
@@ -49,36 +55,42 @@ export type MenuProps = {
   nestedPlacement?: Placement;
   offset?: number;
   nestedOffset?: number;
-  classNames?: {
-    popover?: string;
-    arrow?: string;
-    base?: string;
-    menuItem?: string;
-  };
+  classNames?: SlotsToClasses<MenuSlots>;
   showArrow?: boolean;
   isOpen?: boolean;
   initialOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
+  openDelay?: number;
+  closeDelay?: number;
+  closeOnEscapeKey?: boolean;
+  closeOnOutsidePress?: boolean;
+  lockScroll?: boolean;
 } & ComponentProps<"div">;
 
 export const MenuComponent = ($props: MenuProps) => {
   const { menu: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
+  const parentId = useFloatingParentNodeId();
+  const isNested = parentId != null;
 
   const {
     children,
     trigger,
     triggerOn = "click",
-    placement,
-    nestedPlacement,
+    placement = isNested ? "right-start" : "bottom-end",
     className,
     classNames,
-    offset: offsetProp = 4,
-    nestedOffset = 2,
+    offset: $offset = isNested ? 2 : 4,
     showArrow = false,
     isOpen: propOpen,
     initialOpen = false,
     onOpenChange,
+    openDelay = 75,
+    closeDelay = 0,
+    backdrop,
+    closeOnEscapeKey = true,
+    closeOnOutsidePress = true,
+    lockScroll = true,
     ...restProps
   } = props;
 
@@ -97,21 +109,16 @@ export const MenuComponent = ($props: MenuProps) => {
 
   const tree = useFloatingTree();
   const nodeId = useFloatingNodeId();
-  const parentId = useFloatingParentNodeId();
   const item = useListItem();
-
-  const isNested = parentId != null;
 
   const { floatingStyles, refs, context } = useFloating<HTMLDivElement>({
     nodeId,
     open: isOpen,
     onOpenChange: setIsOpen,
-    placement: isNested
-      ? (nestedPlacement ?? "right-start")
-      : (placement ?? "bottom-end"),
+    placement,
     middleware: [
       offset({
-        mainAxis: isNested ? nestedOffset : offsetProp,
+        mainAxis: $offset,
         alignmentAxis: isNested ? -4 : 0,
       }),
       flip(),
@@ -126,7 +133,7 @@ export const MenuComponent = ($props: MenuProps) => {
   const hoverEnabled = triggerOn === "hover" || isNested;
   const hover = useHover(context, {
     enabled: hoverEnabled,
-    delay: { open: 75 },
+    delay: { open: openDelay, close: closeDelay },
     handleClose: safePolygon({
       blockPointerEvents: true,
     }),
@@ -137,7 +144,11 @@ export const MenuComponent = ($props: MenuProps) => {
     ignoreMouse: isNested,
   });
   const role = useRole(context, { role: "menu" });
-  const dismiss = useDismiss(context, { bubbles: true });
+  const dismiss = useDismiss(context, {
+    bubbles: true,
+    escapeKey: closeOnEscapeKey,
+    outsidePress: closeOnOutsidePress,
+  });
   const listNavigation = useListNavigation(context, {
     listRef: elementsRef,
     activeIndex,
@@ -154,16 +165,11 @@ export const MenuComponent = ($props: MenuProps) => {
     [hover, click, role, dismiss, listNavigation, typeahead],
   );
 
-  // Event emitter allows you to communicate across tree components.
-  // This effect closes all menus when an item gets clicked anywhere
-  // in the tree.
   useEffect(() => {
     if (!tree) return;
-
     function handleTreeClick() {
       setIsOpen(false);
     }
-
     function onSubMenuOpen(event: { nodeId: string; parentId: string }) {
       if (event.nodeId !== nodeId && event.parentId === parentId) {
         setIsOpen(false);
@@ -186,6 +192,9 @@ export const MenuComponent = ($props: MenuProps) => {
     }
   }, [tree, isOpen, nodeId, parentId]);
 
+  const styles = menuVariants({
+    backdrop,
+  });
   const value: MenuContextType = useMemo(
     () => ({
       activeIndex,
@@ -194,15 +203,12 @@ export const MenuComponent = ($props: MenuProps) => {
       setHasFocusInside,
       isOpen,
       classNames,
+      styles,
     }),
-    [activeIndex, classNames, getItemProps, isOpen],
+    [activeIndex, classNames, getItemProps, isOpen, styles],
   );
 
-  const menuClasses = menuVariants();
-  const menuItemClass = menuClasses.menuItem({
-    opened: isOpen && hasFocusInside && isNested,
-  });
-
+  const isActive = isOpen && hasFocusInside && isNested;
   return (
     <FloatingNode id={nodeId}>
       <div
@@ -214,18 +220,20 @@ export const MenuComponent = ($props: MenuProps) => {
         {...getReferenceProps(
           parent.getItemProps({
             ...restProps,
-            onFocus(event: React.FocusEvent<HTMLDivElement>) {
-              restProps.onFocus?.(event);
+            onMouseEnter(event: React.MouseEvent<HTMLDivElement>) {
+              restProps.onMouseEnter?.(event);
               setHasFocusInside(false);
               parent.setHasFocusInside(true);
             },
           }),
         )}
-        className={cn({
-          [menuItemClass]: isNested,
-          "inline-block": !isNested,
-          [classNames?.base ?? ""]: !isNested,
-        })}
+        data-active={dataAttr(isActive)}
+        data-nested={dataAttr(isNested)}
+        className={
+          !isNested
+            ? styles.base({ className: classNames?.base })
+            : styles.menuItem({ className: classNames?.menuItem })
+        }
       >
         {trigger}
         {isNested && <ChevronRightIcon aria-hidden className="ml-auto" />}
@@ -235,34 +243,44 @@ export const MenuComponent = ($props: MenuProps) => {
           <AnimatePresence>
             {isOpen && (
               <FloatingPortal>
-                <FloatingFocusManager
-                  context={context}
-                  modal={false}
-                  initialFocus={isNested ? -1 : 0}
-                  returnFocus={!isNested}
+                <FloatingOverlay
+                  className={styles.backdrop({
+                    className: classNames?.backdrop,
+                  })}
+                  data-slot="backdrop"
+                  lockScroll={lockScroll}
                 >
-                  {/* @ts-expect-error tserror */}
-                  <m.div
-                    ref={refs.setFloating}
-                    style={floatingStyles}
-                    className={menuClasses.menu({
-                      className: cn(className, classNames?.popover),
-                    })}
-                    initial={{ opacity: 0, top: -10 }}
-                    animate={{ opacity: 1, top: 0 }}
-                    exit={{ opacity: 0, top: 10 }}
-                    {...getFloatingProps()}
+                  <FloatingFocusManager
+                    context={context}
+                    modal
+                    initialFocus={isNested ? -1 : 0}
+                    returnFocus={!isNested}
                   >
-                    {showArrow && (
-                      <FloatingArrow
-                        ref={arrowRef}
-                        context={context}
-                        className={cn("fill-content2", classNames?.arrow)}
-                      />
-                    )}
-                    {children}
-                  </m.div>
-                </FloatingFocusManager>
+                    {/* @ts-expect-error tserror */}
+                    <m.ul
+                      ref={refs.setFloating}
+                      style={floatingStyles}
+                      className={styles.popover({
+                        className: cn(className, classNames?.popover),
+                      })}
+                      initial={{ opacity: 0, top: -10 }}
+                      animate={{ opacity: 1, top: 0 }}
+                      exit={{ opacity: 0, top: 10 }}
+                      {...getFloatingProps()}
+                    >
+                      {showArrow && (
+                        <FloatingArrow
+                          ref={arrowRef}
+                          context={context}
+                          className={styles.arrow({
+                            className: classNames?.arrow,
+                          })}
+                        />
+                      )}
+                      {children}
+                    </m.ul>
+                  </FloatingFocusManager>
+                </FloatingOverlay>
               </FloatingPortal>
             )}
           </AnimatePresence>

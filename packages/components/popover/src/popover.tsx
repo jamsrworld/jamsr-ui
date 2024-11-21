@@ -1,6 +1,7 @@
 import {
   FloatingArrow,
   FloatingFocusManager,
+  FloatingOverlay,
   FloatingPortal,
   arrow,
   autoUpdate,
@@ -28,7 +29,7 @@ export type PopoverProps = {
   initialOpen?: boolean;
   placement?: Placement;
   isModal?: boolean;
-  open?: boolean;
+  isOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
   enabled?: boolean;
   triggerOn?: "click" | "hover";
@@ -38,8 +39,8 @@ export type PopoverProps = {
     popover?: string;
     arrow?: string;
   };
-  applyWidth?: boolean;
   offset?: number;
+  lockScroll?: boolean;
 };
 
 export const Popover = ($props: PopoverProps) => {
@@ -49,7 +50,7 @@ export const Popover = ($props: PopoverProps) => {
   const {
     trigger,
     children,
-    open: propOpen,
+    isOpen: propOpen,
     onOpenChange,
     initialOpen = false,
     isModal = true,
@@ -58,9 +59,9 @@ export const Popover = ($props: PopoverProps) => {
     triggerOn = "click",
     showArrow = false,
     className,
-    applyWidth,
     offset: offsetValue = 4,
     classNames,
+    lockScroll = true,
   } = props;
 
   const [open, setOpen] = useControlledState(
@@ -89,7 +90,7 @@ export const Popover = ($props: PopoverProps) => {
         : undefined,
       size({
         apply({ rects, elements, availableHeight }) {
-          if (!applyWidth) return;
+          return;
           Object.assign(elements.floating.style, {
             width: `${Math.max(100, rects.reference.width)}px`,
             maxHeight: `${availableHeight}px`,
@@ -134,28 +135,30 @@ export const Popover = ($props: PopoverProps) => {
       {triggerContent}
       {open && (
         <FloatingPortal>
-          <FloatingFocusManager context={context} modal={isModal}>
-            <div
-              data-component="popover"
-              className={cn(
-                "z-popover rounded-2xl bg-content1 p-2 text-sm shadow-md backdrop-blur-3xl focus:outline-none",
-                className,
-                classNames?.popover,
-              )}
-              ref={refs.setFloating}
-              style={floatingStyles}
-              {...getFloatingProps()}
-            >
-              {showArrow && (
-                <FloatingArrow
-                  ref={arrowRef}
-                  context={context}
-                  className={cn("fill-content1", classNames?.arrow)}
-                />
-              )}
-              {children}
-            </div>
-          </FloatingFocusManager>
+          <FloatingOverlay lockScroll={lockScroll}>
+            <FloatingFocusManager context={context} modal={isModal}>
+              <div
+                data-component="popover"
+                className={cn(
+                  "z-popover rounded-2xl bg-content1 p-2 text-sm shadow-md backdrop-blur-3xl focus:outline-none",
+                  className,
+                  classNames?.popover,
+                )}
+                ref={refs.setFloating}
+                style={floatingStyles}
+                {...getFloatingProps()}
+              >
+                {showArrow && (
+                  <FloatingArrow
+                    ref={arrowRef}
+                    context={context}
+                    className={cn("fill-content1", classNames?.arrow)}
+                  />
+                )}
+                {children}
+              </div>
+            </FloatingFocusManager>
+          </FloatingOverlay>
         </FloatingPortal>
       )}
     </>

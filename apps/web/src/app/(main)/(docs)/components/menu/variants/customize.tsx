@@ -1,23 +1,20 @@
 import { Button, Menu, MenuItem } from "@jamsr-ui/react";
 import { ChevronUpIcon } from "@jamsr-ui/shared-icons";
 
-export const MenuWithArrow = () => {
+export const MenuCustomize = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex  justify-center">
       <Menu
-        showArrow
         classNames={{
-          popover: "min-w-[300px]",
+          popover:
+            "min-w-[300px] bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 shadow-lg",
         }}
         trigger={<Button endContent={<ChevronUpIcon />}>Open Me</Button>}
       >
         <MenuItem>Undo</MenuItem>
         <MenuItem>Info</MenuItem>
         <MenuItem>Search</MenuItem>
-        <MenuItem isDisabled>Redo</MenuItem>
         <MenuItem>Cut</MenuItem>
-        <MenuItem isDisabled>Edit</MenuItem>
-        <MenuItem className="hover:bg-danger">Delete</MenuItem>
       </Menu>
     </div>
   );

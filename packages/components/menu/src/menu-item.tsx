@@ -8,20 +8,19 @@ import {
   deepMergeProps,
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
-import { menuVariants } from "./style";
 import { useMenu } from "./use-menu";
 
 type InternalProps = {
-  disabled?: boolean;
+  isDisabled?: boolean;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   label?: string;
 };
 
-export type MenuItemProps<T extends React.ElementType = "button"> =
+export type MenuItemProps<T extends React.ElementType = "li"> =
   ComponentPropsWithAs<T, InternalProps>;
 
-export const MenuItem = <T extends React.ElementType = "button">(
+export const MenuItem = <T extends React.ElementType = "li">(
   $props: MenuItemProps<T>,
 ) => {
   const { menuItem: Props = {} } = useUIStyle();
@@ -29,7 +28,7 @@ export const MenuItem = <T extends React.ElementType = "button">(
 
   const {
     children,
-    disabled,
+    isDisabled,
     as,
     className: $className,
     startContent,
@@ -40,14 +39,14 @@ export const MenuItem = <T extends React.ElementType = "button">(
   const menu = useMenu();
   const labelString = label ?? (typeof children === "string" ? children : null);
   const item = useListItem({
-    label: disabled ? null : labelString,
+    label: isDisabled ? null : labelString,
   });
   const tree = useFloatingTree();
   const isActive = item.index === menu.activeIndex;
-  const menuClasses = menuVariants();
-  const Component = as ?? "button";
+  const { styles } = menu;
+  const Component = as ?? "li";
   const className = cn(
-    menuClasses.menuItem({ className: $className }),
+    styles.menuItem({ className: $className }),
     menu.classNames?.menuItem,
   );
   return (
@@ -58,15 +57,16 @@ export const MenuItem = <T extends React.ElementType = "button">(
       className={className}
       tabIndex={isActive ? 0 : -1}
       data-active={dataAttr(isActive)}
-      disabled={disabled}
+      data-disabled={dataAttr(isDisabled)}
+      aria-disabled={dataAttr(isDisabled)}
       {...restProps}
-      {...menu.getItemProps({
-        onClick(event: React.MouseEvent<HTMLButtonElement>) {
+      {...(!isDisabled && {
+        onClick(event: React.MouseEvent<HTMLLIElement>) {
           restProps.onClick?.(event);
           tree?.events.emit("click");
         },
-        onFocus(event: React.FocusEvent<HTMLButtonElement>) {
-          restProps.onFocus?.(event);
+        onMouseEnter(event: React.MouseEvent<HTMLLIElement>) {
+          restProps.onMouseEnter?.(event);
           menu.setHasFocusInside(true);
         },
       })}

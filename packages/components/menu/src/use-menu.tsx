@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 import { type MenuProps } from "./menu-component";
+import { type menuVariants } from "./style";
 
 export type MenuContextType = {
   getItemProps: (
@@ -10,6 +11,7 @@ export type MenuContextType = {
   setHasFocusInside: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
   classNames?: MenuProps["classNames"];
+  styles: ReturnType<typeof menuVariants>;
 };
 export const MenuContext = createContext<MenuContextType>({
   getItemProps: () => ({}),
@@ -17,6 +19,7 @@ export const MenuContext = createContext<MenuContextType>({
   setActiveIndex: () => {},
   setHasFocusInside: () => {},
   isOpen: false,
+  styles: {} as unknown as MenuContextType["styles"],
 });
 
 export const useMenu = () => {

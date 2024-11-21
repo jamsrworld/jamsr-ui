@@ -32,7 +32,8 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
       <div>
         <Tabs defaultValue="preview" variant="underlined">
           <Tab heading="Preview" value="preview">
-            <div className="rounded-xl border border-divider bg-content2 p-4 dark:bg-background-secondary">
+            <div className="rounded-xl border border-divider p-4">
+              {/* <div className="flex min-h-[200px] flex-col justify-center rounded-xl  border border-divider bg-content2 p-4 dark:bg-background-secondary"> */}
               {children}
             </div>
           </Tab>

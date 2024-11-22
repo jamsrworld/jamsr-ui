@@ -2,7 +2,7 @@
 
 import { SearchIcon } from "@/components/icons";
 import { NextLink } from "@/components/next";
-import { useDisclosure } from "@jamsr-ui/hooks";
+import { useDisclosure, useKeyPress } from "@jamsr-ui/hooks";
 import {
   Button,
   Dialog,
@@ -10,6 +10,7 @@ import {
   DialogContent,
   DialogHeader,
   Input,
+  Kbd,
 } from "@jamsr-ui/react";
 import { ChevronRightIcon, CloseIcon } from "@jamsr-ui/shared-icons";
 import { type Route } from "next";
@@ -208,12 +209,24 @@ export const SearchBar = () => {
     router.push(url);
   };
 
+  useKeyPress("k", (event) => {
+    if (event.metaKey || event.ctrlKey) {
+      event.preventDefault();
+      onOpen();
+    }
+  });
+
   return (
     <>
       <Button
         startContent={<SearchIcon />}
         onClick={handleOnClick}
-        className="min-w-40 justify-start"
+        className="min-w-40 justify-start px-2"
+        endContent={
+          <Kbd className="ml-auto" keys={["command"]}>
+            K
+          </Kbd>
+        }
       >
         Search
       </Button>
@@ -249,7 +262,7 @@ export const SearchBar = () => {
                 <NextLink
                   href={item.url}
                   key={item.label}
-                  className="flex items-center gap-2 rounded-xl bg-content2 p-4 text-foreground hover:bg-content3"
+                  className="bg-content2 text-foreground hover:bg-content3 flex items-center gap-2 rounded-xl p-4"
                   onClick={(e) => handleLinkClick(e, item.url)}
                 >
                   <span className="grow">{item.label}</span>
@@ -257,7 +270,7 @@ export const SearchBar = () => {
                 </NextLink>
               ))}
               {filteredItems.length === 0 && (
-                <li className="flex flex-col items-center gap-2 rounded-xl text-center text-foreground">
+                <li className="text-foreground flex flex-col items-center gap-2 rounded-xl text-center">
                   <span className="grow">No results for "{search}"</span>
                   <span className="text-foreground-secondary">
                     Try searching for something else.

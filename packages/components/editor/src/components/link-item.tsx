@@ -33,7 +33,7 @@ export const LinkMenuBarItem = (props: Props) => {
           title="Link"
         />
       }
-      open={isOpen}
+      isOpen={isOpen}
       onOpenChange={setIsOpen}
     >
       <form className="flex flex-col gap-2" onSubmit={handleSubmit}>

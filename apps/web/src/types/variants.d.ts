@@ -1,7 +1,6 @@
 export type VariantTypes = {
   accordion: [
     "custom-icon",
-    "default",
     "disabled",
     "end-content-outside",
     "end-content",
@@ -9,6 +8,8 @@ export type VariantTypes = {
     "start-content-outside",
     "start-content",
     "subheading",
+    "usage",
+    "variants",
     "without-icon",
   ];
   alert: [
@@ -43,7 +44,7 @@ export type VariantTypes = {
     "variants",
     "with-icons",
   ];
-  card: ["default", "start-end-content"];
+  card: ["start-end-content", "usage", "variants"];
   checkbox: ["controlled", "default", "disabled", "invalid-state", "readonly"];
   chip: ["default", "on-delete"];
   confirmation: ["default"];

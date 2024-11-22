@@ -1,5 +1,6 @@
 import { DotMenuIcon } from "@/components/icons";
 import {
+  Avatar,
   Button,
   Card,
   CardContent,
@@ -7,15 +8,28 @@ import {
   Typography,
 } from "@jamsr-ui/react";
 import Image from "next/image";
+import { useId } from "react";
 import FruitImg from "~/fruit-1.jpeg";
-import { AvatarDefault } from "../../avatar/variants/default";
+
+const AvatarItem = () => {
+  const id = useId();
+  return (
+    <Avatar
+      alt="image"
+      className="flex"
+      src={`https://i.pravatar.cc/300?u=${id}`}
+      width={100}
+      height={100}
+    />
+  );
+};
 
 export const CardStartEndContent = () => {
   return (
     <Card>
       <CardHeader
         heading="Card Header"
-        startContent={<AvatarDefault />}
+        startContent={<AvatarItem />}
         endContent={
           <Button isIconOnly isRounded variant="light">
             <DotMenuIcon />

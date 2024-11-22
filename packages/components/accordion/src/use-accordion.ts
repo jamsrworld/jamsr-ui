@@ -27,31 +27,32 @@ export const useAccordion = ($props: UseAccordionProps) => {
     className,
     isMultiple = false,
     fullWidth,
-    color,
     hideIndicator,
+    variant,
     ...restProps
   } = props;
   const Component = as ?? "div";
 
-  const slots = useMemo(
+  const styles = useMemo(
     () =>
       accordion({
         className,
         fullWidth,
+        variant,
       }),
-    [className, fullWidth],
+    [className, fullWidth, variant],
   );
 
   const getBaseProps = useCallback<PropGetter>(
     (props = {}) => {
       return {
-        className: slots,
+        className: styles,
         "data-component": "accordion",
         ...props,
         ...restProps,
       };
     },
-    [slots, restProps],
+    [styles, restProps],
   );
 
   return {
@@ -59,7 +60,7 @@ export const useAccordion = ($props: UseAccordionProps) => {
     children,
     getBaseProps,
     isMultiple,
-    color,
     hideIndicator,
+    variant,
   };
 };

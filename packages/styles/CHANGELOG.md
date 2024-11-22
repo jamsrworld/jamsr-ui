@@ -1,5 +1,11 @@
 # @jamsr-ui/styles
 
+## 0.0.8
+
+### Patch Changes
+
+- new components
+
 ## 0.0.7
 
 ### Patch Changes

@@ -4,7 +4,7 @@ import {
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
-import { isValidElement, useMemo } from "react";
+import { useMemo } from "react";
 import {
   useAccordionItem,
   type UseAccordionItemProps,

@@ -5,7 +5,6 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { AccordionCustomIcon } from "./variants/custom-icon";
-import { AccordionDefault } from "./variants/default";
 import { AccordionDisabled } from "./variants/disabled";
 import { AccordionEndContent } from "./variants/end-content";
 import { AccordionEndContentOutside } from "./variants/end-content-outside";
@@ -13,6 +12,8 @@ import { AccordionMultipleSelection } from "./variants/multiple-selection";
 import { AccordionStartContent } from "./variants/start-content";
 import { AccordionStartContentOutside } from "./variants/start-content-outside";
 import { AccordionSubheading } from "./variants/subheading";
+import { AccordionUsage } from "./variants/usage";
+import { AccordionVariants } from "./variants/variants";
 import { AccordionWithoutIcon } from "./variants/without-icon";
 
 const title = "Accordion";
@@ -30,8 +31,11 @@ const code = <T extends VariantTypes["accordion"][number]>(variant: T) =>
 const Accordion = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <AccordionDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <AccordionUsage />
+      </VariantWrapper>
+      <VariantWrapper bg="secondary" heading="Variants" code={code("variants")}>
+        <AccordionVariants />
       </VariantWrapper>
       <VariantWrapper
         heading="Disabled Items"

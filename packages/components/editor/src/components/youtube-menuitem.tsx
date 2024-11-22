@@ -30,7 +30,7 @@ export const YoutubeMenuitem = (props: Props) => {
           title="Youtube Video"
         />
       }
-      open={isOpen}
+      isOpen={isOpen}
       onOpenChange={setIsOpen}
     >
       <form className="flex flex-col gap-2" onSubmit={handleSubmit}>

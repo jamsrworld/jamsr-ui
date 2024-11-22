@@ -1,18 +1,27 @@
 import { focusVisibleClasses, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const accordion = tv({
-  base: "flex flex-col gap-2",
+  base: "flex flex-col overflow-hidden rounded-xl",
   variants: {
     fullWidth: {
       true: "w-full",
     },
+    variant: {
+      light: "divide-y divide-divider-light",
+      splitted: "gap-2",
+      outlined: "divide-y divide-divider-light border-2 border-divider-light",
+      elevated: "divide-y divide-divider-light shadow-sm",
+    },
+  },
+  defaultVariants: {
+    variant: "light",
   },
 });
 
 export const test = "";
 export const accordionItem = tv({
   slots: {
-    base: "flex flex-col rounded-xl bg-content1 px-4",
+    base: "flex flex-col bg-content1 px-4",
     header: "flex items-center gap-2",
     trigger: [
       "flex size-full items-center gap-3 py-4 disabled:cursor-not-allowed disabled:opacity-50",
@@ -28,22 +37,23 @@ export const accordionItem = tv({
       "rotate-0 transition-transform duration-500 data-[open=true]:-rotate-180",
   },
   variants: {
-    color: {
-      default: {
-        base: "bg-content1",
-      },
-      secondary: {
-        base: "bg-background-secondary",
-      },
-    },
     hideIndicator: {
       true: {
         indicator: "hidden",
       },
     },
+    variant: {
+      light: {
+        base: "",
+      },
+      splitted: { base: "rounded-xl" },
+      outlined: {},
+      elevated: {},
+    },
   },
   defaultVariants: {
     color: "default",
+    hideIndicator: false,
   },
 });
 

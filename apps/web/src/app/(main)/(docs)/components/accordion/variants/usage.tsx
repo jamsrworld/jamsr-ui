@@ -3,7 +3,7 @@ import { Accordion, AccordionItem } from "@jamsr-ui/react";
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
   Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
 
-export const AccordionDefault = () => {
+export const AccordionUsage = () => {
   return (
     <Accordion>
       <AccordionItem aria-label="Accordion 1" heading="Accordion 1">

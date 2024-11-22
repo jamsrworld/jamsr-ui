@@ -1,5 +1,5 @@
 import { type Config } from "@jamsr-ui/tailwind-config";
-import { withJamsrUI } from "@jamsr-ui/theme";
+import { withJamsrUI } from "@jamsr-ui/theme/src/index";
 
 const config: Config = withJamsrUI(
   {

@@ -80,7 +80,6 @@ export const useAccordionItem = ($props: UseAccordionItemProps) => {
     startContentPlacement = "inside",
     endContentPlacement = "inside",
     motionProps,
-    color: $color,
     ...restProps
   } = props;
 
@@ -93,16 +92,14 @@ export const useAccordionItem = ($props: UseAccordionItemProps) => {
     onFocusNext,
     onFocusPrevious,
     ref,
-    color: $$color,
     hideIndicator: $$hideIndicator,
+    variant,
   } = useAccordionItemContext();
-
-  const color = $color ?? $$color;
   const hideIndicator = $hideIndicator ?? $$hideIndicator;
 
   const styles = accordionItem({
     hideIndicator,
-    color,
+    variant,
   });
 
   useImperativeHandle(

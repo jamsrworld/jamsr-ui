@@ -1,11 +1,12 @@
+import { Code } from "@/components/code";
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { Code } from "@/components/code";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
-import { CardDefault } from "./variants/default";
+import { type Metadata } from "next";
 import { CardStartEndContent } from "./variants/start-end-content";
+import { CardUsage } from "./variants/usage";
+import { CardVariants } from "./variants/variants";
 
 const title = "Card";
 const description =
@@ -22,20 +23,24 @@ const code = <T extends VariantTypes["card"][number]>(variant: T) =>
 const Card = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <CardDefault />
+      <VariantWrapper bg="secondary" heading="Usage" code={code("usage")}>
+        <CardUsage />
       </VariantWrapper>
-
       <VariantWrapper
+        bg="secondary"
         heading="Start End Content"
         code={code("start-end-content")}
         description={
           <div>
-            Use the <Code>startContent</Code>and<Code>endContent</Code> prop to change the visual style of the Card.
+            Use the <Code>startContent</Code>and<Code>endContent</Code> prop to
+            change the visual style of the Card.
           </div>
         }
       >
         <CardStartEndContent />
+      </VariantWrapper>
+      <VariantWrapper bg="secondary" heading="Variants" code={code("variants")}>
+        <CardVariants />
       </VariantWrapper>
     </VariantPage>
   );

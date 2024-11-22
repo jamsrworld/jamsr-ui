@@ -8,10 +8,11 @@ export type VariantWrapperProps = {
   heading: string;
   description?: React.ReactNode;
   code?: string | string[];
+  bg?: "primary" | "secondary";
 };
 
 export const VariantWrapper = (props: VariantWrapperProps) => {
-  const { children, heading, description, code } = props;
+  const { children, heading, description, code, bg = "primary" } = props;
   const id = toSlug(heading);
   return (
     <section className="scroll-mt-20" id={id}>
@@ -32,7 +33,9 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
       <div>
         <Tabs defaultValue="preview" variant="underlined">
           <Tab heading="Preview" value="preview">
-            <div className="rounded-xl border border-divider p-4">
+            <div
+              className={`rounded-xl border border-divider p-4 ${bg === "secondary" ? "bg-content2 dark:bg-background-secondary" : ""}`}
+            >
               {/* <div className="flex min-h-[200px] flex-col justify-center rounded-xl  border border-divider bg-content2 p-4 dark:bg-background-secondary"> */}
               {children}
             </div>

@@ -1,4 +1,5 @@
 import { createContext } from "@jamsr-ui/utils";
+import { type AccordionProps } from "./accordion";
 import { type AccordionItemVariantProps } from "./style";
 
 export type AccordionItemRefType = {
@@ -15,8 +16,8 @@ export type AccordionItemContextType = {
   onFocusLast: () => void;
   isOpen: boolean;
   ref: React.Ref<AccordionItemRefType | null>;
-  color?: AccordionItemVariantProps["color"];
   hideIndicator?: AccordionItemVariantProps["hideIndicator"];
+  variant?: AccordionProps["variant"];
 };
 
 export const [AccordionItemProvider, useAccordionItemContext] =

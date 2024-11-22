@@ -19,7 +19,7 @@ export const themeColorsDark: ThemeColors = {
     ...swapColorValues(common.zinc),
   },
   divider: {
-    light: "#4a494a",
+    light: "#3A3A3D",
     DEFAULT: "#252A2E",
     dark: "#1d1d1d",
   },

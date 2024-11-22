@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { LinkDefault } from "./variants/default";
+import { LinkUsage } from "./variants/usage";
 import { LinkUnderline } from "./variants/underline";
 
 export const metadata: Metadata = {
@@ -16,8 +16,8 @@ const code = <T extends VariantTypes["link"][number]>(variant: T) =>
 const Link = () => {
   return (
     <VariantPage heading="Link">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <LinkDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <LinkUsage />
       </VariantWrapper>
       <VariantWrapper heading="Underline" code={code("underline")}>
         <LinkUnderline />

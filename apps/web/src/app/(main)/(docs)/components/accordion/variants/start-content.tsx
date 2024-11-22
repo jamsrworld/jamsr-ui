@@ -9,7 +9,7 @@ import { useId } from "react";
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
   Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;
 
-const AvatarDefault = (props: Partial<AvatarProps>) => {
+const AvatarUsage = (props: Partial<AvatarProps>) => {
   const id = useId();
   return (
     <Avatar
@@ -29,14 +29,14 @@ export const AccordionStartContent = () => {
       <AccordionItem
         heading="Accordion 1"
         subheading="Press to expand item 1"
-        startContent={<AvatarDefault />}
+        startContent={<AvatarUsage />}
       >
         {content}
       </AccordionItem>
       <AccordionItem
         heading="Accordion 2"
         subheading="Press to expand item 2"
-        startContent={<AvatarDefault />}
+        startContent={<AvatarUsage />}
       >
         {content}
       </AccordionItem>
@@ -44,7 +44,7 @@ export const AccordionStartContent = () => {
         isDisabled
         heading="Disabled Accordion"
         subheading="Disabled Accordion Item"
-        startContent={<AvatarDefault />}
+        startContent={<AvatarUsage />}
       >
         {content}
       </AccordionItem>

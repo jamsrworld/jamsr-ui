@@ -3,7 +3,7 @@
 import { useFocusVisible } from "@jamsr-ui/hooks";
 import { Button } from "@jamsr-ui/react";
 
-export const UseFocusVisibleDefault = () => {
+export const UseFocusVisibleUsage = () => {
   const { isFocusVisible, ref } = useFocusVisible<HTMLButtonElement>();
   const handleClick = () => {
     console.log("clicked");

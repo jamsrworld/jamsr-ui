@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { DndGrid } from "./variants/default";
+import { DndGrid } from "./variants/usage";
 import { DndDisabled } from "./variants/disabled";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ const code = <T extends VariantTypes["drag-and-drop"][number]>(variant: T) =>
 const DragDropDndKit = () => {
   return (
     <VariantPage heading="Drag and Drop">
-      <VariantWrapper heading="Grid" code={code("default")}>
+      <VariantWrapper heading="Grid" code={code("usage")}>
         <DndGrid />
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>

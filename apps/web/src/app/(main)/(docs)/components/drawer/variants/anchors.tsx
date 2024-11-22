@@ -1,14 +1,14 @@
 "use client";
 
-import { DrawerDefault } from "./default";
+import { DrawerUsage } from "./usage";
 
 export const DrawerAnchors = () => {
   return (
     <div className="flex gap-4">
-      <DrawerDefault anchor="left" />
-      <DrawerDefault anchor="right" />
-      <DrawerDefault anchor="top" />
-      <DrawerDefault anchor="bottom" />
+      <DrawerUsage anchor="left" />
+      <DrawerUsage anchor="right" />
+      <DrawerUsage anchor="top" />
+      <DrawerUsage anchor="bottom" />
     </div>
   );
 };

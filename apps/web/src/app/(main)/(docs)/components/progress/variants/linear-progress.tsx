@@ -1,5 +1,5 @@
 import { LinearProgress } from "@jamsr-ui/react";
 
-export const LinearProgressDefault = () => {
+export const LinearProgressUsage = () => {
   return <LinearProgress isIntermediate />;
 };

@@ -5,7 +5,7 @@ import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { OtpInput6Digits } from "./variants/6-digits";
 import { OtpInputControlled } from "./variants/controlled";
-import { OtpInputDefault } from "./variants/default";
+import { OtpInputUsage } from "./variants/usage";
 
 const title = "OTP Input";
 const description =
@@ -22,8 +22,8 @@ const code = <T extends VariantTypes["otp-input"][number]>(variant: T) =>
 const OtpInput = () => {
   return (
     <VariantPage heading="OTP Input" description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <OtpInputDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <OtpInputUsage />
       </VariantWrapper>
       <VariantWrapper heading="6 Digits" code={code("6-digits")}>
         <OtpInput6Digits />

@@ -1,7 +1,7 @@
 "use client";
 
-import { DataTableDefault } from "./default";
+import { DataTableUsage } from "./usage";
 
 export const DataTableWithoutPagination = () => {
-  return <DataTableDefault hidePagination />;
+  return <DataTableUsage hidePagination />;
 };

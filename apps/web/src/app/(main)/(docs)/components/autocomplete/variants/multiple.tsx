@@ -1,5 +1,5 @@
-import { AutocompleteDefault } from "./default";
+import { AutocompleteUsage } from "./usage";
 
 export const AutocompleteMultiple = () => {
-  return <AutocompleteDefault isMultiple />;
+  return <AutocompleteUsage isMultiple />;
 };

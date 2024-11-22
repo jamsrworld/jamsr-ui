@@ -1,12 +1,12 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UseEventListenerDefault } from "./variants/default";
+import { UseEventListenerUsage } from "./variants/usage";
 
 const UseHover = () => {
   return (
     <VariantPage heading="Use Event Listener">
-      <VariantWrapper heading="Default">
-        <UseEventListenerDefault />
+      <VariantWrapper heading="Usage">
+        <UseEventListenerUsage />
       </VariantWrapper>
     </VariantPage>
   );

@@ -5,7 +5,7 @@ import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { AlertCustomIcon } from "./variants/custom-icon";
-import { AlertDefault } from "./variants/default";
+import { AlertUsage } from "./variants/usage";
 import { AlertStatus } from "./variants/status";
 import { AlertVariants } from "./variants/variants";
 import { AlertWithAction } from "./variants/with-action";
@@ -27,8 +27,8 @@ const code = <T extends VariantTypes["alert"][number]>(variant: T) =>
 const Alert = () => {
   return (
     <VariantPage heading="Alert" description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <AlertDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <AlertUsage />
       </VariantWrapper>
 
       <VariantWrapper

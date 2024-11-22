@@ -1,5 +1,5 @@
-import { RatingDefault } from "./default";
+import { RatingUsage } from "./usage";
 
 export const RatingHelperText = () => {
-  return <RatingDefault helperText="Helper text" />;
+  return <RatingUsage helperText="Helper text" />;
 };

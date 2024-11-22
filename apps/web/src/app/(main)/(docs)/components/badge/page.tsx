@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { BadgeColors } from "./variants/colors";
-import { BadgeDefault } from "./variants/default";
+import { BadgeUsage } from "./variants/usage";
 import { BadgeSizes } from "./variants/sizes";
 
 const title = "Badge";
@@ -22,8 +22,8 @@ const code = <T extends VariantTypes["badge"][number]>(variant: T) =>
 const Badge = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <BadgeDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <BadgeUsage />
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <BadgeSizes />

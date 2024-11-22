@@ -1,10 +1,10 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { TypographyAll } from "./variants/all";
-import { TypographyDefault } from "./variants/default";
+import { TypographyUsage } from "./variants/usage";
 
 export const metadata: Metadata = {
   title: "Typography",
@@ -16,8 +16,8 @@ const code = <T extends VariantTypes["typography"][number]>(variant: T) =>
 const Typography = () => {
   return (
     <VariantPage heading="Typography">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <TypographyDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <TypographyUsage />
       </VariantWrapper>
       <VariantWrapper heading="All" code={code("all")}>
         <TypographyAll />

@@ -1,9 +1,9 @@
 import { EmailIcon, EyeOpenIcon } from "@jamsr-ui/shared-icons";
-import { AutocompleteDefault } from "./default";
+import { AutocompleteUsage } from "./usage";
 
 export const AutocompleteStartEndContent = () => {
   return (
-    <AutocompleteDefault
+    <AutocompleteUsage
       startContent={<EmailIcon />}
       endContent={<EyeOpenIcon />}
     />

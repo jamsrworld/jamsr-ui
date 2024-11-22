@@ -2,12 +2,12 @@
 
 import { type SelectionSet } from "@jamsr-ui/react";
 import { useState } from "react";
-import { AutocompleteDefault } from "./default";
+import { AutocompleteUsage } from "./usage";
 
 export const AutocompleteControlled = () => {
   const [value, setValue] = useState<SelectionSet>(new Set(["cat"]));
   return (
-    <AutocompleteDefault
+    <AutocompleteUsage
       value={value}
       onValueChange={setValue}
       helperText={`Selected Value is ${Array.from(value).join("")}`}

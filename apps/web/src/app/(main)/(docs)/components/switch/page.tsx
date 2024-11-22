@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { SwitchDefault } from "./variants/default";
+import { SwitchUsage } from "./variants/usage";
 import { SwitchDescription } from "./variants/description";
 import { SwitchInvalidState } from "./variants/invalid-state";
 import { SwitchLabelPlacement } from "./variants/label-placement";
@@ -18,8 +18,8 @@ const code = <T extends VariantTypes["switch"][number]>(variant: T) =>
 const Switch = () => {
   return (
     <VariantPage heading="Switch">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <SwitchDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <SwitchUsage />
       </VariantWrapper>
       <VariantWrapper heading="Description" code={code("description")}>
         <SwitchDescription />

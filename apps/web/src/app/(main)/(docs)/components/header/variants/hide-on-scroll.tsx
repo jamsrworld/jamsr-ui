@@ -1,5 +1,5 @@
-import { HeaderDefault } from "./default";
+import { HeaderUsage } from "./usage";
 
 export const HeaderHideOnScroll = () => {
-  return <HeaderDefault hideOnScroll />;
+  return <HeaderUsage hideOnScroll />;
 };

@@ -1,8 +1,8 @@
-import { SelectDefault } from "./default";
+import { SelectUsage } from "./usage";
 
 export const SelectWithoutLabel = () => {
   return (
-    <SelectDefault
+    <SelectUsage
       placeholder="Select as item..."
       label={undefined}
     />

@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { Code } from "@/components/code";
-import { ButtonDefault } from "./variants/default";
+import { ButtonUsage } from "./variants/usage";
 import { ButtonDisabled } from "./variants/disabled";
 import { ButtonIconButton } from "./variants/icon-button";
 import { ButtonLoading } from "./variants/loading";
@@ -28,8 +28,8 @@ const code = <T extends VariantTypes["button"][number]>(variant: T) =>
 const Button = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <ButtonDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <ButtonUsage />
       </VariantWrapper>
 
       <VariantWrapper

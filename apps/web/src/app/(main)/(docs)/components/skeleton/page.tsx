@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { SkeletonDefault } from "./variants/default";
+import { SkeletonUsage } from "./variants/usage";
 
 export const metadata: Metadata = {
   title: "Skeleton",
@@ -15,8 +15,8 @@ const code = <T extends VariantTypes["skeleton"][number]>(variant: T) =>
 const Skeleton = () => {
   return (
     <VariantPage heading="Skeleton">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <SkeletonDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <SkeletonUsage />
       </VariantWrapper>
     </VariantPage>
   );

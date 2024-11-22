@@ -5,7 +5,7 @@ import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { AutocompleteChooseCountry } from "./variants/choose-country";
 import { AutocompleteControlled } from "./variants/controlled";
-import { AutocompleteDefault } from "./variants/default";
+import { AutocompleteUsage } from "./variants/usage";
 import { AutocompleteErrorState } from "./variants/error-state";
 import { AutocompleteHelperText } from "./variants/helper-text";
 import { AutocompleteMultiple } from "./variants/multiple";
@@ -28,8 +28,8 @@ const code = <T extends VariantTypes["autocomplete"][number]>(variant: T) =>
 const Autocomplete = () => {
   return (
     <VariantPage heading="Autocomplete" description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <AutocompleteDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <AutocompleteUsage />
       </VariantWrapper>
       <VariantWrapper heading="Helper Text" code={code("helper-text")}>
         <AutocompleteHelperText />

@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { DataTableDefault } from "./variants/default";
+import { DataTableUsage } from "./variants/usage";
 import { DataTableBorder } from "./variants/bordered";
 import { DataTableStickyHeader } from "./variants/sticky-header";
 import { DataTableWithoutPagination } from "./variants/without-pagination";
@@ -18,8 +18,8 @@ const code = <T extends VariantTypes["data-table"][number]>(variant: T) =>
 const DataTable = () => {
   return (
     <VariantPage heading="Data Table">
-      <VariantWrapper heading="Solid (Default)" code={code("default")}>
-        <DataTableDefault />
+      <VariantWrapper heading="Solid (Default)" code={code("usage")}>
+        <DataTableUsage />
       </VariantWrapper>
       <VariantWrapper heading="Bordered" code={code("bordered")}>
         <DataTableBorder />

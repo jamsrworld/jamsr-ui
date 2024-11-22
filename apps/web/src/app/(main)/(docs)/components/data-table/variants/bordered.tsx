@@ -1,7 +1,7 @@
 "use client";
 
-import { DataTableDefault } from "./default";
+import { DataTableUsage } from "./usage";
 
 export const DataTableBorder = () => {
-  return <DataTableDefault variant="bordered" />;
+  return <DataTableUsage variant="bordered" />;
 };

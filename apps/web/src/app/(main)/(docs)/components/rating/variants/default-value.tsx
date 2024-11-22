@@ -1,5 +1,5 @@
-import { RatingDefault } from "./default";
+import { RatingUsage } from "./usage";
 
-export const RatingDefaultValue = () => {
-  return <RatingDefault defaultValue={3} />;
+export const RatingUsageValue = () => {
+  return <RatingUsage defaultValue={3} />;
 };

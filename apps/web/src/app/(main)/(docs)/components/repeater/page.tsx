@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { RepeaterDefault } from "./variants/default";
+import { RepeaterUsage } from "./variants/usage";
 
 export const metadata: Metadata = {
   title: "Repeater",
@@ -15,8 +15,8 @@ const code = <T extends VariantTypes["repeater"][number]>(variant: T) =>
 const Repeater = () => {
   return (
     <VariantPage heading="Repeater">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <RepeaterDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <RepeaterUsage />
       </VariantWrapper>
     </VariantPage>
   );

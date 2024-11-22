@@ -1,5 +1,5 @@
-import { TooltipDefault } from "./default";
+import { TooltipUsage } from "./usage";
 
 export const TooltipWithArrow = () => {
-  return <TooltipDefault showArrow />;
+  return <TooltipUsage showArrow />;
 };

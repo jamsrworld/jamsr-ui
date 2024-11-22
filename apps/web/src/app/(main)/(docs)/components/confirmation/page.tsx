@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { ConfirmationDefault } from "./variants/default";
+import { ConfirmationUsage } from "./variants/usage";
 
 export const metadata: Metadata = {
   title: "Confirmation",
@@ -15,8 +15,8 @@ const code = <T extends VariantTypes["confirmation"][number]>(variant: T) =>
 const Confirmation = () => {
   return (
     <VariantPage heading="Confirmation">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <ConfirmationDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <ConfirmationUsage />
       </VariantWrapper>
     </VariantPage>
   );

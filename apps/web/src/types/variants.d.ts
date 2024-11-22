@@ -14,8 +14,8 @@ export type VariantTypes = {
   ];
   alert: [
     "custom-icon",
-    "default",
     "status",
+    "usage",
     "variants",
     "with-action",
     "with-description",
@@ -24,68 +24,67 @@ export type VariantTypes = {
   autocomplete: [
     "choose-country",
     "controlled",
-    "default",
     "error-state",
     "helper-text",
     "multiple-controlled",
     "multiple-custom-render",
     "multiple",
     "start-end-content",
+    "usage",
   ];
-  avatar: ["bordered", "default", "placeholders", "radius", "sizes"];
-  badge: ["colors", "default", "sizes"];
+  avatar: ["bordered", "placeholders", "radius", "sizes", "usage"];
+  badge: ["colors", "sizes", "usage"];
   button: [
     "colors",
-    "default",
     "disabled",
     "icon-button",
     "loading",
     "sizes",
+    "usage",
     "variants",
     "with-icons",
   ];
   card: ["start-end-content", "usage", "variants"];
-  checkbox: ["controlled", "default", "disabled", "invalid-state", "readonly"];
-  chip: ["default", "on-delete"];
-  confirmation: ["default"];
+  checkbox: ["controlled", "disabled", "invalid-state", "readonly", "usage"];
+  chip: ["on-delete", "usage"];
+  confirmation: ["usage"];
   "data-table": [
     "bordered",
     "columns",
-    "default",
     "server",
     "sticky-header",
+    "usage",
     "without-pagination",
   ];
-  dialog: ["default"];
+  dialog: ["usage"];
   divider: [
     "colors",
     "customization",
-    "default",
     "orientation",
+    "usage",
     "variants",
     "with-text",
   ];
-  "drag-and-drop": ["default", "disabled"];
-  drawer: ["anchors", "default", "size"];
-  editor: ["controlled", "default", "invalid"];
+  "drag-and-drop": ["disabled", "usage"];
+  drawer: ["anchors", "size", "usage"];
+  editor: ["controlled", "invalid", "usage"];
   "file-upload-multi": [
     "controlled",
     "customized",
     "default-value",
-    "default",
     "disabled",
+    "usage",
   ];
   "file-upload-single": [
     "controlled",
     "customized",
     "default-value",
-    "default",
     "disabled",
+    "usage",
   ];
-  header: ["default", "hide-on-scroll", "static", "with-border"];
+  header: ["hide-on-scroll", "static", "usage", "with-border"];
   input: [
     "controlled",
-    "default",
     "disabled",
     "error-state",
     "helper-text",
@@ -98,6 +97,7 @@ export type VariantTypes = {
     "secured-text",
     "sizes",
     "standard-all-props",
+    "usage",
     "variants",
     "with-end-content",
     "with-icon",
@@ -106,7 +106,7 @@ export type VariantTypes = {
     "without-label",
   ];
   kbd: ["keys", "usage"];
-  link: ["default", "underline"];
+  link: ["underline", "usage"];
   menu: [
     "backdrop",
     "controlled",
@@ -120,7 +120,7 @@ export type VariantTypes = {
     "with-arrow",
     "without-lock-scroll",
   ];
-  "otp-input": ["6-digits", "controlled", "default", "numbers-only"];
+  "otp-input": ["6-digits", "controlled", "numbers-only", "usage"];
   popover: [
     "controlled",
     "placement",
@@ -133,23 +133,23 @@ export type VariantTypes = {
   radio: [
     "checked",
     "colors",
-    "default",
     "disabled",
     "invalid",
     "radio-group-controlled",
     "radio-group-custom",
     "radio-group",
     "sizes",
+    "usage",
   ];
   rating: [
     "controlled",
     "default-value",
-    "default",
     "disabled",
     "helper-text",
     "invalid",
     "readonly",
     "size",
+    "usage",
   ];
   "react-hook-form": [
     "checkbox",
@@ -166,49 +166,49 @@ export type VariantTypes = {
     "tags-input",
     "textarea",
   ];
-  repeater: ["default"];
-  ripple: ["center", "default"];
+  repeater: ["usage"];
+  ripple: ["center", "usage"];
   select: [
     "controlled",
     "custom-render-complex",
     "custom-render-multi",
     "custom-render-value",
-    "default",
     "invalid-state",
     "multiple-controlled",
     "multiple",
     "placeholder",
     "sizes",
     "start-end-items",
+    "usage",
     "with-helper-text",
     "without-label",
   ];
-  skeleton: ["default"];
+  skeleton: ["usage"];
   stepper: ["min-max-value", "usage"];
-  switch: ["default", "description", "invalid-state", "label-placement"];
+  switch: ["description", "invalid-state", "label-placement", "usage"];
   tab: [
     "as",
     "colors",
-    "default",
     "disabled-item",
     "disabled",
     "outside",
     "radius",
     "sizes",
+    "usage",
     "variants",
     "with-icons",
   ];
-  table: ["allow-hover", "bordered", "default"];
-  "tags-input": ["controlled", "default-value", "default", "invalid-state"];
+  table: ["allow-hover", "bordered", "usage"];
+  "tags-input": ["controlled", "default-value", "invalid-state", "usage"];
   textarea: [
     "controlled",
-    "default",
     "disabled",
     "error-state",
     "helper-text",
     "label-helper",
     "placeholder",
     "sizes",
+    "usage",
     "variants",
     "with-end-content",
     "with-icon",
@@ -216,8 +216,8 @@ export type VariantTypes = {
     "with-start-content",
     "without-label",
   ];
-  theme: ["default", "typography"];
-  toast: ["default"];
-  tooltip: ["default", "offset", "with-arrow"];
-  typography: ["all", "default"];
+  theme: ["typography", "usage"];
+  toast: ["usage"];
+  tooltip: ["offset", "usage", "with-arrow"];
+  typography: ["all", "usage"];
 };

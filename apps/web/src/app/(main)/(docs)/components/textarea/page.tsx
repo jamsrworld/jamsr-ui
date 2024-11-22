@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { TextareaControlled } from "./variants/controlled";
-import { TextareaDefault } from "./variants/default";
+import { TextareaUsage } from "./variants/usage";
 import { TextareaDisabled } from "./variants/disabled";
 import { TextareaErrorState } from "./variants/error-state";
 import { TextareaHelperText } from "./variants/helper-text";
@@ -28,8 +28,8 @@ const code = <T extends VariantTypes["textarea"][number]>(variant: T) =>
 const Textarea = () => {
   return (
     <VariantPage heading="Textarea">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <TextareaDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <TextareaUsage />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <TextareaControlled />

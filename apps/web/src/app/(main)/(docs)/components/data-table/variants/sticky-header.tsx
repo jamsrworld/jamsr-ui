@@ -1,7 +1,7 @@
 "use client";
 
-import { DataTableDefault } from "./default";
+import { DataTableUsage } from "./usage";
 
 export const DataTableStickyHeader = () => {
-  return <DataTableDefault isHeaderSticky />;
+  return <DataTableUsage isHeaderSticky />;
 };

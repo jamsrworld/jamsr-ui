@@ -1,5 +1,5 @@
-import { AutocompleteDefault } from "./default";
+import { AutocompleteUsage } from "./usage";
 
 export const AutocompleteHelperText = () => {
-  return <AutocompleteDefault helperText="Please choose one of the options" />;
+  return <AutocompleteUsage helperText="Please choose one of the options" />;
 };

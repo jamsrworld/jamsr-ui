@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { DrawerAnchors } from "./variants/anchors";
-import { DrawerDefault } from "./variants/default";
+import { DrawerUsage } from "./variants/usage";
 import { DrawerSize } from "./variants/size";
 
 export const metadata: Metadata = {
@@ -17,8 +17,8 @@ const code = <T extends VariantTypes["drawer"][number]>(variant: T) =>
 const Drawer = () => {
   return (
     <VariantPage heading="Drawer">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <DrawerDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <DrawerUsage />
       </VariantWrapper>
       <VariantWrapper heading="Size" code={code("size")}>
         <DrawerSize />

@@ -1,5 +1,5 @@
-import { SelectDefault } from "./default";
+import { SelectUsage } from "./usage";
 
 export const SelectPlaceholder = () => {
-  return <SelectDefault placeholder="Select as item..." />;
+  return <SelectUsage placeholder="Select as item..." />;
 };

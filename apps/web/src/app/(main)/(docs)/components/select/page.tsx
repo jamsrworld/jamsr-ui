@@ -7,7 +7,7 @@ import { SelectControlled } from "./variants/controlled";
 import { SelectCustomRenderComplex } from "./variants/custom-render-complex";
 import { SelectCustomRenderMulti } from "./variants/custom-render-multi";
 import { SelectCustomRenderValue } from "./variants/custom-render-value";
-import { SelectDefault } from "./variants/default";
+import { SelectUsage } from "./variants/usage";
 import { SelectInvalidState } from "./variants/invalid-state";
 import { SelectMultiple } from "./variants/multiple";
 import { SelectMultipleControlled } from "./variants/multiple-controlled";
@@ -27,8 +27,8 @@ const code = <T extends VariantTypes["select"][number]>(variant: T) =>
 const Select = () => {
   return (
     <VariantPage heading="Select">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <SelectDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <SelectUsage />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <SelectControlled />

@@ -15,7 +15,7 @@ const code = <T extends VariantTypes["header"][number]>(variant: T) =>
 const Header = () => {
   return (
     <VariantPage heading="Header">
-      <VariantWrapper heading="Default" code={code("default")}>
+      <VariantWrapper heading="Usage" code={code("usage")}>
         <IFrameExample src="/examples/header/default" />
       </VariantWrapper>
       <VariantWrapper heading="Hide On Scroll" code={code("hide-on-scroll")}>
@@ -24,7 +24,7 @@ const Header = () => {
       <VariantWrapper heading="Static" code={code("static")}>
         <IFrameExample src="/examples/header/static" />
       </VariantWrapper>
-      <VariantWrapper heading="With Border" code={code("static")}>
+      <VariantWrapper heading="With Border" code={code("with-border")}>
         <IFrameExample src="/examples/header/with-border" />
       </VariantWrapper>
     </VariantPage>

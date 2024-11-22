@@ -1,5 +1,5 @@
-import { TableDefault } from "./default";
+import { TableUsage } from "./usage";
 
 export const TableAllowHover = () => {
-  return <TableDefault variant="bordered" allowHover />;
+  return <TableUsage variant="bordered" allowHover />;
 };

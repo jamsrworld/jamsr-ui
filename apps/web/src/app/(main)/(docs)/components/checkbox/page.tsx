@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { CheckboxControlled } from "./variants/controlled";
-import { CheckboxDefault } from "./variants/default";
+import { CheckboxUsage } from "./variants/usage";
 import { CheckboxDisabled } from "./variants/disabled";
 import { CheckboxInvalidState } from "./variants/invalid-state";
 import { CheckboxReadonly } from "./variants/readonly";
@@ -25,8 +25,8 @@ const code = <T extends VariantTypes["checkbox"][number]>(variant: T) =>
 const Checkbox = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <CheckboxDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <CheckboxUsage />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <CheckboxControlled />

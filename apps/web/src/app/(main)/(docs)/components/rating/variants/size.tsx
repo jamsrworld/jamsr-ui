@@ -1,8 +1,8 @@
-import { RatingDefault } from "./default";
+import { RatingUsage } from "./usage";
 
 export const RatingSize = () => {
   return (
-    <RatingDefault
+    <RatingUsage
       classNames={{
         starWrapper: "text-danger data-[checked=true]:text-primary",
         star: "size-8",

@@ -1,16 +1,16 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UseHoverDefault } from "./variants/default";
+import { UseHoverUsage } from "./variants/usage";
 import { UseHoverDelay } from "./variants/timeout";
 
 const UseHover = () => {
   return (
     <VariantPage heading="Use Hover">
       <VariantWrapper
-        heading="Default"
+        heading="Usage"
         description="Enter delay and exit delay of 0"
       >
-        <UseHoverDefault />
+        <UseHoverUsage />
       </VariantWrapper>
       <VariantWrapper
         heading="With Delay"

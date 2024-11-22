@@ -1,11 +1,11 @@
-import { SelectDefault } from "./default";
+import { SelectUsage } from "./usage";
 
 export const SelectSizes = () => {
   return (
     <>
-      <SelectDefault size="sm" />
-      <SelectDefault size="md" />
-      <SelectDefault size="lg" />
+      <SelectUsage size="sm" />
+      <SelectUsage size="md" />
+      <SelectUsage size="lg" />
     </>
   );
 };

@@ -1,5 +1,5 @@
-import { TableDefault } from "./default";
+import { TableUsage } from "./usage";
 
 export const TableBordered = () => {
-  return <TableDefault variant="bordered" />;
+  return <TableUsage variant="bordered" />;
 };

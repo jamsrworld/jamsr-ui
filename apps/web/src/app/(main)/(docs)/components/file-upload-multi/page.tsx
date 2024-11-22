@@ -3,9 +3,9 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { FileUploadDefault } from "./variants/default";
+import { FileUploadUsage } from "./variants/usage";
 import { FileUploadDisabled } from "./variants/disabled";
-import { FileUploadDefaultValue } from "./variants/default-value";
+import { FileUploadUsageValue } from "./variants/default-value";
 import { FileUploadControlled } from "./variants/controlled";
 import { FileUploadCustomized } from "./variants/customized";
 
@@ -20,14 +20,14 @@ const code = <T extends VariantTypes["file-upload-multi"][number]>(
 const FileUpload = () => {
   return (
     <VariantPage heading="Multi File Upload">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <FileUploadDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <FileUploadUsage />
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <FileUploadDisabled />
       </VariantWrapper>
       <VariantWrapper heading="Default Value" code={code("default-value")}>
-        <FileUploadDefaultValue />
+        <FileUploadUsageValue />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <FileUploadControlled />

@@ -5,10 +5,10 @@ import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { RadioChecked } from "./variants/checked";
 import { RadioColors } from "./variants/colors";
-import { RadioDefault } from "./variants/default";
+import { RadioUsage } from "./variants/usage";
 import { RadioGroupDisabled } from "./variants/disabled";
 import { RadioGroupInvalid } from "./variants/invalid";
-import { RadioGroupDefault } from "./variants/radio-group";
+import { RadioGroupUsage } from "./variants/radio-group";
 import { RadioGroupControlled } from "./variants/radio-group-controlled";
 import { RadioGroupCustom } from "./variants/radio-group-custom";
 import { RadioSizes } from "./variants/sizes";
@@ -23,8 +23,8 @@ const code = <T extends VariantTypes["radio"][number]>(variant: T) =>
 const Radio = () => {
   return (
     <VariantPage heading="Radio">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <RadioDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <RadioUsage />
       </VariantWrapper>
       <VariantWrapper heading="Checked" code={code("checked")}>
         <RadioChecked />
@@ -36,7 +36,7 @@ const Radio = () => {
         <RadioSizes />
       </VariantWrapper>
       <VariantWrapper heading="Radio Group" code={code("radio-group")}>
-        <RadioGroupDefault />
+        <RadioGroupUsage />
       </VariantWrapper>
       <VariantWrapper
         heading="Radio Group Controlled"

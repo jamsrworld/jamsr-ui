@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { AvatarBordered } from "./variants/bordered";
-import { AvatarDefault } from "./variants/default";
+import { AvatarUsage } from "./variants/usage";
 import { AvatarPlaceholders } from "./variants/placeholders";
 import { AvatarRadius } from "./variants/radius";
 import { AvatarSizes } from "./variants/sizes";
@@ -24,8 +24,8 @@ const code = <T extends VariantTypes["avatar"][number]>(variant: T) =>
 const Avatar = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <AvatarDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <AvatarUsage />
       </VariantWrapper>
       <VariantWrapper heading="Placeholders" code={code("placeholders")}>
         <AvatarPlaceholders />

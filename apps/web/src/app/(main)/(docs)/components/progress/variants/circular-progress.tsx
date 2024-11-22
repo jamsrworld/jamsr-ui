@@ -1,5 +1,5 @@
 import { CircularProgress } from "@jamsr-ui/react";
 
-export const CircularProgressDefault = () => {
+export const CircularProgressUsage = () => {
   return <CircularProgress />;
 };

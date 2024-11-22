@@ -2,8 +2,8 @@
 
 "use client";
 
-import { FileUploadDefault } from "./default";
+import { FileUploadUsage } from "./usage";
 
 export const FileUploadDisabled = () => {
-  return <FileUploadDefault isDisabled />;
+  return <FileUploadUsage isDisabled />;
 };

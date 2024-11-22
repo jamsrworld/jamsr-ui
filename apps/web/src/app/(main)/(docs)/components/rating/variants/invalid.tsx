@@ -1,8 +1,8 @@
-import { RatingDefault } from "./default";
+import { RatingUsage } from "./usage";
 
 export const RatingInvalid = () => {
   return (
-    <RatingDefault
+    <RatingUsage
       helperText="Rating is required"
       isInvalid
     />

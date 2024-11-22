@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { RippleAtCenter } from "./variants/center";
-import { RippleDefault } from "./variants/default";
+import { RippleUsage } from "./variants/usage";
 
 export const metadata: Metadata = {
   title: "Ripple",
@@ -16,8 +16,8 @@ const code = <T extends VariantTypes["ripple"][number]>(variant: T) =>
 const Ripple = () => {
   return (
     <VariantPage heading="Ripple">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <RippleDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <RippleUsage />
       </VariantWrapper>
       <VariantWrapper heading="Center" code={code("center")}>
         <RippleAtCenter />

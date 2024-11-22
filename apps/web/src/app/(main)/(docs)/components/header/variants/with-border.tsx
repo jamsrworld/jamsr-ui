@@ -1,5 +1,5 @@
-import { HeaderDefault } from "./default";
+import { HeaderUsage } from "./usage";
 
 export const HeaderWithBorder = () => {
-  return <HeaderDefault isBordered />;
+  return <HeaderUsage isBordered />;
 };

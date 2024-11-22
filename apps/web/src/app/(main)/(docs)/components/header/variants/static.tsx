@@ -1,5 +1,5 @@
-import { HeaderDefault } from "./default";
+import { HeaderUsage } from "./usage";
 
 export const HeaderStatic = () => {
-  return <HeaderDefault position="static" />;
+  return <HeaderUsage position="static" />;
 };

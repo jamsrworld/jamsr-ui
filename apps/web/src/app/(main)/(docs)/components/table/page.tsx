@@ -5,7 +5,7 @@ import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { TableAllowHover } from "./variants/allow-hover";
 import { TableBordered } from "./variants/bordered";
-import { TableDefault } from "./variants/default";
+import { TableUsage } from "./variants/usage";
 
 export const metadata: Metadata = {
   title: "Table",
@@ -17,8 +17,8 @@ const code = <T extends VariantTypes["table"][number]>(variant: T) =>
 const Table = () => {
   return (
     <VariantPage heading="Table">
-      <VariantWrapper heading="Solid  (Default)" code={code("default")}>
-        <TableDefault />
+      <VariantWrapper heading="Solid  (Default)" code={code("usage")}>
+        <TableUsage />
       </VariantWrapper>
       <VariantWrapper heading="Bordered" code={code("bordered")}>
         <TableBordered />

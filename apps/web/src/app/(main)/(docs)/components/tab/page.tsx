@@ -6,7 +6,7 @@ import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { TabAs } from "./variants/as";
 import { TabColors } from "./variants/colors";
-import { TabDefault } from "./variants/default";
+import { TabUsage } from "./variants/usage";
 import { TabDisabled } from "./variants/disabled";
 import { TabDisabledItem } from "./variants/disabled-item";
 import { TabOutside } from "./variants/outside";
@@ -30,8 +30,8 @@ const code = <T extends VariantTypes["tab"][number]>(variant: T) =>
 const Tab = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <TabDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <TabUsage />
       </VariantWrapper>
 
       <VariantWrapper

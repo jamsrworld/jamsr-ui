@@ -5,7 +5,7 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { DividerColors } from "./variants/colors";
 import { DividerCustomization } from "./variants/customization";
-import { DividerDefault } from "./variants/default";
+import { DividerUsage } from "./variants/usage";
 import { DividerOrientation } from "./variants/orientation";
 import { DividerVariants } from "./variants/variants";
 import { DividerWithText } from "./variants/with-text";
@@ -20,8 +20,8 @@ const code = <T extends VariantTypes["divider"][number]>(variant: T) =>
 const Divider = () => {
   return (
     <VariantPage heading="Divider">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <DividerDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <DividerUsage />
       </VariantWrapper>
       <VariantWrapper heading="With Text" code={code("with-text")}>
         <DividerWithText />

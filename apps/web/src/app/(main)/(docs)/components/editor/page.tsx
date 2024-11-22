@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { EditorControlled } from "./variants/controlled";
-import { EditorDefault } from "./variants/default";
+import { EditorUsage } from "./variants/usage";
 import { EditorInvalid } from "./variants/invalid";
 
 export const metadata: Metadata = {
@@ -17,8 +17,8 @@ const code = <T extends VariantTypes["editor"][number]>(variant: T) =>
 const Editor = () => {
   return (
     <VariantPage heading="Editor">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <EditorDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <EditorUsage />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <EditorControlled />

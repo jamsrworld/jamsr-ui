@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { InputControlled } from "./variants/controlled";
-import { InputDefault } from "./variants/default";
+import { InputUsage } from "./variants/usage";
 import { InputDisabled } from "./variants/disabled";
 import { InputErrorState } from "./variants/error-state";
 import { InputHelperText } from "./variants/helper-text";
@@ -33,8 +33,8 @@ const code = <T extends VariantTypes["input"][number]>(variant: T) =>
 const Input = () => {
   return (
     <VariantPage heading="Input">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <InputDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <InputUsage />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <InputControlled />

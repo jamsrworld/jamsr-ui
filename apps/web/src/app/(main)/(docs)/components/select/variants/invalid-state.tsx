@@ -1,8 +1,8 @@
-import { SelectDefault } from "./default";
+import { SelectUsage } from "./usage";
 
 export const SelectInvalidState = () => {
   return (
-    <SelectDefault
+    <SelectUsage
       placeholder="Choose Fruit"
       isInvalid
       helperText="This field is required"

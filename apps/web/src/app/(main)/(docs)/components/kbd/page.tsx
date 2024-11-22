@@ -17,7 +17,7 @@ const code = <T extends VariantTypes["kbd"][number]>(variant: T) =>
 const Page = () => {
   return (
     <VariantPage heading={title}>
-      <VariantWrapper heading="Default" code={code("usage")}>
+      <VariantWrapper heading="Usage" code={code("usage")}>
         <KbdUsage />
       </VariantWrapper>
       <VariantWrapper heading="Keys" code={code("keys")}>

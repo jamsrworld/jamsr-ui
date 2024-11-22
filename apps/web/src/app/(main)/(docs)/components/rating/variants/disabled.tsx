@@ -1,5 +1,5 @@
-import { RatingDefault } from "./default";
+import { RatingUsage } from "./usage";
 
 export const RatingDisabled = () => {
-  return <RatingDefault isDisabled />;
+  return <RatingUsage isDisabled />;
 };

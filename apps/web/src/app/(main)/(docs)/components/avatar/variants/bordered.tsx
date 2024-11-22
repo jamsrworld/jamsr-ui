@@ -1,5 +1,5 @@
-import { AvatarDefault } from "./default";
+import { AvatarUsage } from "./usage";
 
 export const AvatarBordered = () => {
-  return <AvatarDefault isBordered />
+  return <AvatarUsage isBordered />
 };

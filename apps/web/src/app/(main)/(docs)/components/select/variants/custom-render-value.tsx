@@ -1,10 +1,10 @@
 "use client";
 
-import { SelectDefault } from "./default";
+import { SelectUsage } from "./usage";
 
 export const SelectCustomRenderValue = () => {
   return (
-    <SelectDefault
+    <SelectUsage
       placeholder="Choose Fruit"
       renderValue={(value) => {
         return `Selected value is ${Array.from(value).join("")}`;

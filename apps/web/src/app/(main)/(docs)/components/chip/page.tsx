@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { ChipDefault } from "./variants/default";
+import { ChipUsage } from "./variants/usage";
 import { ChipOnDelete } from "./variants/on-delete";
 
 const title = "Chip";
@@ -20,8 +20,8 @@ const code = <T extends VariantTypes["chip"][number]>(variant: T) =>
 const Chip = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Default" code={code("default")}>
-        <ChipDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <ChipUsage />
       </VariantWrapper>
       <VariantWrapper heading="On Delete" code={code("on-delete")}>
         <ChipOnDelete />

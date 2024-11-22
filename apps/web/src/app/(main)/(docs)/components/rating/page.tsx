@@ -4,8 +4,8 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { RatingControlled } from "./variants/controlled";
-import { RatingDefault } from "./variants/default";
-import { RatingDefaultValue } from "./variants/default-value";
+import { RatingUsage } from "./variants/usage";
+import { RatingUsageValue } from "./variants/default-value";
 import { RatingDisabled } from "./variants/disabled";
 import { RatingHelperText } from "./variants/helper-text";
 import { RatingInvalid } from "./variants/invalid";
@@ -22,8 +22,8 @@ const code = <T extends VariantTypes["rating"][number]>(variant: T) =>
 const Rating = () => {
   return (
     <VariantPage heading="Rating">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <RatingDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <RatingUsage />
       </VariantWrapper>
       <VariantWrapper heading="Size" code={code("size")}>
         <RatingSize />
@@ -35,7 +35,7 @@ const Rating = () => {
         <RatingDisabled />
       </VariantWrapper>
       <VariantWrapper heading="Default Value" code={code("default-value")}>
-        <RatingDefaultValue />
+        <RatingUsageValue />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <RatingControlled />

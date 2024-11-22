@@ -4,12 +4,12 @@
 
 import TvImg from "@/../public/tv.webp";
 import { useState } from "react";
-import { FileUploadDefault } from "./default";
+import { FileUploadUsage } from "./usage";
 
 export const FileUploadControlled = () => {
   const [value, setValue] = useState<string | null>(TvImg.src);
   return (
-    <FileUploadDefault
+    <FileUploadUsage
       helperText={`Value is ${value}`}
       value={value}
       onValueChange={setValue}

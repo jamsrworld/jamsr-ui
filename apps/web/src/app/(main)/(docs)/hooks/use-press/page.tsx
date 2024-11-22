@@ -1,15 +1,15 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UsePressDefault } from "./variants/default";
+import { UsePressUsage } from "./variants/usage";
 
 const UseHover = () => {
   return (
     <VariantPage heading="Use Press">
       <VariantWrapper
-        heading="Default"
+        heading="Usage"
         description="Also see the logs to see the press events"
       >
-        <UsePressDefault />
+        <UsePressUsage />
       </VariantWrapper>
     </VariantPage>
   );

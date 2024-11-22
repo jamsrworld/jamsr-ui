@@ -5,7 +5,7 @@
 import TvImg from "@/../public/tv.webp";
 import { type FileUploadMultiState } from "@jamsr-ui/react";
 import { useState } from "react";
-import { FileUploadDefault } from "./default";
+import { FileUploadUsage } from "./usage";
 
 export const FileUploadControlled = () => {
   const [value, setValue] = useState<FileUploadMultiState[]>([
@@ -20,7 +20,7 @@ export const FileUploadControlled = () => {
     setValue(newValue);
   };
   return (
-    <FileUploadDefault
+    <FileUploadUsage
       helperText={`Value is ${JSON.stringify(value)}`}
       value={value}
       onValueChange={onValueChange}

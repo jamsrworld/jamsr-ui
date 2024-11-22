@@ -1,12 +1,12 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UseFocusVisibleDefault } from "./variants/default";
+import { UseFocusVisibleUsage } from "./variants/default";
 
 const UseFocusVisible = () => {
   return (
     <VariantPage heading="Use Focus Visible">
-      <VariantWrapper heading="Default">
-        <UseFocusVisibleDefault />
+      <VariantWrapper heading="Usage">
+        <UseFocusVisibleUsage />
       </VariantWrapper>
     </VariantPage>
   );

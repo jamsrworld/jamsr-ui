@@ -1,8 +1,8 @@
-import { AutocompleteDefault } from "./default";
+import { AutocompleteUsage } from "./usage";
 
 export const AutocompleteErrorState = () => {
   return (
-    <AutocompleteDefault
+    <AutocompleteUsage
       helperText="Please choose one of the options"
       isInvalid
     />

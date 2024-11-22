@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { TagsInputControlled } from "./variants/controlled";
-import { TagsInputDefault } from "./variants/default";
+import { TagsInputUsage } from "./variants/usage";
 import { TagsInputDefaultValue } from "./variants/default-value";
 import { TagsInputInvalidState } from "./variants/invalid-state";
 
@@ -18,8 +18,8 @@ const code = <T extends VariantTypes["tags-input"][number]>(variant: T) =>
 const Editor = () => {
   return (
     <VariantPage heading="Tags Input">
-      <VariantWrapper heading="Default" code={code("default")}>
-        <TagsInputDefault />
+      <VariantWrapper heading="Usage" code={code("usage")}>
+        <TagsInputUsage />
       </VariantWrapper>
       <VariantWrapper heading="Default Value" code={code("default-value")}>
         <TagsInputDefaultValue />

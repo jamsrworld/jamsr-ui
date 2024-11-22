@@ -1,7 +1,7 @@
-import { HeaderDefault } from "@/app/(main)/(docs)/components/header/variants/default";
+import { HeaderUsage } from "@/app/(main)/(docs)/components/header/variants/usage";
 
 const Page = () => {
-  return <HeaderDefault />;
+  return <HeaderUsage />;
 };
 
 export default Page;

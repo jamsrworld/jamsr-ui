@@ -39,7 +39,7 @@ export const useKbd = ($props: UseKbdProps) => {
     ...props,
     ...restProps,
     className: styles.base({
-      className: cn(classNames?.base, props?.className as string),
+      className: cn(classNames?.base, className, props?.className as string),
     }),
   });
 

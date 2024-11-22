@@ -25,12 +25,12 @@
   "devDependencies": {
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "next": "15.0.1",
+    "next": "15.0.3",
     "react": "19.0.0-rc-603e6108-20241029",
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "peerDependencies": {
-    "next": "15.0.1",
+    "next": "15.0.3",
     "react": "19.0.0-rc-603e6108-20241029",
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },

@@ -1,5 +1,13 @@
 # @jamsr-ui/rhf
 
+## 0.0.30
+
+### Patch Changes
+
+- rhf autocomplete
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.93
+
 ## 0.0.29
 
 ### Patch Changes

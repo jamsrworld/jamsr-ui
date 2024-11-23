@@ -4,7 +4,7 @@ import {
   type AutocompleteProps,
 } from "@jamsr-ui/react";
 
-const Animals = [
+const animals = [
   {
     label: "Cat",
     value: "cat",
@@ -75,12 +75,9 @@ const Animals = [
 
 export const AutocompleteUsage = (props: Partial<AutocompleteProps>) => {
   return (
-    <div >
-      <Autocomplete
-        label="Animal"
-        {...props}
-      >
-        {Animals.map((animal) => (
+    <div>
+      <Autocomplete label="Animal" {...props}>
+        {animals.map((animal) => (
           <AutocompleteItem
             key={animal.value}
             value={animal.value}

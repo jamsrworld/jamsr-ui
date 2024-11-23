@@ -16,6 +16,7 @@ import { RHFDemoSwitch } from "./variants/switch";
 import { RHFDemoTagsInput } from "./variants/tags-input";
 import { RHFDemoTextarea } from "./variants/textarea";
 import { RHFDemoFileUploadMultiDefaultValue } from "./variants/file-upload-multi-default-value";
+import { RHFDemoAutocomplete } from "./variants/autocomplete";
 
 export const metadata: Metadata = {
   title: "React Hook Form",
@@ -53,6 +54,9 @@ const DragDropDndKit = () => {
       </VariantWrapper>
       <VariantWrapper heading="Select" code={code("select")}>
         <RHFDemoSelect />
+      </VariantWrapper>
+      <VariantWrapper heading="Autocomplete" code={code("autocomplete")}>
+        <RHFDemoAutocomplete />
       </VariantWrapper>
       <VariantWrapper heading="Editor" code={code("editor")}>
         <RHFDemoEditor />

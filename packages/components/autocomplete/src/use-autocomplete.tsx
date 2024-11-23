@@ -45,6 +45,7 @@ export type UseAutocompleteProps = Pick<
   | "placeholder"
   | "helperText"
   | "isInvalid"
+  | "onBlur"
 > & {
   className?: string;
   classNames?: SlotsToClasses<AutocompleteSlots>;

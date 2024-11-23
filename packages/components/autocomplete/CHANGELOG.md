@@ -1,5 +1,11 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.93
+
+### Patch Changes
+
+- rhf autocomplete
+
 ## 0.0.92
 
 ### Patch Changes

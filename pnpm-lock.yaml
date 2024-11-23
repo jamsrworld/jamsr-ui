@@ -1259,6 +1259,9 @@ importers:
 
   packages/components/rhf:
     dependencies:
+      '@jamsr-ui/autocomplete':
+        specifier: workspace:^
+        version: link:../autocomplete
       '@jamsr-ui/checkbox':
         specifier: workspace:^
         version: link:../checkbox

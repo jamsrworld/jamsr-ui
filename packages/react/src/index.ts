@@ -32,6 +32,7 @@ export * from "@jamsr-ui/repeater";
 export * from "@jamsr-ui/rhf";
 export * from "@jamsr-ui/ripple";
 export * from "@jamsr-ui/select";
+export * from "@jamsr-ui/show";
 export * from "@jamsr-ui/skeleton";
 export * from "@jamsr-ui/stepper";
 export * from "@jamsr-ui/styles";

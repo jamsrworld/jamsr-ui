@@ -19,7 +19,7 @@ export const selectVariant = tv({
     helperText: "mt-1 text-xs text-foreground-500",
     indicator:
       "transition-transform duration-300 group-data-[open=true]:rotate-180",
-    popover: "",
+    popover: "z-popover",
     content:
       "z-popover flex h-full flex-col overflow-hidden rounded-2xl bg-content1 shadow-md backdrop-blur-3xl",
     scrollArea: "overflow-y-auto p-2",

@@ -3,9 +3,9 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 export const test = "";
 export const stepper = tv({
   slots: {
-    base: "flex items-center gap-2",
+    base: "inline-flex items-center gap-2",
     value: "",
-    button: "",
+    button: ["", "ui-disabled:cursor-not-allowed ui-disabled:opacity-50"],
   },
   variants: {},
   defaultVariants: {},

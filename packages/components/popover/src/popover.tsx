@@ -135,7 +135,7 @@ export const Popover = ($props: PopoverProps) => {
       {triggerContent}
       {open && (
         <FloatingPortal>
-          <FloatingOverlay lockScroll={lockScroll}>
+          <FloatingOverlay className="z-backdrop" lockScroll={lockScroll}>
             <FloatingFocusManager context={context} modal={isModal}>
               <div
                 data-component="popover"

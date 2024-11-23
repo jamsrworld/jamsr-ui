@@ -1,16 +1,16 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
+import { useKeyPress } from "@jamsr-ui/hooks";
 import { MinusIcon, PlusIcon } from "@jamsr-ui/shared-icons";
-import {
-  AnimatePresence,
-  m,
-  type MotionProps,
-  type Variants,
-} from "framer-motion";
-import { useState } from "react";
 import { useStepper, type UseStepperProps } from "./use-stepper";
 
 export type StepperProps = UseStepperProps;
 
-type Action = "increase" | "decrease";
+const ARROW_KEYS = {
+  ArrowDown: "ArrowDown",
+  ArrowUp: "ArrowUp",
+  ArrowLeft: "ArrowLeft",
+  ArrowRight: "ArrowRight",
+};
 
 export const Stepper = (props: StepperProps) => {
   const {
@@ -22,67 +22,70 @@ export const Stepper = (props: StepperProps) => {
     minValue,
     setValue,
     value,
+    onIncrease,
+    onDecrease,
   } = useStepper(props);
-  const [action, setAction] = useState<Action | null>(null);
-
-  const handleIncrement = () => {
-    if (value < maxValue) {
-      setAction("increase");
-      setValue(value + 1);
-    }
-  };
-
-  const handleDecrement = () => {
-    if (value > minValue) {
-      setAction("decrease");
-      setValue(value - 1);
-    }
-  };
-
-  const variants: Variants = {
-    initial: (action: Action) => {
-      return {
-        y: action === "increase" ? 24 : -24,
-      };
-    },
-    animate: {
-      y: 0,
-    },
-    exit: (action: Action) => ({
-      y: action === "increase" ? -24 : 24,
-    }),
-  };
-
-  const valueProps: MotionProps = {
-    variants,
-    initial: "initial",
-    animate: "animate",
-    exit: "exit",
-  };
 
   const canIncrease = value < maxValue;
   const canDecrease = value > minValue;
 
+  const handleIncrement = () => {
+    if (canIncrease) {
+      onIncrease?.();
+      setValue(value + 1);
+    }
+  };
+  const handleDecrement = () => {
+    if (canDecrease) {
+      onDecrease?.();
+      setValue(value - 1);
+    }
+  };
+
+  const handleKeyPress = (e: KeyboardEvent) => {
+    e.preventDefault();
+    if (e.key === ARROW_KEYS.ArrowDown) handleDecrement();
+    if (e.key === ARROW_KEYS.ArrowUp) handleIncrement();
+    const nextElement =
+      document.activeElement === decreaseRef.current
+        ? increaseRef.current
+        : decreaseRef.current;
+    if (e.key === ARROW_KEYS.ArrowLeft) {
+      nextElement?.focus();
+    }
+    if (e.key === ARROW_KEYS.ArrowRight) {
+      nextElement?.focus();
+    }
+  };
+
+  const keys = Object.values(ARROW_KEYS);
+  const { ref: decreaseRef } = useKeyPress<HTMLButtonElement>(
+    keys,
+    handleKeyPress,
+  );
+  const { ref: increaseRef } = useKeyPress<HTMLButtonElement>(
+    keys,
+    handleKeyPress,
+  );
   return (
     <Component {...getBaseProps()}>
       <button
-        disabled={!canDecrease}
+        data-disabled={!canDecrease}
+        aria-disabled={!canDecrease}
         type="button"
         onClick={handleDecrement}
+        ref={decreaseRef}
         {...getButtonProps()}
       >
         <MinusIcon width={20} height={20} />
       </button>
-      <AnimatePresence mode="popLayout" initial={false} custom={action}>
-        {/* @ts-expect-error framer-error */}
-        <m.div key={value} custom={action} {...getValueProps()} {...valueProps}>
-          {value}
-        </m.div>
-      </AnimatePresence>
+      <div {...getValueProps()}>{value}</div>
       <button
-        disabled={!canIncrease}
+        data-disabled={!canIncrease}
+        aria-disabled={!canIncrease}
         type="button"
         onClick={handleIncrement}
+        ref={increaseRef}
         {...getButtonProps()}
       >
         <PlusIcon width={20} height={20} />

@@ -56,7 +56,7 @@ export type VariantTypes = {
     "usage",
     "without-pagination",
   ];
-  dialog: ["usage"];
+  dialog: ["popover-items", "usage", "without-close-btn"];
   divider: [
     "colors",
     "customization",
@@ -166,7 +166,7 @@ export type VariantTypes = {
     "tags-input",
     "textarea",
   ];
-  repeater: ["usage"];
+  repeater: ["index", "usage"];
   ripple: ["center", "usage"];
   select: [
     "controlled",
@@ -183,8 +183,9 @@ export type VariantTypes = {
     "with-helper-text",
     "without-label",
   ];
+  show: ["usage"];
   skeleton: ["usage"];
-  stepper: ["min-max-value", "usage"];
+  stepper: ["controlled", "events", "min-max-value", "usage"];
   switch: ["description", "invalid-state", "label-placement", "usage"];
   tab: [
     "as",

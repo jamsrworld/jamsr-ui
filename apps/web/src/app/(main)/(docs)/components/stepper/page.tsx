@@ -3,6 +3,8 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
+import { StepperControlled } from "./variants/controlled";
+import { StepperEvents } from "./variants/events";
 import { StepperMinMaxValue } from "./variants/min-max-value";
 import { StepperUsage } from "./variants/usage";
 
@@ -25,6 +27,12 @@ const Page = () => {
       </VariantWrapper>
       <VariantWrapper heading="Min. Max. Value" code={code("min-max-value")}>
         <StepperMinMaxValue />
+      </VariantWrapper>
+      <VariantWrapper heading="Controlled" code={code("controlled")}>
+        <StepperControlled />
+      </VariantWrapper>
+      <VariantWrapper heading="Events" code={code("events")}>
+        <StepperEvents />
       </VariantWrapper>
     </VariantPage>
   );

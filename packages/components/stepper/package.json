@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/stepper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",
@@ -24,6 +24,7 @@
   "dependencies": {
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }
 }

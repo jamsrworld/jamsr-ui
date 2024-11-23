@@ -43,6 +43,7 @@ import { type RadioGroupProps, type RadioProps } from "@jamsr-ui/radio";
 import { type RatingProps } from "@jamsr-ui/rating";
 import { type SelectItemProps, type SelectProps } from "@jamsr-ui/select";
 import { type SkeletonProps } from "@jamsr-ui/skeleton";
+import { type StepperProps } from "@jamsr-ui/stepper";
 import { type SwitchProps } from "@jamsr-ui/switch";
 import { type TabProps } from "@jamsr-ui/tab";
 import {
@@ -112,5 +113,6 @@ declare module "@jamsr-ui/styles" {
     tagsInput?: Partial<TagsInputProps>;
     textarea?: Partial<TextareaProps>;
     tooltip?: Partial<TooltipProps>;
+    stepper?: Partial<StepperProps>;
   }
 }

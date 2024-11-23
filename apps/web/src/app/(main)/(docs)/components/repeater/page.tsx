@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { RepeaterUsage } from "./variants/usage";
+import { RepeaterIndex } from "./variants";
 
 export const metadata: Metadata = {
   title: "Repeater",
@@ -17,6 +18,9 @@ const Repeater = () => {
     <VariantPage heading="Repeater">
       <VariantWrapper heading="Usage" code={code("usage")}>
         <RepeaterUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Index" code={code("index")}>
+        <RepeaterIndex />
       </VariantWrapper>
     </VariantPage>
   );

@@ -1,6 +1,8 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
+  deepMergeProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -15,11 +17,16 @@ type Props = UIProps<"div"> & {
   onValueChange?: (value: number) => void;
   minValue?: number;
   maxValue?: number;
+  onIncrease?: () => void;
+  onDecrease?: () => void;
 };
 
 export type UseStepperProps = Props & StepperVariantsProps;
 
-export const useStepper = (props: UseStepperProps) => {
+export const useStepper = ($props: UseStepperProps) => {
+  const { stepper: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
+
   const {
     as,
     classNames,
@@ -29,12 +36,14 @@ export const useStepper = (props: UseStepperProps) => {
     onValueChange,
     minValue = -Infinity,
     maxValue = Infinity,
+    onIncrease,
+    onDecrease,
     ...restProps
   } = props;
   const Component = as ?? "div";
 
   const [value, setValue] = useControlledState(
-    defaultValue ?? 0,
+    Math.max(defaultValue ?? 0, minValue, 0),
     $value,
     onValueChange,
   );
@@ -87,6 +96,8 @@ export const useStepper = (props: UseStepperProps) => {
     getButtonProps,
     minValue,
     maxValue,
+    onIncrease,
+    onDecrease,
     value,
     setValue,
   };

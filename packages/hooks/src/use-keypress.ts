@@ -1,10 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-export const useKeyPress = (
+export const useKeyPress = <T extends HTMLElement>(
   keys: null | string | string[],
   callback: (event: KeyboardEvent) => void,
+  options: {
+    isDisabled?: boolean;
+    isWindow?: boolean;
+  } = {},
 ) => {
+  const ref = useRef<T>(null);
+  const { isDisabled = false } = options;
+
   useEffect(() => {
+    const node = (options.isWindow ? window : ref.current) as HTMLElement;
+    if (!node || isDisabled) return () => {};
+
     const handleKeyPress = (event: KeyboardEvent) => {
       const keyList = (keys === null && "all") ||
         (Array.isArray(keys) && keys) || [keys];
@@ -12,9 +22,12 @@ export const useKeyPress = (
         callback(event);
       }
     };
-    window.addEventListener("keydown", handleKeyPress);
+
+    node.addEventListener("keydown", handleKeyPress);
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      node.removeEventListener("keydown", handleKeyPress);
     };
-  }, [keys, callback]);
+  }, [keys, callback, isDisabled, options.isWindow]);
+
+  return { ref };
 };

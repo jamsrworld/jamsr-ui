@@ -1,5 +1,12 @@
 # @jamsr-ui/radio
 
+## 0.0.73
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.44
+
 ## 0.0.72
 
 ### Patch Changes

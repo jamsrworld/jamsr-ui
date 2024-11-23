@@ -1,5 +1,12 @@
 # @jamsr-ui/ripple
 
+## 0.0.67
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.44
+
 ## 0.0.66
 
 ### Patch Changes

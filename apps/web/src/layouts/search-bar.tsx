@@ -45,12 +45,18 @@ export const SearchBar = () => {
     router.push(url);
   };
 
-  useKeyPress("k", (event) => {
-    if (event.metaKey || event.ctrlKey) {
-      event.preventDefault();
-      onOpen();
-    }
-  });
+  useKeyPress(
+    "k",
+    (event) => {
+      if (event.metaKey || event.ctrlKey) {
+        event.preventDefault();
+        onOpen();
+      }
+    },
+    {
+      isWindow: true,
+    },
+  );
 
   return (
     <>

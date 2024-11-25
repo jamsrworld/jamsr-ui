@@ -18,7 +18,7 @@ export const DrawerUsage = (props: Partial<DrawerProps>) => {
       >
         <Button onClick={onClose}>Close</Button>
         <Link href="/components/accordion">Home</Link>
-        <Repeater count={10}>
+        <Repeater count={2}>
           <p className="mb-2">
             NATURAL AND RECYCLED MATERIALS R-LENO - Recycled wool Soft,
             comfortable and light Designed to last a long time Resistant and

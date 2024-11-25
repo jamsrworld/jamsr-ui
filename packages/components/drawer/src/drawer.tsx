@@ -176,7 +176,7 @@ export const Drawer = ($props: DrawerProps) => {
                   exit="exit"
                   custom={anchor}
                   className={styles.content({
-                    className: cn(className, classNames?.backdrop),
+                    className: cn(className, classNames?.content),
                   })}
                   transition={{
                     type: "spring",

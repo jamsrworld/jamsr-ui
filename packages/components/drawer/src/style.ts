@@ -4,16 +4,15 @@ export const test = "";
 export const drawer = tv({
   slots: {
     backdrop: "z-backdrop !overflow-x-hidden backdrop-blur-sm",
-    content:
-      "absolute z-dialog h-dvh w-full overflow-y-auto bg-content1 shadow-sm",
+    content: "absolute z-dialog w-full overflow-y-auto bg-content1 shadow-sm",
   },
   variants: {
     anchor: {
       left: {
-        content: "left-0 top-0",
+        content: "left-0 top-0 h-dvh",
       },
       right: {
-        content: "right-0 top-0",
+        content: "right-0 top-0 h-dvh",
       },
       top: {
         content: "left-0 top-0",
@@ -51,7 +50,7 @@ export const drawer = tv({
         content: "max-w-5xl",
       },
       full: {
-        content: "m-0 h-dvh max-w-full !rounded-none bg-background sm:m-0",
+        content: "m-0 h-dvh max-w-full !rounded-none sm:m-0",
       },
     },
     backdrop: {
@@ -59,7 +58,7 @@ export const drawer = tv({
         backdrop: "hidden",
       },
       opaque: {
-        backdrop: " bg-overlay/50",
+        backdrop: "bg-overlay/50",
       },
       blur: {
         backdrop: "bg-overlay/30 backdrop-blur-md backdrop-saturate-150",

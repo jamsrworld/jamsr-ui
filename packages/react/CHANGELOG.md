@@ -1,5 +1,12 @@
 # @jamsr-ui/react
 
+## 0.0.184
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/drawer@1.0.63
+
 ## 0.0.183
 
 ### Patch Changes

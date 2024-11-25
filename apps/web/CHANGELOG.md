@@ -1,5 +1,12 @@
 # web
 
+## 0.1.166
+
+### Patch Changes
+
+- fix drawer
+  - @jamsr-ui/react@0.0.184
+
 ## 0.1.165
 
 ### Patch Changes

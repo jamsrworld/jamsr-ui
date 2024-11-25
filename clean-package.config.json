@@ -13,10 +13,17 @@
                 "require": "./dist/index.js"
             }
         },
-        "description": "A react js ui library with tailwindcss",
+        "description": "A modern and beautiful Next.js UI components library.",
         "keywords": [
             "react",
-            "ui"
+            "ui",
+            "UI components",
+            "Next.js",
+            "React",
+            "JamsrUI",
+            "Jamsr UI",
+            "jamsr-ui",
+            "TypeScript"
         ],
         "sideEffects": false,
         "license": "MIT",

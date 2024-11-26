@@ -14,6 +14,7 @@ import { TabRadius } from "./variants/radius";
 import { TabSizes } from "./variants/sizes";
 import { TabVariants } from "./variants/variants";
 import { TabWithIcons } from "./variants/with-icons";
+import { TabCustomized } from "./variants/customized";
 
 const title = "Tab";
 const description =
@@ -100,6 +101,9 @@ const Tab = () => {
       </VariantWrapper>
       <VariantWrapper heading="Outside" code={code("outside")}>
         <TabOutside />
+      </VariantWrapper>
+      <VariantWrapper heading="Customized" code={code("customized")}>
+        <TabCustomized />
       </VariantWrapper>
     </VariantPage>
   );

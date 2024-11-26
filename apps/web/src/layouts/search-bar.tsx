@@ -72,7 +72,7 @@ export const SearchBar = () => {
       >
         Search
       </Button>
-      <Dialog isScroll hideCloseButton isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Dialog closeButton={null} isOpen={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-h-[500px] overflow-y-auto">
           <DialogHeader>
             <Input

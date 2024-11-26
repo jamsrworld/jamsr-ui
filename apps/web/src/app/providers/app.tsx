@@ -1,6 +1,11 @@
 "use client";
 
-import { ToastProvider, UIProvider, UIStylesProvider } from "@jamsr-ui/react";
+import {
+  Confirmation,
+  ToastProvider,
+  UIProvider,
+  UIStylesProvider,
+} from "@jamsr-ui/react";
 import { Analytics } from "@vercel/analytics/react";
 
 type Props = {
@@ -13,8 +18,16 @@ export const AppProvider = (props: Props) => {
     <UIProvider>
       <Analytics />
       <ToastProvider />
+      <Confirmation />
       <UIStylesProvider
-      
+      // tabs={{
+      //   classNames: {
+      //     base: "!bg-red-900",
+      //   },
+      // }}
+      // tab={{
+      //   className:"bg-blue-900"
+      // }}
       // button={{
       //   className: "",
       //   color: "danger",

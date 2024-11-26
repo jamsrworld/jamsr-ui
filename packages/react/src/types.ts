@@ -45,7 +45,7 @@ import { type SelectItemProps, type SelectProps } from "@jamsr-ui/select";
 import { type SkeletonProps } from "@jamsr-ui/skeleton";
 import { type StepperProps } from "@jamsr-ui/stepper";
 import { type SwitchProps } from "@jamsr-ui/switch";
-import { type TabProps } from "@jamsr-ui/tab";
+import { type TabsProps, type TabProps } from "@jamsr-ui/tab";
 import {
   type TableBodyProps,
   type TableCellProps,
@@ -102,6 +102,7 @@ declare module "@jamsr-ui/styles" {
     selectItem?: Partial<SelectItemProps>;
     skeleton?: Partial<SkeletonProps>;
     switch?: Partial<SwitchProps>;
+    tabs?: Partial<TabsProps>;
     tab?: Partial<TabProps>;
     table?: Partial<TableProps>;
     tableBody?: Partial<TableBodyProps>;

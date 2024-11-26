@@ -1,10 +1,10 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
+import { InputClearable } from "./variants/clearable";
 import { InputControlled } from "./variants/controlled";
-import { InputUsage } from "./variants/usage";
 import { InputDisabled } from "./variants/disabled";
 import { InputErrorState } from "./variants/error-state";
 import { InputHelperText } from "./variants/helper-text";
@@ -16,6 +16,7 @@ import { InputPlaceholder } from "./variants/placeholder";
 import { InputRequired } from "./variants/required";
 import { InputSecuredText } from "./variants/secured-text";
 import { InputSizes } from "./variants/sizes";
+import { InputUsage } from "./variants/usage";
 import { InputVariants } from "./variants/variants";
 import { InputWithEndContent } from "./variants/with-end-content";
 import { InputWithIcon } from "./variants/with-icon";
@@ -50,6 +51,9 @@ const Input = () => {
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <InputDisabled />
+      </VariantWrapper>
+      <VariantWrapper heading="Clearable" code={code("clearable")}>
+        <InputClearable />
       </VariantWrapper>
       <VariantWrapper
         heading="With Placeholder"

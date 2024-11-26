@@ -1,5 +1,5 @@
 import { Button } from "@jamsr-ui/button";
-import { EyeClosedIcon, EyeOpenIcon } from "@jamsr-ui/shared-icons";
+import { CloseIcon, EyeClosedIcon, EyeOpenIcon } from "@jamsr-ui/shared-icons";
 import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useId, useMemo } from "react";
 import { useInput, type UseInputProps } from "./use-input";
@@ -34,6 +34,10 @@ export const Input = <T extends React.ElementType = "div">(
     hasNotation,
     variant,
     getContentWrapperProps,
+    getClearButtonProps,
+    isClearable,
+    hasValue,
+    showClearButton,
   } = useInput(props);
   const id = useId();
 
@@ -45,6 +49,17 @@ export const Input = <T extends React.ElementType = "div">(
 
   const getEndContent = useMemo(() => {
     const content =
+      ((showClearButton ?? (isClearable && hasValue)) && (
+        <Button
+          isIconOnly
+          variant="light"
+          size="xs"
+          isRounded
+          {...getClearButtonProps()}
+        >
+          <CloseIcon width={12} height={12} />
+        </Button>
+      )) ||
       (isSecuredText === true && (
         <Button
           isIconOnly
@@ -61,8 +76,11 @@ export const Input = <T extends React.ElementType = "div">(
     return !content ? null : <div {...getEndContentProps()}>{content}</div>;
   }, [
     endContent,
+    getClearButtonProps,
     getEndContentProps,
     handleChangeInputType,
+    hasValue,
+    isClearable,
     isSecuredText,
     showPassword,
   ]);

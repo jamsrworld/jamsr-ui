@@ -1,3 +1,4 @@
+import { type ButtonProps } from "@jamsr-ui/button";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
@@ -11,12 +12,13 @@ import {
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
+import type React from "react";
 import { useCallback, useMemo, useState, type ComponentProps } from "react";
 import {
   inputVariants,
   type InputSlots,
   type InputVariantProps,
-} from "./style";
+} from "./styles";
 
 type Props = {
   startContent?: React.ReactNode;
@@ -43,6 +45,9 @@ type Props = {
   };
   isRequired?: boolean;
   isOptional?: boolean;
+  isClearable?: boolean;
+  onClearInput?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  showClearButton?: boolean;
 };
 
 type InputProps = UIProps<"input">;
@@ -84,6 +89,9 @@ export const useInput = ($props: UseInputProps) => {
     placeholder,
     isFilled,
     isTextarea,
+    isClearable = false,
+    onClearInput,
+    showClearButton,
     ...restProps
   } = props;
 
@@ -114,6 +122,14 @@ export const useInput = ($props: UseInputProps) => {
     propSetShowPassword,
   );
 
+  const handleClear = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      onClearInput?.(e);
+      setValue("");
+    },
+    [onClearInput, setValue],
+  );
+
   const isFilledWithin =
     !isEmpty(placeholder) ||
     !isEmpty(value) ||
@@ -125,6 +141,7 @@ export const useInput = ($props: UseInputProps) => {
   const hasLabel = !isEmpty(label) || !isEmpty(labelHelperContent);
   const hasStartContent = !isEmpty(startContent);
   const hasEndContent = !isEmpty(endContent);
+  const hasValue = !isEmpty(value);
 
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -380,7 +397,22 @@ export const useInput = ($props: UseInputProps) => {
 
   const hasNotation = isRequired === true || isOptional === true;
 
+  const getClearButtonProps: PropGetter<ButtonProps> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "clear-button",
+        className: styles.clearButton({
+          className: cn(classNames?.clearButton, props?.className),
+        }),
+        onClick: handleClear,
+      };
+    },
+    [styles, classNames?.clearButton, handleClear],
+  );
+
   return {
+    hasValue,
     Component,
     InputComponent,
     children,
@@ -389,6 +421,7 @@ export const useInput = ($props: UseInputProps) => {
     helperText,
     startContent,
     endContent,
+    isClearable,
     variant,
     isInvalid,
     isSecuredText,
@@ -408,5 +441,7 @@ export const useInput = ($props: UseInputProps) => {
     getEndContentProps,
     getNotationProps,
     getContentWrapperProps,
+    getClearButtonProps,
+    showClearButton,
   };
 };

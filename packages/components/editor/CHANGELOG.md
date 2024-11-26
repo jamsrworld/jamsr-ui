@@ -1,5 +1,12 @@
 # @jamsr-ui/editor
 
+## 0.0.92
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/input@0.0.88
+
 ## 0.0.91
 
 ### Patch Changes

@@ -6,7 +6,7 @@ export const InputNumberOnly = () => {
       <Input label="Amount" isNumberInput startContent="$" />
       <Input label="Percentage" isNumberInput endContent="%" />
       <Input
-        label="Current Date"
+        label="Your fav. number"
         isNumberInput
         decimalPrecision={0}
         placeholder="Without decimal precision"

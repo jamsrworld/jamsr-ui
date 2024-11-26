@@ -5,5 +5,5 @@ export {
   inputVariants,
   type InputSlots,
   type InputVariantProps,
-} from "./style";
+} from "./styles";
 export { useInput, type UseInputProps } from "./use-input";

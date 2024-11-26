@@ -1,4 +1,12 @@
 import { create } from "zustand";
+import { type ConfirmationProps } from "./confirmation";
+
+type Options = {
+  title: string;
+  message: string;
+  onCancel?: () => void;
+  onConfirm: () => void;
+} & ConfirmationProps;
 
 type State = (
   | {
@@ -7,12 +15,7 @@ type State = (
     }
   | {
       isOpen: true;
-      options: {
-        title: string;
-        message: string;
-        onCancel?: () => void;
-        onConfirm: () => void;
-      };
+      options: Options;
     }
 ) & {
   onClose: () => void;

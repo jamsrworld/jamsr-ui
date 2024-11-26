@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { ConfirmationUsage } from "./variants/usage";
+import { ConfirmationColors } from "./variants/colors";
 
 export const metadata: Metadata = {
   title: "Confirmation",
@@ -17,6 +18,9 @@ const Confirmation = () => {
     <VariantPage heading="Confirmation">
       <VariantWrapper heading="Usage" code={code("usage")}>
         <ConfirmationUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Colors" code={code("colors")}>
+        <ConfirmationColors />
       </VariantWrapper>
     </VariantPage>
   );

@@ -30,7 +30,7 @@ export type UseTabsProps<T extends string> = UIProps<"div"> &
   Props<T>;
 
 export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
-  const { tab: Props = {} } = useUIStyle();
+  const { tabs: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
   const {

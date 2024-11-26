@@ -25,6 +25,7 @@ export const inputVariants = tv({
     endContent: "pr-2 text-foreground-500",
     notation: "",
     contentWrapper: "flex h-full grow items-center",
+    clearButton: "",
   },
   variants: {
     fullWidth: {

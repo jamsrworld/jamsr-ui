@@ -15,7 +15,7 @@ import { useConfirmation } from "./use-confirmation";
 
 export type ConfirmationProps = {
   cancelBtnProps?: ButtonProps;
-  successBtnProps?: ButtonProps;
+  confirmBtnProps?: ButtonProps;
   className?: string;
   classNames?: {
     content?: string;
@@ -24,7 +24,11 @@ export type ConfirmationProps = {
     footer?: string;
     message?: string;
     cancelBtn?: string;
-    successBtn?: string;
+    confirmBtn?: string;
+  };
+  labels?: {
+    cancel?: string;
+    confirm?: string;
   };
 };
 
@@ -32,10 +36,19 @@ export const Confirmation = ($props: ConfirmationProps) => {
   const { confirmation: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
-  const { cancelBtnProps, successBtnProps, classNames, className } = props;
   const { isOpen, onClose, options: confirmation } = useConfirmation();
   if (!confirmation) return null;
-  const { message, onCancel, onConfirm, title } = confirmation;
+  const { message, onCancel, onConfirm, title, ...restProps } = confirmation;
+  const props2 = deepMergeProps(props, restProps);
+
+  const {
+    cancelBtnProps,
+    confirmBtnProps,
+    classNames,
+    className,
+    labels = { cancel: "No, Cancel", confirm: "Yes, Confirm" },
+  } = props2;
+
   const handleClose = () => {
     onCancel?.();
     onClose();
@@ -49,12 +62,12 @@ export const Confirmation = ($props: ConfirmationProps) => {
     <Dialog isOpen={isOpen} onOpenChange={onClose} closeButton={null}>
       <DialogContent
         className={cn(
-          "max-w-[280px] rounded-lg bg-background-secondary",
+          "max-w-[280px] rounded-lg",
           className,
           classNames?.content,
         )}
       >
-        <DialogHeader className={cn("text-center", classNames?.header)}>
+        <DialogHeader className={cn("pb-0 text-center", classNames?.header)}>
           {title}
         </DialogHeader>
         <DialogBody>
@@ -81,7 +94,7 @@ export const Confirmation = ($props: ConfirmationProps) => {
               classNames?.cancelBtn,
             )}
           >
-            Cancel
+            {labels.cancel}
           </Button>
           <Divider orientation="vertical" />
           <Button
@@ -89,14 +102,14 @@ export const Confirmation = ($props: ConfirmationProps) => {
             variant="light"
             onClick={handleConfirm}
             disableAnimation
-            {...successBtnProps}
+            {...confirmBtnProps}
             className={cn(
               "shrink rounded-none rounded-br-md font-bold",
-              successBtnProps?.className,
-              classNames?.successBtn,
+              confirmBtnProps?.className,
+              classNames?.confirmBtn,
             )}
           >
-            Ok
+            {labels.confirm}
           </Button>
         </div>
       </DialogContent>

@@ -317,7 +317,21 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     };
   };
 
-  const getInputProps: PropGetter<InputProps> = () => {
+  const onClearInput = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+      inputRef.current?.focus();
+      setValue(new Set([]));
+    },
+    [setValue],
+  );
+
+  const hasValue = useMemo(() => {
+    if (isMultiple) return value.size > 0;
+    return inputValue.length > 0;
+  }, [inputValue.length, isMultiple, value.size]);
+
+  const getInputProps: PropGetter<InputProps> = useCallback(() => {
     return {
       label,
       startContent,
@@ -339,6 +353,9 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
           "px-1": isMultiple,
         }),
       },
+      isClearable: true,
+      onClearInput,
+      showClearButton: hasValue,
       slotProps: {
         inputWrapper: {
           onClick: handleToggleOpen,
@@ -349,7 +366,25 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
         ref: inputRef,
       }),
     };
-  };
+  }, [
+    endContent,
+    getReferenceProps,
+    handleInputChange,
+    handleInputKeyDown,
+    handleToggleOpen,
+    hasValue,
+    helperText,
+    inputProps,
+    inputValue,
+    isInvalid,
+    isMultiple,
+    label,
+    onClearInput,
+    placeholder,
+    selectedItemsContent,
+    setReference,
+    startContent,
+  ]);
 
   return {
     context,

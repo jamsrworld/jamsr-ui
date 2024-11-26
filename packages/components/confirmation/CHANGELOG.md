@@ -1,5 +1,11 @@
 # @jamsr-ui/confirmation
 
+## 0.0.58
+
+### Patch Changes
+
+- fix input
+
 ## 0.0.57
 
 ### Patch Changes

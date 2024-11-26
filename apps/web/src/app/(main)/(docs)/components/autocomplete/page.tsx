@@ -1,17 +1,16 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { AutocompleteChooseCountry } from "./variants/choose-country";
 import { AutocompleteControlled } from "./variants/controlled";
-import { AutocompleteUsage } from "./variants/usage";
 import { AutocompleteErrorState } from "./variants/error-state";
 import { AutocompleteHelperText } from "./variants/helper-text";
 import { AutocompleteMultiple } from "./variants/multiple";
-import { AutocompleteMultipleControlled } from "./variants/multiple-controlled";
 import { AutocompleteMultipleCustomRender } from "./variants/multiple-custom-render";
 import { AutocompleteStartEndContent } from "./variants/start-end-content";
+import { AutocompleteUsage } from "./variants/usage";
 
 const title = "Autocomplete";
 const description =
@@ -52,12 +51,6 @@ const Autocomplete = () => {
       <VariantWrapper heading="Multiple Values" code={code("multiple")}>
         <AutocompleteMultiple />
       </VariantWrapper>
-      {/* <VariantWrapper
-        heading="Multiple Controlled"
-        code={code("multiple-controlled")}
-      >
-        <AutocompleteMultipleControlled />
-      </VariantWrapper> */}
       <VariantWrapper
         heading="Multiple Custom Render"
         code={code("multiple-custom-render")}

@@ -2,7 +2,7 @@
 
 import { Button, useConfirmation } from "@jamsr-ui/react";
 
-export const ConfirmationUsage = () => {
+export const ConfirmationColors = () => {
   const { confirm } = useConfirmation();
   const handleClick = () =>
     confirm({
@@ -10,6 +10,14 @@ export const ConfirmationUsage = () => {
       title: "Warning!",
       onConfirm() {},
       onCancel() {},
+      cancelBtnProps: {
+        color:"danger",
+        variant: "solid",
+      },
+      confirmBtnProps: {
+        color: "success",
+        variant: "solid",
+      },
     });
-  return <Button onClick={handleClick}>Delete</Button>;
+  return <Button onClick={handleClick}>Click me!</Button>;
 };

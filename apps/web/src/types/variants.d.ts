@@ -47,7 +47,7 @@ export type VariantTypes = {
   card: ["start-end-content", "usage", "variants"];
   checkbox: ["controlled", "disabled", "invalid-state", "readonly", "usage"];
   chip: ["on-delete", "usage"];
-  confirmation: ["usage"];
+  confirmation: ["colors", "usage"];
   "data-table": [
     "bordered",
     "columns",
@@ -105,6 +105,7 @@ export type VariantTypes = {
   ];
   header: ["hide-on-scroll", "static", "usage", "with-border"];
   input: [
+    "clearable",
     "controlled",
     "disabled",
     "error-state",
@@ -212,6 +213,7 @@ export type VariantTypes = {
   tab: [
     "as",
     "colors",
+    "customized",
     "disabled-item",
     "disabled",
     "outside",

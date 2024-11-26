@@ -1,5 +1,11 @@
 # @jamsr-ui/tab
 
+## 0.0.86
+
+### Patch Changes
+
+- fix input
+
 ## 0.0.85
 
 ### Patch Changes

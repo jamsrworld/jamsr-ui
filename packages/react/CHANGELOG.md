@@ -1,5 +1,13 @@
 # @jamsr-ui/react
 
+## 0.0.187
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/data-table@0.0.53
+  - @jamsr-ui/table@0.0.46
+
 ## 0.0.186
 
 ### Patch Changes

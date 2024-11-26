@@ -4,7 +4,7 @@ export const test = "";
 export const table = tv({
   slots: {
     base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl font-medium",
-    wrapper: "grid w-full gap-2",
+    wrapper: "grid w-full gap-2 overflow-x-auto",
     table: "group/table w-full min-w-full",
     thead: "h-10",
     th: "h-10 grow items-center whitespace-nowrap px-3 text-left text-sm",

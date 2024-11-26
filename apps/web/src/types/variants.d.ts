@@ -143,6 +143,7 @@ export type VariantTypes = {
     "without-lock-scroll",
   ];
   "otp-input": ["6-digits", "controlled", "numbers-only", "usage"];
+  pagination: [];
   popover: [
     "controlled",
     "placement",
@@ -208,6 +209,7 @@ export type VariantTypes = {
   ];
   show: ["usage"];
   skeleton: ["usage"];
+  slider: [];
   stepper: ["controlled", "events", "min-max-value", "usage"];
   switch: ["description", "invalid-state", "label-placement", "usage"];
   tab: [

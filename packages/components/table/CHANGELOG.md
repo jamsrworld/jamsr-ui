@@ -1,5 +1,11 @@
 # @jamsr-ui/table
 
+## 0.0.46
+
+### Patch Changes
+
+- fix data table bug
+
 ## 0.0.45
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @jamsr-ui/data-table
 
+## 0.0.53
+
+### Patch Changes
+
+- fix data table bug
+- Updated dependencies
+  - @jamsr-ui/table@0.0.46
+
 ## 0.0.52
 
 ### Patch Changes

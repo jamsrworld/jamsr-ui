@@ -2,7 +2,7 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import { cn, deepMergeProps, mapPropsVariants } from "@jamsr-ui/utils";
 import { useCallback, useMemo, type ComponentProps } from "react";
-import { table, type TableSlots, type TableVariantProps } from "./style";
+import { table, type TableSlots, type TableVariantProps } from "./styles";
 
 export type UseTableProps = TableVariantProps &
   UIProps<"table"> & {

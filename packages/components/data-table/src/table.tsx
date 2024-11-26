@@ -102,10 +102,6 @@ export const DataTable = (props: DataTableProps) => {
             {bottomContent}
           </>
         }
-        classNames={{
-          wrapper: "overflow-x-auto",
-          base: "overflow-hidden",
-        }}
         {...restProps}
       >
         <Header headerGroups={table.getHeaderGroups()} />

@@ -1,5 +1,12 @@
 # web
 
+## 0.1.169
+
+### Patch Changes
+
+- fix data table bug
+  - @jamsr-ui/react@0.0.187
+
 ## 0.1.168
 
 ### Patch Changes

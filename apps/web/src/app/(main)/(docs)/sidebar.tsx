@@ -204,6 +204,14 @@ export const sidebarItems: {
         heading: "Stepper",
         path: "/components/stepper",
       },
+      {
+        heading: "Pagination",
+        path: "/components/pagination",
+      },
+      {
+        heading: "Slider",
+        path: "/components/slider",
+      },
     ],
   },
   // {

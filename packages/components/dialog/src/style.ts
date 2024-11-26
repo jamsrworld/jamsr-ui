@@ -3,12 +3,13 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 export const test = "";
 export const dialog = tv({
   slots: {
-    backdrop: "z-backdrop grid place-items-center backdrop-blur-sm",
-    header: "px-2 pt-4 text-base font-bold md:px-4",
-    body: "m-auto w-full flex-1 overflow-y-auto p-2 md:p-4",
+    backdrop: "z-backdrop grid place-items-center",
+    header: "p-4 text-base font-bold",
+    body: "w-full p-4",
     content:
-      "relative z-dialog flex  w-full flex-col rounded-3xl bg-content1 shadow-lg backdrop-blur-3xl",
-    footer: "bottom-0 flex w-full justify-end gap-2 p-2 md:p-4",
+      "relative z-dialog flex max-h-[calc(100dvh-4rem)] w-full flex-col overflow-y-auto rounded-3xl bg-content1 shadow-lg backdrop-blur-3xl",
+    footer: "flex w-full items-center justify-end gap-2 p-4",
+    closeButton: "absolute right-2 top-2 z-10",
   },
   variants: {
     size: {
@@ -45,7 +46,7 @@ export const dialog = tv({
     },
     backdrop: {
       transparent: {
-        backdrop: "hidden",
+        backdrop: "",
       },
       opaque: {
         backdrop: " bg-overlay/50",
@@ -54,16 +55,22 @@ export const dialog = tv({
         backdrop: "bg-overlay/30 backdrop-blur-md backdrop-saturate-150",
       },
     },
-    isScroll: {
+    isBordered: {
       true: {
-        header: "border-b border-divider pb-4",
-        footer: "sticky border-t border-divider",
-        content: "max-h-[calc(100dvh-40px)] overflow-hidden",
+        header: "border-b border-divider-light",
+        footer: "border-t border-divider-light",
       },
+    },
+    scrollBehavior: {
+      inside: {
+        body: "grow overflow-y-auto",
+      },
+      outside: {},
     },
   },
   defaultVariants: {
-    scroll: false,
+    scrollBehavior: "inside",
+    isBordered: false,
     size: "lg",
     backdrop: "blur",
   },

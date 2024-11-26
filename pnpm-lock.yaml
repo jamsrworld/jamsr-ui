@@ -732,6 +732,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../hooks
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../shared-icons
       '@jamsr-ui/styles':
         specifier: workspace:^
         version: link:../../styles

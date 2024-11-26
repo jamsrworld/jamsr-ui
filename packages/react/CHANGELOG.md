@@ -1,5 +1,20 @@
 # @jamsr-ui/react
 
+## 0.0.185
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/confirmation@0.0.57
+  - @jamsr-ui/data-table@0.0.52
+  - @jamsr-ui/repeater@0.0.36
+  - @jamsr-ui/dialog@0.0.78
+  - @jamsr-ui/drawer@1.0.64
+  - @jamsr-ui/rating@0.0.26
+  - @jamsr-ui/editor@0.0.91
+  - @jamsr-ui/header@0.0.73
+  - @jamsr-ui/rhf@0.0.31
+
 ## 0.0.184
 
 ### Patch Changes

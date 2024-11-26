@@ -4,16 +4,13 @@ import {
   FloatingPortal,
 } from "@floating-ui/react";
 import { useUIStyle } from "@jamsr-ui/styles";
-import {
-  deepMergeProps,
-  type ComponentPropsWithAs,
-  type UIProps,
-} from "@jamsr-ui/utils";
+import { deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
-import { DialogClose } from "./dialog-close";
+import { DialogCloseBtn } from "./dialog-close-btn";
 import { useDialogContext } from "./dialog-context";
 
-export type DialogContentProps = UIProps<"div">;
+export type DialogContentProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T>;
 
 export const DialogContent = <T extends React.ElementType = "div">(
   $props: ComponentPropsWithAs<T, DialogContentProps>,
@@ -26,11 +23,12 @@ export const DialogContent = <T extends React.ElementType = "div">(
     interactions,
     context,
     setFloating,
-    slots: styles,
+    styles,
     Component: DialogComponent,
-    hideCloseButton,
+    closeButton,
     getDialogProps,
     isOpen,
+    classNames,
   } = useDialogContext();
   const Component = as ?? DialogComponent;
 
@@ -40,7 +38,9 @@ export const DialogContent = <T extends React.ElementType = "div">(
         <FloatingPortal>
           <FloatingOverlay
             data-slot="backdrop"
-            className={styles.backdrop()}
+            className={styles.backdrop({
+              className: classNames?.backdrop,
+            })}
             lockScroll
           >
             <FloatingFocusManager context={context} modal>
@@ -67,7 +67,9 @@ export const DialogContent = <T extends React.ElementType = "div">(
                   {...interactions.getFloatingProps()}
                   {...getDialogProps({ className })}
                 >
-                  {!hideCloseButton && <DialogClose />}
+                  {closeButton === null
+                    ? null
+                    : (closeButton ?? <DialogCloseBtn />)}
                   {children}
                 </Component>
               </m.div>

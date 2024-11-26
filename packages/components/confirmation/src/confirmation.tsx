@@ -46,7 +46,7 @@ export const Confirmation = ($props: ConfirmationProps) => {
   };
 
   return (
-    <Dialog isOpen={isOpen} onOpenChange={onClose} hideCloseButton>
+    <Dialog isOpen={isOpen} onOpenChange={onClose} closeButton={null}>
       <DialogContent
         className={cn(
           "max-w-[280px] rounded-lg bg-background-secondary",

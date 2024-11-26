@@ -8,19 +8,26 @@ import {
   DialogContent,
   DialogFooter,
   DialogHeader,
+  type DialogProps,
   Repeater,
   Typography,
 } from "@jamsr-ui/react";
 
-export const DialogUsage = () => {
-  const { isOpen, onClose, onOpen, setIsOpen } = useDisclosure();
+const DialogItem = (
+  props: Partial<DialogProps> & {
+    buttonText?: string;
+  },
+) => {
+  const { isOpen, onClose, setIsOpen, onOpen } = useDisclosure();
+  const { buttonText, ...restProps } = props;
   return (
     <div>
-      <Button onClick={onOpen}>Click Me!</Button>
-      <Dialog isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Button onClick={onOpen}>{buttonText}</Button>
+      <Dialog isOpen={isOpen} onOpenChange={setIsOpen} {...restProps}>
         <DialogContent>
           <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">
+            <Typography as="h3">Im am dialog Body</Typography>
             <Repeater repeat={2}>
               <Typography as="p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -40,6 +47,25 @@ export const DialogUsage = () => {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+    </div>
+  );
+};
+
+export const DialogBackdrop = () => {
+  const backdrops: NonNullable<DialogProps["backdrop"]>[] = [
+    "transparent",
+    "opaque",
+    "blur",
+  ];
+  return (
+    <div className="flex flex-wrap gap-4">
+      {backdrops.map((backdrop) => (
+        <DialogItem
+          buttonText={`backdrop ${backdrop}`}
+          key={backdrop}
+          backdrop={backdrop}
+        />
+      ))}
     </div>
   );
 };

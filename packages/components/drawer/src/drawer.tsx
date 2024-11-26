@@ -8,12 +8,16 @@ import {
   useInteractions,
   useRole,
 } from "@floating-ui/react";
+import { type ButtonProps } from "@jamsr-ui/button";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
-import { AnimatePresence, m, type Variant } from "framer-motion";
-import { type ComponentProps, useState } from "react";
-import { drawer, type DrawerSlots, type DrawerVariants } from "./style";
+import { AnimatePresence, m } from "framer-motion";
+import { type ComponentProps, useMemo, useState } from "react";
+import { DrawerCloseButton } from "./drawer-close-btn";
+import { motionDrawerVariants } from "./motion";
+import { drawer, type DrawerSlots, type DrawerVariants } from "./styles";
+import { type DrawerContextType, DrawerProvider } from "./use-drawer-context";
 
 export type DrawerProps = DrawerVariants & {
   children: React.ReactNode;
@@ -24,77 +28,12 @@ export type DrawerProps = DrawerVariants & {
   classNames?: SlotsToClasses<DrawerSlots>;
   // @ts-expect-error framer-motion error
   motionProps?: Partial<ComponentProps<typeof m.div>>;
-};
-
-type Anchor = NonNullable<DrawerVariants["anchor"]>;
-
-const variants: { initial: Variant; animate: Variant; exit: Variant } = {
-  initial(custom: Anchor) {
-    switch (custom) {
-      case "left":
-        return {
-          x: "-100%",
-        };
-      case "right":
-        return {
-          x: "100%",
-        };
-      case "top":
-        return {
-          y: "-100%",
-        };
-      case "bottom":
-        return {
-          y: "100%",
-        };
-      default:
-        return {};
-    }
-  },
-  animate(custom: Anchor) {
-    switch (custom) {
-      case "left":
-        return {
-          x: 0,
-        };
-      case "right":
-        return {
-          x: 0,
-        };
-      case "top":
-        return {
-          y: 0,
-        };
-      case "bottom":
-        return {
-          y: 0,
-        };
-      default:
-        return {};
-    }
-  },
-  exit(custom: Anchor) {
-    switch (custom) {
-      case "left":
-        return {
-          x: "-100%",
-        };
-      case "right":
-        return {
-          x: "100%",
-        };
-      case "top":
-        return {
-          y: "-100%",
-        };
-      case "bottom":
-        return {
-          y: "100%",
-        };
-      default:
-        return {};
-    }
-  },
+  closeButton?: React.ReactNode;
+  isDismissible?: boolean;
+  isKeyboardDismissible?: boolean;
+  slotProps?: {
+    closeButton?: Partial<ButtonProps>;
+  };
 };
 
 export const Drawer = ($props: DrawerProps) => {
@@ -113,6 +52,12 @@ export const Drawer = ($props: DrawerProps) => {
     classNames,
     size,
     motionProps,
+    isBordered,
+    scrollBehavior,
+    closeButton,
+    slotProps,
+    isDismissible = true,
+    isKeyboardDismissible = true,
   } = props;
 
   const [isOpen, setIsOpen] = useControlledState(
@@ -129,11 +74,12 @@ export const Drawer = ($props: DrawerProps) => {
   const { setFloating } = refs;
 
   const click = useClick(context, {
-    enabled: true,
+    enabled: isDismissible,
   });
   const dismiss = useDismiss(context, {
-    escapeKey: true,
+    escapeKey: isKeyboardDismissible,
     outsidePressEvent: "click",
+    outsidePress: isDismissible,
   });
   const role = useRole(context);
   const interactions = useInteractions([click, dismiss, role]);
@@ -142,6 +88,8 @@ export const Drawer = ($props: DrawerProps) => {
     anchor,
     backdrop,
     size,
+    isBordered,
+    scrollBehavior,
   });
   const handleAnimationStart = () => {
     setIsAnimating(true);
@@ -149,6 +97,15 @@ export const Drawer = ($props: DrawerProps) => {
 
   const handleAnimationComplete = () => {
     setIsAnimating(false);
+  };
+
+  const contextValue: DrawerContextType = useMemo(
+    () => ({ styles, classNames, slotProps }),
+    [classNames, slotProps, styles],
+  );
+
+  const onClose = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -169,14 +126,14 @@ export const Drawer = ($props: DrawerProps) => {
               >
                 {/* @ts-expect-error framer motion error */}
                 <m.div
-                  variants={variants}
+                  variants={motionDrawerVariants}
                   key="modal"
                   initial="initial"
                   animate="animate"
                   exit="exit"
                   custom={anchor}
-                  className={styles.content({
-                    className: cn(className, classNames?.content),
+                  className={styles.base({
+                    className: cn(className, classNames?.base),
                   })}
                   transition={{
                     type: "spring",
@@ -189,7 +146,12 @@ export const Drawer = ($props: DrawerProps) => {
                   {...interactions.getFloatingProps()}
                   {...motionProps}
                 >
-                  {children}
+                  <DrawerProvider value={contextValue}>
+                    {closeButton === null
+                      ? null
+                      : (closeButton ?? <DrawerCloseButton onClick={onClose} />)}
+                    {children}
+                  </DrawerProvider>
                 </m.div>
               </FloatingFocusManager>
             </FloatingOverlay>

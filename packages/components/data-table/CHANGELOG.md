@@ -1,5 +1,13 @@
 # @jamsr-ui/data-table
 
+## 0.0.52
+
+### Patch Changes
+
+- new dialog, drawer
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.36
+
 ## 0.0.51
 
 ### Patch Changes

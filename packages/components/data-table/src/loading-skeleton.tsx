@@ -16,7 +16,7 @@ export const LoadingSkeleton = ({ linear }: { linear?: boolean }) => {
             <LinearProgress isIntermediate />
           ) : (
             <div className="gap-1">
-              <Repeater count={6}>
+              <Repeater repeat={6}>
                 <Skeleton className="h-12 w-full" />
               </Repeater>
             </div>

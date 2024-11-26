@@ -8,14 +8,16 @@ import {
   DrawerFooter,
   DrawerHeader,
   Repeater,
+  type DrawerProps,
 } from "@jamsr-ui/react";
 
-export const DrawerUsage = () => {
+const DrawerItem = (props: Partial<DrawerProps> & { btnText: string }) => {
   const { isOpen, onClose, setIsOpen, onOpen } = useDisclosure();
+  const { btnText, ...restProps } = props;
   return (
     <div>
-      <Button onClick={onOpen}>Click Me!</Button>
-      <Drawer isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Button onClick={onOpen}>{btnText}</Button>
+      <Drawer {...restProps} isOpen={isOpen} onOpenChange={setIsOpen}>
         <DrawerHeader>Product Filter</DrawerHeader>
         <DrawerBody>
           <Repeater repeat={3}>
@@ -36,6 +38,25 @@ export const DrawerUsage = () => {
           </Button>
         </DrawerFooter>
       </Drawer>
+    </div>
+  );
+};
+
+export const DrawerBackdrop = () => {
+  const backdrops: NonNullable<DrawerProps["backdrop"]>[] = [
+    "transparent",
+    "opaque",
+    "blur",
+  ];
+  return (
+    <div className="flex flex-wrap gap-4">
+      {backdrops.map((backdrop) => (
+        <DrawerItem
+          btnText={`backdrop ${backdrop}`}
+          key={backdrop}
+          backdrop={backdrop}
+        />
+      ))}
     </div>
   );
 };

@@ -34,7 +34,7 @@ export const Rating = (props: RatingProps) => {
           <label {...getLabelProps()}>{label}</label>
         </div>
         <div {...getInnerWrapperProps()}>
-          <Repeater count={maxValue}>
+          <Repeater repeat={maxValue}>
             {({ position }) => {
               return (
                 <RatingItem

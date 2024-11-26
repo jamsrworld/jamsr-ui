@@ -11,7 +11,7 @@ type Story = StoryObj<typeof meta>;
 
 const Template = () => {
   return (
-    <Repeater count={5}>
+    <Repeater repeat={5}>
       <div className="p-2">I am repeated</div>
     </Repeater>
   );

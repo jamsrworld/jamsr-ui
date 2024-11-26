@@ -12,12 +12,28 @@ import {
   Typography,
 } from "@jamsr-ui/react";
 
-export const DialogUsage = () => {
+export const DialogCustomize = () => {
   const { isOpen, onClose, onOpen, setIsOpen } = useDisclosure();
   return (
     <div>
       <Button onClick={onOpen}>Click Me!</Button>
-      <Dialog isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Dialog
+        isOpen={isOpen}
+        onOpenChange={setIsOpen}
+        classNames={{
+          header: "bg-red-500",
+          body: "bg-content2",
+          footer: "bg-content3",
+          closeButton: "bg-red-900",
+          content: "border-2 border-red-950",
+          backdrop: "bg-gray-900/20",
+        }}
+        slotProps={{
+          closeButton: {
+            isRounded: false,
+          },
+        }}
+      >
         <DialogContent>
           <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">

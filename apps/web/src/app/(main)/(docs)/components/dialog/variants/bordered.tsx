@@ -12,12 +12,12 @@ import {
   Typography,
 } from "@jamsr-ui/react";
 
-export const DialogUsage = () => {
+export const DialogBordered = () => {
   const { isOpen, onClose, onOpen, setIsOpen } = useDisclosure();
   return (
     <div>
       <Button onClick={onOpen}>Click Me!</Button>
-      <Dialog isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Dialog isBordered isOpen={isOpen} onOpenChange={setIsOpen}>
         <DialogContent>
           <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">

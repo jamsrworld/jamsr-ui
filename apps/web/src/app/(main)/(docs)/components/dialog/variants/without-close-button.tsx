@@ -11,16 +11,15 @@ import {
   Typography,
 } from "@jamsr-ui/react";
 
-export const DialogWithoutCloseBtn = () => {
+export const DialogWithoutCloseButton = () => {
   const { isOpen, onClose, onOpen, setIsOpen } = useDisclosure();
   return (
     <div>
       <Button onClick={onOpen}>Open Me</Button>
-      <Dialog hideCloseButton isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Dialog closeButton={null} isOpen={isOpen} onOpenChange={setIsOpen}>
         <DialogContent>
-          <DialogHeader>Im am dialog Heading</DialogHeader>
+          <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">
-            <Typography as="h3">Im am dialog Body</Typography>
             <Typography as="p">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
               molestias sequi? Aperiam fugit dignissimos doloribus doloremque

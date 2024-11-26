@@ -8,20 +8,26 @@ import {
   DialogContent,
   DialogFooter,
   DialogHeader,
+  type DialogProps,
   Repeater,
   Typography,
 } from "@jamsr-ui/react";
 
-export const DialogUsage = () => {
-  const { isOpen, onClose, onOpen, setIsOpen } = useDisclosure();
+const DialogItem = (
+  props: Partial<DialogProps> & {
+    buttonText?: string;
+  },
+) => {
+  const { isOpen, onClose, setIsOpen, onOpen } = useDisclosure();
+  const { buttonText, ...restProps } = props;
   return (
     <div>
-      <Button onClick={onOpen}>Click Me!</Button>
-      <Dialog isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Button onClick={onOpen}>{buttonText}</Button>
+      <Dialog isOpen={isOpen} onOpenChange={setIsOpen} {...restProps}>
         <DialogContent>
           <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">
-            <Repeater repeat={2}>
+            <Repeater repeat={20}>
               <Typography as="p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Dignissimos corrupti est quos asperiores libero maiores amet non
@@ -40,6 +46,16 @@ export const DialogUsage = () => {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+    </div>
+  );
+};
+
+export const DialogScrollBehavior = () => {
+  return (
+    <div className="flex flex-wrap gap-4">
+      <DialogItem buttonText="Inside" scrollBehavior="inside" />
+      <DialogItem buttonText="Outside" scrollBehavior="outside" />
+      <DialogItem buttonText="Bordered" scrollBehavior="inside" isBordered />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import {
   useInteractions,
   useRole,
 } from "@floating-ui/react";
+import { type ButtonProps } from "@jamsr-ui/button";
 import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
@@ -19,11 +20,16 @@ import { useMemo, type ComponentProps } from "react";
 import { dialog, type DialogSlots, type DialogVariantProps } from "./style";
 
 type Props = UIProps<"div"> & {
-  hideCloseButton?: boolean;
+  closeButton?: React.ReactNode;
   classNames?: SlotsToClasses<DialogSlots>;
   defaultOpen?: boolean;
   isOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
+  isDismissible?: boolean;
+  isKeyboardDismissible?: boolean;
+  slotProps?: {
+    closeButton?: Partial<ButtonProps>;
+  };
 };
 
 export type UseDialogProps = Props & DialogVariantProps;
@@ -41,7 +47,10 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     isOpen: isOpenProp,
     defaultOpen,
     onOpenChange,
-    hideCloseButton,
+    closeButton,
+    isDismissible = true,
+    isKeyboardDismissible = true,
+    slotProps,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -52,7 +61,7 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     onOpenChange,
   );
 
-  const slots = useMemo(() => {
+  const styles = useMemo(() => {
     return dialog(variantProps);
   }, [variantProps]);
 
@@ -61,7 +70,7 @@ export const UseDialog = (originalProps: UseDialogProps) => {
       ...restProps,
       ...props,
       "data-slot": "content",
-      className: slots.content({
+      className: styles.content({
         className: cn(classNames?.content, className, props.className),
       }),
       "data-open": dataAttr(isOpen),
@@ -76,14 +85,16 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     onOpenChange: setIsOpen,
   });
   const click = useClick(context, {
-    enabled: true,
+    enabled: isDismissible,
   });
   const dismiss = useDismiss(context, {
-    escapeKey: true,
-    outsidePress: (event) => {
-      const element = event.target as HTMLElement | null;
-      return !element?.closest(".Toastify");
-    },
+    escapeKey: isKeyboardDismissible,
+    outsidePress:
+      !!isDismissible &&
+      ((event) => {
+        const element = event.target as HTMLElement | null;
+        return !element?.closest(".Toastify");
+      }),
     outsidePressEvent: "click",
   });
   const role = useRole(context);
@@ -94,11 +105,12 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     getDialogProps,
     isOpen,
     classNames,
-    slots,
-    hideCloseButton,
+    styles,
+    closeButton,
     interactions,
     context,
     setFloating,
     setIsOpen,
+    slotProps,
   };
 };

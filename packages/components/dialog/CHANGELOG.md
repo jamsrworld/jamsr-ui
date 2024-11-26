@@ -1,5 +1,11 @@
 # @jamsr-ui/dialog
 
+## 0.0.78
+
+### Patch Changes
+
+- new dialog, drawer
+
 ## 0.0.77
 
 ### Patch Changes

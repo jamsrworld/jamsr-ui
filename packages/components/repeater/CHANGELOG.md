@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.36
+
+### Patch Changes
+
+- new dialog, drawer
+
 ## 0.0.35
 
 ### Patch Changes

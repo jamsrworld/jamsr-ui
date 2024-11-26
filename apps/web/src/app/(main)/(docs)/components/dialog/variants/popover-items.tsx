@@ -7,7 +7,6 @@ import {
   DialogBody,
   DialogContent,
   DialogFooter,
-  DialogHeader,
   Popover,
   Select,
   SelectItem,
@@ -20,9 +19,8 @@ export const DialogPopoverItems = () => {
   return (
     <div>
       <Button onClick={onOpen}>Open Me</Button>
-      <Dialog isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Dialog isOpen={isOpen} onOpenChange={setIsOpen} closeButton={null}>
         <DialogContent>
-          <DialogHeader>Im am dialog Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">
             <Select>
               <SelectItem value="hola">Hello</SelectItem>

@@ -8,17 +8,19 @@ import {
   DrawerFooter,
   DrawerHeader,
   Repeater,
+  type DrawerProps,
 } from "@jamsr-ui/react";
 
-export const DrawerUsage = () => {
+const DrawerItem = (props: Partial<DrawerProps> & { btnText: string }) => {
   const { isOpen, onClose, setIsOpen, onOpen } = useDisclosure();
+  const { btnText, ...restProps } = props;
   return (
     <div>
-      <Button onClick={onOpen}>Click Me!</Button>
-      <Drawer isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Button onClick={onOpen}>{btnText}</Button>
+      <Drawer {...restProps} isOpen={isOpen} onOpenChange={setIsOpen}>
         <DrawerHeader>Product Filter</DrawerHeader>
         <DrawerBody>
-          <Repeater repeat={3}>
+          <Repeater repeat={20}>
             <p className="mb-4">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
               laborum optio quo reiciendis odio facilis quos adipisci unde eum
@@ -36,6 +38,16 @@ export const DrawerUsage = () => {
           </Button>
         </DrawerFooter>
       </Drawer>
+    </div>
+  );
+};
+
+export const DrawerScrollBehavior = () => {
+  return (
+    <div className="flex gap-4">
+      <DrawerItem btnText="Inside" scrollBehavior="inside" />
+      <DrawerItem btnText="Outside" scrollBehavior="outside" />
+      <DrawerItem btnText="With Border" scrollBehavior="inside" isBordered />
     </div>
   );
 };

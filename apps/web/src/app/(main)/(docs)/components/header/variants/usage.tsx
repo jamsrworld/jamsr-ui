@@ -13,7 +13,7 @@ export const HeaderUsage = (props: HeaderProps) => {
         <Button>Go to dashboard</Button>
       </Header>
       <div className="flex flex-col items-center justify-center gap-8 p-4">
-        <Repeater count={12}>
+        <Repeater repeat={12}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
             nobis, repudiandae ullam animi illum praesentium quidem eius amet

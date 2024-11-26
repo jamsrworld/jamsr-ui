@@ -1,5 +1,13 @@
 # @jamsr-ui/rating
 
+## 0.0.26
+
+### Patch Changes
+
+- new dialog, drawer
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.36
+
 ## 0.0.25
 
 ### Patch Changes

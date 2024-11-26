@@ -10,12 +10,12 @@ import {
   Repeater,
 } from "@jamsr-ui/react";
 
-export const DrawerUsage = () => {
+export const DrawerBordered = () => {
   const { isOpen, onClose, setIsOpen, onOpen } = useDisclosure();
   return (
     <div>
       <Button onClick={onOpen}>Click Me!</Button>
-      <Drawer isOpen={isOpen} onOpenChange={setIsOpen}>
+      <Drawer isBordered isOpen={isOpen} onOpenChange={setIsOpen}>
         <DrawerHeader>Product Filter</DrawerHeader>
         <DrawerBody>
           <Repeater repeat={3}>

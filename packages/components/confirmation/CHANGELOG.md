@@ -1,5 +1,13 @@
 # @jamsr-ui/confirmation
 
+## 0.0.57
+
+### Patch Changes
+
+- new dialog, drawer
+- Updated dependencies
+  - @jamsr-ui/dialog@0.0.78
+
 ## 0.0.56
 
 ### Patch Changes

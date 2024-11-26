@@ -2,25 +2,23 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import { type ComponentPropsWithAs, cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useDialogContext } from "./dialog-context";
 
-export type DialogHeaderProps = NonNullable<unknown>;
+export type DialogHeaderProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T>;
 
 export const DialogHeader = <T extends React.ElementType = "div">(
-  $props: ComponentPropsWithAs<T, DialogHeaderProps>,
+  $props: DialogHeaderProps<T>,
 ) => {
   const { dialogHeader: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
-  const { as, children, className, ...restProps } = props;
-  const { classNames, slots } = useDialogContext();
+  const { as, children, className: $className, ...restProps } = props;
+  const { classNames, styles } = useDialogContext();
   const Component = as ?? "div";
+  const className = styles.header({
+    className: cn($className, classNames?.header),
+  });
   return (
-    <Component
-      data-slot="header"
-      className={slots.header({
-        className: cn(classNames?.footer, className),
-      })}
-      {...restProps}
-    >
+    <Component data-slot="header" className={className} {...restProps}>
       {children}
     </Component>
   );

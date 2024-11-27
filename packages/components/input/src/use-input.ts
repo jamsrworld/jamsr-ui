@@ -48,6 +48,7 @@ type Props = {
   isClearable?: boolean;
   onClearInput?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   showClearButton?: boolean;
+  isDisabled?: boolean;
 };
 
 type InputProps = UIProps<"input">;
@@ -92,6 +93,8 @@ export const useInput = ($props: UseInputProps) => {
     isClearable = false,
     onClearInput,
     showClearButton,
+    disabled = false,
+    isDisabled: $isDisabled = false,
     ...restProps
   } = props;
 
@@ -99,6 +102,7 @@ export const useInput = ($props: UseInputProps) => {
   const InputComponent = "input";
   const inputDOMRef = useDOMRef(ref);
   const [isFocused, setIsFocused] = useState(false);
+  const isDisabled = disabled || $isDisabled;
 
   const styles = inputVariants({
     variant,
@@ -347,6 +351,7 @@ export const useInput = ($props: UseInputProps) => {
         onChange: handleInputChange,
         type: inputType,
         placeholder,
+        disabled: isDisabled,
         ...mergeProps(restProps, props ?? {}, {
           onFocus: handleOnFocus,
           onBlur: handleOnBlur,
@@ -355,17 +360,18 @@ export const useInput = ($props: UseInputProps) => {
       };
     },
     [
-      value,
       styles,
       classNames?.input,
       className,
+      value,
       handleInputChange,
       inputType,
       placeholder,
+      isDisabled,
       restProps,
-      inputDOMRef,
       handleOnFocus,
       handleOnBlur,
+      inputDOMRef,
     ],
   );
 

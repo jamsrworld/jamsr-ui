@@ -2,32 +2,43 @@ import { useListItem } from "@floating-ui/react";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { cn, deepMergeProps } from "@jamsr-ui/utils";
+import { dataAttr, deepMergeProps } from "@jamsr-ui/utils";
 import { useAutocompleteContext } from "./use-autocomplete-context";
 
 type Props = {
   value: string;
   label?: string;
   renderLabel?: React.ReactNode;
+  isDisabled?: boolean;
 };
 
-export type AutocompleteItemProps<T extends React.ElementType = "div"> =
+export type AutocompleteItemProps<T extends React.ElementType = "li"> =
   ComponentPropsWithAs<T, Props>;
 
-export const AutocompleteItem = <T extends React.ElementType = "div">(
+export const AutocompleteItem = <T extends React.ElementType = "li">(
   $props: AutocompleteItemProps<T>,
 ) => {
   const { autocompleteItem: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
-  const { children, className, value, as, label, renderLabel, ...restProps } =
-    props;
+  const {
+    children,
+    className: $className,
+    value,
+    as,
+    label,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    renderLabel,
+    isDisabled,
+    ...restProps
+  } = props;
 
   const {
     activeIndex,
     getItemProps,
     handleSelect,
     value: valueSet,
+    styles,
   } = useAutocompleteContext();
 
   const listLabel = label ?? (typeof children === "string" ? children : "");
@@ -41,26 +52,30 @@ export const AutocompleteItem = <T extends React.ElementType = "div">(
   });
   const isActive = activeIndex === index;
   const isSelected = valueSet.has(value);
-  const Component = as ?? "div";
+  const Component = as ?? "li";
 
+  const className = styles.item({
+    className: $className,
+  });
   return (
     <Component
       ref={ref}
       data-slot="item"
       role="option"
-      aria-selected={isSelected}
+      aria-selected={dataAttr(isSelected)}
+      data-selected={dataAttr(isSelected)}
+      aria-disabled={dataAttr(isDisabled)}
+      data-disabled={dataAttr(isDisabled)}
+      data-active={dataAttr(isActive)}
       tabIndex={-1}
-      className={cn(
-        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-content2",
-        className,
-        { "bg-content2": isActive },
-      )}
       {...restProps}
-      {...getItemProps({
-        onClick: () => {
-          handleSelect({ label: listLabel, value });
-        },
-      })}
+      {...(!isDisabled &&
+        getItemProps({
+          onClick: () => {
+            handleSelect({ label: listLabel, value });
+          },
+        }))}
+      className={className}
     >
       {children}
       {isSelected && <CheckIcon className="absolute right-1" />}

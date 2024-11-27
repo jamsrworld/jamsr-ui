@@ -1,5 +1,12 @@
 # web
 
+## 0.1.170
+
+### Patch Changes
+
+- fix autocomplete
+  - @jamsr-ui/react@0.0.188
+
 ## 0.1.169
 
 ### Patch Changes

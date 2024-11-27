@@ -1,7 +1,7 @@
 import { Button } from "@jamsr-ui/button";
 import { CloseIcon, EyeClosedIcon, EyeOpenIcon } from "@jamsr-ui/shared-icons";
 import { type ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { useId, useMemo } from "react";
+import React, { useId, useMemo } from "react";
 import { useInput, type UseInputProps } from "./use-input";
 
 export type InputProps = UseInputProps;
@@ -49,17 +49,6 @@ export const Input = <T extends React.ElementType = "div">(
 
   const getEndContent = useMemo(() => {
     const content =
-      ((showClearButton ?? (isClearable && hasValue)) && (
-        <Button
-          isIconOnly
-          variant="light"
-          size="xs"
-          isRounded
-          {...getClearButtonProps()}
-        >
-          <CloseIcon width={12} height={12} />
-        </Button>
-      )) ||
       (isSecuredText === true && (
         <Button
           isIconOnly
@@ -73,7 +62,29 @@ export const Input = <T extends React.ElementType = "div">(
       )) ||
       endContent;
 
-    return !content ? null : <div {...getEndContentProps()}>{content}</div>;
+    const contents = [];
+    if (showClearButton ?? (isClearable && hasValue)) {
+      contents.push(
+        <Button
+          isIconOnly
+          variant="light"
+          size="xs"
+          isRounded
+          {...getClearButtonProps()}
+        >
+          <CloseIcon width={12} height={12} />
+        </Button>,
+      );
+    }
+    contents.push(content);
+
+    return !contents.length ? null : (
+      <div {...getEndContentProps()}>
+        {contents.map((item, idx) => (
+          <React.Fragment key={idx}>{item}</React.Fragment>
+        ))}
+      </div>
+    );
   }, [
     endContent,
     getClearButtonProps,
@@ -82,6 +93,7 @@ export const Input = <T extends React.ElementType = "div">(
     hasValue,
     isClearable,
     isSecuredText,
+    showClearButton,
     showPassword,
   ]);
 

@@ -1,13 +1,15 @@
 import {
   Autocomplete,
   AutocompleteItem,
+  type AutocompleteItemProps,
   type AutocompleteProps,
 } from "@jamsr-ui/react";
 
-const animals = [
+const animals: AutocompleteItemProps[] = [
   {
     label: "Cat",
     value: "cat",
+    isDisabled: true,
   },
   {
     label: "Dog",
@@ -16,6 +18,7 @@ const animals = [
   {
     label: "Elephant",
     value: "elephant",
+    isDisabled: true,
   },
   {
     label: "Lion",
@@ -24,10 +27,12 @@ const animals = [
   {
     label: "Tiger",
     value: "tiger",
+    isDisabled: true,
   },
   {
     label: "Giraffe",
     value: "giraffe",
+    isDisabled: true,
   },
   {
     label: "Dolphin",
@@ -59,7 +64,9 @@ const animals = [
   },
 ];
 
-export const AutocompleteUsage = (props: Partial<AutocompleteProps>) => {
+export const AutocompleteDisabledItems = (
+  props: Partial<AutocompleteProps>,
+) => {
   return (
     <div>
       <Autocomplete label="Animal" {...props}>
@@ -68,6 +75,7 @@ export const AutocompleteUsage = (props: Partial<AutocompleteProps>) => {
             key={animal.value}
             value={animal.value}
             label={animal.label}
+            isDisabled={animal.isDisabled}
           >
             {animal.label}
           </AutocompleteItem>

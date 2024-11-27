@@ -9,6 +9,11 @@ export const autocompleteVariant = tv({
       "z-popover flex flex-col overflow-hidden rounded-2xl bg-content1 shadow-md backdrop-blur-3xl focus:outline-none",
     content: "overflow-y-auto p-2",
     emptyContent: "text-foreground-500",
+    item: [
+      "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm",
+      "ui-active:bg-content2",
+      "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
+    ],
   },
 });
 

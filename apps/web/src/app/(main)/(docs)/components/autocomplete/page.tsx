@@ -5,6 +5,8 @@ import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { AutocompleteChooseCountry } from "./variants/choose-country";
 import { AutocompleteControlled } from "./variants/controlled";
+import { AutocompleteDisabled } from "./variants/disabled";
+import { AutocompleteDisabledItems } from "./variants/disabled-items";
 import { AutocompleteErrorState } from "./variants/error-state";
 import { AutocompleteHelperText } from "./variants/helper-text";
 import { AutocompleteMultiple } from "./variants/multiple";
@@ -35,6 +37,12 @@ const Autocomplete = () => {
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <AutocompleteControlled />
+      </VariantWrapper>
+      <VariantWrapper heading="Disabled" code={code("disabled")}>
+        <AutocompleteDisabled />
+      </VariantWrapper>
+      <VariantWrapper heading="Disabled Items" code={code("disabled-items")}>
+        <AutocompleteDisabledItems />
       </VariantWrapper>
       <VariantWrapper heading="Error State" code={code("error-state")}>
         <AutocompleteErrorState />

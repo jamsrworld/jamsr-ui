@@ -46,6 +46,7 @@ export type UseAutocompleteProps = Pick<
   | "helperText"
   | "isInvalid"
   | "onBlur"
+  | "isDisabled"
 > & {
   className?: string;
   classNames?: SlotsToClasses<AutocompleteSlots>;
@@ -84,6 +85,8 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     isInvalid,
     children,
     inputProps,
+    isDisabled,
+    onBlur,
   } = props;
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
@@ -183,12 +186,15 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     className,
   });
 
-  const handleInputChange = (value: string) => {
-    setInputValue(value);
-    setIsOpen(true);
-    setIsFocused(false);
-    setActiveIndex(0);
-  };
+  const handleInputChange = useCallback(
+    (value: string) => {
+      setInputValue(value);
+      setIsOpen(true);
+      setIsFocused(false);
+      setActiveIndex(0);
+    },
+    [setIsOpen],
+  );
 
   const handleToggleOpen = useCallback(() => {
     setIsFocused(true);
@@ -265,19 +271,31 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       isMultiple,
       value,
       setInputValue,
+      styles,
     };
-  }, [activeIndex, getItemProps, handleSelect, isMultiple, setValue, value]);
+  }, [
+    activeIndex,
+    getItemProps,
+    handleSelect,
+    isMultiple,
+    setValue,
+    styles,
+    value,
+  ]);
 
-  const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter" && activeIndex !== null) {
-      const indexItem = renderedItems[activeIndex];
-      if (!indexItem) return;
-      handleSelect({
-        label: indexItem.label,
-        value: indexItem.value,
-      });
-    }
-  };
+  const handleInputKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.key === "Enter" && activeIndex !== null) {
+        const indexItem = renderedItems[activeIndex];
+        if (!indexItem) return;
+        handleSelect({
+          label: indexItem.label,
+          value: indexItem.value,
+        });
+      }
+    },
+    [activeIndex, handleSelect, renderedItems],
+  );
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = (props) => {
     return {
@@ -348,6 +366,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       children: isMultiple ? selectedItemsContent : null,
       inputWrapperRef: setReference,
       classNames: {
+        ...inputProps?.classNames,
         inputWrapper: "select-none",
         contentWrapper: cn("h-auto flex-wrap gap-1", {
           "px-1": isMultiple,
@@ -361,6 +380,8 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
           onClick: handleToggleOpen,
         },
       },
+      isDisabled,
+      onBlur,
       ...getReferenceProps({
         onKeyDown: handleInputKeyDown,
         ref: inputRef,
@@ -376,9 +397,11 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     helperText,
     inputProps,
     inputValue,
+    isDisabled,
     isInvalid,
     isMultiple,
     label,
+    onBlur,
     onClearInput,
     placeholder,
     selectedItemsContent,

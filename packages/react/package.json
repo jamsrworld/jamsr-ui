@@ -1,8 +1,36 @@
 {
   "name": "@jamsr-ui/react",
   "version": "0.0.188",
+  "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "22.7.9",
+    "@types/react": "^18.3.3",
+    "@typescript-eslint/parser": "^7.10.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "clean-package": "^2.2.0",
+    "eslint": "^8",
+    "framer-motion": "12.0.0-alpha.1",
+    "jsdom": "^24.0.0",
+    "postcss": "^8.4.38",
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@jamsr-ui/accordion": "workspace:^",
@@ -57,41 +85,5 @@
     "framer-motion": "12.0.0-alpha.1",
     "react": "19.0.0-rc-603e6108-20241029"
   },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
-  "description": "A modern and beautiful Next.js UI components library.",
-  "keywords": [
-    "react",
-    "ui",
-    "UI components",
-    "Next.js",
-    "React",
-    "JamsrUI",
-    "Jamsr UI",
-    "jamsr-ui",
-    "TypeScript"
-  ],
-  "sideEffects": false,
-  "license": "MIT",
-  "author": "@jamsrworld",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jamsrworld/jamsr-ui"
-  },
-  "bugs": {
-    "url": "https://github.com/jamsrworld/jamsr-ui/issues"
-  },
-  "homepage": "https://jamsr-ui.jamsrworld.com",
-  "files": [
-    "dist",
-    "README",
-    "README.md",
-    "package.json",
-    "LICENSE"
-  ]
+  "clean-package": "../../clean-package.config.json"
 }

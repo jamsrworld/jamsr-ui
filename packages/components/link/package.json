@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/link",
-  "version": "0.0.67",
+  "version": "0.0.68",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",

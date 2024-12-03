@@ -1,5 +1,22 @@
 # @jamsr-ui/editor
 
+## 0.0.94
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.89
+  - @jamsr-ui/button@0.0.70
+  - @jamsr-ui/select@0.0.85
+  - @jamsr-ui/switch@0.0.75
+  - @jamsr-ui/input@0.0.90
+  - @jamsr-ui/menu@0.0.86
+  - @jamsr-ui/shared-icons@0.0.58
+  - @jamsr-ui/utils@0.0.62
+  - @jamsr-ui/popover@0.0.68
+  - @jamsr-ui/divider@0.0.68
+
 ## 0.0.93
 
 ### Patch Changes

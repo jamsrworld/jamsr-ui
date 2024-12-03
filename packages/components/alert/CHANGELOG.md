@@ -1,5 +1,14 @@
 # @jamsr-ui/alert
 
+## 0.0.83
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.58
+  - @jamsr-ui/utils@0.0.62
+  - @jamsr-ui/typography@0.0.73
+
 ## 0.0.82
 
 ### Patch Changes

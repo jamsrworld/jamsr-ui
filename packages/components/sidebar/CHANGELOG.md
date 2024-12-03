@@ -1,5 +1,13 @@
 # @jamsr-ui/sidebar
 
+## 0.0.75
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.58
+  - @jamsr-ui/utils@0.0.62
+
 ## 0.0.74
 
 ### Patch Changes

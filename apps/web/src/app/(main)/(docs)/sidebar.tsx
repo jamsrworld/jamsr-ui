@@ -39,10 +39,6 @@ export const sidebarItems: {
         path: "/components/avatar",
       },
       {
-        heading: "Badge",
-        path: "/components/badge",
-      },
-      {
         heading: "Button",
         path: "/components/button",
       },

@@ -1643,8 +1643,8 @@ importers:
         version: 2.4.1(csstype@3.1.3)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
     devDependencies:
       '@jamsr-ui/button':
-        specifier: ^0.0.69
-        version: 0.0.69(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+        specifier: ^0.0.70
+        version: 0.0.70(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -2872,8 +2872,8 @@ packages:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
 
-  '@jamsr-ui/button@0.0.69':
-    resolution: {integrity: sha512-Al6wPH5EC3rX5ZOYM1ZFPzwS9+ckpkpEZZLdAJexpShjQ6FuvHXNFKjrLR+uYhXedKOjp/jeYgfEbOlc71wDkw==}
+  '@jamsr-ui/button@0.0.70':
+    resolution: {integrity: sha512-NRIuNurH3p5GuLMhOiCAf6UWr8E9RLX4xJSyIs9RaZnM3tSqwUkV/ALyIkDOeVRH2nOtPyTVWztUWHLsmD9X1A==}
     peerDependencies:
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029
@@ -2884,15 +2884,15 @@ packages:
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029
 
-  '@jamsr-ui/progress@0.0.64':
-    resolution: {integrity: sha512-DkAD94IRkWSMVDn6MzCeklTAbx2fAAfkh3UR1flnaufPjKTskNYku5MnpuJWYpnqe6l7Thnzzzcgm63Rf+RKRA==}
+  '@jamsr-ui/progress@0.0.65':
+    resolution: {integrity: sha512-YqKD/CG6oNXIs0kSUxYzLgoCVlEPyFuvLK0tz57HPywUrkDb4whm0VpZ7wljyh91quz1fz9ayf8yhdW0GAWY0Q==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.1
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029
 
-  '@jamsr-ui/ripple@0.0.67':
-    resolution: {integrity: sha512-vCldYwjGjOFI/uo6VOB2B8HCgqr6TQMVY6INQBEGf7CQUUjgLWE+Fh7P5Od+5EmOANP3BqWrreL4fPJFYGsr7w==}
+  '@jamsr-ui/ripple@0.0.68':
+    resolution: {integrity: sha512-tGzPxdA+n5/8jYgfObyvUaKzNLTmw4tirVi1t/tlwfoUQ9FO3Gh0pJgiNVNaXSoqORVkPFeEh8ZilBbjsSXZFA==}
     peerDependencies:
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029
@@ -2903,8 +2903,8 @@ packages:
       react: 19.0.0-rc-7c8e5e7a-20241101
       react-dom: 19.0.0-rc-7c8e5e7a-20241101
 
-  '@jamsr-ui/utils@0.0.61':
-    resolution: {integrity: sha512-vpP7XyeGlKMn4FVr8CnSDVOnva3+x8edjFY9ubyZ/jcfYGgWyDlDMKKQYNc3P4rgluwrPvVGvCO3Oaf+3vl0Bg==}
+  '@jamsr-ui/utils@0.0.62':
+    resolution: {integrity: sha512-TK+FOlYYxrw94YMsRiyRxQU3alcH8eEMXZ79nh0vBgSPfCaO3C5SCDjfL6bl2C+pW12s1dTTdyp2eAHqmNkI1A==}
     peerDependencies:
       framer-motion: 12.0.0-alpha.1
       react: 19.0.0-rc-603e6108-20241029
@@ -8217,13 +8217,13 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@jamsr-ui/button@0.0.69(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
+  '@jamsr-ui/button@0.0.70(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
       '@jamsr-ui/hooks': 0.0.44(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@jamsr-ui/progress': 0.0.64(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
-      '@jamsr-ui/ripple': 0.0.67(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      '@jamsr-ui/progress': 0.0.65(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      '@jamsr-ui/ripple': 0.0.68(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
       '@jamsr-ui/styles': 0.0.8(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@jamsr-ui/utils': 0.0.61(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      '@jamsr-ui/utils': 0.0.62(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     transitivePeerDependencies:
@@ -8235,21 +8235,21 @@ snapshots:
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
-  '@jamsr-ui/progress@0.0.64(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
+  '@jamsr-ui/progress@0.0.65(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
       '@jamsr-ui/styles': 0.0.8(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@jamsr-ui/utils': 0.0.61(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      '@jamsr-ui/utils': 0.0.62(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
       framer-motion: 12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     transitivePeerDependencies:
       - tailwindcss
 
-  '@jamsr-ui/ripple@0.0.67(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
+  '@jamsr-ui/ripple@0.0.68(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
       '@jamsr-ui/hooks': 0.0.44(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
       '@jamsr-ui/styles': 0.0.8(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)
-      '@jamsr-ui/utils': 0.0.61(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
+      '@jamsr-ui/utils': 0.0.62(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
     transitivePeerDependencies:
@@ -8261,7 +8261,7 @@ snapshots:
       react: 19.0.0-rc-603e6108-20241029
       react-dom: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
-  '@jamsr-ui/utils@0.0.61(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
+  '@jamsr-ui/utils@0.0.62(framer-motion@12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029))(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)(tailwindcss@3.4.14)':
     dependencies:
       clsx: 2.1.1
       framer-motion: 12.0.0-alpha.1(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029))(react@19.0.0-rc-603e6108-20241029)

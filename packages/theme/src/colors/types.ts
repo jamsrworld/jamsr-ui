@@ -12,6 +12,8 @@ export type ColorScale =
       900: string;
       foreground: string;
       DEFAULT: string;
+      light: string;
+      dark: string;
     }>
   | string;
 

@@ -5,8 +5,7 @@ export const inputVariants = tv({
   slots: {
     base: "group flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label:
-      "shrink-0 select-none text-sm font-normal text-foreground-400 subpixel-antialiased",
+    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
     mainWrapper: "flex flex-col gap-1",
     inputWrapper: [
       "grow overflow-hidden",
@@ -21,11 +20,11 @@ export const inputVariants = tv({
       "group-data-[has-end-content=true]:pr-2",
     ],
     helper: "text-xs text-foreground-600",
-    startContent: "pl-2 text-foreground-500",
-    endContent: "pr-2 text-foreground-500",
+    startContent: "flex items-center gap-1 pl-2 text-foreground-500",
+    endContent: "flex items-center gap-1 pr-2 text-foreground-500",
     notation: "",
     contentWrapper: "flex h-full grow items-center",
-    clearButton: "",
+    clearButton: "size-4",
   },
   variants: {
     fullWidth: {

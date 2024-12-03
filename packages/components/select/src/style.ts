@@ -13,7 +13,7 @@ export const selectVariant = tv({
     placeholder: ["text-left", "text-foreground-400", "text-sm", "grow"],
     mainWrapper: "flex w-full flex-col",
     innerWrapper: "flex w-full items-center gap-2",
-    label: "mb-1 text-sm text-foreground-400 subpixel-antialiased",
+    label: "mb-1 text-sm text-foreground-400",
     trigger:
       "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus:border-primary group-data-[hovered=true]:border-gray-400 group-data-[open=true]:border-primary",
     helperText: "mt-1 text-xs text-foreground-500",

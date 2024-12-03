@@ -399,28 +399,6 @@ importers:
         specifier: 19.0.0-rc-603e6108-20241029
         version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
 
-  packages/components/badge:
-    dependencies:
-      '@jamsr-ui/styles':
-        specifier: workspace:^
-        version: link:../../styles
-      '@jamsr-ui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.3
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 19.0.0-rc-603e6108-20241029
-        version: 19.0.0-rc-603e6108-20241029
-      react-dom:
-        specifier: 19.0.0-rc-603e6108-20241029
-        version: 19.0.0-rc-603e6108-20241029(react@19.0.0-rc-603e6108-20241029)
-
   packages/components/button:
     dependencies:
       '@jamsr-ui/hooks':
@@ -1862,9 +1840,6 @@ importers:
       '@jamsr-ui/avatar':
         specifier: workspace:^
         version: link:../components/avatar
-      '@jamsr-ui/badge':
-        specifier: workspace:^
-        version: link:../components/badge
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../components/button

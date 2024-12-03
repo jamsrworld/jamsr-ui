@@ -64,7 +64,7 @@ export const Select = <T extends React.ElementType = "div">(
             )}
             {endContent && <div {...getEndContentProps()}>{endContent}</div>}
             <span {...getIndicatorProps()}>
-              <ChevronDownIcon />
+              <ChevronDownIcon width={16} height={16} />
             </span>
           </div>
         </button>

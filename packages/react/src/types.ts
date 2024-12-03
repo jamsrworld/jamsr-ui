@@ -8,7 +8,6 @@ import {
   type AutocompleteProps,
 } from "@jamsr-ui/autocomplete";
 import { type AvatarProps } from "@jamsr-ui/avatar";
-import { type BadgeProps } from "@jamsr-ui/badge";
 import { type ButtonProps } from "@jamsr-ui/button";
 import {
   type CardContentProps,
@@ -45,7 +44,7 @@ import { type SelectItemProps, type SelectProps } from "@jamsr-ui/select";
 import { type SkeletonProps } from "@jamsr-ui/skeleton";
 import { type StepperProps } from "@jamsr-ui/stepper";
 import { type SwitchProps } from "@jamsr-ui/switch";
-import { type TabsProps, type TabProps } from "@jamsr-ui/tab";
+import { type TabProps, type TabsProps } from "@jamsr-ui/tab";
 import {
   type TableBodyProps,
   type TableCellProps,
@@ -67,7 +66,6 @@ declare module "@jamsr-ui/styles" {
     autocomplete?: Partial<AutocompleteProps>;
     autocompleteItem?: Partial<AutocompleteItemProps>;
     avatar?: Partial<AvatarProps>;
-    badge?: Partial<BadgeProps>;
     button?: Partial<ButtonProps>;
     card?: Partial<CardProps>;
     cardContent?: Partial<CardContentProps>;

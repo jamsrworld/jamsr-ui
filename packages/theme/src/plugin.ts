@@ -63,6 +63,9 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
         addVariant("ui-filled-within", "&[data-filled-within=true]");
         addVariant("ui-focus-visible", "&[data-focus-visible=true]");
         addUtilities({
+          ".text-transform-inherit":{
+            "text-transform": "inherit"
+          },
           ".tap-highlight-transparent": {
             "-webkit-tap-highlight-color": "transparent",
           },

@@ -4,12 +4,12 @@ export type VariantTypes = {
   "autocomplete": ["choose-country", "controlled", "disabled-items", "disabled", "error-state", "helper-text", "multiple-controlled", "multiple-custom-render", "multiple", "start-end-content", "usage"];
   "avatar": ["bordered", "placeholders", "radius", "sizes", "usage"];
   "badge": ["colors", "sizes", "usage"];
-  "button": ["colors", "disabled", "icon-button", "loading", "sizes", "usage", "variants", "with-icons"];
+  "button": ["colors", "disabled", "icon-button", "loading", "sizes", "usage", "variants-colors", "variants", "with-icons"];
   "card": ["start-end-content", "usage", "variants"];
   "checkbox": ["controlled", "disabled", "invalid-state", "readonly", "usage"];
-  "chip": ["on-delete", "usage"];
+  "chip": ["colors", "sizes", "usage", "variants-colors", "variants", "with-delete"];
   "confirmation": ["colors", "usage"];
-  "data-table": ["bordered", "columns", "server", "sticky-header", "usage", "without-pagination"];
+  "data-table": ["bordered", "columns", "customization", "server", "sticky-header", "usage", "without-pagination"];
   "dialog": ["backdrop", "bordered", "custom-close-button", "customize", "non-dismissible", "popover-items", "scroll-behavior", "usage", "without-close-button"];
   "divider": ["colors", "customization", "orientation", "usage", "variants", "with-text"];
   "drag-and-drop": ["disabled", "usage"];

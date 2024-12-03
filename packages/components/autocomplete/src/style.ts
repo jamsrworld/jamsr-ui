@@ -7,11 +7,12 @@ export const autocompleteVariant = tv({
     base: ["group relative flex w-full flex-col text-sm"],
     popover:
       "z-popover flex flex-col overflow-hidden rounded-2xl bg-content1 shadow-md backdrop-blur-3xl focus:outline-none",
-    content: "overflow-y-auto p-2",
+    content: "flex flex-col gap-px overflow-y-auto p-2",
     emptyContent: "text-foreground-500",
     item: [
       "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm",
-      "ui-active:bg-content2",
+      "ui-selected:bg-content2/50",
+      "ui-active:!bg-content2",
       "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
     ],
   },

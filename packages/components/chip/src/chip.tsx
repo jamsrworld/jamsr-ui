@@ -1,44 +1,64 @@
-import { Button } from "@jamsr-ui/button";
-import { CloseIcon } from "@jamsr-ui/shared-icons";
+import { CloseFilledIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
-import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs, SlotsToClasses } from "@jamsr-ui/utils";
 import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import React from "react";
+import { chip, type ChipSlots, type ChipVariantsProps } from "./style";
 
 export type ChipProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T> & {
     children: React.ReactNode;
     onDelete?: () => void;
-  };
+    classNames?: SlotsToClasses<ChipSlots>;
+  } & ChipVariantsProps;
 
 export const Chip = <T extends React.ElementType = "div">(
   $props: ChipProps<T>,
 ) => {
   const { chip: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
-
-  const { as, children, onDelete, className, ...restProps } = props;
+  const {
+    as,
+    children,
+    onDelete,
+    className,
+    color,
+    size,
+    variant,
+    classNames,
+    isSquare,
+    ...restProps
+  } = props;
   const Comp = as ?? "div";
+  const styles = chip({
+    color,
+    size,
+    variant,
+    isSquare,
+  });
   return (
     <Comp
       data-component="chip"
-      className={cn(
-        "inline-flex items-center justify-between gap-1 rounded-full border border-divider px-2 py-1 text-sm",
-        className,
-      )}
+      data-slot="base"
+      className={styles.base({
+        className: cn(className, classNames?.base),
+      })}
       {...restProps}
     >
-      {children}
+      <div
+        className={styles.content({ className: classNames?.content })}
+        data-slot="content"
+      >
+        {children}
+      </div>
       {onDelete && (
-        <Button
-          isIconOnly
-          size="xs"
-          isRounded
+        <button
+          type="button"
           onClick={onDelete}
-          className="size-4 shrink-0"
+          className={styles.closeButton({ className: classNames?.closeButton })}
         >
-          <CloseIcon className="!size-3" />
-        </Button>
+          <CloseFilledIcon className="size-4" />
+        </button>
       )}
     </Comp>
   );

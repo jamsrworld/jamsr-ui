@@ -4,7 +4,7 @@ import { VariantPage } from "@/components/docs/variant-page";
 import { JAMSR_UI_TEMPLATE_GITHUB_URL, TAILWIND_WEB_URL } from "@/config";
 import {
   Alert,
-  Badge,
+  Chip,
   Divider,
   Link,
   Tab,
@@ -166,13 +166,9 @@ const Page = () => {
           return (
             <div key={count} className="flex flex-row gap-4">
               <div>
-                <Badge
-                  size="lg"
-                  isRounded
-                  className="z-1 text-sm font-extrabold"
-                >
+                <Chip size="lg" className="text-sm font-extrabold" isSquare>
                   {count}
-                </Badge>
+                </Chip>
               </div>
               <div className="flex grow flex-col gap-4">
                 <Typography as="p" variant="h6">

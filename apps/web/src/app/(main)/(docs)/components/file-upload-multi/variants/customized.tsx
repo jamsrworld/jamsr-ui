@@ -11,7 +11,7 @@ export const FileUploadCustomized = () => {
       className="w-full"
       classNames={{
         info: "text-secondary",
-        picker: "bg-gray-100 border-primary max-h-[200px]",
+        picker: "bg-gray-100 dark:bg-gray-900 border-primary max-h-[200px]",
       }}
       info="1 image"
       uploadIcon={<ImageAddIcon />}

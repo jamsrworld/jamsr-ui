@@ -25,9 +25,12 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
                 <>
                   <button
                     type="button"
-                    className={cn("flex w-full cursor-pointer  select-none gap-1 overflow-hidden pr-1",{
-                      "": header.column.getCanSort(),
-                    })}
+                    className={cn(
+                      "text-transform-inherit flex w-full cursor-pointer select-none gap-1 overflow-hidden pr-1",
+                      {
+                        "": header.column.getCanSort(),
+                      },
+                    )}
                     onClick={header.column.getToggleSortingHandler()}
                   >
                     <span className="flex w-full grow items-center overflow-hidden">
@@ -36,8 +39,8 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
                         header.getContext(),
                       )}
                       {{
-                        asc: <ChevronUpIcon className="size-5" />,
-                        desc: <ChevronDownIcon className="size-5" />,
+                        asc: <ChevronUpIcon className="size-4" />,
+                        desc: <ChevronDownIcon className="size-4" />,
                       }[header.column.getIsSorted() as string] ?? null}
                     </span>
                   </button>

@@ -91,9 +91,9 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
 
   const fileName = file ? file.name : $fileName;
   const fileSize = file ? file.size : $fileSize;
-  const isImage = fileName && isImageExt(fileName);
+  const isImage = value && isImageExt(value);
   const Component = as ?? "div";
-  const isEmpty = !fileName;
+  const isEmpty = !previewUrl;
 
   const fileIcon = useMemo(() => {
     if (!value) return "";

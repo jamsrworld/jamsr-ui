@@ -2,13 +2,18 @@
 
 "use client";
 
-import TvImg from "@/../public/tv.webp";
 import { type FileUploadMultiState } from "@jamsr-ui/react";
 import { FileUploadUsage } from "./usage";
+import AvatarImg from "~/avatar.png";
 
 export const FileUploadUsageValue = () => {
   const defaultValue: FileUploadMultiState[] = [
-    { id: "asdfjlaf", preview: TvImg.src, progress: "COMPLETE", file: null },
+    {
+      id: "asdfjlaf",
+      preview: AvatarImg.src,
+      progress: "COMPLETE",
+      file: null,
+    },
   ];
   return <FileUploadUsage defaultValue={defaultValue} />;
 };

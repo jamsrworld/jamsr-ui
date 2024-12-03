@@ -3,6 +3,8 @@ import { swapColorValues } from "../../utils";
 import { commonColors as common } from "../common";
 import { type ThemeColors } from "../types";
 
+// const swapColorValues = <T>(value: T) => value;
+
 export const themeColorsDark: ThemeColors = {
   background: {
     DEFAULT: "#000",
@@ -19,9 +21,9 @@ export const themeColorsDark: ThemeColors = {
     ...swapColorValues(common.zinc),
   },
   divider: {
-    light: "#3A3A3D",
-    DEFAULT: "#252A2E",
-    dark: "#1d1d1d",
+    light: "#070809",
+    DEFAULT: "#25292d",
+    dark: "#353b41",
   },
   focus: {
     DEFAULT: common.blue[500],

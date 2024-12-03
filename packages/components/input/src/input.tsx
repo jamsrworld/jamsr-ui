@@ -67,7 +67,7 @@ export const Input = <T extends React.ElementType = "div">(
       contents.push(
         <Button
           isIconOnly
-          variant="light"
+          variant="solid"
           size="xs"
           isRounded
           {...getClearButtonProps()}

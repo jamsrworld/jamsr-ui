@@ -72,7 +72,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isRounded
           >
             <span className="sr-only">Go to first page</span>
-            <ChevronDoubleLeftIcon />
+            <ChevronDoubleLeftIcon width={20} height={20} />
           </Button>
           <Button
             isIconOnly
@@ -83,7 +83,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isRounded
           >
             <span className="sr-only">Go to previous page</span>
-            <ChevronLeftIcon />
+            <ChevronLeftIcon width={20} height={20} />
           </Button>
           <Button
             isIconOnly
@@ -94,7 +94,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isRounded
           >
             <span className="sr-only">Go to next page</span>
-            <ChevronRightIcon />
+            <ChevronRightIcon width={20} height={20} />
           </Button>
           <Button
             isIconOnly
@@ -105,7 +105,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isRounded
           >
             <span className="sr-only">Go to last page</span>
-            <ChevronDoubleRightIcon />
+            <ChevronDoubleRightIcon width={20} height={20} />
           </Button>
         </div>
       </div>

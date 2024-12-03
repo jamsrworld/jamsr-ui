@@ -22,6 +22,6 @@ export type ComponentPropsWithAs<
   Y = NonNullable<unknown>,
 > = Y & {
   as?: T;
-} & Omit<React.ComponentProps<T>, "as" | keyof Y>;
+} & Omit<React.ComponentProps<T>, "as" | "color" | keyof Y>;
 
 export type PropGetter<P = Record<string, unknown>> = (props?: P) => P;

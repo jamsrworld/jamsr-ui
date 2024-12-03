@@ -12,7 +12,7 @@ export const cardVariants = tv({
     },
     variant: {
       solid: "",
-      outlined: "border",
+      outlined: "border border-divider-dark",
       elevated: "shadow-sm",
     },
   },

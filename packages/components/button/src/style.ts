@@ -22,6 +22,7 @@ const baseVariant = tv({
     "transition-transform",
     "focus-visible:ring-2 focus-visible:ring-primary",
     "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
+    "text-transform-inherit",
   ],
   variants: {
     color: {
@@ -36,7 +37,8 @@ const baseVariant = tv({
       solid: "",
       outlined: "border-2 bg-transparent",
       light: "",
-      text: "!min-w-0 !p-0",
+      text: "",
+      flat: "",
     },
     fullWidth: {
       true: "w-full",
@@ -223,6 +225,40 @@ const textVariant: CompoundVariant<ButtonVariantProps>[] = [
   },
 ];
 
+const flatVariant: CompoundVariant<ButtonVariantProps>[] = [
+  {
+    variant: "flat",
+    color: "default",
+    className: colorVariants.flat.default,
+  },
+  {
+    variant: "flat",
+    color: "primary",
+    className: colorVariants.flat.primary,
+  },
+  {
+    variant: "flat",
+    color: "secondary",
+    className: colorVariants.flat.secondary,
+  },
+  {
+    variant: "flat",
+    color: "success",
+    className: colorVariants.flat.success,
+  },
+  {
+    variant: "flat",
+    color: "warning",
+    className: colorVariants.flat.warning,
+  },
+  {
+    variant: "flat",
+    color: "danger",
+    className: colorVariants.flat.danger,
+  },
+];
+
+export const test = "";
 export const button = tv({
   extend: baseVariant,
   compoundVariants: [
@@ -235,6 +271,7 @@ export const button = tv({
     ...lightVariant,
     ...outlinedVariant,
     ...textVariant,
+    ...flatVariant,
     ...iconOnlyVariant,
   ],
 });

@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "@/components/icons";
 import { Button } from "@jamsr-ui/react";
 
 export const ButtonLoading = () => {
@@ -6,10 +7,10 @@ export const ButtonLoading = () => {
       <Button color="primary" isDisabled>
         Loading...
       </Button>
-      <Button isLoading color="secondary">
+      <Button isLoading spinnerPlacement="end" color="secondary">
         Saving...
       </Button>
-      <Button isLoading color="success">
+      <Button startContent={<ArrowRightIcon />} isLoading color="success">
         Success
       </Button>
       <Button isLoading color="warning">

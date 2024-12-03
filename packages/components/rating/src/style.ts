@@ -4,7 +4,7 @@ import { tv } from "@jamsr-ui/utils";
 export const ratingVariants = tv({
   slots: {
     labelWrapper: "",
-    label: "shrink-0 select-none text-sm font-normal text-foreground subpixel-antialiased",
+    label: "shrink-0 select-none text-sm font-normal text-foreground",
     base: "flex flex-col gap-1",
     innerWrapper: "flex gap-1",
     helper: "text-xs text-foreground-600",

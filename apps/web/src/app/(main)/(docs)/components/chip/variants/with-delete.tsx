@@ -2,7 +2,7 @@
 
 import { Chip } from "@jamsr-ui/react";
 
-export const ChipOnDelete = () => {
+export const ChipWithDelete = () => {
   const handleClick = () => {
     console.log("clicked");
   };

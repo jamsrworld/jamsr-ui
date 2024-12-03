@@ -319,7 +319,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     };
   };
 
-  const getContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+  const getContentProps: PropGetter<ComponentProps<"ul">> = (props) => {
     return {
       "data-slot": "content",
       className: styles.content({ className: classNames?.content }),
@@ -327,7 +327,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     };
   };
 
-  const getEmptyContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+  const getEmptyContentProps: PropGetter<ComponentProps<"li">> = (props) => {
     return {
       "data-slot": "empty-content",
       className: styles.emptyContent({ className: classNames?.emptyContent }),
@@ -369,7 +369,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
         ...inputProps?.classNames,
         inputWrapper: "select-none",
         contentWrapper: cn("h-auto flex-wrap gap-1", {
-          "px-1": isMultiple,
+          "p-1": isMultiple,
         }),
       },
       isClearable: true,

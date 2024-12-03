@@ -4,7 +4,6 @@ export * from "@jamsr-ui/accordion";
 export * from "@jamsr-ui/alert";
 export * from "@jamsr-ui/autocomplete";
 export * from "@jamsr-ui/avatar";
-export * from "@jamsr-ui/badge";
 export * from "@jamsr-ui/button";
 export * from "@jamsr-ui/card";
 export * from "@jamsr-ui/checkbox";

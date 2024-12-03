@@ -1,7 +1,7 @@
 "use client";
 
-import TvImg from "@/../public/tv.webp";
 import { type ImageMetadata } from "@/app/config";
+import AvatarImg from "~/avatar.png";
 import { RHFDemoFileUploadMulti } from "./file-upload-multi";
 
 const images: ImageMetadata[] = [
@@ -9,7 +9,7 @@ const images: ImageMetadata[] = [
     height: 0,
     name: "TV",
     placeholder: "",
-    url: TvImg.src,
+    url: AvatarImg.src,
     width: 0,
   },
 ];

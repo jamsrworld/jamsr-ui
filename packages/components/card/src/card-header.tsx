@@ -68,7 +68,7 @@ export const CardHeader = <T extends React.ElementType = "div">(
           <Typography
             className={cn("text-foreground-secondary", classNames?.subHeading)}
             variant="caption"
-            as="p"
+            as="div"
           >
             {subHeading}
           </Typography>

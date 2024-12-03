@@ -37,7 +37,6 @@
     "@jamsr-ui/alert": "workspace:^",
     "@jamsr-ui/autocomplete": "workspace:^",
     "@jamsr-ui/avatar": "workspace:^",
-    "@jamsr-ui/badge": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/card": "workspace:^",
     "@jamsr-ui/checkbox": "workspace:^",

@@ -1,10 +1,14 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
+import { ChipColors } from "./variants/colors";
+import { ChipWithDelete } from "./variants/with-delete";
+import { ChipSizes } from "./variants/sizes";
 import { ChipUsage } from "./variants/usage";
-import { ChipOnDelete } from "./variants/on-delete";
+import { ChipVariants } from "./variants/variants";
+import { ChipVariantsColors } from "./variants/variants-colors";
 
 const title = "Chip";
 const description =
@@ -23,8 +27,23 @@ const Chip = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <ChipUsage />
       </VariantWrapper>
-      <VariantWrapper heading="On Delete" code={code("on-delete")}>
-        <ChipOnDelete />
+      <VariantWrapper heading="Colors" code={code("usage")}>
+        <ChipColors />
+      </VariantWrapper>
+      <VariantWrapper heading="Variants" code={code("usage")}>
+        <ChipVariants />
+      </VariantWrapper>
+      <VariantWrapper heading="Sizes" code={code("sizes")}>
+        <ChipSizes />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Variants & Colors"
+        code={code("variants-colors")}
+      >
+        <ChipVariantsColors />
+      </VariantWrapper>
+      <VariantWrapper heading="With Delete" code={code("with-delete")}>
+        <ChipWithDelete />
       </VariantWrapper>
     </VariantPage>
   );

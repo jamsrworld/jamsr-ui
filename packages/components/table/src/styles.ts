@@ -19,12 +19,12 @@ export const table = tv({
   variants: {
     variant: {
       solid: {
-        th: "border-divider bg-default first:rounded-l-lg last:rounded-r-lg",
+        th: "bg-default first:rounded-l-lg last:rounded-r-lg",
         base: "rounded-2xl bg-content1 p-4",
       },
       bordered: {
-        th: "border-b border-b-divider",
-        td: "border-b border-divider-light",
+        th: "border-b border-b-divider-dark",
+        td: "border-b border-divider",
         base: "bg-content1",
       },
     },

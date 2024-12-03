@@ -1,16 +1,17 @@
+import { Code } from "@/components/code";
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
-import { Code } from "@/components/code";
-import { ButtonUsage } from "./variants/usage";
+import { type Metadata } from "next";
+import { ButtonColors } from "./variants/colors";
 import { ButtonDisabled } from "./variants/disabled";
 import { ButtonIconButton } from "./variants/icon-button";
 import { ButtonLoading } from "./variants/loading";
 import { ButtonSizes } from "./variants/sizes";
+import { ButtonUsage } from "./variants/usage";
 import { ButtonVariants } from "./variants/variants";
-import { ButtonColors } from "./variants/colors";
+import { ButtonVariantsColors } from "./variants/variants-colors";
 import { ButtonWithIcons } from "./variants/with-icons";
 
 const title = "Button";
@@ -44,7 +45,6 @@ const Button = () => {
       >
         <ButtonVariants />
       </VariantWrapper>
-
       <VariantWrapper
         heading="Colors"
         code={code("colors")}
@@ -80,7 +80,7 @@ const Button = () => {
         <ButtonDisabled />
       </VariantWrapper>
       <VariantWrapper
-        heading="With Icons and Lable"
+        heading="With Icons and Label"
         code={code("with-icons")}
         description={
           <div>
@@ -114,6 +114,12 @@ const Button = () => {
         }
       >
         <ButtonLoading />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Variants & Colors"
+        code={code("variants-colors")}
+      >
+        <ButtonVariantsColors />
       </VariantWrapper>
 
       {/* <VariantWrapper

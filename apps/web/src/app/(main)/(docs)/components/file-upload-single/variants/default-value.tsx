@@ -2,9 +2,9 @@
 
 "use client";
 
-import TvImg from "@/../public/tv.webp";
 import { FileUploadUsage } from "./usage";
+import AvatarImg from "~/avatar.png";
 
 export const FileUploadUsageValue = () => {
-  return <FileUploadUsage defaultValue={TvImg.src} />;
+  return <FileUploadUsage defaultValue={AvatarImg.src} />;
 };

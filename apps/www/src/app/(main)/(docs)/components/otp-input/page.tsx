@@ -3,9 +3,9 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { OtpInput6Digits } from "./variants/6-digits";
-import { OtpInputControlled } from "./variants/controlled";
-import { OtpInputUsage } from "./variants/usage";
+import { OtpInput6Digits } from "./examples/6-digits";
+import { OtpInputControlled } from "./examples/controlled";
+import { OtpInputUsage } from "./examples/usage";
 
 const title = "OTP Input";
 const description =

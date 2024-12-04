@@ -3,9 +3,9 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { CircularProgressUsage } from "./variants/circular-progress";
-import { CircularProgressValue } from "./variants/circular-progress-value";
-import { LinearProgressUsage } from "./variants/linear-progress";
+import { CircularProgressUsage } from "./examples/circular-progress";
+import { CircularProgressValue } from "./examples/circular-progress-value";
+import { LinearProgressUsage } from "./examples/linear-progress";
 
 export const metadata: Metadata = {
   title: "Progress",

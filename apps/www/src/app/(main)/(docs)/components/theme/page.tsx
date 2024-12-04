@@ -1,8 +1,8 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
-import { ThemeUsage } from "./variants/usage";
-import { ThemeTypography } from "./variants/typography";
+import { ThemeUsage } from "./examples/usage";
+import { ThemeTypography } from "./examples/typography";
 
 export const metadata: Metadata = {
   title: "Theme",

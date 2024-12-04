@@ -3,10 +3,10 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { TagsInputControlled } from "./variants/controlled";
-import { TagsInputUsage } from "./variants/usage";
-import { TagsInputDefaultValue } from "./variants/default-value";
-import { TagsInputInvalidState } from "./variants/invalid-state";
+import { TagsInputControlled } from "./examples/controlled";
+import { TagsInputUsage } from "./examples/usage";
+import { TagsInputDefaultValue } from "./examples/default-value";
+import { TagsInputInvalidState } from "./examples/invalid-state";
 
 export const metadata: Metadata = {
   title: "Editor",

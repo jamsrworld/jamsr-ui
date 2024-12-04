@@ -3,8 +3,8 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { RippleAtCenter } from "./variants/center";
-import { RippleUsage } from "./variants/usage";
+import { RippleAtCenter } from "./examples/center";
+import { RippleUsage } from "./examples/usage";
 
 export const metadata: Metadata = {
   title: "Ripple",

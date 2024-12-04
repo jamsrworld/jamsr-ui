@@ -14,7 +14,7 @@ export const readVariantCode = <T extends keyof VariantTypes>(
     "(docs)",
     "components",
     component,
-    "variants",
+    "examples",
     `${variant}.tsx`,
   );
   const data = readFileSync(filePath, "utf-8");

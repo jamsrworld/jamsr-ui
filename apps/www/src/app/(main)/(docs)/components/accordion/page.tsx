@@ -4,17 +4,17 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { AccordionCustomIcon } from "./variants/custom-icon";
-import { AccordionDisabled } from "./variants/disabled";
-import { AccordionEndContent } from "./variants/end-content";
-import { AccordionEndContentOutside } from "./variants/end-content-outside";
-import { AccordionMultipleSelection } from "./variants/multiple-selection";
-import { AccordionStartContent } from "./variants/start-content";
-import { AccordionStartContentOutside } from "./variants/start-content-outside";
-import { AccordionSubheading } from "./variants/subheading";
-import { AccordionUsage } from "./variants/usage";
-import { AccordionVariants } from "./variants/variants";
-import { AccordionWithoutIcon } from "./variants/without-icon";
+import { AccordionCustomIcon } from "./examples/custom-icon";
+import { AccordionDisabled } from "./examples/disabled";
+import { AccordionEndContent } from "./examples/end-content";
+import { AccordionEndContentOutside } from "./examples/end-content-outside";
+import { AccordionMultipleSelection } from "./examples/multiple-selection";
+import { AccordionStartContent } from "./examples/start-content";
+import { AccordionStartContentOutside } from "./examples/start-content-outside";
+import { AccordionSubheading } from "./examples/subheading";
+import { AccordionUsage } from "./examples/usage";
+import { AccordionVariants } from "./examples/variants";
+import { AccordionWithoutIcon } from "./examples/without-icon";
 
 const title = "Accordion";
 const description =

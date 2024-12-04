@@ -3,12 +3,12 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { PopoverControlled } from "./variants/controlled";
-import { PopoverPlacement } from "./variants/placement";
-import { PopoverTriggerOnHover } from "./variants/trigger-on";
-import { PopoverUsage } from "./variants/usage";
-import { PopoverWithArrow } from "./variants/with-arrow";
-import { PopoverWithoutScroll } from "./variants/without-lock-scroll";
+import { PopoverControlled } from "./examples/controlled";
+import { PopoverPlacement } from "./examples/placement";
+import { PopoverTriggerOnHover } from "./examples/trigger-on";
+import { PopoverUsage } from "./examples/usage";
+import { PopoverWithArrow } from "./examples/with-arrow";
+import { PopoverWithoutScroll } from "./examples/without-lock-scroll";
 
 export const metadata: Metadata = {
   title: "Popover",

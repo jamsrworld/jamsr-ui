@@ -1,4 +1,4 @@
-import { HeaderHideOnScroll } from "@/app/(main)/(docs)/components/header/variants/hide-on-scroll";
+import { HeaderHideOnScroll } from "@/app/(main)/(docs)/components/header/examples/hide-on-scroll";
 
 const Page = () => {
   return <HeaderHideOnScroll />;

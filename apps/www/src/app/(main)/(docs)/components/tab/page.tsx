@@ -4,17 +4,17 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { TabAs } from "./variants/as";
-import { TabColors } from "./variants/colors";
-import { TabUsage } from "./variants/usage";
-import { TabDisabled } from "./variants/disabled";
-import { TabDisabledItem } from "./variants/disabled-item";
-import { TabOutside } from "./variants/outside";
-import { TabRadius } from "./variants/radius";
-import { TabSizes } from "./variants/sizes";
-import { TabVariants } from "./variants/variants";
-import { TabWithIcons } from "./variants/with-icons";
-import { TabCustomized } from "./variants/customized";
+import { TabAs } from "./examples/as";
+import { TabColors } from "./examples/colors";
+import { TabUsage } from "./examples/usage";
+import { TabDisabled } from "./examples/disabled";
+import { TabDisabledItem } from "./examples/disabled-item";
+import { TabOutside } from "./examples/outside";
+import { TabRadius } from "./examples/radius";
+import { TabSizes } from "./examples/sizes";
+import { TabVariants } from "./examples/variants";
+import { TabWithIcons } from "./examples/with-icons";
+import { TabCustomized } from "./examples/customized";
 
 const title = "Tab";
 const description =

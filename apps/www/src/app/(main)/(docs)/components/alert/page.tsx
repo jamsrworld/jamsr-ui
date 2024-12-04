@@ -4,13 +4,13 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
-import { AlertCustomIcon } from "./variants/custom-icon";
-import { AlertUsage } from "./variants/usage";
-import { AlertStatus } from "./variants/status";
-import { AlertVariants } from "./variants/variants";
-import { AlertWithAction } from "./variants/with-action";
-import { AlertWithDescription } from "./variants/with-description";
-import { WithoutIcon } from "./variants/without-icon";
+import { AlertCustomIcon } from "./examples/custom-icon";
+import { AlertUsage } from "./examples/usage";
+import { AlertStatus } from "./examples/status";
+import { AlertVariants } from "./examples/variants";
+import { AlertWithAction } from "./examples/with-action";
+import { AlertWithDescription } from "./examples/with-description";
+import { WithoutIcon } from "./examples/without-icon";
 
 const title = "Alert";
 const description =

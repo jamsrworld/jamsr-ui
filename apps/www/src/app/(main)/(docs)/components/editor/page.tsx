@@ -3,9 +3,9 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { EditorControlled } from "./variants/controlled";
-import { EditorUsage } from "./variants/usage";
-import { EditorInvalid } from "./variants/invalid";
+import { EditorControlled } from "./examples/controlled";
+import { EditorUsage } from "./examples/usage";
+import { EditorInvalid } from "./examples/invalid";
 
 export const metadata: Metadata = {
   title: "Editor",

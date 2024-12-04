@@ -3,16 +3,16 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { AutocompleteChooseCountry } from "./variants/choose-country";
-import { AutocompleteControlled } from "./variants/controlled";
-import { AutocompleteDisabled } from "./variants/disabled";
-import { AutocompleteDisabledItems } from "./variants/disabled-items";
-import { AutocompleteErrorState } from "./variants/error-state";
-import { AutocompleteHelperText } from "./variants/helper-text";
-import { AutocompleteMultiple } from "./variants/multiple";
-import { AutocompleteMultipleCustomRender } from "./variants/multiple-custom-render";
-import { AutocompleteStartEndContent } from "./variants/start-end-content";
-import { AutocompleteUsage } from "./variants/usage";
+import { AutocompleteChooseCountry } from "./examples/choose-country";
+import { AutocompleteControlled } from "./examples/controlled";
+import { AutocompleteDisabled } from "./examples/disabled";
+import { AutocompleteDisabledItems } from "./examples/disabled-items";
+import { AutocompleteErrorState } from "./examples/error-state";
+import { AutocompleteHelperText } from "./examples/helper-text";
+import { AutocompleteMultiple } from "./examples/multiple";
+import { AutocompleteMultipleCustomRender } from "./examples/multiple-custom-render";
+import { AutocompleteStartEndContent } from "./examples/start-end-content";
+import { AutocompleteUsage } from "./examples/usage";
 
 const title = "Autocomplete";
 const description =

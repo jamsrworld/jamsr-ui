@@ -3,8 +3,8 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { RepeaterUsage } from "./variants/usage";
-import { RepeaterIndex } from "./variants";
+import { RepeaterUsage } from "./examples/usage";
+import { RepeaterIndex } from "./examples";
 
 export const metadata: Metadata = {
   title: "Repeater",

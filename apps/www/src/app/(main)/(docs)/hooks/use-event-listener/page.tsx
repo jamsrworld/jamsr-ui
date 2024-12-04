@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UseEventListenerUsage } from "./variants/usage";
+import { UseEventListenerUsage } from "./examples/usage";
 
 const UseHover = () => {
   return (

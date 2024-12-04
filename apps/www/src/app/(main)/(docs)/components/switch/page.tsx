@@ -3,10 +3,10 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { SwitchUsage } from "./variants/usage";
-import { SwitchDescription } from "./variants/description";
-import { SwitchInvalidState } from "./variants/invalid-state";
-import { SwitchLabelPlacement } from "./variants/label-placement";
+import { SwitchUsage } from "./examples/usage";
+import { SwitchDescription } from "./examples/description";
+import { SwitchInvalidState } from "./examples/invalid-state";
+import { SwitchLabelPlacement } from "./examples/label-placement";
 
 export const metadata: Metadata = {
   title: "Switch",

@@ -1,4 +1,4 @@
-import { HeaderUsage } from "@/app/(main)/(docs)/components/header/variants/usage";
+import { HeaderUsage } from "@/app/(main)/(docs)/components/header/examples/usage";
 
 const Page = () => {
   return <HeaderUsage />;

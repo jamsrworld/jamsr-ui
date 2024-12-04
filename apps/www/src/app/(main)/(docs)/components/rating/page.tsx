@@ -3,14 +3,14 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { RatingControlled } from "./variants/controlled";
-import { RatingUsage } from "./variants/usage";
-import { RatingUsageValue } from "./variants/default-value";
-import { RatingDisabled } from "./variants/disabled";
-import { RatingHelperText } from "./variants/helper-text";
-import { RatingInvalid } from "./variants/invalid";
-import { RatingReadonly } from "./variants/readonly";
-import { RatingSize } from "./variants/size";
+import { RatingControlled } from "./examples/controlled";
+import { RatingUsage } from "./examples/usage";
+import { RatingUsageValue } from "./examples/default-value";
+import { RatingDisabled } from "./examples/disabled";
+import { RatingHelperText } from "./examples/helper-text";
+import { RatingInvalid } from "./examples/invalid";
+import { RatingReadonly } from "./examples/readonly";
+import { RatingSize } from "./examples/size";
 
 export const metadata: Metadata = {
   title: "Rating",

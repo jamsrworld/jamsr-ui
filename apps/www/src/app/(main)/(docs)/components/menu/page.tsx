@@ -3,17 +3,17 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { MenuBackdrop } from "./variants/backdrop";
-import { MenuControlled } from "./variants/controlled";
-import { MenuCustomize } from "./variants/customize";
-import { MenuNested } from "./variants/nested";
-import { MenuOffset } from "./variants/offset";
-import { MenuPlacement } from "./variants/placement";
-import { MenuStartEndContent } from "./variants/start-end-content";
-import { MenuTriggerOnHover } from "./variants/trigger-on-hover";
-import { MenuUsage } from "./variants/usage";
-import { MenuWithArrow } from "./variants/with-arrow";
-import { MenuWithoutLockScroll } from "./variants/without-lock-scroll";
+import { MenuBackdrop } from "./examples/backdrop";
+import { MenuControlled } from "./examples/controlled";
+import { MenuCustomize } from "./examples/customize";
+import { MenuNested } from "./examples/nested";
+import { MenuOffset } from "./examples/offset";
+import { MenuPlacement } from "./examples/placement";
+import { MenuStartEndContent } from "./examples/start-end-content";
+import { MenuTriggerOnHover } from "./examples/trigger-on-hover";
+import { MenuUsage } from "./examples/usage";
+import { MenuWithArrow } from "./examples/with-arrow";
+import { MenuWithoutLockScroll } from "./examples/without-lock-scroll";
 
 export const metadata: Metadata = {
   title: "Menu",

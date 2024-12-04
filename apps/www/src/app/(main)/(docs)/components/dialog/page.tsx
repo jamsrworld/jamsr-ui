@@ -3,15 +3,15 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { DialogBackdrop } from "./variants/backdrop";
-import { DialogBordered } from "./variants/bordered";
-import { DialogCustomCloseButton } from "./variants/custom-close-button";
-import { DialogCustomize } from "./variants/customize";
-import { DialogNonDismissible } from "./variants/non-dismissible";
-import { DialogPopoverItems } from "./variants/popover-items";
-import { DialogScrollBehavior } from "./variants/scroll-behavior";
-import { DialogUsage } from "./variants/usage";
-import { DialogWithoutCloseButton } from "./variants/without-close-button";
+import { DialogBackdrop } from "./examples/backdrop";
+import { DialogBordered } from "./examples/bordered";
+import { DialogCustomCloseButton } from "./examples/custom-close-button";
+import { DialogCustomize } from "./examples/customize";
+import { DialogNonDismissible } from "./examples/non-dismissible";
+import { DialogPopoverItems } from "./examples/popover-items";
+import { DialogScrollBehavior } from "./examples/scroll-behavior";
+import { DialogUsage } from "./examples/usage";
+import { DialogWithoutCloseButton } from "./examples/without-close-button";
 
 export const metadata: Metadata = {
   title: "Dialog",

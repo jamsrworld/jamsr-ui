@@ -3,15 +3,15 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { RadioChecked } from "./variants/checked";
-import { RadioColors } from "./variants/colors";
-import { RadioUsage } from "./variants/usage";
-import { RadioGroupDisabled } from "./variants/disabled";
-import { RadioGroupInvalid } from "./variants/invalid";
-import { RadioGroupUsage } from "./variants/radio-group";
-import { RadioGroupControlled } from "./variants/radio-group-controlled";
-import { RadioGroupCustom } from "./variants/radio-group-custom";
-import { RadioSizes } from "./variants/sizes";
+import { RadioChecked } from "./examples/checked";
+import { RadioColors } from "./examples/colors";
+import { RadioUsage } from "./examples/usage";
+import { RadioGroupDisabled } from "./examples/disabled";
+import { RadioGroupInvalid } from "./examples/invalid";
+import { RadioGroupUsage } from "./examples/radio-group";
+import { RadioGroupControlled } from "./examples/radio-group-controlled";
+import { RadioGroupCustom } from "./examples/radio-group-custom";
+import { RadioSizes } from "./examples/sizes";
 
 export const metadata: Metadata = {
   title: "Radio",

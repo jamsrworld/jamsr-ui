@@ -1,8 +1,8 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UseKeypressAll } from "./variants/all";
-import { UseKeypressMultiple } from "./variants/multiple";
-import { UseKeypressSingle } from "./variants/single";
+import { UseKeypressAll } from "./examples/all";
+import { UseKeypressMultiple } from "./examples/multiple";
+import { UseKeypressSingle } from "./examples/single";
 
 const UseHover = () => {
   return (

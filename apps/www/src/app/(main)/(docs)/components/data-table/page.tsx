@@ -3,11 +3,11 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { DataTableBorder } from "./variants/bordered";
-import { DataTableCustomization } from "./variants/customization";
-import { DataTableStickyHeader } from "./variants/sticky-header";
-import { DataTableUsage } from "./variants/usage";
-import { DataTableWithoutPagination } from "./variants/without-pagination";
+import { DataTableBorder } from "./examples/bordered";
+import { DataTableCustomization } from "./examples/customization";
+import { DataTableStickyHeader } from "./examples/sticky-header";
+import { DataTableUsage } from "./examples/usage";
+import { DataTableWithoutPagination } from "./examples/without-pagination";
 
 export const metadata: Metadata = {
   title: "Data-table",

@@ -1,7 +1,7 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UseHoverUsage } from "./variants/usage";
-import { UseHoverDelay } from "./variants/timeout";
+import { UseHoverUsage } from "./examples/usage";
+import { UseHoverDelay } from "./examples/timeout";
 
 const UseHover = () => {
   return (

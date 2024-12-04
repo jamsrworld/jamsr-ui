@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { ShowUsage } from "./variants/usage";
+import { ShowUsage } from "./examples/usage";
 
 export const metadata: Metadata = {
   title: "Show",

@@ -3,20 +3,20 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { RHFDemoCheckbox } from "./variants/checkbox";
-import { RHFDemoEditor } from "./variants/editor";
-import { RHFDemoInput } from "./variants/input";
-import { RHFDemoFileUploadMulti } from "./variants/file-upload-multi";
-import { RHFDemoOtpInput } from "./variants/otp-input";
-import { RHFDemoRadioGroup } from "./variants/radio-group";
-import { RHFDemoRating } from "./variants/rating";
-import { RHFDemoSelect } from "./variants/select";
-import { RHFDemoFileUploadSingle } from "./variants/file-upload-single";
-import { RHFDemoSwitch } from "./variants/switch";
-import { RHFDemoTagsInput } from "./variants/tags-input";
-import { RHFDemoTextarea } from "./variants/textarea";
-import { RHFDemoFileUploadMultiDefaultValue } from "./variants/file-upload-multi-default-value";
-import { RHFDemoAutocomplete } from "./variants/autocomplete";
+import { RHFDemoCheckbox } from "./examples/checkbox";
+import { RHFDemoEditor } from "./examples/editor";
+import { RHFDemoInput } from "./examples/input";
+import { RHFDemoFileUploadMulti } from "./examples/file-upload-multi";
+import { RHFDemoOtpInput } from "./examples/otp-input";
+import { RHFDemoRadioGroup } from "./examples/radio-group";
+import { RHFDemoRating } from "./examples/rating";
+import { RHFDemoSelect } from "./examples/select";
+import { RHFDemoFileUploadSingle } from "./examples/file-upload-single";
+import { RHFDemoSwitch } from "./examples/switch";
+import { RHFDemoTagsInput } from "./examples/tags-input";
+import { RHFDemoTextarea } from "./examples/textarea";
+import { RHFDemoFileUploadMultiDefaultValue } from "./examples/file-upload-multi-default-value";
+import { RHFDemoAutocomplete } from "./examples/autocomplete";
 
 export const metadata: Metadata = {
   title: "React Hook Form",

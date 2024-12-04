@@ -3,11 +3,11 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { FileUploadControlled } from "./variants/controlled";
-import { FileUploadCustomized } from "./variants/customized";
-import { FileUploadUsage } from "./variants/usage";
-import { FileUploadUsageValue } from "./variants/default-value";
-import { FileUploadDisabled } from "./variants/disabled";
+import { FileUploadControlled } from "./examples/controlled";
+import { FileUploadCustomized } from "./examples/customized";
+import { FileUploadUsage } from "./examples/usage";
+import { FileUploadUsageValue } from "./examples/default-value";
+import { FileUploadDisabled } from "./examples/disabled";
 
 export const metadata: Metadata = {
   title: "File Upload Single",

@@ -3,9 +3,9 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { TableAllowHover } from "./variants/allow-hover";
-import { TableBordered } from "./variants/bordered";
-import { TableUsage } from "./variants/usage";
+import { TableAllowHover } from "./examples/allow-hover";
+import { TableBordered } from "./examples/bordered";
+import { TableUsage } from "./examples/usage";
 
 export const metadata: Metadata = {
   title: "Table",

@@ -3,20 +3,20 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { TextareaControlled } from "./variants/controlled";
-import { TextareaUsage } from "./variants/usage";
-import { TextareaDisabled } from "./variants/disabled";
-import { TextareaErrorState } from "./variants/error-state";
-import { TextareaHelperText } from "./variants/helper-text";
-import { TextareaLabelHelper } from "./variants/label-helper";
-import { TextareaPlaceholder } from "./variants/placeholder";
-import { TextareaSizes } from "./variants/sizes";
-import { TextareaVariants } from "./variants/variants";
-import { TextareaWithEndContent } from "./variants/with-end-content";
-import { TextareaWithIcon } from "./variants/with-icon";
-import { TextareaWithPlaceholder } from "./variants/with-placeholder";
-import { TextareaWithStartContent } from "./variants/with-start-content";
-import { TextareaWithoutLabel } from "./variants/without-label";
+import { TextareaControlled } from "./examples/controlled";
+import { TextareaUsage } from "./examples/usage";
+import { TextareaDisabled } from "./examples/disabled";
+import { TextareaErrorState } from "./examples/error-state";
+import { TextareaHelperText } from "./examples/helper-text";
+import { TextareaLabelHelper } from "./examples/label-helper";
+import { TextareaPlaceholder } from "./examples/placeholder";
+import { TextareaSizes } from "./examples/sizes";
+import { TextareaVariants } from "./examples/variants";
+import { TextareaWithEndContent } from "./examples/with-end-content";
+import { TextareaWithIcon } from "./examples/with-icon";
+import { TextareaWithPlaceholder } from "./examples/with-placeholder";
+import { TextareaWithStartContent } from "./examples/with-start-content";
+import { TextareaWithoutLabel } from "./examples/without-label";
 
 export const metadata: Metadata = {
   title: "Textarea",

@@ -3,8 +3,8 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { KdbKeys } from "./variants/keys";
-import { KbdUsage } from "./variants/usage";
+import { KdbKeys } from "./examples/keys";
+import { KbdUsage } from "./examples/usage";
 
 const title = "Kbd";
 export const metadata: Metadata = {

@@ -3,10 +3,10 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { StepperControlled } from "./variants/controlled";
-import { StepperEvents } from "./variants/events";
-import { StepperMinMaxValue } from "./variants/min-max-value";
-import { StepperUsage } from "./variants/usage";
+import { StepperControlled } from "./examples/controlled";
+import { StepperEvents } from "./examples/events";
+import { StepperMinMaxValue } from "./examples/min-max-value";
+import { StepperUsage } from "./examples/usage";
 
 const title = "Stepper";
 

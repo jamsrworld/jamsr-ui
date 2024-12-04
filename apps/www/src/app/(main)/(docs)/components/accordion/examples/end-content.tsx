@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem } from "@jamsr-ui/react";
-import { AvatarUsage } from "../../avatar/variants/usage";
+import { AvatarUsage } from "../../avatar/examples/usage";
 
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
   Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`;

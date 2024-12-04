@@ -3,19 +3,19 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { SelectControlled } from "./variants/controlled";
-import { SelectCustomRenderComplex } from "./variants/custom-render-complex";
-import { SelectCustomRenderMulti } from "./variants/custom-render-multi";
-import { SelectCustomRenderValue } from "./variants/custom-render-value";
-import { SelectUsage } from "./variants/usage";
-import { SelectInvalidState } from "./variants/invalid-state";
-import { SelectMultiple } from "./variants/multiple";
-import { SelectMultipleControlled } from "./variants/multiple-controlled";
-import { SelectPlaceholder } from "./variants/placeholder";
-import { SelectSizes } from "./variants/sizes";
-import { SelectStartEndItems } from "./variants/start-end-items";
-import { SelectWithHelperText } from "./variants/with-helper-text";
-import { SelectWithoutLabel } from "./variants/without-label";
+import { SelectControlled } from "./examples/controlled";
+import { SelectCustomRenderComplex } from "./examples/custom-render-complex";
+import { SelectCustomRenderMulti } from "./examples/custom-render-multi";
+import { SelectCustomRenderValue } from "./examples/custom-render-value";
+import { SelectUsage } from "./examples/usage";
+import { SelectInvalidState } from "./examples/invalid-state";
+import { SelectMultiple } from "./examples/multiple";
+import { SelectMultipleControlled } from "./examples/multiple-controlled";
+import { SelectPlaceholder } from "./examples/placeholder";
+import { SelectSizes } from "./examples/sizes";
+import { SelectStartEndItems } from "./examples/start-end-items";
+import { SelectWithHelperText } from "./examples/with-helper-text";
+import { SelectWithoutLabel } from "./examples/without-label";
 
 export const metadata: Metadata = {
   title: "Select",

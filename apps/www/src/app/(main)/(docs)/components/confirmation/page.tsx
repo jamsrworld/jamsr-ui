@@ -3,8 +3,8 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { ConfirmationUsage } from "./variants/usage";
-import { ConfirmationColors } from "./variants/colors";
+import { ConfirmationUsage } from "./examples/usage";
+import { ConfirmationColors } from "./examples/colors";
 
 export const metadata: Metadata = {
   title: "Confirmation",

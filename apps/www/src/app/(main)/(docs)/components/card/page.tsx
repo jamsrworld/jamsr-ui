@@ -4,9 +4,9 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { CardStartEndContent } from "./variants/start-end-content";
-import { CardUsage } from "./variants/usage";
-import { CardVariants } from "./variants/variants";
+import { CardStartEndContent } from "./examples/start-end-content";
+import { CardUsage } from "./examples/usage";
+import { CardVariants } from "./examples/variants";
 
 const title = "Card";
 const description =

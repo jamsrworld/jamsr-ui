@@ -3,8 +3,8 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { DndGrid } from "./variants/usage";
-import { DndDisabled } from "./variants/disabled";
+import { DndGrid } from "./examples/usage";
+import { DndDisabled } from "./examples/disabled";
 
 export const metadata: Metadata = {
   title: "Drag and Drop (Dnd-Kit)",

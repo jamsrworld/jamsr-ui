@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UseDisclosureUsage } from "./variants/usage";
+import { UseDisclosureUsage } from "./examples/usage";
 
 const UseHover = () => {
   return (

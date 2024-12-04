@@ -4,15 +4,15 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { ButtonColors } from "./variants/colors";
-import { ButtonDisabled } from "./variants/disabled";
-import { ButtonIconButton } from "./variants/icon-button";
-import { ButtonLoading } from "./variants/loading";
-import { ButtonSizes } from "./variants/sizes";
-import { ButtonUsage } from "./variants/usage";
-import { ButtonVariants } from "./variants/variants";
-import { ButtonVariantsColors } from "./variants/variants-colors";
-import { ButtonWithIcons } from "./variants/with-icons";
+import { ButtonColors } from "./examples/colors";
+import { ButtonDisabled } from "./examples/disabled";
+import { ButtonIconButton } from "./examples/icon-button";
+import { ButtonLoading } from "./examples/loading";
+import { ButtonSizes } from "./examples/sizes";
+import { ButtonUsage } from "./examples/usage";
+import { ButtonVariants } from "./examples/variants";
+import { ButtonVariantsColors } from "./examples/variants-colors";
+import { ButtonWithIcons } from "./examples/with-icons";
 
 const title = "Button";
 const description =

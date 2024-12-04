@@ -3,11 +3,11 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
-import { AvatarBordered } from "./variants/bordered";
-import { AvatarUsage } from "./variants/usage";
-import { AvatarPlaceholders } from "./variants/placeholders";
-import { AvatarRadius } from "./variants/radius";
-import { AvatarSizes } from "./variants/sizes";
+import { AvatarBordered } from "./examples/bordered";
+import { AvatarUsage } from "./examples/usage";
+import { AvatarPlaceholders } from "./examples/placeholders";
+import { AvatarRadius } from "./examples/radius";
+import { AvatarSizes } from "./examples/sizes";
 
 const title = "Avatar";
 const description =

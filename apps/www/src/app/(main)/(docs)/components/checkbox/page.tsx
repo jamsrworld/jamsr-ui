@@ -3,11 +3,11 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
-import { CheckboxControlled } from "./variants/controlled";
-import { CheckboxUsage } from "./variants/usage";
-import { CheckboxDisabled } from "./variants/disabled";
-import { CheckboxInvalidState } from "./variants/invalid-state";
-import { CheckboxReadonly } from "./variants/readonly";
+import { CheckboxControlled } from "./examples/controlled";
+import { CheckboxUsage } from "./examples/usage";
+import { CheckboxDisabled } from "./examples/disabled";
+import { CheckboxInvalidState } from "./examples/invalid-state";
+import { CheckboxReadonly } from "./examples/readonly";
 
 
 const title = "Checkbox";

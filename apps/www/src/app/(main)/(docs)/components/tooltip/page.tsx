@@ -3,9 +3,9 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { TooltipUsage } from "./variants/usage";
-import { TooltipOffset } from "./variants/offset";
-import { TooltipWithArrow } from "./variants/with-arrow";
+import { TooltipUsage } from "./examples/usage";
+import { TooltipOffset } from "./examples/offset";
+import { TooltipWithArrow } from "./examples/with-arrow";
 
 export const metadata: Metadata = {
   title: "Tooltip",

@@ -1,6 +1,6 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { UsePressUsage } from "./variants/usage";
+import { UsePressUsage } from "./examples/usage";
 
 const UseHover = () => {
   return (

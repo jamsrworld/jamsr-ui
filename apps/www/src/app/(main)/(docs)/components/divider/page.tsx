@@ -3,12 +3,12 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
-import { DividerColors } from "./variants/colors";
-import { DividerCustomization } from "./variants/customization";
-import { DividerUsage } from "./variants/usage";
-import { DividerOrientation } from "./variants/orientation";
-import { DividerVariants } from "./variants/variants";
-import { DividerWithText } from "./variants/with-text";
+import { DividerColors } from "./examples/colors";
+import { DividerCustomization } from "./examples/customization";
+import { DividerUsage } from "./examples/usage";
+import { DividerOrientation } from "./examples/orientation";
+import { DividerVariants } from "./examples/variants";
+import { DividerWithText } from "./examples/with-text";
 
 export const metadata: Metadata = {
   title: "Divider",

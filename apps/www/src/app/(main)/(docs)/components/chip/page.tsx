@@ -3,12 +3,12 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { ChipColors } from "./variants/colors";
-import { ChipWithDelete } from "./variants/with-delete";
-import { ChipSizes } from "./variants/sizes";
-import { ChipUsage } from "./variants/usage";
-import { ChipVariants } from "./variants/variants";
-import { ChipVariantsColors } from "./variants/variants-colors";
+import { ChipColors } from "./examples/colors";
+import { ChipWithDelete } from "./examples/with-delete";
+import { ChipSizes } from "./examples/sizes";
+import { ChipUsage } from "./examples/usage";
+import { ChipVariants } from "./examples/variants";
+import { ChipVariantsColors } from "./examples/variants-colors";
 
 const title = "Chip";
 const description =

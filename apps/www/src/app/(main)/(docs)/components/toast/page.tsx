@@ -3,7 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { DefaultToast } from "./variants/usage";
+import { DefaultToast } from "./examples/usage";
 
 export const metadata: Metadata = {
   title: "Toast",

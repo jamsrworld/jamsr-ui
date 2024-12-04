@@ -3,16 +3,16 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { DrawerAnchors } from "./variants/anchors";
-import { DrawerBackdrop } from "./variants/backdrop";
-import { DrawerBordered } from "./variants/bordered";
-import { DrawerCustomCloseBtn } from "./variants/custom-close-button";
-import { DrawerCustomize } from "./variants/customize";
-import { DrawerNonDismissible } from "./variants/non-dismissible";
-import { DrawerScrollBehavior } from "./variants/scroll-behavior";
-import { DrawerSize } from "./variants/size";
-import { DrawerUsage } from "./variants/usage";
-import { DrawerWithoutCloseButton } from "./variants/without-close-button";
+import { DrawerAnchors } from "./examples/anchors";
+import { DrawerBackdrop } from "./examples/backdrop";
+import { DrawerBordered } from "./examples/bordered";
+import { DrawerCustomCloseBtn } from "./examples/custom-close-button";
+import { DrawerCustomize } from "./examples/customize";
+import { DrawerNonDismissible } from "./examples/non-dismissible";
+import { DrawerScrollBehavior } from "./examples/scroll-behavior";
+import { DrawerSize } from "./examples/size";
+import { DrawerUsage } from "./examples/usage";
+import { DrawerWithoutCloseButton } from "./examples/without-close-button";
 
 export const metadata: Metadata = {
   title: "Drawer",

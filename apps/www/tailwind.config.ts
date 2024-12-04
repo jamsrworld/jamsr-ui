@@ -1,5 +1,5 @@
 import { type Config } from "@jamsr-ui/tailwind-config";
-import { withJamsrUI } from "../../packages/theme/src/index";
+import { withJamsrUI } from "@jamsr-ui/theme";
 
 const config: Config = withJamsrUI({
   darkMode: "class",

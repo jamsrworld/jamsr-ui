@@ -1,9 +1,10 @@
+import { MotionSection } from "@jamsr-ui/motion";
 import { ChevronDownIcon } from "@jamsr-ui/shared-icons";
 import {
   TRANSITION_VARIANTS,
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useMemo } from "react";
 import {
   useAccordionItem,
@@ -77,8 +78,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
       </h3>
       <AnimatePresence initial={false}>
         {isOpen && (
-          // @ts-expect-error Framer Error
-          <m.section
+          <MotionSection
             className="overflow-hidden"
             initial="exit"
             animate="enter"
@@ -87,7 +87,7 @@ export const AccordionItem = <T extends React.ElementType = "div">(
             {...motionProps}
           >
             <div {...getPanelProps()}>{children}</div>
-          </m.section>
+          </MotionSection>
         )}
       </AnimatePresence>
     </Component>

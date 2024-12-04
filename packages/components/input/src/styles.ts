@@ -5,12 +5,13 @@ export const inputVariants = tv({
   slots: {
     base: "group flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground-400",
+    label: "shrink-0 select-none text-sm font-normal text-foreground",
     mainWrapper: "flex flex-col gap-1",
     inputWrapper: [
+      "relative rounded-xl border-2 border-default-200",
       "grow overflow-hidden",
-      "hover:border-default-400",
-      "group-data-[focused=true]:border-primary group-data-[focused=true]:ring-primary",
+      "ui-group-focus:border-primary ui-group-focus:ring-primary",
+      "ui-group-hover:border-default-400",
     ],
     innerWrapper: "flex h-full items-center",
     input: [
@@ -34,16 +35,15 @@ export const inputVariants = tv({
     },
     isFilled: {
       true: {
-        inputWrapper:
-          "rounded-xl border-2 border-divider bg-background-secondary",
+        inputWrapper: "bg-default/20 hover:bg-default/30",
       },
     },
     variant: {
       standard: {
-        inputWrapper: "relative rounded-xl border-2 border-divider",
+        inputWrapper: "",
       },
       outlined: {
-        inputWrapper: "relative rounded-xl border-2 border-divider",
+        inputWrapper: "relative rounded-xl",
         startContent: "group-data-[filled-within=true]:mt-4",
         labelWrapper:
           "pointer-events-none absolute inset-0 flex size-full items-start justify-between",

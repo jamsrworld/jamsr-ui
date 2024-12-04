@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/tags-input",
-  "version": "0.0.26",
+  "version": "0.0.28",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

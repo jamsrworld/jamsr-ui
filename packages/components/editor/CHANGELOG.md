@@ -1,5 +1,40 @@
 # @jamsr-ui/editor
 
+## 0.0.96
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.91
+  - @jamsr-ui/divider@0.0.70
+  - @jamsr-ui/popover@0.0.70
+  - @jamsr-ui/button@0.0.72
+  - @jamsr-ui/select@0.0.87
+  - @jamsr-ui/switch@0.0.77
+  - @jamsr-ui/input@0.0.92
+  - @jamsr-ui/menu@0.0.88
+  - @jamsr-ui/utils@0.0.64
+  - @jamsr-ui/repeater@0.0.37
+  - @jamsr-ui/hooks@0.0.45
+  - @jamsr-ui/shared-icons@0.0.59
+  - @jamsr-ui/styles@0.0.9
+
+## 0.0.95
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/select@0.0.86
+  - @jamsr-ui/switch@0.0.76
+  - @jamsr-ui/input@0.0.91
+  - @jamsr-ui/menu@0.0.87
+  - @jamsr-ui/utils@0.0.63
+  - @jamsr-ui/button@0.0.71
+  - @jamsr-ui/file-upload-single@0.0.90
+  - @jamsr-ui/divider@0.0.69
+  - @jamsr-ui/popover@0.0.69
+
 ## 0.0.94
 
 ### Patch Changes

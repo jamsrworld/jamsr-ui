@@ -1,5 +1,17 @@
 # @jamsr-ui/theme
 
+## 0.0.68
+
+### Patch Changes
+
+- fix components
+
+## 0.0.67
+
+### Patch Changes
+
+- fix: components
+
 ## 0.0.66
 
 ### Patch Changes

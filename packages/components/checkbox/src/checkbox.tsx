@@ -1,4 +1,5 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { MotionButton } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { useId, type ChangeEvent, type ComponentProps } from "react";
@@ -73,7 +74,8 @@ export const Checkbox = ($props: CheckboxProps) => {
         data-slot="wrapper"
         className={styles.wrapper({ className: classNames?.wrapper })}
       >
-        <div
+        <MotionButton
+          whileTap={{ scale: 0.95 }}
           data-slot="checkbox-wrapper"
           className={styles.checkboxWrapper({
             className: classNames?.checkboxWrapper,
@@ -91,7 +93,7 @@ export const Checkbox = ($props: CheckboxProps) => {
             {...restProps}
           />
           <CheckboxCheckIcon isChecked={Boolean(checked)} />
-        </div>
+        </MotionButton>
         <label
           className={styles.label({ className: classNames?.label })}
           htmlFor={id}

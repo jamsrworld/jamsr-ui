@@ -1,0 +1,24 @@
+{
+  "name": "@jamsr-ui/motion",
+  "version": "0.0.2",
+  "main": "./src/index.tsx",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "clean-package": "^2.2.0",
+    "framer-motion": "12.0.0-alpha.2",
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029"
+  },
+  "peerDependencies": {
+    "framer-motion": "12.0.0-alpha.2",
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

@@ -28,6 +28,7 @@ import {
   type Placement,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
+import { MotionUl } from "@jamsr-ui/motion";
 import { ChevronRightIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
@@ -36,7 +37,7 @@ import {
   deepMergeProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import {
   useEffect,
   useMemo,
@@ -256,8 +257,7 @@ export const MenuComponent = ($props: MenuProps) => {
                     initialFocus={isNested ? -1 : 0}
                     returnFocus={!isNested}
                   >
-                    {/* @ts-expect-error tserror */}
-                    <m.ul
+                    <MotionUl
                       ref={refs.setFloating}
                       style={floatingStyles}
                       className={styles.popover({
@@ -278,7 +278,7 @@ export const MenuComponent = ($props: MenuProps) => {
                         />
                       )}
                       {children}
-                    </m.ul>
+                    </MotionUl>
                   </FloatingFocusManager>
                 </FloatingOverlay>
               </FloatingPortal>

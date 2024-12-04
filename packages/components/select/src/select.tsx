@@ -3,9 +3,10 @@ import {
   FloatingList,
   FloatingPortal,
 } from "@floating-ui/react";
+import { MotionDiv } from "@jamsr-ui/motion";
 import { ChevronDownIcon } from "@jamsr-ui/shared-icons";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { m, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import type { UseSelectInnerProps } from "./use-select";
 import { useSelect } from "./use-select";
 import { SelectProvider } from "./use-select-context";
@@ -78,8 +79,7 @@ export const Select = <T extends React.ElementType = "div">(
                       elementsRef={elementsRef}
                       labelsRef={labelsRef}
                     >
-                      {/* @ts-expect-error framer-error */}
-                      <m.div
+                      <MotionDiv
                         initial={{ opacity: 0, scale: 0.95, y: -10 }}
                         exit={{ opacity: 0, scale: 0.95, y: -10 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -87,7 +87,7 @@ export const Select = <T extends React.ElementType = "div">(
                         {...getContentProps()}
                       >
                         <div {...getScrollAreaProps()}>{children}</div>
-                      </m.div>
+                      </MotionDiv>
                     </FloatingList>
                   </div>
                 </FloatingFocusManager>

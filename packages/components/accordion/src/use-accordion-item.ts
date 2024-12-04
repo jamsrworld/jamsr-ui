@@ -1,3 +1,4 @@
+import { type MotionDiv } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
@@ -8,7 +9,6 @@ import {
   type PropGetter,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { type m } from "framer-motion";
 import {
   useCallback,
   useEffect,
@@ -46,8 +46,7 @@ type Props = AccordionItemVariantProps & {
     | React.ReactNode
     | ((props: AccordionItemIndicatorProps) => React.ReactNode);
   isDisabled?: boolean;
-  // @ts-expect-error framer-motion type error
-  motionProps?: ComponentProps<typeof m.div>;
+  motionProps?: ComponentProps<typeof MotionDiv>;
 };
 
 export type UseAccordionItemProps = ComponentPropsWithAs<"div", Props>;

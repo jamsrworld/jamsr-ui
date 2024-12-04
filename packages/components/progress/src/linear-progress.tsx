@@ -1,5 +1,5 @@
+import { MotionDiv } from "@jamsr-ui/motion";
 import { cn, type VariantProps } from "@jamsr-ui/utils";
-import { m } from "framer-motion";
 import { type ComponentPropsWithoutRef } from "react";
 import { linearProgressVariants } from "./style";
 
@@ -32,8 +32,7 @@ export const LinearProgress = (props: LinearProgressProps) => {
       {isIntermediate ? (
         <div className={cn(bar(), "animate-progress")} />
       ) : (
-        // @ts-ignore
-        <m.div
+        <MotionDiv
           className={bar()}
           initial={{
             width: 0,

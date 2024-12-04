@@ -1,5 +1,10 @@
 import { type ButtonProps } from "@jamsr-ui/button";
-import { useControlledState } from "@jamsr-ui/hooks";
+import {
+  useControlledState,
+  useFocus,
+  useHover,
+  useMergeRefs,
+} from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
@@ -13,7 +18,7 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import type React from "react";
-import { useCallback, useMemo, useState, type ComponentProps } from "react";
+import { useCallback, useMemo, type ComponentProps } from "react";
 import {
   inputVariants,
   type InputSlots,
@@ -81,7 +86,7 @@ export const useInput = ($props: UseInputProps) => {
     helperText,
     decimalPrecision = 2,
     baseRef,
-    inputWrapperRef,
+    inputWrapperRef: $inputWrapperRef,
     children,
     ref,
     isRequired = false,
@@ -100,9 +105,16 @@ export const useInput = ($props: UseInputProps) => {
 
   const Component = as ?? "div";
   const InputComponent = "input";
-  const inputDOMRef = useDOMRef(ref);
-  const [isFocused, setIsFocused] = useState(false);
   const isDisabled = disabled || $isDisabled;
+  const { isFocused, ref: focusRef } = useFocus<HTMLInputElement>({
+    isDisabled,
+  });
+  const { isHovered, ref: hoverRef } = useHover<HTMLDivElement>({
+    isDisabled,
+  });
+  const refs = useMergeRefs([ref, focusRef]);
+  const inputDOMRef = useDOMRef(refs);
+  const inputWrapperRef = useMergeRefs([hoverRef, $inputWrapperRef]);
 
   const styles = inputVariants({
     variant,
@@ -183,14 +195,6 @@ export const useInput = ($props: UseInputProps) => {
     inputDOMRef.current?.focus();
   }, [inputDOMRef]);
 
-  const handleOnFocus = useCallback(() => {
-    setIsFocused(true);
-  }, [setIsFocused]);
-
-  const handleOnBlur = useCallback(() => {
-    setIsFocused(false);
-  }, [setIsFocused]);
-
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -200,6 +204,7 @@ export const useInput = ($props: UseInputProps) => {
         }),
         ref: baseRef,
         "data-focused": dataAttr(isFocused),
+        "data-hovered": dataAttr(isHovered),
         "data-filled-within": dataAttr(isFilledWithin),
         "data-has-label": dataAttr(hasLabel),
         "data-has-start-content": dataAttr(hasStartContent),
@@ -212,6 +217,7 @@ export const useInput = ($props: UseInputProps) => {
       classNames?.base,
       baseRef,
       isFocused,
+      isHovered,
       isFilledWithin,
       hasLabel,
       hasStartContent,
@@ -352,10 +358,8 @@ export const useInput = ($props: UseInputProps) => {
         type: inputType,
         placeholder,
         disabled: isDisabled,
-        ...mergeProps(restProps, props ?? {}, {
-          onFocus: handleOnFocus,
-          onBlur: handleOnBlur,
-        }),
+        ...restProps,
+        ...props,
         ref: inputDOMRef,
       };
     },
@@ -369,8 +373,6 @@ export const useInput = ($props: UseInputProps) => {
       placeholder,
       isDisabled,
       restProps,
-      handleOnFocus,
-      handleOnBlur,
       inputDOMRef,
     ],
   );

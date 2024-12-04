@@ -1,5 +1,25 @@
 # @jamsr-ui/checkbox
 
+## 0.0.68
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/motion@0.0.2
+  - @jamsr-ui/utils@0.0.64
+  - @jamsr-ui/hooks@0.0.45
+  - @jamsr-ui/styles@0.0.9
+
+## 0.0.67
+
+### Patch Changes
+
+- fix: components
+- Updated dependencies
+  - @jamsr-ui/motion@0.0.1
+  - @jamsr-ui/utils@0.0.63
+
 ## 0.0.66
 
 ### Patch Changes

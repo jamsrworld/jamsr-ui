@@ -1,5 +1,25 @@
 # @jamsr-ui/file-upload-single
 
+## 0.0.91
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.67
+  - @jamsr-ui/utils@0.0.64
+  - @jamsr-ui/hooks@0.0.45
+  - @jamsr-ui/shared-icons@0.0.59
+  - @jamsr-ui/styles@0.0.9
+
+## 0.0.90
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.66
+  - @jamsr-ui/utils@0.0.63
+
 ## 0.0.89
 
 ### Patch Changes

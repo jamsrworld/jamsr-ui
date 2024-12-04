@@ -10,7 +10,7 @@ export const otpInput = tv({
     inputsWrapper: "flex gap-2",
     helperText: "text-xs text-foreground-600",
     input:
-      "size-12 rounded border-2 border-divider bg-transparent text-center text-base outline-none hover:border-gray-400 focus:border-primary",
+      "size-12 rounded border-2 border-default-200 bg-transparent text-center text-base outline-none hover:border-default-400 focus:border-primary",
   },
   variants: {
     isInvalid: {

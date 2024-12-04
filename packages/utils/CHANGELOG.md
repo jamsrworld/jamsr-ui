@@ -1,5 +1,17 @@
 # @jamsr-ui/utils
 
+## 0.0.64
+
+### Patch Changes
+
+- fix components
+
+## 0.0.63
+
+### Patch Changes
+
+- fix: components
+
 ## 0.0.62
 
 ### Patch Changes

@@ -3,11 +3,13 @@ import {
   FloatingOverlay,
   FloatingPortal,
 } from "@floating-ui/react";
+import { MotionDiv } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { DialogCloseBtn } from "./dialog-close-btn";
 import { useDialogContext } from "./dialog-context";
+
 
 export type DialogContentProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T>;
@@ -44,8 +46,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
             lockScroll
           >
             <FloatingFocusManager context={context} modal>
-              {/* @ts-expect-error framer motion error */}
-              <m.div
+              <MotionDiv
                 initial={{ y: 50, opacity: 0 }}
                 animate={{
                   y: 0,
@@ -72,7 +73,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
                     : (closeButton ?? <DialogCloseBtn />)}
                   {children}
                 </Component>
-              </m.div>
+              </MotionDiv>
             </FloatingFocusManager>
           </FloatingOverlay>
         </FloatingPortal>

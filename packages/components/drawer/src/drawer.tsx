@@ -10,9 +10,10 @@ import {
 } from "@floating-ui/react";
 import { type ButtonProps } from "@jamsr-ui/button";
 import { useControlledState } from "@jamsr-ui/hooks";
+import { MotionDiv } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { type ComponentProps, useMemo, useState } from "react";
 import { DrawerCloseButton } from "./drawer-close-btn";
 import { motionDrawerVariants } from "./motion";
@@ -26,8 +27,7 @@ export type DrawerProps = DrawerVariants & {
   className?: string;
   defaultOpen?: boolean;
   classNames?: SlotsToClasses<DrawerSlots>;
-  // @ts-expect-error framer-motion error
-  motionProps?: Partial<ComponentProps<typeof m.div>>;
+  motionProps?: Partial<ComponentProps<typeof MotionDiv>>;
   closeButton?: React.ReactNode;
   isDismissible?: boolean;
   isKeyboardDismissible?: boolean;
@@ -124,8 +124,7 @@ export const Drawer = ($props: DrawerProps) => {
                 disabled={isAnimating}
                 modal
               >
-                {/* @ts-expect-error framer motion error */}
-                <m.div
+                <MotionDiv
                   variants={motionDrawerVariants}
                   key="modal"
                   initial="initial"
@@ -149,10 +148,12 @@ export const Drawer = ($props: DrawerProps) => {
                   <DrawerProvider value={contextValue}>
                     {closeButton === null
                       ? null
-                      : (closeButton ?? <DrawerCloseButton onClick={onClose} />)}
+                      : (closeButton ?? (
+                          <DrawerCloseButton onClick={onClose} />
+                        ))}
                     {children}
                   </DrawerProvider>
-                </m.div>
+                </MotionDiv>
               </FloatingFocusManager>
             </FloatingOverlay>
           </FloatingPortal>

@@ -1,8 +1,8 @@
-import { m } from "framer-motion";
+import { MotionDiv } from "@jamsr-ui/motion";
 import { useTabsContext } from "./tabs-context";
 
 export const TabIndicator = () => {
   const { getCursorProps } = useTabsContext();
-  // @ts-expect-error framer type error
-  return <m.div {...getCursorProps()} layoutId="indicator" />;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+  return <MotionDiv {...(getCursorProps as any)()} layoutId="indicator" />;
 };

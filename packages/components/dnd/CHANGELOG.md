@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.0.10
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.9
 
 ### Patch Changes

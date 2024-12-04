@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.189",
+  "version": "0.0.191",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"
@@ -24,7 +24,7 @@
     "autoprefixer": "^10.4.19",
     "clean-package": "^2.2.0",
     "eslint": "^8",
-    "framer-motion": "12.0.0-alpha.1",
+    "framer-motion": "12.0.0-alpha.2",
     "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
     "react": "19.0.0-rc-603e6108-20241029",
@@ -81,7 +81,7 @@
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {
-    "framer-motion": "12.0.0-alpha.1",
+    "framer-motion": "12.0.0-alpha.2",
     "react": "19.0.0-rc-603e6108-20241029"
   },
   "clean-package": "../../clean-package.config.json"

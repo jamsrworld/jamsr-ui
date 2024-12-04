@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.42
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.41
 
 ### Patch Changes

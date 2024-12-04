@@ -1,5 +1,36 @@
 # @jamsr-ui/data-table
 
+## 0.0.56
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.75
+  - @jamsr-ui/progress@0.0.67
+  - @jamsr-ui/skeleton@0.0.68
+  - @jamsr-ui/button@0.0.72
+  - @jamsr-ui/select@0.0.87
+  - @jamsr-ui/table@0.0.49
+  - @jamsr-ui/utils@0.0.64
+  - @jamsr-ui/repeater@0.0.37
+  - @jamsr-ui/shared-icons@0.0.59
+  - @jamsr-ui/styles@0.0.9
+
+## 0.0.55
+
+### Patch Changes
+
+- fix: components
+- Updated dependencies
+  - @jamsr-ui/progress@0.0.66
+  - @jamsr-ui/select@0.0.86
+  - @jamsr-ui/utils@0.0.63
+  - @jamsr-ui/button@0.0.71
+  - @jamsr-ui/skeleton@0.0.67
+  - @jamsr-ui/table@0.0.48
+  - @jamsr-ui/typography@0.0.74
+
 ## 0.0.54
 
 ### Patch Changes

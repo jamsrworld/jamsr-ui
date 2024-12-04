@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/stepper",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",
@@ -12,12 +12,12 @@
   "devDependencies": {
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "framer-motion": "12.0.0-alpha.1",
+    "framer-motion": "12.0.0-alpha.2",
     "react": "19.0.0-rc-603e6108-20241029",
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "peerDependencies": {
-    "framer-motion": "12.0.0-alpha.1",
+    "framer-motion": "12.0.0-alpha.2",
     "react": "19.0.0-rc-603e6108-20241029",
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },

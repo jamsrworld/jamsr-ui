@@ -333,7 +333,7 @@ export const useSelect = ($props: UseSelectProps) => {
     };
   };
 
-  const getContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+  const getContentProps: PropGetter = (props) => {
     return {
       "data-slot": "content",
       className: styles.content({ className: classNames?.content }),

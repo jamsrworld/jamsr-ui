@@ -15,7 +15,13 @@ export const SelectCustomRenderMulti = () => {
             <div className="flex flex-wrap gap-1">
               {selectedUsers.map((item) => {
                 return (
-                  <Chip key={item.id} className="flex items-center gap-2">
+                  <Chip
+                    key={item.id}
+                    classNames={{
+                      content: "flex items-center gap-2 py-1",
+                      base: "h-auto",
+                    }}
+                  >
                     <Avatar
                       alt={item.name}
                       className="shrink-0"
@@ -26,7 +32,7 @@ export const SelectCustomRenderMulti = () => {
                     />
                     <div className="flex flex-col">
                       <span className="text-left text-sm">{item.name}</span>
-                      <span className="text-xs text-default-400">
+                      <span className="text-xs text-foreground-secondary">
                         {item.email}
                       </span>
                     </div>

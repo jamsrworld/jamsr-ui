@@ -1,5 +1,26 @@
 # @jamsr-ui/drawer
 
+## 1.0.67
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/motion@0.0.2
+  - @jamsr-ui/utils@0.0.64
+  - @jamsr-ui/hooks@0.0.45
+  - @jamsr-ui/shared-icons@0.0.59
+  - @jamsr-ui/styles@0.0.9
+
+## 1.0.66
+
+### Patch Changes
+
+- fix: components
+- Updated dependencies
+  - @jamsr-ui/motion@0.0.1
+  - @jamsr-ui/utils@0.0.63
+
 ## 1.0.65
 
 ### Patch Changes

@@ -1,8 +1,9 @@
 import { useControlledState } from "@jamsr-ui/hooks";
+import { MotionButton, MotionDiv } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { Typography } from "@jamsr-ui/typography";
 import { deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
-import { m, type Variants } from "framer-motion";
+import { type Variants } from "framer-motion";
 import { useId } from "react";
 import {
   switchVariants,
@@ -126,8 +127,7 @@ export const Switch = ($props: SwitchProps) => {
             aria-hidden="true"
             {...restProps}
           />
-          {/* @ts-expect-error FramerError */}
-          <m.button
+          <MotionButton
             data-slot="switch"
             type="button"
             className={styles.switch({ className: classNames?.switch })}
@@ -140,14 +140,13 @@ export const Switch = ($props: SwitchProps) => {
             id={id}
             onKeyPress={handleKeyPress}
           >
-            {/* @ts-expect-error FramerError */}
-            <m.div
+            <MotionDiv
               data-slot="thumb"
               variants={variants}
               layoutId={id}
               className={styles.thumb({ className: classNames?.thumb })}
             />
-          </m.button>
+          </MotionButton>
         </div>
       </div>
       {helperText && (

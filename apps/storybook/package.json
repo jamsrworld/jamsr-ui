@@ -1,7 +1,7 @@
 {
   "name": "@ui/storybook",
   "private": true,
-  "version": "0.0.191",
+  "version": "0.0.193",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@jamsr-ui/react": "workspace:^",
-    "framer-motion": "12.0.0-alpha.1",
+    "framer-motion": "12.0.0-alpha.2",
     "react": "19.0.0-rc-603e6108-20241029",
     "react-dom": "19.0.0-rc-603e6108-20241029"
   },

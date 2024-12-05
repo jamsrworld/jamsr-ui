@@ -1,5 +1,13 @@
 # @jamsr-ui/react
 
+## 0.0.193
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/tags-input@0.0.29
+  - @jamsr-ui/rhf@0.0.38
+
 ## 0.0.192
 
 ### Patch Changes

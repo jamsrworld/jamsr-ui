@@ -18,7 +18,7 @@ export const RHFTagsInput = <T extends FieldValues>(props: Props<T>) => {
       name={name}
       control={control}
       render={({
-        field: { value, onChange, onBlur, },
+        field: { value, onChange, onBlur },
         fieldState: { error },
       }) => {
         return (

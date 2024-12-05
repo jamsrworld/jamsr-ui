@@ -1,5 +1,13 @@
 # @jamsr-ui/rhf
 
+## 0.0.38
+
+### Patch Changes
+
+- fix: tags-input
+- Updated dependencies
+  - @jamsr-ui/tags-input@0.0.29
+
 ## 0.0.37
 
 ### Patch Changes

@@ -2,13 +2,13 @@ import { Chip } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { Input, type InputProps } from "@jamsr-ui/input";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { useCallback, useMemo, useState } from "react";
 import { deepMergeProps } from "@jamsr-ui/utils";
+import { useCallback, useMemo, useState } from "react";
 
 type Props = {
-  value?: Set<string>;
-  onValueChange?: (value: Set<string>) => void;
-  defaultValue?: Set<string>;
+  value?: string[];
+  onValueChange?: (value: string[]) => void;
+  defaultValue?: string[];
   showClearButton?: boolean;
 };
 
@@ -22,8 +22,8 @@ export const TagsInput = ($props: TagsInputProps) => {
     props;
   const delimiters = ["Enter", ","];
 
-  const [values, setValues] = useControlledState(
-    defaultValue ?? new Set([]),
+  const [values = [], setValues] = useControlledState(
+    defaultValue ?? [],
     value,
     onValueChange,
   );
@@ -42,14 +42,18 @@ export const TagsInput = ($props: TagsInputProps) => {
     if (delimiters.includes(e.key)) {
       const { value } = e.target as HTMLInputElement;
       e.preventDefault();
-      setValues((prev) => new Set([...prev, ...getValueSetFromInput(value)]));
+      setValues((prev) => [
+        ...new Set([...prev, ...getValueSetFromInput(value)]),
+      ]);
       setInputValue("");
     }
   };
 
   const handleOnDelete = useCallback(
     (item: string) => {
-      setValues((prev) => new Set([...prev].filter((value) => value !== item)));
+      setValues((prev) => [
+        ...new Set([...prev].filter((value) => value !== item)),
+      ]);
     },
     [setValues],
   );
@@ -65,13 +69,12 @@ export const TagsInput = ($props: TagsInputProps) => {
   const handleOnPaste = useCallback(
     (e: React.ClipboardEvent<HTMLInputElement>) => {
       e.preventDefault();
-      setValues(
-        (prev) =>
-          new Set([
-            ...prev,
-            ...getValueSetFromInput(e.clipboardData?.getData("text") ?? ""),
-          ]),
-      );
+      setValues((prev) => [
+        ...new Set([
+          ...prev,
+          ...getValueSetFromInput(e.clipboardData?.getData("text") ?? ""),
+        ]),
+      ]);
     },
     [setValues],
   );

@@ -1,5 +1,12 @@
 # web
 
+## 0.1.175
+
+### Patch Changes
+
+- fix: tags-input
+  - @jamsr-ui/react@0.0.193
+
 ## 0.1.174
 
 ### Patch Changes

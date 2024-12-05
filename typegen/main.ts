@@ -5,7 +5,7 @@ const componentsDir = path.join(
   __dirname,
   "..",
   "apps",
-  "web",
+  "www",
   "src",
   "app",
   "(main)",
@@ -22,7 +22,7 @@ function getFiles(dir: string): { [key: string]: string[] } {
       const key = file.name;
       result[key] = [];
       const files = fs
-        .readdirSync(`${filePath}/variants`)
+        .readdirSync(`${filePath}/examples`)
         .filter((f) => f.endsWith(".tsx") || f.endsWith(".ts"));
       files.forEach((f) => {
         result[key].push(f.replace(/\.(ts|tsx)$/, ""));
@@ -51,7 +51,7 @@ function createFileTypes() {
     __dirname,
     "..",
     "apps",
-    "web",
+    "www",
     "src",
     "types",
     "variants.d.ts",

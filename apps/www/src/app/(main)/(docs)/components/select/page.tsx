@@ -16,6 +16,7 @@ import { SelectSizes } from "./examples/sizes";
 import { SelectStartEndItems } from "./examples/start-end-items";
 import { SelectWithHelperText } from "./examples/with-helper-text";
 import { SelectWithoutLabel } from "./examples/without-label";
+import { SelectDisabled } from "./examples/disabled";
 
 export const metadata: Metadata = {
   title: "Select",
@@ -32,6 +33,9 @@ const Select = () => {
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <SelectControlled />
+      </VariantWrapper>
+      <VariantWrapper heading="Disabled" code={code("disabled")}>
+        <SelectDisabled />
       </VariantWrapper>
       <VariantWrapper heading="Start End Items" code={code("start-end-items")}>
         <SelectStartEndItems />

@@ -15,7 +15,7 @@ type Props<T extends FieldValues> = UseControllerProps<T> &
     FileUploadSingleProps,
     "uploadApiUrl" | "inputName" | "getFileUrlAfterUpload"
   > & {
-    defaultRHFValue: unknown;
+    defaultStateValue: unknown;
   };
 
 export const RHFFileUploadSingle = <T extends FieldValues>(props: Props<T>) => {
@@ -24,7 +24,7 @@ export const RHFFileUploadSingle = <T extends FieldValues>(props: Props<T>) => {
     uploadApiUrl,
     inputName,
     getFileUrlAfterUpload,
-    defaultRHFValue,
+    defaultStateValue,
     ...restProps
   } = props;
   const { control } = useFormContext<T>();
@@ -37,12 +37,11 @@ export const RHFFileUploadSingle = <T extends FieldValues>(props: Props<T>) => {
         fieldState: { error },
       }) => {
         const onValueChange = (url: string | null) => {
-          if (!url) onChange(defaultRHFValue);
+          if (!url) onChange(defaultStateValue);
         };
         return (
           <FileUploadSingle
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-            value={value.url}
+            value={getFileUrlAfterUpload(value)}
             onValueChange={onValueChange}
             onUploadSuccess={onChange}
             onBlur={onBlur}
@@ -53,8 +52,11 @@ export const RHFFileUploadSingle = <T extends FieldValues>(props: Props<T>) => {
             uploadApiUrl={uploadApiUrl}
             inputName={inputName}
             getFileUrlAfterUpload={getFileUrlAfterUpload}
-            className="aspect-video h-40"
             {...restProps}
+            classNames={{
+              picker: "aspect-video h-40",
+              ...restProps.classNames,
+            }}
           />
         );
       }}

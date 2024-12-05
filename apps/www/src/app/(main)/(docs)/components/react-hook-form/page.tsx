@@ -1,22 +1,25 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
+import { RHFDemoAutocomplete } from "./examples/autocomplete";
 import { RHFDemoCheckbox } from "./examples/checkbox";
 import { RHFDemoEditor } from "./examples/editor";
-import { RHFDemoInput } from "./examples/input";
 import { RHFDemoFileUploadMulti } from "./examples/file-upload-multi";
+import { RHFDemoFileUploadMultiDefaultValue } from "./examples/file-upload-multi-default-value";
+import { RHFDemoFileUploadSingle } from "./examples/file-upload-single";
+import { RHFDemoFileUploadSingleDefaultValue } from "./examples/file-upload-single-default-value";
+import { RHFDemoInput } from "./examples/input";
 import { RHFDemoOtpInput } from "./examples/otp-input";
 import { RHFDemoRadioGroup } from "./examples/radio-group";
 import { RHFDemoRating } from "./examples/rating";
 import { RHFDemoSelect } from "./examples/select";
-import { RHFDemoFileUploadSingle } from "./examples/file-upload-single";
+import { RHFDemoSelectMulti } from "./examples/select-multi";
 import { RHFDemoSwitch } from "./examples/switch";
 import { RHFDemoTagsInput } from "./examples/tags-input";
 import { RHFDemoTextarea } from "./examples/textarea";
-import { RHFDemoFileUploadMultiDefaultValue } from "./examples/file-upload-multi-default-value";
-import { RHFDemoAutocomplete } from "./examples/autocomplete";
+import { RHFDemoAutocompleteMulti } from "./examples/autocomplete-multi";
 
 export const metadata: Metadata = {
   title: "React Hook Form",
@@ -55,8 +58,17 @@ const DragDropDndKit = () => {
       <VariantWrapper heading="Select" code={code("select")}>
         <RHFDemoSelect />
       </VariantWrapper>
+      <VariantWrapper heading="Select Multi" code={code("select-multi")}>
+        <RHFDemoSelectMulti />
+      </VariantWrapper>
       <VariantWrapper heading="Autocomplete" code={code("autocomplete")}>
         <RHFDemoAutocomplete />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Autocomplete Multi"
+        code={code("autocomplete-multi")}
+      >
+        <RHFDemoAutocompleteMulti />
       </VariantWrapper>
       <VariantWrapper heading="Editor" code={code("editor")}>
         <RHFDemoEditor />
@@ -66,6 +78,12 @@ const DragDropDndKit = () => {
         code={code("file-upload-single")}
       >
         <RHFDemoFileUploadSingle />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Single File Upload Default Value"
+        code={code("file-upload-single-default-value")}
+      >
+        <RHFDemoFileUploadSingleDefaultValue />
       </VariantWrapper>
       <VariantWrapper
         heading="Multi File Upload"

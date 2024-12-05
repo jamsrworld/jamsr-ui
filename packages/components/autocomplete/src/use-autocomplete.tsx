@@ -35,8 +35,6 @@ import type { AutocompleteSlots } from "./style";
 import { autocompleteVariant } from "./style";
 import type { AutocompleteContextType } from "./use-autocomplete-context";
 
-export type SelectionSet = Set<string>;
-
 export type UseAutocompleteProps = Pick<
   InputProps,
   | "label"
@@ -51,9 +49,9 @@ export type UseAutocompleteProps = Pick<
   className?: string;
   classNames?: SlotsToClasses<AutocompleteSlots>;
   placement?: Placement;
-  value?: SelectionSet;
-  defaultValue?: SelectionSet;
-  onValueChange?: (value: SelectionSet) => void;
+  value?: string[];
+  defaultValue?: string[];
+  onValueChange?: (value: string[]) => void;
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (value: boolean) => void;
@@ -91,7 +89,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
   const [isFocused, setIsFocused] = useState(false);
-  const [value = new Set([]), setValue] = useControlledState(
+  const [value = [], setValue] = useControlledState(
     defaultValue,
     propValue,
     onValueChange,
@@ -115,15 +113,15 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
   const getNewValue = useCallback(
     (newValue: string) => {
       if (isMultiple) {
-        const prev = new Set(value);
-        if (value.has(newValue)) {
-          prev.delete(newValue);
-          return prev;
+        const $value = new Set(value);
+        if ($value.has(newValue)) {
+          $value.delete(newValue);
+          return [...$value];
         }
-        prev.add(newValue);
-        return prev;
+        $value.add(newValue);
+        return [...$value];
       }
-      return new Set([newValue]);
+      return [newValue];
     },
     [isMultiple, value],
   );
@@ -339,15 +337,15 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
       inputRef.current?.focus();
-      setValue(new Set([]));
+      setValue([]);
     },
     [setValue],
   );
 
   const hasValue = useMemo(() => {
-    if (isMultiple) return value.size > 0;
+    if (isMultiple) return value.length > 0;
     return inputValue.length > 0;
-  }, [inputValue.length, isMultiple, value.size]);
+  }, [inputValue.length, isMultiple, value.length]);
 
   const getInputProps: PropGetter<InputProps> = useCallback(() => {
     return {

@@ -6,29 +6,32 @@ import { zodImage } from "@/utils/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   type FileUploadError,
-  RHFFileUploadMulti,
+  RHFFileUploadSingle,
   toast,
 } from "@jamsr-ui/react";
 import { useForm } from "react-hook-form";
-import { array, object } from "zod";
+import { object } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";
 
 type FormValues = {
-  images: ImageMetadata[];
+  image: ImageMetadata;
 };
 
 const schema = object({
-  images: array(zodImage("Image")).min(2, "Minimum 2 images are required"),
+  image: zodImage("Image"),
 });
 
-type Props = {
-  images?: ImageMetadata[];
-};
+export const RHFDemoFileUploadSingleDefaultValue = () => {
+  const imageVal: ImageMetadata = {
+    name: "",
+    height: 0,
+    url: "https://cdn.jamsrworld.com/11-25-2024/_-media_-14--1732518710650-527259107.jpg",
+    placeholder: "",
+    width: 0,
+  };
 
-export const RHFDemoFileUploadMulti = (props: Props) => {
-  const { images } = props;
   const defaultValues: FormValues = {
-    images: images ?? [],
+    image: imageVal,
   };
   const methods = useForm<FormValues>({
     defaultValues,
@@ -41,20 +44,24 @@ export const RHFDemoFileUploadMulti = (props: Props) => {
 
   const getFileUrlAfterUpload = (response: ImageMetadata) => {
     const { url } = response;
-    return url.startsWith("http") ? url : `${CDN_API_URL}/${response.url}`;
+    if (url.startsWith("http")) return url;
+    if (url === "") return "";
+    return `${CDN_API_URL}/${response.url}`;
   };
 
   const handleError = (error: FileUploadError) => {
     toast.error(error.message);
   };
+
   return (
     <RHFDemoWrapper methods={methods} isPending={false} onSubmit={onSubmit}>
-      <RHFFileUploadMulti<FormValues>
-        label="Your Images"
-        name="images"
+      <RHFFileUploadSingle<FormValues>
+        label="Your Image"
+        name="image"
         inputName="file"
         getFileUrlAfterUpload={getFileUrlAfterUpload}
         uploadApiUrl={CDN_UPLOAD_URL}
+        defaultStateValue={imageVal}
         onError={handleError}
       />
     </RHFDemoWrapper>

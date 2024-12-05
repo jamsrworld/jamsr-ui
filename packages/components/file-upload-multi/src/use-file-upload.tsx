@@ -25,6 +25,7 @@ export type FileUploadMultiState = {
 };
 
 type Props = MultiUploadVariants & {
+  label?: string;
   defaultValue?: FileUploadMultiState[];
   value?: FileUploadMultiState[];
   onValueChange?: (value: FileUploadMultiState[]) => void;
@@ -72,6 +73,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     uploadApiUrl,
     onUploadSuccess,
     getFileUrlAfterUpload,
+    label,
     ...restProps
   } = props;
 
@@ -253,6 +255,14 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     [className, classNames?.base, isDisabled, isDragActive, styles, restProps],
   );
 
+  const getLabelProps: PropGetter<ComponentProps<"label">> = (props) => {
+    return {
+      "data-slot": "label",
+      className: styles.label({ className: classNames?.label }),
+      ...props,
+    };
+  };
+
   const getFileViewProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -371,5 +381,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     retryUpload,
     overlayWrapperClassName,
     overlayClassName,
+    label,
+    getLabelProps,
   };
 };

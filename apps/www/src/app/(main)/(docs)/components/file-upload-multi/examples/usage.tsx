@@ -38,6 +38,7 @@ export const FileUploadUsage = (props: Partial<FileUploadMultiProps>) => {
 
   return (
     <FileUploadMulti
+      label="Upload images"
       onUploadSuccess={onUploadSuccess}
       getFileUrlAfterUpload={getFileUrlAfterUpload}
       uploadApiUrl={CDN_UPLOAD_URL}

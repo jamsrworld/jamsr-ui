@@ -3,15 +3,15 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AutocompleteItem, RHFAutocomplete } from "@jamsr-ui/react";
 import { useForm } from "react-hook-form";
-import { object, string } from "zod";
+import { array, object, string } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";
 
 type FormValues = {
-  animal: string;
+  animal: string[];
 };
 
 const schema = object({
-  animal: string().min(1, "Animal is required"),
+  animal: array(string()).min(1, "Animal is required"),
 });
 
 const animals = [
@@ -69,22 +69,23 @@ const animals = [
   },
 ];
 
-export const RHFDemoAutocomplete = () => {
+export const RHFDemoAutocompleteMulti = () => {
   const defaultValues: FormValues = {
-    animal: "",
+    animal: [],
   };
   const methods = useForm<FormValues>({
     defaultValues,
     resolver: zodResolver(schema),
   });
   const { handleSubmit } = methods;
+
   const onSubmit = handleSubmit((values) => {
     console.log(values);
   });
 
   return (
     <RHFDemoWrapper methods={methods} isPending={false} onSubmit={onSubmit}>
-      <RHFAutocomplete<FormValues> name="animal" label="Animal">
+      <RHFAutocomplete<FormValues> name="animal" label="Animal" isMultiple>
         {animals.map((animal) => (
           <AutocompleteItem
             key={animal.value}

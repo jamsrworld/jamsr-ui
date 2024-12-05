@@ -1,5 +1,11 @@
 # @jamsr-ui/select
 
+## 0.0.88
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.87
 
 ### Patch Changes

@@ -26,7 +26,7 @@ export const SelectItem = <T extends React.ElementType = "button">(
     handleSelect,
     setValue,
     isMultiple,
-    value: inputValue,
+    value: values,
   } = useSelectContext();
 
   // eslint-disable-next-line no-nested-ternary
@@ -41,22 +41,21 @@ export const SelectItem = <T extends React.ElementType = "button">(
     label: listLabel,
   });
   const isActive = activeIndex === index;
-  const isSelected = inputValue.has(value);
+  const isSelected = new Set(values).has(value);
 
   const handleClick = () => {
-    const getNewValue = () => {
+    const getNewValue = (): string[] => {
       if (isMultiple) {
-        const prev = new Set(inputValue);
-        if (inputValue.has(value)) {
-          prev.delete(value);
-          return prev;
+        const $value = new Set(values);
+        if ($value.has(value)) {
+          $value.delete(value);
+          return [...$value];
         }
-        prev.add(value);
-        return prev;
+        $value.add(value);
+        return [...$value];
       }
-      return new Set([value]);
+      return [value];
     };
-
     setValue(getNewValue());
   };
 

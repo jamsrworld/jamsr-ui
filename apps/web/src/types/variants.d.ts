@@ -185,7 +185,6 @@ export type VariantTypes = {
     "usage",
   ];
   "react-hook-form": [
-    "autocomplete-multi",
     "autocomplete",
     "checkbox",
     "editor",
@@ -197,7 +196,6 @@ export type VariantTypes = {
     "otp-input",
     "radio-group",
     "rating",
-    "select-multi",
     "select",
     "switch",
     "tags-input",
@@ -210,7 +208,6 @@ export type VariantTypes = {
     "custom-render-complex",
     "custom-render-multi",
     "custom-render-value",
-    "disabled",
     "invalid-state",
     "multiple-controlled",
     "multiple",

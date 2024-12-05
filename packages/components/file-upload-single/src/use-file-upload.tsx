@@ -42,6 +42,7 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
   getFileIcon?: (ext: string) => React.ReactNode;
   uploadApiUrl: string;
   getFileUrlAfterUpload: (response: any) => string;
+  label?: string;
 };
 
 export type UseFileUploadSingleProps = Props & UIProps<"div", keyof Props>;
@@ -76,6 +77,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     uploadApiUrl,
     onUploadSuccess,
     getFileUrlAfterUpload,
+    label,
     ...restProps
   } = props;
   const xhrRef = useRef<XMLHttpRequest | null>(null);
@@ -254,6 +256,14 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     [className, classNames?.base, isDisabled, isDragActive, restProps, styles],
   );
 
+  const getLabelProps: PropGetter<ComponentProps<"label">> = (props) => {
+    return {
+      "data-slot": "label",
+      className: styles.label({ className: classNames?.label }),
+      ...props,
+    };
+  };
+
   const getDeleteBtnProps: PropGetter<ComponentProps<"button">> = useCallback(
     (props = {}) => {
       return {
@@ -390,6 +400,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     getBaseProps,
     getRootProps,
     getInputProps,
+    getLabelProps,
     getDeleteBtnProps,
     getPickerProps,
     getOverlayProps,
@@ -417,5 +428,6 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     isEmpty,
     isFailed,
     onRetry,
+    label,
   };
 };

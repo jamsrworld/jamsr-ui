@@ -1,5 +1,18 @@
 # @jamsr-ui/react
 
+## 0.0.192
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.92
+  - @jamsr-ui/file-upload-multi@0.0.92
+  - @jamsr-ui/autocomplete@0.0.99
+  - @jamsr-ui/data-table@0.0.57
+  - @jamsr-ui/select@0.0.88
+  - @jamsr-ui/rhf@0.0.37
+  - @jamsr-ui/editor@0.0.97
+
 ## 0.0.191
 
 ### Patch Changes

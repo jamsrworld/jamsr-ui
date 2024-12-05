@@ -1,5 +1,13 @@
 # @jamsr-ui/editor
 
+## 0.0.97
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.92
+  - @jamsr-ui/select@0.0.88
+
 ## 0.0.96
 
 ### Patch Changes

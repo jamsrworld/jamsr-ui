@@ -1,13 +1,12 @@
 import { type useInteractions } from "@floating-ui/react";
 import { createContext } from "@jamsr-ui/utils";
-import type { SelectionSet } from "./use-autocomplete";
 import { type autocompleteVariant } from "./style";
 
 export type AutocompleteContextType = {
   activeIndex: number | null;
   getItemProps: ReturnType<typeof useInteractions>["getItemProps"];
   handleSelect: (args: { value: string; label: string }) => void;
-  value: SelectionSet;
+  value: string[];
   styles: ReturnType<typeof autocompleteVariant>;
 };
 

@@ -12,7 +12,7 @@ import {
   useRole,
   useTypeahead,
 } from "@floating-ui/react";
-import { useControlledState } from "@jamsr-ui/hooks";
+import { useControlledState, useHover, useMergeRefs } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import { cn, dataAttr, deepMergeProps } from "@jamsr-ui/utils";
@@ -31,16 +31,15 @@ import type { SelectSlots, SelectVariantProps } from "./style";
 import { selectVariant } from "./style";
 import type { SelectContextType } from "./use-select-context";
 
-export type SelectionSet = Set<string>;
-
 type Props = SelectVariantProps & {
   placement?: Placement;
   label?: string;
   placeholder?: string;
   isInvalid?: boolean;
-  value?: SelectionSet;
-  defaultValue?: SelectionSet;
-  onValueChange?: (value: SelectionSet) => void;
+  isDisabled?: boolean;
+  value?: string[];
+  defaultValue?: string[];
+  onValueChange?: (value: string[]) => void;
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (value: boolean) => void;
@@ -82,11 +81,12 @@ export const useSelect = ($props: UseSelectProps) => {
     startContent,
     endContent,
     as,
+    isDisabled,
     ...restProps
   } = props;
 
   const Component = as ?? "div";
-  const [value = new Set([]), setValue] = useControlledState(
+  const [value = [], setValue] = useControlledState(
     defaultValue,
     propValue,
     onValueChange,
@@ -97,9 +97,10 @@ export const useSelect = ($props: UseSelectProps) => {
     propOpen,
     onOpenChange,
   );
-  const [isHovered, setIsHovered] = useState(false);
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
+
+  const { isHovered, ref: hoverRef } = useHover({
+    isDisabled,
+  });
 
   const childrenArray = Children.toArray(children);
   const selectItems = childrenArray.map((item) => {
@@ -115,7 +116,7 @@ export const useSelect = ($props: UseSelectProps) => {
 
   const selectedLabels = useMemo(() => {
     const items = selectItems
-      .filter((item) => item && value.has(item.value))
+      .filter((item) => item && new Set(value).has(item.value))
       .map(
         (item) =>
           item?.label ??
@@ -165,23 +166,17 @@ export const useSelect = ($props: UseSelectProps) => {
       }),
     ],
   });
+  const mergedRefs = useMergeRefs([hoverRef, setReference]);
 
   const handleSelect = useCallback(
     (index: number | null) => {
       setSelectedIndex(index);
       if (index === null) return;
-      const label = labelsRef.current[index];
-      if (typeof label !== "string") return;
-
       if (!isMultiple) {
         setIsOpen(false);
-        return;
       }
-
-      const prev = new Set(selectedLabels);
-      prev.has(label) ? prev.delete(label) : prev.add(label);
     },
-    [isMultiple, selectedLabels, setIsOpen],
+    [isMultiple, setIsOpen],
   );
 
   function handleTypeaheadMatch(index: number | null) {
@@ -232,7 +227,7 @@ export const useSelect = ($props: UseSelectProps) => {
     value,
   ]);
 
-  const hasValue = value.size > 0;
+  const hasValue = value.length > 0;
 
   const getRenderValue = useMemo(() => {
     if (renderValue) return renderValue(Array.from(value));
@@ -246,6 +241,8 @@ export const useSelect = ($props: UseSelectProps) => {
       "data-slot": "base",
       "data-open": dataAttr(isOpen),
       "data-hovered": dataAttr(isHovered),
+      "data-disabled": dataAttr(isDisabled),
+      "aria-disabled": dataAttr(isDisabled),
       ...props,
       className: styles.base({
         className: cn(classNames?.base, className),
@@ -297,11 +294,12 @@ export const useSelect = ($props: UseSelectProps) => {
           "h-auto": isMultiple,
         }),
       }),
+      disabled: isDisabled,
+      "aria-disabled": dataAttr(isDisabled),
+      "data-disabled": dataAttr(isDisabled),
       ...props,
       ...getReferenceProps({
-        ref: setReference,
-        onMouseEnter: handleMouseEnter,
-        onMouseLeave: handleMouseLeave,
+        ref: mergedRefs,
       }),
     };
   };

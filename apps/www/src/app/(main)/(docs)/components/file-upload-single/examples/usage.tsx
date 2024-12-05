@@ -32,11 +32,14 @@ export const FileUploadUsage = (props: Partial<FileUploadSingleProps>) => {
 
   return (
     <FileUploadSingle
+      label="Upload a file"
       onUploadSuccess={onUploadSuccess}
       getFileUrlAfterUpload={getFileUrlAfterUpload}
       uploadApiUrl={CDN_UPLOAD_URL}
       inputName="file"
-      className="aspect-video h-40"
+      classNames={{
+        picker: "aspect-video h-40",
+      }}
       onError={handleOnError}
       onDelete={handleOnDelete}
       showDeleteBtn

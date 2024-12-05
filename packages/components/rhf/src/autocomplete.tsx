@@ -9,7 +9,7 @@ import {
 type Props<T extends FieldValues> = UseControllerProps<T> & AutocompleteProps;
 
 export const RHFAutocomplete = <T extends FieldValues>(props: Props<T>) => {
-  const { name, children, ...restProps } = props;
+  const { name, children, isMultiple, ...restProps } = props;
   const { control } = useFormContext<T>();
   return (
     <Controller
@@ -19,14 +19,19 @@ export const RHFAutocomplete = <T extends FieldValues>(props: Props<T>) => {
         field: { value, onChange, onBlur },
         fieldState: { error },
       }) => {
+        const $value = isMultiple ? value : [value];
+        const onValueChange = (value: string[]) => {
+          onChange(isMultiple ? value : (value[0] ?? ""));
+        };
         return (
           <Autocomplete
-            value={value}
-            onValueChange={onChange}
+            value={$value}
+            onValueChange={onValueChange}
             onBlur={onBlur}
             isInvalid={!!error}
             data-invalid={!!error}
             helperText={error?.message}
+            isMultiple={isMultiple}
             {...restProps}
           >
             {children}

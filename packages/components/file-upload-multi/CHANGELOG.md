@@ -1,5 +1,11 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.92
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.91
 
 ### Patch Changes

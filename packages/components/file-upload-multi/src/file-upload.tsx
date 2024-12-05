@@ -1,5 +1,6 @@
 import { Sortable } from "@jamsr-ui/dnd";
 import { CloseIcon, DragDropHorizontalIcon } from "@jamsr-ui/shared-icons";
+import { useId } from "react";
 import { ProgressView } from "./progress-view";
 import type { UseFileUploadMultiProps } from "./use-file-upload";
 import { useFileUploadMulti } from "./use-file-upload";
@@ -30,9 +31,15 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
     overlayWrapperClassName,
     overlayClassName,
     setValue,
+    getLabelProps,
+    label,
   } = useFileUploadMulti(props);
+  const htmlForId = useId();
   return (
     <Component {...getBaseProps()}>
+      <label {...getLabelProps()} htmlFor={htmlForId}>
+        {label}
+      </label>
       <div {...getInnerWrapperProps()}>
         <Sortable items={value} setItems={setValue}>
           {({
@@ -83,7 +90,7 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
         </Sortable>
         {canUploadFile && (
           <div {...getRootProps()} {...getPickerProps()}>
-            <input {...getInputProps()} />
+            <input id={htmlForId} {...getInputProps()} />
             {uploadIcon}
             {info && <div {...getInfoProps()}>{info}</div>}
           </div>

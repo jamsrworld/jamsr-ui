@@ -16,6 +16,7 @@ export const multiUploadVariant = tv({
     overlayWrapper:
       "absolute inset-0 z-1 flex size-full items-center justify-center overflow-hidden rounded-lg text-white",
     overlay: "absolute inset-0 -z-1 flex size-full bg-black/50",
+    label: "shrink-0 select-none text-sm font-normal text-foreground",
   },
   variants: {
     isDisabled: {

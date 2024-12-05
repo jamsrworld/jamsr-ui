@@ -1,5 +1,12 @@
 # web
 
+## 0.1.174
+
+### Patch Changes
+
+- fix components
+  - @jamsr-ui/react@0.0.192
+
 ## 0.1.173
 
 ### Patch Changes

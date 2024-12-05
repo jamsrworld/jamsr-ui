@@ -9,7 +9,7 @@ import {
 type Props<T extends FieldValues> = UseControllerProps<T> & SelectProps;
 
 export const RHFSelect = <T extends FieldValues>(props: Props<T>) => {
-  const { name, ...restProps } = props;
+  const { name, isMultiple, ...restProps } = props;
   const { control } = useFormContext<T>();
   return (
     <Controller
@@ -19,9 +19,9 @@ export const RHFSelect = <T extends FieldValues>(props: Props<T>) => {
         field: { value, onChange, onBlur },
         fieldState: { error },
       }) => {
-        const $value = new Set([value]);
-        const onValueChange = (value: Set<string>) => {
-          onChange(Array.from(value)[0]);
+        const $value = isMultiple ? value : [value];
+        const onValueChange = (value: string[]) => {
+          onChange(isMultiple ? value : (value[0] ?? ""));
         };
         return (
           <Select
@@ -31,6 +31,7 @@ export const RHFSelect = <T extends FieldValues>(props: Props<T>) => {
             isInvalid={!!error}
             data-invalid={!!error}
             helperText={error?.message}
+            isMultiple={isMultiple}
             {...restProps}
           />
         );

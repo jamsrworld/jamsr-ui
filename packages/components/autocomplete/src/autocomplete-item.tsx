@@ -37,7 +37,7 @@ export const AutocompleteItem = <T extends React.ElementType = "li">(
     activeIndex,
     getItemProps,
     handleSelect,
-    value: valueSet,
+    value: values,
     styles,
   } = useAutocompleteContext();
 
@@ -51,7 +51,7 @@ export const AutocompleteItem = <T extends React.ElementType = "li">(
     label: listLabel,
   });
   const isActive = activeIndex === index;
-  const isSelected = valueSet.has(value);
+  const isSelected = new Set(values).has(value);
   const Component = as ?? "li";
 
   const className = styles.item({

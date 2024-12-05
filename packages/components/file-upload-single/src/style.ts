@@ -18,6 +18,7 @@ export const singleUploadVariants = tv({
     helperText: "text-xs text-foreground-500",
     fileName: "max-w-[90%] truncate text-center text-xs",
     fileSize: "text-xs text-foreground-400",
+    label: "shrink-0 select-none text-sm font-normal text-foreground",
   },
   variants: {
     isDisabled: {

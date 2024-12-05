@@ -20,9 +20,7 @@ type Props<T extends FieldValues> = UseControllerProps<T> &
   Pick<
     FileUploadMultiProps,
     "uploadApiUrl" | "inputName" | "getFileUrlAfterUpload"
-  > & {
-    getPreviewUrlFromValue: (value: any) => string | null;
-  };
+  >;
 
 export const RenderController = <
   TFieldValues extends FieldValues,
@@ -39,10 +37,8 @@ export const RenderController = <
     uploadApiUrl,
     inputName,
     getFileUrlAfterUpload,
-    getPreviewUrlFromValue,
     ...restProps
   } = props;
-
   const value = Array.isArray($value) ? $value : [];
 
   const uploadsDefault = value.map((item) => ({
@@ -52,7 +48,7 @@ export const RenderController = <
   const defaultState: FileUploadMultiState[] = uploadsDefault.map((item) => ({
     file: null,
     id: item.id,
-    preview: getPreviewUrlFromValue(item.response),
+    preview: getFileUrlAfterUpload(item.response),
     progress: "COMPLETE",
   }));
 

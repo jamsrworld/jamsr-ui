@@ -14,8 +14,10 @@ export const selectVariant = tv({
     mainWrapper: "flex w-full flex-col",
     innerWrapper: "flex w-full items-center gap-2",
     label: "mb-1 text-sm text-foreground-400",
-    trigger:
-      "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 shadow-sm outline-none focus:border-primary group-data-[hovered=true]:border-gray-400 group-data-[open=true]:border-primary",
+    trigger: [
+      "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-divider px-3 py-2 outline-none focus:border-primary group-data-[hovered=true]:border-default-400 group-data-[open=true]:border-primary",
+      "disabled:cursor-not-allowed disabled:opacity-50",
+    ],
     helperText: "mt-1 text-xs text-foreground-500",
     indicator:
       "transition-transform duration-300 group-data-[open=true]:rotate-180",

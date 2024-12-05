@@ -1,5 +1,6 @@
 import { CircularProgress } from "@jamsr-ui/progress";
 import { RefreshIcon, TrashIcon } from "@jamsr-ui/shared-icons";
+import { useId } from "react";
 import {
   useFileUploadSingle,
   type UseFileUploadSingleProps,
@@ -40,12 +41,18 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
     isEmpty,
     isFailed,
     onRetry,
+    getLabelProps,
+    label,
   } = useFileUploadSingle(props);
+  const htmlForId = useId();
 
   return (
     <Component {...getBaseProps()}>
+      <label {...getLabelProps()} htmlFor={htmlForId}>
+        {label}
+      </label>
       <div {...getPickerProps()} {...getRootProps()}>
-        <input {...getInputProps()} />
+        <input id={htmlForId} {...getInputProps()} />
         {uploadIcon}
         {!isAvatar && (
           <>

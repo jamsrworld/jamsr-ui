@@ -16,7 +16,7 @@ type Props<T> = {
 };
 
 export const Pagination = <T,>({ table, take }: Props<T>) => {
-  const [value, setValue] = useState(new Set([take.toString()]));
+  const [value, setValue] = useState([take.toString()]);
 
   useEffect(() => {
     table.setPageSize(Number(Array.from(value)[0] ?? rowPerPageOptions[0]));

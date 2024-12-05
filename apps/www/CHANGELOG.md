@@ -1,5 +1,15 @@
 # web
 
+## 0.1.178
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.46
+  - @jamsr-ui/theme@0.0.69
+  - @jamsr-ui/react@0.0.196
+
 ## 0.1.177
 
 ### Patch Changes

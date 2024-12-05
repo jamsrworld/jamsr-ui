@@ -1,5 +1,12 @@
 # @jamsr-ui/progress
 
+## 0.0.68
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/motion@0.0.3
+
 ## 0.0.67
 
 ### Patch Changes

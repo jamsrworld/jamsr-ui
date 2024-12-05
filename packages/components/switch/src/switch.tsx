@@ -1,8 +1,14 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import {
+  useControlledState,
+  useFocus,
+  useHover,
+  useIsDisabled,
+  useMergeRefs,
+} from "@jamsr-ui/hooks";
 import { MotionButton, MotionDiv } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { Typography } from "@jamsr-ui/typography";
-import { deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { type Variants } from "framer-motion";
 import { useId } from "react";
 import {
@@ -30,6 +36,9 @@ type Props = {
   helperText?: string;
   className?: string;
   classNames?: SlotsToClasses<SwitchSlots>;
+  isDisabled?: boolean;
+  disabled?: boolean;
+  ref?: React.RefObject<HTMLInputElement>;
 };
 
 export type SwitchProps = SwitchVariantProps & Props;
@@ -37,7 +46,6 @@ export type SwitchProps = SwitchVariantProps & Props;
 export const Switch = ($props: SwitchProps) => {
   const { switch: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
-
   const id = useId();
   const {
     checked: $checked,
@@ -46,7 +54,7 @@ export const Switch = ($props: SwitchProps) => {
     label,
     description,
     labelPlacement,
-    isDisabled,
+    isDisabled: propIsDisabled,
     color,
     onBlur,
     size,
@@ -54,6 +62,8 @@ export const Switch = ($props: SwitchProps) => {
     helperText,
     className,
     classNames,
+    disabled,
+    ref,
     ...restProps
   } = props;
 
@@ -62,28 +72,34 @@ export const Switch = ($props: SwitchProps) => {
     $checked,
     onCheckedChange,
   );
-
+  const { isDisabled, ref: disableRef } = useIsDisabled({
+    isDisabled: disabled ?? propIsDisabled,
+  });
+  const { isHovered, ref: hoverRef } = useHover({
+    isDisabled,
+  });
+  const { isFocused, ref: focusRef } = useFocus({
+    isDisabled,
+  });
+  const refs = useMergeRefs([ref, disableRef, hoverRef, focusRef]);
   const styles = switchVariants({
     checked,
-    isDisabled,
     color,
     size,
     labelPlacement,
     className,
     isInvalid,
   });
-
   const onClick = () => setChecked((prev) => !prev);
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") e.preventDefault();
-  };
-
   return (
     <div
       data-component="switch"
       className={styles.base({ className: classNames?.base })}
       onBlur={onBlur}
+      data-disabled={dataAttr(isDisabled)}
+      aria-disabled={dataAttr(isDisabled)}
+      data-hovered={dataAttr(isHovered)}
+      data-focused={dataAttr(isFocused)}
     >
       <div
         data-slot="main-wrapper"
@@ -125,6 +141,7 @@ export const Switch = ($props: SwitchProps) => {
             type="checked"
             className="sr-only"
             aria-hidden="true"
+            ref={refs}
             {...restProps}
           />
           <MotionButton
@@ -138,7 +155,6 @@ export const Switch = ($props: SwitchProps) => {
             animate="initial"
             disabled={isDisabled}
             id={id}
-            onKeyPress={handleKeyPress}
           >
             <MotionDiv
               data-slot="thumb"

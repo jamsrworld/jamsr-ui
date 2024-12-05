@@ -1,4 +1,4 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import { useControlledState, useHover, useIsDisabled } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
@@ -23,7 +23,7 @@ import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { all, createLowlight } from "lowlight";
 import type { ComponentProps, ComponentPropsWithoutRef } from "react";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { ExtendedImage } from "../components/extensions/image";
 import { ImageUpload } from "../components/extensions/image-upload";
 import type { ImageUploadProps } from "../components/extensions/image-upload/view/image-upload";
@@ -46,13 +46,14 @@ type Props = EditorVariantsProps & {
     imageUpload?: Partial<ImageUploadProps>;
   };
   label?: string;
+  disabled?: boolean;
+  isDisabled?: boolean;
 };
 
 export type UseEditorProps = Props & UIProps<"div", keyof Props>;
 export const useEditor = ($props: UseEditorProps) => {
   const { editor: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
-
   const {
     defaultValue,
     onValueChange,
@@ -66,6 +67,8 @@ export const useEditor = ($props: UseEditorProps) => {
     className,
     extensionsProps,
     label,
+    disabled = false,
+    isDisabled: propIsDisabled = false,
     ...restProps
   } = props;
 
@@ -75,6 +78,12 @@ export const useEditor = ($props: UseEditorProps) => {
     propValue,
     onValueChange,
   );
+  const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
+    isDisabled: propIsDisabled || disabled,
+  });
+  const { isHovered, ref: hoverRef } = useHover<HTMLDivElement>({
+    isDisabled,
+  });
   const lowlight = createLowlight(all);
 
   const editor = useEditorBase({
@@ -121,6 +130,12 @@ export const useEditor = ($props: UseEditorProps) => {
     ...options,
   });
 
+  // editor.set
+
+  useEffect(() => {
+    editor?.setEditable(!isDisabled);
+  }, [editor, isDisabled]);
+
   const handleOnClick = useCallback(() => {
     editor?.commands.focus();
   }, [editor?.commands]);
@@ -133,17 +148,30 @@ export const useEditor = ($props: UseEditorProps) => {
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
-        "data-component": "editor",
         "data-slot": "base",
+        "data-component": "editor",
+        "data-disabled": dataAttr(isDisabled),
+        "aria-disabled": dataAttr(isDisabled),
         "data-focused": dataAttr(editor?.isFocused),
+        "data-hovered": dataAttr(isHovered),
         ...props,
         className: styles.base({
           className: cn(classNames?.base, className),
         }),
+        ref: hoverRef,
         ...restProps,
       };
     },
-    [className, classNames?.base, editor?.isFocused, restProps, styles],
+    [
+      className,
+      classNames?.base,
+      editor?.isFocused,
+      hoverRef,
+      isDisabled,
+      isHovered,
+      restProps,
+      styles,
+    ],
   );
 
   const getEditorProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -204,6 +232,16 @@ export const useEditor = ($props: UseEditorProps) => {
     [classNames?.label, handleOnClick, styles],
   );
 
+  const getInputProps: PropGetter<ComponentProps<"input">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        ref: disableRef,
+      };
+    },
+    [disableRef],
+  );
+
   return {
     label,
     editor,
@@ -214,5 +252,7 @@ export const useEditor = ($props: UseEditorProps) => {
     getHelperTextProps,
     getLabelProps,
     helperText,
+    getInputProps,
+    isDisabled,
   };
 };

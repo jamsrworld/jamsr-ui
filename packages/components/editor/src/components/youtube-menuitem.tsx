@@ -6,11 +6,12 @@ import ToolbarItem from "./menu-item";
 
 type Props = {
   onYoutube: (options: SetYoutubeVideoOptions) => void;
+  isDisabled: () => boolean;
 };
 
 export const YoutubeMenuitem = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { onYoutube } = props;
+  const { onYoutube, isDisabled } = props;
   const [url, setUrl] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -28,6 +29,7 @@ export const YoutubeMenuitem = (props: Props) => {
           icon="youtube"
           isActive={() => false}
           title="Youtube Video"
+          isDisabled={isDisabled}
         />
       }
       isOpen={isOpen}

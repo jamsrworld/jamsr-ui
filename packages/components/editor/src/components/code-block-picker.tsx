@@ -4,6 +4,7 @@ import ToolbarItem from "./menu-item";
 type Props = {
   onClick: (language?: string) => void;
   isActive: () => boolean;
+  isDisabled: () => boolean;
 };
 
 const items: { label: string; value: string }[] = [
@@ -63,7 +64,7 @@ const items: { label: string; value: string }[] = [
 ];
 
 export const CodeBlockPicker = (props: Props) => {
-  const { onClick, isActive } = props;
+  const { onClick, isActive, isDisabled } = props;
   if (isActive()) {
     return (
       <ToolbarItem
@@ -71,6 +72,7 @@ export const CodeBlockPicker = (props: Props) => {
         isActive={isActive}
         title="Code Block"
         onClick={() => onClick()}
+        isDisabled={isDisabled}
       />
     );
   }
@@ -81,6 +83,7 @@ export const CodeBlockPicker = (props: Props) => {
           icon="code-box-line"
           isActive={isActive}
           title="Code Block"
+          isDisabled={isDisabled}
         />
       }
     >

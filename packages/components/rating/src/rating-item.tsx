@@ -1,3 +1,4 @@
+import { useIsDisabled } from "@jamsr-ui/hooks";
 import { StarIcon } from "@jamsr-ui/shared-icons";
 import { dataAttr } from "@jamsr-ui/utils";
 import { useId, type ComponentProps } from "react";
@@ -18,14 +19,15 @@ export const RatingItem = (props: Props) => {
   const isChecked = value >= itemValue;
   const {
     styles,
-    isDisabled = false,
+    isDisabled: propIsDisabled = false,
     isReadonly = false,
     classNames,
   } = useRatingContext();
-  const isInteractive = !isDisabled && !isReadonly;
-
+  const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
+    isDisabled: isReadonly || propIsDisabled,
+  });
   const handleMouseMove = () => {
-    if (!isInteractive) return;
+    if (isDisabled) return;
     setValue(itemValue);
   };
 
@@ -33,11 +35,13 @@ export const RatingItem = (props: Props) => {
 
   return (
     <label
+      data-disabled={dataAttr(isDisabled)}
+      aria-disabled={dataAttr(isDisabled)}
       htmlFor={uniqueId}
       data-checked={dataAttr(isChecked)}
       data-value={itemValue}
       onMouseEnter={handleMouseMove}
-      data-interactive={dataAttr(isInteractive)}
+      data-interactive={dataAttr(!isDisabled)}
       className={styles.starWrapper({ className: classNames?.starWrapper })}
     >
       <StarIcon {...restProps} />
@@ -50,7 +54,8 @@ export const RatingItem = (props: Props) => {
         name={id}
         onChange={handleOnChange}
         className="sr-only"
-        disabled={isReadonly || isDisabled}
+        disabled={isDisabled}
+        ref={disableRef}
       />
     </label>
   );

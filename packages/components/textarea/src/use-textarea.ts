@@ -1,4 +1,10 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import {
+  useControlledState,
+  useFocus,
+  useHover,
+  useIsDisabled,
+  useMergeRefs,
+} from "@jamsr-ui/hooks";
 import { inputVariants } from "@jamsr-ui/input";
 import {
   cn,
@@ -10,7 +16,7 @@ import {
   type SlotsToClasses,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { useCallback, useState, type ComponentProps } from "react";
+import { useCallback, type ComponentProps } from "react";
 
 import { useUIStyle } from "@jamsr-ui/styles";
 import { type TextareaSlots, type TextareaVariantProps } from "./style";
@@ -29,7 +35,8 @@ type Props = {
   helperText?: string;
   baseRef?: React.Ref<HTMLDivElement>;
   inputWrapperRef?: React.Ref<HTMLDivElement>;
-  ref?: React.Ref<HTMLInputElement>;
+  ref?: React.Ref<HTMLTextAreaElement>;
+  isDisabled?: boolean;
 };
 
 export type UseTextareaProps = Props &
@@ -64,12 +71,24 @@ export const useTextarea = ($props: UseTextareaProps) => {
     baseRef,
     inputWrapperRef,
     ref,
+    disabled,
+    isDisabled: propIsDisabled,
     ...restProps
   } = props;
   const Component = as ?? "div";
   const TextareaComponent = "textarea";
-  const inputDOMRef = useDOMRef(ref);
-  const [isFocused, setIsFocused] = useState(false);
+
+  const { isDisabled, ref: disableRef } = useIsDisabled<HTMLTextAreaElement>({
+    isDisabled: propIsDisabled ?? disabled,
+  });
+  const { isFocused, ref: focusRef } = useFocus<HTMLTextAreaElement>({
+    isDisabled,
+  });
+  const { isHovered, ref: hoverRef } = useHover<HTMLTextAreaElement>({
+    isDisabled,
+  });
+  const refs = useMergeRefs([ref, disableRef, focusRef, hoverRef]);
+  const inputDOMRef = useDOMRef<HTMLTextAreaElement>(refs);
 
   const styles = inputVariants({
     variant,
@@ -108,14 +127,6 @@ export const useTextarea = ($props: UseTextareaProps) => {
     inputDOMRef.current?.focus();
   }, [inputDOMRef]);
 
-  const handleOnFocus = useCallback(() => {
-    setIsFocused(true);
-  }, [setIsFocused]);
-
-  const handleOnBlur = useCallback(() => {
-    setIsFocused(false);
-  }, [setIsFocused]);
-
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -125,10 +136,13 @@ export const useTextarea = ($props: UseTextareaProps) => {
         }),
         ref: baseRef,
         "data-focused": dataAttr(isFocused),
+        "data-hovered": dataAttr(isHovered),
         "data-filled-within": dataAttr(isFilledWithin),
         "data-has-label": dataAttr(hasLabel),
         "data-has-start-content": dataAttr(hasStartContent),
         "data-has-end-content": dataAttr(hasEndContent),
+        "aria-disabled": dataAttr(isDisabled),
+        "data-disabled": dataAttr(isDisabled),
         ...props,
       };
     },
@@ -137,10 +151,12 @@ export const useTextarea = ($props: UseTextareaProps) => {
       classNames?.base,
       baseRef,
       isFocused,
+      isHovered,
       isFilledWithin,
       hasLabel,
       hasStartContent,
       hasEndContent,
+      isDisabled,
     ],
   );
 
@@ -235,10 +251,9 @@ export const useTextarea = ($props: UseTextareaProps) => {
         value,
         placeholder,
         onChange: handleTextareaChange,
+        ref: inputDOMRef,
         ...restProps,
         ...props,
-        onFocus: handleOnFocus,
-        onBlur: handleOnBlur,
       };
     },
     [
@@ -248,9 +263,8 @@ export const useTextarea = ($props: UseTextareaProps) => {
       value,
       placeholder,
       handleTextareaChange,
+      inputDOMRef,
       restProps,
-      handleOnFocus,
-      handleOnBlur,
     ],
   );
 

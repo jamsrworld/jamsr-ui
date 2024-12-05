@@ -1,5 +1,11 @@
 # @jamsr-ui/typography
 
+## 0.0.76
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.75
 
 ### Patch Changes

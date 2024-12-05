@@ -18,7 +18,6 @@ const baseVariant = tv({
     "min-w-max",
     "font-medium",
     "tap-highlight-transparent",
-    "subpixel-antialiased",
     "transition-transform",
     "focus-visible:ring-2 focus-visible:ring-primary",
     "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",

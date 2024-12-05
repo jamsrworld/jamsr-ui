@@ -1,13 +1,13 @@
 import { focusVisibleClasses, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
-
 export const switchVariants = tv({
   slots: {
-    base: "flex flex-col gap-2",
+    base: "group flex flex-col gap-2",
     switch: [
       "flex cursor-pointer items-center rounded-full p-1",
-      focusVisibleClasses,
+      ...focusVisibleClasses,
+      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
     ],
     thumb: "size-8 rounded-full bg-white shadow-md",
     helperText: "text-xs text-foreground-400",
@@ -72,11 +72,6 @@ export const switchVariants = tv({
       },
       bottom: {
         mainWrapper: "flex-col-reverse",
-      },
-    },
-    isDisabled: {
-      true: {
-        switch: "pointer-events-none cursor-not-allowed bg-background-tertiary",
       },
     },
     isInvalid: {

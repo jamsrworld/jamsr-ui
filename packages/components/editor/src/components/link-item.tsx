@@ -6,11 +6,12 @@ import ToolbarItem from "./menu-item";
 
 type Props = {
   onLink: (url: string, newTab: boolean) => void;
+  isDisabled: () => boolean;
 };
 
 export const LinkMenuBarItem = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { onLink } = props;
+  const { onLink, isDisabled } = props;
   const [formData, setFormData] = useState({
     url: "",
     newTab: true,
@@ -31,6 +32,7 @@ export const LinkMenuBarItem = (props: Props) => {
           isActive={() => false}
           onClick={() => setIsOpen(true)}
           title="Link"
+          isDisabled={isDisabled}
         />
       }
       isOpen={isOpen}

@@ -1,6 +1,7 @@
 import type { VariantProps } from "@jamsr-ui/utils";
 import { groupDataFocusVisibleClasses, tv } from "@jamsr-ui/utils";
 
+export const test = "";
 export const radioVariant = tv({
   slots: {
     base: "group relative -m-2 inline-flex cursor-pointer items-center justify-start p-2 tap-highlight-transparent",
@@ -14,9 +15,9 @@ export const radioVariant = tv({
       "border-solid",
       "border-2",
       "box-border",
-      "border-default",
+      "border-default-200",
       "rounded-full",
-      "group-data-[hover-unselected=true]:bg-default-100",
+      "ui-group-hover:border-default-400",
       // focus ring
       ...groupDataFocusVisibleClasses,
     ],
@@ -29,8 +30,8 @@ export const radioVariant = tv({
       "scale-0",
       "origin-center",
       "rounded-full",
-      "group-data-[selected=true]:opacity-100",
-      "group-data-[selected=true]:scale-100",
+      "ui-group-selected:opacity-100",
+      "ui-group-selected:scale-100",
     ],
     label: "relative select-none text-foreground",
     description: "relative text-foreground-400",
@@ -39,27 +40,27 @@ export const radioVariant = tv({
     color: {
       default: {
         control: "bg-default-500 text-default-foreground",
-        wrapper: "group-data-[selected=true]:border-default-500",
+        wrapper: "ui-group-selected:border-default-500",
       },
       primary: {
         control: "bg-primary text-primary-foreground",
-        wrapper: "group-data-[selected=true]:border-primary",
+        wrapper: "ui-group-selected:border-primary",
       },
       secondary: {
         control: "bg-secondary text-secondary-foreground",
-        wrapper: "group-data-[selected=true]:border-secondary",
+        wrapper: "ui-group-selected:border-secondary",
       },
       success: {
         control: "bg-success text-success-foreground",
-        wrapper: "group-data-[selected=true]:border-success",
+        wrapper: "ui-group-selected:border-success",
       },
       warning: {
         control: "bg-warning text-warning-foreground",
-        wrapper: "group-data-[selected=true]:border-warning",
+        wrapper: "ui-group-selected:border-warning",
       },
       danger: {
         control: "bg-danger text-danger-foreground",
-        wrapper: "group-data-[selected=true]:border-danger",
+        wrapper: "ui-group-selected:border-danger",
       },
     },
     size: {
@@ -93,7 +94,7 @@ export const radioVariant = tv({
     isInvalid: {
       true: {
         control: "bg-danger text-danger-foreground",
-        wrapper: "border-danger group-data-[selected=true]:border-danger",
+        wrapper: "border-danger ui-group-selected:border-danger",
         label: "text-danger",
         description: "text-danger-300",
       },

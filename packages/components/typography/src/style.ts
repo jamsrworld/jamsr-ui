@@ -2,7 +2,7 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const typographyVariants = tv({
-  base: "subpixel-antialiased transition-colors",
+  base: "transition-colors",
   variants: {
     variant: {
       h1: "text-4xl leading-tight",

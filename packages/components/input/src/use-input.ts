@@ -3,6 +3,7 @@ import {
   useControlledState,
   useFocus,
   useHover,
+  useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
@@ -105,14 +106,16 @@ export const useInput = ($props: UseInputProps) => {
 
   const Component = as ?? "div";
   const InputComponent = "input";
-  const isDisabled = disabled || $isDisabled;
+  const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
+    isDisabled: disabled || $isDisabled,
+  });
   const { isFocused, ref: focusRef } = useFocus<HTMLInputElement>({
     isDisabled,
   });
   const { isHovered, ref: hoverRef } = useHover<HTMLDivElement>({
     isDisabled,
   });
-  const refs = useMergeRefs([ref, focusRef]);
+  const refs = useMergeRefs([ref, disableRef, focusRef]);
   const inputDOMRef = useDOMRef(refs);
   const inputWrapperRef = useMergeRefs([hoverRef, $inputWrapperRef]);
 
@@ -209,6 +212,8 @@ export const useInput = ($props: UseInputProps) => {
         "data-has-label": dataAttr(hasLabel),
         "data-has-start-content": dataAttr(hasStartContent),
         "data-has-end-content": dataAttr(hasEndContent),
+        "data-disabled": dataAttr(isDisabled),
+        "aria-disabled": dataAttr(isDisabled),
         ...props,
       };
     },
@@ -222,6 +227,7 @@ export const useInput = ($props: UseInputProps) => {
       hasLabel,
       hasStartContent,
       hasEndContent,
+      isDisabled,
     ],
   );
 

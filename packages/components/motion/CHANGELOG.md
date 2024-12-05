@@ -1,5 +1,11 @@
 # @jamsr-ui/motion
 
+## 0.0.3
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.2
 
 ### Patch Changes

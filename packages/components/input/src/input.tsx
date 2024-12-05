@@ -63,6 +63,8 @@ export const Input = <T extends React.ElementType = "div">(
       endContent;
 
     const contents = [];
+    if (content) contents.push(content);
+    
     if (showClearButton ?? (isClearable && hasValue)) {
       contents.push(
         <Button
@@ -76,8 +78,6 @@ export const Input = <T extends React.ElementType = "div">(
         </Button>,
       );
     }
-    contents.push(content);
-
     return !contents.length ? null : (
       <div {...getEndContentProps()}>
         {contents.map((item, idx) => (

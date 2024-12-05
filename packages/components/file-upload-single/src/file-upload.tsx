@@ -1,6 +1,7 @@
+import { useMergeRefs } from "@jamsr-ui/hooks";
 import { CircularProgress } from "@jamsr-ui/progress";
 import { RefreshIcon, TrashIcon } from "@jamsr-ui/shared-icons";
-import { useId } from "react";
+import React, { useId } from "react";
 import {
   useFileUploadSingle,
   type UseFileUploadSingleProps,
@@ -43,16 +44,23 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
     onRetry,
     getLabelProps,
     label,
+    inputRef,
   } = useFileUploadSingle(props);
   const htmlForId = useId();
-
+  const inputProps = getInputProps();
+  const mergedInputRefs = useMergeRefs([
+    inputRef,
+    "ref" in inputProps
+      ? (inputProps?.ref as React.RefObject<HTMLInputElement>)
+      : undefined,
+  ]);
   return (
     <Component {...getBaseProps()}>
       <label {...getLabelProps()} htmlFor={htmlForId}>
         {label}
       </label>
       <div {...getPickerProps()} {...getRootProps()}>
-        <input id={htmlForId} {...getInputProps()} />
+        <input id={htmlForId} {...inputProps} ref={mergedInputRefs} />
         {uploadIcon}
         {!isAvatar && (
           <>

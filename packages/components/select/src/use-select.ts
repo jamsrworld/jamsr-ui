@@ -12,7 +12,12 @@ import {
   useRole,
   useTypeahead,
 } from "@floating-ui/react";
-import { useControlledState, useHover, useMergeRefs } from "@jamsr-ui/hooks";
+import {
+  useControlledState,
+  useHover,
+  useIsDisabled,
+  useMergeRefs,
+} from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import { cn, dataAttr, deepMergeProps } from "@jamsr-ui/utils";
@@ -27,8 +32,8 @@ import {
   useState,
 } from "react";
 import type { SelectItemProps } from "./select-item";
-import type { SelectSlots, SelectVariantProps } from "./style";
-import { selectVariant } from "./style";
+import type { SelectSlots, SelectVariantProps } from "./styles";
+import { selectVariant } from "./styles";
 import type { SelectContextType } from "./use-select-context";
 
 type Props = SelectVariantProps & {
@@ -81,7 +86,7 @@ export const useSelect = ($props: UseSelectProps) => {
     startContent,
     endContent,
     as,
-    isDisabled,
+    isDisabled: propIsDisabled,
     ...restProps
   } = props;
 
@@ -98,6 +103,9 @@ export const useSelect = ($props: UseSelectProps) => {
     onOpenChange,
   );
 
+  const { isDisabled, ref: disableRef } = useIsDisabled({
+    isDisabled: propIsDisabled,
+  });
   const { isHovered, ref: hoverRef } = useHover({
     isDisabled,
   });
@@ -166,7 +174,7 @@ export const useSelect = ($props: UseSelectProps) => {
       }),
     ],
   });
-  const mergedRefs = useMergeRefs([hoverRef, setReference]);
+  const mergedRefs = useMergeRefs([hoverRef, disableRef, setReference]);
 
   const handleSelect = useCallback(
     (index: number | null) => {

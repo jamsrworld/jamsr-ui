@@ -36,9 +36,34 @@ export const MotionLi = (
 export const MotionButton = (
   props: MotionProps & Omit<ComponentPropsWithRef<"button">, keyof MotionProps>,
 ) => {
-  const { children } = props;
-  // @ts-expect-error FramerError
-  return <m.button {...props}>{children}</m.button>;
+  const {
+    children,
+    disabled,
+    initial,
+    whileTap,
+    animate,
+    whileDrag,
+    whileFocus,
+    whileHover,
+    ...restProps
+  } = props;
+  return (
+    // @ts-expect-error FramerError
+    <m.button
+      disabled={disabled}
+      {...(!disabled && {
+        initial,
+        whileTap,
+        animate,
+        whileDrag,
+        whileFocus,
+        whileHover,
+      })}
+      {...restProps}
+    >
+      {children}
+    </m.button>
+  );
 };
 
 export const MotionSection = (

@@ -1,6 +1,11 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import {
+  useControlledState,
+  useHover,
+  useIsDisabled,
+  useMergeRefs,
+} from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import {
   type InputHTMLAttributes,
   useCallback,
@@ -26,6 +31,8 @@ export type OtpInputProps = {
   isInvalid?: boolean;
   onBlur?: InputHTMLAttributes<HTMLInputElement>["onBlur"];
   helperText?: string;
+  isDisabled?: boolean;
+  disabled?: boolean;
 };
 
 export const OtpInput = ($props: OtpInputProps) => {
@@ -47,7 +54,16 @@ export const OtpInput = ($props: OtpInputProps) => {
     label,
     onBlur,
     classNames,
+    disabled = false,
+    isDisabled: propIsDisabled = false,
   } = props;
+
+  const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
+    isDisabled: propIsDisabled || disabled,
+  });
+  const { isHovered, ref: hoverRef } = useHover({
+    isDisabled,
+  });
 
   const [value = "", setValue] = useControlledState(
     defaultValue,
@@ -157,9 +173,16 @@ export const OtpInput = ($props: OtpInputProps) => {
     }
   };
 
-  const ref = useCallback((el: HTMLInputElement | null, idx: number) => {
-    if (el) inputRefs.current[idx] = el;
-  }, []);
+  const refs = useMergeRefs([disableRef, hoverRef]);
+  const ref = useCallback(
+    (el: HTMLInputElement | null, idx: number) => {
+      if (el) {
+        inputRefs.current[idx] = el;
+        refs?.(el);
+      }
+    },
+    [refs],
+  );
 
   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -186,8 +209,11 @@ export const OtpInput = ($props: OtpInputProps) => {
   return (
     <div
       data-component="otp-input"
+      data-disabled={dataAttr(isDisabled)}
+      aria-disabled={dataAttr(isDisabled)}
       data-slot="base"
       className={styles?.base({ className: classNames?.base })}
+      onBlur={onBlur}
     >
       <div className={styles.wrapper({ className: classNames?.wrapper })}>
         {label && (
@@ -206,6 +232,9 @@ export const OtpInput = ($props: OtpInputProps) => {
         >
           {valueItems.map((digit, idx) => (
             <input
+              data-disabled={dataAttr(isDisabled)}
+              aria-disabled={dataAttr(isDisabled)}
+              disabled={isDisabled}
               {...inputProps}
               placeholder={placeholder}
               key={idx}

@@ -49,21 +49,27 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
           },
         });
         // variants
-        addVariant("ui-group-hover", ":merge(.group)[data-hovered=true] &");
         addVariant("ui-hover", "&[data-hovered=true]");
-        addVariant("ui-group-focus", ":merge(.group)[data-focused=true] &");
+        addVariant("ui-group-hover", ":merge(.group)[data-hovered=true] &");
         addVariant("ui-focus", "&[data-focused=true]");
+        addVariant("ui-group-focus", ":merge(.group)[data-focused=true] &");
         addVariant("ui-pressed", "&[data-pressed=true]");
+        addVariant("ui-group-pressed", ":merge(.group)[data-pressed=true] &");
         addVariant("ui-active", "&[data-active=true]");
+        addVariant("ui-group-active", ":merge(.group)[data-active=true] &");
         addVariant("ui-open", "&[data-open=true]");
+        addVariant("ui-group-open", ":merge(.group)[data-open=true] &");
         addVariant("ui-checked", "&[data-checked=true]");
+        addVariant("ui-group-checked", ":merge(.group)[data-checked=true] &");
         addVariant("ui-interactive", "&[data-interactive=true]");
         addVariant("ui-loaded", "&[data-loaded=true]");
         addVariant("ui-selected", "&[data-selected=true]");
+        addVariant("ui-group-selected", ":merge(.group)[data-selected=true] &");
         addVariant("ui-filled-within", "&[data-filled-within=true]");
         addVariant("ui-focus-visible", "&[data-focus-visible=true]");
         addVariant("ui-readonly", "&[data-readonly=true]");
         addVariant("ui-disabled", "&[data-disabled=true]");
+        addVariant("ui-group-disabled", ":merge(.group)[data-disabled=true] &");
         addUtilities({
           ".text-transform-inherit": {
             "text-transform": "inherit",

@@ -1,4 +1,9 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import {
+  useControlledState,
+  useHover,
+  useIsDisabled,
+  useMergeRefs,
+} from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
@@ -36,7 +41,7 @@ export const useRadio = ($props: UseRadioProps) => {
     classNames,
     size = context?.size,
     color = context?.color,
-    isDisabled = context?.isDisabled,
+    isDisabled: propIsDisabled = context?.isDisabled,
     description,
     isInvalid = context?.isInvalid,
     checked,
@@ -45,6 +50,15 @@ export const useRadio = ($props: UseRadioProps) => {
     name,
     ...restProps
   } = props;
+
+  const { isDisabled, ref: disableRef } = useIsDisabled({
+    isDisabled: propIsDisabled,
+  });
+  const { isHovered, ref: hoverRef } = useHover({
+    isDisabled,
+  });
+  const inputRef = useMergeRefs([disableRef]);
+  const baseRef = useMergeRefs([hoverRef]);
 
   const [
     isChecked = context ? context.selectedValue === value : false,
@@ -79,12 +93,24 @@ export const useRadio = ($props: UseRadioProps) => {
         ...props,
         "data-slot": "base",
         "data-selected": dataAttr(isChecked),
+        "data-disabled": dataAttr(isDisabled),
+        "data-hovered": dataAttr(isHovered),
+        "aria-disabled": dataAttr(isDisabled),
         className: styles.base({
           className: cn(props?.className, classNames?.base, className),
         }),
+        ref: baseRef,
       };
     },
-    [className, classNames?.base, isChecked, styles],
+    [
+      className,
+      classNames?.base,
+      isChecked,
+      isDisabled,
+      isHovered,
+      baseRef,
+      styles,
+    ],
   );
 
   const getWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -162,9 +188,10 @@ export const useRadio = ($props: UseRadioProps) => {
         name: inputName,
         ...props,
         ...restProps,
+        ref: inputRef,
       };
     },
-    [inputName, onCheckedChange, restProps, value],
+    [inputName, onCheckedChange, inputRef, restProps, value],
   );
 
   return {

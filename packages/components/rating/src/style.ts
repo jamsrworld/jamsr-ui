@@ -14,6 +14,7 @@ export const ratingVariants = tv({
       "data-[interactive=true]:transition-transform",
       "data-[interactive=true]:duration-300",
       "data-[interactive=true]:ease-in-out",
+      "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
     ],
     star: "",
   },

@@ -1,5 +1,12 @@
 # @jamsr-ui/accordion
 
+## 0.0.79
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/motion@0.0.3
+
 ## 0.0.78
 
 ### Patch Changes

@@ -2,6 +2,7 @@ import type { Editor } from "@tiptap/react";
 
 export const useTextMenuState = (editor: Editor) => {
   return {
+    isDisabled: !editor.isEditable,
     isBold: editor.isActive("bold"),
     isItalic: editor.isActive("italic"),
     isStrike: editor.isActive("strike"),

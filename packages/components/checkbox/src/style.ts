@@ -4,18 +4,23 @@ export const test = "";
 export const checkbox = tv({
   slots: {
     base: [
-      "flex flex-col gap-2",
-      "ui-disabled:pointer-events-none ui-disabled:opacity-50",
-      "ui-readonly:pointer-events-none",
+      "group flex flex-col gap-2",
+      "ui-disabled:opacity-50",
+      "ui-disabled:cursor-not-allowed",
     ],
     wrapper: "flex items-center gap-2",
     label:
       "shrink-0 cursor-pointer select-none text-sm font-normal text-foreground",
     helperText: "text-xs text-foreground-600",
     checkbox: [
-      "relative size-5 cursor-pointer appearance-none rounded-md border-2 transition-all duration-500 checked:border-blue-500 checked:bg-blue-500",
+      "border-default-200 ui-group-hover:border-default-400",
+      "relative size-5 cursor-pointer appearance-none rounded-md border-2 transition-all duration-500 ui-group-checked:border-primary ui-group-checked:bg-primary",
+      "ui-group-disabled:cursor-not-allowed",
     ],
-    checkboxWrapper: "relative flex size-max items-center",
+    trigger: [
+      "relative flex size-max items-center",
+      "disabled:cursor-not-allowed",
+    ],
   },
   variants: {
     isInvalid: {

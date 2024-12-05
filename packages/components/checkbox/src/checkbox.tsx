@@ -1,4 +1,10 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import {
+  useControlledState,
+  useFocus,
+  useHover,
+  useIsDisabled,
+  useMergeRefs,
+} from "@jamsr-ui/hooks";
 import { MotionButton } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
@@ -21,13 +27,13 @@ export type CheckboxProps = CheckboxVariantProps & {
   classNames?: SlotsToClasses<CheckboxSlots>;
   isReadonly?: boolean;
   isDisabled?: boolean;
+  disabled?: boolean;
   onBlur?: () => void;
 };
 
 export const Checkbox = ($props: CheckboxProps) => {
   const { checkbox: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
-
   const id = useId();
   const {
     isChecked: $checked,
@@ -39,8 +45,10 @@ export const Checkbox = ($props: CheckboxProps) => {
     helperText,
     className,
     classNames,
-    isDisabled = false,
+    isDisabled: propIsDisabled = false,
     isReadonly = false,
+    disabled,
+    onBlur,
     ...restProps
   } = props;
 
@@ -50,6 +58,16 @@ export const Checkbox = ($props: CheckboxProps) => {
     onCheckedChange,
   );
 
+  const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
+    isDisabled: propIsDisabled ?? disabled,
+  });
+  const { isHovered, ref: hoverRef } = useHover({
+    isDisabled,
+  });
+  const { isFocused, ref: focusRef } = useFocus({
+    isDisabled,
+  });
+  const refs = useMergeRefs([hoverRef, focusRef, disableRef]);
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (isDisabled || isReadonly) return;
     setChecked(e.target.checked);
@@ -68,6 +86,9 @@ export const Checkbox = ($props: CheckboxProps) => {
       data-disabled={dataAttr(isDisabled)}
       data-invalid={dataAttr(isInvalid)}
       data-readonly={dataAttr(isReadonly)}
+      data-hovered={dataAttr(isHovered)}
+      aria-disabled={dataAttr(isDisabled)}
+      data-focused={dataAttr(isFocused)}
       className={styles.base({ className: classNames?.base })}
     >
       <div
@@ -75,10 +96,13 @@ export const Checkbox = ($props: CheckboxProps) => {
         className={styles.wrapper({ className: classNames?.wrapper })}
       >
         <MotionButton
-          whileTap={{ scale: 0.95 }}
           data-slot="checkbox-wrapper"
-          className={styles.checkboxWrapper({
-            className: classNames?.checkboxWrapper,
+          className={styles.trigger({
+            className: classNames?.trigger,
+          })}
+          disabled={isDisabled}
+          {...(!isDisabled && {
+            whileTap: { scale: 0.95 },
           })}
         >
           <input
@@ -90,6 +114,7 @@ export const Checkbox = ($props: CheckboxProps) => {
             readOnly={isReadonly}
             disabled={isDisabled || isReadonly}
             aria-disabled={dataAttr(isDisabled)}
+            ref={refs}
             {...restProps}
           />
           <CheckboxCheckIcon isChecked={Boolean(checked)} />

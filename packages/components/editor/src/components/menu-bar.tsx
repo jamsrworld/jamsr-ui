@@ -66,7 +66,12 @@ const items = (
   { type: "divider" },
   {
     type: "custom",
-    component: <ImagePicker onImage={commands.onImageUpload} />,
+    component: (
+      <ImagePicker
+        isDisabled={() => state.isDisabled}
+        onImage={commands.onImageUpload}
+      />
+    ),
   },
   {
     type: "option",
@@ -81,6 +86,7 @@ const items = (
       <CodeBlockPicker
         onClick={commands.onCodeBlock}
         isActive={() => state.isCodeBlock}
+        isDisabled={() => state.isDisabled}
       />
     ),
   },
@@ -89,7 +95,12 @@ const items = (
   },
   {
     type: "custom",
-    component: <LinkMenuBarItem onLink={commands.onLink} />,
+    component: (
+      <LinkMenuBarItem
+        onLink={commands.onLink}
+        isDisabled={() => state.isDisabled}
+      />
+    ),
   },
   {
     type: "option",
@@ -101,7 +112,12 @@ const items = (
   },
   {
     type: "custom",
-    component: <YoutubeMenuitem onYoutube={commands.onYoutubeVideo} />,
+    component: (
+      <YoutubeMenuitem
+        isDisabled={() => state.isDisabled}
+        onYoutube={commands.onYoutubeVideo}
+      />
+    ),
   },
   {
     type: "option",
@@ -202,8 +218,8 @@ export const EditorMenuBar = (props: Props) => {
   const { editor } = props;
   const commands = useTextMenuCommands(editor);
   const state = useTextMenuState(editor);
-
   const menuItems = items(editor, state, commands);
+  const isDisabled = !editor.isEditable;
 
   return (
     <div className="flex flex-wrap gap-1 pb-2">
@@ -212,7 +228,9 @@ export const EditorMenuBar = (props: Props) => {
           <React.Fragment key={idx}>
             {item.type === "divider" && <Divider orientation="vertical" />}
             {item.type === "custom" && item.component}
-            {item.type === "option" && <ToolbarItem {...item} />}
+            {item.type === "option" && (
+              <ToolbarItem isDisabled={() => isDisabled} {...item} />
+            )}
           </React.Fragment>
         );
       })}

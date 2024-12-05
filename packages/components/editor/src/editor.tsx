@@ -17,11 +17,13 @@ export const Editor = (props: EditorProps) => {
     helperText,
     getLabelProps,
     label,
+    getInputProps,
   } = useEditor(props);
   return (
     <Component {...getBaseProps()}>
+      <input {...getInputProps()} className="hidden" aria-hidden />
       {/*  eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label {...getLabelProps()}> {label}</label>
+      {label && <label {...getLabelProps()}>{label}</label>}
       <div {...getEditorProps()}>
         {editor && <EditorMenuBar editor={editor} />}
         <EditorContent editor={editor} {...getContentProps()} />

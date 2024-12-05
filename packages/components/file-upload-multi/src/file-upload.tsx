@@ -1,4 +1,5 @@
 import { Sortable } from "@jamsr-ui/dnd";
+import { useMergeRefs } from "@jamsr-ui/hooks";
 import { CloseIcon, DragDropHorizontalIcon } from "@jamsr-ui/shared-icons";
 import { useId } from "react";
 import { ProgressView } from "./progress-view";
@@ -33,8 +34,16 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
     setValue,
     getLabelProps,
     label,
+    inputRef,
   } = useFileUploadMulti(props);
   const htmlForId = useId();
+  const inputProps = getInputProps();
+  const mergedInputRefs = useMergeRefs([
+    inputRef,
+    "ref" in inputProps
+      ? (inputProps?.ref as React.RefObject<HTMLInputElement>)
+      : undefined,
+  ]);
   return (
     <Component {...getBaseProps()}>
       <label {...getLabelProps()} htmlFor={htmlForId}>
@@ -90,7 +99,7 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
         </Sortable>
         {canUploadFile && (
           <div {...getRootProps()} {...getPickerProps()}>
-            <input id={htmlForId} {...getInputProps()} />
+            <input id={htmlForId} {...inputProps} ref={mergedInputRefs} />
             {uploadIcon}
             {info && <div {...getInfoProps()}>{info}</div>}
           </div>

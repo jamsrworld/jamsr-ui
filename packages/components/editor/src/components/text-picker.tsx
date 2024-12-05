@@ -11,6 +11,7 @@ type Props = {
 export const TextPicker = (props: Props) => {
   const { editor } = props;
   const options = useTextTypes(editor);
+  const isDisabled = !editor.isEditable;
 
   const activeItem = options.find(
     (item) => item.type === "option" && item.isActive(),
@@ -18,7 +19,13 @@ export const TextPicker = (props: Props) => {
   return (
     <Menu
       trigger={
-        <Button isIconOnly size="sm" type="button" variant="light">
+        <Button
+          disabled={isDisabled}
+          isIconOnly
+          size="sm"
+          type="button"
+          variant="light"
+        >
           <EditorIcon name={activeItem?.icon ?? "paragraph"} />
         </Button>
       }

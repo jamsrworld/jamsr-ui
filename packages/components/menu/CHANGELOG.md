@@ -1,5 +1,13 @@
 # @jamsr-ui/menu
 
+## 0.0.89
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/motion@0.0.3
+  - @jamsr-ui/hooks@0.0.46
+
 ## 0.0.88
 
 ### Patch Changes

@@ -1,4 +1,4 @@
-import { useControlledState } from "@jamsr-ui/hooks";
+import { useControlledState, useIsDisabled } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
@@ -69,7 +69,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     helperText,
     uploadIcon = <FileAddIcon className="shrink-0 text-inherit" />,
     isAvatar,
-    isDisabled,
+    isDisabled: propIsDisabled = false,
     isInvalid,
     getFileIcon,
     as,
@@ -86,6 +86,10 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     $value,
     onValueChange,
   );
+  const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
+    isDisabled: propIsDisabled,
+  });
+
   const [previewUrl, setPreviewUrl] = useState<string | null>(value);
   const [progress, setProgress] = useState(0);
   const [isFailed, setIsFailed] = useState(false);
@@ -429,5 +433,6 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     isFailed,
     onRetry,
     label,
+    inputRef,
   };
 };

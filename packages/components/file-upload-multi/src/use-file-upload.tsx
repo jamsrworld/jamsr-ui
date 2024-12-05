@@ -1,4 +1,4 @@
-import { useControlledState2 } from "@jamsr-ui/hooks";
+import { useControlledState2, useIsDisabled } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
@@ -57,7 +57,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     value: $value,
     className,
     classNames = {},
-    isDisabled = false,
+    isDisabled: propIsDisabled = false,
     onFilesSelect,
     onValueChange,
     onError,
@@ -82,6 +82,9 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     $value,
     onValueChange,
   );
+  const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
+    isDisabled: propIsDisabled,
+  });
 
   const xhrRefs = useRef<{ id: string; xhr: XMLHttpRequest }[]>([]);
 
@@ -383,5 +386,6 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     overlayClassName,
     label,
     getLabelProps,
+    inputRef,
   };
 };

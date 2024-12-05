@@ -1,21 +1,7 @@
 {
-  "name": "@jamsr-ui/progress",
-  "version": "0.0.68",
-  "description": "",
+  "name": "@jamsr-ui/linear-progress",
+  "version": "0.0.0",
   "main": "./src/index.ts",
-  "sideEffects": false,
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",

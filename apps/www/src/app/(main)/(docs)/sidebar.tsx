@@ -119,8 +119,12 @@ export const sidebarItems: {
         path: "/components/popover",
       },
       {
-        heading: "Progress",
-        path: "/components/progress",
+        heading: "Circular Progress",
+        path: "/components/circular-progress",
+      },
+      {
+        heading: "Linear Progress",
+        path: "/components/linear-progress",
       },
       {
         heading: "Radio",

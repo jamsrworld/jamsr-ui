@@ -1,5 +1,5 @@
 import { useMergeRefs } from "@jamsr-ui/hooks";
-import { CircularProgress } from "@jamsr-ui/progress";
+import { CircularProgress } from "@jamsr-ui/circular-progress";
 import { RefreshIcon, TrashIcon } from "@jamsr-ui/shared-icons";
 import React, { useId } from "react";
 import {

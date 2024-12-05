@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.196",
+  "version": "0.0.197",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"
@@ -41,6 +41,7 @@
     "@jamsr-ui/card": "workspace:^",
     "@jamsr-ui/checkbox": "workspace:^",
     "@jamsr-ui/chip": "workspace:^",
+    "@jamsr-ui/circular-progress": "workspace:^",
     "@jamsr-ui/confirmation": "workspace:^",
     "@jamsr-ui/core": "workspace:^",
     "@jamsr-ui/data-table": "workspace:^",
@@ -54,11 +55,11 @@
     "@jamsr-ui/header": "workspace:^",
     "@jamsr-ui/input": "workspace:^",
     "@jamsr-ui/kbd": "workspace:^",
+    "@jamsr-ui/linear-progress": "workspace:^",
     "@jamsr-ui/link": "workspace:^",
     "@jamsr-ui/menu": "workspace:^",
     "@jamsr-ui/otp-input": "workspace:^",
     "@jamsr-ui/popover": "workspace:^",
-    "@jamsr-ui/progress": "workspace:^",
     "@jamsr-ui/radio": "workspace:^",
     "@jamsr-ui/rating": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",

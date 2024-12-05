@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/data-table",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -25,25 +25,26 @@
     "@faker-js/faker": "^8.4.1",
     "@types/react": "^18.3.3",
     "clean-package": "^2.2.0",
-    "react-dom": "19.0.0-rc-603e6108-20241029",
-    "react": "19.0.0-rc-603e6108-20241029"
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029"
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {
-    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
-    "@jamsr-ui/progress": "workspace:^",
+    "@jamsr-ui/circular-progress": "workspace:^",
+    "@jamsr-ui/linear-progress": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
     "@jamsr-ui/table": "workspace:^",
     "@jamsr-ui/typography": "workspace:^",
     "@jamsr-ui/utils": "workspace:^",
     "@tanstack/react-table": "^8.19.3"
   },
   "peerDependencies": {
-    "react-dom": "19.0.0-rc-603e6108-20241029",
-    "react": "19.0.0-rc-603e6108-20241029"
+    "react": "19.0.0-rc-603e6108-20241029",
+    "react-dom": "19.0.0-rc-603e6108-20241029"
   }
 }

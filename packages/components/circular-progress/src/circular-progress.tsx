@@ -1,20 +1,42 @@
-export type CircularProgressProps = {
+import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
+import {
+  circularProgress,
+  type CircularProgressSlots,
+  type CircularProgressVariants,
+} from "./style";
+
+export type CircularProgressProps = CircularProgressVariants & {
   value?: number;
-  defaultValue?: number;
-  onValueChange?: number;
-  setValue?: number;
+} & {
+  className?: string;
+  classNames?: SlotsToClasses<CircularProgressSlots>;
 };
 
 export const CircularProgress = (props: CircularProgressProps) => {
-  const { value } = props;
+  const { value, color, size, className, classNames } = props;
+  const styles = circularProgress({
+    className,
+    color,
+    size,
+  });
   return (
     <div
-      aria-label="Loading..."
       role="status"
       data-component="circular-progress"
+      data-slot="track"
+      className={styles.track({
+        className: cn(className, classNames?.track),
+      })}
     >
-      {!!value && <span>{value}%</span>}
-      <svg className="size-6 animate-spin fill-current" viewBox="3 3 18 18">
+      {!!value && (
+        <span className={styles.value({ className: classNames?.value })}>
+          {value}
+        </span>
+      )}
+      <svg
+        className={styles.svg({ className: classNames?.svg })}
+        viewBox="3 3 18 18"
+      >
         <path
           className="opacity-20"
           d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"

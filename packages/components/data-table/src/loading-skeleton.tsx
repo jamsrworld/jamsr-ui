@@ -1,4 +1,4 @@
-import { LinearProgress } from "@jamsr-ui/progress";
+import { LinearProgress } from "@jamsr-ui/linear-progress";
 import { Repeater } from "@jamsr-ui/repeater";
 import { Skeleton } from "@jamsr-ui/skeleton";
 import { TableCell, TableRow } from "@jamsr-ui/table";

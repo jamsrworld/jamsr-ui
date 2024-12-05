@@ -1,5 +1,13 @@
 # @jamsr-ui/confirmation
 
+## 0.0.63
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/button@0.0.74
+  - @jamsr-ui/dialog@0.0.83
+
 ## 0.0.62
 
 ### Patch Changes

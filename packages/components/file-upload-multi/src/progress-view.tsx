@@ -1,4 +1,4 @@
-import { CircularProgress } from "@jamsr-ui/progress";
+import { CircularProgress } from "@jamsr-ui/circular-progress";
 import { RefreshIcon } from "@jamsr-ui/shared-icons";
 import { useCallback, useMemo } from "react";
 import { type FileUploadProgress } from "./use-file-upload";

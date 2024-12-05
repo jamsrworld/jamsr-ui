@@ -1,4 +1,4 @@
-import { CircularProgress } from "@jamsr-ui/progress";
+import { CircularProgress } from "@jamsr-ui/circular-progress";
 import { Ripple } from "@jamsr-ui/ripple";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useButton, type UseButtonProps } from "./use-button";
@@ -8,6 +8,7 @@ export type ButtonProps = UseButtonProps;
 export const Button = <T extends React.ElementType = "button">(
   props: ComponentPropsWithAs<T, ButtonProps>,
 ) => {
+  const { size } = props;
   const {
     Component,
     children,
@@ -21,8 +22,7 @@ export const Button = <T extends React.ElementType = "button">(
     isDisabled,
     disableRipple,
   } = useButton({ ...props });
-
-  const spinner = <CircularProgress />;
+  const spinner = <CircularProgress size="sm" color="current" />;
   return (
     <Component
       data-component="button"

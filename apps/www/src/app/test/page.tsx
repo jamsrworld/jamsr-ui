@@ -44,6 +44,7 @@ const Page = () => {
         </RadioGroup>
         <Editor />
       </fieldset>
+      <Button isLoading={isDisabled}>Click me!</Button>
       <Button onClick={onToggle}>Click {isDisabled ? 1 : 0}</Button>
     </div>
   );

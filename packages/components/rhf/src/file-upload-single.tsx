@@ -25,6 +25,7 @@ export const RHFFileUploadSingle = <T extends FieldValues>(props: Props<T>) => {
     uploadApiUrl,
     inputName,
     getFileUrlAfterUpload,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     defaultStateValue,
     getValueFromResponse,
     isAvatar,
@@ -59,6 +60,7 @@ export const RHFFileUploadSingle = <T extends FieldValues>(props: Props<T>) => {
             uploadApiUrl={uploadApiUrl}
             inputName={inputName}
             getFileUrlAfterUpload={getFileUrlAfterUpload}
+            isAvatar={isAvatar}
             {...restProps}
             classNames={{
               picker: isAvatar ? "" : "aspect-video h-40",

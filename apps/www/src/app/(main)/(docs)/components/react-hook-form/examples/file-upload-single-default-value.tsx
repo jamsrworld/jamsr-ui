@@ -22,6 +22,14 @@ const schema = object({
 });
 
 export const RHFDemoFileUploadSingleDefaultValue = () => {
+  const defaultSchema: ImageMetadata = {
+    name: "",
+    height: 0,
+    url: "",
+    placeholder: "",
+    width: 0,
+  };
+
   const imageVal: ImageMetadata = {
     name: "",
     height: 0,
@@ -53,6 +61,9 @@ export const RHFDemoFileUploadSingleDefaultValue = () => {
     toast.error(error.message);
   };
 
+  const getValueFromResponse = (response: ImageMetadata) => {
+    return response;
+  };
   return (
     <RHFDemoWrapper methods={methods} isPending={false} onSubmit={onSubmit}>
       <RHFFileUploadSingle<FormValues>
@@ -60,8 +71,9 @@ export const RHFDemoFileUploadSingleDefaultValue = () => {
         name="image"
         inputName="file"
         getFileUrlAfterUpload={getFileUrlAfterUpload}
+        getValueFromResponse={getValueFromResponse}
         uploadApiUrl={CDN_UPLOAD_URL}
-        defaultStateValue={imageVal}
+        defaultStateValue={defaultSchema}
         onError={handleError}
       />
     </RHFDemoWrapper>

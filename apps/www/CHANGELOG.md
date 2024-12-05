@@ -1,5 +1,12 @@
 # web
 
+## 0.1.176
+
+### Patch Changes
+
+- fix: rhf
+  - @jamsr-ui/react@0.0.194
+
 ## 0.1.175
 
 ### Patch Changes

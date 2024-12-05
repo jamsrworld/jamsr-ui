@@ -1,5 +1,11 @@
 # @jamsr-ui/rhf
 
+## 0.0.39
+
+### Patch Changes
+
+- fix: rhf
+
 ## 0.0.38
 
 ### Patch Changes

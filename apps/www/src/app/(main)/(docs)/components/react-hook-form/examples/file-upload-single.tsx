@@ -53,6 +53,10 @@ export const RHFDemoFileUploadSingle = () => {
     toast.error(error.message);
   };
 
+  const getValueFromResponse = (response: ImageMetadata) => {
+    return response;
+  };
+
   return (
     <RHFDemoWrapper methods={methods} isPending={false} onSubmit={onSubmit}>
       <RHFFileUploadSingle<FormValues>
@@ -60,6 +64,7 @@ export const RHFDemoFileUploadSingle = () => {
         name="image"
         inputName="file"
         getFileUrlAfterUpload={getFileUrlAfterUpload}
+        getValueFromResponse={getValueFromResponse}
         uploadApiUrl={CDN_UPLOAD_URL}
         defaultStateValue={imageVal}
         onError={handleError}

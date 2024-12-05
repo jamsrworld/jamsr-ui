@@ -12,7 +12,7 @@ import {
 } from "@jamsr-ui/react";
 
 export const FileUploadUsage = (props: Partial<FileUploadSingleProps>) => {
-  const { dropzoneOptions, ...restProps } = props;
+  const { dropzoneOptions, isAvatar, ...restProps } = props;
   const handleOnError = ({ message }: FileUploadError) => {
     console.log("error:->", message);
     toast.error(message);
@@ -38,11 +38,12 @@ export const FileUploadUsage = (props: Partial<FileUploadSingleProps>) => {
       uploadApiUrl={CDN_UPLOAD_URL}
       inputName="file"
       classNames={{
-        picker: "aspect-video h-40",
+        picker: isAvatar ? "" : "aspect-video h-40",
       }}
       onError={handleOnError}
       onDelete={handleOnDelete}
       showDeleteBtn
+      isAvatar={isAvatar}
       {...restProps}
       dropzoneOptions={{
         ...dropzoneOptions,

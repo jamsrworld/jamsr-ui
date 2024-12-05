@@ -1,13 +1,14 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
+import { FileUploadAvatar } from "./examples/avatar";
 import { FileUploadControlled } from "./examples/controlled";
 import { FileUploadCustomized } from "./examples/customized";
-import { FileUploadUsage } from "./examples/usage";
 import { FileUploadUsageValue } from "./examples/default-value";
 import { FileUploadDisabled } from "./examples/disabled";
+import { FileUploadUsage } from "./examples/usage";
 
 export const metadata: Metadata = {
   title: "File Upload Single",
@@ -22,6 +23,9 @@ const FileUpload = () => {
     <VariantPage heading="Single File Upload">
       <VariantWrapper heading="Usage" code={code("usage")}>
         <FileUploadUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Avatar" code={code("avatar")}>
+        <FileUploadAvatar />
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <FileUploadDisabled />

@@ -5,6 +5,7 @@ import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { DataTableBorder } from "./examples/bordered";
 import { DataTableCustomization } from "./examples/customization";
+import { DataTableEmptyState } from "./examples/empty-state";
 import { DataTableStickyHeader } from "./examples/sticky-header";
 import { DataTableUsage } from "./examples/usage";
 import { DataTableWithoutPagination } from "./examples/without-pagination";
@@ -36,6 +37,9 @@ const DataTable = () => {
       </VariantWrapper>
       <VariantWrapper heading="Customization" code={code("customization")}>
         <DataTableCustomization />
+      </VariantWrapper>
+      <VariantWrapper heading="Empty State" code={code("empty-state")}>
+        <DataTableEmptyState />
       </VariantWrapper>
     </VariantPage>
   );

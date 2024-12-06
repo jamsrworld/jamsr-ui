@@ -1,22 +1,23 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { SelectControlled } from "./examples/controlled";
 import { SelectCustomRenderComplex } from "./examples/custom-render-complex";
 import { SelectCustomRenderMulti } from "./examples/custom-render-multi";
 import { SelectCustomRenderValue } from "./examples/custom-render-value";
-import { SelectUsage } from "./examples/usage";
+import { SelectDisabled } from "./examples/disabled";
+import { SelectDisabledItems } from "./examples/disabled-items";
 import { SelectInvalidState } from "./examples/invalid-state";
 import { SelectMultiple } from "./examples/multiple";
 import { SelectMultipleControlled } from "./examples/multiple-controlled";
 import { SelectPlaceholder } from "./examples/placeholder";
 import { SelectSizes } from "./examples/sizes";
 import { SelectStartEndItems } from "./examples/start-end-items";
+import { SelectUsage } from "./examples/usage";
 import { SelectWithHelperText } from "./examples/with-helper-text";
 import { SelectWithoutLabel } from "./examples/without-label";
-import { SelectDisabled } from "./examples/disabled";
 
 export const metadata: Metadata = {
   title: "Select",
@@ -36,6 +37,9 @@ const Select = () => {
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <SelectDisabled />
+      </VariantWrapper>
+      <VariantWrapper heading="Disabled Items" code={code("disabled-items")}>
+        <SelectDisabledItems />
       </VariantWrapper>
       <VariantWrapper heading="Start End Items" code={code("start-end-items")}>
         <SelectStartEndItems />

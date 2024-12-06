@@ -10,15 +10,16 @@ import {
 } from "@jamsr-ui/utils";
 import { useMenu } from "./use-menu";
 
-type InternalProps = {
+type Props = {
   isDisabled?: boolean;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   label?: string;
+  preventCloseOnClick?: boolean;
 };
 
 export type MenuItemProps<T extends React.ElementType = "li"> =
-  ComponentPropsWithAs<T, InternalProps>;
+  ComponentPropsWithAs<T, Props>;
 
 export const MenuItem = <T extends React.ElementType = "li">(
   $props: MenuItemProps<T>,
@@ -34,6 +35,7 @@ export const MenuItem = <T extends React.ElementType = "li">(
     startContent,
     endContent,
     label,
+    preventCloseOnClick = false,
     ...restProps
   } = props;
   const menu = useMenu();
@@ -63,7 +65,7 @@ export const MenuItem = <T extends React.ElementType = "li">(
       {...(!isDisabled && {
         onClick(event: React.MouseEvent<HTMLLIElement>) {
           restProps.onClick?.(event);
-          tree?.events.emit("click");
+          if (!preventCloseOnClick) tree?.events.emit("click");
         },
         onMouseEnter(event: React.MouseEvent<HTMLLIElement>) {
           restProps.onMouseEnter?.(event);

@@ -2,7 +2,7 @@
 
 import { Avatar } from "@jamsr-ui/react";
 
-export const AvatarPlaceholders = () => {
+export const AvatarImageFallback = () => {
   return (
     <div className="flex gap-4">
       <Avatar

@@ -11,8 +11,9 @@ export const autocompleteVariant = tv({
     emptyContent: "text-foreground-500",
     item: [
       "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm",
+      "ui-hover:bg-content2",
+      "ui-active:bg-content2",
       "ui-selected:bg-content2/50",
-      "ui-active:!bg-content2",
       "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
     ],
   },

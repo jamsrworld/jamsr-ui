@@ -1,6 +1,6 @@
 import { type useInteractions } from "@floating-ui/react";
 import { createContext } from "@jamsr-ui/utils";
-import { type autocompleteVariant } from "./style";
+import { type autocompleteVariant } from "./styles";
 
 export type AutocompleteContextType = {
   activeIndex: number | null;

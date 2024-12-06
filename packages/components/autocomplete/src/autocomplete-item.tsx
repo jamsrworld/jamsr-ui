@@ -1,4 +1,5 @@
 import { useListItem } from "@floating-ui/react";
+import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
@@ -12,10 +13,10 @@ type Props = {
   isDisabled?: boolean;
 };
 
-export type AutocompleteItemProps<T extends React.ElementType = "li"> =
+export type AutocompleteItemProps<T extends React.ElementType = "button"> =
   ComponentPropsWithAs<T, Props>;
 
-export const AutocompleteItem = <T extends React.ElementType = "li">(
+export const AutocompleteItem = <T extends React.ElementType = "button">(
   $props: AutocompleteItemProps<T>,
 ) => {
   const { autocompleteItem: Props = {} } = useUIStyle();
@@ -52,14 +53,18 @@ export const AutocompleteItem = <T extends React.ElementType = "li">(
   });
   const isActive = activeIndex === index;
   const isSelected = new Set(values).has(value);
-  const Component = as ?? "li";
+  const { isHovered, ref: disableRef } = useHover({
+    isDisabled,
+  });
+  const refs = useMergeRefs([ref, disableRef]);
 
+  const Component = as ?? "button";
   const className = styles.item({
     className: $className,
   });
   return (
     <Component
-      ref={ref}
+      ref={refs}
       data-slot="item"
       role="option"
       aria-selected={dataAttr(isSelected)}
@@ -67,7 +72,8 @@ export const AutocompleteItem = <T extends React.ElementType = "li">(
       aria-disabled={dataAttr(isDisabled)}
       data-disabled={dataAttr(isDisabled)}
       data-active={dataAttr(isActive)}
-      tabIndex={-1}
+      data-hovered={dataAttr(isHovered)}
+      tabIndex={isSelected ? 0 : -1}
       {...restProps}
       {...(!isDisabled &&
         getItemProps({

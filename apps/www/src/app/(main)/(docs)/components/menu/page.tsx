@@ -9,6 +9,7 @@ import { MenuCustomize } from "./examples/customize";
 import { MenuNested } from "./examples/nested";
 import { MenuOffset } from "./examples/offset";
 import { MenuPlacement } from "./examples/placement";
+import { MenuPreventClose } from "./examples/prevent-close";
 import { MenuStartEndContent } from "./examples/start-end-content";
 import { MenuTriggerOnHover } from "./examples/trigger-on-hover";
 import { MenuUsage } from "./examples/usage";
@@ -45,6 +46,9 @@ const Menu = () => {
       </VariantWrapper>
       <VariantWrapper heading="With Arrow" code={code("with-arrow")}>
         <MenuWithArrow />
+      </VariantWrapper>
+      <VariantWrapper heading="Prevent Close" code={code("prevent-close")}>
+        <MenuPreventClose />
       </VariantWrapper>
       <VariantWrapper heading="Placement" code={code("with-arrow")}>
         <MenuPlacement />

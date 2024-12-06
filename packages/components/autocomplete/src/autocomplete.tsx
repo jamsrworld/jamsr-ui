@@ -31,13 +31,13 @@ export const Autocomplete = (props: AutocompleteProps) => {
           >
             <div {...getPopoverProps()}>
               <FloatingList elementsRef={elementsRef}>
-                <ul {...getContentProps()}>
+                <div {...getContentProps()}>
                   {childrenToRender.length ? (
                     childrenToRender
                   ) : (
                     <li {...getEmptyContentProps()}>No items found</li>
                   )}
-                </ul>
+                </div>
               </FloatingList>
             </div>
           </FloatingFocusManager>

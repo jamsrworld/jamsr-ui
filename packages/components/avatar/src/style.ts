@@ -2,7 +2,7 @@ import { type VariantProps, tv } from "@jamsr-ui/utils";
 
 export const test = "";
 export const avatarVariants = tv({
-  base: ["flex-shrink-0", "bg-content1", "overflow-hidden", "object-cover"],
+  base: "flex flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-content1 object-cover",
   variants: {
     size: {
       xs: "size-6",
@@ -11,22 +11,23 @@ export const avatarVariants = tv({
       lg: "size-12",
       xl: "size-16",
     },
-    radius: {
-      none: "rounded-none",
-      sm: "rounded-sm",
-      md: "rounded-md",
-      lg: "rounded-lg",
-      full: "rounded-full",
+    color: {
+      default: "bg-default text-default-foreground ring-default",
+      primary: "bg-primary text-primary-foreground ring-primary",
+      secondary: "bg-secondary text-secondary-foreground ring-secondary",
+      success: "bg-success text-success-foreground ring-success",
+      warning: "bg-warning text-warning-foreground ring-warning",
+      danger: "bg-danger text-danger-foreground ring-danger",
     },
     isBordered: {
-      true: "ring-divider ring-offset-2 ring-offset-divider",
+      true: "ring-2",
       false: "border-transparent",
     },
   },
   defaultVariants: {
     bordered: false,
     size: "md",
-    radius: "full",
+    color: "default",
   },
 });
 

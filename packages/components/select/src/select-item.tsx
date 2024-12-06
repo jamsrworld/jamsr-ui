@@ -1,13 +1,16 @@
 import { useListItem } from "@floating-ui/react";
+import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { cn, deepMergeProps } from "@jamsr-ui/utils";
+import { dataAttr, deepMergeProps } from "@jamsr-ui/utils";
 import { useSelectContext } from "./use-select-context";
 
 type Props = {
   value: string;
   label?: string;
+  disabled?: boolean;
+  isDisabled?: boolean;
 };
 
 export type SelectItemProps<T extends React.ElementType = "button"> =
@@ -18,8 +21,17 @@ export const SelectItem = <T extends React.ElementType = "button">(
 ) => {
   const { selectItem: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
-
-  const { children, className, value, as, label, ...restProps } = props;
+  const {
+    children,
+    className,
+    value,
+    as,
+    label,
+    disabled = false,
+    isDisabled: propIsDisabled = false,
+    ...restProps
+  } = props;
+  const isDisabled = disabled || propIsDisabled;
   const {
     activeIndex,
     getItemProps,
@@ -27,6 +39,7 @@ export const SelectItem = <T extends React.ElementType = "button">(
     setValue,
     isMultiple,
     value: values,
+    styles,
   } = useSelectContext();
 
   // eslint-disable-next-line no-nested-ternary
@@ -42,6 +55,10 @@ export const SelectItem = <T extends React.ElementType = "button">(
   });
   const isActive = activeIndex === index;
   const isSelected = new Set(values).has(value);
+  const { isHovered, ref: disableRef } = useHover({
+    isDisabled,
+  });
+  const refs = useMergeRefs([ref, disableRef]);
 
   const handleClick = () => {
     const getNewValue = (): string[] => {
@@ -60,26 +77,30 @@ export const SelectItem = <T extends React.ElementType = "button">(
   };
 
   const Component = as ?? "button";
-
+  const style = styles.selectItem({
+    className,
+  });
   return (
     <Component
-      ref={ref}
-      type="button"
+      ref={refs}
       data-slot="item"
       role="option"
-      aria-selected={isSelected}
+      aria-selected={dataAttr(isSelected)}
+      data-selected={dataAttr(isSelected)}
+      data-active={dataAttr(isActive)}
+      aria-disabled={dataAttr(isDisabled)}
+      data-disabled={dataAttr(isDisabled)}
+      data-hovered={dataAttr(isHovered)}
       tabIndex={isSelected ? 0 : -1}
-      className={cn(
-        "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm hover:bg-content2 focus-visible:ring-2 focus-visible:ring-primary",
-        className,
-        { "bg-content2": isActive },
-      )}
+      className={style}
       {...restProps}
-      {...getItemProps({
-        onClick: () => {
-          handleClick();
-          handleSelect(index);
-        },
+      {...(!isDisabled && {
+        ...getItemProps({
+          onClick: () => {
+            handleClick();
+            handleSelect(index);
+          },
+        }),
       })}
     >
       {children}

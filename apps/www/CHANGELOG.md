@@ -1,5 +1,15 @@
 # web
 
+## 0.1.183
+
+### Patch Changes
+
+- improve components
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.62
+  - @jamsr-ui/theme@0.0.72
+  - @jamsr-ui/react@0.0.201
+
 ## 0.1.182
 
 ### Patch Changes

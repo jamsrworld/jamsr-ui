@@ -34,11 +34,18 @@ export type VariantTypes = {
     "start-end-content",
     "usage",
   ];
-  avatar: ["bordered", "placeholders", "radius", "sizes", "usage"];
+  avatar: [
+    "bordered",
+    "colors",
+    "fallback-color",
+    "fallbacks",
+    "image-fallback",
+    "sizes",
+    "usage",
+  ];
   button: [
     "colors",
     "disabled",
-    "icon-button",
     "loading",
     "sizes",
     "usage",
@@ -62,6 +69,7 @@ export type VariantTypes = {
     "bordered",
     "columns",
     "customization",
+    "empty-state",
     "server",
     "sticky-header",
     "usage",
@@ -116,6 +124,15 @@ export type VariantTypes = {
     "usage",
   ];
   header: ["hide-on-scroll", "static", "usage", "with-border"];
+  "icon-button": [
+    "colors",
+    "disabled",
+    "loading",
+    "sizes",
+    "usage",
+    "variants-colors",
+    "variants",
+  ];
   input: [
     "clearable",
     "controlled",
@@ -149,6 +166,7 @@ export type VariantTypes = {
     "nested",
     "offset",
     "placement",
+    "prevent-close",
     "start-end-content",
     "trigger-on-hover",
     "usage",
@@ -212,6 +230,7 @@ export type VariantTypes = {
     "custom-render-complex",
     "custom-render-multi",
     "custom-render-value",
+    "disabled-items",
     "disabled",
     "invalid-state",
     "multiple-controlled",
@@ -227,7 +246,16 @@ export type VariantTypes = {
   skeleton: ["usage"];
   slider: [];
   stepper: ["controlled", "events", "min-max-value", "usage"];
-  switch: ["description", "invalid-state", "label-placement", "usage"];
+  switch: [
+    "controlled",
+    "description",
+    "disabled",
+    "invalid-state",
+    "label-placement",
+    "readonly",
+    "usage",
+    "with-label",
+  ];
   tab: [
     "as",
     "colors",

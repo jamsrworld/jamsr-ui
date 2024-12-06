@@ -1,7 +1,7 @@
 {
   "name": "@ui/storybook",
   "private": true,
-  "version": "0.0.202",
+  "version": "0.0.203",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",

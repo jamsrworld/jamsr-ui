@@ -3,7 +3,7 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 export const test = "";
 export const table = tv({
   slots: {
-    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl font-medium",
+    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl",
     wrapper: "grid w-full gap-2 overflow-x-auto",
     table: "group/table w-full min-w-full",
     thead: "h-10",
@@ -19,7 +19,7 @@ export const table = tv({
   variants: {
     variant: {
       solid: {
-        th: "bg-default first:rounded-l-lg last:rounded-r-lg",
+        th: "bg-default-100 first:rounded-l-lg last:rounded-r-lg",
         base: "rounded-2xl bg-content1 p-4",
       },
       bordered: {

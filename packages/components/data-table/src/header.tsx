@@ -33,7 +33,7 @@ export const Header = <T,>({ headerGroups }: Props<T>) => {
                     )}
                     onClick={header.column.getToggleSortingHandler()}
                   >
-                    <span className="flex w-full grow items-center overflow-hidden">
+                    <span className="flex w-full  grow items-center overflow-hidden font-medium">
                       {flexRender(
                         header.column.columnDef.header,
                         header.getContext(),

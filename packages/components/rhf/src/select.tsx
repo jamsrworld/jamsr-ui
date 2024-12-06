@@ -19,7 +19,7 @@ export const RHFSelect = <T extends FieldValues>(props: Props<T>) => {
         field: { value, onChange, onBlur },
         fieldState: { error },
       }) => {
-        const $value = isMultiple ? value : [value];
+        const $value = isMultiple ? value : value ? [value] : [];
         const onValueChange = (value: string[]) => {
           onChange(isMultiple ? value : (value[0] ?? ""));
         };

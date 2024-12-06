@@ -4,7 +4,7 @@ export const test = "";
 export const menuVariants = tv({
   slots: {
     arrow: "fill-content2",
-    base: "inline-block",
+    base: "inline-block ui-open:scale-95 ui-open:opacity-50",
     backdrop: "z-backdrop",
     popover:
       "z-popover box-border inline-flex min-w-[200px] flex-col justify-center rounded-2xl bg-content1 p-1 text-sm shadow-md outline-none backdrop-blur-3xl",
@@ -15,14 +15,14 @@ export const menuVariants = tv({
   },
   variants: {
     backdrop: {
-      default: {},
+      transparent: {},
       blur: {
         backdrop: "backdrop-blur-sm",
       },
     },
   },
   defaultVariants: {
-    backdrop: "default",
+    backdrop: "transparent",
   },
 });
 

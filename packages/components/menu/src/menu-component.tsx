@@ -229,6 +229,7 @@ export const MenuComponent = ($props: MenuProps) => {
         )}
         data-active={dataAttr(isActive)}
         data-nested={dataAttr(isNested)}
+        data-open={dataAttr(isOpen)}
         className={
           !isNested
             ? styles.base({ className: classNames?.base })

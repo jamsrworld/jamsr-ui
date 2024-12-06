@@ -14,7 +14,7 @@ import {
   switchVariants,
   type SwitchSlots,
   type SwitchVariantProps,
-} from "./style";
+} from "./styles";
 
 const variants: Variants = {
   initial: {},
@@ -27,6 +27,7 @@ type Props = {
   label?: string;
   description?: string | ((checked: boolean) => string);
   checked?: boolean;
+  isChecked?: boolean;
   defaultChecked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
   labelPlacement?: "top" | "bottom" | "start" | "end";
@@ -37,6 +38,8 @@ type Props = {
   classNames?: SlotsToClasses<SwitchSlots>;
   isDisabled?: boolean;
   disabled?: boolean;
+  readonly?: boolean;
+  isReadonly?: boolean;
   ref?: React.RefObject<HTMLInputElement>;
 };
 
@@ -47,7 +50,8 @@ export const Switch = ($props: SwitchProps) => {
   const props = deepMergeProps(Props, $props);
   const id = useId();
   const {
-    checked: $checked,
+    checked,
+    isChecked: $isChecked,
     defaultChecked,
     onCheckedChange,
     label,
@@ -63,26 +67,29 @@ export const Switch = ($props: SwitchProps) => {
     classNames,
     disabled,
     ref,
+    readonly,
+    isReadonly: $isReadonly,
     ...restProps
   } = props;
 
-  const [checked, setChecked] = useControlledState(
+  const [isChecked, setChecked] = useControlledState(
     defaultChecked,
-    $checked,
+    $isChecked ?? checked,
     onCheckedChange,
   );
+  const isReadonly = readonly ?? $isReadonly;
   const { isDisabled, ref: disableRef } = useIsDisabled({
     isDisabled: disabled ?? propIsDisabled,
   });
+  const isInteractive = !isDisabled && !isReadonly;
   const { isHovered, ref: hoverRef } = useHover({
-    isDisabled,
+    isDisabled: isInteractive,
   });
   const { isFocused, ref: focusRef } = useFocus({
     isDisabled,
   });
   const refs = useMergeRefs([ref, disableRef, hoverRef, focusRef]);
   const styles = switchVariants({
-    checked,
     color,
     size,
     labelPlacement,
@@ -90,46 +97,52 @@ export const Switch = ($props: SwitchProps) => {
     isInvalid,
   });
   const onClick = () => setChecked((prev) => !prev);
+  const hasContent = label ?? description;
   return (
     <div
       data-component="switch"
+      data-slot="base"
       className={styles.base({ className: classNames?.base })}
       onBlur={onBlur}
       data-disabled={dataAttr(isDisabled)}
       aria-disabled={dataAttr(isDisabled)}
       data-hovered={dataAttr(isHovered)}
       data-focused={dataAttr(isFocused)}
+      data-interactive={dataAttr(isInteractive)}
+      data-checked={dataAttr(isChecked)}
     >
       <div
         data-slot="main-wrapper"
         className={styles.mainWrapper({ className: classNames?.mainWrapper })}
       >
-        <label
-          htmlFor={id}
-          data-slot="label"
-          className={styles.label({ className: classNames?.label })}
-        >
-          <Typography
-            as="p"
-            data-slot="label-text"
-            className={styles.labelText({ className: classNames?.labelText })}
+        {hasContent && (
+          <label
+            htmlFor={id}
+            data-slot="label"
+            className={styles.label({ className: classNames?.label })}
           >
-            {label}
-          </Typography>
-          {description && (
             <Typography
               as="p"
-              data-slot="description"
-              className={styles.description({
-                className: classNames?.description,
-              })}
+              data-slot="label-text"
+              className={styles.labelText({ className: classNames?.labelText })}
             >
-              {typeof description === "function"
-                ? description(checked)
-                : description}
+              {label}
             </Typography>
-          )}
-        </label>
+            {description && (
+              <Typography
+                as="p"
+                data-slot="description"
+                className={styles.description({
+                  className: classNames?.description,
+                })}
+              >
+                {typeof description === "function"
+                  ? description(isChecked)
+                  : description}
+              </Typography>
+            )}
+          </label>
+        )}
         <div
           data-slot="switch-wrapper"
           className={styles.switchWrapper({
@@ -138,7 +151,7 @@ export const Switch = ($props: SwitchProps) => {
         >
           <input
             type="checked"
-            className="sr-only"
+            className="hidden"
             aria-hidden="true"
             ref={refs}
             {...restProps}
@@ -146,13 +159,16 @@ export const Switch = ($props: SwitchProps) => {
           <m.button
             data-slot="switch"
             type="button"
+            data-interactive={dataAttr(isInteractive)}
             className={styles.switch({ className: classNames?.switch })}
-            onClick={onClick}
-            layout
-            initial="initial"
-            whileTap="tapped"
-            animate="initial"
-            disabled={isDisabled}
+            {...(isInteractive && {
+              onClick,
+              layout: true,
+              initial: "initial",
+              whileTap: "tapped",
+              animate: "initial",
+            })}
+            disabled={!isInteractive}
             id={id}
           >
             <m.div

@@ -1,5 +1,11 @@
 # @jamsr-ui/switch
 
+## 0.0.82
+
+### Patch Changes
+
+- improve components
+
 ## 0.0.81
 
 ### Patch Changes

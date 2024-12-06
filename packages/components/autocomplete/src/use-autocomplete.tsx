@@ -31,8 +31,8 @@ import React, {
   useState,
 } from "react";
 import type { AutocompleteItemProps } from "./autocomplete-item";
-import type { AutocompleteSlots } from "./style";
-import { autocompleteVariant } from "./style";
+import type { AutocompleteSlots } from "./styles";
+import { autocompleteVariant } from "./styles";
 import type { AutocompleteContextType } from "./use-autocomplete-context";
 
 export type UseAutocompleteProps = Pick<
@@ -317,7 +317,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     };
   };
 
-  const getContentProps: PropGetter<ComponentProps<"ul">> = (props) => {
+  const getContentProps: PropGetter<ComponentProps<"div">> = (props) => {
     return {
       "data-slot": "content",
       className: styles.content({ className: classNames?.content }),

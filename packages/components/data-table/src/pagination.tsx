@@ -36,10 +36,14 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
     table.setPageIndex(table.getPageCount() - 1);
   };
 
+  const totalPageCount = table.getPageCount();
+  const currentPageIndex = totalPageCount
+    ? table.getState().pagination.pageIndex + 1
+    : 0;
   return (
     <div
       data-slot="pagination"
-      className="flex flex-col justify-between gap-4 border-t border-divider-dark p-3 md:flex-row md:items-center"
+      className="flex flex-col justify-between gap-4 md:flex-row md:items-center"
     >
       <Select
         classNames={{
@@ -59,8 +63,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
       </Select>
       <div className="flex gap-1 md:gap-4">
         <div className="flex items-center justify-center text-sm font-medium">
-          Page {table.getState().pagination.pageIndex + 1} of{" "}
-          {table.getPageCount()}
+          Page {currentPageIndex} of {totalPageCount}
         </div>
         <div className="flex items-center">
           <IconButton

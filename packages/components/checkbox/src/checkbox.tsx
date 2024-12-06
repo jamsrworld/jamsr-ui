@@ -61,15 +61,17 @@ export const Checkbox = ($props: CheckboxProps) => {
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled ?? disabled,
   });
+  const isInteractive = !isDisabled && !isReadonly;
   const { isHovered, ref: hoverRef } = useHover({
-    isDisabled,
+    isDisabled: !isInteractive,
   });
   const { isFocused, ref: focusRef } = useFocus({
     isDisabled,
   });
   const refs = useMergeRefs([hoverRef, focusRef, disableRef]);
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (isDisabled || isReadonly) return;
+    if (!isInteractive) return;
     setChecked(e.target.checked);
   };
 
@@ -101,8 +103,8 @@ export const Checkbox = ($props: CheckboxProps) => {
           className={styles.trigger({
             className: classNames?.trigger,
           })}
-          disabled={isDisabled}
-          {...(!isDisabled && {
+          disabled={!isInteractive}
+          {...(isInteractive && {
             whileTap: { scale: 0.95 },
           })}
         >

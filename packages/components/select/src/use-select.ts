@@ -224,6 +224,7 @@ export const useSelect = ($props: UseSelectProps) => {
       setValue,
       isMultiple,
       value,
+      styles,
     };
   }, [
     activeIndex,
@@ -232,9 +233,9 @@ export const useSelect = ($props: UseSelectProps) => {
     isMultiple,
     selectedIndex,
     setValue,
+    styles,
     value,
   ]);
-
   const hasValue = value.length > 0;
 
   const getRenderValue = useMemo(() => {

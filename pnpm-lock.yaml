@@ -373,6 +373,9 @@ importers:
 
   packages/components/avatar:
     dependencies:
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../shared-icons
       '@jamsr-ui/styles':
         specifier: workspace:^
         version: link:../../styles

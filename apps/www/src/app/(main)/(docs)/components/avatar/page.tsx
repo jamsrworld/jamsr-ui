@@ -1,13 +1,15 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { AvatarBordered } from "./examples/bordered";
-import { AvatarUsage } from "./examples/usage";
-import { AvatarPlaceholders } from "./examples/placeholders";
-import { AvatarRadius } from "./examples/radius";
+import { AvatarColors } from "./examples/colors";
+import { AvatarFallbackColor } from "./examples/fallback-color";
+import { AvatarFallbacks } from "./examples/fallbacks";
+import { AvatarImageFallback } from "./examples/image-fallback";
 import { AvatarSizes } from "./examples/sizes";
+import { AvatarUsage } from "./examples/usage";
 
 const title = "Avatar";
 const description =
@@ -27,17 +29,23 @@ const Avatar = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <AvatarUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Placeholders" code={code("placeholders")}>
-        <AvatarPlaceholders />
+      <VariantWrapper heading="Fallbacks" code={code("fallbacks")}>
+        <AvatarFallbacks />
+      </VariantWrapper>
+      <VariantWrapper heading="Fallback Colors" code={code("fallback-color")}>
+        <AvatarFallbackColor />
+      </VariantWrapper>
+      <VariantWrapper heading="Colors" code={code("colors")}>
+        <AvatarColors />
+      </VariantWrapper>
+      <VariantWrapper heading="Image Fallback" code={code("image-fallback")}>
+        <AvatarImageFallback />
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <AvatarSizes />
       </VariantWrapper>
       <VariantWrapper heading="Bordered" code={code("bordered")}>
         <AvatarBordered />
-      </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
-        <AvatarRadius />
       </VariantWrapper>
     </VariantPage>
   );

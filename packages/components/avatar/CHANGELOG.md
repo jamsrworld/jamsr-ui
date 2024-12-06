@@ -1,5 +1,13 @@
 # @jamsr-ui/avatar
 
+## 0.0.73
+
+### Patch Changes
+
+- improve components
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.62
+
 ## 0.0.72
 
 ### Patch Changes

@@ -5,13 +5,15 @@ export const switchVariants = tv({
   slots: {
     base: "group flex flex-col gap-2",
     switch: [
-      "flex cursor-pointer items-center rounded-full p-1",
+      "flex cursor-pointer items-center rounded-full bg-content1 p-1",
       ...focusVisibleClasses,
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
+      "cursor-default ui-interactive:cursor-pointer ui-interactive:hover:opacity-95",
+      "justify-start ui-group-checked:justify-end",
     ],
     thumb: "size-8 rounded-full bg-white shadow-md",
     helperText: "text-xs text-foreground-400",
-    label: "grid grow cursor-pointer select-none gap-1",
+    label: "grid grow select-none gap-1 ui-group-interactive:cursor-pointer",
     labelText: "font-medium",
     description: "text-xs text-foreground-500",
     mainWrapper: "flex items-center justify-between gap-2",
@@ -20,22 +22,22 @@ export const switchVariants = tv({
   variants: {
     color: {
       default: {
-        switch: "bg-default",
+        switch: "ui-group-checked:bg-default",
       },
       primary: {
-        switch: "bg-primary",
+        switch: "ui-group-checked:bg-primary",
       },
       secondary: {
-        switch: "bg-secondary",
+        switch: "ui-group-checked:bg-secondary",
       },
       success: {
-        switch: "bg-success",
+        switch: "ui-group-checked:bg-success",
       },
       warning: {
-        switch: "bg-warning",
+        switch: "ui-group-checked:bg-warning",
       },
       error: {
-        switch: "bg-danger",
+        switch: "ui-group-checked:bg-danger",
       },
     },
     size: {
@@ -50,14 +52,6 @@ export const switchVariants = tv({
       lg: {
         switch: "mr-2 h-8 w-14",
         thumb: "size-6",
-      },
-    },
-    checked: {
-      true: {
-        switch: "justify-end",
-      },
-      false: {
-        switch: "justify-start !bg-default-200",
       },
     },
     labelPlacement: {

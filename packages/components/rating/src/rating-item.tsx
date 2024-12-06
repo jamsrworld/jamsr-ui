@@ -24,15 +24,15 @@ export const RatingItem = (props: Props) => {
     classNames,
   } = useRatingContext();
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
-    isDisabled: isReadonly || propIsDisabled,
+    isDisabled: propIsDisabled,
   });
+  const isInteractive = !isDisabled && !isReadonly;
   const handleMouseMove = () => {
-    if (isDisabled) return;
+    if (!isInteractive) return;
     setValue(itemValue);
   };
 
   const uniqueId = useId();
-
   return (
     <label
       data-disabled={dataAttr(isDisabled)}
@@ -41,7 +41,7 @@ export const RatingItem = (props: Props) => {
       data-checked={dataAttr(isChecked)}
       data-value={itemValue}
       onMouseEnter={handleMouseMove}
-      data-interactive={dataAttr(!isDisabled)}
+      data-interactive={dataAttr(isInteractive)}
       className={styles.starWrapper({ className: classNames?.starWrapper })}
     >
       <StarIcon {...restProps} />
@@ -54,7 +54,7 @@ export const RatingItem = (props: Props) => {
         name={id}
         onChange={handleOnChange}
         className="sr-only"
-        disabled={isDisabled}
+        disabled={!isInteractive}
         ref={disableRef}
       />
     </label>

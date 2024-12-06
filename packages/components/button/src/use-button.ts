@@ -1,4 +1,9 @@
-import { useHover, useMergeRefs, usePress } from "@jamsr-ui/hooks";
+import {
+  useHover,
+  useIsDisabled,
+  useMergeRefs,
+  usePress,
+} from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   dataAttr,
@@ -44,18 +49,20 @@ export const useButton = ($props: UseButtonProps) => {
     type = "button",
     disableRipple,
     disableAnimation = false,
-    ref: $ref,
+    ref: propRef,
     ...restProps
   } = props;
-  const isDisabled = isLoading || disabled || $isDisabled;
 
+  const { isDisabled, ref: disableRef } = useIsDisabled({
+    isDisabled: isLoading || disabled || $isDisabled,
+  });
   const { isPressed, ref: pressRef } = usePress({
     isDisabled,
   });
   const { isHovered, ref: hoverRef } = useHover({
     isDisabled,
   });
-  const ref = useMergeRefs([pressRef, hoverRef, $ref]);
+  const ref = useMergeRefs([pressRef, disableRef, hoverRef, propRef]);
 
   const Component = as ?? "button";
   const styles = useMemo(

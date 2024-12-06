@@ -1,5 +1,13 @@
 # @jamsr-ui/rating
 
+## 0.0.30
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.47
+
 ## 0.0.29
 
 ### Patch Changes

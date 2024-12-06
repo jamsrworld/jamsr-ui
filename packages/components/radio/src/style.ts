@@ -4,7 +4,10 @@ import { groupDataFocusVisibleClasses, tv } from "@jamsr-ui/utils";
 export const test = "";
 export const radioVariant = tv({
   slots: {
-    base: "group relative -m-2 inline-flex cursor-pointer items-center justify-start p-2 tap-highlight-transparent",
+    base: [
+      "group relative -m-2 inline-flex cursor-pointer items-center justify-start p-2 tap-highlight-transparent",
+      "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
+    ],
     wrapper: [
       "relative",
       "inline-flex",
@@ -84,11 +87,6 @@ export const radioVariant = tv({
         labelWrapper: "ml-2",
         label: "text-lg",
         description: "text-base",
-      },
-    },
-    isDisabled: {
-      true: {
-        base: "pointer-events-none opacity-50",
       },
     },
     isInvalid: {

@@ -7,13 +7,13 @@ type UseIsDisableProps = {
 export const useIsDisabled = <T extends HTMLElement>(
   props?: UseIsDisableProps,
 ) => {
-  const { isDisabled: $isDisabled = false } = props ?? {};
+  const { isDisabled: propIsDisabled = false } = props ?? {};
   const ref = useRef<T>(null);
-  const [isDisabled, setIsDisabled] = useState($isDisabled);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
     const input = ref.current;
-    if (!input || $isDisabled) return () => {};
+    if (!input || propIsDisabled) return () => {};
     const fieldset = input.closest("fieldset");
     if (!fieldset) return () => {};
     const updateState = () => {
@@ -28,6 +28,10 @@ export const useIsDisabled = <T extends HTMLElement>(
       attributeFilter: ["disabled"],
     });
     return () => observer.disconnect();
-  }, [$isDisabled]);
+  }, [propIsDisabled]);
+
+  if (propIsDisabled) {
+    return { ref, isDisabled: true };
+  }
   return { ref, isDisabled };
 };

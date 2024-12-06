@@ -43,8 +43,8 @@ const Page = () => {
           <Radio value="female">Female</Radio>
         </RadioGroup>
         <Editor />
+        <Button isLoading={isDisabled}>Click me!</Button>
       </fieldset>
-      <Button isLoading={isDisabled}>Click me!</Button>
       <Button onClick={onToggle}>Click {isDisabled ? 1 : 0}</Button>
     </div>
   );

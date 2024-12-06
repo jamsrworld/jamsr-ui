@@ -1,5 +1,14 @@
 # web
 
+## 0.1.180
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.47
+  - @jamsr-ui/react@0.0.198
+
 ## 0.1.179
 
 ### Patch Changes

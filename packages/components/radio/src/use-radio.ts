@@ -25,6 +25,7 @@ interface Props extends UIProps<"input", keyof RadioVariantProps> {
   classNames?: SlotsToClasses<RadioSlots>;
   value?: string;
   defaultChecked?: boolean;
+  isDisabled?: boolean;
 }
 
 export type UseRadioProps = Props & RadioVariantProps;
@@ -82,7 +83,6 @@ export const useRadio = ($props: UseRadioProps) => {
   const styles = radioVariant({
     className,
     color,
-    isDisabled,
     isInvalid,
     size,
   });

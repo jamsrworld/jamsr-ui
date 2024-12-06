@@ -1,5 +1,12 @@
 # @jamsr-ui/file-upload-single
 
+## 0.0.95
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.47
+
 ## 0.0.94
 
 ### Patch Changes

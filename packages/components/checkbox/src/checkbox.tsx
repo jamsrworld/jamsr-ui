@@ -5,9 +5,9 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { MotionButton } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import { m } from "framer-motion";
 import { useId, type ChangeEvent, type ComponentProps } from "react";
 import { CheckboxCheckIcon } from "./checkbox-check-icon";
 import {
@@ -90,12 +90,13 @@ export const Checkbox = ($props: CheckboxProps) => {
       aria-disabled={dataAttr(isDisabled)}
       data-focused={dataAttr(isFocused)}
       className={styles.base({ className: classNames?.base })}
+      onBlur={onBlur}
     >
       <div
         data-slot="wrapper"
         className={styles.wrapper({ className: classNames?.wrapper })}
       >
-        <MotionButton
+        <m.button
           data-slot="checkbox-wrapper"
           className={styles.trigger({
             className: classNames?.trigger,
@@ -118,7 +119,7 @@ export const Checkbox = ($props: CheckboxProps) => {
             {...restProps}
           />
           <CheckboxCheckIcon isChecked={Boolean(checked)} />
-        </MotionButton>
+        </m.button>
         <label
           className={styles.label({ className: classNames?.label })}
           htmlFor={id}

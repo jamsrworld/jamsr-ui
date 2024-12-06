@@ -1,9 +1,9 @@
-import { Button, type ButtonProps } from "@jamsr-ui/button";
+import { IconButton, type IconButtonProps } from "@jamsr-ui/icon-button";
 import { CloseIcon } from "@jamsr-ui/shared-icons";
 import { cn } from "@jamsr-ui/utils";
 import { useDialogContext } from "./dialog-context";
 
-export const DialogCloseBtn = (props: Partial<ButtonProps>) => {
+export const DialogCloseBtn = (props: Partial<IconButtonProps>) => {
   const { className: $className, ...restProps } = props;
   const { setIsOpen, styles, classNames, slotProps } = useDialogContext();
   const handleClick = () => {
@@ -17,9 +17,9 @@ export const DialogCloseBtn = (props: Partial<ButtonProps>) => {
     ),
   });
   return (
-    <Button
+    <IconButton
+      label="Close"
       data-slot="close"
-      isIconOnly
       type="button"
       variant="light"
       onClick={handleClick}
@@ -29,6 +29,6 @@ export const DialogCloseBtn = (props: Partial<ButtonProps>) => {
       className={className}
     >
       <CloseIcon />
-    </Button>
+    </IconButton>
   );
 };

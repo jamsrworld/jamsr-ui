@@ -22,7 +22,7 @@ import type { EditorOptions, JSONContent } from "@tiptap/react";
 import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { all, createLowlight } from "lowlight";
-import type { ComponentProps, ComponentPropsWithoutRef } from "react";
+import type { ComponentProps } from "react";
 import { useCallback, useEffect } from "react";
 import { ExtendedImage } from "../components/extensions/image";
 import { ImageUpload } from "../components/extensions/image-upload";
@@ -188,21 +188,20 @@ export const useEditor = ($props: UseEditorProps) => {
     [classNames?.editor, restProps, styles],
   );
 
-  const getContentProps: PropGetter<ComponentPropsWithoutRef<"div">> =
-    useCallback(
-      (props = {}) => {
-        return {
-          "data-slot": "content",
-          ...props,
-          className: styles.content({
-            className: cn(classNames?.content, props.className),
-          }),
-          ...restProps,
-          onClick: handleOnClick,
-        };
-      },
-      [classNames?.content, handleOnClick, restProps, styles],
-    );
+  const getContentProps: PropGetter = useCallback(
+    (props = {}) => {
+      return {
+        "data-slot": "content",
+        ...props,
+        className: styles.content({
+          className: cn(classNames?.content),
+        }),
+        ...restProps,
+        onClick: handleOnClick,
+      };
+    },
+    [classNames?.content, handleOnClick, restProps, styles],
+  );
 
   const getHelperTextProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props = {}) => {

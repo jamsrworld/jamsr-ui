@@ -8,14 +8,12 @@ export type ButtonProps = UseButtonProps;
 export const Button = <T extends React.ElementType = "button">(
   props: ComponentPropsWithAs<T, ButtonProps>,
 ) => {
-  const { size } = props;
   const {
     Component,
     children,
     endContent,
     getButtonProps,
     spinnerPlacement,
-    isIconOnly,
     isLoading,
     startContent,
     styles,
@@ -24,16 +22,11 @@ export const Button = <T extends React.ElementType = "button">(
   } = useButton({ ...props });
   const spinner = <CircularProgress size="sm" color="current" />;
   return (
-    <Component
-      data-component="button"
-      data-slot="base"
-      className={styles}
-      {...getButtonProps()}
-    >
+    <Component data-component="button" className={styles} {...getButtonProps()}>
       {isLoading && spinnerPlacement === "start" ? spinner : startContent}
-      {isLoading && isIconOnly ? null : children}
+      {children}
       {isLoading && spinnerPlacement === "end" ? spinner : endContent}
-      {!isDisabled && !disableRipple && <Ripple isCenter={isIconOnly} />}
+      {!isDisabled && !disableRipple && <Ripple />}
     </Component>
   );
 };

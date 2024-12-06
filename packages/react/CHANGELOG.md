@@ -1,5 +1,115 @@
 # @jamsr-ui/react
 
+## 0.0.200
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.97
+  - @jamsr-ui/circular-progress@0.0.2
+  - @jamsr-ui/file-upload-multi@0.0.97
+  - @jamsr-ui/linear-progress@0.0.2
+  - @jamsr-ui/autocomplete@0.0.104
+  - @jamsr-ui/confirmation@0.0.66
+  - @jamsr-ui/icon-button@0.0.2
+  - @jamsr-ui/data-table@0.0.62
+  - @jamsr-ui/tags-input@0.0.34
+  - @jamsr-ui/typography@0.0.78
+  - @jamsr-ui/accordion@0.0.81
+  - @jamsr-ui/otp-input@0.0.72
+  - @jamsr-ui/checkbox@0.0.72
+  - @jamsr-ui/repeater@0.0.39
+  - @jamsr-ui/skeleton@0.0.70
+  - @jamsr-ui/textarea@0.0.97
+  - @jamsr-ui/divider@0.0.72
+  - @jamsr-ui/popover@0.0.74
+  - @jamsr-ui/stepper@0.0.10
+  - @jamsr-ui/tooltip@0.0.69
+  - @jamsr-ui/avatar@0.0.72
+  - @jamsr-ui/button@0.0.77
+  - @jamsr-ui/dialog@0.0.86
+  - @jamsr-ui/drawer@1.0.71
+  - @jamsr-ui/editor@0.0.102
+  - @jamsr-ui/header@0.0.78
+  - @jamsr-ui/rating@0.0.32
+  - @jamsr-ui/ripple@0.0.74
+  - @jamsr-ui/select@0.0.93
+  - @jamsr-ui/switch@0.0.81
+  - @jamsr-ui/alert@0.0.88
+  - @jamsr-ui/input@0.0.97
+  - @jamsr-ui/radio@0.0.80
+  - @jamsr-ui/table@0.0.51
+  - @jamsr-ui/toast@0.0.32
+  - @jamsr-ui/card@0.0.83
+  - @jamsr-ui/chip@0.0.83
+  - @jamsr-ui/link@0.0.72
+  - @jamsr-ui/menu@0.0.92
+  - @jamsr-ui/show@0.0.4
+  - @jamsr-ui/dnd@0.0.12
+  - @jamsr-ui/kbd@0.0.7
+  - @jamsr-ui/rhf@0.0.45
+  - @jamsr-ui/tab@0.0.93
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/theme@0.0.71
+  - @jamsr-ui/utils@0.0.66
+  - @jamsr-ui/core@0.0.41
+
+## 0.0.199
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.96
+  - @jamsr-ui/circular-progress@0.0.1
+  - @jamsr-ui/file-upload-multi@0.0.96
+  - @jamsr-ui/linear-progress@0.0.1
+  - @jamsr-ui/autocomplete@0.0.103
+  - @jamsr-ui/confirmation@0.0.65
+  - @jamsr-ui/icon-button@0.0.1
+  - @jamsr-ui/data-table@0.0.61
+  - @jamsr-ui/tags-input@0.0.33
+  - @jamsr-ui/typography@0.0.77
+  - @jamsr-ui/accordion@0.0.80
+  - @jamsr-ui/otp-input@0.0.71
+  - @jamsr-ui/checkbox@0.0.71
+  - @jamsr-ui/repeater@0.0.38
+  - @jamsr-ui/skeleton@0.0.69
+  - @jamsr-ui/textarea@0.0.96
+  - @jamsr-ui/divider@0.0.71
+  - @jamsr-ui/popover@0.0.73
+  - @jamsr-ui/stepper@0.0.9
+  - @jamsr-ui/tooltip@0.0.68
+  - @jamsr-ui/avatar@0.0.71
+  - @jamsr-ui/button@0.0.76
+  - @jamsr-ui/dialog@0.0.85
+  - @jamsr-ui/drawer@1.0.70
+  - @jamsr-ui/editor@0.0.101
+  - @jamsr-ui/header@0.0.77
+  - @jamsr-ui/rating@0.0.31
+  - @jamsr-ui/ripple@0.0.73
+  - @jamsr-ui/select@0.0.92
+  - @jamsr-ui/switch@0.0.80
+  - @jamsr-ui/alert@0.0.87
+  - @jamsr-ui/input@0.0.96
+  - @jamsr-ui/radio@0.0.79
+  - @jamsr-ui/table@0.0.50
+  - @jamsr-ui/toast@0.0.31
+  - @jamsr-ui/card@0.0.82
+  - @jamsr-ui/chip@0.0.82
+  - @jamsr-ui/link@0.0.71
+  - @jamsr-ui/menu@0.0.91
+  - @jamsr-ui/show@0.0.3
+  - @jamsr-ui/dnd@0.0.11
+  - @jamsr-ui/kbd@0.0.6
+  - @jamsr-ui/rhf@0.0.44
+  - @jamsr-ui/tab@0.0.92
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/theme@0.0.70
+  - @jamsr-ui/utils@0.0.65
+  - @jamsr-ui/core@0.0.40
+
 ## 0.0.198
 
 ### Patch Changes

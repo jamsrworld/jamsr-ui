@@ -51,9 +51,6 @@ const baseVariant = tv({
     isRounded: {
       true: "rounded-full",
     },
-    isIconOnly: {
-      true: "!px-0",
-    },
     disableAnimation: {
       true: "!transition-none",
       false: "data-[pressed=true]:scale-[0.97]",
@@ -168,29 +165,6 @@ const outlinedVariant: CompoundVariant<ButtonVariantProps>[] = [
   },
 ];
 
-const iconOnlyVariant: CompoundVariant<ButtonVariantProps>[] = [
-  {
-    isIconOnly: true,
-    size: "xs",
-    className: "size-6",
-  },
-  {
-    isIconOnly: true,
-    size: "sm",
-    className: "size-8 min-w-8 ",
-  },
-  {
-    isIconOnly: true,
-    size: "md",
-    className: "size-10 min-w-10",
-  },
-  {
-    isIconOnly: true,
-    size: "lg",
-    className: "size-12 min-w-12",
-  },
-];
-
 const textVariant: CompoundVariant<ButtonVariantProps>[] = [
   {
     variant: "text",
@@ -261,17 +235,11 @@ export const test = "";
 export const button = tv({
   extend: baseVariant,
   compoundVariants: [
-    {
-      disableAnimation: false,
-      size: "lg",
-      className: "data-[pressed=true]:scale-[0.98]",
-    },
     ...solidVariant,
     ...lightVariant,
     ...outlinedVariant,
     ...textVariant,
     ...flatVariant,
-    ...iconOnlyVariant,
   ],
 });
 

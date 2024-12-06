@@ -1,5 +1,17 @@
 # @jamsr-ui/core
 
+## 0.0.41
+
+### Patch Changes
+
+- react 19
+
+## 0.0.40
+
+### Patch Changes
+
+- react 19
+
 ## 0.0.39
 
 ### Patch Changes

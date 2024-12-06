@@ -1,5 +1,43 @@
 # @jamsr-ui/data-table
 
+## 0.0.62
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.2
+  - @jamsr-ui/linear-progress@0.0.2
+  - @jamsr-ui/icon-button@0.0.2
+  - @jamsr-ui/typography@0.0.78
+  - @jamsr-ui/repeater@0.0.39
+  - @jamsr-ui/skeleton@0.0.70
+  - @jamsr-ui/button@0.0.77
+  - @jamsr-ui/select@0.0.93
+  - @jamsr-ui/table@0.0.51
+  - @jamsr-ui/shared-icons@0.0.61
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.61
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.1
+  - @jamsr-ui/linear-progress@0.0.1
+  - @jamsr-ui/icon-button@0.0.1
+  - @jamsr-ui/typography@0.0.77
+  - @jamsr-ui/repeater@0.0.38
+  - @jamsr-ui/skeleton@0.0.69
+  - @jamsr-ui/button@0.0.76
+  - @jamsr-ui/select@0.0.92
+  - @jamsr-ui/table@0.0.50
+  - @jamsr-ui/shared-icons@0.0.60
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.60
 
 ### Patch Changes

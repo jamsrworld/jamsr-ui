@@ -1,7 +1,6 @@
-import { type Meta, type StoryObj } from "@storybook/react";
-import { Typography } from "@jamsr-ui/typography";
-import { Button } from "@jamsr-ui/button";
 import { Avatar } from "@jamsr-ui/avatar";
+import { Typography } from "@jamsr-ui/typography";
+import { type Meta, type StoryObj } from "@storybook/react";
 import { Card, CardContent, CardHeader, type CardProps } from "../src";
 
 const meta: Meta<typeof Card> = {
@@ -30,7 +29,6 @@ export const StartEndContent: Story = {
         <CardHeader
           heading="Card Header"
           startContent={<Avatar alt="avatar" src="" />}
-          endContent={<Button isIconOnly />}
           subHeading="20 Minutes Ago"
         />
         <CardContent>

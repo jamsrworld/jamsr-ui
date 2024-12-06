@@ -1,4 +1,3 @@
-import { type ButtonProps } from "@jamsr-ui/button";
 import {
   useControlledState,
   useFocus,
@@ -6,6 +5,7 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
+import { IconButtonProps } from "@jamsr-ui/icon-button";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
@@ -411,7 +411,7 @@ export const useInput = ($props: UseInputProps) => {
 
   const hasNotation = isRequired === true || isOptional === true;
 
-  const getClearButtonProps: PropGetter<ButtonProps> = useCallback(
+  const getClearButtonProps: PropGetter<Partial<IconButtonProps>> = useCallback(
     (props) => {
       return {
         ...props,

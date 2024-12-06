@@ -1,5 +1,17 @@
 # @jamsr-ui/show
 
+## 0.0.4
+
+### Patch Changes
+
+- react 19
+
+## 0.0.3
+
+### Patch Changes
+
+- react 19
+
 ## 0.0.2
 
 ### Patch Changes

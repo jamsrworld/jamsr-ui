@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert, Button } from "@jamsr-ui/react";
+import { Alert, Button, IconButton } from "@jamsr-ui/react";
 import { CloseIcon, EyeClosedIcon } from "@jamsr-ui/shared-icons";
 import { useState } from "react";
 
@@ -25,18 +25,23 @@ export const AlertWithAction = () => {
           status="danger"
           action={
             <div className="flex flex-row gap-2">
-              <Button isIconOnly isRounded variant="light" color="success">
+              <IconButton
+                label="Close"
+                isRounded
+                variant="light"
+                color="success"
+              >
                 <EyeClosedIcon className="size-5" />
-              </Button>
-              <Button
+              </IconButton>
+              <IconButton
+                label="Close"
                 onClick={handleClose}
-                isIconOnly
                 isRounded
                 color="danger"
                 variant="light"
               >
                 <CloseIcon className="size-5" />
-              </Button>
+              </IconButton>
             </div>
           }
         >

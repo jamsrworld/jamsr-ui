@@ -26,6 +26,7 @@ export const Editor = (props: EditorProps) => {
       {label && <label {...getLabelProps()}>{label}</label>}
       <div {...getEditorProps()}>
         {editor && <EditorMenuBar editor={editor} />}
+        {/* @ts-expect-error TypeError */}
         <EditorContent editor={editor} {...getContentProps()} />
       </div>
       {helperText && <div {...getHelperTextProps()}>{helperText}</div>}

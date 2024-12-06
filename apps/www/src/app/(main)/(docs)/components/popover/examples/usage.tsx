@@ -1,4 +1,4 @@
-import { Button, Popover, Typography } from "@jamsr-ui/react";
+import { IconButton, Popover, Typography } from "@jamsr-ui/react";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
 
 export const PopoverUsage = () => {
@@ -6,9 +6,9 @@ export const PopoverUsage = () => {
     <div className="grid place-content-center">
       <Popover
         trigger={
-          <Button isIconOnly>
+          <IconButton label="Popover Trigger">
             <InfoIcon />
-          </Button>
+          </IconButton>
         }
         className="p-2"
       >

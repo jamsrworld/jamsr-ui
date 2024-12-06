@@ -6,7 +6,7 @@ export const CircularProgressColors = () => {
     "secondary",
     "success",
     "warning",
-    "error",
+    "danger",
   ];
   return (
     <div className="flex flex-col gap-6">

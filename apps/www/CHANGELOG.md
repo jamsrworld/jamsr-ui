@@ -1,5 +1,35 @@
 # web
 
+## 0.1.182
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/dnd@0.0.12
+  - @jamsr-ui/shared-icons@0.0.61
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/hooks@0.0.49
+  - @jamsr-ui/react@0.0.200
+  - @jamsr-ui/theme@0.0.71
+  - @jamsr-ui/utils@0.0.66
+  - @jamsr-ui/core@0.0.41
+
+## 0.1.181
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/dnd@0.0.11
+  - @jamsr-ui/shared-icons@0.0.60
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/hooks@0.0.48
+  - @jamsr-ui/react@0.0.199
+  - @jamsr-ui/theme@0.0.70
+  - @jamsr-ui/utils@0.0.65
+  - @jamsr-ui/core@0.0.40
+
 ## 0.1.180
 
 ### Patch Changes

@@ -6,10 +6,8 @@ export type HeaderProps = UseHeaderProps;
 
 export const Header = (props: HeaderProps) => {
   const { getBaseProps, children, isVisible, isBordered } = useHeader(props);
-
   return (
     <AnimatePresence mode="wait" initial={false}>
-      {/*  @ts-expect-error typeerror */}
       <m.header
         initial={{
           opacity: 1,

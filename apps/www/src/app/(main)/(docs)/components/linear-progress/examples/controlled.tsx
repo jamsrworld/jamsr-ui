@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, LinearProgress } from "@jamsr-ui/react";
+import { IconButton, LinearProgress } from "@jamsr-ui/react";
 import { MinusIcon, PlusIcon } from "@jamsr-ui/shared-icons";
 import { useState } from "react";
 
@@ -12,13 +12,21 @@ export const LinearProgressControlled = () => {
   const CanDecrease = value > 0;
   return (
     <div className="flex items-center gap-4">
-      <Button isDisabled={!CanDecrease} onClick={OnDecrease} isIconOnly>
+      <IconButton
+        label="Decrease"
+        isDisabled={!CanDecrease}
+        onClick={OnDecrease}
+      >
         <MinusIcon />
-      </Button>
+      </IconButton>
       <LinearProgress progress={value} />
-      <Button isDisabled={!CanIncrease} onClick={OnIncrease} isIconOnly>
+      <IconButton
+        label="Increase"
+        isDisabled={!CanIncrease}
+        onClick={OnIncrease}
+      >
         <PlusIcon />
-      </Button>
+      </IconButton>
     </div>
   );
 };

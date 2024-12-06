@@ -55,6 +55,10 @@ export const sidebarItems: {
         path: "/components/chip",
       },
       {
+        heading: "Circular Progress",
+        path: "/components/circular-progress",
+      },
+      {
         heading: "Confirmation",
         path: "/components/confirmation",
       },
@@ -95,12 +99,20 @@ export const sidebarItems: {
         path: "/components/header",
       },
       {
+        heading: "Icon Button",
+        path: "/components/icon-button",
+      },
+      {
         heading: "Input",
         path: "/components/input",
       },
       {
         heading: "Kbd",
         path: "/components/kbd",
+      },
+      {
+        heading: "Linear Progress",
+        path: "/components/linear-progress",
       },
       {
         heading: "Link",
@@ -117,14 +129,6 @@ export const sidebarItems: {
       {
         heading: "Popover",
         path: "/components/popover",
-      },
-      {
-        heading: "Circular Progress",
-        path: "/components/circular-progress",
-      },
-      {
-        heading: "Linear Progress",
-        path: "/components/linear-progress",
       },
       {
         heading: "Radio",

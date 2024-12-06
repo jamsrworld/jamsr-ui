@@ -1,5 +1,17 @@
 # @jamsr-ui/styles
 
+## 0.0.11
+
+### Patch Changes
+
+- react 19
+
+## 0.0.10
+
+### Patch Changes
+
+- react 19
+
 ## 0.0.9
 
 ### Patch Changes

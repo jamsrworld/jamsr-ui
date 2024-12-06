@@ -1,5 +1,23 @@
 # @jamsr-ui/toast
 
+## 0.0.32
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.31
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.30
 
 ### Patch Changes

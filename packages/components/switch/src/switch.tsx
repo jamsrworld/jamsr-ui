@@ -5,11 +5,10 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { MotionButton, MotionDiv } from "@jamsr-ui/motion";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { Typography } from "@jamsr-ui/typography";
 import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
-import { type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 import { useId } from "react";
 import {
   switchVariants,
@@ -144,7 +143,7 @@ export const Switch = ($props: SwitchProps) => {
             ref={refs}
             {...restProps}
           />
-          <MotionButton
+          <m.button
             data-slot="switch"
             type="button"
             className={styles.switch({ className: classNames?.switch })}
@@ -156,13 +155,13 @@ export const Switch = ($props: SwitchProps) => {
             disabled={isDisabled}
             id={id}
           >
-            <MotionDiv
+            <m.div
               data-slot="thumb"
               variants={variants}
               layoutId={id}
               className={styles.thumb({ className: classNames?.thumb })}
             />
-          </MotionButton>
+          </m.button>
         </div>
       </div>
       {helperText && (

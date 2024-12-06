@@ -6,8 +6,8 @@ import {
   useInteractions,
   useRole,
 } from "@floating-ui/react";
-import { type ButtonProps } from "@jamsr-ui/button";
 import { useControlledState } from "@jamsr-ui/hooks";
+import { type IconButtonProps } from "@jamsr-ui/icon-button";
 import {
   cn,
   dataAttr,
@@ -28,7 +28,7 @@ type Props = UIProps<"div"> & {
   isDismissible?: boolean;
   isKeyboardDismissible?: boolean;
   slotProps?: {
-    closeButton?: Partial<ButtonProps>;
+    closeButton?: Partial<IconButtonProps>;
   };
 };
 

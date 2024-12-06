@@ -1,4 +1,4 @@
-import { Button } from "@jamsr-ui/button";
+import { IconButton } from "@jamsr-ui/icon-button";
 import { EditorIcon } from "./Icon";
 import type { IconTypes } from "./Icon/icons";
 
@@ -17,8 +17,8 @@ export default function ToolbarItem({
   isDisabled?: () => boolean;
 }) {
   return (
-    <Button
-      isIconOnly
+    <IconButton
+      label={title!}
       onClick={onClick}
       title={title}
       aria-label={title}
@@ -29,6 +29,6 @@ export default function ToolbarItem({
       type="button"
     >
       <EditorIcon name={icon} />
-    </Button>
+    </IconButton>
   );
 }

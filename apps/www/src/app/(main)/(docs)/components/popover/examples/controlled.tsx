@@ -1,7 +1,7 @@
 "use client";
 
 import { useDisclosure } from "@jamsr-ui/hooks";
-import { Button, Popover, Typography } from "@jamsr-ui/react";
+import { Button, IconButton, Popover, Typography } from "@jamsr-ui/react";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
 
 export const PopoverControlled = () => {
@@ -12,9 +12,9 @@ export const PopoverControlled = () => {
         isOpen={isOpen}
         onOpenChange={setIsOpen}
         trigger={
-          <Button isIconOnly>
+          <IconButton label="Popover Trigger">
             <InfoIcon />
-          </Button>
+          </IconButton>
         }
         className="p-2"
         showArrow

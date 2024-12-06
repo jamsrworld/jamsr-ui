@@ -1,5 +1,33 @@
 # @jamsr-ui/select
 
+## 0.0.93
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.74
+  - @jamsr-ui/button@0.0.77
+  - @jamsr-ui/chip@0.0.83
+  - @jamsr-ui/shared-icons@0.0.61
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/hooks@0.0.49
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.92
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.73
+  - @jamsr-ui/button@0.0.76
+  - @jamsr-ui/chip@0.0.82
+  - @jamsr-ui/shared-icons@0.0.60
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/hooks@0.0.48
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.91
 
 ### Patch Changes

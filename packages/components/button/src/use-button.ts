@@ -12,7 +12,7 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import { useCallback, useMemo } from "react";
-import { button, type ButtonVariantProps } from "./style";
+import { button, type ButtonVariantProps } from "./styles";
 
 type Props = UIProps<"button"> & {
   startContent?: React.ReactNode;
@@ -41,7 +41,6 @@ export const useButton = ($props: UseButtonProps) => {
     isDisabled: $isDisabled = false,
     color,
     size,
-    isIconOnly,
     spinnerPlacement = "start",
     fullWidth,
     isRounded,
@@ -71,22 +70,12 @@ export const useButton = ($props: UseButtonProps) => {
         size,
         color,
         className,
-        isIconOnly,
         fullWidth,
         isRounded,
         variant,
         disableAnimation,
       }),
-    [
-      size,
-      color,
-      className,
-      isIconOnly,
-      fullWidth,
-      isRounded,
-      variant,
-      disableAnimation,
-    ],
+    [size, color, className, fullWidth, isRounded, variant, disableAnimation],
   );
 
   const getButtonProps: PropGetter = useCallback(() => {
@@ -109,7 +98,6 @@ export const useButton = ($props: UseButtonProps) => {
     startContent,
     endContent,
     isLoading,
-    isIconOnly,
     spinnerPlacement,
     isDisabled,
     disableRipple,

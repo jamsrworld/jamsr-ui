@@ -1,5 +1,27 @@
 # @jamsr-ui/stepper
 
+## 0.0.10
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.61
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/hooks@0.0.49
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.9
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.60
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/hooks@0.0.48
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.8
 
 ### Patch Changes

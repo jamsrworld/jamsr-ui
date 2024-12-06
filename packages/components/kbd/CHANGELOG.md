@@ -1,5 +1,23 @@
 # @jamsr-ui/kbd
 
+## 0.0.7
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.6
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.5
 
 ### Patch Changes

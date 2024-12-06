@@ -1,5 +1,23 @@
 # @jamsr-ui/table
 
+## 0.0.51
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.50
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.49
 
 ### Patch Changes

@@ -1,5 +1,25 @@
 # @jamsr-ui/card
 
+## 0.0.83
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.78
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.82
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.77
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.81
 
 ### Patch Changes

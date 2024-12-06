@@ -7,7 +7,7 @@ export type UseRippleOptions = {
 };
 
 export const useRipple = <T extends HTMLElement>(
-  ref: React.RefObject<T>,
+  ref: React.RefObject<T | null>,
   options: UseRippleOptions = {},
 ) => {
   const [ripples, setRipples] = useState<

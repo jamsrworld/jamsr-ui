@@ -35,6 +35,7 @@ export const ImageUploadComponent = ({
   };
 
   return (
+    // @ts-expect-error TypeError
     <NodeViewWrapper>
       <div className="m-0 p-0" data-drag-handle>
         {/* <FileUploadSingle

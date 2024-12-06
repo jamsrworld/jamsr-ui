@@ -1,5 +1,29 @@
 # @jamsr-ui/tags-input
 
+## 0.0.34
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/input@0.0.97
+  - @jamsr-ui/chip@0.0.83
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/hooks@0.0.49
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.33
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/input@0.0.96
+  - @jamsr-ui/chip@0.0.82
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/hooks@0.0.48
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.32
 
 ### Patch Changes

@@ -10,6 +10,7 @@ import {
   DialogBody,
   DialogContent,
   DialogHeader,
+  IconButton,
   Input,
   Kbd,
 } from "@jamsr-ui/react";
@@ -85,15 +86,15 @@ export const SearchBar = () => {
               autoComplete="off"
               endContent={
                 search.length > 0 ? (
-                  <Button
+                  <IconButton
+                    label="Clear Search"
                     onClick={onClearSearch}
-                    isIconOnly
                     size="sm"
                     isRounded
                     variant="light"
                   >
                     <CloseIcon />
-                  </Button>
+                  </IconButton>
                 ) : null
               }
             />

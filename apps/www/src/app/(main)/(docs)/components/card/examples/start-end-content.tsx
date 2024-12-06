@@ -1,10 +1,10 @@
 import { DotMenuIcon } from "@/components/icons";
 import {
   Avatar,
-  Button,
   Card,
   CardContent,
   CardHeader,
+  IconButton,
   Typography,
 } from "@jamsr-ui/react";
 import Image from "next/image";
@@ -31,9 +31,9 @@ export const CardStartEndContent = () => {
         heading="Card Header"
         startContent={<AvatarItem />}
         endContent={
-          <Button isIconOnly isRounded variant="light">
+          <IconButton label="More" isRounded variant="light">
             <DotMenuIcon />
-          </Button>
+          </IconButton>
         }
         subHeading="22 December 2024"
       />

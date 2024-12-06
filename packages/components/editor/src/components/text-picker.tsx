@@ -1,4 +1,4 @@
-import { Button } from "@jamsr-ui/button";
+import { IconButton } from "@jamsr-ui/icon-button";
 import { Menu, MenuItem } from "@jamsr-ui/menu";
 import type { Editor } from "@tiptap/react";
 import { useTextTypes } from "../hooks/use-text-menu-types";
@@ -19,15 +19,15 @@ export const TextPicker = (props: Props) => {
   return (
     <Menu
       trigger={
-        <Button
+        <IconButton
+          label="Text Picker"
           disabled={isDisabled}
-          isIconOnly
           size="sm"
           type="button"
           variant="light"
         >
           <EditorIcon name={activeItem?.icon ?? "paragraph"} />
-        </Button>
+        </IconButton>
       }
       classNames={{
         popover: "!z-[999]",

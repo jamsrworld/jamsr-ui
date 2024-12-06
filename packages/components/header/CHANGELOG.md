@@ -1,5 +1,25 @@
 # @jamsr-ui/header
 
+## 0.0.78
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.72
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.77
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.71
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.76
 
 ### Patch Changes

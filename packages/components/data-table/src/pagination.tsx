@@ -1,4 +1,4 @@
-import { Button } from "@jamsr-ui/button";
+import { IconButton } from "@jamsr-ui/icon-button";
 import { Select, SelectItem } from "@jamsr-ui/select";
 import {
   ChevronDoubleLeftIcon,
@@ -63,8 +63,8 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           {table.getPageCount()}
         </div>
         <div className="flex items-center">
-          <Button
-            isIconOnly
+          <IconButton
+            label="First Page"
             onClick={onFirstPage}
             isDisabled={!table.getCanPreviousPage()}
             size="sm"
@@ -73,9 +73,9 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           >
             <span className="sr-only">Go to first page</span>
             <ChevronDoubleLeftIcon width={20} height={20} />
-          </Button>
-          <Button
-            isIconOnly
+          </IconButton>
+          <IconButton
+            label="Previous Page"
             onClick={onPrevious}
             isDisabled={!table.getCanPreviousPage()}
             size="sm"
@@ -84,9 +84,9 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           >
             <span className="sr-only">Go to previous page</span>
             <ChevronLeftIcon width={20} height={20} />
-          </Button>
-          <Button
-            isIconOnly
+          </IconButton>
+          <IconButton
+            label="Next Page"
             onClick={onNext}
             isDisabled={!table.getCanNextPage()}
             size="sm"
@@ -95,9 +95,9 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           >
             <span className="sr-only">Go to next page</span>
             <ChevronRightIcon width={20} height={20} />
-          </Button>
-          <Button
-            isIconOnly
+          </IconButton>
+          <IconButton
+            label="Last Page"
             onClick={onEnd}
             isDisabled={!table.getCanNextPage()}
             size="sm"
@@ -106,7 +106,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           >
             <span className="sr-only">Go to last page</span>
             <ChevronDoubleRightIcon width={20} height={20} />
-          </Button>
+          </IconButton>
         </div>
       </div>
     </div>

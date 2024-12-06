@@ -1,0 +1,30 @@
+{
+  "name": "@jamsr-ui/icon-button",
+  "version": "0.0.2",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "devDependencies": {
+    "@jamsr-ui/shared-icons": "workspace:^",
+    "@types/react": "19.0.1",
+    "clean-package": "^2.2.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "peerDependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "dependencies": {
+    "@jamsr-ui/hooks": "workspace:^",
+    "@jamsr-ui/circular-progress": "workspace:^",
+    "@jamsr-ui/ripple": "workspace:^",
+    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/utils": "workspace:^"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

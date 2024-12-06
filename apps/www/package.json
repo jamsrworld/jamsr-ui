@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.180",
+  "version": "0.1.182",
   "private": true,
   "type": "module",
   "scripts": {
@@ -32,8 +32,8 @@
     "highlight.js": "^11.10.0",
     "next": "15.0.3",
     "prism-react-renderer": "^2.4.0",
-    "react": "19.0.0-rc-603e6108-20241029",
-    "react-dom": "19.0.0-rc-603e6108-20241029",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-hook-form": "^7.53.1",
     "zod": "^3.23.8"
   },
@@ -41,8 +41,8 @@
     "@jamsr-ui/eslint-config": "workspace:^",
     "@types/node": "22.8.1",
     "@types/prismjs": "^1.26.5",
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.1",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
     "eslint-config-next": "15.0.1",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.38",

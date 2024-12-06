@@ -1,4 +1,4 @@
-import { Button } from "@jamsr-ui/button";
+import { IconButton } from "@jamsr-ui/icon-button";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
 import { Typography } from "@jamsr-ui/typography";
 import { type Meta, type StoryObj } from "@storybook/react";
@@ -16,9 +16,9 @@ const Template = (props: Partial<PopoverProps>) => {
     <div className="grid min-h-[120px] place-content-center">
       <Popover
         trigger={
-          <Button isIconOnly>
+          <IconButton label="Popover Trigger">
             <InfoIcon />
-          </Button>
+          </IconButton>
         }
         className="p-2"
         {...props}

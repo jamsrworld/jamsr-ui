@@ -25,7 +25,7 @@ import { cloneElement, useRef } from "react";
 
 export type PopoverProps = {
   children: React.ReactNode;
-  trigger: JSX.Element;
+  trigger: React.JSX.Element;
   initialOpen?: boolean;
   placement?: Placement;
   isModal?: boolean;

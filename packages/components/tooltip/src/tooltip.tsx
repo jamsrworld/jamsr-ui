@@ -21,7 +21,7 @@ import { cloneElement, useRef, useState } from "react";
 
 export type TooltipProps = {
   title: string;
-  children: JSX.Element;
+  children: React.JSX.Element;
   placement?: Placement;
   enabled?: boolean;
   offset?: number;

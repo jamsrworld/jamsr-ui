@@ -1,5 +1,27 @@
 # @jamsr-ui/switch
 
+## 0.0.81
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.78
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/hooks@0.0.49
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.80
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.77
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/hooks@0.0.48
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.79
 
 ### Patch Changes

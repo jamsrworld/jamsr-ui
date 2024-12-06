@@ -1,23 +1,27 @@
 "use client";
 
-import { Button, TagsInput } from "@jamsr-ui/react";
+import { IconButton, TagsInput } from "@jamsr-ui/react";
 import { TrashIcon } from "@jamsr-ui/shared-icons";
 import { useState } from "react";
 
 export const TagsInputControlled = () => {
-  const [tags, setTags] = useState<Set<string>>(new Set([]));
+  const [tags, setTags] = useState<string[]>([]);
   const handleClearValue = () => {
-    setTags(new Set([]));
+    setTags([]);
   };
   return (
     <TagsInput
       value={tags}
       onValueChange={setTags}
-      helperText={`Tags are ${[...tags]}`}
+      helperText={`Tags are ${tags.join(",")}`}
       endContent={
-        <Button isIconOnly color="danger" onClick={handleClearValue}>
+        <IconButton
+          label="Clear Value"
+          color="danger"
+          onClick={handleClearValue}
+        >
           <TrashIcon />
-        </Button>
+        </IconButton>
       }
     />
   );

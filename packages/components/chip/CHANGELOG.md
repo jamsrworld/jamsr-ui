@@ -1,5 +1,27 @@
 # @jamsr-ui/chip
 
+## 0.0.83
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/button@0.0.77
+  - @jamsr-ui/shared-icons@0.0.61
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.82
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/button@0.0.76
+  - @jamsr-ui/shared-icons@0.0.60
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.81
 
 ### Patch Changes

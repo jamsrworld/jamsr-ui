@@ -1,5 +1,45 @@
 # @jamsr-ui/editor
 
+## 0.0.102
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.97
+  - @jamsr-ui/icon-button@0.0.2
+  - @jamsr-ui/repeater@0.0.39
+  - @jamsr-ui/divider@0.0.72
+  - @jamsr-ui/popover@0.0.74
+  - @jamsr-ui/select@0.0.93
+  - @jamsr-ui/switch@0.0.81
+  - @jamsr-ui/input@0.0.97
+  - @jamsr-ui/menu@0.0.92
+  - @jamsr-ui/shared-icons@0.0.61
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/hooks@0.0.49
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.101
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.96
+  - @jamsr-ui/icon-button@0.0.1
+  - @jamsr-ui/repeater@0.0.38
+  - @jamsr-ui/divider@0.0.71
+  - @jamsr-ui/popover@0.0.73
+  - @jamsr-ui/select@0.0.92
+  - @jamsr-ui/switch@0.0.80
+  - @jamsr-ui/input@0.0.96
+  - @jamsr-ui/menu@0.0.91
+  - @jamsr-ui/shared-icons@0.0.60
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/hooks@0.0.48
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.100
 
 ### Patch Changes

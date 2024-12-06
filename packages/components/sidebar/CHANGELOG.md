@@ -1,5 +1,25 @@
 # @jamsr-ui/sidebar
 
+## 0.0.79
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.61
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.78
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.60
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.77
 
 ### Patch Changes

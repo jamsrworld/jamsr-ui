@@ -6,7 +6,6 @@ import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { ButtonColors } from "./examples/colors";
 import { ButtonDisabled } from "./examples/disabled";
-import { ButtonIconButton } from "./examples/icon-button";
 import { ButtonLoading } from "./examples/loading";
 import { ButtonSizes } from "./examples/sizes";
 import { ButtonUsage } from "./examples/usage";
@@ -90,18 +89,6 @@ const Button = () => {
         }
       >
         <ButtonWithIcons />
-      </VariantWrapper>
-      <VariantWrapper
-        heading="Icon Button"
-        code={code("icon-button")}
-        description={
-          <div>
-            Use the <Code>isIconOnly</Code> prop to display an icon without text
-            on the Button.
-          </div>
-        }
-      >
-        <ButtonIconButton />
       </VariantWrapper>
       <VariantWrapper
         heading="Loading"

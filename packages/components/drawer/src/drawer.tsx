@@ -8,12 +8,11 @@ import {
   useInteractions,
   useRole,
 } from "@floating-ui/react";
-import { type ButtonProps } from "@jamsr-ui/button";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { MotionDiv } from "@jamsr-ui/motion";
+import { type IconButtonProps } from "@jamsr-ui/icon-button";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { type ComponentProps, useMemo, useState } from "react";
 import { DrawerCloseButton } from "./drawer-close-btn";
 import { motionDrawerVariants } from "./motion";
@@ -27,12 +26,12 @@ export type DrawerProps = DrawerVariants & {
   className?: string;
   defaultOpen?: boolean;
   classNames?: SlotsToClasses<DrawerSlots>;
-  motionProps?: Partial<ComponentProps<typeof MotionDiv>>;
+  motionProps?: Partial<ComponentProps<typeof m.div>>;
   closeButton?: React.ReactNode;
   isDismissible?: boolean;
   isKeyboardDismissible?: boolean;
   slotProps?: {
-    closeButton?: Partial<ButtonProps>;
+    closeButton?: Partial<IconButtonProps>;
   };
 };
 
@@ -124,7 +123,7 @@ export const Drawer = ($props: DrawerProps) => {
                 disabled={isAnimating}
                 modal
               >
-                <MotionDiv
+                <m.div
                   variants={motionDrawerVariants}
                   key="modal"
                   initial="initial"
@@ -153,7 +152,7 @@ export const Drawer = ($props: DrawerProps) => {
                         ))}
                     {children}
                   </DrawerProvider>
-                </MotionDiv>
+                </m.div>
               </FloatingFocusManager>
             </FloatingOverlay>
           </FloatingPortal>

@@ -1,5 +1,31 @@
 # @jamsr-ui/confirmation
 
+## 0.0.66
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.78
+  - @jamsr-ui/divider@0.0.72
+  - @jamsr-ui/button@0.0.77
+  - @jamsr-ui/dialog@0.0.86
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.65
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.77
+  - @jamsr-ui/divider@0.0.71
+  - @jamsr-ui/button@0.0.76
+  - @jamsr-ui/dialog@0.0.85
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.64
 
 ### Patch Changes

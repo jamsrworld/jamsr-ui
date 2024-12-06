@@ -1,5 +1,25 @@
 # @jamsr-ui/popover
 
+## 0.0.74
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/hooks@0.0.49
+  - @jamsr-ui/utils@0.0.66
+
+## 0.0.73
+
+### Patch Changes
+
+- react 19
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/hooks@0.0.48
+  - @jamsr-ui/utils@0.0.65
+
 ## 0.0.72
 
 ### Patch Changes

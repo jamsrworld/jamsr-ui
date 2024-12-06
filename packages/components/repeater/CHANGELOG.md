@@ -1,5 +1,17 @@
 # @jamsr-ui/repeater
 
+## 0.0.39
+
+### Patch Changes
+
+- react 19
+
+## 0.0.38
+
+### Patch Changes
+
+- react 19
+
 ## 0.0.37
 
 ### Patch Changes

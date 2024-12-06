@@ -19,6 +19,7 @@ export * from "@jamsr-ui/editor";
 export * from "@jamsr-ui/file-upload-multi";
 export * from "@jamsr-ui/file-upload-single";
 export * from "@jamsr-ui/header";
+export * from "@jamsr-ui/icon-button";
 export * from "@jamsr-ui/input";
 export * from "@jamsr-ui/kbd";
 export * from "@jamsr-ui/linear-progress";

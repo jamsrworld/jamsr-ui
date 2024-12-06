@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/rating",
-  "version": "0.0.30",
+  "version": "0.0.32",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"
@@ -22,12 +22,12 @@
   ],
   "devDependencies": {
     "@jamsr-ui/utils": "workspace:^",
-    "@types/react": "^18.3.3",
+    "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": "19.0.0-rc-603e6108-20241029"
+    "react": "19.0.0"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-603e6108-20241029"
+    "react": "19.0.0"
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {

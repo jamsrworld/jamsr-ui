@@ -34,18 +34,6 @@ export const WithIcons: Story = {
   },
 };
 
-export const IconButton: Story = {
-  args: {
-    children: <InfoIcon />,
-    isIconOnly: true,
-  },
-  parameters: {
-    controls: {
-      exclude: [],
-    },
-  },
-};
-
 export const Loading: Story = {
   args: { isLoading: true, children: "Submit" },
 };

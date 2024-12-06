@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, Button } from "@jamsr-ui/react";
+import { Accordion, AccordionItem, Button, IconButton } from "@jamsr-ui/react";
 import { TrashIcon } from "@jamsr-ui/shared-icons";
 
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -11,9 +11,9 @@ export const AccordionEndContentOutside = () => {
         heading="Accordion 1"
         subheading="Press to expand item 1"
         endContent={
-          <Button variant="outlined" color="danger" isIconOnly>
+          <IconButton label="Delete" variant="outlined" color="danger">
             <TrashIcon />
-          </Button>
+          </IconButton>
         }
         endContentPlacement="outside"
       >
@@ -23,9 +23,9 @@ export const AccordionEndContentOutside = () => {
         heading="Accordion 2"
         subheading="Press to expand item 2"
         endContent={
-          <Button variant="outlined" color="danger" isIconOnly>
+          <IconButton label="Delete" variant="outlined" color="danger">
             <TrashIcon />
-          </Button>
+          </IconButton>
         }
         endContentPlacement="outside"
       >
@@ -36,9 +36,9 @@ export const AccordionEndContentOutside = () => {
         heading="Disabled Accordion"
         subheading="Press to expand item 3"
         endContent={
-          <Button variant="outlined" color="danger" isIconOnly>
+          <IconButton label="Delete" variant="outlined" color="danger">
             <TrashIcon />
-          </Button>
+          </IconButton>
         }
         endContentPlacement="outside"
       >

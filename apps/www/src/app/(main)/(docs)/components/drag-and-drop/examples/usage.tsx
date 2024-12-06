@@ -5,7 +5,7 @@ import {
   Card,
   CardContent,
   Sortable,
-  SortableItemProps,
+  type SortableItemProps,
 } from "@jamsr-ui/react";
 import { useState } from "react";
 
@@ -75,7 +75,7 @@ const Item = (props: ItemProps) => {
     isDisabled,
   } = props;
   return (
-    <div className="relative group">
+    <div className="group relative">
       <div
         suppressHydrationWarning
         ref={setNodeRef}
@@ -96,8 +96,7 @@ const Item = (props: ItemProps) => {
         />
       </div>
       <Button
-        className="absolute top-2 left-2 hidden group-hover:flex"
-        isIconOnly
+        className="absolute left-2 top-2 hidden group-hover:flex"
         size="sm"
         ref={setActivatorNodeRef}
         isDisabled={isDisabled}
@@ -107,7 +106,7 @@ const Item = (props: ItemProps) => {
           <path
             fill="currentColor"
             d="M7 2a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 2zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 8zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 14zm6-8a2 2 0 1 0-.001-4.001A2 2 0 0 0 13 6zm0 2a2 2 0 1 0 .001 4.001A2 2 0 0 0 13 8zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 13 14z"
-          ></path>
+          />
         </svg>
       </Button>
     </div>
@@ -123,7 +122,7 @@ export const DndGrid = (props: Props) => {
   const [items, setItems] = useState<SortItem[]>(defaultItems);
   return (
     <Card>
-      <CardContent className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+      <CardContent className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <Sortable items={items} setItems={setItems} isDisabled={isDisabled}>
           {(props) => <Item {...props} />}
         </Sortable>

@@ -1,9 +1,9 @@
-import { Button, type ButtonProps } from "@jamsr-ui/button";
+import { IconButton, type IconButtonProps } from "@jamsr-ui/icon-button";
 import { CloseIcon } from "@jamsr-ui/shared-icons";
 import { cn } from "@jamsr-ui/utils";
 import { useDrawerContext } from "./use-drawer-context";
 
-export const DrawerCloseButton = ($props: Partial<ButtonProps>) => {
+export const DrawerCloseButton = ($props: Partial<IconButtonProps>) => {
   const props = $props;
   const { className: $className, ...restProps } = props;
   const { styles, classNames, slotProps = {} } = useDrawerContext();
@@ -15,8 +15,8 @@ export const DrawerCloseButton = ($props: Partial<ButtonProps>) => {
     ),
   });
   return (
-    <Button
-      isIconOnly
+    <IconButton
+      label="Close"
       variant="light"
       isRounded
       {...slotProps.closeButton}
@@ -24,6 +24,6 @@ export const DrawerCloseButton = ($props: Partial<ButtonProps>) => {
       className={className}
     >
       <CloseIcon />
-    </Button>
+    </IconButton>
   );
 };

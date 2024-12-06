@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, toast } from "@jamsr-ui/react";
+import { IconButton, toast } from "@jamsr-ui/react";
 import { useState } from "react";
 
 const CopyIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -73,8 +73,8 @@ export const CopyToClipboard = (props: Props) => {
   };
   return (
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
-    <Button size="sm" isIconOnly onClick={handleClick}>
+    <IconButton size="sm" label="Copy To Clipboard" onClick={handleClick}>
       {isCopied ? <CheckIcon /> : <CopyIcon />}
-    </Button>
+    </IconButton>
   );
 };

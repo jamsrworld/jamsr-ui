@@ -216,6 +216,18 @@ export const sidebarItems: {
         heading: "Slider",
         path: "/components/slider",
       },
+      {
+        heading: "Sidebar",
+        path: "/components/sidebar",
+      },
+      {
+        heading: "Number Input",
+        path: "/components/number-input",
+      },
+      {
+        heading: "Empty Content",
+        path: "/components/empty-content",
+      },
     ],
   },
   // {

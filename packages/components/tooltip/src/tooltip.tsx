@@ -115,7 +115,7 @@ export const Tooltip = ($props: TooltipProps) => {
             style={floatingStyles}
             {...getFloatingProps()}
             className={cn(
-              "z-popover inline-block rounded-lg bg-content1 px-3 py-1.5 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300",
+              "z-popover inline-block rounded-lg bg-content1 px-3 py-1 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300",
               className,
               classNames?.base,
             )}

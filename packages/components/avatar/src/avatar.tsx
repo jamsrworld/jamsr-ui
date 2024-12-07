@@ -52,6 +52,7 @@ export const Avatar = ($props: AvatarProps) => {
     const url =
       typeof fallback === "function" ? fallback({ alt, name }) : fallback;
     if (url) setImgSrc(url);
+    else setImgSrc(null);
   };
 
   return (

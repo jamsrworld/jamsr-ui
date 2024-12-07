@@ -51,18 +51,20 @@ export const RenderController = <
     preview: getFileUrlAfterUpload(item.response),
     progress: "COMPLETE",
   }));
-
   const uploadsRef =
     useRef<{ id: string; response: Record<string, string> }[]>(uploadsDefault);
   const [stateValue, setStateValue] =
     useState<FileUploadMultiState[]>(defaultState);
 
   useEffect(() => {
-    const finalValue = uploadsRef.current
-      .filter(
-        (item) => stateValue.findIndex((value) => value.id === item.id) >= 0,
-      )
-      .map((item) => item.response);
+    const finalValue = stateValue
+      .map((item) => {
+        const upload = uploadsRef.current.find((upload) => {
+          return upload.id === item.id;
+        });
+        return upload?.response;
+      })
+      .filter(Boolean);
     onChange(finalValue);
   }, [stateValue, onChange]);
 

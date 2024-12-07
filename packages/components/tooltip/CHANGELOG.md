@@ -1,5 +1,11 @@
 # @jamsr-ui/tooltip
 
+## 0.0.71
+
+### Patch Changes
+
+- fix avatar
+
 ## 0.0.70
 
 ### Patch Changes

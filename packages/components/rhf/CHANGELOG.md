@@ -1,5 +1,13 @@
 # @jamsr-ui/rhf
 
+## 0.0.48
+
+### Patch Changes
+
+- fix avatar
+  - @jamsr-ui/select@0.0.95
+  - @jamsr-ui/tags-input@0.0.36
+
 ## 0.0.47
 
 ### Patch Changes

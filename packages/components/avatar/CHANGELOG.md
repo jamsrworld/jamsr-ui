@@ -1,5 +1,11 @@
 # @jamsr-ui/avatar
 
+## 0.0.74
+
+### Patch Changes
+
+- fix avatar
+
 ## 0.0.73
 
 ### Patch Changes

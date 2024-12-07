@@ -1,5 +1,12 @@
 # web
 
+## 0.1.185
+
+### Patch Changes
+
+- fix avatar
+  - @jamsr-ui/react@0.0.203
+
 ## 0.1.184
 
 ### Patch Changes

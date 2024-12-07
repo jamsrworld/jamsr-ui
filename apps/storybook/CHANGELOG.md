@@ -1,5 +1,11 @@
 # @ui/storybook
 
+## 0.0.204
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.202
+
 ## 0.0.203
 
 ### Patch Changes

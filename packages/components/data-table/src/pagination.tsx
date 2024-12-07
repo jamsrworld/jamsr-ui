@@ -67,7 +67,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
         </div>
         <div className="flex items-center">
           <IconButton
-            label="First Page"
+            aria-label="First Page"
             onClick={onFirstPage}
             isDisabled={!table.getCanPreviousPage()}
             size="sm"
@@ -78,7 +78,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             <ChevronDoubleLeftIcon width={20} height={20} />
           </IconButton>
           <IconButton
-            label="Previous Page"
+            aria-label="Previous Page"
             onClick={onPrevious}
             isDisabled={!table.getCanPreviousPage()}
             size="sm"
@@ -89,7 +89,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             <ChevronLeftIcon width={20} height={20} />
           </IconButton>
           <IconButton
-            label="Next Page"
+            aria-label="Next Page"
             onClick={onNext}
             isDisabled={!table.getCanNextPage()}
             size="sm"
@@ -100,7 +100,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             <ChevronRightIcon width={20} height={20} />
           </IconButton>
           <IconButton
-            label="Last Page"
+            aria-label="Last Page"
             onClick={onEnd}
             isDisabled={!table.getCanNextPage()}
             size="sm"

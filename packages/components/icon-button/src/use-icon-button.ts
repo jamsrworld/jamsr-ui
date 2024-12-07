@@ -20,7 +20,7 @@ type Props = UIProps<"button"> & {
   disableRipple?: boolean;
   disableAnimation?: boolean;
   ref?: React.Ref<HTMLButtonElement>;
-  label: string;
+  "aria-label": string;
 };
 
 export type UseIconButtonProps = Props & ButtonVariantProps;
@@ -43,7 +43,7 @@ export const useIconButton = ($props: UseIconButtonProps) => {
     disableRipple,
     disableAnimation = false,
     ref: propRef,
-    label,
+    "aria-label": ariaLabel,
     ...restProps
   } = props;
 
@@ -80,11 +80,11 @@ export const useIconButton = ($props: UseIconButtonProps) => {
       "aria-disabled": dataAttr(isDisabled),
       "data-pressed": dataAttr(isPressed),
       "data-hovered": dataAttr(isHovered),
-      "aria-label": label,
+      "aria-label": ariaLabel,
       type,
       ref,
     };
-  }, [restProps, isDisabled, isPressed, isHovered, label, type, ref]);
+  }, [restProps, isDisabled, isPressed, isHovered, ariaLabel, type, ref]);
 
   return {
     Component,

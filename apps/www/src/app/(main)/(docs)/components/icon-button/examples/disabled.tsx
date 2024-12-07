@@ -3,7 +3,7 @@ import { EmailIcon } from "@jamsr-ui/shared-icons";
 
 export const IconButtonDisabled = () => {
   return (
-    <IconButton label="Disabled Icon Button" isDisabled>
+    <IconButton aria-label="Disabled Icon Button" isDisabled>
       <EmailIcon />
     </IconButton>
   );

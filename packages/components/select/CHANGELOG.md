@@ -1,5 +1,12 @@
 # @jamsr-ui/select
 
+## 0.0.95
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.75
+
 ## 0.0.94
 
 ### Patch Changes

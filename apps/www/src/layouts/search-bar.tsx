@@ -87,7 +87,7 @@ export const SearchBar = () => {
               endContent={
                 search.length > 0 ? (
                   <IconButton
-                    label="Clear Search"
+                    aria-label="Clear Search"
                     onClick={onClearSearch}
                     size="sm"
                     isRounded

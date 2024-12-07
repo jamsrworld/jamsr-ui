@@ -1,5 +1,12 @@
 # web
 
+## 0.1.184
+
+### Patch Changes
+
+- fix icon button
+  - @jamsr-ui/react@0.0.202
+
 ## 0.1.183
 
 ### Patch Changes

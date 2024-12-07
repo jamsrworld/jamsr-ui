@@ -1,5 +1,11 @@
 # @jamsr-ui/tooltip
 
+## 0.0.70
+
+### Patch Changes
+
+- fix icon button
+
 ## 0.0.69
 
 ### Patch Changes

@@ -18,10 +18,9 @@ export default function ToolbarItem({
 }) {
   return (
     <IconButton
-      label={title!}
+      aria-label={title!}
       onClick={onClick}
       title={title}
-      aria-label={title}
       size="sm"
       variant={isActive() ? "solid" : "light"}
       disabled={isDisabled?.()}

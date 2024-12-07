@@ -11,19 +11,19 @@ export const DividerOrientation = () => {
       <div className="contents">
         <h3 className="text-base">Vertical</h3>
         <div className="flex gap-2">
-          <IconButton label="Edit">
+          <IconButton aria-label="Edit">
             <EmailIcon />
           </IconButton>
           <Divider orientation="vertical" />
-          <IconButton label="Edit">
+          <IconButton aria-label="Edit">
             <EmailIcon />
           </IconButton>
           <Divider orientation="vertical" />
-          <IconButton label="Edit">
+          <IconButton aria-label="Edit">
             <EmailIcon />
           </IconButton>
           <Divider orientation="vertical" />
-          <IconButton label="Edit">
+          <IconButton aria-label="Edit">
             <EmailIcon />
           </IconButton>
         </div>

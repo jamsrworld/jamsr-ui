@@ -1,5 +1,11 @@
 # @jamsr-ui/popover
 
+## 0.0.75
+
+### Patch Changes
+
+- fix icon button
+
 ## 0.0.74
 
 ### Patch Changes

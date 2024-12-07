@@ -16,7 +16,7 @@ const Template = (props: Partial<PopoverProps>) => {
     <div className="grid min-h-[120px] place-content-center">
       <Popover
         trigger={
-          <IconButton label="Popover Trigger">
+          <IconButton aria-label="Popover Trigger">
             <InfoIcon />
           </IconButton>
         }

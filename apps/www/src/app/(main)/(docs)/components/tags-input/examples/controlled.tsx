@@ -16,7 +16,7 @@ export const TagsInputControlled = () => {
       helperText={`Tags are ${tags.join(",")}`}
       endContent={
         <IconButton
-          label="Clear Value"
+          aria-label="Clear Value"
           color="danger"
           onClick={handleClearValue}
         >

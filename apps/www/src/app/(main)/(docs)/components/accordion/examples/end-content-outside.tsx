@@ -11,7 +11,7 @@ export const AccordionEndContentOutside = () => {
         heading="Accordion 1"
         subheading="Press to expand item 1"
         endContent={
-          <IconButton label="Delete" variant="outlined" color="danger">
+          <IconButton aria-label="Delete" variant="outlined" color="danger">
             <TrashIcon />
           </IconButton>
         }
@@ -23,7 +23,7 @@ export const AccordionEndContentOutside = () => {
         heading="Accordion 2"
         subheading="Press to expand item 2"
         endContent={
-          <IconButton label="Delete" variant="outlined" color="danger">
+          <IconButton aria-label="Delete" variant="outlined" color="danger">
             <TrashIcon />
           </IconButton>
         }
@@ -36,7 +36,7 @@ export const AccordionEndContentOutside = () => {
         heading="Disabled Accordion"
         subheading="Press to expand item 3"
         endContent={
-          <IconButton label="Delete" variant="outlined" color="danger">
+          <IconButton aria-label="Delete" variant="outlined" color="danger">
             <TrashIcon />
           </IconButton>
         }

@@ -1,5 +1,14 @@
 # @jamsr-ui/data-table
 
+## 0.0.64
+
+### Patch Changes
+
+- fix icon button
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.3
+  - @jamsr-ui/select@0.0.95
+
 ## 0.0.63
 
 ### Patch Changes

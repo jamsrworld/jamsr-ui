@@ -31,7 +31,7 @@ export const CardStartEndContent = () => {
         heading="Card Header"
         startContent={<AvatarItem />}
         endContent={
-          <IconButton label="More" isRounded variant="light">
+          <IconButton aria-label="More" isRounded variant="light">
             <DotMenuIcon />
           </IconButton>
         }

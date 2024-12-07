@@ -6,7 +6,7 @@ export const IconButtonSizes = () => {
   return (
     <div className="flex items-center gap-4">
       {sizes.map((size) => (
-        <IconButton label={`${size} Size IconButton`} key={size} size={size}>
+        <IconButton aria-label={`${size} Size IconButton`} key={size} size={size}>
           <EmailIcon />
         </IconButton>
       ))}

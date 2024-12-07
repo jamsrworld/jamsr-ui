@@ -13,7 +13,7 @@ export const IconButtonVariants = () => {
     <div className="flex flex-wrap gap-4">
       {variants.map((variant) => (
         <IconButton
-          label={`${variant} Icon Button`}
+          aria-label={`${variant} Icon Button`}
           color="primary"
           key={variant}
           variant={variant}

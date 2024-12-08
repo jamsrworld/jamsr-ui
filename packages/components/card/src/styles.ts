@@ -1,8 +1,8 @@
-import { tv, type VariantProps } from "@jamsr-ui/utils";
+import { radiusBaseVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const cardVariants = tv({
-  base: "relative overflow-hidden rounded-2xl transition-colors",
+  base: "relative overflow-hidden transition-colors",
   variants: {
     bg: {
       default: "bg-content1",
@@ -15,10 +15,12 @@ export const cardVariants = tv({
       outlined: "border border-divider-dark",
       elevated: "shadow-sm",
     },
+    radius: radiusBaseVariant,
   },
   defaultVariants: {
     bg: "default",
     variant: "solid",
+    radius: "md",
   },
 });
 

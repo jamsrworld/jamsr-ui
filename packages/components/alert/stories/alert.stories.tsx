@@ -2,7 +2,7 @@ import { Button } from "@jamsr-ui/button";
 import { CloseIcon } from "@jamsr-ui/shared-icons";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Alert, type AlertProps } from "../src/alert";
-import type { AlertVariantProps } from "../src/style";
+import type { AlertVariantProps } from "../src/styles";
 
 const meta: Meta<typeof Alert> = {
   title: "Components/Alert",

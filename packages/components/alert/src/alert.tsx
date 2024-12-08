@@ -7,7 +7,11 @@ import {
 } from "@jamsr-ui/utils";
 import { useCallback } from "react";
 import { Error, Info, Success, Warning } from "./icons";
-import { alertVariant, type AlertSlots, type AlertVariantProps } from "./style";
+import {
+  alertVariant,
+  type AlertSlots,
+  type AlertVariantProps,
+} from "./styles";
 
 export type AlertProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T, AlertVariantProps> & {
@@ -32,10 +36,11 @@ export const Alert = <T extends React.ElementType = "div">(
     variant,
     icon,
     classNames,
+    radius,
     ...restProps
   } = props;
 
-  const styles = alertVariant({ status, variant });
+  const styles = alertVariant({ status, variant, radius });
   const className = cn($className, classNames?.wrapper);
   const Component = as ?? "div";
 

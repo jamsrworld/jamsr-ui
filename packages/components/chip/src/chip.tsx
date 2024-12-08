@@ -3,7 +3,7 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs, SlotsToClasses } from "@jamsr-ui/utils";
 import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import React from "react";
-import { chip, type ChipSlots, type ChipVariantsProps } from "./style";
+import { chip, type ChipSlots, type ChipVariantsProps } from "./styles";
 
 export type ChipProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T> & {
@@ -27,6 +27,7 @@ export const Chip = <T extends React.ElementType = "div">(
     variant,
     classNames,
     isSquare,
+    radius,
     ...restProps
   } = props;
   const Comp = as ?? "div";
@@ -35,6 +36,7 @@ export const Chip = <T extends React.ElementType = "div">(
     size,
     variant,
     isSquare,
+    radius,
   });
   return (
     <Comp

@@ -52,8 +52,7 @@ const flatClasses = {
     "bg-success/20 text-success-600 dark:text-success ui-hover:bg-success/30",
   warning:
     "bg-warning/20 text-warning-600 dark:text-warning ui-hover:bg-warning/30",
-  danger:
-    "bg-danger/20 text-danger dark:text-danger-500 ui-hover:bg-danger/30",
+  danger: "bg-danger/20 text-danger dark:text-danger-500 ui-hover:bg-danger/30",
 };
 
 export const colorVariants = {
@@ -62,4 +61,28 @@ export const colorVariants = {
   text: textClasses,
   light: lightClasses,
   flat: flatClasses,
+};
+
+export const radiusBaseVariant = {
+  sm: "rounded",
+  md: "rounded-md",
+  lg: "rounded-lg",
+  xl: "rounded-xl",
+  "2xl": "rounded-2xl",
+  "3xl": "rounded-3xl",
+  full: "rounded-full",
+  none: "rounded-none",
+} as const;
+
+export const radiusVariant = (name: string) => {
+  return {
+    sm: { [name]: "rounded" },
+    md: { [name]: "rounded-md" },
+    lg: { [name]: "rounded-lg" },
+    xl: { [name]: "rounded-xl" },
+    "2xl": { [name]: "rounded-2xl" },
+    "3xl": { [name]: "rounded-3xl" },
+    full: { [name]: "rounded-full" },
+    none: { [name]: "rounded-none" },
+  };
 };

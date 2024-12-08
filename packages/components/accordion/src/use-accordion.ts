@@ -5,7 +5,7 @@ import {
   accordion,
   type AccordionGroupVariantProps,
   type AccordionItemVariantProps,
-} from "./style";
+} from "./styles";
 
 type Props = {
   className?: string;
@@ -28,7 +28,8 @@ export const useAccordion = ($props: UseAccordionProps) => {
     isMultiple = false,
     fullWidth,
     hideIndicator,
-    variant,
+    variant = "splitted",
+    radius = "md",
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -39,8 +40,9 @@ export const useAccordion = ($props: UseAccordionProps) => {
         className,
         fullWidth,
         variant,
+        radius,
       }),
-    [className, fullWidth, variant],
+    [className, fullWidth, radius, variant],
   );
 
   const getBaseProps = useCallback<PropGetter>(
@@ -62,5 +64,6 @@ export const useAccordion = ($props: UseAccordionProps) => {
     isMultiple,
     hideIndicator,
     variant,
+    radius,
   };
 };

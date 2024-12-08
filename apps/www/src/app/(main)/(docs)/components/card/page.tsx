@@ -7,6 +7,7 @@ import { type Metadata } from "next";
 import { CardStartEndContent } from "./examples/start-end-content";
 import { CardUsage } from "./examples/usage";
 import { CardVariants } from "./examples/variants";
+import { CardRadius } from "./examples/radius";
 
 const title = "Card";
 const description =
@@ -25,6 +26,9 @@ const Card = () => {
     <VariantPage heading={title} description={description}>
       <VariantWrapper bg="secondary" heading="Usage" code={code("usage")}>
         <CardUsage />
+      </VariantWrapper>
+      <VariantWrapper bg="secondary" heading="Radius" code={code("radius")}>
+        <CardRadius />
       </VariantWrapper>
       <VariantWrapper
         bg="secondary"

@@ -43,10 +43,20 @@ const baseVariant = tv({
       true: "w-full",
     },
     size: {
-      xs: "rounded-md",
-      sm: "min-w-16 gap-1 rounded-lg px-3 py-1.5 text-xs",
-      md: "min-w-20 gap-2 rounded-xl px-4 py-2 text-sm",
-      lg: "min-w-40 gap-2 rounded-2xl px-6 py-2.5 text-base font-medium",
+      xs: "px-2 py-1 text-xs",
+      sm: "min-w-16 gap-1 px-3 py-1.5 text-xs",
+      md: "min-w-20 gap-2 px-4 py-2 text-sm",
+      lg: "min-w-40 gap-2 px-6 py-2.5 text-base font-medium",
+    },
+    radius: {
+      sm: "rounded",
+      md: "rounded-md",
+      lg: "rounded-lg",
+      xl: "rounded-xl",
+      "2xl": "rounded-2xl",
+      "3xl": "rounded-3xl",
+      full: "rounded-full",
+      none: "rounded-none",
     },
     isRounded: {
       true: "rounded-full",
@@ -60,6 +70,7 @@ const baseVariant = tv({
     variant: "solid",
     color: "default",
     size: "md",
+    radius: "md",
     disableAnimation: false,
   },
 });

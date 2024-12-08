@@ -27,6 +27,7 @@ export const Avatar = ($props: AvatarProps) => {
     onError,
     color: propColor,
     children,
+    radius,
     ...restProps
   } = props;
 
@@ -45,6 +46,7 @@ export const Avatar = ($props: AvatarProps) => {
     isBordered,
     className,
     color,
+    radius,
   });
 
   const handleOnError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {

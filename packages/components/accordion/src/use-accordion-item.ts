@@ -22,7 +22,7 @@ import {
   accordionItem,
   type AccordionItemSlots,
   type AccordionItemVariantProps,
-} from "./style";
+} from "./styles";
 
 export type AccordionItemIndicatorProps = {
   indicator?: React.ReactNode;
@@ -79,6 +79,7 @@ export const useAccordionItem = ($props: UseAccordionItemProps) => {
     startContentPlacement = "inside",
     endContentPlacement = "inside",
     motionProps,
+    radius,
     ...restProps
   } = props;
 
@@ -93,12 +94,14 @@ export const useAccordionItem = ($props: UseAccordionItemProps) => {
     ref,
     hideIndicator: $$hideIndicator,
     variant,
+    radius: groupRadius,
   } = useAccordionItemContext();
   const hideIndicator = $hideIndicator ?? $$hideIndicator;
 
   const styles = accordionItem({
     hideIndicator,
     variant,
+    radius: variant === "splitted" ? groupRadius : radius,
   });
 
   useImperativeHandle(

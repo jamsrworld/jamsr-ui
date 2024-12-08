@@ -7,6 +7,7 @@ import { type Metadata } from "next";
 import { ButtonColors } from "./examples/colors";
 import { ButtonDisabled } from "./examples/disabled";
 import { ButtonLoading } from "./examples/loading";
+import { ButtonRadius } from "./examples/radius";
 import { ButtonSizes } from "./examples/sizes";
 import { ButtonUsage } from "./examples/usage";
 import { ButtonVariants } from "./examples/variants";
@@ -55,7 +56,6 @@ const Button = () => {
       >
         <ButtonColors />
       </VariantWrapper>
-
       <VariantWrapper
         heading="Sizes"
         code={code("sizes")}
@@ -66,6 +66,9 @@ const Button = () => {
         }
       >
         <ButtonSizes />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <ButtonRadius />
       </VariantWrapper>
       <VariantWrapper
         heading="Disabled"

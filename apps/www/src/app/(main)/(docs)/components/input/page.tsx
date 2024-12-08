@@ -23,6 +23,7 @@ import { InputWithIcon } from "./examples/with-icon";
 import { InputWithPlaceholder } from "./examples/with-placeholder";
 import { InputWithStartContent } from "./examples/with-start-content";
 import { InputWithoutLabel } from "./examples/without-label";
+import { InputRadius } from "./examples/radius";
 
 export const metadata: Metadata = {
   title: "Input",
@@ -36,6 +37,9 @@ const Input = () => {
     <VariantPage heading="Input">
       <VariantWrapper heading="Usage" code={code("usage")}>
         <InputUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <InputRadius />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <InputControlled />

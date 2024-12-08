@@ -10,6 +10,7 @@ import { AvatarFallbacks } from "./examples/fallbacks";
 import { AvatarImageFallback } from "./examples/image-fallback";
 import { AvatarSizes } from "./examples/sizes";
 import { AvatarUsage } from "./examples/usage";
+import { AvatarRadius } from "./examples/radius";
 
 const title = "Avatar";
 const description =
@@ -28,6 +29,9 @@ const Avatar = () => {
     <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <AvatarUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <AvatarRadius />
       </VariantWrapper>
       <VariantWrapper heading="Fallbacks" code={code("fallbacks")}>
         <AvatarFallbacks />

@@ -1,6 +1,7 @@
 import {
   type ClassValue,
   colorVariants,
+  radiusVariant,
   tv,
   type VariantProps,
 } from "@jamsr-ui/utils";
@@ -48,10 +49,12 @@ const base = tv({
         content: "flex-none",
       },
     },
+    radius: radiusVariant("base"),
   },
   defaultVariants: {
     color: "default",
     size: "md",
+    radius: "full",
     variant: "solid",
   },
 });

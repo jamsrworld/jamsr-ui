@@ -44,7 +44,7 @@ import {
   useState,
   type ComponentProps,
 } from "react";
-import { menuVariants, type MenuSlots, type MenuVariantProps } from "./style";
+import { menuVariants, type MenuSlots, type MenuVariantProps } from "./styles";
 import { MenuContext, useMenu, type MenuContextType } from "./use-menu";
 
 export type MenuProps = MenuVariantProps & {
@@ -91,6 +91,7 @@ export const MenuComponent = ($props: MenuProps) => {
     closeOnEscapeKey = true,
     closeOnOutsidePress = true,
     lockScroll = true,
+    radius,
     ...restProps
   } = props;
 
@@ -194,6 +195,7 @@ export const MenuComponent = ($props: MenuProps) => {
 
   const styles = menuVariants({
     backdrop,
+    radius,
   });
   const value: MenuContextType = useMemo(
     () => ({

@@ -20,6 +20,7 @@ export const Accordion = <T extends React.ElementType = "div">(
     isMultiple,
     hideIndicator,
     variant,
+    radius,
   } = useAccordion(props);
   const [selectedKeys, setSelectedKeys] = useState<AccordionSelectionSet>(
     new Set([]),
@@ -86,6 +87,7 @@ export const Accordion = <T extends React.ElementType = "div">(
               ref: (node) => ref(index, node),
               hideIndicator,
               variant,
+              radius,
             }}
           >
             {child}

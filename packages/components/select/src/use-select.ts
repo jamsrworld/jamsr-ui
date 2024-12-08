@@ -87,6 +87,7 @@ export const useSelect = ($props: UseSelectProps) => {
     endContent,
     as,
     isDisabled: propIsDisabled,
+    radius,
     ...restProps
   } = props;
 
@@ -143,6 +144,7 @@ export const useSelect = ($props: UseSelectProps) => {
     color,
     size: propSize,
     isInvalid,
+    radius,
   });
 
   const {

@@ -11,6 +11,7 @@ import { AlertVariants } from "./examples/variants";
 import { AlertWithAction } from "./examples/with-action";
 import { AlertWithDescription } from "./examples/with-description";
 import { WithoutIcon } from "./examples/without-icon";
+import { AlertRadius } from "./examples/radius";
 
 const title = "Alert";
 const description =
@@ -30,7 +31,9 @@ const Alert = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <AlertUsage />
       </VariantWrapper>
-
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <AlertRadius />
+      </VariantWrapper>
       <VariantWrapper
         heading="Status"
         description={

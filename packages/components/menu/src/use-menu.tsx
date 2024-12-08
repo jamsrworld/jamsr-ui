@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 import { type MenuProps } from "./menu-component";
-import { type menuVariants } from "./style";
+import { type menuVariants } from "./styles";
 
 export type MenuContextType = {
   getItemProps: (

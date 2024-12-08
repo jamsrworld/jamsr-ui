@@ -9,6 +9,7 @@ import { ChipSizes } from "./examples/sizes";
 import { ChipUsage } from "./examples/usage";
 import { ChipVariants } from "./examples/variants";
 import { ChipVariantsColors } from "./examples/variants-colors";
+import { ChipRadius } from "./examples/radius";
 
 const title = "Chip";
 const description =
@@ -26,6 +27,9 @@ const Chip = () => {
     <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <ChipUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <ChipRadius />
       </VariantWrapper>
       <VariantWrapper heading="Colors" code={code("usage")}>
         <ChipColors />

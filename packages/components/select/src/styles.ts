@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "@jamsr-ui/utils";
+import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const selectVariant = tv({
@@ -10,7 +10,7 @@ export const selectVariant = tv({
     innerWrapper: "flex w-full items-center gap-2",
     label: "shrink-0 select-none text-sm font-normal text-foreground",
     trigger: [
-      "relative flex w-full flex-row items-center gap-3 rounded-xl border-2 border-default-200 px-3 py-2 outline-none",
+      "relative flex w-full flex-row items-center gap-3 border-2 border-default-200 px-3 py-2 outline-none",
       "focus:border-primary ui-group-hover:border-default-400 ui-group-open:border-primary",
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
     ],
@@ -40,6 +40,7 @@ export const selectVariant = tv({
       warning: {},
       danger: {},
     },
+    radius: radiusVariant("trigger"),
     size: {
       sm: {
         label: "text-xs",

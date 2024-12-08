@@ -9,8 +9,10 @@ import { DialogCustomCloseButton } from "./examples/custom-close-button";
 import { DialogCustomize } from "./examples/customize";
 import { DialogNonDismissible } from "./examples/non-dismissible";
 import { DialogPopoverItems } from "./examples/popover-items";
+import { DialogRadius } from "./examples/radius";
 import { DialogScrollBehavior } from "./examples/scroll-behavior";
 import { DialogUsage } from "./examples/usage";
+import { DialogWithoutAnimation } from "./examples/without-animation";
 import { DialogWithoutCloseButton } from "./examples/without-close-button";
 
 export const metadata: Metadata = {
@@ -25,6 +27,15 @@ const Dialog = () => {
     <VariantPage heading="Dialog">
       <VariantWrapper heading="Usage" code={code("usage")}>
         <DialogUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <DialogRadius />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Without Animation"
+        code={code("without-animation")}
+      >
+        <DialogWithoutAnimation />
       </VariantWrapper>
       <VariantWrapper heading="Popover Items" code={code("popover-items")}>
         <DialogPopoverItems />

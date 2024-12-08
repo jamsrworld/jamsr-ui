@@ -1,4 +1,4 @@
-import { type VariantProps, tv } from "@jamsr-ui/utils";
+import { type VariantProps, radiusBaseVariant, tv } from "@jamsr-ui/utils";
 
 export const test = "";
 export const avatarVariants = tv({
@@ -23,11 +23,13 @@ export const avatarVariants = tv({
       true: "ring-2",
       false: "border-transparent",
     },
+    radius: radiusBaseVariant,
   },
   defaultVariants: {
     bordered: false,
     size: "md",
     color: "default",
+    radius: "full",
   },
 });
 

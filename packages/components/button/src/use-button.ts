@@ -49,6 +49,7 @@ export const useButton = ($props: UseButtonProps) => {
     disableRipple,
     disableAnimation = false,
     ref: propRef,
+    radius,
     ...restProps
   } = props;
 
@@ -74,8 +75,18 @@ export const useButton = ($props: UseButtonProps) => {
         isRounded,
         variant,
         disableAnimation,
+        radius,
       }),
-    [size, color, className, fullWidth, isRounded, variant, disableAnimation],
+    [
+      size,
+      color,
+      className,
+      fullWidth,
+      isRounded,
+      variant,
+      disableAnimation,
+      radius,
+    ],
   );
 
   const getButtonProps: PropGetter = useCallback(() => {

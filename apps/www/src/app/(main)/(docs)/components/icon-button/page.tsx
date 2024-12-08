@@ -7,6 +7,7 @@ import { type Metadata } from "next";
 import { IconButtonColors } from "./examples/colors";
 import { IconButtonDisabled } from "./examples/disabled";
 import { IconButtonLoading } from "./examples/loading";
+import { IconButtonRadius } from "./examples/radius";
 import { IconButtonSizes } from "./examples/sizes";
 import { IconButtonUsage } from "./examples/usage";
 import { IconButtonVariants } from "./examples/variants";
@@ -26,6 +27,9 @@ const IconButton = () => {
     <VariantPage heading={title}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <IconButtonUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <IconButtonRadius />
       </VariantWrapper>
       <VariantWrapper
         heading="Variants"

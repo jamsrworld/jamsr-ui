@@ -5,6 +5,7 @@ export type VariantTypes = {
     "end-content-outside",
     "end-content",
     "multiple-selection",
+    "radius",
     "start-content-outside",
     "start-content",
     "subheading",
@@ -14,6 +15,7 @@ export type VariantTypes = {
   ];
   alert: [
     "custom-icon",
+    "radius",
     "status",
     "usage",
     "variants",
@@ -40,6 +42,7 @@ export type VariantTypes = {
     "fallback-color",
     "fallbacks",
     "image-fallback",
+    "radius",
     "sizes",
     "usage",
   ];
@@ -47,16 +50,18 @@ export type VariantTypes = {
     "colors",
     "disabled",
     "loading",
+    "radius",
     "sizes",
     "usage",
     "variants-colors",
     "variants",
     "with-icons",
   ];
-  card: ["start-end-content", "usage", "variants"];
+  card: ["radius", "start-end-content", "usage", "variants"];
   checkbox: ["controlled", "disabled", "invalid-state", "readonly", "usage"];
   chip: [
     "colors",
+    "radius",
     "sizes",
     "usage",
     "variants-colors",
@@ -82,8 +87,10 @@ export type VariantTypes = {
     "customize",
     "non-dismissible",
     "popover-items",
+    "radius",
     "scroll-behavior",
     "usage",
+    "without-animation",
     "without-close-button",
   ];
   divider: [
@@ -108,6 +115,7 @@ export type VariantTypes = {
     "without-close-button",
   ];
   editor: ["controlled", "invalid", "usage"];
+  "empty-content": [];
   "file-upload-multi": [
     "controlled",
     "customized",
@@ -128,6 +136,7 @@ export type VariantTypes = {
     "colors",
     "disabled",
     "loading",
+    "radius",
     "sizes",
     "usage",
     "variants-colors",
@@ -144,6 +153,7 @@ export type VariantTypes = {
     "optional",
     "outlined-all-props",
     "placeholder",
+    "radius",
     "required",
     "secured-text",
     "sizes",
@@ -167,12 +177,14 @@ export type VariantTypes = {
     "offset",
     "placement",
     "prevent-close",
+    "radius",
     "start-end-content",
     "trigger-on-hover",
     "usage",
     "with-arrow",
     "without-lock-scroll",
   ];
+  "number-input": [];
   "otp-input": ["6-digits", "controlled", "numbers-only", "usage"];
   pagination: [];
   popover: [
@@ -236,6 +248,7 @@ export type VariantTypes = {
     "multiple-controlled",
     "multiple",
     "placeholder",
+    "radius",
     "sizes",
     "start-end-items",
     "usage",
@@ -243,6 +256,7 @@ export type VariantTypes = {
     "without-label",
   ];
   show: ["usage"];
+  sidebar: [];
   skeleton: ["usage"];
   slider: [];
   stepper: ["controlled", "events", "min-max-value", "usage"];

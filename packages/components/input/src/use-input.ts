@@ -101,6 +101,7 @@ export const useInput = ($props: UseInputProps) => {
     showClearButton,
     disabled = false,
     isDisabled: $isDisabled = false,
+    radius,
     ...restProps
   } = props;
 
@@ -128,6 +129,7 @@ export const useInput = ($props: UseInputProps) => {
     isOptional,
     isFilled,
     isTextarea,
+    radius,
   });
 
   const [value = "", setValue] = useControlledState(

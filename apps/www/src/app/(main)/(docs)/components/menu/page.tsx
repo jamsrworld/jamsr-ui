@@ -10,6 +10,7 @@ import { MenuNested } from "./examples/nested";
 import { MenuOffset } from "./examples/offset";
 import { MenuPlacement } from "./examples/placement";
 import { MenuPreventClose } from "./examples/prevent-close";
+import { MenuRadius } from "./examples/radius";
 import { MenuStartEndContent } from "./examples/start-end-content";
 import { MenuTriggerOnHover } from "./examples/trigger-on-hover";
 import { MenuUsage } from "./examples/usage";
@@ -28,6 +29,9 @@ const Menu = () => {
     <VariantPage heading="Menu">
       <VariantWrapper heading="Usage" code={code("usage")}>
         <MenuUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("usage")}>
+        <MenuRadius />
       </VariantWrapper>
       <VariantWrapper heading="Nested" code={code("nested")}>
         <MenuNested />

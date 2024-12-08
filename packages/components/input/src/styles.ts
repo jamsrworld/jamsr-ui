@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "@jamsr-ui/utils";
+import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const inputVariants = tv({
@@ -8,7 +8,7 @@ export const inputVariants = tv({
     label: "shrink-0 select-none text-sm font-normal text-foreground",
     mainWrapper: "flex flex-col gap-1",
     inputWrapper: [
-      "relative rounded-xl border-2 border-default-200",
+      "relative border-2 border-default-200",
       "grow overflow-hidden",
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
       "ui-group-focus:border-primary ui-group-focus:ring-primary",
@@ -39,6 +39,7 @@ export const inputVariants = tv({
         inputWrapper: "bg-default/20 hover:bg-default/30",
       },
     },
+    radius: radiusVariant("inputWrapper"),
     variant: {
       standard: {
         inputWrapper: "",
@@ -132,6 +133,7 @@ export const inputVariants = tv({
   defaultVariants: {
     variant: "standard",
     size: "md",
+    radius: "md",
     fullWidth: false,
     isFilled: false,
     isInvalid: false,

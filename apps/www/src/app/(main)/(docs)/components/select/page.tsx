@@ -13,6 +13,7 @@ import { SelectInvalidState } from "./examples/invalid-state";
 import { SelectMultiple } from "./examples/multiple";
 import { SelectMultipleControlled } from "./examples/multiple-controlled";
 import { SelectPlaceholder } from "./examples/placeholder";
+import { SelectRadius } from "./examples/radius";
 import { SelectSizes } from "./examples/sizes";
 import { SelectStartEndItems } from "./examples/start-end-items";
 import { SelectUsage } from "./examples/usage";
@@ -31,6 +32,9 @@ const Select = () => {
     <VariantPage heading="Select">
       <VariantWrapper heading="Usage" code={code("usage")}>
         <SelectUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <SelectRadius />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <SelectControlled />

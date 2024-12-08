@@ -44,6 +44,7 @@ export const useIconButton = ($props: UseIconButtonProps) => {
     disableAnimation = false,
     ref: propRef,
     "aria-label": ariaLabel,
+    radius,
     ...restProps
   } = props;
 
@@ -68,8 +69,9 @@ export const useIconButton = ($props: UseIconButtonProps) => {
         isRounded,
         variant,
         disableAnimation,
+        radius,
       }),
-    [size, color, className, isRounded, variant, disableAnimation],
+    [size, color, className, isRounded, variant, disableAnimation, radius],
   );
 
   const getButtonProps: PropGetter = useCallback(() => {

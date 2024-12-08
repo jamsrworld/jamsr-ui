@@ -9,7 +9,6 @@ import { AnimatePresence, m } from "framer-motion";
 import { DialogCloseBtn } from "./dialog-close-btn";
 import { useDialogContext } from "./dialog-context";
 
-
 export type DialogContentProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T>;
 
@@ -30,6 +29,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
     getDialogProps,
     isOpen,
     classNames,
+    isAnimationDisabled,
   } = useDialogContext();
   const Component = as ?? DialogComponent;
 
@@ -46,19 +46,28 @@ export const DialogContent = <T extends React.ElementType = "div">(
           >
             <FloatingFocusManager context={context} modal>
               <m.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={{
-                  y: 0,
-                  opacity: 1,
-                }}
-                exit={{
-                  y: 50,
-                  opacity: 0,
-                }}
-                transition={{
-                  type: "spring",
-                  duration: isOpen === true ? 0.3 : 0.6,
-                }}
+                {...(!isAnimationDisabled && {
+                  initial: { y: 50, opacity: 0 },
+                  animate: { y: 0, opacity: 1 },
+                  exit: { y: 50, opacity: 0 },
+                  transition: {
+                    type: "spring",
+                    duration: isOpen === true ? 0.3 : 0.6,
+                  },
+                })}
+                // initial={{ y: 50, opacity: 0 }}
+                // animate={{
+                //   y: 0,
+                //   opacity: 1,
+                // }}
+                // exit={{
+                //   y: 50,
+                //   opacity: 0,
+                // }}
+                // transition={{
+                //   type: "spring",
+                //   duration: isOpen === true ? 0.3 : 0.6,
+                // }}
                 className="flex w-full items-center justify-center"
               >
                 <Component

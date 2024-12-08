@@ -17,7 +17,7 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import { useMemo, type ComponentProps } from "react";
-import { dialog, type DialogSlots, type DialogVariantProps } from "./style";
+import { dialog, type DialogSlots, type DialogVariantProps } from "./styles";
 
 type Props = UIProps<"div"> & {
   closeButton?: React.ReactNode;
@@ -30,6 +30,7 @@ type Props = UIProps<"div"> & {
   slotProps?: {
     closeButton?: Partial<IconButtonProps>;
   };
+  isAnimationDisabled?: boolean;
 };
 
 export type UseDialogProps = Props & DialogVariantProps;
@@ -51,6 +52,7 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     isDismissible = true,
     isKeyboardDismissible = true,
     slotProps,
+    isAnimationDisabled = false,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -112,5 +114,6 @@ export const UseDialog = (originalProps: UseDialogProps) => {
     setFloating,
     setIsOpen,
     slotProps,
+    isAnimationDisabled,
   };
 };

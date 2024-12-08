@@ -1,10 +1,10 @@
 import type { VariantProps } from "@jamsr-ui/utils";
-import { tv } from "@jamsr-ui/utils";
+import { radiusVariant, tv } from "@jamsr-ui/utils";
 
 export const test = "";
 export const alertVariant = tv({
   slots: {
-    wrapper: "relative flex gap-2 rounded-lg p-4 text-sm",
+    wrapper: "relative flex gap-2 p-4 text-sm",
     mainContent: "flex flex-col gap-1",
     description: "flex grow flex-col gap-1 self-center break-all",
     action: "absolute right-2 self-center",
@@ -26,6 +26,7 @@ export const alertVariant = tv({
       info: { wrapper: "border border-blue-600 text-blue-500" },
       default: { wrapper: "border border-divider text-default-500" },
     },
+    radius: radiusVariant("wrapper"),
   },
   compoundVariants: [
     // solid
@@ -68,6 +69,7 @@ export const alertVariant = tv({
   defaultVariants: {
     status: "default",
     variant: "outlined",
+    radius: "md",
   },
 });
 

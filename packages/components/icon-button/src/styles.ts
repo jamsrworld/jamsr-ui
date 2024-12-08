@@ -1,5 +1,5 @@
 import type { ClassProp, VariantProps } from "@jamsr-ui/utils";
-import { colorVariants, tv } from "@jamsr-ui/utils";
+import { colorVariants, radiusBaseVariant, tv } from "@jamsr-ui/utils";
 
 const baseVariant = tv({
   base: [
@@ -52,11 +52,13 @@ const baseVariant = tv({
       true: "!transition-none",
       false: "data-[pressed=true]:scale-[0.97]",
     },
+    radius: radiusBaseVariant,
   },
   defaultVariants: {
     variant: "solid",
     color: "default",
     size: "md",
+    radius: "md",
     disableAnimation: false,
   },
 });

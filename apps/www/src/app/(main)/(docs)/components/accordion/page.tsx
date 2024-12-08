@@ -9,6 +9,7 @@ import { AccordionDisabled } from "./examples/disabled";
 import { AccordionEndContent } from "./examples/end-content";
 import { AccordionEndContentOutside } from "./examples/end-content-outside";
 import { AccordionMultipleSelection } from "./examples/multiple-selection";
+import { AccordionRadius } from "./examples/radius";
 import { AccordionStartContent } from "./examples/start-content";
 import { AccordionStartContentOutside } from "./examples/start-content-outside";
 import { AccordionSubheading } from "./examples/subheading";
@@ -33,6 +34,9 @@ const Accordion = () => {
     <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <AccordionUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <AccordionRadius />
       </VariantWrapper>
       <VariantWrapper bg="secondary" heading="Variants" code={code("variants")}>
         <AccordionVariants />

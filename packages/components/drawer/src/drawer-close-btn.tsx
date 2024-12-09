@@ -18,7 +18,7 @@ export const DrawerCloseButton = ($props: Partial<IconButtonProps>) => {
     <IconButton
       aria-label="Close"
       variant="light"
-      isRounded
+      radius="full"
       {...slotProps.closeButton}
       {...restProps}
       className={className}

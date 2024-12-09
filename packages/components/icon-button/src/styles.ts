@@ -45,9 +45,6 @@ const baseVariant = tv({
       md: "size-10 min-w-10 rounded-xl",
       lg: "size-12 min-w-12 rounded-2xl",
     },
-    isRounded: {
-      true: "rounded-full",
-    },
     disableAnimation: {
       true: "!transition-none",
       false: "data-[pressed=true]:scale-[0.97]",

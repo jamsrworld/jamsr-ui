@@ -72,7 +72,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isDisabled={!table.getCanPreviousPage()}
             size="sm"
             variant="light"
-            isRounded
+            radius="full"
           >
             <span className="sr-only">Go to first page</span>
             <ChevronDoubleLeftIcon width={20} height={20} />
@@ -83,7 +83,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isDisabled={!table.getCanPreviousPage()}
             size="sm"
             variant="light"
-            isRounded
+            radius="full"
           >
             <span className="sr-only">Go to previous page</span>
             <ChevronLeftIcon width={20} height={20} />
@@ -94,7 +94,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isDisabled={!table.getCanNextPage()}
             size="sm"
             variant="light"
-            isRounded
+            radius="full"
           >
             <span className="sr-only">Go to next page</span>
             <ChevronRightIcon width={20} height={20} />
@@ -105,7 +105,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
             isDisabled={!table.getCanNextPage()}
             size="sm"
             variant="light"
-            isRounded
+            radius="full"
           >
             <span className="sr-only">Go to last page</span>
             <ChevronDoubleRightIcon width={20} height={20} />

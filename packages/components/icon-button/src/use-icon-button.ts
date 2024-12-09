@@ -37,7 +37,6 @@ export const useIconButton = ($props: UseIconButtonProps) => {
     isDisabled: $isDisabled = false,
     color,
     size,
-    isRounded,
     variant,
     type = "button",
     disableRipple,
@@ -66,12 +65,11 @@ export const useIconButton = ($props: UseIconButtonProps) => {
         size,
         color,
         className,
-        isRounded,
         variant,
         disableAnimation,
         radius,
       }),
-    [size, color, className, isRounded, variant, disableAnimation, radius],
+    [size, color, className, variant, disableAnimation, radius],
   );
 
   const getButtonProps: PropGetter = useCallback(() => {

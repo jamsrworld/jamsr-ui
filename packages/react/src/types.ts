@@ -32,6 +32,7 @@ import { type EditorProps } from "@jamsr-ui/editor";
 import { type FileUploadMultiProps } from "@jamsr-ui/file-upload-multi";
 import { type FileUploadSingleProps } from "@jamsr-ui/file-upload-single";
 import { type HeaderProps } from "@jamsr-ui/header";
+import { IconButtonProps } from "@jamsr-ui/icon-button";
 import { type InputProps } from "@jamsr-ui/input";
 import { type KbdProps } from "@jamsr-ui/kbd";
 import { type LinkProps } from "@jamsr-ui/link";
@@ -67,6 +68,7 @@ declare module "@jamsr-ui/styles" {
     autocompleteItem?: Partial<AutocompleteItemProps>;
     avatar?: Partial<AvatarProps>;
     button?: Partial<ButtonProps>;
+    iconButton?: Partial<IconButtonProps>;
     card?: Partial<CardProps>;
     cardContent?: Partial<CardContentProps>;
     cardFooter?: Partial<CardFooterProps>;

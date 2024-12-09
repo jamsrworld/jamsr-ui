@@ -90,7 +90,7 @@ export const SearchBar = () => {
                     aria-label="Clear Search"
                     onClick={onClearSearch}
                     size="sm"
-                    isRounded
+                    radius="full"
                     variant="light"
                   >
                     <CloseIcon />

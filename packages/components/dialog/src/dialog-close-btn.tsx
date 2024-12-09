@@ -23,7 +23,7 @@ export const DialogCloseBtn = (props: Partial<IconButtonProps>) => {
       type="button"
       variant="light"
       onClick={handleClick}
-      isRounded
+      radius="full"
       {...slotProps?.closeButton}
       {...restProps}
       className={className}

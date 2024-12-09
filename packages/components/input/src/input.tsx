@@ -55,7 +55,7 @@ export const Input = <T extends React.ElementType = "div">(
           onClick={handleChangeInputType}
           variant="light"
           size="sm"
-          isRounded
+          radius="full"
         >
           {!showPassword ? <EyeOpenIcon /> : <EyeClosedIcon />}
         </IconButton>
@@ -71,7 +71,7 @@ export const Input = <T extends React.ElementType = "div">(
           aria-label="Clear"
           variant="solid"
           size="xs"
-          isRounded
+          radius="full"
           {...getClearButtonProps()}
         >
           <CloseIcon width={12} height={12} />

@@ -28,6 +28,7 @@ export const Chip = <T extends React.ElementType = "div">(
     classNames,
     isSquare,
     radius,
+    isBordered,
     ...restProps
   } = props;
   const Comp = as ?? "div";
@@ -37,6 +38,7 @@ export const Chip = <T extends React.ElementType = "div">(
     variant,
     isSquare,
     radius,
+    isBordered,
   });
   return (
     <Comp

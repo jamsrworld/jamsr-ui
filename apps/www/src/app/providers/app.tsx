@@ -20,23 +20,18 @@ export const AppProvider = (props: Props) => {
       <ToastProvider />
       <Confirmation />
       <UIStylesProvider
-      // tabs={{
-      //   classNames: {
-      //     base: "!bg-red-900",
-      //   },
-      // }}
-      // tab={{
-      //   className:"bg-blue-900"
-      // }}
-      // button={{
-      //   className: "",
-      //   color: "danger",
-      //   size: "lg",
-      //   variant: "outlined",
-      //   onClick: () => {
-      //     console.log("first click");
-      //   },
-      // }}
+        globalConfig={{
+          radius: "xl",
+        }}
+        // button={{
+        //   radius: "3xl",
+        // }}
+        // iconButton={{
+        //   radius: "xl",
+        // }}
+        // dialog={{
+        //   radius: "2xl",
+        // }}
       >
         {children}
       </UIStylesProvider>

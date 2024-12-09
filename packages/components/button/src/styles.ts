@@ -58,9 +58,6 @@ const baseVariant = tv({
       full: "rounded-full",
       none: "rounded-none",
     },
-    isRounded: {
-      true: "rounded-full",
-    },
     disableAnimation: {
       true: "!transition-none",
       false: "data-[pressed=true]:scale-[0.97]",

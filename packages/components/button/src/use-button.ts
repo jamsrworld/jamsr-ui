@@ -28,8 +28,8 @@ type Props = UIProps<"button"> & {
 export type UseButtonProps = Props & ButtonVariantProps;
 
 export const useButton = ($props: UseButtonProps) => {
-  const { button: buttonStyles = {} } = useUIStyle();
-  const props = deepMergeProps(buttonStyles, $props);
+  const { button: buttonStyles = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(buttonStyles, $props, globalConfig);
   const {
     as,
     children,
@@ -43,7 +43,6 @@ export const useButton = ($props: UseButtonProps) => {
     size,
     spinnerPlacement = "start",
     fullWidth,
-    isRounded,
     variant,
     type = "button",
     disableRipple,
@@ -72,21 +71,11 @@ export const useButton = ($props: UseButtonProps) => {
         color,
         className,
         fullWidth,
-        isRounded,
         variant,
         disableAnimation,
         radius,
       }),
-    [
-      size,
-      color,
-      className,
-      fullWidth,
-      isRounded,
-      variant,
-      disableAnimation,
-      radius,
-    ],
+    [size, color, className, fullWidth, variant, disableAnimation, radius],
   );
 
   const getButtonProps: PropGetter = useCallback(() => {

@@ -3,13 +3,14 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
+import { ChipBordered } from "./examples/bordered";
 import { ChipColors } from "./examples/colors";
-import { ChipWithDelete } from "./examples/with-delete";
+import { ChipRadius } from "./examples/radius";
 import { ChipSizes } from "./examples/sizes";
 import { ChipUsage } from "./examples/usage";
 import { ChipVariants } from "./examples/variants";
 import { ChipVariantsColors } from "./examples/variants-colors";
-import { ChipRadius } from "./examples/radius";
+import { ChipWithDelete } from "./examples/with-delete";
 
 const title = "Chip";
 const description =
@@ -39,6 +40,9 @@ const Chip = () => {
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <ChipSizes />
+      </VariantWrapper>
+      <VariantWrapper heading="Bordered" code={code("bordered")}>
+        <ChipBordered />
       </VariantWrapper>
       <VariantWrapper
         heading="Variants & Colors"

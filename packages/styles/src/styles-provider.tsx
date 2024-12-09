@@ -1,7 +1,11 @@
 import { createContext, useContext } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface UIStylesType {}
+export interface UIStylesType {
+  globalConfig?: {
+    radius?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
+  };
+}
 const UIStyleContext = createContext<UIStylesType>(
   {} as unknown as UIStylesType,
 );

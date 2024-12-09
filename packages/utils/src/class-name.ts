@@ -19,6 +19,7 @@ export const cn = (...inputs: ClassValue[]) => {
 export function deepMergeProps<T extends object, U extends object>(
   obj1: T,
   obj2: U,
+  globalConfig?: T,
 ): U {
   const result = { ...obj1 } as any;
 
@@ -60,7 +61,8 @@ export function deepMergeProps<T extends object, U extends object>(
     }
   }
 
-  return result;
+  return { ...globalConfig, ...result };
+  // return result;
 }
 
 export const mergeClassNames = <T extends Record<string, any>>(

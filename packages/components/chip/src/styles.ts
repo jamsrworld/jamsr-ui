@@ -49,6 +49,11 @@ const base = tv({
         content: "flex-none",
       },
     },
+    isBordered: {
+      true: {
+        base: "border",
+      },
+    },
     radius: radiusVariant("base"),
   },
   defaultVariants: {
@@ -168,7 +173,45 @@ const flatVariant: CompoundVariant<ChipVariantsProps>[] = [
   },
 ];
 
+const isBorderedVariant: CompoundVariant<ChipVariantsProps>[] = [
+  {
+    isBordered: true,
+    color: "danger",
+    className: { base: "border-danger" },
+  },
+  {
+    isBordered: true,
+    color: "primary",
+    className: { base: "border-primary" },
+  },
+  {
+    isBordered: true,
+    color: "secondary",
+    className: { base: "border-secondary" },
+  },
+  {
+    isBordered: true,
+    color: "success",
+    className: { base: "border-success" },
+  },
+  {
+    isBordered: true,
+    color: "warning",
+    className: { base: "border-warning" },
+  },
+  {
+    isBordered: true,
+    color: "default",
+    className: { base: "border-divider" },
+  },
+];
+
 export const chip = tv({
   extend: base,
-  compoundVariants: [...solidVariant, ...outlinedVariant, ...flatVariant],
+  compoundVariants: [
+    ...solidVariant,
+    ...outlinedVariant,
+    ...flatVariant,
+    ...isBorderedVariant,
+  ],
 });

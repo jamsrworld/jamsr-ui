@@ -30,7 +30,7 @@ export const DialogCustomize = () => {
         }}
         slotProps={{
           closeButton: {
-            isRounded: false,
+            radius: "sm",
           },
         }}
       >

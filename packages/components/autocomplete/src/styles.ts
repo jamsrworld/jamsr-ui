@@ -1,5 +1,5 @@
 import type { VariantProps } from "@jamsr-ui/utils";
-import { tv } from "@jamsr-ui/utils";
+import { radiusVariant, tv } from "@jamsr-ui/utils";
 
 export const test = "";
 export const autocompleteVariant = tv({
@@ -16,6 +16,10 @@ export const autocompleteVariant = tv({
       "ui-selected:bg-content2/50",
       "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
     ],
+  },
+  variants: { radius: radiusVariant(["popover", "item"]) },
+  defaultVariants: {
+    radius: "md",
   },
 });
 

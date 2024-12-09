@@ -55,19 +55,6 @@ export const DialogContent = <T extends React.ElementType = "div">(
                     duration: isOpen === true ? 0.3 : 0.6,
                   },
                 })}
-                // initial={{ y: 50, opacity: 0 }}
-                // animate={{
-                //   y: 0,
-                //   opacity: 1,
-                // }}
-                // exit={{
-                //   y: 50,
-                //   opacity: 0,
-                // }}
-                // transition={{
-                //   type: "spring",
-                //   duration: isOpen === true ? 0.3 : 0.6,
-                // }}
                 className="flex w-full items-center justify-center"
               >
                 <Component

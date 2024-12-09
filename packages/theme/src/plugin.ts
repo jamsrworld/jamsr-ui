@@ -22,7 +22,7 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
             "--fs-2xs": "clamp(0.66rem, -0.08vi + 0.68rem, 0.58rem)",
             "--fs-xs": "clamp(0.72rem, -0.03vi + 0.73rem, 0.69rem)",
             "--fs-sm": "clamp(0.8rem, 0.04vi + 0.79rem, 0.83rem)",
-            "--fs-base": "clamp(0.88rem, 0.13vi + 0.84rem, 1rem)",
+            "--fs-base": "clamp(0.82rem, 0.13vi + 0.84rem, 0.9rem)",
             "--fs-md": "clamp(0.96rem, 0.25vi + 0.9rem, 1.2rem)",
             "--fs-lg": "clamp(1.06rem, 0.4vi + 0.96rem, 1.44rem)",
             "--fs-xl": "clamp(1.16rem, 0.59vi + 1.02rem, 1.73rem)",

@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.24
+
+### Patch Changes
+
+- global config
+
 ## 0.0.23
 
 ### Patch Changes

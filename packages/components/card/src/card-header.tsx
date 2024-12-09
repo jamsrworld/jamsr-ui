@@ -28,7 +28,7 @@ export type CardHeaderProps<T extends React.ElementType = "div"> =
 export const CardHeader = <T extends React.ElementType = "div">(
   $props: CardHeaderProps<T>,
 ) => {
-  const { cardHeader:  Props = {}, globalConfig } = useUIStyle();
+  const { cardHeader: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
   const {
     as,
@@ -60,8 +60,12 @@ export const CardHeader = <T extends React.ElementType = "div">(
       {startContent && (
         <div className={classNames?.startContent}>{startContent}</div>
       )}
-      <div className={cn("grid grow gap-1", classNames?.innerWrapper)}>
-        <Typography as="h3" variant="h6" className={classNames?.heading}>
+      <div className={cn("grid grow", classNames?.innerWrapper)}>
+        <Typography
+          as="h3"
+          variant="paragraph"
+          className={cn("font-medium", classNames?.heading)}
+        >
           {heading}
         </Typography>
         {subHeading && (

@@ -1,5 +1,11 @@
 # @jamsr-ui/styles
 
+## 0.0.13
+
+### Patch Changes
+
+- global config
+
 ## 0.0.12
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.0.14
+
+### Patch Changes
+
+- global config
+
 ## 0.0.13
 
 ### Patch Changes

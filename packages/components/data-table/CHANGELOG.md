@@ -1,5 +1,24 @@
 # @jamsr-ui/data-table
 
+## 0.0.66
+
+### Patch Changes
+
+- global config
+- Updated dependencies
+  - @jamsr-ui/button@0.0.79
+  - @jamsr-ui/circular-progress@0.0.4
+  - @jamsr-ui/icon-button@0.0.5
+  - @jamsr-ui/linear-progress@0.0.4
+  - @jamsr-ui/repeater@0.0.41
+  - @jamsr-ui/select@0.0.97
+  - @jamsr-ui/skeleton@0.0.72
+  - @jamsr-ui/table@0.0.54
+  - @jamsr-ui/typography@0.0.80
+  - @jamsr-ui/shared-icons@0.0.64
+  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/utils@0.0.68
+
 ## 0.0.65
 
 ### Patch Changes

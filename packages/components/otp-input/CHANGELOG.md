@@ -1,5 +1,15 @@
 # @jamsr-ui/otp-input
 
+## 0.0.75
+
+### Patch Changes
+
+- global config
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.51
+  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/utils@0.0.68
+
 ## 0.0.74
 
 ### Patch Changes

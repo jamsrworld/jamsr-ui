@@ -1,5 +1,18 @@
 # @jamsr-ui/input
 
+## 0.0.101
+
+### Patch Changes
+
+- global config
+- Updated dependencies
+  - @jamsr-ui/button@0.0.79
+  - @jamsr-ui/input@0.0.101
+  - @jamsr-ui/hooks@0.0.51
+  - @jamsr-ui/shared-icons@0.0.64
+  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/utils@0.0.68
+
 ## 0.0.100
 
 ### Patch Changes

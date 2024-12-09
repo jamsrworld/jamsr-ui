@@ -1,5 +1,11 @@
 # @jamsr-ui/show
 
+## 0.0.6
+
+### Patch Changes
+
+- global config
+
 ## 0.0.5
 
 ### Patch Changes

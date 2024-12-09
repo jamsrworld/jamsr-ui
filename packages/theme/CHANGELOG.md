@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.74
+
+### Patch Changes
+
+- global config
+
 ## 0.0.73
 
 ### Patch Changes

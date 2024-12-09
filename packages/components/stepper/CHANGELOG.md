@@ -1,5 +1,16 @@
 # @jamsr-ui/stepper
 
+## 0.0.13
+
+### Patch Changes
+
+- global config
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.51
+  - @jamsr-ui/shared-icons@0.0.64
+  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/utils@0.0.68
+
 ## 0.0.12
 
 ### Patch Changes

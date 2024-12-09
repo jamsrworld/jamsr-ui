@@ -19,12 +19,12 @@ export const selectVariant = tv({
       "shrink-0 transition-transform duration-300 group-data-[open=true]:rotate-180",
     popover: "z-popover",
     content:
-      "z-popover flex h-full flex-col gap-px overflow-hidden rounded-2xl bg-content1 shadow-md backdrop-blur-3xl",
+      "z-popover flex h-full flex-col gap-px overflow-hidden bg-content1 shadow-md backdrop-blur-3xl",
     scrollArea: "flex flex-col gap-px overflow-y-auto p-2",
     startContent: "text-foreground-500",
     endContent: "text-foreground-500",
     selectItem: [
-      "relative flex w-full cursor-pointer select-none items-center gap-2 rounded-xl p-2 text-sm focus-visible:ring-2 focus-visible:ring-primary",
+      "relative flex w-full cursor-pointer select-none items-center gap-2 p-2 text-sm focus-visible:ring-2 focus-visible:ring-primary",
       "ui-hover:bg-content2",
       "ui-active:bg-content2",
       "ui-selected:bg-content2/50",
@@ -40,7 +40,7 @@ export const selectVariant = tv({
       warning: {},
       danger: {},
     },
-    radius: radiusVariant("trigger"),
+    radius: radiusVariant(["trigger", "content", "selectItem"]),
     size: {
       sm: {
         label: "text-xs",

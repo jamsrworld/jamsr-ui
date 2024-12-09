@@ -9,12 +9,12 @@ export const menuVariants = tv({
     popover:
       "z-popover box-border inline-flex min-w-[200px] flex-col justify-center bg-content1 p-1 text-sm shadow-md outline-none backdrop-blur-3xl",
     menuItem: [
-      "relative box-border flex size-full cursor-pointer select-none items-center gap-2 rounded-xl px-2 py-1.5 text-left outline-none hover:bg-content2 focus:bg-content2 ui-disabled:pointer-events-none ui-disabled:opacity-50",
+      "relative box-border flex size-full cursor-pointer select-none items-center gap-2 px-2 py-1.5 text-left outline-none hover:bg-content2 focus:bg-content2 ui-disabled:pointer-events-none ui-disabled:opacity-50",
       "ui-active:bg-content3",
     ],
   },
   variants: {
-    radius: radiusVariant("popover"),
+    radius: radiusVariant(["popover", "menuItem"]),
     backdrop: {
       transparent: {},
       blur: {

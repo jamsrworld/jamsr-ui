@@ -73,6 +73,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
     ref,
     disabled,
     isDisabled: propIsDisabled,
+    radius,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -99,6 +100,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
     isFilled,
     isOptional,
     isRequired,
+    radius,
   });
 
   const [value, setValue] = useControlledState(

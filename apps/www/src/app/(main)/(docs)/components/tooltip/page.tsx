@@ -6,6 +6,7 @@ import { type VariantTypes } from "@/types/variants";
 import { TooltipUsage } from "./examples/usage";
 import { TooltipOffset } from "./examples/offset";
 import { TooltipWithArrow } from "./examples/with-arrow";
+import { TooltipRadius } from "./examples/radius";
 
 export const metadata: Metadata = {
   title: "Tooltip",
@@ -22,6 +23,9 @@ const Tooltip = () => {
       </VariantWrapper>
       <VariantWrapper heading="With Arrow" code={code("with-arrow")}>
         <TooltipWithArrow />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <TooltipRadius />
       </VariantWrapper>
       <VariantWrapper heading="Offset" code={code("offset")}>
         <TooltipOffset />

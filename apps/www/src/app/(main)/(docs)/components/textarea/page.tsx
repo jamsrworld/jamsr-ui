@@ -1,16 +1,17 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { TextareaControlled } from "./examples/controlled";
-import { TextareaUsage } from "./examples/usage";
 import { TextareaDisabled } from "./examples/disabled";
 import { TextareaErrorState } from "./examples/error-state";
 import { TextareaHelperText } from "./examples/helper-text";
 import { TextareaLabelHelper } from "./examples/label-helper";
 import { TextareaPlaceholder } from "./examples/placeholder";
+import { TextareaRadius } from "./examples/radius";
 import { TextareaSizes } from "./examples/sizes";
+import { TextareaUsage } from "./examples/usage";
 import { TextareaVariants } from "./examples/variants";
 import { TextareaWithEndContent } from "./examples/with-end-content";
 import { TextareaWithIcon } from "./examples/with-icon";
@@ -42,6 +43,9 @@ const Textarea = () => {
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <TextareaDisabled />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <TextareaRadius />
       </VariantWrapper>
       <VariantWrapper
         heading="With Placeholder"

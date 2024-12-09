@@ -15,6 +15,7 @@ export const MenuRadius = () => {
     <div className="flex flex-wrap justify-center gap-4">
       {radii.map((radius) => (
         <Menu
+          key={radius}
           classNames={{
             popover: "min-w-[300px]",
           }}

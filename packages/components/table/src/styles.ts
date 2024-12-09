@@ -1,9 +1,9 @@
-import { tv, type VariantProps } from "@jamsr-ui/utils";
+import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const table = tv({
   slots: {
-    base: "relative flex flex-col gap-2 overflow-hidden rounded-2xl",
+    base: "relative flex flex-col gap-2 overflow-hidden",
     wrapper: "grid w-full gap-2 overflow-x-auto",
     table: "group/table w-full min-w-full",
     thead: "h-10",
@@ -28,6 +28,7 @@ export const table = tv({
         base: "bg-content1",
       },
     },
+    radius: radiusVariant("base"),
     density: {
       compact: {
         td: "py-2",
@@ -67,6 +68,7 @@ export const table = tv({
     allowHover: false,
     separateRows: false,
     variant: "solid",
+    radius: "md",
   },
 });
 

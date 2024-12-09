@@ -74,15 +74,19 @@ export const radiusBaseVariant = {
   none: "rounded-none",
 } as const;
 
-export const radiusVariant = (name: string) => {
+export const radiusVariant = <T extends string>(name: T | T[]) => {
+  const keys = Array.isArray(name) ? name : [name];
+  const value = (className: string) =>
+    keys.reduce((acc, key) => ({ ...acc, [key]: className }), {});
+
   return {
-    sm: { [name]: "rounded" },
-    md: { [name]: "rounded-md" },
-    lg: { [name]: "rounded-lg" },
-    xl: { [name]: "rounded-xl" },
-    "2xl": { [name]: "rounded-2xl" },
-    "3xl": { [name]: "rounded-3xl" },
-    full: { [name]: "rounded-full" },
-    none: { [name]: "rounded-none" },
+    sm: value("rounded"),
+    md: value("rounded-md"),
+    lg: value("rounded-lg"),
+    xl: value("rounded-xl"),
+    "2xl": value("rounded-2xl"),
+    "3xl": value("rounded-3xl"),
+    full: value("rounded-full"),
+    none: value("rounded-none"),
   };
 };

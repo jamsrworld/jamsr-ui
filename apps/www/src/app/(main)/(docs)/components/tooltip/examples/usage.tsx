@@ -8,7 +8,7 @@ export const TooltipUsage = (props: Partial<Props>) => {
     <div className="grid min-h-[100px] place-items-center">
       <Tooltip title="I am tooltip" {...props}>
         <IconButton aria-label="Click Me!">
-          <InfoIcon />
+          <InfoIcon width={24} height={24} />
         </IconButton>
       </Tooltip>
     </div>

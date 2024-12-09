@@ -1,10 +1,19 @@
 "use client";
 
-import { cn } from "@jamsr-ui/utils";
+import { cn, type SlotsToClasses } from "@jamsr-ui/utils";
 import toast, { Toaster, type ToasterProps } from "react-hot-toast";
+import { type ToastSlots, toastStyle, type ToastVariantProps } from "./styles";
 
-const ToastProvider = (props: ToasterProps) => {
-  const { toastOptions, ...restProps } = props;
+export type ToastProps = ToasterProps &
+  ToastVariantProps & {
+    classNames?: SlotsToClasses<ToastSlots>;
+  };
+
+const ToastProvider = (props: ToastProps) => {
+  const { toastOptions, radius, classNames, ...restProps } = props;
+  const styles = toastStyle({
+    radius,
+  });
   return (
     <Toaster
       position="bottom-center"
@@ -12,10 +21,9 @@ const ToastProvider = (props: ToasterProps) => {
       toastOptions={{
         duration: 2_000,
         ...toastOptions,
-        className: cn(
-          "!max-w-[unset] border-none !bg-content1 !text-foreground !shadow-lg",
-          toastOptions?.className,
-        ),
+        className: styles.toast({
+          className: cn(toastOptions?.className, classNames?.toast),
+        }),
       }}
     />
   );

@@ -16,10 +16,11 @@ import {
   type Placement,
 } from "@floating-ui/react";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps } from "@jamsr-ui/utils";
+import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { cloneElement, useRef, useState } from "react";
+import { tooltip, type TooltipSlots, type TooltipVariantProps } from "./styles";
 
-export type TooltipProps = {
+export type TooltipProps = TooltipVariantProps & {
   title: string;
   children: React.JSX.Element;
   placement?: Placement;
@@ -29,10 +30,7 @@ export type TooltipProps = {
   openDelay?: number;
   closeDelay?: number;
   className?: string;
-  classNames?: {
-    base?: string;
-    arrow?: string;
-  };
+  classNames?: SlotsToClasses<TooltipSlots>;
 };
 
 export const Tooltip = ($props: TooltipProps) => {
@@ -50,6 +48,7 @@ export const Tooltip = ($props: TooltipProps) => {
     openDelay = 400,
     className,
     classNames,
+    radius,
   } = props;
   const [isOpen, setIsOpen] = useState(false);
   const arrowRef = useRef(null);
@@ -102,6 +101,11 @@ export const Tooltip = ($props: TooltipProps) => {
     }),
   );
 
+  const styles = tooltip({
+    className,
+    radius,
+  });
+
   if (!enabled) return children;
   return (
     <>
@@ -114,17 +118,17 @@ export const Tooltip = ($props: TooltipProps) => {
             ref={refs.setFloating}
             style={floatingStyles}
             {...getFloatingProps()}
-            className={cn(
-              "z-popover inline-block rounded-lg bg-content1 px-3 py-1 text-sm font-medium text-foreground shadow-sm transition-opacity duration-300",
-              className,
-              classNames?.base,
-            )}
+            className={styles.base({
+              className: cn(className, classNames?.base),
+            })}
           >
             {showArrow && (
               <FloatingArrow
                 ref={arrowRef}
                 context={context}
-                className={cn("fill-content1", classNames?.arrow)}
+                className={styles.arrow({
+                  className: classNames?.base,
+                })}
               />
             )}
             {title}

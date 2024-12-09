@@ -54,8 +54,8 @@ export type UseAccordionItemProps = ComponentPropsWithAs<"div", Props>;
 const accessKeys = ["Home", "End", "ArrowUp", "ArrowDown"] as const;
 
 export const useAccordionItem = ($props: UseAccordionItemProps) => {
-  const { accordionItem: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { accordionItem:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const buttonRef = useRef<HTMLButtonElement | null>(null);
 

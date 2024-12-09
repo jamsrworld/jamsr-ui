@@ -42,8 +42,8 @@ export type PopoverProps = PopoverVariantProps & {
 };
 
 export const Popover = ($props: PopoverProps) => {
-  const { popover: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { popover:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     trigger,

@@ -8,8 +8,8 @@ export type DialogBodyProps<T extends React.ElementType = "div"> =
 export const DialogBody = <T extends React.ElementType = "div">(
   $props: ComponentPropsWithAs<T, DialogBodyProps>,
 ) => {
-  const { dialogBody: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { dialogBody:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const { as, children, className: $className, ...restProps } = props;
   const { styles, classNames } = useDialogContext();

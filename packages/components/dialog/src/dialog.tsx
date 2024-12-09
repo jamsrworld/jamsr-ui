@@ -9,8 +9,8 @@ export type DialogProps = UseDialogProps & {
 };
 
 export const Dialog = ($props: DialogProps) => {
-  const { dialog: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { dialog:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const { children, ...restProps } = props;
   const context = UseDialog({ ...restProps });

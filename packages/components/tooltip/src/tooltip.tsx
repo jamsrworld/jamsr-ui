@@ -34,8 +34,8 @@ export type TooltipProps = TooltipVariantProps & {
 };
 
 export const Tooltip = ($props: TooltipProps) => {
-  const { tooltip: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tooltip:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     title,

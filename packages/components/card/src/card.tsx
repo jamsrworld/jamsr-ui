@@ -8,8 +8,8 @@ export type CardProps<T extends React.ElementType = "div"> =
 export const Card = <T extends React.ElementType = "div">(
   $props: CardProps<T>,
 ) => {
-  const { card: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { card:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const {
     as,
     className: $className,

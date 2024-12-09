@@ -44,8 +44,8 @@ export type UseTextareaProps = Props &
   TextareaVariantProps;
 
 export const useTextarea = ($props: UseTextareaProps) => {
-  const { textarea: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { textarea:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

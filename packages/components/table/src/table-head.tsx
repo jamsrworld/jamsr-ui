@@ -12,8 +12,8 @@ export type TableHeaderProps = UIProps<"thead">;
 export const TableHeader = <T extends React.ElementType = "thead">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableHeader: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tableHeader:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

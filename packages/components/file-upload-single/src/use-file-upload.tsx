@@ -48,8 +48,8 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
 export type UseFileUploadSingleProps = Props & UIProps<"div", keyof Props>;
 
 export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
-  const { fileUploadSingle: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { fileUploadSingle:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     value: $value,

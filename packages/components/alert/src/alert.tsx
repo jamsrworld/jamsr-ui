@@ -24,8 +24,8 @@ export type AlertProps<T extends React.ElementType = "div"> =
 export const Alert = <T extends React.ElementType = "div">(
   $props: AlertProps<T>,
 ) => {
-  const { alert: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { alert:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const {
     children,
     status,

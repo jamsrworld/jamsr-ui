@@ -28,8 +28,8 @@ export type CardHeaderProps<T extends React.ElementType = "div"> =
 export const CardHeader = <T extends React.ElementType = "div">(
   $props: CardHeaderProps<T>,
 ) => {
-  const { cardHeader: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { cardHeader:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const {
     as,
     heading,

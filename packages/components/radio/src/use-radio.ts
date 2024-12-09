@@ -31,8 +31,8 @@ interface Props extends UIProps<"input", keyof RadioVariantProps> {
 export type UseRadioProps = Props & RadioVariantProps;
 
 export const useRadio = ($props: UseRadioProps) => {
-  const { radio: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { radio:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const context = useRadioGroupContext();
   const {

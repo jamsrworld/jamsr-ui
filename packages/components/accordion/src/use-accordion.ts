@@ -18,8 +18,8 @@ export type UseAccordionProps = UIProps<"div"> &
   AccordionGroupVariantProps;
 
 export const useAccordion = ($props: UseAccordionProps) => {
-  const { accordion: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { accordion:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

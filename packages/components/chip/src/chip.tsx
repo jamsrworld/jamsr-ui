@@ -15,8 +15,8 @@ export type ChipProps<T extends React.ElementType = "div"> =
 export const Chip = <T extends React.ElementType = "div">(
   $props: ChipProps<T>,
 ) => {
-  const { chip: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { chip:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const {
     as,
     children,

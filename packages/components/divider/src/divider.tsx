@@ -13,8 +13,8 @@ export type DividerProps = DividerVariants & {
 };
 
 export const Divider = ($props: DividerProps) => {
-  const { divider: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { divider:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     className,

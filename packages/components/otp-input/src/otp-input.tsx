@@ -39,8 +39,8 @@ export type OtpInputProps = OtpInputVariantProps & {
 };
 
 export const OtpInput = ($props: OtpInputProps) => {
-  const { otpInput: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { otpInput:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     numberOfDigits = 4,

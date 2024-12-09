@@ -12,8 +12,8 @@ export type TableRowProps = UIProps<"tr">;
 export const TableRow = <T extends React.ElementType = "tr">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableRow: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tableRow:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

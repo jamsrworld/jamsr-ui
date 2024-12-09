@@ -8,8 +8,8 @@ export type DialogFooterProps<T extends React.ElementType = "div"> =
 export const DialogFooter = <T extends React.ElementType = "div">(
   $props: ComponentPropsWithAs<T, DialogFooterProps>,
 ) => {
-  const { dialogFooter: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { dialogFooter:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const { children, className: $className, as, ...restProps } = props;
   const { classNames, styles } = useDialogContext();

@@ -14,8 +14,8 @@ type Props = UIProps<"header"> & {
 export type UseHeaderProps = Props & HeaderVariantProps;
 
 export const useHeader = ($props: UseHeaderProps) => {
-  const { header: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { header:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     blur,

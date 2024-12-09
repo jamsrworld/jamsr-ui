@@ -17,8 +17,8 @@ export type UseTableProps = TableVariantProps &
   };
 
 export const useTable = ($props: UseTableProps) => {
-  const { table: Props = {} } = useUIStyle();
-  const $$props = deepMergeProps(Props, $props);
+  const { table:  Props = {}, globalConfig } = useUIStyle();
+  const $$props = deepMergeProps(Props, $props, globalConfig);
 
   const [props, variantProps] = mapPropsVariants($$props, table.variantKeys);
   const {

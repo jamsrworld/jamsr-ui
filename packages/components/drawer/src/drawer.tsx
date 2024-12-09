@@ -36,8 +36,8 @@ export type DrawerProps = DrawerVariants & {
 };
 
 export const Drawer = ($props: DrawerProps) => {
-  const { drawer: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { drawer:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const [isAnimating, setIsAnimating] = useState(false);
   const {

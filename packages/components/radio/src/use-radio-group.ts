@@ -38,8 +38,8 @@ export type UseRadioGroupProps<T extends string = string> = Props<T> &
 export const useRadioGroup = <T extends string>(
   $props: UseRadioGroupProps<T>,
 ) => {
-  const { radioGroup: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { radioGroup:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

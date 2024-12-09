@@ -12,8 +12,8 @@ export type TypographyProps<T extends React.ElementType = "div"> = Omit<
 export const Typography = <T extends React.ElementType = "div">(
   $props: TypographyProps<T>,
 ) => {
-  const { typography: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { typography:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

@@ -8,8 +8,8 @@ export type TableCellProps = UIProps<"td">;
 export const TableCell = <T extends React.ElementType = "td">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableCell: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tableCell:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

@@ -52,8 +52,8 @@ type Props = EditorVariantsProps & {
 
 export type UseEditorProps = Props & UIProps<"div", keyof Props>;
 export const useEditor = ($props: UseEditorProps) => {
-  const { editor: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { editor:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const {
     defaultValue,
     onValueChange,

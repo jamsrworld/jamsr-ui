@@ -68,8 +68,8 @@ export type MenuProps = MenuVariantProps & {
 } & ComponentProps<"div">;
 
 export const MenuComponent = ($props: MenuProps) => {
-  const { menu: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { menu:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const parentId = useFloatingParentNodeId();
   const isNested = parentId != null;
 

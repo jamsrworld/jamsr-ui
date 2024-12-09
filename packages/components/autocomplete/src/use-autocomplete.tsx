@@ -45,6 +45,7 @@ export type UseAutocompleteProps = Pick<
   | "isInvalid"
   | "onBlur"
   | "isDisabled"
+  | "radius"
 > & {
   className?: string;
   classNames?: SlotsToClasses<AutocompleteSlots>;
@@ -61,8 +62,8 @@ export type UseAutocompleteProps = Pick<
 };
 
 export const useAutocomplete = ($props: UseAutocompleteProps) => {
-  const { autocomplete: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { autocomplete: Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const {
     className,
@@ -85,6 +86,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     inputProps,
     isDisabled,
     onBlur,
+    radius,
   } = props;
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
@@ -182,6 +184,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
 
   const styles = autocompleteVariant({
     className,
+    radius,
   });
 
   const handleInputChange = useCallback(
@@ -355,6 +358,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       placeholder,
       helperText,
       isInvalid,
+      radius,
       ...inputProps,
       "data-slot": "input",
       value: inputValue,
@@ -402,6 +406,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     onBlur,
     onClearInput,
     placeholder,
+    radius,
     selectedItemsContent,
     setReference,
     startContent,

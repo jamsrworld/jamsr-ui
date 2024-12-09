@@ -15,8 +15,8 @@ type Props = {
 export type TagsInputProps = Omit<InputProps, keyof Props> & Props;
 
 export const TagsInput = ($props: TagsInputProps) => {
-  const { tagsInput: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tagsInput:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     onValueChange,

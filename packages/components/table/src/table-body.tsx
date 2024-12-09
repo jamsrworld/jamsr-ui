@@ -8,8 +8,8 @@ export type TableBodyProps = UIProps<"tbody">;
 export const TableBody = <T extends React.ElementType = "tbody">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableBody: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tableBody:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     as,

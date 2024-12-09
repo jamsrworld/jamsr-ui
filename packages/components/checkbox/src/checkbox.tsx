@@ -33,8 +33,8 @@ export type CheckboxProps = CheckboxVariantProps & {
 };
 
 export const Checkbox = ($props: CheckboxProps) => {
-  const { checkbox: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { checkbox:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const id = useId();
   const {
     isChecked: $checked,

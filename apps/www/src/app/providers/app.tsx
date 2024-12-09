@@ -21,17 +21,8 @@ export const AppProvider = (props: Props) => {
       <Confirmation />
       <UIStylesProvider
         globalConfig={{
-          radius: "xl",
+          // radius: "lg",
         }}
-        // button={{
-        //   radius: "3xl",
-        // }}
-        // iconButton={{
-        //   radius: "xl",
-        // }}
-        // dialog={{
-        //   radius: "2xl",
-        // }}
       >
         {children}
       </UIStylesProvider>

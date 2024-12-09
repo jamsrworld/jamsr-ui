@@ -26,8 +26,8 @@ type Props = UIProps<"button"> & {
 export type UseIconButtonProps = Props & ButtonVariantProps;
 
 export const useIconButton = ($props: UseIconButtonProps) => {
-  const { iconButton: buttonStyles = {} } = useUIStyle();
-  const props = deepMergeProps(buttonStyles, $props);
+  const { iconButton: Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const {
     as,
     children,

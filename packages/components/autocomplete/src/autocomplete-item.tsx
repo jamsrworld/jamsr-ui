@@ -19,9 +19,8 @@ export type AutocompleteItemProps<T extends React.ElementType = "button"> =
 export const AutocompleteItem = <T extends React.ElementType = "button">(
   $props: AutocompleteItemProps<T>,
 ) => {
-  const { autocompleteItem: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
-
+  const { autocompleteItem: Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
   const {
     children,
     className: $className,

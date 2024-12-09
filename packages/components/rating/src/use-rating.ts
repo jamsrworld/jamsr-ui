@@ -21,8 +21,8 @@ export type UseRatingProps = {
 } & ComponentProps<"div">;
 
 export const useRating = ($props: UseRatingProps) => {
-  const { rating: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { rating:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     className,

@@ -49,8 +49,8 @@ type Props = MultiUploadVariants & {
 
 export type UseFileUploadMultiProps = Props & UIProps<"div", keyof Props>;
 export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
-  const { fileUploadMulti: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { fileUploadMulti:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     defaultValue,

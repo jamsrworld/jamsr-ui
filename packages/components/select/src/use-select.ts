@@ -61,8 +61,8 @@ export type UseSelectInnerProps = Props;
 export type UseSelectProps = Props & UIProps<"div", keyof Props>;
 
 export const useSelect = ($props: UseSelectProps) => {
-  const { select: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { select:  Props = {}, globalConfig } = useUIStyle();
+  const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
     label,

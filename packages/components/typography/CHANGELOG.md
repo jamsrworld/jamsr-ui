@@ -1,5 +1,11 @@
 # @jamsr-ui/typography
 
+## 0.0.81
+
+### Patch Changes
+
+- fix disable opacity
+
 ## 0.0.80
 
 ### Patch Changes

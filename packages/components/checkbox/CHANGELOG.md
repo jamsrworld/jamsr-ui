@@ -1,5 +1,11 @@
 # @jamsr-ui/checkbox
 
+## 0.0.76
+
+### Patch Changes
+
+- fix disable opacity
+
 ## 0.0.75
 
 ### Patch Changes

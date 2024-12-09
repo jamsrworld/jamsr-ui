@@ -1,5 +1,12 @@
 # @jamsr-ui/drawer
 
+## 1.0.77
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.6
+
 ## 1.0.76
 
 ### Patch Changes

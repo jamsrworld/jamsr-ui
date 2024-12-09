@@ -3,7 +3,7 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import { deepMergeProps } from "@jamsr-ui/utils";
 import NextImage, { type ImageProps } from "next/image";
 import { useState } from "react";
-import { type AvatarVariants, avatarVariants } from "./style";
+import { type AvatarVariants, avatarVariants } from "./styles";
 import { getColorByName, getFirstChar } from "./utils";
 
 type Props = {

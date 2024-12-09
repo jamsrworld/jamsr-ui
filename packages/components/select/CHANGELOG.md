@@ -1,5 +1,15 @@
 # @jamsr-ui/select
 
+## 0.0.98
+
+### Patch Changes
+
+- fix disable opacity
+- Updated dependencies
+  - @jamsr-ui/button@0.0.80
+  - @jamsr-ui/popover@0.0.77
+  - @jamsr-ui/chip@0.0.87
+
 ## 0.0.97
 
 ### Patch Changes

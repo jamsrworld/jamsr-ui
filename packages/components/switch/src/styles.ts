@@ -7,7 +7,7 @@ export const switchVariants = tv({
     switch: [
       "flex cursor-pointer items-center rounded-full bg-default-200 p-1",
       ...focusVisibleClasses,
-      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
+      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
       "cursor-default ui-interactive:cursor-pointer ui-interactive:hover:opacity-95",
       "justify-start ui-group-checked:justify-end",
     ],

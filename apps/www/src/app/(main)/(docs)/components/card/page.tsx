@@ -8,6 +8,7 @@ import { CardStartEndContent } from "./examples/start-end-content";
 import { CardUsage } from "./examples/usage";
 import { CardVariants } from "./examples/variants";
 import { CardRadius } from "./examples/radius";
+import { CardWithForm } from "./examples/with-form";
 
 const title = "Card";
 const description =
@@ -45,6 +46,13 @@ const Card = () => {
       </VariantWrapper>
       <VariantWrapper bg="secondary" heading="Variants" code={code("variants")}>
         <CardVariants />
+      </VariantWrapper>
+      <VariantWrapper
+        bg="secondary"
+        heading="With Form"
+        code={code("with-form")}
+      >
+        <CardWithForm />
       </VariantWrapper>
     </VariantPage>
   );

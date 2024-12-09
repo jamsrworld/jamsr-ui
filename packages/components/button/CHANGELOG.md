@@ -1,5 +1,11 @@
 # @jamsr-ui/button
 
+## 0.0.80
+
+### Patch Changes
+
+- fix disable opacity
+
 ## 0.0.79
 
 ### Patch Changes

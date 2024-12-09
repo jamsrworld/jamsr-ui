@@ -1,4 +1,4 @@
 "use client";
 
-export { typographyVariants } from "./style";
+export { typographyVariants } from "./styles";
 export { Typography, type TypographyProps } from "./typography";

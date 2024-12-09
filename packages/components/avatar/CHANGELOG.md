@@ -1,5 +1,11 @@
 # @jamsr-ui/avatar
 
+## 0.0.77
+
+### Patch Changes
+
+- fix disable opacity
+
 ## 0.0.76
 
 ### Patch Changes

@@ -5,7 +5,7 @@ export const checkbox = tv({
   slots: {
     base: [
       "group flex flex-col gap-2",
-      "ui-disabled:opacity-50",
+      "ui-disabled:opacity-60",
       "ui-disabled:cursor-not-allowed",
     ],
     wrapper: "flex gap-2",

@@ -1,6 +1,6 @@
 import { useUIStyle } from "@jamsr-ui/styles";
 import { deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { typographyVariants, type TypographyVariants } from "./style";
+import { typographyVariants, type TypographyVariants } from "./styles";
 
 export type TypographyProps<T extends React.ElementType = "div"> = Omit<
   ComponentPropsWithAs<T, TypographyVariants>,

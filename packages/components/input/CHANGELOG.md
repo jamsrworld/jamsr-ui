@@ -1,5 +1,13 @@
 # @jamsr-ui/input
 
+## 0.0.102
+
+### Patch Changes
+
+- fix disable opacity
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.6
+
 ## 0.0.101
 
 ### Patch Changes

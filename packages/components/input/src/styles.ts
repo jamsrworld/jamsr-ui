@@ -10,7 +10,7 @@ export const inputVariants = tv({
     inputWrapper: [
       "relative border-2 border-default-200",
       "grow overflow-hidden",
-      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
+      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
       "ui-group-focus:border-primary ui-group-focus:ring-primary",
       "ui-group-hover:border-default-400",
     ],

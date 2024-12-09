@@ -1,5 +1,11 @@
 # @jamsr-ui/radio
 
+## 0.0.83
+
+### Patch Changes
+
+- fix disable opacity
+
 ## 0.0.82
 
 ### Patch Changes

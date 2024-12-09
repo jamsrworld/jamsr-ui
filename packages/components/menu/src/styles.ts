@@ -9,7 +9,7 @@ export const menuVariants = tv({
     popover:
       "z-popover box-border inline-flex min-w-[200px] flex-col justify-center bg-content1 p-1 text-sm shadow-md outline-none",
     menuItem: [
-      "relative box-border flex size-full cursor-pointer select-none items-center gap-2 px-2 py-1.5 text-left outline-none focus:bg-content2 ui-hover:bg-content2 ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
+      "relative box-border flex size-full cursor-pointer select-none items-center gap-2 px-2 py-1.5 text-left outline-none focus:bg-content2 ui-hover:bg-content2 ui-disabled:cursor-not-allowed ui-disabled:opacity-60",
       "ui-active:bg-content3",
     ],
   },
@@ -28,22 +28,27 @@ export const menuVariants = tv({
     },
     color: {
       default: {
-        menuItem: "ui-hover:bg-content2",
+        menuItem: "ui-hover:bg-content2 ui-hover:text-foreground",
       },
       primary: {
-        menuItem: "ui-hover:bg-primary-700 dark:ui-hover:bg-primary-300",
+        menuItem:
+          "ui-hover:bg-primary-700 ui-hover:text-primary-foreground dark:ui-hover:bg-primary-300 ",
       },
       secondary: {
-        menuItem: "ui-hover:bg-secondary-600 dark:ui-hover:bg-secondary-300",
+        menuItem:
+          "ui-hover:bg-secondary-600 ui-hover:text-secondary-foreground dark:ui-hover:bg-secondary-300 ",
       },
       success: {
-        menuItem: "ui-hover:bg-success-600 dark:ui-hover:bg-success-300",
+        menuItem:
+          "ui-hover:bg-success-600 ui-hover:text-success-foreground dark:ui-hover:bg-success-300 ",
       },
       warning: {
-        menuItem: "ui-hover:bg-warning-600 dark:ui-hover:bg-warning-300",
+        menuItem:
+          "ui-hover:bg-warning-600 ui-hover:text-warning-foreground dark:ui-hover:bg-warning-300 ",
       },
       danger: {
-        menuItem: "ui-hover:bg-danger-600 dark:ui-hover:bg-danger-300",
+        menuItem:
+          "ui-hover:bg-danger-600 ui-hover:text-danger-foreground dark:ui-hover:bg-danger-300",
       },
     },
   },

@@ -1,5 +1,11 @@
 # @jamsr-ui/menu
 
+## 0.0.97
+
+### Patch Changes
+
+- fix disable opacity
+
 ## 0.0.96
 
 ### Patch Changes

@@ -5,7 +5,7 @@ export const stepper = tv({
   slots: {
     base: "inline-flex items-center gap-2",
     value: "",
-    button: ["", "ui-disabled:cursor-not-allowed ui-disabled:opacity-50"],
+    button: ["", "ui-disabled:cursor-not-allowed ui-disabled:opacity-60"],
   },
   variants: {},
   defaultVariants: {},

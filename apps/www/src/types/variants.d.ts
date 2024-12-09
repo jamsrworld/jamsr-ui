@@ -4,7 +4,7 @@ export type VariantTypes = {
   "autocomplete": ["choose-country", "controlled", "disabled-items", "disabled", "error-state", "helper-text", "multiple-controlled", "multiple-custom-render", "multiple", "start-end-content", "usage"];
   "avatar": ["bordered", "colors", "fallback-color", "fallbacks", "image-fallback", "radius", "sizes", "usage"];
   "button": ["colors", "disabled", "loading", "radius", "sizes", "usage", "variants-colors", "variants", "with-icons"];
-  "card": ["radius", "start-end-content", "usage", "variants"];
+  "card": ["radius", "start-end-content", "usage", "variants", "with-form"];
   "checkbox": ["controlled", "description", "disabled", "invalid-state", "radius", "readonly", "usage"];
   "chip": ["bordered", "colors", "radius", "sizes", "usage", "variants-colors", "variants", "with-delete"];
   "circular-progress": ["colors", "sizes", "usage", "with-value"];

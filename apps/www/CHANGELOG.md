@@ -1,5 +1,14 @@
 # web
 
+## 0.1.189
+
+### Patch Changes
+
+- fix disable opacity
+- Updated dependencies
+  - @jamsr-ui/theme@0.0.75
+  - @jamsr-ui/react@0.0.207
+
 ## 0.1.188
 
 ### Patch Changes

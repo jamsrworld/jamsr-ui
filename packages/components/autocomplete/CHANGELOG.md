@@ -1,5 +1,15 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.109
+
+### Patch Changes
+
+- fix disable opacity
+- Updated dependencies
+  - @jamsr-ui/button@0.0.80
+  - @jamsr-ui/input@0.0.102
+  - @jamsr-ui/chip@0.0.87
+
 ## 0.0.108
 
 ### Patch Changes

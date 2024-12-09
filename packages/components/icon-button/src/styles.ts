@@ -20,7 +20,7 @@ const baseVariant = tv({
     "tap-highlight-transparent",
     "transition-transform",
     "focus-visible:ring-2 focus-visible:ring-primary",
-    "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
+    "ui-disabled:cursor-not-allowed ui-disabled:opacity-60",
     "text-transform-inherit",
   ],
   variants: {

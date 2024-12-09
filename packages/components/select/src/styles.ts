@@ -12,7 +12,7 @@ export const selectVariant = tv({
     trigger: [
       "relative flex w-full flex-row items-center gap-3 border-2 border-default-200 px-3 py-2 outline-none",
       "focus:border-primary ui-group-hover:border-default-400 ui-group-open:border-primary",
-      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
+      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
     ],
     helperText: "text-xs text-foreground-600",
     indicator:
@@ -28,7 +28,7 @@ export const selectVariant = tv({
       "ui-hover:bg-content2",
       "ui-active:bg-content2",
       "ui-selected:bg-content2/50",
-      "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
+      "ui-disabled:cursor-not-allowed ui-disabled:opacity-60",
     ],
   },
   variants: {

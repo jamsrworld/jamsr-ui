@@ -1,5 +1,11 @@
 # @jamsr-ui/rating
 
+## 0.0.36
+
+### Patch Changes
+
+- fix disable opacity
+
 ## 0.0.35
 
 ### Patch Changes

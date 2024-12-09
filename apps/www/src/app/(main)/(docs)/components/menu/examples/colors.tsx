@@ -11,9 +11,7 @@ export const MenuColors = () => {
         trigger={<Button endContent={<ChevronUpIcon />}>Open Me</Button>}
       >
         <MenuItem color="default">Default</MenuItem>
-        <MenuItem isDisabled color="primary">
-          Primary
-        </MenuItem>
+        <MenuItem color="primary">Primary</MenuItem>
         <MenuItem color="secondary">Secondary</MenuItem>
         <MenuItem color="success">Success</MenuItem>
         <MenuItem color="warning">Warning</MenuItem>

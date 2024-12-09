@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     typedRoutes: true,
   },
   images: {
+    contentDispositionType: "inline",
     remotePatterns: [
       {
         hostname: "i.pravatar.cc",

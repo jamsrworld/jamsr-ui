@@ -6,7 +6,7 @@ export const radioVariant = tv({
   slots: {
     base: [
       "group relative -m-2 inline-flex cursor-pointer items-center justify-start p-2 tap-highlight-transparent",
-      "ui-disabled:cursor-not-allowed ui-disabled:opacity-50",
+      "ui-disabled:cursor-not-allowed ui-disabled:opacity-60",
     ],
     wrapper: [
       "relative",

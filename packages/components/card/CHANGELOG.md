@@ -1,5 +1,13 @@
 # @jamsr-ui/card
 
+## 0.0.86
+
+### Patch Changes
+
+- fix disable opacity
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.81
+
 ## 0.0.85
 
 ### Patch Changes

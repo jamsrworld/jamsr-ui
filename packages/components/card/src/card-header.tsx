@@ -63,7 +63,7 @@ export const CardHeader = <T extends React.ElementType = "div">(
       <div className={cn("grid grow", classNames?.innerWrapper)}>
         <Typography
           as="h3"
-          variant="paragraph"
+          variant="body1"
           className={cn("font-medium", classNames?.heading)}
         >
           {heading}

@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.22
+
+### Patch Changes
+
+- added radius
+
 ## 0.0.21
 
 ### Patch Changes

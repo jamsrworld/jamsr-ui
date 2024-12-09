@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.23
+
+### Patch Changes
+
+- added radius
+
 ## 0.0.22
 
 ### Patch Changes

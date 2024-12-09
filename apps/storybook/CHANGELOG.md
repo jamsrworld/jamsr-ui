@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.206
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/react@0.0.204
+
 ## 0.0.205
 
 ### Patch Changes

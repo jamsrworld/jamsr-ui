@@ -1,5 +1,14 @@
 # @jamsr-ui/toast
 
+## 0.0.33
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.32
 
 ### Patch Changes

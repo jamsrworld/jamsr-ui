@@ -14,11 +14,12 @@ import {
   checkbox,
   type CheckboxSlots,
   type CheckboxVariantProps,
-} from "./style";
+} from "./styles";
 
 export type CheckboxProps = CheckboxVariantProps & {
   label?: React.ReactNode;
   labelProps?: ComponentProps<"label">;
+  description?: React.ReactNode;
   defaultChecked?: boolean;
   isChecked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
@@ -49,6 +50,8 @@ export const Checkbox = ($props: CheckboxProps) => {
     isReadonly = false,
     disabled,
     onBlur,
+    radius,
+    description,
     ...restProps
   } = props;
 
@@ -78,8 +81,10 @@ export const Checkbox = ($props: CheckboxProps) => {
   const styles = checkbox({
     className,
     isInvalid,
+    radius,
   });
 
+  const hasContent = !!label || !!description;
   return (
     <div
       data-component="checkbox"
@@ -91,6 +96,7 @@ export const Checkbox = ($props: CheckboxProps) => {
       data-hovered={dataAttr(isHovered)}
       aria-disabled={dataAttr(isDisabled)}
       data-focused={dataAttr(isFocused)}
+      data-interactive={dataAttr(isInteractive)}
       className={styles.base({ className: classNames?.base })}
       onBlur={onBlur}
     >
@@ -122,13 +128,35 @@ export const Checkbox = ($props: CheckboxProps) => {
           />
           <CheckboxCheckIcon isChecked={Boolean(checked)} />
         </m.button>
-        <label
-          className={styles.label({ className: classNames?.label })}
-          htmlFor={id}
-          {...labelProps}
-        >
-          {label}
-        </label>
+        {hasContent && (
+          <div
+            data-slot="content"
+            className={styles.content({
+              className: classNames?.content,
+            })}
+          >
+            {label && (
+              <label
+                data-slot="label"
+                className={styles.label({ className: classNames?.label })}
+                htmlFor={id}
+                {...labelProps}
+              >
+                {label}
+              </label>
+            )}
+            {description && (
+              <div
+                data-slot="description"
+                className={styles.description({
+                  className: classNames?.description,
+                })}
+              >
+                {description}
+              </div>
+            )}
+          </div>
+        )}
       </div>
       {helperText && (
         <div

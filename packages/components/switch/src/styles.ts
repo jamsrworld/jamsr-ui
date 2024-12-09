@@ -5,7 +5,7 @@ export const switchVariants = tv({
   slots: {
     base: "group flex flex-col gap-2",
     switch: [
-      "flex cursor-pointer items-center rounded-full bg-content1 p-1",
+      "flex cursor-pointer items-center rounded-full bg-default-200 p-1",
       ...focusVisibleClasses,
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-50",
       "cursor-default ui-interactive:cursor-pointer ui-interactive:hover:opacity-95",
@@ -13,8 +13,8 @@ export const switchVariants = tv({
     ],
     thumb: "size-8 rounded-full bg-white shadow-md",
     helperText: "text-xs text-foreground-400",
-    label: "grid grow select-none gap-1 ui-group-interactive:cursor-pointer",
-    labelText: "font-medium",
+    content: "grid grow select-none gap-1",
+    label: "text-sm ui-group-interactive:cursor-pointer",
     description: "text-xs text-foreground-500",
     mainWrapper: "flex items-center justify-between gap-2",
     switchWrapper: "",
@@ -71,6 +71,7 @@ export const switchVariants = tv({
     isInvalid: {
       true: {
         helperText: "text-danger",
+        label: "text-danger",
       },
     },
   },

@@ -1,20 +1,21 @@
 import type { VariantProps } from "@jamsr-ui/utils";
-import { tv } from "@jamsr-ui/utils";
+import { radiusVariant, tv } from "@jamsr-ui/utils";
 
+export const test = "";
 export const multiUploadVariant = tv({
   slots: {
     base: "flex w-full flex-col gap-1",
     innerWrapper: "flex flex-wrap gap-2",
     fileView: "group relative size-20",
-    file: "size-full rounded-lg object-cover",
+    file: "size-full object-cover",
     deleteBtn:
-      "absolute right-1 top-1 z-1 hidden size-4 rounded-full bg-danger text-white hover:bg-danger-300 group-hover:block",
+      "absolute right-1 top-1 z-1 hidden rounded-full bg-content1 text-foreground hover:text-danger group-hover:block",
     picker:
-      "group relative flex aspect-square size-20 select-none flex-col items-center justify-center rounded-lg border-2 border-dashed border-divider",
+      "group relative flex aspect-square size-20 select-none flex-col items-center justify-center border-2 border-solid border-divider",
     helperText: "text-xs text-foreground-400",
     info: "text-xs",
     overlayWrapper:
-      "absolute inset-0 z-1 flex size-full items-center justify-center overflow-hidden rounded-lg text-white",
+      "absolute inset-0 z-1 flex size-full items-center justify-center overflow-hidden text-white",
     overlay: "absolute inset-0 -z-1 flex size-full bg-black/50",
     label: "shrink-0 select-none text-sm font-normal text-foreground",
   },
@@ -40,6 +41,10 @@ export const multiUploadVariant = tv({
         info: "text-danger",
       },
     },
+    radius: radiusVariant(["file", "picker", "overlayWrapper"]),
+  },
+  defaultVariants: {
+    radius: "md",
   },
 });
 

@@ -1,5 +1,20 @@
 # web
 
+## 0.1.186
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/theme@0.0.73
+  - @jamsr-ui/dnd@0.0.13
+  - @jamsr-ui/core@0.0.42
+  - @jamsr-ui/hooks@0.0.50
+  - @jamsr-ui/react@0.0.204
+  - @jamsr-ui/shared-icons@0.0.63
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.1.185
 
 ### Patch Changes

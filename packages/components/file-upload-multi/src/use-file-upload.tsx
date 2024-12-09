@@ -14,7 +14,7 @@ import {
   multiUploadVariant,
   type MultiUploadSlots,
   type MultiUploadVariants,
-} from "./style";
+} from "./styles";
 
 export type FileUploadProgress = "PENDING" | "COMPLETE" | "ERROR" | number;
 export type FileUploadMultiState = {
@@ -74,6 +74,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     onUploadSuccess,
     getFileUrlAfterUpload,
     label,
+    radius,
     ...restProps
   } = props;
 
@@ -225,6 +226,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     isDragActive,
     isInvalid,
     className,
+    radius,
   });
 
   const overlayWrapperClassName = styles.overlayWrapper({

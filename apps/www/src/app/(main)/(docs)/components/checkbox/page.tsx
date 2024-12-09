@@ -1,14 +1,15 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { CheckboxControlled } from "./examples/controlled";
-import { CheckboxUsage } from "./examples/usage";
 import { CheckboxDisabled } from "./examples/disabled";
 import { CheckboxInvalidState } from "./examples/invalid-state";
+import { CheckboxRadius } from "./examples/radius";
 import { CheckboxReadonly } from "./examples/readonly";
-
+import { CheckboxUsage } from "./examples/usage";
+import { CheckboxDescription } from "./examples/description";
 
 const title = "Checkbox";
 const description =
@@ -36,6 +37,12 @@ const Checkbox = () => {
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <CheckboxDisabled />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <CheckboxRadius />
+      </VariantWrapper>
+      <VariantWrapper heading="Description" code={code("description")}>
+        <CheckboxDescription />
       </VariantWrapper>
       <VariantWrapper heading="Invalid State" code={code("invalid-state")}>
         <CheckboxInvalidState />

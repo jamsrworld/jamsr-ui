@@ -1,5 +1,25 @@
 # @jamsr-ui/editor
 
+## 0.0.105
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.99
+  - @jamsr-ui/popover@0.0.76
+  - @jamsr-ui/select@0.0.96
+  - @jamsr-ui/switch@0.0.83
+  - @jamsr-ui/divider@0.0.73
+  - @jamsr-ui/icon-button@0.0.4
+  - @jamsr-ui/input@0.0.100
+  - @jamsr-ui/menu@0.0.94
+  - @jamsr-ui/repeater@0.0.40
+  - @jamsr-ui/hooks@0.0.50
+  - @jamsr-ui/shared-icons@0.0.63
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.104
 
 ### Patch Changes

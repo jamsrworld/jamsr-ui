@@ -1,5 +1,15 @@
 # @jamsr-ui/radio
 
+## 0.0.81
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.50
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.80
 
 ### Patch Changes

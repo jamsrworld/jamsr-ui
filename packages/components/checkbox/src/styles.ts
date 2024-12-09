@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "@jamsr-ui/utils";
+import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const checkbox = tv({
@@ -8,19 +8,21 @@ export const checkbox = tv({
       "ui-disabled:opacity-50",
       "ui-disabled:cursor-not-allowed",
     ],
-    wrapper: "flex items-center gap-2",
+    wrapper: "flex gap-2",
     label:
-      "shrink-0 cursor-pointer select-none text-sm font-normal text-foreground",
+      "shrink-0 select-none text-sm font-normal leading-none text-foreground ui-group-interactive:cursor-pointer ui-group-disabled:cursor-not-allowed",
     helperText: "text-xs text-foreground-600",
     checkbox: [
       "border-default-200 ui-group-hover:border-default-400",
-      "relative size-5 cursor-pointer appearance-none rounded-md border-2 transition-all duration-500 ui-group-checked:border-primary ui-group-checked:bg-primary",
+      "relative size-5 appearance-none border-2 transition-all duration-500 ui-group-checked:border-primary ui-group-checked:bg-primary ui-group-interactive:cursor-pointer",
       "ui-group-disabled:cursor-not-allowed",
     ],
     trigger: [
       "relative flex size-max items-center",
       "disabled:cursor-not-allowed",
     ],
+    description: "text-xs text-foreground-500",
+    content: "flex flex-col justify-center gap-1",
   },
   variants: {
     isInvalid: {
@@ -30,6 +32,10 @@ export const checkbox = tv({
         checkbox: "border-danger",
       },
     },
+    radius: radiusVariant("checkbox"),
+  },
+  defaultVariants: {
+    radius: "md",
   },
 });
 

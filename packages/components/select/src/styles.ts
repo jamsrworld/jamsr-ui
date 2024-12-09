@@ -67,6 +67,7 @@ export const selectVariant = tv({
   },
   defaultVariants: {
     size: "md",
+    radius: "md",
   },
 });
 

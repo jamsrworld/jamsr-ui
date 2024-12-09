@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.63
+
+### Patch Changes
+
+- added radius
+
 ## 0.0.62
 
 ### Patch Changes

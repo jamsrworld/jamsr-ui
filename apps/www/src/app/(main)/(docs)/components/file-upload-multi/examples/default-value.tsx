@@ -3,8 +3,8 @@
 "use client";
 
 import { type FileUploadMultiState } from "@jamsr-ui/react";
-import { FileUploadUsage } from "./usage";
 import AvatarImg from "~/avatar.png";
+import { FileUploadUsage } from "./usage";
 
 export const FileUploadUsageValue = () => {
   const defaultValue: FileUploadMultiState[] = [

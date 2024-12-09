@@ -1,6 +1,6 @@
-import { useMergeRefs } from "@jamsr-ui/hooks";
 import { CircularProgress } from "@jamsr-ui/circular-progress";
-import { RefreshIcon, TrashIcon } from "@jamsr-ui/shared-icons";
+import { useMergeRefs } from "@jamsr-ui/hooks";
+import { CloseFilledIcon, RefreshIcon } from "@jamsr-ui/shared-icons";
 import React, { useId } from "react";
 import {
   useFileUploadSingle,
@@ -54,6 +54,10 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
       ? (inputProps?.ref as React.RefObject<HTMLInputElement>)
       : undefined,
   ]);
+  console.log({
+    previewUrl,
+    isImage,
+  });
   return (
     <Component {...getBaseProps()}>
       <label {...getLabelProps()} htmlFor={htmlForId}>
@@ -68,11 +72,6 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
             {info && <p {...getInfoProps()}>{info}</p>}
           </>
         )}
-        {previewUrl && isImage && (
-          <div {...getFileWrapperProps()}>
-            <img alt="" {...getImageProps()} />
-          </div>
-        )}
         {!isImage && !isEmpty && (
           <div {...getFileWrapperProps()}>
             {fileIcon}
@@ -82,9 +81,14 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
             )}
           </div>
         )}
+        {previewUrl && (
+          <div {...getFileWrapperProps()}>
+            <img alt="" {...getImageProps()} />
+          </div>
+        )}
         {showDeleteBtn && !isDisabled && !isEmpty && (
           <button {...getDeleteBtnProps()} type="button">
-            <TrashIcon />
+            <CloseFilledIcon className="size-4" />
           </button>
         )}
         {!!progress && (
@@ -95,7 +99,7 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
         {isFailed && (
           <div {...getOverlayProps()}>
             <span>failed</span>
-            <button type="button" onClick={onRetry}>
+            <button title="Delete" type="button" onClick={onRetry}>
               <RefreshIcon />
             </button>
           </div>

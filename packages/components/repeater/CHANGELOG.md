@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.40
+
+### Patch Changes
+
+- added radius
+
 ## 0.0.39
 
 ### Patch Changes

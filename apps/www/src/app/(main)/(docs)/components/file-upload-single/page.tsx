@@ -8,6 +8,7 @@ import { FileUploadControlled } from "./examples/controlled";
 import { FileUploadCustomized } from "./examples/customized";
 import { FileUploadUsageValue } from "./examples/default-value";
 import { FileUploadDisabled } from "./examples/disabled";
+import { FileUploadRadius } from "./examples/radius";
 import { FileUploadUsage } from "./examples/usage";
 
 export const metadata: Metadata = {
@@ -32,6 +33,9 @@ const FileUpload = () => {
       </VariantWrapper>
       <VariantWrapper heading="Default Value" code={code("default-value")}>
         <FileUploadUsageValue />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <FileUploadRadius />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <FileUploadControlled />

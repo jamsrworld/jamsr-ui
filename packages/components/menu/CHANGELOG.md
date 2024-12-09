@@ -1,5 +1,16 @@
 # @jamsr-ui/menu
 
+## 0.0.94
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.50
+  - @jamsr-ui/shared-icons@0.0.63
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.93
 
 ### Patch Changes

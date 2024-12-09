@@ -1,5 +1,14 @@
 # @jamsr-ui/link
 
+## 0.0.73
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.72
 
 ### Patch Changes

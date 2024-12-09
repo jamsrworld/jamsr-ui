@@ -1,18 +1,19 @@
 import type { VariantProps } from "@jamsr-ui/utils";
-import { tv } from "@jamsr-ui/utils";
+import { radiusVariant, tv } from "@jamsr-ui/utils";
 
+export const test = "";
 export const singleUploadVariants = tv({
   slots: {
-    base: "group flex flex-col gap-2",
+    base: "inline-flex flex-col gap-2",
     picker:
-      "group relative flex aspect-video select-none flex-col items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-divider",
-    image: "size-full rounded-md object-cover",
+      "group relative flex aspect-video select-none flex-col items-center justify-center border-2 border-solid border-default-200",
+    image: "size-full rounded-inherit object-cover",
     deleteBtn:
-      "absolute right-0 top-0 z-1 hidden hover:text-danger group-hover:block",
+      "absolute right-1 top-1 z-1 hidden rounded-full bg-content1 text-foreground hover:text-danger group-hover:block",
     description: "text-xs",
     info: "text-xs text-foreground-400",
     fileWrapper:
-      "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 bg-content1",
+      "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 rounded-inherit bg-content1",
     overlay:
       "absolute inset-0 flex size-full items-center justify-center bg-black/60 text-white",
     helperText: "text-xs text-foreground-500",
@@ -21,6 +22,7 @@ export const singleUploadVariants = tv({
     label: "shrink-0 select-none text-sm font-normal text-foreground",
   },
   variants: {
+    radius: radiusVariant(["picker"]),
     isDisabled: {
       true: {
         picker: "cursor-not-allowed opacity-disabled",
@@ -56,6 +58,7 @@ export const singleUploadVariants = tv({
   },
   defaultVariants: {
     isDisabled: false,
+    radius: "md",
   },
 });
 

@@ -1,6 +1,9 @@
 import { Sortable } from "@jamsr-ui/dnd";
 import { useMergeRefs } from "@jamsr-ui/hooks";
-import { CloseIcon, DragDropHorizontalIcon } from "@jamsr-ui/shared-icons";
+import {
+  CloseFilledIcon,
+  DragDropHorizontalIcon,
+} from "@jamsr-ui/shared-icons";
 import { useId } from "react";
 import { ProgressView } from "./progress-view";
 import type { UseFileUploadMultiProps } from "./use-file-upload";
@@ -71,7 +74,7 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
                 <button
                   ref={setActivatorNodeRef}
                   {...listeners}
-                  className="absolute left-1 top-1 z-10 hidden rounded bg-content1 group-hover:block"
+                  className="absolute left-1 top-1 z-10 hidden cursor-move rounded bg-content1 group-hover:block"
                   type="button"
                 >
                   <DragDropHorizontalIcon />
@@ -89,8 +92,9 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
                     type="button"
                     onClick={(e) => handleDelete(e, item.id)}
                     {...getDeleteBtnProps()}
+                    title="Delete"
                   >
-                    <CloseIcon className="size-4" />
+                    <CloseFilledIcon className="size-4" />
                   </button>
                 )}
               </div>

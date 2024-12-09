@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "@jamsr-ui/utils";
+import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const kbd = tv({
@@ -22,8 +22,12 @@ export const kbd = tv({
     abbr: "no-underline",
     content: "",
   },
-  variants: {},
-  defaultVariants: {},
+  variants: {
+    radius: radiusVariant("base"),
+  },
+  defaultVariants: {
+    radius: "md",
+  },
 });
 
 export type KbdVariantProps = VariantProps<typeof kbd>;

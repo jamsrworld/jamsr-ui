@@ -17,7 +17,7 @@ import {
   singleUploadVariants,
   type UploadSlots,
   type UploadVariants,
-} from "./style";
+} from "./styles";
 import { getFileExtension, getFileIconFromUrl, isImageExt } from "./utils";
 
 type Props = Omit<UploadVariants, "isDragActive"> & {
@@ -78,6 +78,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     onUploadSuccess,
     getFileUrlAfterUpload,
     label,
+    radius,
     ...restProps
   } = props;
   const xhrRef = useRef<XMLHttpRequest | null>(null);
@@ -203,6 +204,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
       e.preventDefault();
       e.stopPropagation();
       if (file) uploadFile(file);
+      setIsFailed(false);
     },
     [file, uploadFile],
   );
@@ -241,6 +243,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     isAvatar,
     isDragActive,
     isInvalid,
+    radius,
   });
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(

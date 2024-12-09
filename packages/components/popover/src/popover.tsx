@@ -20,10 +20,12 @@ import {
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps } from "@jamsr-ui/utils";
+import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { cloneElement, useRef } from "react";
+import { popover, type PopoverSlots, type PopoverVariantProps } from "./styles";
 
-export type PopoverProps = {
+export type PopoverProps = PopoverVariantProps & {
+  classNames?: SlotsToClasses<PopoverSlots>;
   children: React.ReactNode;
   trigger: React.JSX.Element;
   initialOpen?: boolean;
@@ -35,10 +37,6 @@ export type PopoverProps = {
   triggerOn?: "click" | "hover";
   showArrow?: boolean;
   className?: string;
-  classNames?: {
-    popover?: string;
-    arrow?: string;
-  };
   offset?: number;
   lockScroll?: boolean;
 };
@@ -62,6 +60,7 @@ export const Popover = ($props: PopoverProps) => {
     offset: offsetValue = 4,
     classNames,
     lockScroll = true,
+    radius,
   } = props;
 
   const [open, setOpen] = useControlledState(
@@ -128,6 +127,11 @@ export const Popover = ($props: PopoverProps) => {
       ref,
     }),
   );
+
+  const styles = popover({
+    radius,
+  });
+
   if (!enabled) return trigger;
 
   return (
@@ -139,11 +143,9 @@ export const Popover = ($props: PopoverProps) => {
             <FloatingFocusManager context={context} modal={isModal}>
               <div
                 data-component="popover"
-                className={cn(
-                  "z-popover rounded-2xl bg-content1 p-2 text-sm shadow-md backdrop-blur-3xl focus:outline-none",
-                  className,
-                  classNames?.popover,
-                )}
+                className={styles.base({
+                  className: cn(className, classNames?.base),
+                })}
                 ref={refs.setFloating}
                 style={floatingStyles}
                 {...getFloatingProps()}
@@ -152,7 +154,9 @@ export const Popover = ($props: PopoverProps) => {
                   <FloatingArrow
                     ref={arrowRef}
                     context={context}
-                    className={cn("fill-content1", classNames?.arrow)}
+                    className={styles.arrow({
+                      className: classNames?.arrow,
+                    })}
                   />
                 )}
                 {children}

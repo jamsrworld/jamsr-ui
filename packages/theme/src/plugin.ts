@@ -49,12 +49,12 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
           },
         });
         // variants
+        addVariant("ui-hover", "&[data-hovered=true]");
+        addVariant("ui-group-hover", ":merge(.group)[data-hovered=true] &");
         addVariant("ui-selected", "&[data-selected=true]");
         addVariant("ui-group-selected", ":merge(.group)[data-selected=true] &");
         addVariant("ui-checked", "&[data-checked=true]");
         addVariant("ui-group-checked", ":merge(.group)[data-checked=true] &");
-        addVariant("ui-hover", "&[data-hovered=true]");
-        addVariant("ui-group-hover", ":merge(.group)[data-hovered=true] &");
         addVariant("ui-focus", "&[data-focused=true]");
         addVariant("ui-group-focus", ":merge(.group)[data-focused=true] &");
         addVariant("ui-pressed", "&[data-pressed=true]");

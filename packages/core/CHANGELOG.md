@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.42
+
+### Patch Changes
+
+- added radius
+
 ## 0.0.41
 
 ### Patch Changes

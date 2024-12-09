@@ -1,5 +1,14 @@
 # @jamsr-ui/circular-progress
 
+## 0.0.3
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.2
 
 ### Patch Changes

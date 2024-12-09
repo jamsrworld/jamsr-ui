@@ -1,12 +1,13 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { TagsInputControlled } from "./examples/controlled";
-import { TagsInputUsage } from "./examples/usage";
 import { TagsInputDefaultValue } from "./examples/default-value";
 import { TagsInputInvalidState } from "./examples/invalid-state";
+import { TagsInputRadius } from "./examples/radius";
+import { TagsInputUsage } from "./examples/usage";
 
 export const metadata: Metadata = {
   title: "Editor",
@@ -29,6 +30,9 @@ const Editor = () => {
       </VariantWrapper>
       <VariantWrapper heading="Invalid State" code={code("invalid-state")}>
         <TagsInputInvalidState />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <TagsInputRadius />
       </VariantWrapper>
     </VariantPage>
   );

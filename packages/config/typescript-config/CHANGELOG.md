@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.43
+
+### Patch Changes
+
+- added radius
+
 ## 0.0.42
 
 ### Patch Changes

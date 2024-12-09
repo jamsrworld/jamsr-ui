@@ -6,7 +6,6 @@ import {
   useMergeRefs,
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { Typography } from "@jamsr-ui/typography";
 import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import { m, type Variants } from "framer-motion";
 import { useId } from "react";
@@ -116,21 +115,21 @@ export const Switch = ($props: SwitchProps) => {
         className={styles.mainWrapper({ className: classNames?.mainWrapper })}
       >
         {hasContent && (
-          <label
-            htmlFor={id}
-            data-slot="label"
-            className={styles.label({ className: classNames?.label })}
+          <div
+            data-slot="content"
+            className={styles.content({ className: classNames?.content })}
           >
-            <Typography
-              as="p"
-              data-slot="label-text"
-              className={styles.labelText({ className: classNames?.labelText })}
-            >
-              {label}
-            </Typography>
+            {label && (
+              <label
+                htmlFor={id}
+                data-slot="label"
+                className={styles.label({ className: classNames?.label })}
+              >
+                {label}
+              </label>
+            )}
             {description && (
-              <Typography
-                as="p"
+              <div
                 data-slot="description"
                 className={styles.description({
                   className: classNames?.description,
@@ -139,9 +138,9 @@ export const Switch = ($props: SwitchProps) => {
                 {typeof description === "function"
                   ? description(isChecked)
                   : description}
-              </Typography>
+              </div>
             )}
-          </label>
+          </div>
         )}
         <div
           data-slot="switch-wrapper"

@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  Button,
   Card,
   CardContent,
+  IconButton,
   Sortable,
   type SortableItemProps,
 } from "@jamsr-ui/react";
@@ -82,6 +82,7 @@ const Item = (props: ItemProps) => {
         style={styles}
         {...attributes}
       >
+        {/*  eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={item.imageUrl}
           alt={`${item.id}`}
@@ -95,9 +96,10 @@ const Item = (props: ItemProps) => {
           }}
         />
       </div>
-      <Button
+      <IconButton
+        aria-label="Reorder"
         className="absolute left-2 top-2 hidden group-hover:flex"
-        size="sm"
+        size="xs"
         ref={setActivatorNodeRef}
         isDisabled={isDisabled}
         {...listeners}
@@ -108,7 +110,7 @@ const Item = (props: ItemProps) => {
             d="M7 2a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 2zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 8zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 7 14zm6-8a2 2 0 1 0-.001-4.001A2 2 0 0 0 13 6zm0 2a2 2 0 1 0 .001 4.001A2 2 0 0 0 13 8zm0 6a2 2 0 1 0 .001 4.001A2 2 0 0 0 13 14z"
           />
         </svg>
-      </Button>
+      </IconButton>
     </div>
   );
 };

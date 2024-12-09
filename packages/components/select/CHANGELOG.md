@@ -1,5 +1,19 @@
 # @jamsr-ui/select
 
+## 0.0.96
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.76
+  - @jamsr-ui/button@0.0.78
+  - @jamsr-ui/chip@0.0.85
+  - @jamsr-ui/hooks@0.0.50
+  - @jamsr-ui/shared-icons@0.0.63
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.95
 
 ### Patch Changes

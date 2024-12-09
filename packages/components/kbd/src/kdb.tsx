@@ -6,9 +6,7 @@ export type KbdProps = UseKbdProps;
 
 export const Kbd = (props: KbdProps) => {
   const { Component, children, styles, classNames, keysToRender, getKbdProps } =
-    useKbd({
-      ...props,
-    });
+    useKbd(props);
 
   const keysContent = useMemo(() => {
     return keysToRender.map((key) => (

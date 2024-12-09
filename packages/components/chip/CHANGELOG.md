@@ -1,5 +1,16 @@
 # @jamsr-ui/chip
 
+## 0.0.85
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/button@0.0.78
+  - @jamsr-ui/shared-icons@0.0.63
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.84
 
 ### Patch Changes

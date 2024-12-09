@@ -7,7 +7,7 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import { useMemo } from "react";
-import { kbd, type KbdSlots, type KbdVariantProps } from "./style";
+import { kbd, type KbdSlots, type KbdVariantProps } from "./styles";
 import { type KbdKey } from "./utils";
 
 type Props = UIProps<"kbd"> & {
@@ -20,16 +20,25 @@ export type UseKbdProps = Props & KbdVariantProps;
 export const useKbd = ($props: UseKbdProps) => {
   const { kbd: kbdConfig = {} } = useUIStyle();
   const props = deepMergeProps(kbdConfig, $props);
-  const { as, children, className, classNames, keys, title, ...restProps } =
-    props;
+  const {
+    as,
+    children,
+    className,
+    classNames,
+    keys,
+    title,
+    radius,
+    ...restProps
+  } = props;
   const Component = as ?? "kbd";
 
   const styles = useMemo(
     () =>
       kbd({
         className,
+        radius,
       }),
-    [className],
+    [className, radius],
   );
 
   const keysToRender =

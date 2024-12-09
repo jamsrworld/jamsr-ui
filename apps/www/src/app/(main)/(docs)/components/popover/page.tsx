@@ -9,6 +9,7 @@ import { PopoverTriggerOnHover } from "./examples/trigger-on";
 import { PopoverUsage } from "./examples/usage";
 import { PopoverWithArrow } from "./examples/with-arrow";
 import { PopoverWithoutScroll } from "./examples/without-lock-scroll";
+import { PopoverRadius } from "./examples/radius";
 
 export const metadata: Metadata = {
   title: "Popover",
@@ -28,6 +29,9 @@ const Popover = () => {
       </VariantWrapper>
       <VariantWrapper heading="Trigger On Hover" code={code("trigger-on")}>
         <PopoverTriggerOnHover />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <PopoverRadius />
       </VariantWrapper>
       <VariantWrapper heading="Placement" code={code("placement")}>
         <PopoverPlacement />

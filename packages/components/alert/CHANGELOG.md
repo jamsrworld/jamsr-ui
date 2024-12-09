@@ -1,5 +1,16 @@
 # @jamsr-ui/alert
 
+## 0.0.90
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/typography@0.0.79
+  - @jamsr-ui/shared-icons@0.0.63
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.89
 
 ### Patch Changes

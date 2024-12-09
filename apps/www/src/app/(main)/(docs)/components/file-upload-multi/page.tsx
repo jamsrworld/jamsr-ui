@@ -1,13 +1,14 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { FileUploadUsage } from "./examples/usage";
-import { FileUploadDisabled } from "./examples/disabled";
-import { FileUploadUsageValue } from "./examples/default-value";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
 import { FileUploadControlled } from "./examples/controlled";
 import { FileUploadCustomized } from "./examples/customized";
+import { FileUploadUsageValue } from "./examples/default-value";
+import { FileUploadDisabled } from "./examples/disabled";
+import { FileUploadRadius } from "./examples/radius";
+import { FileUploadUsage } from "./examples/usage";
 
 export const metadata: Metadata = {
   title: "Multi File Upload",
@@ -28,6 +29,9 @@ const FileUpload = () => {
       </VariantWrapper>
       <VariantWrapper heading="Default Value" code={code("default-value")}>
         <FileUploadUsageValue />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <FileUploadRadius />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <FileUploadControlled />

@@ -1,5 +1,15 @@
 # @jamsr-ui/header
 
+## 0.0.79
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.73
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.78
 
 ### Patch Changes

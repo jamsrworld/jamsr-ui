@@ -1,5 +1,17 @@
 # @jamsr-ui/button
 
+## 0.0.78
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.3
+  - @jamsr-ui/ripple@0.0.75
+  - @jamsr-ui/hooks@0.0.50
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.77
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @jamsr-ui/dialog
 
+## 0.0.89
+
+### Patch Changes
+
+- added radius
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.4
+  - @jamsr-ui/hooks@0.0.50
+  - @jamsr-ui/shared-icons@0.0.63
+  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/utils@0.0.67
+
 ## 0.0.88
 
 ### Patch Changes

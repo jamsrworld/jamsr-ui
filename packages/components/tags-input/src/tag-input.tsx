@@ -18,8 +18,14 @@ export const TagsInput = ($props: TagsInputProps) => {
   const { tagsInput: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
 
-  const { onValueChange, defaultValue, value, classNames, ...restProps } =
-    props;
+  const {
+    onValueChange,
+    defaultValue,
+    value,
+    classNames,
+    isClearable,
+    ...restProps
+  } = props;
   const delimiters = ["Enter", ","];
 
   const [values = [], setValues] = useControlledState(
@@ -58,6 +64,10 @@ export const TagsInput = ($props: TagsInputProps) => {
     [setValues],
   );
 
+  const handleOnClear = useCallback(() => {
+    setValues([]);
+  }, [setValues]);
+
   const renderTags = useMemo(() => {
     return [...values].map((value) => (
       <Chip onDelete={() => handleOnDelete(value)} key={value}>
@@ -90,6 +100,8 @@ export const TagsInput = ($props: TagsInputProps) => {
         ...classNames,
       }}
       onPaste={handleOnPaste}
+      onClearInput={handleOnClear}
+      showClearButton={values.length > 0 && isClearable}
     >
       {renderTags}
     </Input>

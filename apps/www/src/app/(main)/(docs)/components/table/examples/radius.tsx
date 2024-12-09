@@ -26,13 +26,14 @@ export const TableRadius = (props: Partial<TableProps>) => {
   return (
     <div>
       <div className="mb-5 flex gap-4">
-        {radii.map((radius) => (
+        {radii.map((r) => (
           <Button
-            onClick={() => setRadius(radius)}
-            key={radius}
-            radius={radius}
+            onClick={() => setRadius(r)}
+            key={r}
+            radius={r}
+            variant={radius === r ? "solid" : "light"}
           >
-            {radius}
+            {r}
           </Button>
         ))}
       </div>

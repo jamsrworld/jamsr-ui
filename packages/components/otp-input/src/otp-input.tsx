@@ -1,6 +1,5 @@
 import {
   useControlledState,
-  useHover,
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
@@ -14,9 +13,13 @@ import {
   useMemo,
   useRef,
 } from "react";
-import { otpInput, type OtpInputSlots } from "./style";
+import {
+  otpInput,
+  type OtpInputSlots,
+  type OtpInputVariantProps,
+} from "./styles";
 
-export type OtpInputProps = {
+export type OtpInputProps = OtpInputVariantProps & {
   label?: string;
   placeholder?: string;
   defaultValue?: string;
@@ -56,13 +59,11 @@ export const OtpInput = ($props: OtpInputProps) => {
     classNames,
     disabled = false,
     isDisabled: propIsDisabled = false,
+    radius,
   } = props;
 
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled || disabled,
-  });
-  const { isHovered, ref: hoverRef } = useHover({
-    isDisabled,
   });
 
   const [value = "", setValue] = useControlledState(
@@ -173,7 +174,7 @@ export const OtpInput = ($props: OtpInputProps) => {
     }
   };
 
-  const refs = useMergeRefs([disableRef, hoverRef]);
+  const refs = useMergeRefs([disableRef]);
   const ref = useCallback(
     (el: HTMLInputElement | null, idx: number) => {
       if (el) {
@@ -203,6 +204,7 @@ export const OtpInput = ($props: OtpInputProps) => {
   const styles = otpInput({
     className,
     isInvalid,
+    radius,
   });
 
   const id = useId();

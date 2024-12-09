@@ -93,7 +93,7 @@ export const drawer = tv({
     scrollBehavior: "inside",
     size: "lg",
     isBordered: false,
-    backdrop: "blur",
+    backdrop: "opaque",
     anchor: "right",
   },
 });

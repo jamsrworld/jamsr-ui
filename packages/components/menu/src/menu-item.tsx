@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable react/prop-types */
 import { useFloatingTree, useListItem } from "@floating-ui/react";
+import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
@@ -8,6 +9,7 @@ import {
   deepMergeProps,
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
+import { type MenuVariantProps } from "./styles";
 import { useMenu } from "./use-menu";
 
 type Props = {
@@ -16,6 +18,7 @@ type Props = {
   endContent?: React.ReactNode;
   label?: string;
   preventCloseOnClick?: boolean;
+  color?: MenuVariantProps["color"];
 };
 
 export type MenuItemProps<T extends React.ElementType = "li"> =
@@ -26,7 +29,6 @@ export const MenuItem = <T extends React.ElementType = "li">(
 ) => {
   const { menuItem: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
-
   const {
     children,
     isDisabled,
@@ -36,6 +38,7 @@ export const MenuItem = <T extends React.ElementType = "li">(
     endContent,
     label,
     preventCloseOnClick = false,
+    color,
     ...restProps
   } = props;
   const menu = useMenu();
@@ -48,21 +51,27 @@ export const MenuItem = <T extends React.ElementType = "li">(
   const { styles } = menu;
   const Component = as ?? "li";
   const className = cn(
-    styles.menuItem({ className: $className }),
+    styles.menuItem({ className: $className, color }),
     menu.classNames?.menuItem,
   );
+
+  const { isHovered, ref: disableRef } = useHover({
+    isDisabled,
+  });
+  const refs = useMergeRefs([item.ref, disableRef]);
   return (
     <Component
       data-slot="item"
-      ref={item.ref}
+      ref={refs}
       role="menuitem"
       className={className}
-      tabIndex={isActive ? 0 : -1}
       data-active={dataAttr(isActive)}
       data-disabled={dataAttr(isDisabled)}
+      data-hovered={dataAttr(isHovered)}
       aria-disabled={dataAttr(isDisabled)}
       {...restProps}
       {...(!isDisabled && {
+        tabIndex: isActive ? 0 : -1,
         onClick(event: React.MouseEvent<HTMLLIElement>) {
           restProps.onClick?.(event);
           if (!preventCloseOnClick) tree?.events.emit("click");

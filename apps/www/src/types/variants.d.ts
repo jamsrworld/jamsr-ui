@@ -181,6 +181,7 @@ export type VariantTypes = {
   link: ["underline", "usage"];
   menu: [
     "backdrop",
+    "colors",
     "controlled",
     "customize",
     "nested",
@@ -195,7 +196,7 @@ export type VariantTypes = {
     "without-lock-scroll",
   ];
   "number-input": [];
-  "otp-input": ["6-digits", "controlled", "numbers-only", "usage"];
+  "otp-input": ["6-digits", "controlled", "numbers-only", "radius", "usage"];
   pagination: [];
   popover: [
     "controlled",

@@ -1,5 +1,17 @@
 # @jamsr-ui/react
 
+## 0.0.205
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/confirmation@0.0.70
+  - @jamsr-ui/otp-input@0.0.74
+  - @jamsr-ui/drawer@1.0.75
+  - @jamsr-ui/menu@0.0.95
+  - @jamsr-ui/rhf@0.0.50
+  - @jamsr-ui/editor@0.0.106
+
 ## 0.0.204
 
 ### Patch Changes

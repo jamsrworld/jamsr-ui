@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "@jamsr-ui/utils";
+import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 
@@ -10,7 +10,7 @@ export const otpInput = tv({
     inputsWrapper: "flex gap-2",
     helperText: "text-xs text-foreground-600",
     input: [
-      "size-12 rounded border-2 border-default-200 bg-transparent text-center text-base outline-none",
+      "size-12 border-2 border-default-200 bg-transparent text-center text-base outline-none",
       "focus:border-primary enabled:hover:border-default-400 disabled:cursor-not-allowed disabled:opacity-50 ",
     ],
   },
@@ -20,6 +20,10 @@ export const otpInput = tv({
         helperText: "text-danger",
       },
     },
+    radius: radiusVariant("input"),
+  },
+  defaultVariants: {
+    radius: "md",
   },
 });
 

@@ -59,7 +59,12 @@ export const Confirmation = ($props: ConfirmationProps) => {
   };
 
   return (
-    <Dialog isOpen={isOpen} onOpenChange={onClose} closeButton={null}>
+    <Dialog
+      isOpen={isOpen}
+      onOpenChange={onClose}
+      isAnimationDisabled
+      closeButton={null}
+    >
       <DialogContent
         className={cn(
           "max-w-[280px] rounded-lg",

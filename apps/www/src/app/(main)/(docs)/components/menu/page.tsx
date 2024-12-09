@@ -4,6 +4,7 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { MenuBackdrop } from "./examples/backdrop";
+import { MenuColors } from "./examples/colors";
 import { MenuControlled } from "./examples/controlled";
 import { MenuCustomize } from "./examples/customize";
 import { MenuNested } from "./examples/nested";
@@ -32,6 +33,9 @@ const Menu = () => {
       </VariantWrapper>
       <VariantWrapper heading="Radius" code={code("usage")}>
         <MenuRadius />
+      </VariantWrapper>
+      <VariantWrapper heading="Colors" code={code("colors")}>
+        <MenuColors />
       </VariantWrapper>
       <VariantWrapper heading="Nested" code={code("nested")}>
         <MenuNested />

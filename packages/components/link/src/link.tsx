@@ -9,8 +9,8 @@ export type LinkProps<T extends React.ElementType = "a"> =
 export const Link = <T extends React.ElementType = "a">(
   $props: LinkProps<T>,
 ) => {
-  const { link:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { link: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const { as, children, className, underline, ...restProps } = props;
   const Component = as ?? "a";

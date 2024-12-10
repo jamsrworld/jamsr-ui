@@ -45,7 +45,7 @@ export const inputVariants = tv({
         inputWrapper: "",
       },
       outlined: {
-        inputWrapper: "relative rounded-xl",
+        inputWrapper: "relative",
         startContent: "group-data-[filled-within=true]:mt-4",
         labelWrapper:
           "pointer-events-none absolute inset-0 flex size-full items-start justify-between",

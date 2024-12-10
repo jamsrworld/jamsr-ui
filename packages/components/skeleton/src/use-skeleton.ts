@@ -24,8 +24,8 @@ interface Props extends UIProps<"div"> {
 export type UseSkeletonProps = Props & SkeletonVariantProps;
 
 export function useSkeleton($props: UseSkeletonProps) {
-  const { skeleton:  Props = {}, globalConfig } = useUIStyle();
-  const $$props = deepMergeProps(Props, $props, globalConfig);
+  const { skeleton: Props = {} } = useUIStyle();
+  const $$props = deepMergeProps(Props, $props);
 
   const [props, variantProps] = mapPropsVariants($$props, skeleton.variantKeys);
   const {

@@ -1,20 +1,7 @@
 {
   "name": "@jamsr-ui/toast",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "main": "src/index.ts",
-  "sideEffects": false,
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",

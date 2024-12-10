@@ -14,7 +14,7 @@ type Story = StoryObj<AlertProps>;
 
 export const Default: Story = {
   args: {
-    severity: "success",
+    status: "success",
     children: "Here is a gentle confirmation that your action was successful.",
   },
 };
@@ -23,14 +23,14 @@ export const Description: Story = {
   args: {
     heading: "Warning!",
     children: "This is a warning message.",
-    severity: "warning",
+    status: "warning",
   },
 };
 
 export const CustomIcon: Story = {
   args: {
     children: "This is a error message.",
-    severity: "danger",
+    status: "danger",
     icon: <CloseIcon />,
   },
 };
@@ -38,7 +38,7 @@ export const CustomIcon: Story = {
 export const WithoutIcon: Story = {
   args: {
     children: "This is a warning message.",
-    severity: "warning",
+    status: "warning",
     icon: null,
   },
 };
@@ -47,7 +47,7 @@ export const WithAction: Story = {
   args: {
     heading: "Warning!",
     children: "Your plan will expire soon, please renew your plan.",
-    severity: "warning",
+    status: "warning",
     action: (
       <Button variant="light" color="warning">
         Renew Now!
@@ -57,7 +57,7 @@ export const WithAction: Story = {
 };
 
 const SeverityTemplate = (props: AlertProps) => {
-  const severity: AlertVariantProps["severity"][] = [
+  const statuses: AlertVariantProps["status"][] = [
     "info",
     "success",
     "warning",
@@ -67,15 +67,15 @@ const SeverityTemplate = (props: AlertProps) => {
 
   return (
     <div className="grid gap-4">
-      {severity.map((severity) => (
+      {statuses.map((status) => (
         <Alert
           {...props}
-          key={severity}
-          severity={severity}
+          key={status}
+          status={status}
           className="capitalize"
-          heading={severity}
+          heading={statuses}
         >
-          This is a description message for {severity}
+          This is a description message for {statuses}
         </Alert>
       ))}
     </div>

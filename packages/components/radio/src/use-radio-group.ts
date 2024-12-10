@@ -10,7 +10,7 @@ import {
 import type { ComponentProps } from "react";
 import { useCallback } from "react";
 import type { RadioProps } from "./radio";
-import { radioGroupVariant, type RadioGroupSlots } from "./style";
+import { radioGroupVariant, type RadioGroupSlots } from "./styles";
 
 type Common = Pick<
   RadioProps,
@@ -38,8 +38,8 @@ export type UseRadioGroupProps<T extends string = string> = Props<T> &
 export const useRadioGroup = <T extends string>(
   $props: UseRadioGroupProps<T>,
 ) => {
-  const { radioGroup:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { radioGroup: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const {
     as,

@@ -358,6 +358,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -420,6 +423,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -476,6 +482,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -529,6 +538,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -667,6 +679,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -754,6 +769,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -878,6 +896,9 @@ importers:
         specifier: 1.1.8
         version: 1.1.8(@tiptap/core@2.5.4(@tiptap/pm@2.8.0))(@tiptap/extension-image@2.5.2(@tiptap/core@2.5.4(@tiptap/pm@2.8.0)))(@tiptap/pm@2.8.0)
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -915,6 +936,9 @@ importers:
         specifier: ^14.2.3
         version: 14.2.9(react@19.0.0)
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -949,6 +973,9 @@ importers:
         specifier: ^14.2.3
         version: 14.2.9(react@19.0.0)
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1017,6 +1044,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1051,6 +1081,9 @@ importers:
       '@jamsr-ui/popover':
         specifier: workspace:^
         version: link:../popover
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1073,6 +1106,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1095,6 +1131,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1154,6 +1193,9 @@ importers:
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1182,6 +1224,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1219,6 +1264,9 @@ importers:
       '@jamsr-ui/typography':
         specifier: workspace:^
         version: link:../typography
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1247,6 +1295,9 @@ importers:
       '@jamsr-ui/card':
         specifier: workspace:^
         version: link:../card
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1278,6 +1329,9 @@ importers:
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1379,6 +1433,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1425,6 +1482,9 @@ importers:
       '@jamsr-ui/card':
         specifier: workspace:^
         version: link:../card
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1524,6 +1584,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1555,6 +1618,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1589,6 +1655,9 @@ importers:
       '@jamsr-ui/button':
         specifier: workspace:^
         version: link:../button
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1648,6 +1717,9 @@ importers:
       '@jamsr-ui/avatar':
         specifier: workspace:^
         version: link:../avatar
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1682,6 +1754,9 @@ importers:
         specifier: workspace:^
         version: link:../../utils
     devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1

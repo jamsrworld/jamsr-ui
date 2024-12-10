@@ -16,8 +16,8 @@ import {
 import type { ComponentProps } from "react";
 import { useCallback } from "react";
 import { useRadioGroupContext } from "./radio-group-context";
-import type { RadioSlots, RadioVariantProps } from "./style";
-import { radioVariant } from "./style";
+import type { RadioSlots, RadioVariantProps } from "./styles";
+import { radioVariant } from "./styles";
 
 interface Props extends UIProps<"input", keyof RadioVariantProps> {
   children?: React.ReactNode;
@@ -31,8 +31,8 @@ interface Props extends UIProps<"input", keyof RadioVariantProps> {
 export type UseRadioProps = Props & RadioVariantProps;
 
 export const useRadio = ($props: UseRadioProps) => {
-  const { radio:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { radio: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const context = useRadioGroupContext();
   const {

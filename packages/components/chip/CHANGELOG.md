@@ -1,5 +1,13 @@
 # @jamsr-ui/chip
 
+## 0.0.88
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/button@0.0.81
+  - @jamsr-ui/utils@0.0.69
+
 ## 0.0.87
 
 ### Patch Changes

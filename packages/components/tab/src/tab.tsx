@@ -17,8 +17,8 @@ export type TabProps<T extends React.ElementType = "button"> =
 export const Tab = <T extends React.ElementType = "button">(
   $props: TabProps<T>,
 ) => {
-  const { tab:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { tab: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const { heading, value, onClick, as, startContent, endContent } =
     props as TabProps;

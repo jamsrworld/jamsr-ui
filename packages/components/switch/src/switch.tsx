@@ -45,8 +45,8 @@ type Props = {
 export type SwitchProps = SwitchVariantProps & Props;
 
 export const Switch = ($props: SwitchProps) => {
-  const { switch:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { switch: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
   const id = useId();
   const {
     checked,

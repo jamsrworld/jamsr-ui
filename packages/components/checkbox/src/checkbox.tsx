@@ -21,6 +21,7 @@ export type CheckboxProps = CheckboxVariantProps & {
   labelProps?: ComponentProps<"label">;
   description?: React.ReactNode;
   defaultChecked?: boolean;
+  checked?: boolean;
   isChecked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
   helperText?: string;
@@ -33,12 +34,13 @@ export type CheckboxProps = CheckboxVariantProps & {
 };
 
 export const Checkbox = ($props: CheckboxProps) => {
-  const { checkbox:  Props = {}, globalConfig } = useUIStyle();
+  const { checkbox: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
   const id = useId();
   const {
     isChecked: $checked,
     defaultChecked,
+    checked: propChecked,
     label,
     labelProps,
     onCheckedChange,
@@ -56,7 +58,7 @@ export const Checkbox = ($props: CheckboxProps) => {
   } = props;
 
   const [checked = false, setChecked] = useControlledState(
-    defaultChecked,
+    defaultChecked ?? propChecked,
     $checked,
     onCheckedChange,
   );

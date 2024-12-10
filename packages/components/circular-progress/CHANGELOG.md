@@ -1,5 +1,13 @@
 # @jamsr-ui/circular-progress
 
+## 0.0.5
+
+### Patch Changes
+
+- fix types
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.69
+
 ## 0.0.4
 
 ### Patch Changes

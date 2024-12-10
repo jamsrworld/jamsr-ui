@@ -54,10 +54,6 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
       ? (inputProps?.ref as React.RefObject<HTMLInputElement>)
       : undefined,
   ]);
-  console.log({
-    previewUrl,
-    isImage,
-  });
   return (
     <Component {...getBaseProps()}>
       <label {...getLabelProps()} htmlFor={htmlForId}>

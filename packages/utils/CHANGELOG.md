@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.69
+
+### Patch Changes
+
+- fix types
+
 ## 0.0.68
 
 ### Patch Changes

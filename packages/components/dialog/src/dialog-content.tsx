@@ -15,8 +15,8 @@ export type DialogContentProps<T extends React.ElementType = "div"> =
 export const DialogContent = <T extends React.ElementType = "div">(
   $props: ComponentPropsWithAs<T, DialogContentProps>,
 ) => {
-  const { dialogContent:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { dialogContent:  Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const { as, children, className } = props;
   const {

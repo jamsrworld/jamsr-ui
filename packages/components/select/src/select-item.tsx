@@ -19,8 +19,8 @@ export type SelectItemProps<T extends React.ElementType = "button"> =
 export const SelectItem = <T extends React.ElementType = "button">(
   $props: SelectItemProps<T>,
 ) => {
-  const { selectItem:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { selectItem: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
   const {
     children,
     className,

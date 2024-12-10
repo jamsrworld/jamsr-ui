@@ -38,7 +38,7 @@ const Template = () => {
         >
           Search
         </MenuItem>
-        <MenuItem disabled>Redo</MenuItem>
+        <MenuItem isDisabled>Redo</MenuItem>
         <MenuItem>Cut</MenuItem>
         <Menu trigger="Copy as">
           <MenuItem>Text</MenuItem>
@@ -49,7 +49,7 @@ const Template = () => {
           <MenuItem>Mail</MenuItem>
           <MenuItem>Instagram</MenuItem>
         </Menu>
-        <MenuItem disabled>Edit</MenuItem>
+        <MenuItem isDisabled>Edit</MenuItem>
         <MenuItem className="data-[active=true]:bg-danger">Delete</MenuItem>
       </Menu>
     </div>

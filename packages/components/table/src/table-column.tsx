@@ -12,8 +12,8 @@ export type TableColumnProps = UIProps<"th">;
 export const TableColumn = <T extends React.ElementType = "th">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableColumn:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { tableColumn:  Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const {
     as,

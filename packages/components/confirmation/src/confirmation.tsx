@@ -33,8 +33,8 @@ export type ConfirmationProps = {
 };
 
 export const Confirmation = ($props: ConfirmationProps) => {
-  const { confirmation:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { confirmation: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const { isOpen, onClose, options: confirmation } = useConfirmation();
   if (!confirmation) return null;

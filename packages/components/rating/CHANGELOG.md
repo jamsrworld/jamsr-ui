@@ -1,5 +1,11 @@
 # @jamsr-ui/rating
 
+## 0.0.37
+
+### Patch Changes
+
+- fix types
+
 ## 0.0.36
 
 ### Patch Changes

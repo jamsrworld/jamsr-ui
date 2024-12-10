@@ -24,7 +24,7 @@ const ControlledCheckbox = () => {
   return (
     <Checkbox
       label="Controlled Checkbox"
-      checked={checked}
+      isChecked={checked}
       onCheckedChange={setChecked}
     />
   );

@@ -24,8 +24,8 @@ type Props = UIProps<"div"> & {
 export type UseStepperProps = Props & StepperVariantsProps;
 
 export const useStepper = ($props: UseStepperProps) => {
-  const { stepper:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { stepper: Props = {} } = useUIStyle();
+  const props = deepMergeProps(Props, $props);
 
   const {
     as,

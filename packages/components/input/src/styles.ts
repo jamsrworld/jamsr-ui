@@ -2,7 +2,7 @@ import {
   groupDataFocusVisibleClasses,
   radiusVariant,
   tv,
-  type VariantProps
+  type VariantProps,
 } from "@jamsr-ui/utils";
 
 export const test = "";
@@ -84,7 +84,7 @@ export const inputVariants = tv({
     },
     isFilled: {
       true: {
-        inputWrapper: "border-none bg-default-100 hover:bg-default-50",
+        inputWrapper: "border-none bg-default-100 hover:bg-default-100/70",
       },
     },
   },

@@ -15,7 +15,7 @@ export const singleUploadVariants = tv({
     fileWrapper:
       "absolute inset-0 flex size-full flex-col items-center justify-center gap-1 rounded-inherit bg-content1",
     overlay:
-      "absolute inset-0 flex size-full items-center justify-center bg-black/60 text-white",
+      "absolute inset-0 flex size-full items-center justify-center rounded-inherit bg-black/60 text-white",
     helperText: "text-xs text-foreground-500",
     fileName: "max-w-[90%] truncate text-center text-xs",
     fileSize: "text-xs text-foreground-400",

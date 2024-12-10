@@ -1,5 +1,11 @@
 # @jamsr-ui/input
 
+## 0.0.105
+
+### Patch Changes
+
+- fix input
+
 ## 0.0.104
 
 ### Patch Changes

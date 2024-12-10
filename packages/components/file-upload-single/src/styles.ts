@@ -7,7 +7,7 @@ export const singleUploadVariants = tv({
     base: "inline-flex flex-col gap-2",
     picker:
       "group relative flex aspect-video select-none flex-col items-center justify-center border-2 border-solid border-default-200",
-    image: "size-full rounded-inherit object-cover",
+    image: "size-full rounded-inherit object-contain",
     deleteBtn:
       "absolute right-1 top-1 z-1 hidden rounded-full bg-content1 text-foreground hover:text-danger group-hover:block",
     description: "text-xs",
@@ -37,6 +37,7 @@ export const singleUploadVariants = tv({
     isAvatar: {
       true: {
         picker: "aspect-square size-24 rounded-full",
+        image: "object-cover",
       },
       false: {
         picker: "gap-4 p-4",

@@ -17,9 +17,9 @@ import {
 
 const variants: Variants = {
   initial: {},
-  tapped: {
-    width: 30,
-  },
+  tapped: (size: SwitchVariantProps["size"]) => ({
+    width: (size === "sm" && 22) || (size === "md" && 26) || 30,
+  }),
 };
 
 type Props = {
@@ -173,6 +173,7 @@ export const Switch = ($props: SwitchProps) => {
             <m.div
               data-slot="thumb"
               variants={variants}
+              custom={size}
               layoutId={id}
               className={styles.thumb({ className: classNames?.thumb })}
             />

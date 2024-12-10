@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.25
+
+### Patch Changes
+
+- fix hooks
+
 ## 0.0.24
 
 ### Patch Changes

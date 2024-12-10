@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/eslint-config",
-  "version": "0.0.44",
+  "version": "0.0.45",
   "private": true,
   "files": [
     "next.js"

@@ -1,4 +1,9 @@
-import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
+import {
+  groupDataFocusVisibleClasses,
+  radiusVariant,
+  tv,
+  type VariantProps
+} from "@jamsr-ui/utils";
 
 export const test = "";
 export const inputVariants = tv({
@@ -13,6 +18,7 @@ export const inputVariants = tv({
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
       "ui-group-focus:border-primary ui-group-focus:ring-primary",
       "ui-group-hover:border-default-400",
+      ...groupDataFocusVisibleClasses,
     ],
     innerWrapper: "flex h-full items-center",
     input: [
@@ -32,11 +38,6 @@ export const inputVariants = tv({
     fullWidth: {
       true: {
         base: "w-full",
-      },
-    },
-    isFilled: {
-      true: {
-        inputWrapper: "bg-default/20 hover:bg-default/30",
       },
     },
     radius: radiusVariant("inputWrapper"),
@@ -79,6 +80,11 @@ export const inputVariants = tv({
     isOptional: {
       true: {
         notation: "text-success",
+      },
+    },
+    isFilled: {
+      true: {
+        inputWrapper: "border-none bg-default-100 hover:bg-default-50",
       },
     },
   },

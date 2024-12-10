@@ -42,5 +42,8 @@ export const useHover = <T extends HTMLElement>(options?: UseHoverOptions) => {
     };
   }, [enterDelay, exitDelay, isDisabled]);
 
+  if (isDisabled) {
+    return { ref, isHovered: false };
+  }
   return { ref, isHovered };
 };

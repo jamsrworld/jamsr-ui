@@ -1,6 +1,7 @@
 import {
   useControlledState,
   useFocus,
+  useFocusVisible,
   useHover,
   useIsDisabled,
   useMergeRefs,
@@ -116,7 +117,11 @@ export const useInput = ($props: UseInputProps) => {
   const { isHovered, ref: hoverRef } = useHover<HTMLDivElement>({
     isDisabled,
   });
-  const refs = useMergeRefs([ref, disableRef, focusRef]);
+  const { isFocusVisible, ref: focusVisibleRef } =
+    useFocusVisible<HTMLInputElement>({
+      isDisabled,
+    });
+  const refs = useMergeRefs([ref, disableRef, focusRef, focusVisibleRef]);
   const inputDOMRef = useDOMRef(refs);
   const inputWrapperRef = useMergeRefs([hoverRef, $inputWrapperRef]);
 
@@ -216,6 +221,7 @@ export const useInput = ($props: UseInputProps) => {
         "data-has-end-content": dataAttr(hasEndContent),
         "data-disabled": dataAttr(isDisabled),
         "aria-disabled": dataAttr(isDisabled),
+        "data-focus-visible": dataAttr(isFocusVisible),
         ...props,
       };
     },
@@ -230,6 +236,7 @@ export const useInput = ($props: UseInputProps) => {
       hasStartContent,
       hasEndContent,
       isDisabled,
+      isFocusVisible,
     ],
   );
 

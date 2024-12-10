@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.42
+
+### Patch Changes
+
+- fix hooks
+
 ## 0.0.41
 
 ### Patch Changes

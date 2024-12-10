@@ -7,12 +7,14 @@ import { InputClearable } from "./examples/clearable";
 import { InputControlled } from "./examples/controlled";
 import { InputDisabled } from "./examples/disabled";
 import { InputErrorState } from "./examples/error-state";
+import { InputFilled } from "./examples/filled";
 import { InputHelperText } from "./examples/helper-text";
 import { InputLabelHelper } from "./examples/label-helper";
 import { InputNumberOnly } from "./examples/numbers-only";
 import { InputOptional } from "./examples/optional";
 import { InputOutlinedAllProps } from "./examples/outlined-all-props";
 import { InputPlaceholder } from "./examples/placeholder";
+import { InputRadius } from "./examples/radius";
 import { InputRequired } from "./examples/required";
 import { InputSecuredText } from "./examples/secured-text";
 import { InputSizes } from "./examples/sizes";
@@ -23,7 +25,6 @@ import { InputWithIcon } from "./examples/with-icon";
 import { InputWithPlaceholder } from "./examples/with-placeholder";
 import { InputWithStartContent } from "./examples/with-start-content";
 import { InputWithoutLabel } from "./examples/without-label";
-import { InputRadius } from "./examples/radius";
 
 export const metadata: Metadata = {
   title: "Input",
@@ -46,6 +47,9 @@ const Input = () => {
       </VariantWrapper>
       <VariantWrapper heading="Variant" code={code("variants")}>
         <InputVariants />
+      </VariantWrapper>
+      <VariantWrapper heading="Filled" code={code("filled")}>
+        <InputFilled />
       </VariantWrapper>
       <VariantWrapper heading="Helper Text" code={code("helper-text")}>
         <InputHelperText />

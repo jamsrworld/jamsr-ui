@@ -35,5 +35,8 @@ export const useFocus = <T extends HTMLElement>(
     };
   }, [onFocusStart, onFocusEnd, isDisabled]);
 
+  if (isDisabled) {
+    return { ref, isFocused: false };
+  }
   return { ref, isFocused };
 };

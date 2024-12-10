@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.0.15
+
+### Patch Changes
+
+- fix hooks
+
 ## 0.0.14
 
 ### Patch Changes

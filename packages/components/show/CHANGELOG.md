@@ -1,5 +1,11 @@
 # @jamsr-ui/show
 
+## 0.0.7
+
+### Patch Changes
+
+- fix hooks
+
 ## 0.0.6
 
 ### Patch Changes

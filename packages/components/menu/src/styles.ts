@@ -7,7 +7,7 @@ export const menuVariants = tv({
     base: "inline-block transition-transform duration-300 ui-open:scale-95 ui-open:opacity-50",
     backdrop: "z-backdrop",
     popover:
-      "z-popover box-border inline-flex min-w-[200px] flex-col justify-center bg-content1 p-1 text-sm shadow-md outline-none",
+      "z-popover box-border inline-flex min-w-[150px] flex-col justify-center bg-content1 p-1 text-sm shadow-md outline-none",
     menuItem: [
       "relative box-border flex size-full cursor-pointer select-none items-center gap-2 px-2 py-1.5 text-left outline-none focus:bg-content2 ui-hover:bg-content2 ui-disabled:cursor-not-allowed ui-disabled:opacity-60",
       "ui-active:bg-content3",

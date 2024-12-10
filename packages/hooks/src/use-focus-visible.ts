@@ -70,5 +70,8 @@ export const useFocusVisible = <T extends HTMLElement>(
     };
   }, [onFocusVisible, onBlurVisible, isDisabled, isFocusVisible]);
 
+  if (isDisabled) {
+    return { ref, isFocusVisible: false };
+  }
   return { ref, isFocusVisible };
 };

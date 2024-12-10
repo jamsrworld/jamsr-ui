@@ -1,5 +1,6 @@
 "use client";
 
+import { useKeyPress } from "@jamsr-ui/hooks";
 import {
   Button,
   Checkbox,
@@ -22,6 +23,11 @@ import { useState } from "react";
 const Page = () => {
   const [isDisabled, setIsDisabled] = useState(false);
   const onToggle = () => setIsDisabled((prev) => !prev);
+
+  useKeyPress("a", () => setIsDisabled(true), {
+    isWindow: true,
+  });
+
   return (
     <div className="container mx-auto max-w-screen-sm py-24">
       <fieldset disabled={isDisabled}>

@@ -20,7 +20,7 @@ export type VariantTypes = {
   "file-upload-single": ["avatar", "controlled", "customized", "default-value", "disabled", "radius", "usage"];
   "header": ["hide-on-scroll", "static", "usage", "with-border"];
   "icon-button": ["colors", "disabled", "loading", "radius", "sizes", "usage", "variants-colors", "variants"];
-  "input": ["clearable", "controlled", "disabled", "error-state", "helper-text", "label-helper", "numbers-only", "optional", "outlined-all-props", "placeholder", "radius", "required", "secured-text", "sizes", "standard-all-props", "usage", "variants", "with-end-content", "with-icon", "with-placeholder", "with-start-content", "without-label"];
+  "input": ["clearable", "controlled", "disabled", "error-state", "filled", "helper-text", "label-helper", "numbers-only", "optional", "outlined-all-props", "placeholder", "radius", "required", "secured-text", "sizes", "standard-all-props", "usage", "variants", "with-end-content", "with-icon", "with-placeholder", "with-start-content", "without-label"];
   "kbd": ["keys", "radius", "usage"];
   "linear-progress": ["colors", "controlled", "usage"];
   "link": ["underline", "usage"];
@@ -40,7 +40,7 @@ export type VariantTypes = {
   "skeleton": ["usage"];
   "slider": [];
   "stepper": ["controlled", "events", "min-max-value", "usage"];
-  "switch": ["controlled", "description", "disabled", "invalid-state", "label-placement", "readonly", "usage", "with-label"];
+  "switch": ["colors", "controlled", "description", "disabled", "invalid-state", "label-placement", "readonly", "sizes", "usage", "with-label"];
   "tab": ["as", "colors", "customized", "disabled-item", "disabled", "outside", "radius", "sizes", "usage", "variants", "with-icons"];
   "table": ["allow-hover", "bordered", "radius", "usage"];
   "tags-input": ["controlled", "default-value", "invalid-state", "radius", "usage"];

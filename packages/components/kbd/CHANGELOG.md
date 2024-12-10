@@ -1,5 +1,14 @@
 # @jamsr-ui/kbd
 
+## 0.0.11
+
+### Patch Changes
+
+- fix hooks
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.70
+  - @jamsr-ui/styles@0.0.14
+
 ## 0.0.10
 
 ### Patch Changes

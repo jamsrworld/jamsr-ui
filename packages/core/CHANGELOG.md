@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.44
+
+### Patch Changes
+
+- fix hooks
+
 ## 0.0.43
 
 ### Patch Changes

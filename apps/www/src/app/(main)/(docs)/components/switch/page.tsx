@@ -3,12 +3,14 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
+import { SwitchColors } from "./examples/colors";
 import { SwitchControlled } from "./examples/controlled";
 import { SwitchDescription } from "./examples/description";
 import { SwitchDisabled } from "./examples/disabled";
 import { SwitchInvalidState } from "./examples/invalid-state";
 import { SwitchLabelPlacement } from "./examples/label-placement";
 import { SwitchReadonly } from "./examples/readonly";
+import { SwitchSizes } from "./examples/sizes";
 import { SwitchUsage } from "./examples/usage";
 import { SwitchWithLabel } from "./examples/with-label";
 
@@ -27,6 +29,12 @@ const Switch = () => {
       </VariantWrapper>
       <VariantWrapper heading="With Label" code={code("with-label")}>
         <SwitchWithLabel />
+      </VariantWrapper>
+      <VariantWrapper heading="Colors" code={code("colors")}>
+        <SwitchColors />
+      </VariantWrapper>
+      <VariantWrapper heading="Sizes" code={code("sizes")}>
+        <SwitchSizes />
       </VariantWrapper>
       <VariantWrapper heading="Readonly" code={code("readonly")}>
         <SwitchReadonly />

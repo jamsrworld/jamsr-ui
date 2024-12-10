@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.24
+
+### Patch Changes
+
+- fix hooks
+
 ## 0.0.23
 
 ### Patch Changes

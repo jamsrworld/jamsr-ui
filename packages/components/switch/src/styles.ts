@@ -5,16 +5,16 @@ export const switchVariants = tv({
   slots: {
     base: "group flex flex-col gap-2",
     switch: [
-      "flex cursor-pointer items-center rounded-full bg-default-200 p-1",
       ...focusVisibleClasses,
+      "flex cursor-pointer items-center rounded-full bg-default-200 p-1",
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
       "cursor-default ui-interactive:cursor-pointer ui-interactive:hover:opacity-95",
       "justify-start ui-group-checked:justify-end",
     ],
     thumb: "size-8 rounded-full bg-white shadow-md",
     helperText: "text-xs text-foreground-400",
-    content: "grid grow select-none gap-1",
-    label: "text-sm ui-group-interactive:cursor-pointer",
+    content: "grid grow gap-1",
+    label: "select-none text-sm ui-group-interactive:cursor-pointer",
     description: "text-xs text-foreground-500",
     mainWrapper: "flex items-center justify-between gap-2",
     switchWrapper: "",
@@ -36,7 +36,7 @@ export const switchVariants = tv({
       warning: {
         switch: "ui-group-checked:bg-warning",
       },
-      error: {
+      danger: {
         switch: "ui-group-checked:bg-danger",
       },
     },

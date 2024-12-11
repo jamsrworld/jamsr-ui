@@ -1,4 +1,9 @@
-import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
+import {
+  focusVisibleClasses,
+  radiusVariant,
+  tv,
+  type VariantProps,
+} from "@jamsr-ui/utils";
 
 export const test = "";
 export const checkbox = tv({
@@ -13,8 +18,9 @@ export const checkbox = tv({
       "shrink-0 select-none text-sm font-normal leading-none text-foreground ui-group-interactive:cursor-pointer ui-group-disabled:cursor-not-allowed",
     helperText: "text-xs text-foreground-600",
     checkbox: [
+      ...focusVisibleClasses,
       "border-default-200 ui-group-hover:border-default-400",
-      "relative size-5 appearance-none border-2 transition-all duration-500 ui-group-checked:border-primary ui-group-checked:bg-primary ui-group-interactive:cursor-pointer",
+      "relative size-5 appearance-none border-2 ui-group-checked:border-primary ui-group-checked:bg-primary ui-group-interactive:cursor-pointer",
       "ui-group-disabled:cursor-not-allowed",
     ],
     trigger: [

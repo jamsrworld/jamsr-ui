@@ -15,7 +15,7 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
   const { children, heading, description, code, bg = "primary" } = props;
   const id = toSlug(heading);
   return (
-    <section className="scroll-mt-20" id={id}>
+    <section className="scroll-mt-20 overflow-hidden" id={id}>
       <div className="mb-2">
         <Typography variant="h6" as="h1" className="text-xl font-medium">
           {heading}

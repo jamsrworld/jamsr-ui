@@ -29,7 +29,7 @@ export const CheckboxCheckIcon = (props: Props) => {
   return (
     <div
       data-slot="icon"
-      className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+      className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-foreground"
     >
       <m.svg
         xmlns="http://www.w3.org/2000/svg"

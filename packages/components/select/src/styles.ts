@@ -8,7 +8,8 @@ export const selectVariant = tv({
     placeholder: ["text-left", "text-foreground-400", "text-sm", "grow"],
     mainWrapper: "flex w-full flex-col",
     innerWrapper: "flex w-full items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground",
+    label:
+      "inline-flex w-max shrink-0 select-none text-sm font-normal text-foreground",
     trigger: [
       "relative flex w-full flex-row items-center gap-3 border-2 border-default-200 px-3 py-2 outline-none",
       "focus:border-primary ui-group-hover:border-default-400 ui-group-open:border-primary",

@@ -1,5 +1,12 @@
 # @jamsr-ui/tags-input
 
+## 0.0.43
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/chip@0.0.90
+
 ## 0.0.42
 
 ### Patch Changes

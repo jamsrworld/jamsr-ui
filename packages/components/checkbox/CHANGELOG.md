@@ -1,5 +1,11 @@
 # @jamsr-ui/checkbox
 
+## 0.0.79
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.78
 
 ### Patch Changes

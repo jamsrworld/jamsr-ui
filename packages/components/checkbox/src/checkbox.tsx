@@ -107,6 +107,7 @@ export const Checkbox = ($props: CheckboxProps) => {
         className={styles.wrapper({ className: classNames?.wrapper })}
       >
         <m.button
+          tabIndex={-1}
           data-slot="checkbox-wrapper"
           className={styles.trigger({
             className: classNames?.trigger,

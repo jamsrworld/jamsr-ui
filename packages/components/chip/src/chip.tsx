@@ -10,12 +10,14 @@ export type ChipProps<T extends React.ElementType = "div"> =
     children: React.ReactNode;
     onDelete?: () => void;
     classNames?: SlotsToClasses<ChipSlots>;
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
   } & ChipVariantsProps;
 
 export const Chip = <T extends React.ElementType = "div">(
   $props: ChipProps<T>,
 ) => {
-  const { chip:  Props = {}, globalConfig } = useUIStyle();
+  const { chip: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
   const {
     as,
@@ -29,6 +31,8 @@ export const Chip = <T extends React.ElementType = "div">(
     isSquare,
     radius,
     isBordered,
+    startContent,
+    endContent,
     ...restProps
   } = props;
   const Comp = as ?? "div";
@@ -53,7 +57,9 @@ export const Chip = <T extends React.ElementType = "div">(
         className={styles.content({ className: classNames?.content })}
         data-slot="content"
       >
+        {startContent}
         {children}
+        {endContent}
       </div>
       {onDelete && (
         <button

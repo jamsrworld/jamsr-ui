@@ -11,7 +11,7 @@ export const test = "";
 const base = tv({
   slots: {
     base: "relative box-border inline-flex min-w-min max-w-fit shrink-0 items-center justify-between whitespace-nowrap rounded-full",
-    content: "flex-1 font-normal text-inherit",
+    content: "flex flex-1 items-center gap-1 font-normal text-inherit",
     closeButton:
       "z-10 cursor-pointer select-none appearance-none opacity-70 outline-none transition-opacity tap-highlight-transparent hover:opacity-100 active:opacity-disabled",
   },

@@ -1,5 +1,11 @@
 # @jamsr-ui/chip
 
+## 0.0.90
+
+### Patch Changes
+
+- fix components
+
 ## 0.0.89
 
 ### Patch Changes

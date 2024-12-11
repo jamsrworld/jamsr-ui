@@ -11,6 +11,7 @@ import { ChipUsage } from "./examples/usage";
 import { ChipVariants } from "./examples/variants";
 import { ChipVariantsColors } from "./examples/variants-colors";
 import { ChipWithDelete } from "./examples/with-delete";
+import { StartEndContent } from "./examples/start-end-content";
 
 const title = "Chip";
 const description =
@@ -40,6 +41,12 @@ const Chip = () => {
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <ChipSizes />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Start & End Content"
+        code={code("start-end-content")}
+      >
+        <StartEndContent />
       </VariantWrapper>
       <VariantWrapper heading="Bordered" code={code("bordered")}>
         <ChipBordered />

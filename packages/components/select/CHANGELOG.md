@@ -1,5 +1,13 @@
 # @jamsr-ui/select
 
+## 0.0.101
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/chip@0.0.90
+
 ## 0.0.100
 
 ### Patch Changes

@@ -6,7 +6,7 @@ export type VariantTypes = {
   "button": ["colors", "disabled", "loading", "radius", "sizes", "usage", "variants-colors", "variants", "with-icons"];
   "card": ["radius", "start-end-content", "usage", "variants", "with-form"];
   "checkbox": ["controlled", "description", "disabled", "invalid-state", "radius", "readonly", "usage"];
-  "chip": ["bordered", "colors", "radius", "sizes", "usage", "variants-colors", "variants", "with-delete"];
+  "chip": ["bordered", "colors", "radius", "sizes", "start-end-content", "usage", "variants-colors", "variants", "with-delete"];
   "circular-progress": ["colors", "sizes", "usage", "with-value"];
   "confirmation": ["colors", "usage"];
   "data-table": ["bordered", "columns", "customization", "empty-state", "server", "sticky-header", "usage", "without-pagination"];

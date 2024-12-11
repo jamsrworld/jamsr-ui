@@ -1,5 +1,15 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.114
+
+### Patch Changes
+
+- fix components
+- Updated dependencies
+  - @jamsr-ui/button@0.0.83
+  - @jamsr-ui/input@0.0.106
+  - @jamsr-ui/chip@0.0.91
+
 ## 0.0.113
 
 ### Patch Changes

@@ -55,13 +55,14 @@ type Props = SelectVariantProps & {
   renderValue?: (value: string[]) => React.ReactNode;
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
+  returnFocus?: boolean;
 };
 
 export type UseSelectInnerProps = Props;
 export type UseSelectProps = Props & UIProps<"div", keyof Props>;
 
 export const useSelect = ($props: UseSelectProps) => {
-  const { select:  Props = {}, globalConfig } = useUIStyle();
+  const { select: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
@@ -88,6 +89,7 @@ export const useSelect = ($props: UseSelectProps) => {
     as,
     isDisabled: propIsDisabled,
     radius,
+    returnFocus = true,
     ...restProps
   } = props;
 
@@ -384,6 +386,7 @@ export const useSelect = ($props: UseSelectProps) => {
 
   return {
     Component,
+    returnFocus,
     context,
     elementsRef,
     labelsRef,

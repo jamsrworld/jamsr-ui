@@ -111,6 +111,7 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-explicit-any": "off",
-    "react/prop-types":"off"
+    "react/prop-types": "off",
+    "@typescript-eslint/promise-function-async": "off",
   },
 };

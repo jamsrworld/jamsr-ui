@@ -1,5 +1,12 @@
 # web
 
+## 0.1.194
+
+### Patch Changes
+
+- fix components
+  - @jamsr-ui/react@0.0.212
+
 ## 0.1.193
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/confirmation",
-  "version": "0.0.74",
+  "version": "0.0.75",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

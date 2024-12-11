@@ -54,6 +54,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
         onValueChange={setValue}
         size="sm"
         label="Rows Per Page:"
+        returnFocus={false}
       >
         {rowPerPageOptions.map((pageSize) => (
           <SelectItem key={pageSize.toString()} value={pageSize.toString()}>

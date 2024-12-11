@@ -32,16 +32,17 @@ const code = <T extends VariantTypes["accordion"][number]>(variant: T) =>
 const Accordion = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Usage" code={code("usage")}>
+      <VariantWrapper bg="secondary" heading="Usage" code={code("usage")}>
         <AccordionUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
+      <VariantWrapper bg="secondary" heading="Radius" code={code("radius")}>
         <AccordionRadius />
       </VariantWrapper>
       <VariantWrapper bg="secondary" heading="Variants" code={code("variants")}>
         <AccordionVariants />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         heading="Disabled Items"
         description={
           <div>
@@ -54,6 +55,7 @@ const Accordion = () => {
         <AccordionDisabled />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         description={
           <div>
             Use <Code>indicator</Code> prop to change the default icon. You can
@@ -66,6 +68,7 @@ const Accordion = () => {
         <AccordionCustomIcon />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         description={
           <div>
             Use <Code>indicator={`{null}`}</Code> prop to remove the default
@@ -78,6 +81,7 @@ const Accordion = () => {
         <AccordionWithoutIcon />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         heading="Multiple Selection"
         description={
           <div>
@@ -91,6 +95,7 @@ const Accordion = () => {
       </VariantWrapper>
 
       <VariantWrapper
+        bg="secondary"
         heading="With Subheading"
         description={
           <div>
@@ -102,6 +107,7 @@ const Accordion = () => {
         <AccordionSubheading />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         heading="With Start Content"
         description={
           <div>
@@ -114,6 +120,7 @@ const Accordion = () => {
         <AccordionStartContent />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         heading="With End Content"
         description={
           <div>
@@ -126,6 +133,7 @@ const Accordion = () => {
         <AccordionEndContent />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         heading="With Start Content Outside"
         description={
           <div>
@@ -139,6 +147,7 @@ const Accordion = () => {
         <AccordionStartContentOutside />
       </VariantWrapper>
       <VariantWrapper
+        bg="secondary"
         heading="With End Content Outside"
         description={
           <div>

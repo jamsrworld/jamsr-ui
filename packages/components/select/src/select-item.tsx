@@ -74,12 +74,20 @@ export const SelectItem = <T extends React.ElementType = "button">(
       return [value];
     };
     setValue(getNewValue());
+    handleSelect(index);
   };
 
-  const Component = as ?? "button";
+  const Component = as ?? "li";
   const style = styles.selectItem({
     className,
   });
+
+  const handleOnKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
+
   return (
     <Component
       ref={refs}
@@ -91,15 +99,13 @@ export const SelectItem = <T extends React.ElementType = "button">(
       aria-disabled={dataAttr(isDisabled)}
       data-disabled={dataAttr(isDisabled)}
       data-hovered={dataAttr(isHovered)}
-      tabIndex={isSelected ? 0 : -1}
+      tabIndex={isActive ? 0 : -1}
       className={style}
       {...restProps}
       {...(!isDisabled && {
         ...getItemProps({
-          onClick: () => {
-            handleClick();
-            handleSelect(index);
-          },
+          onClick: handleClick,
+          onKeyDown: handleOnKeyDown,
         }),
       })}
     >

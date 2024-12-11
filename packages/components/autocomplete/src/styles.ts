@@ -17,7 +17,9 @@ export const autocompleteVariant = tv({
       "ui-disabled:cursor-not-allowed ui-disabled:opacity-60",
     ],
   },
-  variants: { radius: radiusVariant(["popover", "item"]) },
+  variants: {
+    radius: radiusVariant(["popover", "item"]),
+  },
   defaultVariants: {
     radius: "md",
   },

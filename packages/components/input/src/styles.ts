@@ -84,7 +84,8 @@ export const inputVariants = tv({
     },
     isFilled: {
       true: {
-        inputWrapper: "border-none bg-default-100 hover:bg-default-100/70",
+        inputWrapper:
+          "border-none bg-default-100 ui-group-hover:bg-default-100/70",
       },
     },
   },

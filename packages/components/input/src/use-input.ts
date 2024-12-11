@@ -142,11 +142,12 @@ export const useInput = ($props: UseInputProps) => {
     propValue,
     onValueChange,
   );
-  const [showPassword, setShowPassword] = useControlledState(
+  const [$showPassword, setShowPassword] = useControlledState(
     false,
     propShowPassword,
     propSetShowPassword,
   );
+  const showPassword = isDisabled ? false : $showPassword;
 
   const handleClear = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {

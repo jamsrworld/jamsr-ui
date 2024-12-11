@@ -41,7 +41,8 @@ export const AutocompleteItem = <T extends React.ElementType = "button">(
     styles,
   } = useAutocompleteContext();
 
-  const listLabel = label ?? (typeof children === "string" ? children : "");
+  const listLabel =
+    label ?? value ?? (typeof children === "string" ? children : "");
 
   if (!listLabel.length) {
     console.warn(`No label provided for list item with value ${value}`);
@@ -57,10 +58,18 @@ export const AutocompleteItem = <T extends React.ElementType = "button">(
   });
   const refs = useMergeRefs([ref, disableRef]);
 
-  const Component = as ?? "button";
+  const Component = as ?? "li";
   const className = styles.item({
     className: $className,
   });
+
+  const onSelect = () => {
+    handleSelect({ label: listLabel, value });
+  };
+  const onMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <Component
       ref={refs}
@@ -72,14 +81,15 @@ export const AutocompleteItem = <T extends React.ElementType = "button">(
       data-disabled={dataAttr(isDisabled)}
       data-active={dataAttr(isActive)}
       data-hovered={dataAttr(isHovered)}
-      tabIndex={isSelected ? 0 : -1}
+      tabIndex={-1}
+      onMouseDown={onMouseDown}
       {...restProps}
-      {...(!isDisabled &&
-        getItemProps({
-          onClick: () => {
-            handleSelect({ label: listLabel, value });
-          },
-        }))}
+      {...(!isDisabled && {
+        ...getItemProps({
+          onClick: onSelect,
+        }),
+        tabIndex: isActive ? 0 : -1,
+      })}
       className={className}
     >
       {children}

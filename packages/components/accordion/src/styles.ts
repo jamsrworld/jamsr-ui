@@ -16,7 +16,7 @@ export const accordion = tv({
     variant: {
       light: "divide-y divide-divider-light",
       splitted: "gap-2",
-      outlined: "divide-y divide-divider-light border-2 border-divider-light",
+      outlined: "divide-y divide-divider-light border-2 border-divider",
       elevated: "divide-y divide-divider-light shadow-sm",
     },
     radius: radiusBaseVariant,

@@ -27,7 +27,7 @@ export type MenuItemProps<T extends React.ElementType = "li"> =
 export const MenuItem = <T extends React.ElementType = "li">(
   $props: MenuItemProps<T>,
 ) => {
-  const { menuItem:  Props = {} } = useUIStyle();
+  const { menuItem: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
   const {
     children,

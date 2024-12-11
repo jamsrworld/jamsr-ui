@@ -45,6 +45,7 @@ export const Select = <T extends React.ElementType = "div">(
     Component,
     getIndicatorProps,
     getScrollAreaProps,
+    returnFocus,
   } = useSelect(props);
 
   return (
@@ -72,13 +73,17 @@ export const Select = <T extends React.ElementType = "div">(
           <AnimatePresence>
             {isOpen && (
               <FloatingPortal>
-                <FloatingFocusManager context={context} modal>
+                <FloatingFocusManager
+                  context={context}
+                  modal
+                  returnFocus={returnFocus}
+                >
                   <div {...getPopoverProps()}>
                     <FloatingList
                       elementsRef={elementsRef}
                       labelsRef={labelsRef}
                     >
-                      <m.div
+                      <m.ul
                         initial={{ opacity: 0, scale: 0.95, y: -10 }}
                         exit={{ opacity: 0, scale: 0.95, y: -10 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -86,7 +91,7 @@ export const Select = <T extends React.ElementType = "div">(
                         {...getContentProps()}
                       >
                         <div {...getScrollAreaProps()}>{children}</div>
-                      </m.div>
+                      </m.ul>
                     </FloatingList>
                   </div>
                 </FloatingFocusManager>

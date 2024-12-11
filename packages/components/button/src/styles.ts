@@ -60,7 +60,7 @@ const baseVariant = tv({
     },
     disableAnimation: {
       true: "!transition-none",
-      false: "data-[pressed=true]:scale-[0.97]",
+      false: "ui-pressed:scale-[0.97]",
     },
   },
   defaultVariants: {
@@ -70,6 +70,13 @@ const baseVariant = tv({
     radius: "md",
     disableAnimation: false,
   },
+  compoundVariants: [
+    {
+      disableAnimation: false,
+      size: "lg",
+      className: "ui-pressed:scale-[0.98]",
+    },
+  ],
 });
 
 type CompoundVariant<T> = T & ClassProp;

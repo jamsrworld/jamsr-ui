@@ -263,6 +263,14 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     [activeIndex, getNewValue, isFocused, isMultiple, setIsOpen, setValue],
   );
 
+  const focusInput = useCallback(() => {
+    inputRef.current?.focus();
+  }, []);
+
+  const preventMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+  }, []);
+
   const contextValue: AutocompleteContextType = useMemo(() => {
     return {
       activeIndex,
@@ -273,6 +281,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       value,
       setInputValue,
       styles,
+      focusInput,
     };
   }, [
     activeIndex,
@@ -282,6 +291,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     setValue,
     styles,
     value,
+    focusInput,
   ]);
 
   const handleInputKeyDown = useCallback(
@@ -320,10 +330,11 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     };
   };
 
-  const getContentProps: PropGetter<ComponentProps<"div">> = (props) => {
+  const getContentProps: PropGetter<ComponentProps<"ul">> = (props) => {
     return {
       "data-slot": "content",
       className: styles.content({ className: classNames?.content }),
+      onMouseDown: preventMouseDown,
       ...props,
     };
   };

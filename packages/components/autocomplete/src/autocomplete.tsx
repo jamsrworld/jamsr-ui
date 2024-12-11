@@ -1,4 +1,8 @@
-import { FloatingFocusManager, FloatingList, FloatingPortal } from "@floating-ui/react";
+import {
+  FloatingFocusManager,
+  FloatingList,
+  FloatingPortal,
+} from "@floating-ui/react";
 import { Input } from "@jamsr-ui/input";
 import { useAutocomplete, type UseAutocompleteProps } from "./use-autocomplete";
 import { AutocompleteProvider } from "./use-autocomplete-context";
@@ -29,16 +33,18 @@ export const Autocomplete = (props: AutocompleteProps) => {
               context={context}
               initialFocus={-1}
               visuallyHiddenDismiss
+              modal
+              restoreFocus
             >
               <div {...getPopoverProps()}>
                 <FloatingList elementsRef={elementsRef}>
-                  <div {...getContentProps()}>
+                  <ul {...getContentProps()}>
                     {childrenToRender.length ? (
                       childrenToRender
                     ) : (
                       <li {...getEmptyContentProps()}>No items found</li>
                     )}
-                  </div>
+                  </ul>
                 </FloatingList>
               </div>
             </FloatingFocusManager>

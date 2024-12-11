@@ -5,6 +5,7 @@ import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { TableAllowHover } from "./examples/allow-hover";
 import { TableBordered } from "./examples/bordered";
+import { TableEmptyState } from "./examples/empty-state";
 import { TableRadius } from "./examples/radius";
 import { TableUsage } from "./examples/usage";
 
@@ -29,6 +30,9 @@ const Table = () => {
       </VariantWrapper>
       <VariantWrapper heading="Radius" code={code("radius")}>
         <TableRadius />
+      </VariantWrapper>
+      <VariantWrapper heading="Empty State" code={code("empty-state")}>
+        <TableEmptyState />
       </VariantWrapper>
     </VariantPage>
   );

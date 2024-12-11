@@ -8,6 +8,7 @@ export type AutocompleteContextType = {
   handleSelect: (args: { value: string; label: string }) => void;
   value: string[];
   styles: ReturnType<typeof autocompleteVariant>;
+  focusInput: () => void;
 };
 
 export const [AutocompleteProvider, useAutocompleteContext] =

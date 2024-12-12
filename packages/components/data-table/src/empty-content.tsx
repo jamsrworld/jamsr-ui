@@ -4,11 +4,11 @@ export const EmptyContent = () => {
   return (
     <TableRow>
       <TableCell
-        className="pointer-events-none !bg-transparent"
+        className="pointer-events-none h-24 !bg-transparent text-center text-foreground-400"
         colSpan={100}
         aria-label="No results found"
       >
-        <div>No Records Found</div>
+        No Records Found
       </TableCell>
     </TableRow>
   );

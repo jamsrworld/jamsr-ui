@@ -297,6 +297,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
   const handleInputKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (event.key === "Enter" && activeIndex !== null) {
+        event.preventDefault();
         const indexItem = renderedItems[activeIndex];
         if (!indexItem) return;
         handleSelect({

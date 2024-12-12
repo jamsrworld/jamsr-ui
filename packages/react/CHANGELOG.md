@@ -1,5 +1,18 @@
 # @jamsr-ui/react
 
+## 0.0.213
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.115
+  - @jamsr-ui/data-table@0.0.72
+  - @jamsr-ui/checkbox@0.0.80
+  - @jamsr-ui/table@0.0.58
+  - @jamsr-ui/menu@0.0.101
+  - @jamsr-ui/rhf@0.0.58
+  - @jamsr-ui/editor@0.0.114
+
 ## 0.0.212
 
 ### Patch Changes

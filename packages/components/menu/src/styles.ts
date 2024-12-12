@@ -4,7 +4,7 @@ export const test = "";
 export const menuVariants = tv({
   slots: {
     arrow: "fill-content2",
-    base: "inline-block transition-transform duration-300 ui-open:scale-95 ui-open:opacity-50",
+    base: "inline-block transition-transform duration-300 ui-open:scale-[0.98] ui-open:opacity-50",
     backdrop: "z-backdrop",
     popover:
       "z-popover box-border inline-flex min-w-[150px] flex-col justify-center bg-content1 p-1 text-sm shadow-md outline-none",
@@ -32,23 +32,23 @@ export const menuVariants = tv({
       },
       primary: {
         menuItem:
-          "ui-hover:bg-primary-700 ui-hover:text-primary-foreground dark:ui-hover:bg-primary-300 ",
+          "ui-hover:bg-primary ui-hover:text-primary-foreground",
       },
       secondary: {
         menuItem:
-          "ui-hover:bg-secondary-600 ui-hover:text-secondary-foreground dark:ui-hover:bg-secondary-300 ",
+          "ui-hover:bg-secondary ui-hover:text-secondary-foreground",
       },
       success: {
         menuItem:
-          "ui-hover:bg-success-600 ui-hover:text-success-foreground dark:ui-hover:bg-success-300 ",
+          "ui-hover:bg-success ui-hover:text-success-foreground",
       },
       warning: {
         menuItem:
-          "ui-hover:bg-warning-600 ui-hover:text-warning-foreground dark:ui-hover:bg-warning-300 ",
+          "ui-hover:bg-warning ui-hover:text-warning-foreground",
       },
       danger: {
         menuItem:
-          "ui-hover:bg-danger-600 ui-hover:text-danger-foreground dark:ui-hover:bg-danger-300",
+          "ui-hover:bg-danger ui-hover:text-danger-foreground",
       },
     },
   },

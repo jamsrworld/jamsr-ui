@@ -1,5 +1,12 @@
 # @jamsr-ui/editor
 
+## 0.0.114
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/menu@0.0.101
+
 ## 0.0.113
 
 ### Patch Changes

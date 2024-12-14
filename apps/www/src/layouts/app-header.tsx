@@ -16,7 +16,7 @@ export const AppHeader = () => {
       <Link href="/">
         <Image
           src={logoImg}
-          className="grayscale dark:invert"
+          className="grayscale invert dark:invert-0"
           alt="logo"
           height={40}
         />

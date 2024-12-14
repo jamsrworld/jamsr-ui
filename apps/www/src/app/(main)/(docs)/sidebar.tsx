@@ -17,6 +17,10 @@ export const sidebarItems: {
         heading: "Installation",
         path: "/guides/installation",
       },
+      {
+        heading: "Theme",
+        path: "/guides/theme",
+      },
     ],
   },
   {

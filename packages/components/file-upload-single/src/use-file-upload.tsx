@@ -39,7 +39,7 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
   inputName: string;
   helperText?: React.ReactNode;
   uploadIcon?: React.ReactNode;
-  getFileIcon?: (ext: string) => React.ReactNode;
+  getFileIcon?: (ext: string | null) => React.ReactNode;
   uploadApiUrl: string;
   getFileUrlAfterUpload: (response: any) => string;
   label?: string;
@@ -48,7 +48,7 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
 export type UseFileUploadSingleProps = Props & UIProps<"div", keyof Props>;
 
 export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
-  const { fileUploadSingle:  Props = {}, globalConfig } = useUIStyle();
+  const { fileUploadSingle: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
 
   const {

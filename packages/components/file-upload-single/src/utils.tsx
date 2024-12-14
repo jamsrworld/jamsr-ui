@@ -1,9 +1,15 @@
 import { ZipIcon } from "@jamsr-ui/shared-icons";
 
 export const getFileExtension = (url: string) => {
-  const ext = url.split(".").pop();
-  if (!ext) return "";
-  return ext;
+  try {
+    const parsedUrl = new URL(url);
+    const { pathname } = parsedUrl;
+    const extension = pathname.split(".").pop();
+    if (!extension) return null;
+    return extension.includes("/") ? null : extension;
+  } catch {
+    return null;
+  }
 };
 
 export const isImageExt = (url: string): boolean => {

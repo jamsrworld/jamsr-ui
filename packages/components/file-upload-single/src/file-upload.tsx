@@ -61,8 +61,8 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
       </label>
       <div {...getPickerProps()} {...getRootProps()}>
         <input id={htmlForId} {...inputProps} ref={mergedInputRefs} />
-        {uploadIcon}
-        {!isAvatar && (
+        {isEmpty && uploadIcon}
+        {!isAvatar && isEmpty && (
           <>
             {description && <p {...getDescriptionProps()}>{description}</p>}
             {info && <p {...getInfoProps()}>{info}</p>}

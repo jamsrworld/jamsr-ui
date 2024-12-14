@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import {
   FileUploadMulti,
   type FileUploadMultiProps,
@@ -20,7 +21,9 @@ type Props<T extends FieldValues> = UseControllerProps<T> &
   Pick<
     FileUploadMultiProps,
     "uploadApiUrl" | "inputName" | "getFileUrlAfterUpload"
-  >;
+  > & {
+    getValueFromResponse: (response: any) => any;
+  };
 
 export const RenderController = <
   TFieldValues extends FieldValues,
@@ -37,6 +40,7 @@ export const RenderController = <
     uploadApiUrl,
     inputName,
     getFileUrlAfterUpload,
+    getValueFromResponse,
     ...restProps
   } = props;
   const value = Array.isArray($value) ? $value : [];
@@ -72,7 +76,11 @@ export const RenderController = <
     id: string;
     response: Record<string, string>;
   }) => {
-    uploadsRef.current.push(data);
+    const schema = getValueFromResponse(data.response);
+    uploadsRef.current.push({
+      id: data.id,
+      response: schema,
+    });
   };
 
   return (

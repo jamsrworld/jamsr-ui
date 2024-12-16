@@ -26,22 +26,20 @@ import { InputWithPlaceholder } from "./examples/with-placeholder";
 import { InputWithStartContent } from "./examples/with-start-content";
 import { InputWithoutLabel } from "./examples/without-label";
 
-export const metadata: Metadata = {
-  title: "Input",
-};
+const title = "Input";
+const description =
+  "A form element that allows users to input and submit data, supporting various types such as text, numbers, and more for seamless data entry.";
 
 const code = <T extends VariantTypes["input"][number]>(variant: T) =>
   readVariantCode("input", variant);
 
 const Input = () => {
   return (
-    <VariantPage heading="Input">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <InputUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
-        <InputRadius />
-      </VariantWrapper>
+    
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <InputControlled />
       </VariantWrapper>
@@ -50,6 +48,12 @@ const Input = () => {
       </VariantWrapper>
       <VariantWrapper heading="Filled" code={code("filled")}>
         <InputFilled />
+      </VariantWrapper>
+      <VariantWrapper heading="Sizes" code={code("sizes")}>
+        <InputSizes />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <InputRadius />
       </VariantWrapper>
       <VariantWrapper heading="Helper Text" code={code("helper-text")}>
         <InputHelperText />
@@ -93,9 +97,7 @@ const Input = () => {
       <VariantWrapper heading="Optional" code={code("optional")}>
         <InputOptional />
       </VariantWrapper>
-      <VariantWrapper heading="Sizes" code={code("sizes")}>
-        <InputSizes />
-      </VariantWrapper>
+      
       <VariantWrapper heading="Placeholder" code={code("placeholder")}>
         <InputPlaceholder />
       </VariantWrapper>

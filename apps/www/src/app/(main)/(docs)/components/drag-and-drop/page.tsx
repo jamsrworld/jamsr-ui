@@ -6,16 +6,16 @@ import { type VariantTypes } from "@/types/variants";
 import { DndGrid } from "./examples/usage";
 import { DndDisabled } from "./examples/disabled";
 
-export const metadata: Metadata = {
-  title: "Drag and Drop (Dnd-Kit)",
-};
+const title = "Drag and Drop";
+const description =
+  "An intuitive and interactive component that enables users to easily drag and drop items within a designated area, enhancing user experience and workflow efficiency.";
 
 const code = <T extends VariantTypes["drag-and-drop"][number]>(variant: T) =>
   readVariantCode("drag-and-drop", variant);
 
 const DragDropDndKit = () => {
   return (
-    <VariantPage heading="Drag and Drop">
+    <VariantPage heading={title} description={description} >
       <VariantWrapper heading="Grid" code={code("usage")}>
         <DndGrid />
       </VariantWrapper>

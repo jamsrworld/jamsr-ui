@@ -10,8 +10,12 @@ import { DividerOrientation } from "./examples/orientation";
 import { DividerVariants } from "./examples/variants";
 import { DividerWithText } from "./examples/with-text";
 
+const title = "Divider";
+const description =
+"Divider is a component that separates content on a page, enhancing structure and visual hierarchy."
 export const metadata: Metadata = {
-  title: "Divider",
+  title,
+  description,
 };
 
 const code = <T extends VariantTypes["divider"][number]>(variant: T) =>
@@ -19,7 +23,7 @@ const code = <T extends VariantTypes["divider"][number]>(variant: T) =>
 
 const Divider = () => {
   return (
-    <VariantPage heading="Divider">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <DividerUsage />
       </VariantWrapper>

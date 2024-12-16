@@ -6,16 +6,17 @@ import { type VariantTypes } from "@/types/variants";
 import { LinkUsage } from "./examples/usage";
 import { LinkUnderline } from "./examples/underline";
 
-export const metadata: Metadata = {
-  title: "Link",
-};
+const title = "Link";
+const description =
+  "A component that provides a clickable text or element, directing users to another page or section within an application or external source.";
+
 
 const code = <T extends VariantTypes["link"][number]>(variant: T) =>
   readVariantCode("link", variant);
 
 const Link = () => {
   return (
-    <VariantPage heading="Link">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <LinkUsage />
       </VariantWrapper>

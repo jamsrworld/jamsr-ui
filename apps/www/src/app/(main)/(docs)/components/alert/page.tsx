@@ -31,9 +31,7 @@ const Alert = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <AlertUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
-        <AlertRadius />
-      </VariantWrapper>
+      
       <VariantWrapper
         heading="Status"
         description={
@@ -61,7 +59,9 @@ const Alert = () => {
       >
         <AlertVariants />
       </VariantWrapper>
-
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <AlertRadius />
+      </VariantWrapper>
       <VariantWrapper
         heading="With Heading"
         description={

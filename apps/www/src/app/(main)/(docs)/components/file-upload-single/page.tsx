@@ -11,8 +11,13 @@ import { FileUploadDisabled } from "./examples/disabled";
 import { FileUploadRadius } from "./examples/radius";
 import { FileUploadUsage } from "./examples/usage";
 
+const title = "Single File Upload";
+const description =
+  "A streamlined and user-friendly component designed for uploading a single file.";
+
 export const metadata: Metadata = {
-  title: "File Upload Single",
+  title,
+  description,
 };
 
 const code = <T extends VariantTypes["file-upload-single"][number]>(
@@ -21,7 +26,7 @@ const code = <T extends VariantTypes["file-upload-single"][number]>(
 
 const FileUpload = () => {
   return (
-    <VariantPage heading="Single File Upload">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <FileUploadUsage />
       </VariantWrapper>

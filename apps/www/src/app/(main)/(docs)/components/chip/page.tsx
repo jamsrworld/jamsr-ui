@@ -30,9 +30,7 @@ const Chip = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <ChipUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
-        <ChipRadius />
-      </VariantWrapper>
+      
       <VariantWrapper heading="Colors" code={code("usage")}>
         <ChipColors />
       </VariantWrapper>
@@ -41,6 +39,9 @@ const Chip = () => {
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <ChipSizes />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <ChipRadius />
       </VariantWrapper>
       <VariantWrapper
         heading="Start & End Content"

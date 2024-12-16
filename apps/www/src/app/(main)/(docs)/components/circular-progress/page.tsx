@@ -8,9 +8,9 @@ import { CircularProgressSizes } from "./examples/sizes";
 import { CircularProgressUsage } from "./examples/usage";
 import { CircularProgressValue } from "./examples/with-value";
 
-export const metadata: Metadata = {
-  title: "Circular Progress",
-};
+const title = "Circular Progress";
+const description =
+  "A visually engaging component that provides a clear indication of ongoing processes or tasks, allowing users to track progress in real time with a circular animation.";
 
 const code = <T extends VariantTypes["circular-progress"][number]>(
   variant: T,
@@ -18,7 +18,7 @@ const code = <T extends VariantTypes["circular-progress"][number]>(
 
 const Progress = () => {
   return (
-    <VariantPage heading="Circular Progress">
+    <VariantPage  heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <CircularProgressUsage />
       </VariantWrapper>

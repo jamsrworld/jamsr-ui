@@ -14,23 +14,19 @@ import { IconButtonVariants } from "./examples/variants";
 import { IconButtonVariantsColors } from "./examples/variants-colors";
 
 const title = "Icon Button";
-
-export const metadata: Metadata = {
-  title,
-};
+const description =
+  "A compact and interactive button that uses an icon to trigger actions, providing a visually efficient way to execute tasks without cluttering the interface.";
 
 const code = <T extends VariantTypes["button"][number]>(variant: T) =>
   readVariantCode("button", variant);
 
 const IconButton = () => {
   return (
-    <VariantPage heading={title}>
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <IconButtonUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
-        <IconButtonRadius />
-      </VariantWrapper>
+     
       <VariantWrapper
         heading="Variants"
         code={code("variants")}
@@ -65,6 +61,10 @@ const IconButton = () => {
         }
       >
         <IconButtonSizes />
+      </VariantWrapper>
+
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <IconButtonRadius />
       </VariantWrapper>
       <VariantWrapper
         heading="Disabled"

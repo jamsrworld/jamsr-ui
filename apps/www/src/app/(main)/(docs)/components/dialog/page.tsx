@@ -15,16 +15,16 @@ import { DialogUsage } from "./examples/usage";
 import { DialogWithoutAnimation } from "./examples/without-animation";
 import { DialogWithoutCloseButton } from "./examples/without-close-button";
 
-export const metadata: Metadata = {
-  title: "Dialog",
-};
+const title = "Dialog";
+const description =
+  "A flexible and interactive component that presents content or actions in a modal window, allowing users to focus on critical information or decisions without distractions.";
 
 const code = <T extends VariantTypes["dialog"][number]>(variant: T) =>
   readVariantCode("dialog", variant);
 
 const Dialog = () => {
   return (
-    <VariantPage heading="Dialog">
+    <VariantPage heading={title} description={description} >
       <VariantWrapper heading="Usage" code={code("usage")}>
         <DialogUsage />
       </VariantWrapper>

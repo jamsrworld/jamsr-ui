@@ -5,16 +5,16 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Header",
-};
+const title = "Header";
+const description =
+  "A prominent and customizable component that displays key information, navigation elements, or branding at the top of a page or section, providing a clear structure to the layout.";
 
 const code = <T extends VariantTypes["header"][number]>(variant: T) =>
   readVariantCode("header", variant);
 
 const Header = () => {
   return (
-    <VariantPage heading="Header">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <IFrameExample src="/examples/header/default" />
       </VariantWrapper>

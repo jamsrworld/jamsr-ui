@@ -30,9 +30,7 @@ const Avatar = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <AvatarUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
-        <AvatarRadius />
-      </VariantWrapper>
+      
       <VariantWrapper heading="Fallbacks" code={code("fallbacks")}>
         <AvatarFallbacks />
       </VariantWrapper>
@@ -47,6 +45,9 @@ const Avatar = () => {
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <AvatarSizes />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <AvatarRadius />
       </VariantWrapper>
       <VariantWrapper heading="Bordered" code={code("bordered")}>
         <AvatarBordered />

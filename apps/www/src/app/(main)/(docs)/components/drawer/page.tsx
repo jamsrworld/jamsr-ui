@@ -14,8 +14,13 @@ import { DrawerSize } from "./examples/size";
 import { DrawerUsage } from "./examples/usage";
 import { DrawerWithoutCloseButton } from "./examples/without-close-button";
 
+const title = "Drawer";
+const description =
+  "A dynamic sliding panel that seamlessly transitions from the edge of the screen, offering supplementary content or contextual actions while preserving the primary user experience.";
+
 export const metadata: Metadata = {
-  title: "Drawer",
+  title,
+  description,
 };
 
 const code = <T extends VariantTypes["drawer"][number]>(variant: T) =>
@@ -23,15 +28,16 @@ const code = <T extends VariantTypes["drawer"][number]>(variant: T) =>
 
 const Drawer = () => {
   return (
-    <VariantPage heading="Drawer">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <DrawerUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Size" code={code("size")}>
-        <DrawerSize />
-      </VariantWrapper>
+     
       <VariantWrapper heading="Anchors" code={code("anchors")}>
         <DrawerAnchors />
+      </VariantWrapper>
+      <VariantWrapper heading="Size" code={code("size")}>
+        <DrawerSize />
       </VariantWrapper>
       <VariantWrapper heading="Bordered" code={code("bordered")}>
         <DrawerBordered />

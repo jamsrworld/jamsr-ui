@@ -10,16 +10,21 @@ import { DataTableStickyHeader } from "./examples/sticky-header";
 import { DataTableUsage } from "./examples/usage";
 import { DataTableWithoutPagination } from "./examples/without-pagination";
 
-export const metadata: Metadata = {
-  title: "Data-table",
-};
 
+const title = "Data Table";
+const description =
+  "A powerful and intuitive component for displaying and managing large datasets in a tabular format, with features such as sorting, filtering, and pagination.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+};
 const code = <T extends VariantTypes["data-table"][number]>(variant: T) =>
   readVariantCode("data-table", variant);
 
 const DataTable = () => {
   return (
-    <VariantPage heading="Data Table">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <DataTableUsage />
       </VariantWrapper>

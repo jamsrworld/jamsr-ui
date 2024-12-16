@@ -10,8 +10,13 @@ import { FileUploadDisabled } from "./examples/disabled";
 import { FileUploadRadius } from "./examples/radius";
 import { FileUploadUsage } from "./examples/usage";
 
+const title = "Multi File Upload";
+const description =
+  "An efficient and intuitive component designed to support seamless uploading of multiple files simultaneously.";
+
 export const metadata: Metadata = {
-  title: "Multi File Upload",
+  title,
+  description,
 };
 
 const code = <T extends VariantTypes["file-upload-multi"][number]>(
@@ -20,7 +25,7 @@ const code = <T extends VariantTypes["file-upload-multi"][number]>(
 
 const FileUpload = () => {
   return (
-    <VariantPage heading="Multi File Upload">
+    <VariantPage  heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <FileUploadUsage />
       </VariantWrapper>

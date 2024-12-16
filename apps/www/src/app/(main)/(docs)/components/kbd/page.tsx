@@ -8,16 +8,15 @@ import { KbdRadius } from "./examples/radius";
 import { KbdUsage } from "./examples/usage";
 
 const title = "Kbd";
-export const metadata: Metadata = {
-  title,
-};
+const description =
+  "A component that displays keyboard keys or key combinations, typically used to indicate shortcuts or key actions within an interface.";
 
 const code = <T extends VariantTypes["kbd"][number]>(variant: T) =>
   readVariantCode("kbd", variant);
 
 const Page = () => {
   return (
-    <VariantPage heading={title}>
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <KbdUsage />
       </VariantWrapper>

@@ -18,18 +18,21 @@ import { MenuUsage } from "./examples/usage";
 import { MenuWithArrow } from "./examples/with-arrow";
 import { MenuWithoutLockScroll } from "./examples/without-lock-scroll";
 
-export const metadata: Metadata = {
-  title: "Menu",
-};
+const title = "Menu";
+const description =
+  "A navigational component that displays a list of options or actions, allowing users to select from various choices within an interface in a structured manner.";
 
 const code = <T extends VariantTypes["menu"][number]>(variant: T) =>
   readVariantCode("menu", variant);
 
 const Menu = () => {
   return (
-    <VariantPage heading="Menu">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <MenuUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Placement" code={code("placement")}>
+        <MenuPlacement />
       </VariantWrapper>
       <VariantWrapper heading="Radius" code={code("usage")}>
         <MenuRadius />
@@ -55,12 +58,10 @@ const Menu = () => {
       <VariantWrapper heading="With Arrow" code={code("with-arrow")}>
         <MenuWithArrow />
       </VariantWrapper>
-      <VariantWrapper heading="Prevent Close" code={code("prevent-close")}>
+      <VariantWrapper heading="Prevent Close On Click " code={code("prevent-close")}>
         <MenuPreventClose />
       </VariantWrapper>
-      <VariantWrapper heading="Placement" code={code("with-arrow")}>
-        <MenuPlacement />
-      </VariantWrapper>
+     
       <VariantWrapper heading="Offset" code={code("offset")}>
         <MenuOffset />
       </VariantWrapper>

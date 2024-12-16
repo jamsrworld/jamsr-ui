@@ -6,16 +6,16 @@ import { type VariantTypes } from "@/types/variants";
 import { ConfirmationUsage } from "./examples/usage";
 import { ConfirmationColors } from "./examples/colors";
 
-export const metadata: Metadata = {
-  title: "Confirmation",
-};
+const title = "Confirmation";
+const description =
+  "A clear and concise component designed to prompt users for confirmation before proceeding with critical actions, ensuring better decision-making and reducing errors.";
 
 const code = <T extends VariantTypes["confirmation"][number]>(variant: T) =>
   readVariantCode("confirmation", variant);
 
 const Confirmation = () => {
   return (
-    <VariantPage heading="Confirmation">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <ConfirmationUsage />
       </VariantWrapper>

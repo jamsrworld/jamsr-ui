@@ -35,11 +35,12 @@ const Accordion = () => {
       <VariantWrapper bg="secondary" heading="Usage" code={code("usage")}>
         <AccordionUsage />
       </VariantWrapper>
-      <VariantWrapper bg="secondary" heading="Radius" code={code("radius")}>
-        <AccordionRadius />
-      </VariantWrapper>
+
       <VariantWrapper bg="secondary" heading="Variants" code={code("variants")}>
         <AccordionVariants />
+      </VariantWrapper>
+      <VariantWrapper bg="secondary" heading="Radius" code={code("radius")}>
+        <AccordionRadius />
       </VariantWrapper>
       <VariantWrapper
         bg="secondary"

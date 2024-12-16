@@ -28,9 +28,7 @@ const Card = () => {
       <VariantWrapper bg="secondary" heading="Usage" code={code("usage")}>
         <CardUsage />
       </VariantWrapper>
-      <VariantWrapper bg="secondary" heading="Radius" code={code("radius")}>
-        <CardRadius />
-      </VariantWrapper>
+     
       <VariantWrapper
         bg="secondary"
         heading="Start End Content"
@@ -46,6 +44,9 @@ const Card = () => {
       </VariantWrapper>
       <VariantWrapper bg="secondary" heading="Variants" code={code("variants")}>
         <CardVariants />
+      </VariantWrapper>
+      <VariantWrapper bg="secondary" heading="Radius" code={code("radius")}>
+        <CardRadius />
       </VariantWrapper>
       <VariantWrapper
         bg="secondary"

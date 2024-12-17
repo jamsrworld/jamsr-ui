@@ -193,6 +193,15 @@ export const sidebarItems: {
     ],
   },
   {
+    heading: "Charts",
+    items: [
+      {
+        heading: "Charts",
+        path: "/charts",
+      },
+    ],
+  },
+  {
     heading: "Helpers Components",
     items: [
       {

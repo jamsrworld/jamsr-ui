@@ -98,12 +98,12 @@ const CircleChartCard = (props: CircleChartProps & CardProps) => {
           width="100%"
         >
           <RadialBarChart
-            barSize={12}
+            barSize={44}
             cx="50%"
             cy="50%"
             data={chartData}
-            startAngle={225}
-            endAngle={-45}
+            startAngle={200}
+            endAngle={-20}
             innerRadius={90}
             outerRadius={70}
           >

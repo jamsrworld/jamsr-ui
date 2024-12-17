@@ -118,6 +118,9 @@ const BarChartCard = (props: BarChartProps) => {
             type="category"
             tickLine={false}
             tickFormatter={(value: string) => value.slice(0, 3)}
+            axisLine={{
+              stroke: "hsl(var(--ui-default-200))",
+            }}
             tick={{
               fill: "hsl(var(--ui-default-500))",
               style: {

@@ -178,14 +178,12 @@ export const Button = () => {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      {/* <Alert variant="outlined" status="danger">
+      <Alert variant="outlined" status="danger">
         JamsrUI is currently in development and it is not stable.
-      </Alert> */}
-      <Alert variant="outlined" status="default" >
+      </Alert>
+      <Alert variant="solid" status="default">
         JamsrUI is only supported in Next.js
       </Alert>
-     
-
       <Typography as="p" variant="body1">
         Get started with{" "}
         <Link href={JAMSR_UI_TEMPLATE_GITHUB_URL} target="_blank">

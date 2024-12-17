@@ -1,6 +1,6 @@
 "use client";
 
-import { Typography } from "@jamsr-ui/react";
+import { Chip, Typography } from "@jamsr-ui/react";
 import { cn } from "@jamsr-ui/utils";
 import { type Route } from "next";
 import NextLink, { type LinkProps } from "next/link";
@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 
 export const sidebarItems: {
   heading: string;
+  chip?: React.ReactNode;
   items: { heading: string; path: Route }[];
 }[] = [
   {
@@ -194,10 +195,27 @@ export const sidebarItems: {
   },
   {
     heading: "Charts",
+    chip: <Chip size="sm">Development</Chip>,
     items: [
       {
-        heading: "Charts",
-        path: "/charts",
+        heading: "Area Chart",
+        path: "/components/charts/area-chart",
+      },
+      {
+        heading: "Bar Chart",
+        path: "/components/charts/bar-chart",
+      },
+      {
+        heading: "Line Chart",
+        path: "/components/charts/line-chart",
+      },
+      {
+        heading: "Pie Chart",
+        path: "/components/charts/pie-chart",
+      },
+      {
+        heading: "Radial Bar Chart",
+        path: "/components/charts/radial-bar-chart",
       },
     ],
   },
@@ -281,19 +299,22 @@ export const sidebarItems: {
 export const ComponentsSidebar = () => {
   const pathname = usePathname();
   return (
-    <aside className="fixed top-14 flex h-[calc(100vh-3.5rem)] min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 max-md:hidden">
+    <aside className="bg-background-tertiary fixed top-14 flex h-[calc(100vh-3.5rem)] min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden rounded-lg p-2 max-md:hidden">
       <div className="mt-4 flex flex-col gap-4">
         {sidebarItems.map((item, idx) => {
-          const { heading, items } = item;
+          const { heading, items, chip } = item;
           return (
             <div key={idx} className="flex flex-col gap-2">
-              <Typography
-                as="p"
-                variant="paragraph2"
-                className="text-foreground-tertiary"
-              >
-                {heading}
-              </Typography>
+              <div className="flex items-center gap-4">
+                <Typography
+                  as="p"
+                  variant="paragraph2"
+                  className="text-foreground-tertiary text-2xs font-medium uppercase"
+                >
+                  {heading}
+                </Typography>
+                {chip}
+              </div>
               <div className="flex flex-col">
                 {items.map((item) => {
                   const { heading, path } = item;
@@ -303,9 +324,9 @@ export const ComponentsSidebar = () => {
                       key={path}
                       href={path as LinkProps<never>["href"]}
                       className={cn(
-                        "rounded-lg p-2 text-sm font-normal capitalize hover:bg-content1",
+                        "hover:bg-content1 rounded-lg p-2 text-sm font-normal capitalize",
                         isActive &&
-                          "bg-primary text-white hover:bg-primary-300",
+                          "bg-primary hover:bg-primary-300 text-white",
                       )}
                     >
                       {heading}

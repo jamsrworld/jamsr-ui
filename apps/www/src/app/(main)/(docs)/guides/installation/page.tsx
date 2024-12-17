@@ -28,8 +28,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
     content: (
       <div className="flex flex-col gap-4">
         <Typography as="p">
-          To Install JamsrUI, run one of the following commands in your
-          terminal:
+          Use your preferred package manager to install JamsrUI:
         </Typography>
         <Tabs variant="underlined" defaultValue="pnpm">
           <Tab startContent={<NpmIcon />} value="npm" heading="npm">
@@ -46,53 +45,56 @@ const items: { heading: string; content: React.ReactNode }[] = [
     ),
   },
   {
-    heading: "Hoisted Dependencies Setup",
+    heading: "Configure Hoisted Dependencies (pnpm users only)",
     content: (
       <div className="flex flex-col gap-4">
-        <Alert variant="solid" status="default">
-          <div>
-            <strong>Note:</strong> This step is only for those who are using
-            pnpm to install.
-          </div>
-        </Alert>
         <Typography as="p">
-          If you are using pnpm, you need to add the following line to your
-          <Code>.npmrc</Code> file to hoist our packages to the root
-          node_modules.
+          If you're using <Code>pnpm</Code>, ensure that JamsrUI packages are
+          hoisted to the root <Code> node_modules</Code>.
         </Typography>
-        <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
-        <Typography as="p">
-          After modifying the <Code>.npmrc</Code> file, you need to delete the
-          previous node_modules and reinstall again to ensure that the
-          dependencies are installed correctly
-        </Typography>
+        <div>
+          <ul className="flex list-disc flex-col gap-4">
+            <li className="space-y-4">
+              <div>
+                Add the following line to your <Code>.npmrc</Code> file:
+              </div>
+              <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
+            </li>
+            <li className="space-y-4">
+              <div>
+                Delete the existing <Code> node_modules</Code> directory and
+                reinstall dependencies:
+              </div>
+              <CodeBlock>pnpm install</CodeBlock>
+            </li>
+          </ul>
+        </div>
       </div>
     ),
   },
   {
-    heading: "Tailwind CSS Setup",
+    heading: "Set Up Tailwind CSS",
     content: (
       <div className="flex flex-col gap-4">
         <Typography as="p">
-          JamsrUI is built on top of{" "}
+          JamsrUI is built on Tailwind CSS. Follow the official{" "}
           <Link target="_blank" href={TAILWIND_WEB_URL}>
-            Tailwind CSS
-          </Link>
-          , so you need to install{" "}
-          <Link target="_blank" href={TAILWIND_WEB_URL}>
-            Tailwind CSS
+            Tailwind CSS installation guide
           </Link>{" "}
-          first. You can follow the official installation guide to install
-          Tailwind CSS. Then you need to add the following code to your
-          tailwind.config.js file:
+          to set it up in your project.
         </Typography>
-        <Alert variant="solid" status="default">
-          <div>
-            <strong>Note:</strong> If you are using pnpm and monorepo
-            architecture, please make sure you are pointing to the ROOT
-            node_modules
-          </div>
-        </Alert>
+
+        <div>
+          <ul className="flex list-disc flex-col gap-4">
+            <li className="space-y-4">
+              <div>
+                After setting up Tailwind CSS, modify your{" "}
+                <Code> tailwind.config.ts</Code> to include JamsrUI components:
+              </div>
+            </li>
+          </ul>
+        </div>
+
         <CodeBlock>
           {`// tailwind.config.ts
 import { withJamsrUI } from "@jamsr-ui/theme";
@@ -110,19 +112,26 @@ export default config;
 
 `}
         </CodeBlock>
+        <Alert variant="solid" status="default">
+          <div>
+            <strong>Note:</strong> For <Code> pnpm</Code> users in a monorepo
+            setup, ensure the path points to the root<Code>node_modules</Code>.
+          </div>
+        </Alert>
       </div>
     ),
   },
   {
-    heading: "Provider Setup",
+    heading: "Wrap Your Application with UIProvider",
     content: (
       <div className="flex flex-col gap-4">
         <Typography as="p">
-          It is essential to add the JamsrUIProvider at the root of your
-          application.
+          To enable JamsrUI components, wrap your application with the{" "}
+          <Code>UIProvider</Code>.
         </Typography>
         <CodeBlock>
-          {`import { UIProvider } from "@jamsr-ui/react";
+          {`// app/page.ts
+import { UIProvider } from "@jamsr-ui/react";
           
 function App() {
   return (
@@ -135,17 +144,47 @@ function App() {
       </div>
     ),
   },
+  {
+    heading: " Enjoy and Explore JamsrUI Components",
+    content: (
+      <div className="flex flex-col gap-4">
+        <Typography as="p">
+          You're all set! Start using JamsrUI components in your project. Here's
+          an example of implementing a button component:
+        </Typography>
+        <CodeBlock>
+          {`import { Button } from "@jamsr-ui/react";
+
+export const Button = () => {
+  return (
+    <div className="flex gap-4">
+      <Button color="default">Default</Button>
+      <Button color="primary">Primary</Button>
+      <Button color="secondary">Secondary</Button>
+      <Button color="success">Success</Button>
+      <Button color="warning">Warning</Button>
+      <Button color="danger">Danger</Button>
+    </div>
+  );
+};
+
+`}
+        </CodeBlock>
+      </div>
+    ),
+  },
 ];
 
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <Alert variant="outlined" status="danger">
+      {/* <Alert variant="outlined" status="danger">
         JamsrUI is currently in development and it is not stable.
-      </Alert>
-      <Alert variant="solid" status="default">
+      </Alert> */}
+      <Alert variant="outlined" status="default" >
         JamsrUI is only supported in Next.js
       </Alert>
+     
 
       <Typography as="p" variant="body1">
         Get started with{" "}

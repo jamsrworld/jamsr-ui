@@ -108,16 +108,13 @@ const CircleChartCard = React.forwardRef<
       )}
       {...props}
     >
-      <div className="flex flex-col gap-y-2 p-4 pb-0">
+      <div className="flex w-full flex-col gap-y-2 p-4 pb-0">
         <div className="flex items-center justify-between gap-x-2">
           <dt>
             <h3 className="text-sm font-medium text-default-500">{title}</h3>
           </dt>
           <div className="flex items-center justify-end gap-x-2">
             <Menu
-              classNames={{
-                base: "min-w-[120px]",
-              }}
               placement="bottom-end"
               trigger={
                 <IconButton
@@ -144,14 +141,14 @@ const CircleChartCard = React.forwardRef<
           width="100%"
         >
           <RadialBarChart
-            barSize={10}
+            barSize={12}
             cx="50%"
             cy="50%"
             data={chartData}
+            startAngle={225}
             endAngle={-45}
             innerRadius={90}
             outerRadius={70}
-            startAngle={225}
           >
             <PolarAngleAxis
               angleAxisId={0}
@@ -164,7 +161,7 @@ const CircleChartCard = React.forwardRef<
               animationDuration={1000}
               animationEasing="ease"
               background={{
-                fill: "hsl(var(--nextui-default-100))",
+                fill: "hsl(var(--ui-default-100))",
               }}
               cornerRadius={12}
               dataKey="value"

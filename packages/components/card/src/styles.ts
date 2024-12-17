@@ -2,7 +2,7 @@ import { radiusBaseVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const cardVariants = tv({
-  base: "relative overflow-hidden transition-colors",
+  base: "relative flex flex-col overflow-hidden transition-colors",
   variants: {
     bg: {
       default: "bg-content1",

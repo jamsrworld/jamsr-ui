@@ -115,9 +115,6 @@ const CircleChartCard = React.forwardRef<
           </dt>
           <div className="flex items-center justify-end gap-x-2">
             <Menu
-              classNames={{
-                base: "min-w-[120px]",
-              }}
               placement="bottom-end"
               trigger={
                 <IconButton

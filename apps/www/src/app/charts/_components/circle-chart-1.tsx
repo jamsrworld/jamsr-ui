@@ -105,9 +105,6 @@ const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
               <SelectItem value="per-month">Per Month</SelectItem>
             </Select>
             <Menu
-              classNames={{
-                base: "min-w-[120px]",
-              }}
               placement="bottom-end"
               trigger={
                 <IconButton

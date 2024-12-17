@@ -30,7 +30,7 @@ type CircleChartProps = {
 
 const data: CircleChartProps[] = [
   {
-    title: "Activity",
+    title: "Radial Bar Chart",
     color: "default",
     total: 1358,
     chartData: [

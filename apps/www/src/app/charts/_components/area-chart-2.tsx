@@ -15,7 +15,7 @@ import {
 
 const data = {
   colors: ["success", "default"],
-  heading: "Analytics",
+  heading: "Area Chart",
   categories: ["Mac", "Window"],
   chartData: [
     { month: "January", window: 460, mac: 106 },

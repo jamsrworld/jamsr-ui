@@ -8,16 +8,20 @@ import { TooltipOffset } from "./examples/offset";
 import { TooltipWithArrow } from "./examples/with-arrow";
 import { TooltipRadius } from "./examples/radius";
 
-export const metadata: Metadata = {
-  title: "Tooltip",
-};
+const title = "Tooltip";
+const description =
+  "A Tooltip component provides a small pop-up box that appears when a user hovers over an element. It is typically used to provide additional information or context about a UI element without cluttering the interface.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["tooltip"][number]>(variant: T) =>
   readVariantCode("tooltip", variant);
 
 const Tooltip = () => {
   return (
-    <VariantPage heading="Tooltip">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <TooltipUsage />
       </VariantWrapper>

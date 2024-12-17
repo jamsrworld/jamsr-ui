@@ -1,11 +1,10 @@
 "use client";
 
-import { type SelectionSet } from "@jamsr-ui/react";
 import { useState } from "react";
 import { AutocompleteUsage } from "./usage";
 
 export const AutocompleteMultipleControlled = () => {
-  const [value, setValue] = useState<SelectionSet>(new Set(["cat"]));
+  const [value, setValue] = useState<string[]>(["cat"]);
   return (
     <AutocompleteUsage
       isMultiple

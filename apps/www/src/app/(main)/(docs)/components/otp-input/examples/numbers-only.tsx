@@ -3,5 +3,5 @@
 import { OtpInput } from "@jamsr-ui/react";
 
 export const OtpInputNumbersOnly = () => {
-  return <OtpInput inputType="number" isNumeric />;
+  return <OtpInput isNumeric />;
 };

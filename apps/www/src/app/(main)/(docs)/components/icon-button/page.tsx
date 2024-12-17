@@ -17,6 +17,10 @@ const title = "Icon Button";
 const description =
   "A compact and interactive button that uses an icon to trigger actions, providing a visually efficient way to execute tasks without cluttering the interface.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["button"][number]>(variant: T) =>
   readVariantCode("button", variant);
 

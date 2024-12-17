@@ -8,7 +8,6 @@ const title = "Empty Content";
 export const metadata: Metadata = {
   title,
 };
-
 const code = <T extends VariantTypes["slider"][number]>(variant: T) =>
   readVariantCode("slider", variant);
 

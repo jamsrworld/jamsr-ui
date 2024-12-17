@@ -73,7 +73,7 @@ export const CopyToClipboard = (props: Props) => {
   };
   return (
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
-    <IconButton size="sm" label="Copy To Clipboard" onClick={handleClick}>
+    <IconButton size="sm" aria-label="Copy To Clipboard" onClick={handleClick}>
       {isCopied ? <CheckIcon /> : <CopyIcon />}
     </IconButton>
   );

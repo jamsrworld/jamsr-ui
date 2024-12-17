@@ -9,16 +9,20 @@ import { TableEmptyState } from "./examples/empty-state";
 import { TableRadius } from "./examples/radius";
 import { TableUsage } from "./examples/usage";
 
-export const metadata: Metadata = {
-  title: "Table",
-};
+const title = "Table";
+const description =
+  "A Table component is used to organize and display data in rows and columns. It provides a structured way to present large datasets, with features like sorting, filtering, and pagination for better data management.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["table"][number]>(variant: T) =>
   readVariantCode("table", variant);
 
 const Table = () => {
   return (
-    <VariantPage heading="Table">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Solid  (Default)" code={code("usage")}>
         <TableUsage />
       </VariantWrapper>

@@ -20,16 +20,20 @@ import { SelectUsage } from "./examples/usage";
 import { SelectWithHelperText } from "./examples/with-helper-text";
 import { SelectWithoutLabel } from "./examples/without-label";
 
-export const metadata: Metadata = {
-  title: "Select",
-};
+const title = "Select";
+const description =
+  "The Select component provides a dropdown menu that allows users to choose one or more options from a list. It is commonly used for form inputs, offering a compact way to present multiple choices.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["select"][number]>(variant: T) =>
   readVariantCode("select", variant);
 
 const Select = () => {
   return (
-    <VariantPage heading="Select">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <SelectUsage />
       </VariantWrapper>

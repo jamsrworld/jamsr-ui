@@ -19,6 +19,10 @@ const title = "Dialog";
 const description =
   "A flexible and interactive component that presents content or actions in a modal window, allowing users to focus on critical information or decisions without distractions.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["dialog"][number]>(variant: T) =>
   readVariantCode("dialog", variant);
 

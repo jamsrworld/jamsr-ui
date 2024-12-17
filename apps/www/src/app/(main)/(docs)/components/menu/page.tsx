@@ -22,6 +22,10 @@ const title = "Menu";
 const description =
   "A navigational component that displays a list of options or actions, allowing users to select from various choices within an interface in a structured manner.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["menu"][number]>(variant: T) =>
   readVariantCode("menu", variant);
 

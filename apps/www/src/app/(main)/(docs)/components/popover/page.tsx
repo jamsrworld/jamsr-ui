@@ -11,16 +11,20 @@ import { PopoverWithArrow } from "./examples/with-arrow";
 import { PopoverWithoutScroll } from "./examples/without-lock-scroll";
 import { PopoverRadius } from "./examples/radius";
 
-export const metadata: Metadata = {
-  title: "Popover",
-};
+const title = "Popover";
+const description =
+  "Popover is a non-modal dialog that floats around its disclosure. It's commonly used for displaying additional rich content on top of something.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["popover"][number]>(variant: T) =>
   readVariantCode("popover", variant);
 
 const Popover = () => {
   return (
-    <VariantPage heading="Popover">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <PopoverUsage />
       </VariantWrapper>

@@ -11,6 +11,10 @@ const title = "Editor";
 const description =
   "A robust and versatile component that provides an interactive interface for users to create, edit, and format content with rich-text and media support.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["editor"][number]>(variant: T) =>
   readVariantCode("editor", variant);
 

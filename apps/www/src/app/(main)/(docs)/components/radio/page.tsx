@@ -13,16 +13,21 @@ import { RadioGroupControlled } from "./examples/radio-group-controlled";
 import { RadioGroupCustom } from "./examples/radio-group-custom";
 import { RadioSizes } from "./examples/sizes";
 
-export const metadata: Metadata = {
-  title: "Radio",
-};
+const title = "Radio";
+const description =
+  "Radio buttons are used for selecting one option from a set. They allow a single choice from a group of options, with only one option being selected at a time.";
 
+
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["radio"][number]>(variant: T) =>
   readVariantCode("radio", variant);
 
 const Radio = () => {
   return (
-    <VariantPage heading="Radio">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <RadioUsage />
       </VariantWrapper>

@@ -11,6 +11,10 @@ const title = "Kbd";
 const description =
   "A component that displays keyboard keys or key combinations, typically used to indicate shortcuts or key actions within an interface.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["kbd"][number]>(variant: T) =>
   readVariantCode("kbd", variant);
 

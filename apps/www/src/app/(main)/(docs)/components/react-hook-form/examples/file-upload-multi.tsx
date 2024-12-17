@@ -57,6 +57,7 @@ export const RHFDemoFileUploadMulti = (props: Props) => {
         getFileUrlAfterUpload={getFileUrlAfterUpload}
         uploadApiUrl={CDN_UPLOAD_URL}
         onError={handleError}
+        getValueFromResponse={(response) => response}
       />
     </RHFDemoWrapper>
   );

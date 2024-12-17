@@ -9,6 +9,10 @@ const title = "Header";
 const description =
   "A prominent and customizable component that displays key information, navigation elements, or branding at the top of a page or section, providing a clear structure to the layout.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["header"][number]>(variant: T) =>
   readVariantCode("header", variant);
 

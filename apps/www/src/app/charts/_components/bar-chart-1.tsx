@@ -14,7 +14,7 @@ import {
 
 const data = [
   {
-    title: "Mobile Sales",
+    title: "Column chart",
     color: "default",
     categories: ["Mobile"],
     chartData: [

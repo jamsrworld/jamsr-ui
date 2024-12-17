@@ -14,7 +14,7 @@ import {
 } from "recharts";
 
 const data = {
-  heading: "Visitors Analysis",
+  heading: "Area Chart",
   colors: ["success"],
   categories: ["Visitors"],
   chartData: [

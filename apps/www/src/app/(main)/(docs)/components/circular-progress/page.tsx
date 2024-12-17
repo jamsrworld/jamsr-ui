@@ -12,13 +12,18 @@ const title = "Circular Progress";
 const description =
   "A visually engaging component that provides a clear indication of ongoing processes or tasks, allowing users to track progress in real time with a circular animation.";
 
+  export const metadata: Metadata = {
+  title,
+  description,
+};
+
 const code = <T extends VariantTypes["circular-progress"][number]>(
   variant: T,
 ) => readVariantCode("circular-progress", variant);
 
 const Progress = () => {
   return (
-    <VariantPage  heading={title} description={description}>
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <CircularProgressUsage />
       </VariantWrapper>

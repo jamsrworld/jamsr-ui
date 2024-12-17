@@ -1,11 +1,10 @@
 "use client";
 
-import { type SelectionSet } from "@jamsr-ui/react";
 import { useState } from "react";
 import { AutocompleteUsage } from "./usage";
 
 export const AutocompleteControlled = () => {
-  const [value, setValue] = useState<SelectionSet>(new Set(["cat"]));
+  const [value, setValue] = useState<string[]>(["cat"]);
   return (
     <AutocompleteUsage
       value={value}

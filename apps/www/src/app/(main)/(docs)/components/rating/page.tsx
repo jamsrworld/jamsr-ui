@@ -12,16 +12,20 @@ import { RatingInvalid } from "./examples/invalid";
 import { RatingReadonly } from "./examples/readonly";
 import { RatingSize } from "./examples/size";
 
-export const metadata: Metadata = {
-  title: "Rating",
-};
+const title = "Rating";
+const description =
+  "A Rating component allows users to provide feedback by selecting a value from a predefined range, typically represented by stars, numbers, or other visual indicators.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["rating"][number]>(variant: T) =>
   readVariantCode("rating", variant);
 
 const Rating = () => {
   return (
-    <VariantPage heading="Rating">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <RatingUsage />
       </VariantWrapper>

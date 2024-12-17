@@ -9,16 +9,20 @@ import { TagsInputInvalidState } from "./examples/invalid-state";
 import { TagsInputRadius } from "./examples/radius";
 import { TagsInputUsage } from "./examples/usage";
 
-export const metadata: Metadata = {
-  title: "Editor",
-};
+const title = "Tags Input";
+const description =
+  "A Tags Input component allows users to input multiple tags or keywords by typing and separating them with commas or pressing enter. It is commonly used for adding labels, categories, or keywords to items or content.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["tags-input"][number]>(variant: T) =>
   readVariantCode("tags-input", variant);
 
-const Editor = () => {
+const TagsInput = () => {
   return (
-    <VariantPage heading="Tags Input">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <TagsInputUsage />
       </VariantWrapper>
@@ -37,4 +41,4 @@ const Editor = () => {
     </VariantPage>
   );
 };
-export default Editor;
+export default TagsInput;

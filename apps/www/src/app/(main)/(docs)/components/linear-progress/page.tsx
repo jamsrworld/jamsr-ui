@@ -11,6 +11,10 @@ const title = "Linear Progress";
 const description =
   "A visual indicator that displays the progress of an ongoing task in a linear format, providing users with a clear understanding of task completion in real time.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["linear-progress"][number]>(variant: T) =>
   readVariantCode("linear-progress", variant);
 

@@ -22,18 +22,19 @@ const code = <T extends VariantTypes["otp-input"][number]>(variant: T) =>
 
 const OtpInput = () => {
   return (
-    <VariantPage heading="OTP Input" description={description}>
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <OtpInputUsage />
       </VariantWrapper>
       <VariantWrapper heading="6 Digits" code={code("6-digits")}>
         <OtpInput6Digits />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("radius")}>
-        <OtpInputRadius />
-      </VariantWrapper>
+     
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <OtpInputControlled />
+      </VariantWrapper>
+      <VariantWrapper heading="Radius" code={code("radius")}>
+        <OtpInputRadius />
       </VariantWrapper>
     </VariantPage>
   );

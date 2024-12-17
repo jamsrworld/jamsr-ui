@@ -1,14 +1,12 @@
 "use client";
 
-import { Select, type SelectionSet, SelectItem } from "@jamsr-ui/react";
+import { Select, SelectItem } from "@jamsr-ui/react";
 import { useState } from "react";
 
 export const SelectMultipleControlled = () => {
-  const [value, setValue] = useState<SelectionSet>(
-    new Set(["option1", "option2"]),
-  );
+  const [value, setValue] = useState<string[]>(["option1", "option2"]);
   return (
-    <div >
+    <div>
       <Select
         className="max-w-md"
         label="Select Label"

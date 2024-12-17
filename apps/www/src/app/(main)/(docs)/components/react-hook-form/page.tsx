@@ -21,16 +21,21 @@ import { RHFDemoTagsInput } from "./examples/tags-input";
 import { RHFDemoTextarea } from "./examples/textarea";
 import { RHFDemoAutocompleteMulti } from "./examples/autocomplete-multi";
 
-export const metadata: Metadata = {
-  title: "React Hook Form",
-};
+const title = "React Hook Form";
+const description =
+  "React Hook Form is a library for managing form state and validation in React applications. It simplifies handling form inputs, validation, and submission, providing better performance and ease of use compared to traditional methods.";
+
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 
 const code = <T extends VariantTypes["react-hook-form"][number]>(variant: T) =>
   readVariantCode("react-hook-form", variant);
 
 const DragDropDndKit = () => {
   return (
-    <VariantPage heading="React Hook Form">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Input" code={code("input")}>
         <RHFDemoInput />
       </VariantWrapper>

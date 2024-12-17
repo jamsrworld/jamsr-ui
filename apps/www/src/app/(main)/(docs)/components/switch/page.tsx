@@ -14,16 +14,20 @@ import { SwitchSizes } from "./examples/sizes";
 import { SwitchUsage } from "./examples/usage";
 import { SwitchWithLabel } from "./examples/with-label";
 
-export const metadata: Metadata = {
-  title: "Switch",
-};
+const title = "Switch";
+const description =
+  "A Switch component allows users to toggle between two states, typically representing an on/off or active/inactive choice. It is commonly used for enabling or disabling features in a user interface.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["switch"][number]>(variant: T) =>
   readVariantCode("switch", variant);
 
 const Switch = () => {
   return (
-    <VariantPage heading="Switch">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <SwitchUsage />
       </VariantWrapper>

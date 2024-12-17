@@ -19,16 +19,20 @@ import { TextareaWithPlaceholder } from "./examples/with-placeholder";
 import { TextareaWithStartContent } from "./examples/with-start-content";
 import { TextareaWithoutLabel } from "./examples/without-label";
 
-export const metadata: Metadata = {
-  title: "Textarea",
-};
+const title = "Textarea";
+const description =
+  "A Textarea component allows users to input multi-line text. It is commonly used for capturing longer user input, such as comments, messages, or descriptions, and offers flexible height for better content management.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["textarea"][number]>(variant: T) =>
   readVariantCode("textarea", variant);
 
 const Textarea = () => {
   return (
-    <VariantPage heading="Textarea">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <TextareaUsage />
       </VariantWrapper>

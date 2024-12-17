@@ -10,6 +10,10 @@ const title = "Drag and Drop";
 const description =
   "An intuitive and interactive component that enables users to easily drag and drop items within a designated area, enhancing user experience and workflow efficiency.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["drag-and-drop"][number]>(variant: T) =>
   readVariantCode("drag-and-drop", variant);
 

@@ -6,16 +6,21 @@ import { type VariantTypes } from "@/types/variants";
 import { RepeaterUsage } from "./examples/usage";
 import { RepeaterIndex } from "./examples";
 
-export const metadata: Metadata = {
-  title: "Repeater",
-};
+const title = "Repeater";
+const description =
+  "A Repeater component is used to repeat a set of elements based on a data source. It allows for dynamic rendering of a collection of items, providing a flexible way to display lists, tables, or other repeated content.";
 
+
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["repeater"][number]>(variant: T) =>
   readVariantCode("repeater", variant);
 
 const Repeater = () => {
   return (
-    <VariantPage heading="Repeater">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <RepeaterUsage />
       </VariantWrapper>

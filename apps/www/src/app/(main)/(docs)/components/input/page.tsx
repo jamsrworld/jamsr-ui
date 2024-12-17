@@ -30,6 +30,10 @@ const title = "Input";
 const description =
   "A form element that allows users to input and submit data, supporting various types such as text, numbers, and more for seamless data entry.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["input"][number]>(variant: T) =>
   readVariantCode("input", variant);
 

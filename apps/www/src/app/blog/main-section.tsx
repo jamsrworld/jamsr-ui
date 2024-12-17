@@ -14,7 +14,7 @@ import ColorPng from "./color.png";
 const TableSection = () => {
   return (
     <Table
-      variant="outlined"
+      variant="bordered"
       classNames={{
         td: "text-foreground-secondary",
       }}

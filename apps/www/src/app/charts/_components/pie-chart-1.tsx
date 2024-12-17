@@ -18,7 +18,7 @@ type CircleChartProps = {
 
 const data: CircleChartProps[] = [
   {
-    title: "Traffic Sources",
+    title: "Donut Chart",
     categories: ["Search", "Direct", "Social", "Referral"],
     color: "warning",
     chartData: [

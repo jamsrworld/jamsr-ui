@@ -6,16 +6,20 @@ import { type Metadata } from "next";
 import { TypographyAll } from "./examples/all";
 import { TypographyUsage } from "./examples/usage";
 
-export const metadata: Metadata = {
-  title: "Typography",
-};
+const title = "Typography";
+const description =
+  "Typography refers to the style, arrangement, and appearance of text. It is essential in design to ensure readability, hierarchy, and consistency in the presentation of written content across a user interface.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["typography"][number]>(variant: T) =>
   readVariantCode("typography", variant);
 
 const Typography = () => {
   return (
-    <VariantPage heading="Typography">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <TypographyUsage />
       </VariantWrapper>

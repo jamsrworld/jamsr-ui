@@ -5,16 +5,20 @@ import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
 import { DefaultToast } from "./examples/usage";
 
-export const metadata: Metadata = {
-  title: "Toast",
-};
+const title = "Toast";
+const description =
+  "A Toast component displays brief, non-intrusive notifications that appear on the screen to inform users about an event, such as a successful action or an error message, and typically disappears after a few seconds.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 const code = <T extends VariantTypes["toast"][number]>(variant: T) =>
   readVariantCode("toast", variant);
 
 const Toast = () => {
   return (
-    <VariantPage heading="Toast">
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <DefaultToast />
       </VariantWrapper>

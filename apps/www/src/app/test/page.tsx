@@ -5,8 +5,6 @@ import {
   Button,
   Checkbox,
   Editor,
-  FileUploadMulti,
-  FileUploadSingle,
   Input,
   OtpInput,
   Radio,
@@ -36,8 +34,8 @@ const Page = () => {
           <SelectItem value="hhiii">Hii</SelectItem>
           <SelectItem value="hello">Hello</SelectItem>
         </Select>
-        <FileUploadSingle />
-        <FileUploadMulti />
+        {/* <FileUploadSingle />
+        <FileUploadMulti /> */}
         <TagsInput />
         <Textarea />
         <Checkbox />

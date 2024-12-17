@@ -10,6 +10,10 @@ const title = "Link";
 const description =
   "A component that provides a clickable text or element, directing users to another page or section within an application or external source.";
 
+  export const metadata: Metadata = {
+    title,
+    description,
+  };
 
 const code = <T extends VariantTypes["link"][number]>(variant: T) =>
   readVariantCode("link", variant);

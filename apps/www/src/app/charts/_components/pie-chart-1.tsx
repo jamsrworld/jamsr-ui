@@ -1,15 +1,6 @@
 "use client";
 
-import { DotMenuIcon } from "@/components/icons";
-import {
-  Card,
-  IconButton,
-  Menu,
-  MenuItem,
-  Select,
-  SelectItem,
-  type ButtonProps,
-} from "@jamsr-ui/react";
+import { Card, CardHeader, type ButtonProps } from "@jamsr-ui/react";
 import { cn } from "@jamsr-ui/utils";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 
@@ -61,22 +52,13 @@ const data: CircleChartProps[] = [
   },
 ];
 
-export const CircleChart1 = () => {
-  return (
-    <dl className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-      {data.map((item, index) => (
-        <CircleChartCard key={index} {...item} />
-      ))}
-    </dl>
-  );
-};
-
 const formatTotal = (total: number) => {
   return total >= 1000 ? `${(total / 1000).toFixed(1)}K` : total;
 };
 
 const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
   const { className, title, categories, color, chartData } = props;
+  const total = 2492;
   return (
     <Card
       className={cn(
@@ -84,46 +66,7 @@ const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
         className,
       )}
     >
-      <div className="flex flex-col gap-y-2 p-4 pb-0">
-        <div className="flex items-center justify-between gap-x-2">
-          <dt>
-            <h3 className="text-sm font-normal text-default-500">{title}</h3>
-          </dt>
-          <div className="flex items-center justify-end gap-x-2">
-            <Select
-              aria-label="Time Range"
-              classNames={{
-                trigger: "min-w-[100px] min-h-7 h-7",
-                value: "text-tiny !text-default-500",
-                popover: "min-w-[120px]",
-              }}
-              placeholder="Per Day"
-              size="sm"
-            >
-              <SelectItem value="per-day">Per Day</SelectItem>
-              <SelectItem value="per-week">Per Week</SelectItem>
-              <SelectItem value="per-month">Per Month</SelectItem>
-            </Select>
-            <Menu
-              placement="bottom-end"
-              trigger={
-                <IconButton
-                  aria-label="Options"
-                  radius="full"
-                  size="sm"
-                  variant="light"
-                >
-                  <DotMenuIcon />
-                </IconButton>
-              }
-            >
-              <MenuItem key="view-details">View Details</MenuItem>
-              <MenuItem key="export-data">Export Data</MenuItem>
-              <MenuItem key="set-alert">Set Alert</MenuItem>
-            </Menu>
-          </div>
-        </div>
-      </div>
+      <CardHeader heading={title} />
       <div className="flex h-full flex-wrap items-center justify-center gap-x-2 lg:flex-nowrap">
         <ResponsiveContainer
           className="[&_.recharts-surface]:outline-none"
@@ -185,9 +128,22 @@ const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
                 />
               ))}
             </Pie>
+            <g>
+              <text textAnchor="middle" x="50%" y="48%">
+                <tspan className="fill-default-500 text-xs" dy="-0.5em" x="50%">
+                  Total
+                </tspan>
+                <tspan
+                  className="fill-foreground text-md font-semibold"
+                  dy="1.5em"
+                  x="50%"
+                >
+                  {formatTotal(total)}
+                </tspan>
+              </text>
+            </g>
           </PieChart>
         </ResponsiveContainer>
-
         <div className="flex w-full flex-col justify-center gap-4 p-4 text-xs text-default-500 lg:p-0">
           {categories.map((category, index) => (
             <div key={index} className="flex items-center gap-2">
@@ -203,5 +159,15 @@ const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
         </div>
       </div>
     </Card>
+  );
+};
+
+export const PieChart1 = () => {
+  return (
+    <dl className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+      {data.map((item, index) => (
+        <CircleChartCard key={index} {...item} />
+      ))}
+    </dl>
   );
 };

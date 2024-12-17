@@ -14,26 +14,26 @@ import {
 } from "recharts";
 
 const data = {
-  heading: "Visitors Analysis",
-  colors: ["success"],
-  categories: ["Visitors"],
+  colors: ["success", "default"],
+  heading: "Analytics",
+  categories: ["Mac", "Window"],
   chartData: [
-    { month: "January", visitors: 266 },
-    { month: "February", visitors: 505 },
-    { month: "March", visitors: 357 },
-    { month: "April", visitors: 263 },
-    { month: "May", visitors: 339 },
-    { month: "June", visitors: 354 },
-    { month: "July", visitors: 330 },
-    { month: "August", visitors: 320 },
-    { month: "September", visitors: 400 },
-    { month: "October", visitors: 420 },
-    { month: "November", visitors: 380 },
-    { month: "December", visitors: 450 },
+    { month: "January", window: 460, mac: 106 },
+    { month: "February", window: 320, mac: 185 },
+    { month: "March", window: 210, mac: 147 },
+    { month: "April", window: 150, mac: 113 },
+    { month: "May", window: 200, mac: 139 },
+    { month: "June", window: 230, mac: 124 },
+    { month: "July", window: 190, mac: 140 },
+    { month: "August", window: 200, mac: 120 },
+    { month: "September", window: 240, mac: 160 },
+    { month: "October", window: 260, mac: 160 },
+    { month: "November", window: 230, mac: 150 },
+    { month: "December", window: 270, mac: 180 },
   ],
 };
 
-export const AreaChart1 = () => {
+export const AreaChart2 = () => {
   const { chartData, colors, categories, heading } = data;
   return (
     <Card>
@@ -53,7 +53,8 @@ export const AreaChart1 = () => {
             <CartesianGrid
               vertical={false}
               strokeDasharray="3 3"
-              strokeOpacity={0.25}
+              stroke="hsl(var(--ui-default-200))"
+              // horizontalCoordinatesGenerator={[200, 150, 100, 50]}
             />
             <XAxis
               dataKey="month"

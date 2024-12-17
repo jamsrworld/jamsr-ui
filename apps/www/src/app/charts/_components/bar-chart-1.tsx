@@ -57,24 +57,6 @@ const data = [
   },
 ];
 
-export const BarChart1 = () => {
-  return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-      {data.map((item) => {
-        return (
-          <BarChartCard
-            key={item.title}
-            categories={item.categories}
-            color={item.color}
-            title={item.title}
-            chartData={item.chartData}
-          />
-        );
-      })}
-    </div>
-  );
-};
-
 type ChartData = {
   weekday: string;
   [key: string]: string | number;
@@ -164,5 +146,23 @@ export const BarChartCard = (props: ChartProps) => {
         </ResponsiveContainer>
       </CardContent>
     </Card>
+  );
+};
+
+export const BarChart1 = () => {
+  return (
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      {data.map((item) => {
+        return (
+          <BarChartCard
+            key={item.title}
+            categories={item.categories}
+            color={item.color}
+            title={item.title}
+            chartData={item.chartData}
+          />
+        );
+      })}
+    </div>
   );
 };

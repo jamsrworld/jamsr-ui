@@ -1,16 +1,12 @@
 "use client";
 
-import { DotMenuIcon } from "@/components/icons";
 import {
   Card,
-  IconButton,
-  Menu,
-  MenuItem,
+  CardHeader,
   type ButtonProps,
   type CardProps,
 } from "@jamsr-ui/react";
 import { cn } from "@jamsr-ui/utils";
-import React from "react";
 import {
   Cell,
   PolarAngleAxis,
@@ -81,59 +77,20 @@ const data: CircleChartProps[] = [
   },
 ];
 
-export const CircleChart3 = () => {
-  return (
-    <dl className="grid w-full grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
-      {data.map((item, index) => (
-        <CircleChartCard key={index} {...item} />
-      ))}
-    </dl>
-  );
-};
-
 const formatTotal = (value: number | undefined) => {
   return value?.toLocaleString() ?? "0";
 };
 
-const CircleChartCard = React.forwardRef<
-  HTMLDivElement,
-  Omit<CardProps, "children"> & CircleChartProps
->(({ className, title, color, chartData, total, ...props }, ref) => {
+const CircleChartCard = (props: CircleChartProps & CardProps) => {
+  const { className, title, color, chartData, total } = props;
   return (
     <Card
-      ref={ref}
       className={cn(
         "flex h-[240px] flex-col border border-transparent dark:border-default-100",
         className,
       )}
-      {...props}
     >
-      <div className="flex flex-col gap-y-2 p-4 pb-0">
-        <div className="flex items-center justify-between gap-x-2">
-          <dt>
-            <h3 className="text-sm font-medium text-default-500">{title}</h3>
-          </dt>
-          <div className="flex items-center justify-end gap-x-2">
-            <Menu
-              placement="bottom-end"
-              trigger={
-                <IconButton
-                  aria-label="Open Menu"
-                  radius="full"
-                  size="sm"
-                  variant="light"
-                >
-                  <DotMenuIcon />
-                </IconButton>
-              }
-            >
-              <MenuItem value="view-details">View Details</MenuItem>
-              <MenuItem value="export-data">Export Data</MenuItem>
-              <MenuItem value="set-alert">Set Alert</MenuItem>
-            </Menu>
-          </div>
-        </div>
-      </div>
+      <CardHeader heading={title} />
       <div className="flex h-full gap-x-3">
         <ResponsiveContainer
           className="[&_.recharts-surface]:outline-none"
@@ -192,4 +149,14 @@ const CircleChartCard = React.forwardRef<
       </div>
     </Card>
   );
-});
+};
+
+export const RadialChart2 = () => {
+  return (
+    <dl className="grid w-full grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
+      {data.map((item, index) => (
+        <CircleChartCard key={index} {...item} />
+      ))}
+    </dl>
+  );
+};

@@ -57,24 +57,6 @@ const data = [
   },
 ];
 
-export const BarChart3 = () => {
-  return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-      {data.map((item) => {
-        return (
-          <BarChartCard
-            key={item.title}
-            categories={item.categories}
-            color={item.color}
-            title={item.title}
-            chartData={item.chartData}
-          />
-        );
-      })}
-    </div>
-  );
-};
-
 type ChartData = {
   weekday: string;
   [key: string]: string | number;
@@ -94,7 +76,7 @@ export const BarChartCard = (props: ChartProps) => {
       <CardHeader heading={title} subHeading="January - June 2024" />
       <CardContent>
         <ResponsiveContainer height={200} width="100%">
-          <BarChart accessibilityLayer data={chartData}>
+          <BarChart accessibilityLayer data={chartData} barGap={4}>
             <CartesianGrid vertical={false} className="stroke-divider" />
             <XAxis
               dataKey="weekday"
@@ -164,5 +146,23 @@ export const BarChartCard = (props: ChartProps) => {
         </ResponsiveContainer>
       </CardContent>
     </Card>
+  );
+};
+
+export const BarChart3 = () => {
+  return (
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      {data.map((item) => {
+        return (
+          <BarChartCard
+            key={item.title}
+            categories={item.categories}
+            color={item.color}
+            title={item.title}
+            chartData={item.chartData}
+          />
+        );
+      })}
+    </div>
   );
 };

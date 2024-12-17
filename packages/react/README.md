@@ -4,13 +4,9 @@
 
 > **NOTE**: 🚧 Currently a work in progress. Stay tuned for updates!
 
----
-
 ## 📖 **Overview**
 
 [JamsrUI](https://jamsr-ui.jamsrworld.com) is a developer-friendly and production-ready UI components library for **Next.js** projects. It simplifies frontend development by offering reusable, customizable, and efficient UI components to help you build world-class websites faster.
-
----
 
 ## 🚀 **Getting Started**
 
@@ -35,17 +31,13 @@ We’re thrilled to see the community actively engage with **JamsrUI**! Whether 
 - 🚀 **Request Features**: Share ideas for new components.
 - 🤝 **Showcase Projects**: Let us know how you use JamsrUI.
 
----
-
 ## Contributing
 
 We welcome contributions from developers of all skill levels!
 
-## License
+## 📄 **License**
 
----
-
-Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).  
 
 ## ⭐ **Support the Project**
 

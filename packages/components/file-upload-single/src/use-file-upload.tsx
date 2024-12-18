@@ -10,7 +10,7 @@ import {
   type UIProps,
 } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { DropzoneOptions, FileError } from "react-dropzone";
 import { useDropzone } from "react-dropzone";
 import {
@@ -90,7 +90,6 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
   const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled,
   });
-
   const [previewUrl, setPreviewUrl] = useState<string | null>(value);
   const [progress, setProgress] = useState(0);
   const [isFailed, setIsFailed] = useState(false);
@@ -112,6 +111,10 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
   const revokePreviewUrl = useCallback(() => {
     if (previewUrl?.startsWith("blob:")) URL.revokeObjectURL(previewUrl);
   }, [previewUrl]);
+
+  useEffect(() => {
+    if (value !== previewUrl) setPreviewUrl(value);
+  }, [previewUrl, value]);
 
   const resetUpload = useCallback(() => {
     setValue(null);

@@ -1,5 +1,13 @@
 # @jamsr-ui/rhf
 
+## 0.0.60
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.105
+  - @jamsr-ui/editor@0.0.116
+
 ## 0.0.59
 
 ### Patch Changes

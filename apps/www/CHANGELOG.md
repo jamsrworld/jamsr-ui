@@ -1,5 +1,13 @@
 # web
 
+## 0.1.197
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/react@0.0.215
+
 ## 0.1.196
 
 ### Patch Changes

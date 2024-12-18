@@ -6,6 +6,7 @@ export * from "@jamsr-ui/autocomplete";
 export * from "@jamsr-ui/avatar";
 export * from "@jamsr-ui/button";
 export * from "@jamsr-ui/card";
+export * from "@jamsr-ui/chart";
 export * from "@jamsr-ui/checkbox";
 export * from "@jamsr-ui/chip";
 export * from "@jamsr-ui/circular-progress";

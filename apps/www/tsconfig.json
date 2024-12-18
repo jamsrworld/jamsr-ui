@@ -35,6 +35,6 @@
     // "../../packages/components/*/src/*.d.ts",
     ".eslintrc.cjs",
     "next-sitemap.config.js"
-  ],
+, "../../packages/components/chart/src/shadcn.tsx"  ],
   "exclude": ["node_modules"]
 }

@@ -4,15 +4,20 @@ import { RadialSimpleChart } from "./examples/radial-simple";
 import { RadialGaugeChart } from "./examples/radial-gauge";
 import { RadialSemiCircleGaugeChart } from "./examples/radial-semi-circle-gauge";
 import { RadialMultiBarChart } from "./examples/radial-multi-bar";
+import { type Metadata } from "next";
 
 const title = "Radial Bar Chart";
-export const metadata = {
+const description = `A radial bar chart represents data using circular bars 
+arranged around a central point, showcasing proportions or comparisons in a radial layout.`;
+
+export const metadata: Metadata = {
   title,
+  description,
 };
 
 const Page = () => {
   return (
-    <VariantPage heading={title}>
+    <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Radial 1">
         <RadialSimpleChart />
       </VariantWrapper>

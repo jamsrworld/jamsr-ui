@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.214",
+  "version": "0.0.215",
   "main": "./src/index.ts",
   "publishConfig": {
     "access": "public"
@@ -39,6 +39,7 @@
     "@jamsr-ui/avatar": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/card": "workspace:^",
+    "@jamsr-ui/chart": "workspace:^",
     "@jamsr-ui/checkbox": "workspace:^",
     "@jamsr-ui/chip": "workspace:^",
     "@jamsr-ui/circular-progress": "workspace:^",

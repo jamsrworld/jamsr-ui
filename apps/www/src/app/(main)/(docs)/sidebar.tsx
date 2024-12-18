@@ -305,7 +305,7 @@ export const ComponentsSidebar = () => {
           const { heading, items, chip } = item;
           return (
             <div key={idx} className="flex flex-col gap-2">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
                 <Typography
                   as="p"
                   variant="paragraph2"

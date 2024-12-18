@@ -24,7 +24,7 @@ const code = <T extends VariantTypes["card"][number]>(variant: T) =>
 
 const Card = () => {
   return (
-    <VariantPage heading={title} description={description}>
+    <VariantPage heading={title} description={description} >
       <VariantWrapper bg="secondary" heading="Usage" code={code("usage")}>
         <CardUsage />
       </VariantWrapper>

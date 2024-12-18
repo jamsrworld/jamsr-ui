@@ -5,6 +5,7 @@ import { CDN_API_URL, CDN_UPLOAD_URL } from "@/utils/config";
 import { zodImage } from "@/utils/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
+  Button,
   type FileUploadError,
   RHFFileUploadSingle,
   toast,
@@ -37,7 +38,7 @@ export const RHFDemoFileUploadSingle = () => {
     defaultValues,
     resolver: zodResolver(schema),
   });
-  const { handleSubmit } = methods;
+  const { handleSubmit, reset } = methods;
   const onSubmit = handleSubmit((values) => {
     console.log(values);
   });
@@ -57,6 +58,18 @@ export const RHFDemoFileUploadSingle = () => {
     return response;
   };
 
+  const handleClick = () => {
+    reset({
+      image: {
+        name: "",
+        height: 0,
+        url: "https://cdn.jamsrworld.com/11-25-2024/_-media_-14--1732518710650-527259107.jpg",
+        placeholder: "",
+        width: 0,
+      },
+    });
+  };
+
   return (
     <RHFDemoWrapper methods={methods} isPending={false} onSubmit={onSubmit}>
       <RHFFileUploadSingle<FormValues>
@@ -69,6 +82,9 @@ export const RHFDemoFileUploadSingle = () => {
         defaultStateValue={imageVal}
         onError={handleError}
       />
+      <div className="flex justify-start">
+        <Button onClick={handleClick}>Set Value</Button>
+      </div>
     </RHFDemoWrapper>
   );
 };

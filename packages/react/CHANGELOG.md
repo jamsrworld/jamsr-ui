@@ -1,5 +1,16 @@
 # @jamsr-ui/react
 
+## 0.0.215
+
+### Patch Changes
+
+- fix file upload
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.105
+  - @jamsr-ui/chart@0.0.1
+  - @jamsr-ui/editor@0.0.116
+  - @jamsr-ui/rhf@0.0.60
+
 ## 0.0.214
 
 ### Patch Changes

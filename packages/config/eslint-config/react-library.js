@@ -113,5 +113,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "react/prop-types": "off",
     "@typescript-eslint/promise-function-async": "off",
+    "react/static-property-placement": "off",
+    "class-methods-use-this": "off",
   },
 };

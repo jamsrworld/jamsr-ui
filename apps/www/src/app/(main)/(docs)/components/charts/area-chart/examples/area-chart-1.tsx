@@ -2,7 +2,7 @@
 
 "use client";
 
-import {  Card, CardContent, CardHeader } from "@jamsr-ui/react";
+import { Card, CardContent, CardHeader } from "@jamsr-ui/react";
 import {
   Area,
   AreaChart,

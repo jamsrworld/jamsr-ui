@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.197",
+  "version": "0.1.198",
   "private": true,
   "type": "module",
   "scripts": {
@@ -38,7 +38,6 @@
     "react-dom": "19.0.0",
     "react-hook-form": "^7.53.1",
     "react-is": "^19.0.0",
-    "recharts": "^2.15.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

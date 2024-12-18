@@ -1,5 +1,11 @@
 # @jamsr-ui/react
 
+## 0.0.216
+
+### Patch Changes
+
+- fix react package
+
 ## 0.0.215
 
 ### Patch Changes

@@ -1,11 +1,14 @@
 /* eslint-disable react/no-unstable-nested-components */
+import { type ComponentProps } from "react";
 import { Tooltip } from "recharts";
 import { useChart } from "./use-chart";
 
-export const ChartTooltip = () => {
+export const ChartTooltip = (props: ComponentProps<typeof Tooltip>) => {
   const { config } = useChart();
+  console.log("config:->", config);
   return (
     <Tooltip
+      {...props}
       cursor={false}
       content={({ payload, label }) => {
         return (
@@ -15,18 +18,20 @@ export const ChartTooltip = () => {
               {payload?.map((item, idx) => {
                 const { value } = item;
                 const { name } = item;
-                // const category =
-                //   categories.find((c) => c.toLowerCase() === name) ?? name;
+                const configItem = name ? config[name] : null;
+                const label = configItem?.label ?? name;
+                const color = configItem?.color ?? "default";
                 return (
                   <div key={idx} className="flex w-full items-center gap-x-2">
                     <div
                       className="size-2 flex-none rounded-full"
                       style={{
-                        backgroundColor: `hsl(var(--ui-success-${(idx + 1) * 200}))`,
+                        backgroundColor: color,
+                        // backgroundColor: `hsl(var(--ui-success-${(idx + 1) * 200}))`,
                       }}
                     />
                     <span className="text-default-500">
-                      {value} {name}
+                      {value} {label}
                     </span>
                   </div>
                 );

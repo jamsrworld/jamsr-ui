@@ -1,20 +1,30 @@
-import { type ComponentProps } from "react";
+/* eslint-disable @typescript-eslint/no-useless-constructor */
 import { Area as AreaBase } from "recharts";
+import { type Props as AreaProps } from "recharts/types/cartesian/Area";
 
-export const Area = (props: ComponentProps<typeof AreaBase>) => {
-  return (
-    <AreaBase
-      type="monotone"
-      stroke="hsl(var(--ui-success))"
-      strokeWidth={2}
-      activeDot={{
-        stroke: `hsl(var(--ui-success))`,
-        strokeWidth: 2,
-        fill: `hsl(var(--ui-background))`,
-        r: 5,
-      }}
-      {...props}
-    />
-  );
-};
-Area.defaultProps = AreaBase.defaultProps;
+export class Area extends AreaBase {
+  static defaultProps: AreaProps = {
+    ...(super.defaultProps as AreaProps),
+    type: "monotone",
+    stroke: "hsl(var(--ui-primary))",
+    fill: "hsl(var(--ui-primary))",
+    strokeWidth: 2,
+    activeDot: {
+      stroke: `hsl(var(--ui-primary))`,
+      strokeWidth: 2,
+      fill: `hsl(var(--ui-background))`,
+      r: 5,
+    },
+  };
+
+  render() {
+    const { activeDot, ...restProps } = this.props;
+    const mergedActiveDot = {
+      ...Area.defaultProps.activeDot,
+      ...(activeDot || {}),
+    };
+    console.log("mergedActiveDot:->", mergedActiveDot);
+
+    return <AreaBase className="" {...restProps} activeDot={{}} />;
+  }
+}

@@ -1,10 +1,10 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
+import { type Metadata } from "next";
 import { RadialSimpleChart } from "./examples/radial-simple";
 import { RadialGaugeChart } from "./examples/radial-gauge";
 import { RadialSemiCircleGaugeChart } from "./examples/radial-semi-circle-gauge";
 import { RadialMultiBarChart } from "./examples/radial-multi-bar";
-import { type Metadata } from "next";
 
 const title = "Radial Bar Chart";
 const description = `A radial bar chart represents data using circular bars 
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Radial 1">
+      <VariantWrapper heading="Radial Bar">
         <RadialSimpleChart />
       </VariantWrapper>
-      <VariantWrapper heading="Gauge">
+      <VariantWrapper heading="Circular Gauge">
         <RadialGaugeChart />
       </VariantWrapper>
-      <VariantWrapper heading="Semi Circle Gauge">
+      <VariantWrapper heading="Semi Circular Gauge">
         <RadialSemiCircleGaugeChart />
       </VariantWrapper>
       <VariantWrapper heading="Multi Bars">

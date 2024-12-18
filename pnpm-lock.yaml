@@ -478,9 +478,6 @@ importers:
 
   packages/components/chart:
     dependencies:
-      '@jamsr-ui/show':
-        specifier: workspace:^
-        version: link:../show
       recharts:
         specifier: ^2.15.0
         version: 2.15.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -506,13 +503,10 @@ importers:
       '@jamsr-ui/chart':
         specifier: workspace:^
         version: link:../chart
-      '@jamsr-ui/show':
-        specifier: workspace:^
-        version: link:../show
-    devDependencies:
       '@jamsr-ui/utils':
-        specifier: ^0.0.70
-        version: 0.0.70(framer-motion@12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.14)
+        specifier: workspace:^
+        version: link:../../utils
+    devDependencies:
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1557,21 +1551,6 @@ importers:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
 
-  packages/components/show:
-    devDependencies:
-      '@types/react':
-        specifier: 19.0.1
-        version: 19.0.1
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: 19.0.0
-        version: 19.0.0(react@19.0.0)
-
   packages/components/sidebar:
     dependencies:
       '@jamsr-ui/shared-icons':
@@ -2132,9 +2111,6 @@ importers:
       '@jamsr-ui/select':
         specifier: workspace:^
         version: link:../components/select
-      '@jamsr-ui/show':
-        specifier: workspace:^
-        version: link:../components/show
       '@jamsr-ui/skeleton':
         specifier: workspace:^
         version: link:../components/skeleton

@@ -29,7 +29,7 @@ export type LineChartProps = Pick<
   cartesianGrid?: false | CartesianGridProps;
   xAxis?: false | XAxisProps;
   yAxis?: false | YAxisProps;
-  line?: (key: string) => LineProps;
+  line?: LineProps | ((key: string) => LineProps);
   tooltip?: false | TooltipProps;
 };
 
@@ -85,7 +85,7 @@ export const LineChart = (props: LineChartProps) => {
                 strokeWidth: 2,
                 r: 6,
               }}
-              {...line?.(key)}
+              {...(typeof line === "function" ? line?.(key) : line)}
             />
           );
         })}

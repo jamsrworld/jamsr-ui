@@ -29,7 +29,7 @@ export type AreaChartProps = Pick<
   cartesianGrid?: false | CartesianGridProps;
   xAxis?: false | XAxisProps;
   yAxis?: false | YAxisProps;
-  area?: (key: string) => AreaProps;
+  area?: AreaProps | ((key: string) => AreaProps);
   tooltip?: false | TooltipProps;
 };
 
@@ -85,7 +85,7 @@ export const AreaChart = (props: AreaChartProps) => {
                 strokeWidth: 2,
                 r: 6,
               }}
-              {...area?.(key)}
+              {...(typeof area === "function" ? area?.(key) : area)}
             />
           );
         })}

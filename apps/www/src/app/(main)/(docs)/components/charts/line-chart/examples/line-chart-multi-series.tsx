@@ -36,10 +36,10 @@ const config: ChartConfig = {
   },
 };
 
-export const LineChartCustom = () => {
+export const LineChartMultiSeries = () => {
   return (
     <Card>
-      <CardHeader heading="Line Chart Custom" />
+      <CardHeader heading="Multi Series" />
       <CardContent>
         <LineChart
           width="100%"

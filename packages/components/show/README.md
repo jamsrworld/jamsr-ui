@@ -1,1 +1,0 @@
-/Users/jamsrworld/Documents/code/npm-packages/@jamsr-ui/packages/react/README.md

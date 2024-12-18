@@ -1,8 +1,7 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { type Metadata } from "next";
+import { LineChartMultiSeries } from "./examples/line-chart-multi-series";
 import { LineChartSimple } from "./examples/line-chart-simple";
-import { LineChart2 } from "./examples/line-chart-2";
-import { LineChartCustom } from "./examples/line-chart-custom";
 
 const title = "Line Chart";
 const description = `A line chart displays data points connected by a continuous line, 
@@ -16,9 +15,8 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <LineChartCustom />
       <LineChartSimple />
-      <LineChart2 />
+      <LineChartMultiSeries />
     </VariantPage>
   );
 };

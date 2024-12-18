@@ -1,15 +1,16 @@
 "use client";
 
-export { ChartTooltip } from "./chart-tooltip";
-export { AreaChart } from "./core/area-chart";
-export { ChartContainer } from "./chart-container";
-export * from "./types";
-
-export { Area } from "./core/area";
-export { Bar } from "./core/bar";
-export { CartesianGrid } from "./core/cartesian-grid";
-export { Line } from "./core/line";
-export { Pie } from "./core/pie";
-export { XAxis } from "./core/x-axis";
-export { YAxis } from "./core/y-axis";
-export { AreaChartFull as AreaChart2Main } from "./charts/area-chart";
+export { Area, type AreaProps } from "./area";
+export { AreaChartCore, type AreaChartCoreProps } from "./area-chart";
+export { Bar } from "./bar";
+export { CartesianGrid, type CartesianGridProps } from "./cartesian-grid";
+export { Line, type LineProps } from "./line";
+export { LineChartCore, type LineChartCoreProps } from "./line-chart";
+export { Pie } from "./pie";
+export {
+  ResponsiveContainer,
+  type ResponsiveContainerProps,
+} from "./responsive-container";
+export { ChartTooltipCore, type ChartTooltipCoreProps } from "./tooltip";
+export { XAxis, type XAxisProps } from "./x-axis";
+export { YAxis, type YAxisProps } from "./y-axis";

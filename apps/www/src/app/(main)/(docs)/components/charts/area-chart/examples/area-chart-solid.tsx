@@ -3,7 +3,7 @@
 "use client";
 
 import {
-  AreaChart2Main,
+  AreaChart,
   Card,
   CardContent,
   CardHeader,
@@ -36,7 +36,7 @@ export const AreaChartSolid = () => {
     <Card>
       <CardHeader heading="Solid" />
       <CardContent>
-        <AreaChart2Main
+        <AreaChart
           config={config}
           width="100%"
           height={300}

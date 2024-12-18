@@ -1,18 +1,26 @@
 "use client";
 
 import {
-  ChartContainer,
+  Area,
+  AreaChartCore,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  type AreaChartCoreProps,
+  type AreaProps,
+  type CartesianGridProps,
   type ResponsiveContainerProps,
-} from "../chart-container";
-import { ChartTooltip, type TooltipProps } from "../chart-tooltip";
-import { Area, type AreaProps } from "../area";
-import { AreaChartCore, type AreaChartCoreProps } from "../area-chart";
-import { CartesianGrid, type CartesianGridProps } from "../cartesian-grid";
-import { XAxis, type XAxisProps } from "../x-axis";
-import { YAxis, type YAxisProps } from "../y-axis";
-import { type ChartConfig } from "../types";
+  type XAxisProps,
+  type YAxisProps,
+} from "@jamsr-ui/chart";
+import { ChartContainer } from "./chart-container";
+import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
+import { type ChartConfig } from "./types";
 
-type Props = Pick<ResponsiveContainerProps, "width" | "height"> & {
+export type AreaChartProps = Pick<
+  ResponsiveContainerProps,
+  "width" | "height"
+> & {
   chartData: any[];
   config: ChartConfig;
   children?: React.ReactNode;
@@ -25,7 +33,7 @@ type Props = Pick<ResponsiveContainerProps, "width" | "height"> & {
   tooltip?: false | TooltipProps;
 };
 
-export const AreaChartFull = (props: Props) => {
+export const AreaChart = (props: AreaChartProps) => {
   const {
     chartData,
     config,

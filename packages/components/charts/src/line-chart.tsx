@@ -1,41 +1,49 @@
 "use client";
 
 import {
-  ChartContainer,
+  CartesianGrid,
+  Line,
+  LineChartCore,
+  XAxis,
+  YAxis,
+  type CartesianGridProps,
+  type LineChartCoreProps,
+  type LineProps,
   type ResponsiveContainerProps,
-} from "../chart-container";
-import { ChartTooltip, type TooltipProps } from "../chart-tooltip";
-import { Area, type AreaProps } from "../area";
-import { AreaChartCore, type AreaChartCoreProps } from "../area-chart";
-import { CartesianGrid, type CartesianGridProps } from "../cartesian-grid";
-import { XAxis, type XAxisProps } from "../x-axis";
-import { YAxis, type YAxisProps } from "../y-axis";
-import { type ChartConfig } from "../types";
+  type XAxisProps,
+  type YAxisProps,
+} from "@jamsr-ui/chart";
+import { ChartContainer } from "./chart-container";
+import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
+import { type ChartConfig } from "./types";
 
-type Props = Pick<ResponsiveContainerProps, "width" | "height"> & {
+export type LineChartProps = Pick<
+  ResponsiveContainerProps,
+  "width" | "height"
+> & {
   chartData: any[];
   config: ChartConfig;
   children?: React.ReactNode;
   responsiveContainer?: ResponsiveContainerProps;
-  areaChart?: AreaChartCoreProps;
+  lineChart?: LineChartCoreProps;
   cartesianGrid?: false | CartesianGridProps;
   xAxis?: false | XAxisProps;
   yAxis?: false | YAxisProps;
-  area?: (key: string) => AreaProps;
+  line?: (key: string) => LineProps;
   tooltip?: false | TooltipProps;
 };
 
-export const AreaChartFull = (props: Props) => {
+export const LineChart = (props: LineChartProps) => {
   const {
     chartData,
     config,
     children,
     responsiveContainer,
-    areaChart,
+    lineChart,
     cartesianGrid,
     xAxis,
     yAxis,
-    area,
+    line,
     tooltip,
     height,
     width,
@@ -51,7 +59,7 @@ export const AreaChartFull = (props: Props) => {
       config={config}
       {...responsiveContainer}
     >
-      <AreaChartCore data={chartData} {...areaChart}>
+      <LineChartCore data={chartData} {...lineChart}>
         {cartesianGrid !== false && <CartesianGrid {...cartesianGrid} />}
         {xAxis !== false && <XAxis {...xAxis} />}
         {yAxis !== false && <YAxis {...yAxis} />}
@@ -66,7 +74,7 @@ export const AreaChartFull = (props: Props) => {
             : strokeColor;
           return (
             // @ts-expect-error TypeError
-            <Area
+            <Line
               key={key}
               dataKey={key}
               fill={fillColor}
@@ -77,7 +85,7 @@ export const AreaChartFull = (props: Props) => {
                 strokeWidth: 2,
                 r: 6,
               }}
-              {...area?.(key)}
+              {...line?.(key)}
             />
           );
         })}
@@ -106,7 +114,7 @@ export const AreaChartFull = (props: Props) => {
           })}
         </defs>
         {children}
-      </AreaChartCore>
+      </LineChartCore>
     </ChartContainer>
   );
 };

@@ -10,18 +10,15 @@ export class Area extends AreaBase {
   static defaultProps: AreaProps = {
     ...(super.defaultProps as AreaProps),
     type: "monotone",
-    stroke: "hsl(var(--ui-primary))",
-    fill: "hsl(var(--ui-primary))",
     strokeWidth: 2,
     activeDot: {
-      stroke: `hsl(var(--ui-primary))`,
       strokeWidth: 2,
-      fill: `hsl(var(--ui-background))`,
       r: 5,
     },
   };
 
   render() {
-    return <AreaBase className="" {...this.props} activeDot={{ r: 5 }} />;
+    // @ts-expect-error TypeError
+    return <AreaBase {...this.props} />;
   }
 }

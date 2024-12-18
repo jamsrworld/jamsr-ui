@@ -1,12 +1,10 @@
-import { useMemo } from "react";
 import {
   ResponsiveContainer,
-  type ResponsiveContainerProps as Props,
-} from "recharts";
+  type ResponsiveContainerProps,
+} from "@jamsr-ui/chart";
+import { useMemo } from "react";
 import { type ChartConfig } from "./types";
 import { ChartContext, type ChartContextProps } from "./use-chart";
-
-export type ResponsiveContainerProps = Props;
 
 type ChartContainerProps = ResponsiveContainerProps & {
   config: ChartConfig;

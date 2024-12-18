@@ -3,11 +3,11 @@
 "use client";
 
 import {
-  AreaChart2Main,
+  AreaChart,
   Card,
   CardContent,
   CardHeader,
-  type ChartConfig,
+  type ChartConfig
 } from "@jamsr-ui/react";
 
 const chartData = [
@@ -64,7 +64,7 @@ export const AreaChartMultiSeriesGradientStack = () => {
     <Card>
       <CardHeader heading="Multi Series Gradient Stack" />
       <CardContent>
-        <AreaChart2Main
+        <AreaChart
           config={config}
           width="100%"
           height={300}

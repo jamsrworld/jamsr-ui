@@ -1,13 +1,12 @@
 /* eslint-disable react/no-unstable-nested-components */
-import { cn } from "@jamsr-ui/utils";
-import { Tooltip, type TooltipProps as Props } from "recharts";
 import {
-  type NameType,
-  type ValueType,
-} from "recharts/types/component/DefaultTooltipContent";
+  ChartTooltipCore as ChartTooltipBase,
+  type ChartTooltipCoreProps,
+} from "@jamsr-ui/chart";
+import { cn } from "@jamsr-ui/utils";
 import { useChart } from "./use-chart";
 
-export type TooltipProps = Props<ValueType, NameType> & {
+export type TooltipProps = ChartTooltipCoreProps & {
   classNames?: {
     base?: string;
     label?: string;
@@ -22,7 +21,7 @@ export const ChartTooltip = (props: TooltipProps) => {
   const { config } = useChart();
   const { classNames, ...restProps } = props;
   return (
-    <Tooltip
+    <ChartTooltipBase
       {...restProps}
       cursor={false}
       content={({ payload, label }) => {
@@ -54,7 +53,8 @@ export const ChartTooltip = (props: TooltipProps) => {
                   >
                     <div
                       style={{
-                        backgroundColor: color,
+                        backgroundColor:
+                          typeof color === "string" ? color : undefined,
                       }}
                       className={cn(
                         "size-2 flex-none rounded-full",
@@ -74,4 +74,5 @@ export const ChartTooltip = (props: TooltipProps) => {
     />
   );
 };
-ChartTooltip.displayName = Tooltip.displayName;
+
+ChartTooltip.displayName = ChartTooltipBase.displayName;

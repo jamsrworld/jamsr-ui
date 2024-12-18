@@ -1,13 +1,13 @@
 import { type ComponentProps } from "react";
 import { AreaChart as AreaChartBase } from "recharts";
 
-export type AreaChartProps = Omit<
+export type AreaChartCoreProps = Omit<
   ComponentProps<typeof AreaChartBase>,
   "children"
 >;
 
-export const AreaChart = (
-  props: { children: React.ReactNode } & AreaChartProps,
+export const AreaChartCore = (
+  props: { children: React.ReactNode } & AreaChartCoreProps,
 ) => {
   const { children, ...restProps } = props;
   return (

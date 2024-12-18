@@ -1,13 +1,13 @@
 "use client";
 
 import {
-  Area,
-  AreaChartCore,
+  Bar,
+  BarChartCore,
   CartesianGrid,
   XAxis,
   YAxis,
-  type AreaChartCoreProps,
-  type AreaProps,
+  type BarChartCoreProps,
+  type BarProps,
   type CartesianGridProps,
   type ResponsiveContainerProps,
   type XAxisProps,
@@ -17,38 +17,38 @@ import { ChartContainer } from "./chart-container";
 import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
 import { type ChartConfig } from "./types";
 
-export type AreaChartProps = Pick<
-  ResponsiveContainerProps,
-  "width" | "height"
-> & {
-  chartData: any[];
-  config: ChartConfig;
-  children?: React.ReactNode;
-  responsiveContainer?: ResponsiveContainerProps;
-  areaChart?: AreaChartCoreProps;
-  cartesianGrid?: false | CartesianGridProps;
-  xAxis?: false | XAxisProps;
-  yAxis?: false | YAxisProps;
-  area?: AreaProps | ((key: string) => AreaProps);
-  tooltip?: false | TooltipProps;
-};
+export type BarChartProps = Pick<ResponsiveContainerProps, "width" | "height"> &
+  Pick<BarChartCoreProps, "layout"> & {
+    chartData: any[];
+    config: ChartConfig;
+    children?: React.ReactNode;
+    responsiveContainer?: ResponsiveContainerProps;
+    barChart?: BarChartCoreProps;
+    cartesianGrid?: false | CartesianGridProps;
+    xAxis?: false | XAxisProps;
+    yAxis?: false | YAxisProps;
+    bar?:
+      | Omit<BarProps, "dataKey">
+      | ((key: string) => Omit<BarProps, "dataKey">);
+    tooltip?: false | TooltipProps;
+  };
 
-export const AreaChart = (props: AreaChartProps) => {
+export const BarChart = (props: BarChartProps) => {
   const {
     chartData,
     config,
     children,
     responsiveContainer,
-    areaChart,
+    barChart,
     cartesianGrid,
     xAxis,
     yAxis,
-    area,
+    bar,
     tooltip,
     height,
     width,
+    layout,
   } = props;
-
   const gradients = Object.entries(config).filter(([, value]) => {
     return Array.isArray(value.colors);
   });
@@ -59,18 +59,35 @@ export const AreaChart = (props: AreaChartProps) => {
       config={config}
       {...responsiveContainer}
     >
-      <AreaChartCore data={chartData} {...areaChart}>
+      <BarChartCore data={chartData} layout={layout} {...barChart}>
         {cartesianGrid !== false && (
           <CartesianGrid
-            strokeDasharray="3 3"
-            strokeOpacity={0.25}
+            stroke="hsl(var(--ui-divider))"
+            {...(layout === "vertical" && {
+              vertical: true,
+              horizontal: false,
+            })}
             {...cartesianGrid}
           />
         )}
-        {xAxis !== false && <XAxis {...xAxis} />}
-        {yAxis !== false && <YAxis {...yAxis} />}
+        {xAxis !== false && (
+          <XAxis
+            {...(layout === "vertical" && {
+              type: "number",
+            })}
+            {...xAxis}
+          />
+        )}
+        {yAxis !== false && (
+          <YAxis
+            {...(layout === "vertical" && {
+              type: "category",
+            })}
+            {...yAxis}
+          />
+        )}
         {tooltip !== false && <ChartTooltip {...tooltip} />}
-        {Object.entries(config).map(([key, value]) => {
+        {Object.entries(config).map(([key, value], idx) => {
           const { color, colors } = value;
           const strokeColor = Array.isArray(color)
             ? `url(#${key}Gradient)`
@@ -78,20 +95,24 @@ export const AreaChart = (props: AreaChartProps) => {
           const fillColor = Array.isArray(colors)
             ? `url(#${key}Gradient)`
             : strokeColor;
+          const barProps = typeof bar === "function" ? bar?.(key) : bar;
+          const stackId = barProps?.stackId;
+
+          const radiusValue: BarProps["radius"] =
+            layout === "vertical" ? [0, 8, 8, 0] : [8, 8, 0, 0];
+          const radius: BarProps["radius"] = stackId
+            ? idx === Object.values(config).length - 1
+              ? radiusValue
+              : 0
+            : radiusValue;
           return (
             // @ts-expect-error TypeError
-            <Area
+            <Bar
               key={key}
               dataKey={key}
               fill={fillColor}
-              stroke={strokeColor}
-              activeDot={{
-                fill: strokeColor,
-                stroke: "hsl(var(--ui-background))",
-                strokeWidth: 2,
-                r: 6,
-              }}
-              {...(typeof area === "function" ? area?.(key) : area)}
+              radius={radius}
+              {...(typeof bar === "function" ? bar?.(key) : bar)}
             />
           );
         })}
@@ -120,7 +141,7 @@ export const AreaChart = (props: AreaChartProps) => {
           })}
         </defs>
         {children}
-      </AreaChartCore>
+      </BarChartCore>
     </ChartContainer>
   );
 };

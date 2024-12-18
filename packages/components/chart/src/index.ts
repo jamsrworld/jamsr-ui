@@ -2,7 +2,8 @@
 
 export { Area, type AreaProps } from "./area";
 export { AreaChartCore, type AreaChartCoreProps } from "./area-chart";
-export { Bar } from "./bar";
+export { Bar, type BarProps } from "./bar";
+export { BarChartCore, type BarChartCoreProps } from "./bar-chart";
 export { CartesianGrid, type CartesianGridProps } from "./cartesian-grid";
 export { Line, type LineProps } from "./line";
 export { LineChartCore, type LineChartCoreProps } from "./line-chart";

@@ -11,30 +11,26 @@ import {
 } from "@jamsr-ui/react";
 
 const chartData = [
-  { weekday: "Sunday", mobile: 125, desktop: 50 },
-  { weekday: "Monday", mobile: 210, desktop: 80 },
-  { weekday: "Tuesday", mobile: 190, desktop: 70 },
-  { weekday: "Wednesday", mobile: 150, desktop: 45 },
-  { weekday: "Thursday", mobile: 220, desktop: 90 },
-  { weekday: "Friday", mobile: 230, desktop: 85 },
-  { weekday: "Saturday", mobile: 180, desktop: 75 },
+  { weekday: "Sunday", tablet: 90 },
+  { weekday: "Monday", tablet: 135 },
+  { weekday: "Tuesday", tablet: 120 },
+  { weekday: "Wednesday", tablet: 60 },
+  { weekday: "Thursday", tablet: 110 },
+  { weekday: "Friday", tablet: 125 },
+  { weekday: "Saturday", tablet: 100 },
 ];
 
 const config: ChartConfig = {
-  mobile: {
+  tablet: {
     color: "hsl(var(--ui-primary))",
-    label: "Mobile Sales",
-  },
-  desktop: {
-    color: "hsl(var(--ui-secondary))",
-    label: "Desktop Sales",
+    label: "Tablet Sales",
   },
 };
 
-export const BarChartMultiColumns = () => {
+export const BarChartCustom = () => {
   return (
     <Card>
-      <CardHeader heading="Multi Series" />
+      <CardHeader heading="Bar Chart" />
       <CardContent>
         <BarChart
           height={200}

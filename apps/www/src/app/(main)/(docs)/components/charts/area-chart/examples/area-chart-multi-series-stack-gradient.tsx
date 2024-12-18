@@ -7,7 +7,7 @@ import {
   Card,
   CardContent,
   CardHeader,
-  type ChartConfig
+  type ChartConfig,
 } from "@jamsr-ui/react";
 
 const chartData = [
@@ -59,10 +59,10 @@ const config: ChartConfig = {
     ],
   },
 };
-export const AreaChartMultiSeriesGradientStack = () => {
+export const AreaChartMultiSeriesStackGradient = () => {
   return (
     <Card>
-      <CardHeader heading="Multi Series Gradient Stack" />
+      <CardHeader heading="Multi Series Stack Gradient" />
       <CardContent>
         <AreaChart
           config={config}

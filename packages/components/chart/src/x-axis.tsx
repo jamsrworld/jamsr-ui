@@ -12,7 +12,7 @@ export class XAxis extends PureComponent<XAxisProps> {
     tick: {
       fill: "hsl(var(--ui-default-500))",
       style: {
-        fontSize: "var(--fs-sm)",
+        fontSize: "var(--fs-xs)",
       },
     },
     axisLine: false,

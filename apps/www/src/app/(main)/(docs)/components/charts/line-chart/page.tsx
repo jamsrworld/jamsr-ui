@@ -1,4 +1,5 @@
 import { VariantPage } from "@/components/docs/variant-page";
+import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type Metadata } from "next";
 import { LineChartMultiSeries } from "./examples/line-chart-multi-series";
 import { LineChartSimple } from "./examples/line-chart-simple";
@@ -15,8 +16,12 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <LineChartSimple />
-      <LineChartMultiSeries />
+      <VariantWrapper heading="Simple" bg="secondary">
+        <LineChartSimple />
+      </VariantWrapper>
+      <VariantWrapper heading="Multi Series" bg="secondary">
+        <LineChartMultiSeries />
+      </VariantWrapper>
     </VariantPage>
   );
 };

@@ -60,7 +60,13 @@ export const LineChart = (props: LineChartProps) => {
       {...responsiveContainer}
     >
       <LineChartCore data={chartData} {...lineChart}>
-        {cartesianGrid !== false && <CartesianGrid {...cartesianGrid} />}
+        {cartesianGrid !== false && (
+          <CartesianGrid
+            strokeDasharray="3 3"
+            strokeOpacity={0.25}
+            {...cartesianGrid}
+          />
+        )}
         {xAxis !== false && <XAxis {...xAxis} />}
         {yAxis !== false && <YAxis {...yAxis} />}
         {tooltip !== false && <ChartTooltip {...tooltip} />}

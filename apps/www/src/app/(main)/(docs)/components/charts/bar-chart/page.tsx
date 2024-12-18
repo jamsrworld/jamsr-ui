@@ -4,8 +4,8 @@ import { type Metadata } from "next";
 import { BarChartMultiColumns } from "./examples/bar-chart-multi-columns";
 import { BarChartOneColumn } from "./examples/bar-chart-one-column";
 import { BarChartStack } from "./examples/bar-chart-stack";
-import { BarChartVerticalOneColumn } from "./examples/bar-chart-vertical-one-column";
 import { BarChartVerticalMultiColumns } from "./examples/bar-chart-vertical-multi-columns";
+import { BarChartVerticalOneColumn } from "./examples/bar-chart-vertical-one-column";
 import { BarChartVerticalStack } from "./examples/bar-chart-vertical-stack";
 
 const title = "Bar Chart";
@@ -20,22 +20,22 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Single Column">
+      <VariantWrapper heading="Single Column" bg="secondary">
         <BarChartOneColumn />
       </VariantWrapper>
-      <VariantWrapper heading="Multiple Column">
+      <VariantWrapper heading="Multiple Column" bg="secondary">
         <BarChartMultiColumns />
       </VariantWrapper>
-      <VariantWrapper heading="Stacked Column">
+      <VariantWrapper heading="Stacked Column" bg="secondary">
         <BarChartStack />
       </VariantWrapper>
-      <VariantWrapper heading="Vertical Single Column">
+      <VariantWrapper heading="Vertical Single Column" bg="secondary">
         <BarChartVerticalOneColumn />
       </VariantWrapper>
-      <VariantWrapper heading="Vertical Multiple Columns">
+      <VariantWrapper heading="Vertical Multiple Columns" bg="secondary">
         <BarChartVerticalMultiColumns />
       </VariantWrapper>
-      <VariantWrapper heading="Vertical Stacked Column">
+      <VariantWrapper heading="Vertical Stacked Column" bg="secondary">
         <BarChartVerticalStack />
       </VariantWrapper>
     </VariantPage>

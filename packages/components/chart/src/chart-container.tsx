@@ -1,14 +1,19 @@
-import { type ComponentProps, useMemo } from "react";
-import { ResponsiveContainer } from "recharts";
+import { useMemo } from "react";
+import {
+  ResponsiveContainer,
+  type ResponsiveContainerProps as Props,
+} from "recharts";
 import { type ChartConfig } from "./types";
 import { ChartContext, type ChartContextProps } from "./use-chart";
 
-type Props = ComponentProps<typeof ResponsiveContainer> & {
+export type ResponsiveContainerProps = Props;
+
+type ChartContainerProps = ResponsiveContainerProps & {
   config: ChartConfig;
   children: React.ReactElement;
 };
 
-export const ChartContainer = (props: Props) => {
+export const ChartContainer = (props: ChartContainerProps) => {
   const { config, children, ...restProps } = props;
   const value: ChartContextProps = useMemo(() => {
     return { config };

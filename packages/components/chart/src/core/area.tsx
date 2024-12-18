@@ -1,8 +1,12 @@
 /* eslint-disable @typescript-eslint/no-useless-constructor */
-import { Area as AreaBase } from "recharts";
-import { type Props as AreaProps } from "recharts/types/cartesian/Area";
+import { Area as AreaBase, type AreaProps as Props } from "recharts";
 
+export type AreaProps = Props;
+
+// @ts-expect-error typeError
 export class Area extends AreaBase {
+  static displayName = AreaBase.displayName;
+
   static defaultProps: AreaProps = {
     ...(super.defaultProps as AreaProps),
     type: "monotone",
@@ -18,13 +22,6 @@ export class Area extends AreaBase {
   };
 
   render() {
-    const { activeDot, ...restProps } = this.props;
-    const mergedActiveDot = {
-      ...Area.defaultProps.activeDot,
-      ...(activeDot || {}),
-    };
-    console.log("mergedActiveDot:->", mergedActiveDot);
-
-    return <AreaBase className="" {...restProps} activeDot={{}} />;
+    return <AreaBase className="" {...this.props} activeDot={{ r: 5 }} />;
   }
 }

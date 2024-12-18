@@ -1,20 +1,43 @@
 /* eslint-disable react/no-unstable-nested-components */
-import { type ComponentProps } from "react";
-import { Tooltip } from "recharts";
+import { cn } from "@jamsr-ui/utils";
+import { Tooltip, type TooltipProps as Props } from "recharts";
+import {
+  type NameType,
+  type ValueType,
+} from "recharts/types/component/DefaultTooltipContent";
 import { useChart } from "./use-chart";
 
-export const ChartTooltip = (props: ComponentProps<typeof Tooltip>) => {
+export type TooltipProps = Props<ValueType, NameType> & {
+  classNames?: {
+    base?: string;
+    label?: string;
+    list?: string;
+    listItem?: string;
+    dot?: string;
+    value?: string;
+  };
+};
+
+export const ChartTooltip = (props: TooltipProps) => {
   const { config } = useChart();
-  console.log("config:->", config);
+  const { classNames, ...restProps } = props;
   return (
     <Tooltip
-      {...props}
+      {...restProps}
       cursor={false}
       content={({ payload, label }) => {
         return (
-          <div className="flex h-auto min-w-[120px] flex-col items-center gap-x-2 rounded-md bg-background p-2 text-xs shadow-sm">
-            <div className="flex w-full flex-col gap-y-1">
-              <span className="font-medium text-foreground">{label}</span>
+          <div
+            className={cn(
+              "flex h-auto min-w-[120px] flex-col gap-2 rounded-md bg-background p-2 text-left text-xs shadow-sm",
+            )}
+          >
+            <span
+              className={cn("font-medium text-foreground", classNames?.label)}
+            >
+              {label}
+            </span>
+            <ul className={classNames?.list}>
               {payload?.map((item, idx) => {
                 const { value } = item;
                 const { name } = item;
@@ -22,21 +45,29 @@ export const ChartTooltip = (props: ComponentProps<typeof Tooltip>) => {
                 const label = configItem?.label ?? name;
                 const color = configItem?.color ?? "default";
                 return (
-                  <div key={idx} className="flex w-full items-center gap-x-2">
+                  <li
+                    key={idx}
+                    className={cn(
+                      "flex w-full items-center gap-x-2",
+                      classNames?.listItem,
+                    )}
+                  >
                     <div
-                      className="size-2 flex-none rounded-full"
                       style={{
                         backgroundColor: color,
-                        // backgroundColor: `hsl(var(--ui-success-${(idx + 1) * 200}))`,
                       }}
+                      className={cn(
+                        "size-2 flex-none rounded-full",
+                        classNames?.dot,
+                      )}
                     />
-                    <span className="text-default-500">
+                    <span className={cn("text-default-500", classNames?.value)}>
                       {value} {label}
                     </span>
-                  </div>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         );
       }}

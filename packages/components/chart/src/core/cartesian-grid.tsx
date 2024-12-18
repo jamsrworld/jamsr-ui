@@ -1,9 +1,8 @@
 import { type ComponentProps } from "react";
 import { CartesianGrid as CartesianGridBase } from "recharts";
 
-export const CartesianGrid = (
-  props: ComponentProps<typeof CartesianGridBase>,
-) => {
+export type CartesianGridProps = ComponentProps<typeof CartesianGridBase>;
+export const CartesianGrid = (props: CartesianGridProps) => {
   return (
     <CartesianGridBase
       vertical={false}

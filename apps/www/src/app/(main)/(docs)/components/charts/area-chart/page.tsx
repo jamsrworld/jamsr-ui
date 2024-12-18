@@ -1,8 +1,11 @@
 import { VariantPage } from "@/components/docs/variant-page";
-import { AreaChart1 } from "./examples/area-chart-1";
-import { AreaChart2 } from "./examples/area-chart-2";
-import { AreaChartCustom } from "./examples/area-chart-custom";
 import { type Metadata } from "next";
+import { AreaChartGradient } from "./examples/area-chart-gradient";
+import { AreaChartMultiSeries } from "./examples/area-chart-multi-series";
+import { AreaChartMultiSeriesGradient } from "./examples/area-chart-multi-series-gradient";
+import { AreaChartMultiSeriesGradientStack } from "./examples/area-chart-multi-series-gradient-stack";
+import { AreaChartMultiSeriesStack } from "./examples/area-chart-multi-series-stack";
+import { AreaChartSolid } from "./examples/area-chart-solid";
 
 const title = "Area Chart";
 const description = `An area chart displays quantitative data graphically, 
@@ -16,9 +19,12 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <AreaChartCustom />
-      <AreaChart1 />
-      <AreaChart2 />
+      <AreaChartSolid />
+      <AreaChartGradient />
+      <AreaChartMultiSeries />
+      <AreaChartMultiSeriesGradient />
+      <AreaChartMultiSeriesStack />
+      <AreaChartMultiSeriesGradientStack />
     </VariantPage>
   );
 };

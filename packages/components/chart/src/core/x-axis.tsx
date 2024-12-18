@@ -1,6 +1,7 @@
 import { PureComponent } from "react";
-import { XAxis as XAxisBase } from "recharts";
-import { type Props as XAxisProps } from "recharts/types/cartesian/XAxis";
+import { XAxis as XAxisBase, type XAxisProps as Props } from "recharts";
+
+export type XAxisProps = Props;
 
 export class XAxis extends PureComponent<XAxisProps> {
   static displayName = XAxisBase.displayName;
@@ -14,7 +15,6 @@ export class XAxis extends PureComponent<XAxisProps> {
         fontSize: "var(--fs-sm)",
       },
     },
-    tickFormatter: (value: string) => value.slice(0, 3),
     axisLine: false,
     tickMargin: 10,
   };

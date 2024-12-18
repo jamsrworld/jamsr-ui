@@ -12,3 +12,4 @@ export { Line } from "./core/line";
 export { Pie } from "./core/pie";
 export { XAxis } from "./core/x-axis";
 export { YAxis } from "./core/y-axis";
+export { AreaChartFull as AreaChart2Main } from "./charts/area-chart";

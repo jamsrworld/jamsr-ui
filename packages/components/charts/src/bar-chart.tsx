@@ -1,14 +1,16 @@
 "use client";
 
-import { ComponentProps } from "react";
+import { type ComponentProps } from "react";
 import {
   Bar,
   BarChart as BarChartCore,
   CartesianGrid,
+  Legend,
   XAxis,
   YAxis,
   type BarProps,
   type CartesianGridProps,
+  type LegendProps,
   type ResponsiveContainerProps,
   type XAxisProps,
   type YAxisProps,
@@ -24,15 +26,14 @@ export type BarChartProps = Pick<ResponsiveContainerProps, "width" | "height"> &
     chartData: any[];
     config: ChartConfig;
     children?: React.ReactNode;
-    responsiveContainer?: ResponsiveContainerProps;
-    barChart?: BarChartCoreProps;
-    cartesianGrid?: false | CartesianGridProps;
-    xAxis?: false | XAxisProps;
-    yAxis?: false | YAxisProps;
-    bar?:
-      | Omit<BarProps, "dataKey">
-      | ((key: string) => Omit<BarProps, "dataKey">);
+    responsiveContainer?: Partial<ResponsiveContainerProps>;
+    barChart?: Partial<BarChartCoreProps>;
+    cartesianGrid?: false | Partial<CartesianGridProps>;
+    xAxis?: false | Partial<XAxisProps>;
+    yAxis?: false | Partial<YAxisProps>;
+    bar?: Partial<BarProps> | ((key: string) => Partial<BarProps>);
     tooltip?: false | TooltipProps;
+    legend?: false | Partial<LegendProps>;
   };
 
 export const BarChart = (props: BarChartProps) => {
@@ -50,6 +51,7 @@ export const BarChart = (props: BarChartProps) => {
     height,
     width,
     layout,
+    legend,
   } = props;
   const gradients = Object.entries(config).filter(([, value]) => {
     return Array.isArray(value.colors);
@@ -62,6 +64,7 @@ export const BarChart = (props: BarChartProps) => {
       {...responsiveContainer}
     >
       <BarChartCore data={chartData} layout={layout} {...barChart}>
+      {legend !== false && <Legend {...chartStyles.legend(legend)} />}
         {cartesianGrid !== false && (
           <CartesianGrid
             vertical={false}

@@ -1,4 +1,5 @@
 import {
+  type LegendProps,
   type AreaProps,
   type BarProps,
   type LineProps,
@@ -67,5 +68,15 @@ export const chartStyles = {
     ({
       barSize: 32,
       ...props,
-    }) satisfies Omit<BarProps, "dataKey">,
+    }) satisfies Partial<BarProps>,
+  legend: (props?: Partial<LegendProps>) =>
+    ({
+      iconType: "circle",
+      iconSize: 10,
+      align: "center",
+      verticalAlign: "bottom",
+      height: 32,
+      margin: { top: 20 },
+      ...props,
+    }) satisfies LegendProps,
 } as const;

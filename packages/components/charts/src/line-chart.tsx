@@ -3,6 +3,8 @@
 import { type ComponentProps } from "react";
 import {
   CartesianGrid,
+  Legend,
+  type LegendProps,
   Line,
   LineChart as LineChartCore,
   XAxis,
@@ -26,13 +28,14 @@ export type LineChartProps = Pick<
   chartData: any[];
   config: ChartConfig;
   children?: React.ReactNode;
-  responsiveContainer?: ResponsiveContainerProps;
-  lineChart?: LineChartCoreProps;
-  cartesianGrid?: false | CartesianGridProps;
-  xAxis?: false | XAxisProps;
-  yAxis?: false | YAxisProps;
-  line?: LineProps | ((key: string) => LineProps);
-  tooltip?: false | TooltipProps;
+  responsiveContainer?: Partial<ResponsiveContainerProps>;
+  lineChart?: Partial<LineChartCoreProps>;
+  cartesianGrid?: false | Partial<CartesianGridProps>;
+  xAxis?: false | Partial<XAxisProps>;
+  yAxis?: false | Partial<YAxisProps>;
+  line?: Partial<LineProps> | ((key: string) => Partial<LineProps>);
+  tooltip?: false | Partial<TooltipProps>;
+  legend?: false | Partial<LegendProps>;
 };
 
 export const LineChart = (props: LineChartProps) => {
@@ -49,6 +52,7 @@ export const LineChart = (props: LineChartProps) => {
     tooltip,
     height,
     width,
+    legend,
   } = props;
 
   const gradients = Object.entries(config).filter(([, value]) => {
@@ -62,6 +66,7 @@ export const LineChart = (props: LineChartProps) => {
       {...responsiveContainer}
     >
       <LineChartCore data={chartData} {...lineChart}>
+        {legend !== false && <Legend {...chartStyles.legend(legend)} />}
         {cartesianGrid !== false && (
           <CartesianGrid
             strokeDasharray="3 3"

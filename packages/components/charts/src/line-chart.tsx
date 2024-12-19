@@ -4,21 +4,23 @@ import { type ComponentProps } from "react";
 import {
   CartesianGrid,
   Legend,
-  type LegendProps,
   Line,
   LineChart as LineChartCore,
   XAxis,
   YAxis,
   type CartesianGridProps,
+  type LegendProps,
   type LineProps,
   type ResponsiveContainerProps,
   type XAxisProps,
   type YAxisProps,
 } from "recharts";
 import { ChartContainer } from "./chart-container";
+import { ChartLegend } from "./chart-legend";
 import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
 import { chartStyles } from "./styles";
 import { type ChartConfig } from "./types";
+import { useLegend } from "./use-legend";
 
 type LineChartCoreProps = ComponentProps<typeof LineChartCore>;
 export type LineChartProps = Pick<
@@ -52,12 +54,19 @@ export const LineChart = (props: LineChartProps) => {
     tooltip,
     height,
     width,
-    legend,
+    legend = Object.keys(config).length > 1 ? {} : false,
   } = props;
-
   const gradients = Object.entries(config).filter(([, value]) => {
     return Array.isArray(value.colors);
   });
+  const {
+    filteredConfig,
+    handleLegendClick,
+    hoveredLegend,
+    onMouseEnter,
+    onMouseLeave,
+    clickedLegends,
+  } = useLegend(config);
   return (
     <ChartContainer
       height={height}
@@ -66,7 +75,19 @@ export const LineChart = (props: LineChartProps) => {
       {...responsiveContainer}
     >
       <LineChartCore data={chartData} {...lineChart}>
-        {legend !== false && <Legend {...chartStyles.legend(legend)} />}
+        {legend !== false && (
+          <Legend
+            /*  eslint-disable-next-line react/no-unstable-nested-components */
+            content={() => (
+              <ChartLegend
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                onClick={handleLegendClick}
+                filteredLegends={clickedLegends}
+              />
+            )}
+          />
+        )}
         {cartesianGrid !== false && (
           <CartesianGrid
             strokeDasharray="3 3"
@@ -78,7 +99,7 @@ export const LineChart = (props: LineChartProps) => {
         {xAxis !== false && <XAxis {...chartStyles.xAxis(xAxis)} />}
         {yAxis !== false && <YAxis {...chartStyles.yAxis(yAxis)} />}
         {tooltip !== false && <ChartTooltip {...tooltip} />}
-        {Object.entries(config).map(([key, value]) => {
+        {Object.entries(filteredConfig).map(([key, value]) => {
           const { color, colors } = value;
           const strokeColor = Array.isArray(color)
             ? `url(#${key}Gradient)`
@@ -94,13 +115,20 @@ export const LineChart = (props: LineChartProps) => {
               dataKey={key}
               fill={fillColor}
               stroke={strokeColor}
+              {...(hoveredLegend === key && {
+                strokeOpacity: 0.2,
+              })}
               {...chartStyles.line({
                 ...lineProps,
+                dot: {
+                  fillOpacity: hoveredLegend === key ? 0 : undefined,
+                  ...(lineProps?.dot as object),
+                },
                 activeDot: {
-                  ...(lineProps?.activeDot as object),
                   fill: strokeColor,
                   stroke: "hsl(var(--ui-background))",
                   strokeWidth: 2,
+                  ...(lineProps?.activeDot as object),
                 },
               })}
             />

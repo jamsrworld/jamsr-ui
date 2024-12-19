@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ComponentProps } from "react";
+import { type ComponentProps } from "react";
 import {
   Area,
   AreaChart as AreaChartBase,
@@ -15,12 +15,12 @@ import {
   YAxis,
   type YAxisProps,
 } from "recharts";
-import { type Payload } from "recharts/types/component/DefaultLegendContent";
 import { ChartContainer } from "./chart-container";
+import { ChartLegend } from "./chart-legend";
 import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
 import { chartStyles } from "./styles";
 import { type ChartConfig } from "./types";
-import { ChartLegend } from "./chart-legend";
+import { useLegend } from "./use-legend";
 
 type AriaChartBaseProps = ComponentProps<typeof AreaChartBase>;
 
@@ -60,54 +60,35 @@ export const AreaChart = (props: AreaChartProps) => {
   const gradients = Object.entries(config).filter(([, value]) => {
     return Array.isArray(value.colors);
   });
-
-  const [hoveredLegend, setHoveredLegend] = useState<string | null>(null);
-  const [clickedLegends, setClickedLegends] = useState<string[]>([]);
-
-  const onMouseEnter = (props: Payload) => {
-    const { dataKey } = props;
-    if (dataKey) setHoveredLegend(String(dataKey));
-  };
-  const onMouseLeave = () => {
-    setHoveredLegend(null);
-  };
-
-  const handleLegendClick = (props: Payload) => {
-    const { dataKey } = props;
-    if (dataKey) {
-      setClickedLegends((prev) => {
-        if (prev.includes(String(dataKey))) {
-          return prev.filter((key) => key !== String(dataKey));
-        }
-        return [...prev, String(dataKey)];
-      });
-    }
-  };
-
-  const filteredConfig = Object.entries(config).reduce((acc, [key, value]) => {
-    if (!clickedLegends.includes(key)) {
-      acc[key] = value;
-    }
-    return acc;
-  }, {} as ChartConfig);
-
+  const {
+    filteredConfig,
+    handleLegendClick,
+    hoveredLegend,
+    onMouseEnter,
+    onMouseLeave,
+    clickedLegends,
+  } = useLegend(config);
   return (
     <ChartContainer
       height={height}
       width={width}
-      config={filteredConfig}
+      config={config}
       {...responsiveContainer}
     >
       <AreaChartBase data={chartData} {...areaChart}>
         {legend !== false && (
           <Legend
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            onClick={handleLegendClick}
-            {...chartStyles.legend(legend)}
+            /*  eslint-disable-next-line react/no-unstable-nested-components */
+            content={() => (
+              <ChartLegend
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                onClick={handleLegendClick}
+                filteredLegends={clickedLegends}
+              />
+            )}
           />
         )}
-        <ChartLegend />
         {cartesianGrid !== false && (
           <CartesianGrid
             vertical={false}

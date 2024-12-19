@@ -16,9 +16,11 @@ import {
   type YAxisProps,
 } from "recharts";
 import { ChartContainer } from "./chart-container";
+import { ChartLegend } from "./chart-legend";
 import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
 import { chartStyles } from "./styles";
 import { type ChartConfig } from "./types";
+import { useLegend } from "./use-legend";
 
 type BarChartCoreProps = ComponentProps<typeof BarChartCore>;
 export type BarChartProps = Pick<ResponsiveContainerProps, "width" | "height"> &
@@ -51,11 +53,20 @@ export const BarChart = (props: BarChartProps) => {
     height,
     width,
     layout,
-    legend,
+    legend = Object.keys(config).length > 1 ? {} : false,
   } = props;
   const gradients = Object.entries(config).filter(([, value]) => {
     return Array.isArray(value.colors);
   });
+
+  const {
+    filteredConfig,
+    handleLegendClick,
+    hoveredLegend,
+    onMouseEnter,
+    onMouseLeave,
+    clickedLegends,
+  } = useLegend(config);
   return (
     <ChartContainer
       height={height}
@@ -64,7 +75,19 @@ export const BarChart = (props: BarChartProps) => {
       {...responsiveContainer}
     >
       <BarChartCore data={chartData} layout={layout} {...barChart}>
-      {legend !== false && <Legend {...chartStyles.legend(legend)} />}
+        {legend !== false && (
+          <Legend
+            /*  eslint-disable-next-line react/no-unstable-nested-components */
+            content={() => (
+              <ChartLegend
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                onClick={handleLegendClick}
+                filteredLegends={clickedLegends}
+              />
+            )}
+          />
+        )}
         {cartesianGrid !== false && (
           <CartesianGrid
             vertical={false}
@@ -93,7 +116,7 @@ export const BarChart = (props: BarChartProps) => {
           />
         )}
         {tooltip !== false && <ChartTooltip {...tooltip} />}
-        {Object.entries(config).map(([key, value], idx) => {
+        {Object.entries(filteredConfig).map(([key, value], idx) => {
           const { color, colors } = value;
           const strokeColor = Array.isArray(color)
             ? `url(#${key}Gradient)`
@@ -118,6 +141,9 @@ export const BarChart = (props: BarChartProps) => {
               dataKey={key}
               fill={fillColor}
               radius={radius}
+              {...(hoveredLegend === key && {
+                fillOpacity: 0.2,
+              })}
               {...chartStyles.bar(barProps)}
             />
           );

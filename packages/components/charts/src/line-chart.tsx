@@ -1,22 +1,24 @@
 "use client";
 
+import { type ComponentProps } from "react";
 import {
   CartesianGrid,
   Line,
-  LineChartCore,
+  LineChart as LineChartCore,
   XAxis,
   YAxis,
   type CartesianGridProps,
-  type LineChartCoreProps,
   type LineProps,
   type ResponsiveContainerProps,
   type XAxisProps,
   type YAxisProps,
-} from "@jamsr-ui/chart";
+} from "recharts";
 import { ChartContainer } from "./chart-container";
 import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
+import { chartStyles } from "./styles";
 import { type ChartConfig } from "./types";
 
+type LineChartCoreProps = ComponentProps<typeof LineChartCore>;
 export type LineChartProps = Pick<
   ResponsiveContainerProps,
   "width" | "height"
@@ -63,12 +65,13 @@ export const LineChart = (props: LineChartProps) => {
         {cartesianGrid !== false && (
           <CartesianGrid
             strokeDasharray="3 3"
-            strokeOpacity={0.25}
+            stroke="hsl(var(--ui-divider))"
+            vertical={false}
             {...cartesianGrid}
           />
         )}
-        {xAxis !== false && <XAxis {...xAxis} />}
-        {yAxis !== false && <YAxis {...yAxis} />}
+        {xAxis !== false && <XAxis {...chartStyles.xAxis(xAxis)} />}
+        {yAxis !== false && <YAxis {...chartStyles.yAxis(yAxis)} />}
         {tooltip !== false && <ChartTooltip {...tooltip} />}
         {Object.entries(config).map(([key, value]) => {
           const { color, colors } = value;
@@ -78,6 +81,7 @@ export const LineChart = (props: LineChartProps) => {
           const fillColor = Array.isArray(colors)
             ? `url(#${key}Gradient)`
             : strokeColor;
+          const lineProps = typeof line === "function" ? line?.(key) : line;
           return (
             // @ts-expect-error TypeError
             <Line
@@ -85,13 +89,15 @@ export const LineChart = (props: LineChartProps) => {
               dataKey={key}
               fill={fillColor}
               stroke={strokeColor}
-              activeDot={{
-                fill: strokeColor,
-                stroke: "hsl(var(--ui-background))",
-                strokeWidth: 2,
-                r: 6,
-              }}
-              {...(typeof line === "function" ? line?.(key) : line)}
+              {...chartStyles.line({
+                ...lineProps,
+                activeDot: {
+                  ...(lineProps?.activeDot as object),
+                  fill: strokeColor,
+                  stroke: "hsl(var(--ui-background))",
+                  strokeWidth: 2,
+                },
+              })}
             />
           );
         })}

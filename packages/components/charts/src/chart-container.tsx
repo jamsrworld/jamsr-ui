@@ -1,8 +1,5 @@
-import {
-  ResponsiveContainer,
-  type ResponsiveContainerProps,
-} from "@jamsr-ui/chart";
 import { useMemo } from "react";
+import { ResponsiveContainer, type ResponsiveContainerProps } from "recharts";
 import { type ChartConfig } from "./types";
 import { ChartContext, type ChartContextProps } from "./use-chart";
 

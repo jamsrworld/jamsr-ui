@@ -1,22 +1,24 @@
 "use client";
 
+import { ComponentProps } from "react";
 import {
   Bar,
-  BarChartCore,
+  BarChart as BarChartCore,
   CartesianGrid,
   XAxis,
   YAxis,
-  type BarChartCoreProps,
   type BarProps,
   type CartesianGridProps,
   type ResponsiveContainerProps,
   type XAxisProps,
   type YAxisProps,
-} from "@jamsr-ui/chart";
+} from "recharts";
 import { ChartContainer } from "./chart-container";
 import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
+import { chartStyles } from "./styles";
 import { type ChartConfig } from "./types";
 
+type BarChartCoreProps = ComponentProps<typeof BarChartCore>;
 export type BarChartProps = Pick<ResponsiveContainerProps, "width" | "height"> &
   Pick<BarChartCoreProps, "layout"> & {
     chartData: any[];
@@ -62,6 +64,7 @@ export const BarChart = (props: BarChartProps) => {
       <BarChartCore data={chartData} layout={layout} {...barChart}>
         {cartesianGrid !== false && (
           <CartesianGrid
+            vertical={false}
             stroke="hsl(var(--ui-divider))"
             {...(layout === "vertical" && {
               vertical: true,
@@ -75,7 +78,7 @@ export const BarChart = (props: BarChartProps) => {
             {...(layout === "vertical" && {
               type: "number",
             })}
-            {...xAxis}
+            {...chartStyles.xAxis(xAxis)}
           />
         )}
         {yAxis !== false && (
@@ -83,7 +86,7 @@ export const BarChart = (props: BarChartProps) => {
             {...(layout === "vertical" && {
               type: "category",
             })}
-            {...yAxis}
+            {...chartStyles.yAxis(yAxis)}
           />
         )}
         {tooltip !== false && <ChartTooltip {...tooltip} />}
@@ -112,7 +115,7 @@ export const BarChart = (props: BarChartProps) => {
               dataKey={key}
               fill={fillColor}
               radius={radius}
-              {...(typeof bar === "function" ? bar?.(key) : bar)}
+              {...chartStyles.bar(barProps)}
             />
           );
         })}

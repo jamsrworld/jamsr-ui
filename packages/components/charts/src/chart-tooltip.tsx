@@ -1,12 +1,16 @@
 /* eslint-disable react/no-unstable-nested-components */
 import {
-  ChartTooltipCore as ChartTooltipBase,
-  type ChartTooltipCoreProps,
-} from "@jamsr-ui/chart";
+  Tooltip as ChartTooltipBase,
+  type TooltipProps as TooltipBaseProps,
+} from "recharts";
 import { cn } from "@jamsr-ui/utils";
+import {
+  type NameType,
+  type ValueType,
+} from "recharts/types/component/DefaultTooltipContent";
 import { useChart } from "./use-chart";
 
-export type TooltipProps = ChartTooltipCoreProps & {
+export type TooltipProps = TooltipBaseProps<ValueType, NameType> & {
   classNames?: {
     base?: string;
     label?: string;

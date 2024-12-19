@@ -45,6 +45,9 @@ export const AreaChartSolid = () => {
             dataKey: "month",
             tickFormatter: (value: string) => value.slice(0, 3),
           }}
+          area={{
+            activeDot: {},
+          }}
         />
       </CardContent>
     </Card>

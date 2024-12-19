@@ -39,7 +39,6 @@
     "@jamsr-ui/avatar": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/card": "workspace:^",
-    "@jamsr-ui/chart": "workspace:^",
     "@jamsr-ui/charts": "workspace:^",
     "@jamsr-ui/checkbox": "workspace:^",
     "@jamsr-ui/chip": "workspace:^",

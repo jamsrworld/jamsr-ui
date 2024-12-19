@@ -479,36 +479,14 @@ importers:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
 
-  packages/components/chart:
-    dependencies:
-      recharts:
-        specifier: ^2.15.0
-        version: 2.15.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-    devDependencies:
-      '@jamsr-ui/utils':
-        specifier: ^0.0.70
-        version: 0.0.70(framer-motion@12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.14)
-      '@types/react':
-        specifier: 19.0.1
-        version: 19.0.1
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: 19.0.0
-        version: 19.0.0(react@19.0.0)
-
   packages/components/charts:
     dependencies:
-      '@jamsr-ui/chart':
-        specifier: workspace:^
-        version: link:../chart
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
+      recharts:
+        specifier: ^2.15.0
+        version: 2.15.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@types/react':
         specifier: 19.0.1
@@ -2024,9 +2002,6 @@ importers:
       '@jamsr-ui/card':
         specifier: workspace:^
         version: link:../components/card
-      '@jamsr-ui/chart':
-        specifier: workspace:^
-        version: link:../components/chart
       '@jamsr-ui/charts':
         specifier: workspace:^
         version: link:../components/charts
@@ -3058,13 +3033,6 @@ packages:
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
-
-  '@jamsr-ui/utils@0.0.70':
-    resolution: {integrity: sha512-9RYs3hePDRRJgqMJc/ofUZhQfV0Pi2Oa3ah7iIaH7kqLLcGRqxMVLRbPYaW1AtpOT00MaPj0XsQ+HzNMp/tUWg==}
-    peerDependencies:
-      framer-motion: 12.0.0-alpha.2
-      react: 19.0.0
-      react-dom: 19.0.0
 
   '@jest/schemas@29.6.3':
     resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
@@ -8483,17 +8451,6 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@jamsr-ui/utils@0.0.70(framer-motion@12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(tailwindcss@3.4.14)':
-    dependencies:
-      clsx: 2.1.1
-      framer-motion: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-      tailwind-merge: 2.5.3
-      tailwind-variants: 0.2.1(tailwindcss@3.4.14)
-    transitivePeerDependencies:
-      - tailwindcss
-
   '@jest/schemas@29.6.3':
     dependencies:
       '@sinclair/typebox': 0.27.8
@@ -13162,11 +13119,6 @@ snapshots:
     dependencies:
       tailwind-merge: 2.5.3
       tailwindcss: 3.4.13
-
-  tailwind-variants@0.2.1(tailwindcss@3.4.14):
-    dependencies:
-      tailwind-merge: 2.5.3
-      tailwindcss: 3.4.14
 
   tailwindcss@3.4.13:
     dependencies:

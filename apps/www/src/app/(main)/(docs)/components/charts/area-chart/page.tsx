@@ -26,7 +26,6 @@ const Page = () => {
       <VariantWrapper heading="Gradient" bg="secondary">
         <AreaChartGradient />
       </VariantWrapper>
-
       <VariantWrapper heading="Multi Series" bg="secondary">
         <AreaChartMultiSeries />
       </VariantWrapper>

@@ -1,21 +1,24 @@
 "use client";
 
+import { type ComponentProps } from "react";
 import {
   Area,
-  AreaChartCore,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  type AreaChartCoreProps,
+  AreaChart as AreaChartBase,
   type AreaProps,
+  CartesianGrid,
   type CartesianGridProps,
   type ResponsiveContainerProps,
+  XAxis,
   type XAxisProps,
+  YAxis,
   type YAxisProps,
-} from "@jamsr-ui/chart";
+} from "recharts";
 import { ChartContainer } from "./chart-container";
 import { ChartTooltip, type TooltipProps } from "./chart-tooltip";
+import { chartStyles } from "./styles";
 import { type ChartConfig } from "./types";
+
+type AriaChartBaseProps = ComponentProps<typeof AreaChartBase>;
 
 export type AreaChartProps = Pick<
   ResponsiveContainerProps,
@@ -25,11 +28,13 @@ export type AreaChartProps = Pick<
   config: ChartConfig;
   children?: React.ReactNode;
   responsiveContainer?: ResponsiveContainerProps;
-  areaChart?: AreaChartCoreProps;
+  areaChart?: AriaChartBaseProps;
   cartesianGrid?: false | CartesianGridProps;
   xAxis?: false | XAxisProps;
   yAxis?: false | YAxisProps;
-  area?: AreaProps | ((key: string) => AreaProps);
+  area?:
+    | Omit<AreaProps, "dataKey">
+    | ((key: string) => Omit<AreaProps, "dataKey">);
   tooltip?: false | TooltipProps;
 };
 
@@ -59,16 +64,17 @@ export const AreaChart = (props: AreaChartProps) => {
       config={config}
       {...responsiveContainer}
     >
-      <AreaChartCore data={chartData} {...areaChart}>
+      <AreaChartBase data={chartData} {...areaChart}>
         {cartesianGrid !== false && (
           <CartesianGrid
+            vertical={false}
             strokeDasharray="3 3"
-            strokeOpacity={0.25}
+            stroke="hsl(var(--ui-divider))"
             {...cartesianGrid}
           />
         )}
-        {xAxis !== false && <XAxis {...xAxis} />}
-        {yAxis !== false && <YAxis {...yAxis} />}
+        {xAxis !== false && <XAxis {...chartStyles.xAxis(xAxis)} />}
+        {yAxis !== false && <YAxis {...chartStyles.yAxis(yAxis)} />}
         {tooltip !== false && <ChartTooltip {...tooltip} />}
         {Object.entries(config).map(([key, value]) => {
           const { color, colors } = value;
@@ -78,20 +84,22 @@ export const AreaChart = (props: AreaChartProps) => {
           const fillColor = Array.isArray(colors)
             ? `url(#${key}Gradient)`
             : strokeColor;
+          const areaProps = typeof area === "function" ? area?.(key) : area;
           return (
-            // @ts-expect-error TypeError
+            // @ts-expect-error typeerror
             <Area
               key={key}
               dataKey={key}
               fill={fillColor}
               stroke={strokeColor}
-              activeDot={{
-                fill: strokeColor,
-                stroke: "hsl(var(--ui-background))",
-                strokeWidth: 2,
-                r: 6,
-              }}
-              {...(typeof area === "function" ? area?.(key) : area)}
+              {...chartStyles.area({
+                ...areaProps,
+                activeDot: {
+                  fill: strokeColor,
+                  stroke: "hsl(var(--ui-background))",
+                  ...(areaProps?.activeDot as object),
+                },
+              })}
             />
           );
         })}
@@ -120,7 +128,7 @@ export const AreaChart = (props: AreaChartProps) => {
           })}
         </defs>
         {children}
-      </AreaChartCore>
+      </AreaChartBase>
     </ChartContainer>
   );
 };

@@ -19,8 +19,8 @@
     "react-dom": "19.0.0"
   },
   "dependencies": {
-    "@jamsr-ui/chart": "workspace:^",
-    "@jamsr-ui/utils": "workspace:^"
+    "@jamsr-ui/utils": "workspace:^",
+    "recharts": "^2.15.0"
   },
   "clean-package": "../../../clean-package.config.json"
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, IconButton } from "@jamsr-ui/react";
+import { IconButton } from "@jamsr-ui/react";
 import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "./icons";
 
@@ -20,7 +20,7 @@ export const ThemeSwitcher = () => {
   }, [isDark]);
 
   return (
-    <IconButton aria-label="Toggle Theme" onClick={toggleTheme}>
+    <IconButton variant="light" aria-label="Toggle Theme" onClick={toggleTheme}>
       {!isDark ? <MoonIcon /> : <SunIcon />}
     </IconButton>
   );

@@ -29,6 +29,7 @@ export const ChartTooltip = (props: TooltipProps) => {
       {...restProps}
       cursor={false}
       content={({ payload, label }) => {
+        console.log("payload:->", payload)
         return (
           <div
             className={cn(

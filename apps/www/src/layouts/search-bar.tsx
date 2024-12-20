@@ -62,16 +62,17 @@ export const SearchBar = () => {
   return (
     <>
       <Button
-        startContent={<SearchIcon />}
+        startContent={<SearchIcon className="size-4" />}
         onClick={handleOnClick}
-        className="min-w-40 justify-start px-2"
+        className="min-w-40 justify-start border px-2 font-normal text-foreground-tertiary"
         endContent={
           <Kbd className="ml-auto" keys={["command"]}>
             K
           </Kbd>
         }
+        variant="outlined"
       >
-        Search
+        Search Components...
       </Button>
       <Dialog closeButton={null} isOpen={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-h-[500px] overflow-y-auto">

@@ -1,6 +1,6 @@
 "use client";
 
-import { IconButton, toast } from "@jamsr-ui/react";
+import { IconButton, IconButtonProps, toast } from "@jamsr-ui/react";
 import { useState } from "react";
 
 const CopyIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -52,10 +52,11 @@ const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 type Props = {
   text: string;
+  radius?: IconButtonProps["radius"];
 };
 
 export const CopyToClipboard = (props: Props) => {
-  const { text } = props;
+  const { text, radius } = props;
   const [isCopied, setIsCopied] = useState(false);
   const handleClick = async () => {
     setIsCopied(true);
@@ -72,8 +73,13 @@ export const CopyToClipboard = (props: Props) => {
     }
   };
   return (
-    // eslint-disable-next-line @typescript-eslint/no-misused-promises
-    <IconButton size="sm" aria-label="Copy To Clipboard" onClick={handleClick}>
+    <IconButton
+      size="sm"
+      aria-label="Copy To Clipboard"
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
+      onClick={handleClick}
+      radius={radius}
+    >
       {isCopied ? <CheckIcon /> : <CopyIcon />}
     </IconButton>
   );

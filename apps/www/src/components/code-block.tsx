@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable tailwindcss/no-custom-classname */
 
-import { Card, CardContent } from "@jamsr-ui/react";
+import { Card, CardContent, CardProps } from "@jamsr-ui/react";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import typescript from "highlight.js/lib/languages/typescript";
@@ -18,20 +18,27 @@ type Props = {
   children: string;
   copyPosition?: "top" | "right";
   language?: "typescript" | "shell";
+  radius?: CardProps["radius"];
 };
 
 export const CodeBlock = (props: Props) => {
-  const { children, copyPosition = "top", language = "typescript" } = props;
+  const {
+    children,
+    copyPosition = "top",
+    language = "typescript",
+    radius,
+  } = props;
 
   // return typeof
-
   const highlightedCode = hljs.highlight(children, {
     language,
   }).value;
   return (
     <div className="relative">
-      {/* <LiveCode code={children} /> */}
-      <Card className="group static w-full bg-content2 dark:bg-content1">
+      <Card
+        className="group static w-full bg-content2 dark:bg-content1"
+        radius={radius}
+      >
         {copyPosition === "top" && (
           <div className="absolute -top-9 right-1">
             <CopyToClipboard text={children} />
@@ -43,7 +50,7 @@ export const CodeBlock = (props: Props) => {
           </pre>
           {copyPosition === "right" && (
             <div className="absolute right-1 top-1/2 hidden -translate-y-1/2 group-hover:block">
-              <CopyToClipboard text={children} />
+              <CopyToClipboard radius={radius} text={children} />
             </div>
           )}
         </CardContent>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Jamsr UI",
   },
   description:
-    "JamsrUI is a comprehensive, customizable UI components library for building modern web applications with Next.js. Designed for developers looking for fast, responsive, and scalable components.",
+    "A professionally crafted React component library that helps you build modern web applications faster. Fully customizable, accessible, and production-ready.",
   applicationName: "Jamsr UI",
   category: "technology",
   publisher: "jamsrworld",

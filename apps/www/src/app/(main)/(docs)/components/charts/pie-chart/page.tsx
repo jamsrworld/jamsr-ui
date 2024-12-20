@@ -1,6 +1,7 @@
 import { VariantPage } from "@/components/docs/variant-page";
-import { PieChart1 } from "./examples/pie-chart-1";
 import { type Metadata } from "next";
+import { PieChart1 } from "./examples/pie-chart-1";
+import { PieChart2 } from "./examples/pie-chart-2";
 
 const title = "Pie Chart";
 const description = `A pie chart represents data as slices of a circular pie, 
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
+      <PieChart2 />
       <PieChart1 />
     </VariantPage>
   );

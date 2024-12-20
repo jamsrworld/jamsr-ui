@@ -181,21 +181,17 @@ const Page = () => {
       <Alert variant="outlined" status="danger">
         JamsrUI is currently in development and it is not stable.
       </Alert>
-      <Alert variant="solid" status="default">
-        JamsrUI is only supported in Next.js
-      </Alert>
       <Typography as="p" variant="body1">
         Get started with{" "}
         <Link href={JAMSR_UI_TEMPLATE_GITHUB_URL} target="_blank">
           JamsrUI Next.js template
         </Link>{" "}
       </Typography>
-
       <Divider>OR</Divider>
       <div className="relative my-8 flex flex-col gap-8">
         <Divider
           orientation="vertical"
-          className="absolute left-4 top-0 -z-1 h-full"
+          className="absolute left-4 top-0 h-full"
         />
         {items.map((item, idx) => {
           const { content, heading } = item;
@@ -207,7 +203,7 @@ const Page = () => {
                   {count}
                 </Chip>
               </div>
-              <div className="flex grow flex-col gap-4">
+              <div className="flex grow flex-col  gap-4 pt-1.5">
                 <Typography as="p" variant="h6">
                   {heading}
                 </Typography>

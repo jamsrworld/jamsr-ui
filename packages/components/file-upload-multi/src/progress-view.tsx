@@ -21,7 +21,14 @@ export const ProgressView = (props: Props) => {
 
   const getContent = useMemo(() => {
     if (typeof progress === "number") {
-      return <CircularProgress value={progress} />;
+      return (
+        <CircularProgress
+          isIntermediate={false}
+          value={progress}
+          showLabel
+          classNames={{ label: "fill-white" }}
+        />
+      );
     }
 
     if (progress === "PENDING") {

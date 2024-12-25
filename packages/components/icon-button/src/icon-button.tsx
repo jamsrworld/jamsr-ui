@@ -17,7 +17,7 @@ export const IconButton = <T extends React.ElementType = "button">(
     isDisabled,
     disableRipple,
   } = useIconButton({ ...props });
-  const spinner = <CircularProgress size="sm" color="current" />;
+  const spinner = <CircularProgress size={30} color="current" />;
   return (
     <Component
       data-component="button"

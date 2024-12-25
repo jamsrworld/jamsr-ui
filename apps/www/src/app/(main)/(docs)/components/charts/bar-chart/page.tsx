@@ -1,5 +1,7 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
+import { type VariantTypes } from "@/types/variants";
+import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { BarChartMultiColumns } from "./examples/bar-chart-multi-columns";
 import { BarChartOneColumn } from "./examples/bar-chart-one-column";
@@ -17,25 +19,52 @@ export const metadata: Metadata = {
   description,
 };
 
+const code = <T extends VariantTypes["bar-chart"][number]>(variant: T) =>
+  readVariantCode("bar-chart", variant, "charts");
+
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Single Column" bg="secondary">
+      <VariantWrapper
+        heading="Single Column"
+        bg="secondary"
+        code={code("bar-chart-one-column")}
+      >
         <BarChartOneColumn />
       </VariantWrapper>
-      <VariantWrapper heading="Multiple Column" bg="secondary">
+      <VariantWrapper
+        heading="Multiple Column"
+        bg="secondary"
+        code={code("bar-chart-multi-columns")}
+      >
         <BarChartMultiColumns />
       </VariantWrapper>
-      <VariantWrapper heading="Stacked Column" bg="secondary">
+      <VariantWrapper
+        heading="Stacked Column"
+        bg="secondary"
+        code={code("bar-chart-stack")}
+      >
         <BarChartStack />
       </VariantWrapper>
-      <VariantWrapper heading="Vertical Single Column" bg="secondary">
+      <VariantWrapper
+        heading="Vertical Single Column"
+        bg="secondary"
+        code={code("bar-chart-vertical-one-column")}
+      >
         <BarChartVerticalOneColumn />
       </VariantWrapper>
-      <VariantWrapper heading="Vertical Multiple Columns" bg="secondary">
+      <VariantWrapper
+        heading="Vertical Multiple Columns"
+        bg="secondary"
+        code={code("bar-chart-vertical-multi-columns")}
+      >
         <BarChartVerticalMultiColumns />
       </VariantWrapper>
-      <VariantWrapper heading="Vertical Stacked Column" bg="secondary">
+      <VariantWrapper
+        heading="Vertical Stacked Column"
+        bg="secondary"
+        code={code("bar-chart-vertical-stack")}
+      >
         <BarChartVerticalStack />
       </VariantWrapper>
     </VariantPage>

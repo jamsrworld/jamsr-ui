@@ -6,13 +6,14 @@ import { type Metadata } from "next";
 import { CircularProgressColors } from "./examples/colors";
 import { CircularProgressSizes } from "./examples/sizes";
 import { CircularProgressUsage } from "./examples/usage";
-import { CircularProgressValue } from "./examples/with-value";
+import { CircularProgressLabel } from "./examples/with-label";
+import { CircularProgressCustomization } from "./examples/customization";
 
 const title = "Circular Progress";
 const description =
   "A visually engaging component that provides a clear indication of ongoing processes or tasks, allowing users to track progress in real time with a circular animation.";
 
-  export const metadata: Metadata = {
+export const metadata: Metadata = {
   title,
   description,
 };
@@ -33,8 +34,11 @@ const Progress = () => {
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <CircularProgressSizes />
       </VariantWrapper>
-      <VariantWrapper heading="With Value" code={code("with-value")}>
-        <CircularProgressValue />
+      <VariantWrapper heading="With Label" code={code("with-label")}>
+        <CircularProgressLabel />
+      </VariantWrapper>
+      <VariantWrapper heading="Customization" code={code("customization")}>
+        <CircularProgressCustomization />
       </VariantWrapper>
     </VariantPage>
   );

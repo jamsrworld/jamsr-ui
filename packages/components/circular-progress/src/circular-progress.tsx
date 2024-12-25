@@ -5,44 +5,100 @@ import {
   type CircularProgressVariants,
 } from "./style";
 
-export type CircularProgressProps = CircularProgressVariants & {
-  value?: number;
-} & {
-  className?: string;
-  classNames?: SlotsToClasses<CircularProgressSlots>;
-};
+interface Props {
+  value?: number; // Progress value (0 - 100)
+  size?: number; // Diameter of the circle
+  trackWidth?: number; // Width of the circular track
+  progressWidth?: number; // Width of the progress arc
+  showLabel?: boolean; // Show progress label
+  strokeWidth?: number; // Stroke width for both track and progress
+  isIntermediate?: boolean;
+  labelFormatter?: (value: number) => string;
+  slotProps?: {
+    track?: React.HTMLAttributes<SVGCircleElement>;
+    progress?: React.HTMLAttributes<SVGCircleElement>;
+    svg?: React.HTMLAttributes<SVGSVGElement>;
+    label?: React.HTMLAttributes<SVGTextElement>;
+  };
+}
+
+export type CircularProgressProps = Props &
+  CircularProgressVariants & {
+    className?: string;
+    classNames?: SlotsToClasses<CircularProgressSlots>;
+  };
 
 export const CircularProgress = (props: CircularProgressProps) => {
-  const { value, color, size, className, classNames } = props;
+  const {
+    value = 40,
+    color,
+    size = 40,
+    className,
+    classNames,
+    strokeWidth,
+    progressWidth = strokeWidth ?? 3,
+    trackWidth = strokeWidth ?? 3,
+    showLabel = false,
+    isIntermediate = true,
+    labelFormatter = (value) => `${value}%`,
+    slotProps,
+  } = props;
+
   const styles = circularProgress({
     className,
     color,
-    size,
+    isIntermediate,
   });
+
+  const radius = (size - Math.max(trackWidth, progressWidth)) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const progressOffset = circumference - (value / 100) * circumference;
   return (
-    <div
-      role="status"
-      data-component="circular-progress"
-      data-slot="track"
-      className={styles.track({
-        className: cn(className, classNames?.track),
-      })}
+    <svg
+      {...slotProps?.svg}
+      width={size}
+      height={size}
+      viewBox={`0 0 ${size} ${size}`}
+      className={styles.svg({ className: cn(classNames?.svg, className) })}
     >
-      {!!value && (
-        <span className={styles.value({ className: classNames?.value })}>
-          {value}
-        </span>
+      {/* Background Track */}
+      <circle
+        {...slotProps?.track}
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        strokeWidth={trackWidth}
+        fill="none"
+        className={styles.track({ className: classNames?.track })}
+      />
+      {/* Progress Arc */}
+      <circle
+        {...slotProps?.progress}
+        cx={size / 2}
+        cy={size / 2}
+        r={radius}
+        strokeWidth={progressWidth}
+        fill="none"
+        strokeDasharray={circumference}
+        strokeDashoffset={progressOffset}
+        strokeLinecap="round"
+        transform={`rotate(-90 ${size / 2} ${size / 2})`}
+        className={styles.progress({ className: classNames?.progress })}
+      />
+      {/* Text inside the circle */}
+      {showLabel && (
+        <text
+          {...slotProps?.label}
+          x="50%"
+          y="50%"
+          textAnchor="middle"
+          dy=".3em"
+          fontSize="18"
+          className={styles.label({ className: classNames?.label })}
+        >
+          {`${labelFormatter ? labelFormatter(value) : value}`}
+        </text>
       )}
-      <svg
-        className={styles.svg({ className: classNames?.svg })}
-        viewBox="3 3 18 18"
-      >
-        <path
-          className="opacity-20"
-          d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
-        />
-        <path d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z" />
-      </svg>
-    </div>
+    </svg>
   );
 };

@@ -3,52 +3,42 @@ import { tv, type VariantProps } from "@jamsr-ui/utils";
 export const test = "";
 export const circularProgress = tv({
   slots: {
-    track: "relative",
-    svg: "size-full animate-spin fill-current",
-    value:
-      "absolute left-0 top-0 flex size-full items-center justify-center text-xs",
+    track: "stroke-default-300/50",
+    progress: "stroke-success",
+    svg: "",
+    label: "fill-foreground text-xs",
   },
   variants: {
-    color: {
-      current: {
-        svg: "text-current",
-      },
-      default: {
-        svg: "text-default",
-      },
-      primary: {
-        svg: "text-primary",
-      },
-      danger: {
-        svg: "text-danger",
-      },
-      success: {
-        svg: "text-success",
-      },
-      secondary: {
-        svg: "text-secondary",
-      },
-      warning: {
-        svg: "text-warning",
+    isIntermediate: {
+      true: {
+        svg: "animate-spin",
       },
     },
-    size: {
-      xs: {
-        track: "size-3",
+    color: {
+      current: {
+        progress: "stroke-current",
       },
-      sm: {
-        track: "size-4",
+      default: {
+        progress: "stroke-default-500",
       },
-      md: {
-        track: "size-6",
+      primary: {
+        progress: "stroke-primary",
       },
-      lg: {
-        track: "size-8",
+      danger: {
+        progress: "stroke-danger",
+      },
+      success: {
+        progress: "stroke-success",
+      },
+      secondary: {
+        progress: "stroke-secondary",
+      },
+      warning: {
+        progress: "stroke-warning",
       },
     },
   },
   defaultVariants: {
-    size: "md",
     color: "primary",
   },
 });

@@ -1,5 +1,13 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.103
+
+### Patch Changes
+
+- feat: circular-progress
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.7
+
 ## 0.0.102
 
 ### Patch Changes

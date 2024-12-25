@@ -1,5 +1,12 @@
 # web
 
+## 0.1.199
+
+### Patch Changes
+
+- feat: circular-progress
+  - @jamsr-ui/react@0.0.217
+
 ## 0.1.198
 
 ### Patch Changes

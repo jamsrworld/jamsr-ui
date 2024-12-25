@@ -1,5 +1,11 @@
 # @jamsr-ui/circular-progress
 
+## 0.0.7
+
+### Patch Changes
+
+- feat: circular-progress
+
 ## 0.0.6
 
 ### Patch Changes

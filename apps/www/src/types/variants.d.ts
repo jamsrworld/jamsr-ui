@@ -58,6 +58,7 @@ export type VariantTypes = {
     "with-icons",
   ];
   card: ["radius", "start-end-content", "usage", "variants", "with-form"];
+  charts: [];
   checkbox: [
     "controlled",
     "description",
@@ -78,7 +79,13 @@ export type VariantTypes = {
     "variants",
     "with-delete",
   ];
-  "circular-progress": ["colors", "sizes", "usage", "with-value"];
+  "circular-progress": [
+    "colors",
+    "customization",
+    "sizes",
+    "usage",
+    "with-label",
+  ];
   confirmation: ["colors", "usage"];
   "data-table": [
     "bordered",
@@ -270,7 +277,6 @@ export type VariantTypes = {
     "with-helper-text",
     "without-label",
   ];
-  show: ["usage"];
   sidebar: [];
   skeleton: ["usage"];
   slider: [];
@@ -325,8 +331,32 @@ export type VariantTypes = {
     "with-start-content",
     "without-label",
   ];
-  theme: ["typography", "usage"];
   toast: ["radius", "usage"];
   tooltip: ["offset", "radius", "usage", "with-arrow"];
   typography: ["all", "usage"];
+  "area-chart": [
+    "area-chart-gradient",
+    "area-chart-multi-series-gradient",
+    "area-chart-multi-series-stack-gradient",
+    "area-chart-multi-series-stack",
+    "area-chart-multi-series",
+    "area-chart-solid",
+  ];
+  "bar-chart": [
+    "bar-chart-custom",
+    "bar-chart-multi-columns",
+    "bar-chart-one-column",
+    "bar-chart-stack",
+    "bar-chart-vertical-multi-columns",
+    "bar-chart-vertical-one-column",
+    "bar-chart-vertical-stack",
+  ];
+  "line-chart": ["line-chart-multi-series", "line-chart-simple"];
+  "pie-chart": ["pie-chart-1", "pie-chart-2"];
+  "radial-bar-chart": [
+    "radial-gauge",
+    "radial-multi-bar",
+    "radial-semi-circle-gauge",
+    "radial-simple",
+  ];
 };

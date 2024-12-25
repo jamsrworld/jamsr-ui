@@ -1,5 +1,11 @@
 # @jamsr-ui/popover
 
+## 0.0.80
+
+### Patch Changes
+
+- feat: circular-progress
+
 ## 0.0.79
 
 ### Patch Changes

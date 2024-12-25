@@ -226,10 +226,6 @@ export const sidebarItems: {
         heading: "Repeater",
         path: "/components/repeater",
       },
-      {
-        heading: "Show",
-        path: "/components/show",
-      },
     ],
   },
   {

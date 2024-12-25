@@ -81,6 +81,7 @@ export const PieChart = (props: PieChartProps) => {
           />
         )}
         {tooltip !== false && <ChartTooltip {...tooltip} />}
+        {/* @ts-expect-error FixType */}
         <Pie
           animationDuration={1000}
           animationEasing="ease"

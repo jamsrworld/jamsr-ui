@@ -1,5 +1,13 @@
 # @jamsr-ui/icon-button
 
+## 0.0.9
+
+### Patch Changes
+
+- feat: circular-progress
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.7
+
 ## 0.0.8
 
 ### Patch Changes

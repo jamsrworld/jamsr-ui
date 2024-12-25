@@ -12,6 +12,7 @@ const componentsDir = path.join(
   "(docs)",
   "components",
 );
+const chartsDir = path.join(componentsDir, "charts");
 
 // Recursively get all files from a directory
 function getFiles(dir: string): { [key: string]: string[] } {
@@ -21,12 +22,16 @@ function getFiles(dir: string): { [key: string]: string[] } {
     if (file.isDirectory()) {
       const key = file.name;
       result[key] = [];
-      const files = fs
-        .readdirSync(`${filePath}/examples`)
-        .filter((f) => f.endsWith(".tsx") || f.endsWith(".ts"));
-      files.forEach((f) => {
-        result[key].push(f.replace(/\.(ts|tsx)$/, ""));
-      });
+      try {
+        const files = fs
+          .readdirSync(`${filePath}/examples`)
+          .filter((f) => f.endsWith(".tsx") || f.endsWith(".ts"));
+        files.forEach((f) => {
+          result[key].push(f.replace(/\.(ts|tsx)$/, ""));
+        });
+      } catch (err) {
+        //
+      }
     }
   });
 
@@ -45,7 +50,9 @@ function generateTypes(fileStructure: { [key: string]: string[] }) {
 
 function createFileTypes() {
   const fileStructure = getFiles(componentsDir);
-  const types = generateTypes(fileStructure);
+  const chartFileStructure = getFiles(chartsDir);
+  const allFileStructure = { ...fileStructure, ...chartFileStructure };
+  const types = generateTypes(allFileStructure);
 
   const outputPath = path.join(
     __dirname,

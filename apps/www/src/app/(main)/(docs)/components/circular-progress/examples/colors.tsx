@@ -2,6 +2,7 @@ import { CircularProgress, type CircularProgressProps } from "@jamsr-ui/react";
 
 export const CircularProgressColors = () => {
   const colors: CircularProgressProps["color"][] = [
+    "default",
     "primary",
     "secondary",
     "success",

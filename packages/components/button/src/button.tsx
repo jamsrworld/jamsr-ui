@@ -20,7 +20,9 @@ export const Button = <T extends React.ElementType = "button">(
     isDisabled,
     disableRipple,
   } = useButton({ ...props });
-  const spinner = <CircularProgress size="sm" color="current" />;
+  const spinner = (
+    <CircularProgress size={20} strokeWidth={2} color="current" />
+  );
   return (
     <Component data-component="button" className={styles} {...getButtonProps()}>
       {isLoading && spinnerPlacement === "start" ? spinner : startContent}

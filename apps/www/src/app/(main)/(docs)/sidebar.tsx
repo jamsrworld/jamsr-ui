@@ -59,6 +59,7 @@ export const sidebarItems: {
         heading: "Chip",
         path: "/components/chip",
       },
+
       {
         heading: "Circular Progress",
         path: "/components/circular-progress",
@@ -66,6 +67,10 @@ export const sidebarItems: {
       {
         heading: "Confirmation",
         path: "/components/confirmation",
+      },
+      {
+        heading: "Collapsible",
+        path: "/components/collapsible",
       },
       {
         heading: "Data Table",

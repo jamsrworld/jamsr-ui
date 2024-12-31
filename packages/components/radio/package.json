@@ -27,12 +27,12 @@
     "@types/react": "19.0.1",
     "@types/node": "^22.7.9",
     "clean-package": "^2.2.0",
-    "react-dom": "19.0.0",
-    "react": "19.0.0"
+    "react-dom": "^19.0.0",
+    "react": "^19.0.0"
   },
   "peerDependencies": {
-    "react-dom": "19.0.0",
-    "react": "19.0.0"
+    "react-dom": "^19.0.0",
+    "react": "^19.0.0"
   },
   "dependencies": {
     "@jamsr-ui/styles": "workspace:^",

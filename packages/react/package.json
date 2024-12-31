@@ -15,7 +15,7 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@testing-library/react": "^16.0.0",
+    "@testing-library/react": "^16.1.0",
     "@types/eslint": "^8.56.5",
     "@types/node": "22.7.9",
     "@types/react": "19.0.1",
@@ -27,8 +27,8 @@
     "framer-motion": "12.0.0-alpha.2",
     "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   },
@@ -43,6 +43,7 @@
     "@jamsr-ui/checkbox": "workspace:^",
     "@jamsr-ui/chip": "workspace:^",
     "@jamsr-ui/circular-progress": "workspace:^",
+    "@jamsr-ui/collapsible": "workspace:^",
     "@jamsr-ui/confirmation": "workspace:^",
     "@jamsr-ui/core": "workspace:^",
     "@jamsr-ui/data-table": "workspace:^",
@@ -68,6 +69,7 @@
     "@jamsr-ui/rhf": "workspace:^",
     "@jamsr-ui/ripple": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
+    "@jamsr-ui/sidebar": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
     "@jamsr-ui/stepper": "workspace:^",
     "@jamsr-ui/styles": "workspace:^",
@@ -84,7 +86,7 @@
   },
   "peerDependencies": {
     "framer-motion": "12.0.0-alpha.2",
-    "react": "19.0.0"
+    "react": "^19.0.0"
   },
   "clean-package": "../../clean-package.config.json"
 }

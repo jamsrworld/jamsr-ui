@@ -26,12 +26,12 @@
     "@jamsr-ui/button": "workspace:^",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "peerDependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@jamsr-ui/shared-icons": "workspace:^",

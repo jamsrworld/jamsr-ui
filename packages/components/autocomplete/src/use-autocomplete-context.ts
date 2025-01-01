@@ -15,4 +15,5 @@ export const [AutocompleteProvider, useAutocompleteContext] =
   createContext<AutocompleteContextType>({
     name: "Autocomplete",
     strict: true,
+    errorMessage: "useAutocompleteContext must be used within an Autocomplete",
   });

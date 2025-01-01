@@ -6,4 +6,5 @@ export const [RadioGroupProvider, useRadioGroupContext] = createContext<
 >({
   name: "RadioGroupContext",
   strict: false,
+  errorMessage: "useRadioGroupContext must be used within a RadioGroup",
 });

@@ -11,4 +11,5 @@ export const [CollapsibleProvider, useCollapsibleContext] =
   createContext<CollapsibleContextType>({
     name: "CollapsibleContext",
     strict: true,
+    errorMessage: "useCollapsibleContext must be used within a Collapsible",
   });

@@ -16,4 +16,5 @@ export const [SelectProvider, useSelectContext] =
   createContext<SelectContextType>({
     name: "Select",
     strict: true,
+    errorMessage: "useSelectContext must be used within a Select",
   });

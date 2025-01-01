@@ -12,4 +12,5 @@ export const [DrawerProvider, useDrawerContext] =
   createContext<DrawerContextType>({
     name: "Drawer",
     strict: true,
+    errorMessage: "useDrawerContext must be used within a Drawer",
   });

@@ -25,4 +25,5 @@ export const [AccordionItemProvider, useAccordionItemContext] =
   createContext<AccordionItemContextType>({
     name: "AccordionItemContext",
     strict: true,
+    errorMessage: "useAccordionItemContext must be used within an Accordion",
   });

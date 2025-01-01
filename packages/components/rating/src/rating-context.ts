@@ -9,4 +9,5 @@ type ContextType = Pick<
 export const [RatingProvider, useRatingContext] = createContext<ContextType>({
   name: "RatingContext",
   strict: false,
+  errorMessage: "useRatingContext must be used within a Rating",
 });

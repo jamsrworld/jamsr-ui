@@ -9,7 +9,7 @@ export type VariantTypes = {
   "checkbox": ["controlled", "description", "disabled", "invalid-state", "radius", "readonly", "usage"];
   "chip": ["bordered", "colors", "radius", "sizes", "start-end-content", "usage", "variants-colors", "variants", "with-delete"];
   "circular-progress": ["colors", "customization", "sizes", "usage", "with-label"];
-  "collapsible": ["usage"];
+  "collapsible": ["controlled", "usage", "with-icon", "with-state"];
   "confirmation": ["colors", "usage"];
   "data-table": ["bordered", "columns", "customization", "empty-state", "server", "sticky-header", "usage", "without-pagination"];
   "dialog": ["backdrop", "bordered", "custom-close-button", "customize", "non-dismissible", "popover-items", "radius", "scroll-behavior", "usage", "without-animation", "without-close-button"];

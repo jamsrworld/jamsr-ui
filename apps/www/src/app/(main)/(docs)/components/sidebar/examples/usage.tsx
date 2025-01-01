@@ -20,7 +20,7 @@ import {
   SidebarMenuItemButton,
   Typography,
 } from "@jamsr-ui/react";
-import { EmailIcon } from "@jamsr-ui/shared-icons";
+import { ChevronRightIcon, EmailIcon } from "@jamsr-ui/shared-icons";
 
 const data = {
   user: {
@@ -226,31 +226,39 @@ export const SidebarUsage = () => {
               <SidebarGroupLabel>{title}</SidebarGroupLabel>
               <SidebarMenu>
                 {items.map((item) => {
+                  const hasChild = "items" in item;
                   return (
-                    <SidebarMenuItem key={item.title}>
-                      <Collapsible>
-                        <CollapsibleTrigger>
-                          <SidebarMenuItemButton>
-                            {item.icon && item.icon}
-                            {item.title}
-                          </SidebarMenuItemButton>
+                    <Collapsible isDisabled={!hasChild} key={item.title}>
+                      <SidebarMenuItem className="group/collapsible">
+                        <CollapsibleTrigger as={SidebarMenuItemButton}>
+                          {item.icon && item.icon}
+                          {item.title}
+                          {hasChild && (
+                            <ChevronRightIcon className="ml-auto size-4 transition-transform duration-200 group-data-[expanded=true]/collapsible:rotate-90" />
+                          )}
                         </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <SidebarMenu>
-                            {"items" in item &&
-                              item.items.map((item) => {
-                                return (
-                                  <SidebarMenuItem key={item.title}>
-                                    <SidebarMenuItemButton>
-                                      {item.title}
-                                    </SidebarMenuItemButton>
-                                  </SidebarMenuItem>
-                                );
-                              })}
-                          </SidebarMenu>
-                        </CollapsibleContent>
-                      </Collapsible>
-                    </SidebarMenuItem>
+                        {hasChild && (
+                          <CollapsibleContent>
+                            <SidebarMenu className="pl-2 pt-1">
+                              {"items" in item &&
+                                item.items.map((item) => {
+                                  return (
+                                    <SidebarMenuItem
+                                      className="relative"
+                                      key={item.title}
+                                    >
+                                      <div className="absolute -left-1 top-0 h-full w-px bg-content2" />
+                                      <SidebarMenuItemButton>
+                                        {item.title}
+                                      </SidebarMenuItemButton>
+                                    </SidebarMenuItem>
+                                  );
+                                })}
+                            </SidebarMenu>
+                          </CollapsibleContent>
+                        )}
+                      </SidebarMenuItem>
+                    </Collapsible>
                   );
                 })}
               </SidebarMenu>

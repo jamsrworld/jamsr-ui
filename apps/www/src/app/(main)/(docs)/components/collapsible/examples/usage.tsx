@@ -1,4 +1,7 @@
 import {
+  Card,
+  CardContent,
+  CardHeader,
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
@@ -7,15 +10,17 @@ import {
 export const CollapsibleUsage = () => {
   return (
     <Collapsible>
-      <CollapsibleTrigger>
-        <div>Can I use this in my project?</div>
-      </CollapsibleTrigger>
-      <CollapsibleContent>
-        <div>
-          Yes. Free to use for personal and commercial projects. No attribution
-          required.
-        </div>
-      </CollapsibleContent>
+      <Card>
+        <CollapsibleTrigger>
+          <CardHeader heading="Can I use this in my project?" />
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <CardContent>
+            Yes. Free to use for personal and commercial projects. No
+            attribution required.
+          </CardContent>
+        </CollapsibleContent>
+      </Card>
     </Collapsible>
   );
 };

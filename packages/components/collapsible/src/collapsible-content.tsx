@@ -7,7 +7,7 @@ type Props = {
 
 export const CollapsibleContent = (props: Props) => {
   const { children } = props;
-  const { isOpen } = useCollapsibleContext();
+  const { isOpen, id } = useCollapsibleContext();
   return (
     <AnimatePresence>
       {isOpen && (
@@ -17,6 +17,9 @@ export const CollapsibleContent = (props: Props) => {
           animate={{ height: "auto" }}
           exit={{ height: 0 }}
           transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+          role="region"
+          id={id}
+          aria-hidden={!isOpen}
         >
           {children}
         </m.div>

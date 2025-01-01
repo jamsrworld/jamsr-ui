@@ -1,18 +1,29 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
-import { cloneElement } from "react";
+import { cn, type UIProps } from "@jamsr-ui/utils";
 import { useCollapsibleContext } from "./collapsible-context";
 
-type Props = {
-  children: React.ReactElement;
-};
+type Props = UIProps<"button">;
 
 export const CollapsibleTrigger = (props: Props) => {
-  const { children } = props;
-  const { isOpen, setIsOpen } = useCollapsibleContext();
-  const handleClick = () => {
+  const { children, as, className, onClick, ...restProps } = props;
+  const Component = as ?? "button";
+
+  const { isOpen, setIsOpen, isDisabled } = useCollapsibleContext();
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    onClick?.(e);
     setIsOpen(!isOpen);
   };
-  return cloneElement(children, {
-    onClick: handleClick,
-  } as any);
+
+  return (
+    <Component
+      type="button"
+      className={cn("text-left", className)}
+      {...(!isDisabled && {
+        onClick: handleClick,
+      })}
+      {...restProps}
+    >
+      {children}
+    </Component>
+  );
 };

@@ -49,7 +49,7 @@ export const CardHeader = <T extends React.ElementType = "div">(
     <Component
       data-slot="header"
       className={cn(
-        "relative flex items-center gap-2 px-4 pt-4",
+        "relative flex items-center gap-2 p-4",
         { "pb-4": gutterBottom },
         cardHeader?.className,
         classNames?.base,

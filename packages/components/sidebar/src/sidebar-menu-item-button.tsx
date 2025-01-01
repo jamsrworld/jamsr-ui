@@ -11,7 +11,7 @@ export const SidebarMenuItemButton = (props: SidebarMenuItemButtonProps) => {
   return (
     <button
       type="button"
-      data-slot="menuButton"
+      data-slot="menuItemButton"
       className={className}
       {...restProps}
     >

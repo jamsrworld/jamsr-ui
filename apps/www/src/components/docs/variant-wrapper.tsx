@@ -9,10 +9,18 @@ export type VariantWrapperProps = {
   description?: React.ReactNode;
   code?: string | string[];
   bg?: "primary" | "secondary";
+  noGutter?: boolean;
 };
 
 export const VariantWrapper = (props: VariantWrapperProps) => {
-  const { children, heading, description, code, bg = "primary" } = props;
+  const {
+    children,
+    heading,
+    description,
+    code,
+    bg = "primary",
+    noGutter,
+  } = props;
   const id = toSlug(heading);
   return (
     <section className="scroll-mt-20" id={id}>
@@ -35,7 +43,7 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
           <Tabs defaultValue="preview" variant="underlined">
             <Tab heading="Preview" value="preview">
               <div
-                className={`rounded-xl border border-divider p-4 ${bg === "secondary" ? "bg-content2 dark:bg-transparent" : ""}`}
+                className={`overflow-hidden rounded-xl border border-divider ${noGutter ? "" : "p-4"} ${bg === "secondary" ? "bg-content2 dark:bg-transparent" : ""}`}
               >
                 {children}
               </div>
@@ -53,7 +61,7 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
           </Tabs>
         ) : (
           <div
-            className={`rounded-xl border border-divider p-4 ${bg === "secondary" ? "bg-content2 dark:bg-transparent" : ""}`}
+            className={`rounded-xl border border-divider ${noGutter ? "" : "p-4"} ${bg === "secondary" ? "bg-content2 dark:bg-transparent" : ""}`}
           >
             {children}
           </div>

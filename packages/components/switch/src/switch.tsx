@@ -163,7 +163,7 @@ export const Switch = ($props: SwitchProps) => {
             {...(isInteractive && {
               onClick,
               layout: true,
-              initial: "initial",
+              initial: false,
               whileTap: "tapped",
               animate: "initial",
             })}

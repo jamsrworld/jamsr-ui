@@ -1,4 +1,6 @@
+import { IconButton, Tooltip } from "@jamsr-ui/react";
 import { type Route } from "next";
+import { OpenLinkIcon } from "./icons";
 
 type Props = {
   src: Route;
@@ -7,6 +9,20 @@ type Props = {
 export const IFrameExample = (props: Props) => {
   const { src } = props;
   return (
-    <iframe src={src} title="Header default" className="h-[500px] w-full" />
+    <div className="relative">
+      <Tooltip title="Open In New Tab">
+        <IconButton
+          as="a"
+          href={src}
+          target="_blank"
+          aria-label="Open In New Tab"
+          className="absolute right-0 top-0 text-foreground-secondary"
+          variant="outlined"
+        >
+          <OpenLinkIcon />
+        </IconButton>
+      </Tooltip>
+      <iframe src={src} title="Header default" className="h-[500px] w-full" />
+    </div>
   );
 };

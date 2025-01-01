@@ -161,6 +161,10 @@ export const sidebarItems: {
         path: "/components/select",
       },
       {
+        heading: "Sidebar",
+        path: "/components/sidebar",
+      },
+      {
         heading: "Skeleton",
         path: "/components/skeleton",
       },
@@ -240,6 +244,11 @@ export const sidebarItems: {
         heading: "Stepper",
         path: "/components/stepper",
       },
+    ],
+  },
+  {
+    heading: "Planned",
+    items: [
       {
         heading: "Pagination",
         path: "/components/pagination",
@@ -249,8 +258,12 @@ export const sidebarItems: {
         path: "/components/slider",
       },
       {
-        heading: "Sidebar",
-        path: "/components/sidebar",
+        heading: "Breadcrumbs",
+        path: "/components/breadcrumbs",
+      },
+      {
+        heading: "Date Picker",
+        path: "/components/date-picker",
       },
       {
         heading: "Number Input",

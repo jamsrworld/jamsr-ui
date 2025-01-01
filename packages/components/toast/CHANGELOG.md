@@ -1,5 +1,14 @@
 # @jamsr-ui/toast
 
+## 0.0.37
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.36
 
 ### Patch Changes

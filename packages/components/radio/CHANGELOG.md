@@ -1,5 +1,15 @@
 # @jamsr-ui/radio
 
+## 0.0.86
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.85
 
 ### Patch Changes

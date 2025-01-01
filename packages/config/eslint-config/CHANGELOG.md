@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.47
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.46
 
 ### Patch Changes

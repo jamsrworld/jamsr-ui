@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.89
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/text@0.0.2
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.88
 
 ### Patch Changes

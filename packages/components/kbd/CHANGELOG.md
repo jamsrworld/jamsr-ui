@@ -1,5 +1,14 @@
 # @jamsr-ui/kbd
 
+## 0.0.12
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.11
 
 ### Patch Changes

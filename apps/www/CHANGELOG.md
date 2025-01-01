@@ -1,5 +1,20 @@
 # web
 
+## 0.1.200
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/dnd@0.0.16
+  - @jamsr-ui/core@0.0.45
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/react@0.0.218
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/theme@0.0.77
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.1.199
 
 ### Patch Changes

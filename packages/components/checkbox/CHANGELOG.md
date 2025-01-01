@@ -1,5 +1,15 @@
 # @jamsr-ui/checkbox
 
+## 0.0.81
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.80
 
 ### Patch Changes

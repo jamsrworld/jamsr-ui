@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.66
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.65
 
 ### Patch Changes

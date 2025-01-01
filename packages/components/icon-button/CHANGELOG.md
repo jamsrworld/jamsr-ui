@@ -1,5 +1,17 @@
 # @jamsr-ui/icon-button
 
+## 0.0.10
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.8
+  - @jamsr-ui/ripple@0.0.79
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.9
 
 ### Patch Changes

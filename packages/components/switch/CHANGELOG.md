@@ -1,5 +1,16 @@
 # @jamsr-ui/switch
 
+## 0.0.88
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/text@0.0.2
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.87
 
 ### Patch Changes

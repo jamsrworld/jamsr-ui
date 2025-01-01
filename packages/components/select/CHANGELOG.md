@@ -1,5 +1,19 @@
 # @jamsr-ui/select
 
+## 0.0.104
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/button@0.0.85
+  - @jamsr-ui/chip@0.0.93
+  - @jamsr-ui/popover@0.0.81
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.103
 
 ### Patch Changes

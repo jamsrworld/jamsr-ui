@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.220
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/react@0.0.218
+
 ## 0.0.219
 
 ### Patch Changes

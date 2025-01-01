@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.43
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.42
 
 ### Patch Changes

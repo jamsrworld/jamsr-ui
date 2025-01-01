@@ -1,5 +1,16 @@
 # @jamsr-ui/chip
 
+## 0.0.93
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/button@0.0.85
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.92
 
 ### Patch Changes

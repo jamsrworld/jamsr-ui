@@ -1,5 +1,16 @@
 # @jamsr-ui/rating
 
+## 0.0.39
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.43
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+
 ## 0.0.38
 
 ### Patch Changes

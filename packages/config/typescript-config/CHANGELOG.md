@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.46
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.45
 
 ### Patch Changes

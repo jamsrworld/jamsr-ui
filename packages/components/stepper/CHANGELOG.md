@@ -1,5 +1,16 @@
 # @jamsr-ui/stepper
 
+## 0.0.17
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.16
 
 ### Patch Changes

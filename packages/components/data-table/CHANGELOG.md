@@ -1,5 +1,24 @@
 # @jamsr-ui/data-table
 
+## 0.0.74
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/button@0.0.85
+  - @jamsr-ui/circular-progress@0.0.8
+  - @jamsr-ui/icon-button@0.0.10
+  - @jamsr-ui/linear-progress@0.0.7
+  - @jamsr-ui/repeater@0.0.43
+  - @jamsr-ui/select@0.0.104
+  - @jamsr-ui/skeleton@0.0.75
+  - @jamsr-ui/table@0.0.59
+  - @jamsr-ui/text@0.0.2
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.73
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.0.16
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.15
 
 ### Patch Changes

@@ -1,5 +1,26 @@
 # @jamsr-ui/rhf
 
+## 0.0.62
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.117
+  - @jamsr-ui/checkbox@0.0.81
+  - @jamsr-ui/editor@0.0.118
+  - @jamsr-ui/file-upload-multi@0.0.104
+  - @jamsr-ui/file-upload-single@0.0.107
+  - @jamsr-ui/input@0.0.108
+  - @jamsr-ui/otp-input@0.0.78
+  - @jamsr-ui/radio@0.0.86
+  - @jamsr-ui/rating@0.0.39
+  - @jamsr-ui/select@0.0.104
+  - @jamsr-ui/switch@0.0.88
+  - @jamsr-ui/tags-input@0.0.46
+  - @jamsr-ui/textarea@0.0.108
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.61
 
 ### Patch Changes

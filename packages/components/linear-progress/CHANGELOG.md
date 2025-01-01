@@ -1,5 +1,14 @@
 # @jamsr-ui/linear-progress
 
+## 0.0.7
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.6
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/styles
 
+## 0.0.15
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.14
 
 ### Patch Changes

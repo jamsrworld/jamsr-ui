@@ -1,5 +1,25 @@
 # @jamsr-ui/editor
 
+## 0.0.118
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.77
+  - @jamsr-ui/file-upload-single@0.0.107
+  - @jamsr-ui/icon-button@0.0.10
+  - @jamsr-ui/input@0.0.108
+  - @jamsr-ui/menu@0.0.102
+  - @jamsr-ui/popover@0.0.81
+  - @jamsr-ui/repeater@0.0.43
+  - @jamsr-ui/select@0.0.104
+  - @jamsr-ui/switch@0.0.88
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.117
 
 ### Patch Changes

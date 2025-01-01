@@ -1,5 +1,17 @@
 # @jamsr-ui/tags-input
 
+## 0.0.46
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/chip@0.0.93
+  - @jamsr-ui/input@0.0.108
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.45
 
 ### Patch Changes

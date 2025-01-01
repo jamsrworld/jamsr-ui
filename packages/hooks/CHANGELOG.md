@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.53
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.52
 
 ### Patch Changes

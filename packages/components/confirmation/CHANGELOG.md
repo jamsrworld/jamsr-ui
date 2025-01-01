@@ -1,5 +1,18 @@
 # @jamsr-ui/confirmation
 
+## 0.0.77
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/button@0.0.85
+  - @jamsr-ui/dialog@0.0.95
+  - @jamsr-ui/divider@0.0.77
+  - @jamsr-ui/text@0.0.2
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.76
 
 ### Patch Changes

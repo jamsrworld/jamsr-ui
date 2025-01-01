@@ -1,5 +1,13 @@
 # @jamsr-ui/chart
 
+## 0.0.3
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.2
 
 ### Patch Changes

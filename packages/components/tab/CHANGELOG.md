@@ -1,5 +1,16 @@
 # @jamsr-ui/tab
 
+## 0.0.99
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/card@0.0.89
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.98
 
 ### Patch Changes

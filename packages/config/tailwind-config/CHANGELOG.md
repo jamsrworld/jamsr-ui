@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.26
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+
 ## 0.0.25
 
 ### Patch Changes

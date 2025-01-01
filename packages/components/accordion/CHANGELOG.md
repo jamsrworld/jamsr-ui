@@ -1,5 +1,15 @@
 # @jamsr-ui/accordion
 
+## 0.0.88
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.87
 
 ### Patch Changes

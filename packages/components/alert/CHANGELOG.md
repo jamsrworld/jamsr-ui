@@ -1,5 +1,16 @@
 # @jamsr-ui/alert
 
+## 0.0.95
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/text@0.0.2
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.94
 
 ### Patch Changes

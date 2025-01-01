@@ -1,5 +1,17 @@
 # @jamsr-ui/dialog
 
+## 0.0.95
+
+### Patch Changes
+
+- refactor typography, sidebar, collapsible
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.10
+  - @jamsr-ui/hooks@0.0.53
+  - @jamsr-ui/shared-icons@0.0.66
+  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/utils@0.0.71
+
 ## 0.0.94
 
 ### Patch Changes

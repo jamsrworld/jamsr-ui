@@ -6,7 +6,7 @@ import {
   TableColumn,
   TableHeader,
   TableRow,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 import Image from "next/image";
 import ColorPng from "./color.png";
@@ -56,49 +56,49 @@ const TableSection = () => {
 export const MainSection = () => {
   return (
     <div className="container col-span-8 mx-auto flex flex-col gap-4">
-      <Typography as="h1" variant="h1">
+      <Text as="h1" variant="h1">
         Color
-      </Typography>
+      </Text>
       <section>
-        <Typography as="h3" variant="body2">
+        <Text as="h3" variant="body2">
           Judicious use of color can enhance communication, evoke your brand,
           provide visual continuity, communicate status and feedback, and help
           people understand information.
-        </Typography>
+        </Text>
         <Image src={ColorPng} alt="color" className="my-6 rounded-lg" />
         <div className="space-y-4">
-          <Typography as="p" variant="paragraph">
+          <Text as="p" variant="paragraph">
             The system defines colors that look good on various backgrounds and
             appearance modes, and can automatically adapt to vibrancy and
             accessibility settings. People are familiar with the system colors,
             and using them is a convenient way to make your experience feel at
             home on the device.
-          </Typography>
-          <Typography as="p" variant="paragraph">
+          </Text>
+          <Text as="p" variant="paragraph">
             You may also want to use custom colors to enhance the visual
             experience of your app or game and express its unique personality.
             The following guidelines can help you use color in ways that people
             appreciate, regardless of whether you use system-defined or custom
             colors.
-          </Typography>
-          <Typography as="p" variant="paragraph">
+          </Text>
+          <Text as="p" variant="paragraph">
             Hey there you're viewing the color page. Use color yum.
-          </Typography>
+          </Text>
         </div>
       </section>
       <section className="flex flex-col gap-2">
-        <Typography as="h3" variant="h3">
+        <Text as="h3" variant="h3">
           Best Practices
-        </Typography>
+        </Text>
         <div className="space-y-4">
-          <Typography as="p" variant="paragraph">
+          <Text as="p" variant="paragraph">
             <strong>Use color sparingly in nongame apps</strong>. In a nongame
             app, overuse of color can make communication less clear and can
             distract people. Prefer using touches of color to call attention to
             important information or show the relationship between parts of the
             interface.
-          </Typography>
-          <Typography as="p" variant="paragraph">
+          </Text>
+          <Text as="p" variant="paragraph">
             <strong>
               Avoid using the same color to mean different things.
             </strong>
@@ -109,8 +109,8 @@ export const MainSection = () => {
             interactivity using a visual indicator that doesn’t rely on color —
             such as a chevron or arrow icon — using a color other than blue for
             the interactive text is confusing.
-          </Typography>
-          <Typography as="p" variant="paragraph">
+          </Text>
+          <Text as="p" variant="paragraph">
             <strong>
               Make sure your app’s colors work well in both light and dark
               contexts.
@@ -136,47 +136,47 @@ export const MainSection = () => {
             platforms, system colors automatically support light and dark
             contexts as needed; if you use a custom color, you need to supply
             both variants.
-          </Typography>
+          </Text>
         </div>
       </section>
       <section className="flex flex-col gap-2">
-        <Typography as="h3" variant="h3">
+        <Text as="h3" variant="h3">
           Inclusive Color
-        </Typography>
+        </Text>
         <div className="space-y-4">
-          <Typography as="p" variant="paragraph">
+          <Text as="p" variant="paragraph">
             Avoid relying solely on color to differentiate between objects,
             indicate interactivity, or communicate essential information. When
             you use color to convey information, be sure to provide the same
             information in alternative ways so people with color blindness or
             other visual disabilities can understand it. For example, you can
             use labels or glyph shapes to identify objects or states.
-          </Typography>
-          <Typography as="p" variant="paragraph">
+          </Text>
+          <Text as="p" variant="paragraph">
             Avoid using colors that make it hard to perceive content in your
             app. For example, insufficient contrast can cause icons and text to
             blend with the background and make content hard to read, and people
             who are color blind might not be able to distinguish some color
             combinations. For guidance, see Color and effects.
-          </Typography>
-          <Typography as="p" variant="paragraph">
+          </Text>
+          <Text as="p" variant="paragraph">
             Consider how the colors you use might be perceived in other
             countries and cultures. For example, red communicates danger in some
             cultures, but has positive connotations in other cultures. Make sure
             the colors in your app send the message you intend.
-          </Typography>
+          </Text>
         </div>
       </section>
       <section className="flex flex-col gap-6">
-        <Typography as="h3" variant="h3">
+        <Text as="h3" variant="h3">
           Platform Considerations
-        </Typography>
+        </Text>
         <div className="flex flex-col gap-2">
-          <Typography as="h3" variant="h4">
+          <Text as="h3" variant="h4">
             iOS, iPadOS
-          </Typography>
+          </Text>
           <div className="space-y-4">
-            <Typography as="p" variant="paragraph">
+            <Text as="p" variant="paragraph">
               iOS defines two sets of dynamic background colors — system and
               grouped — each of which contains primary, secondary, and tertiary
               variants that help you convey a hierarchy of information. In
@@ -186,11 +186,11 @@ export const MainSection = () => {
               view; otherwise, use the system set of background colors
               (systemBackground, secondarySystemBackground, and
               tertiarySystemBackground).
-            </Typography>
-            <Typography as="p" variant="paragraph">
+            </Text>
+            <Text as="p" variant="paragraph">
               With both sets of background colors, you generally use the
               variants to indicate hierarchy in the following ways:
-            </Typography>
+            </Text>
             <ul className="flex list-inside list-disc flex-col gap-2">
               <li>Primary for the overall view</li>
               <li>

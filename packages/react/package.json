@@ -81,7 +81,7 @@
     "@jamsr-ui/theme": "workspace:^",
     "@jamsr-ui/toast": "workspace:^",
     "@jamsr-ui/tooltip": "workspace:^",
-    "@jamsr-ui/typography": "workspace:^",
+    "@jamsr-ui/text": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {

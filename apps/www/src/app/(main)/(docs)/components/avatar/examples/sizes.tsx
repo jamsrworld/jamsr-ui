@@ -1,4 +1,4 @@
-import { Avatar, Typography, type AvatarProps } from "@jamsr-ui/react";
+import { Avatar, Text, type AvatarProps } from "@jamsr-ui/react";
 
 export const AvatarSizes = () => {
   const sizes: AvatarProps["size"][] = ["xs", "sm", "md", "lg", "xl"];
@@ -15,7 +15,7 @@ export const AvatarSizes = () => {
             height={100}
             size={size}
           />
-          <Typography as="p">{size}</Typography>
+          <Text as="p">{size}</Text>
         </div>
       ))}
     </div>

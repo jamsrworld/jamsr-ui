@@ -1,7 +1,7 @@
 "use client";
 
 import { toSlug } from "@/utils/fns";
-import { Link, Typography } from "@jamsr-ui/react";
+import { Link, Text } from "@jamsr-ui/react";
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -57,9 +57,9 @@ export const OnThisPage = (props: Props) => {
 
   return (
     <aside className="fixed right-0 h-dvh w-full max-w-[300px] overflow-scroll px-4 py-12 scrollbar-hide max-xl:hidden">
-      <Typography as="h3" className="text-foreground-tertiary">
+      <Text as="h3" className="text-foreground-tertiary">
         On this page
-      </Typography>
+      </Text>
       <ul className="mt-4 flex flex-col gap-2">
         {headings.map((heading) => {
           const id = toSlug(heading);

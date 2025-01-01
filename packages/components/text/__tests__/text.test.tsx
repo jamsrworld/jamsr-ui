@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { Typography } from "../src";
+import { Text } from "../src";
 
-describe("Typography", () => {
+describe("Text", () => {
   it("should render correctly", () => {
-    const wrapper = render(<Typography>hiii</Typography>);
+    const wrapper = render(<Text as="p">hiii</Text>);
     expect(() => wrapper.unmount()).not.toThrow();
   });
 });

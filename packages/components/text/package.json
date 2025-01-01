@@ -1,21 +1,7 @@
 {
-  "name": "@jamsr-ui/typography",
-  "version": "0.0.83",
-  "description": "",
+  "name": "@jamsr-ui/text",
+  "version": "0.0.1",
   "main": "./src/index.ts",
-  "sideEffects": false,
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",

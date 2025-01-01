@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Typography } from "@jamsr-ui/react";
+import { Card, CardContent, CardHeader, Text } from "@jamsr-ui/react";
 
 export const CardVariants = () => {
   return (
@@ -6,28 +6,28 @@ export const CardVariants = () => {
       <Card>
         <CardHeader heading="Card Heading" />
         <CardContent>
-          <Typography as="p">
+          <Text as="p">
             This is the card body. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit.
-          </Typography>
+          </Text>
         </CardContent>
       </Card>
       <Card isBordered>
         <CardHeader heading="Card Heading" />
         <CardContent>
-          <Typography as="p">
+          <Text as="p">
             This is the card body. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit.
-          </Typography>
+          </Text>
         </CardContent>
       </Card>
       <Card isElevated>
         <CardHeader heading="Card Heading" />
         <CardContent>
-          <Typography as="p">
+          <Text as="p">
             This is the card body. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit.
-          </Typography>
+          </Text>
         </CardContent>
       </Card>
     </div>

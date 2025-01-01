@@ -1,5 +1,5 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { Typography } from "@jamsr-ui/typography";
+import { Text } from "../../text/src";
 import {
   cn,
   deepMergeProps,
@@ -61,21 +61,21 @@ export const CardHeader = <T extends React.ElementType = "div">(
         <div className={classNames?.startContent}>{startContent}</div>
       )}
       <div className={cn("grid grow", classNames?.innerWrapper)}>
-        <Typography
+        <Text
           as="h3"
           variant="body1"
           className={cn("font-medium", classNames?.heading)}
         >
           {heading}
-        </Typography>
+        </Text>
         {subHeading && (
-          <Typography
+          <Text
             className={cn("text-foreground-secondary", classNames?.subHeading)}
             variant="caption"
             as="div"
           >
             {subHeading}
-          </Typography>
+          </Text>
         )}
       </div>
       {endContent && <div className={classNames?.endContent}>{endContent}</div>}

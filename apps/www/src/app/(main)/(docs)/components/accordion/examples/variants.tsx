@@ -2,7 +2,7 @@ import {
   Accordion,
   AccordionItem,
   type AccordionProps,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -19,9 +19,9 @@ export const AccordionVariants = () => {
     <div className="flex flex-col gap-8">
       {variants.map((variant) => (
         <div key={variant} className="flex flex-col gap-2">
-          <Typography as="p" variant="h6" className="capitalize">
+          <Text as="p" variant="h6" className="capitalize">
             {variant}
-          </Typography>
+          </Text>
           <Accordion variant={variant}>
             <AccordionItem aria-label="Accordion 1" heading="Accordion 1">
               {content}

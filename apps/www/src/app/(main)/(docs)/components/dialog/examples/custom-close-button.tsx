@@ -9,7 +9,7 @@ import {
   DialogFooter,
   DialogHeader,
   Repeater,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 
 export const DialogCustomCloseButton = () => {
@@ -36,12 +36,12 @@ export const DialogCustomCloseButton = () => {
           <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">
             <Repeater repeat={2}>
-              <Typography as="p">
+              <Text as="p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Dignissimos corrupti est quos asperiores libero maiores amet non
                 obcaecati odio excepturi illo recusandae tenetur, qui earum
                 dolorem minus, quibusdam optio? Cum.
-              </Typography>
+              </Text>
             </Repeater>
           </DialogBody>
           <DialogFooter>

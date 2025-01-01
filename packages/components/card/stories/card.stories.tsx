@@ -1,5 +1,5 @@
 import { Avatar } from "@jamsr-ui/avatar";
-import { Typography } from "@jamsr-ui/typography";
+import { Text } from "@jamsr-ui/typography";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Card, CardContent, CardHeader, type CardProps } from "../src";
 
@@ -32,7 +32,7 @@ export const StartEndContent: Story = {
           subHeading="20 Minutes Ago"
         />
         <CardContent>
-          <Typography as="p">This is a card. Pretty cool right?</Typography>
+          <Text as="p">This is a card. Pretty cool right?</Text>
         </CardContent>
       </Card>
     );

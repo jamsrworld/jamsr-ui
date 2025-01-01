@@ -1,4 +1,4 @@
-import { Typography } from "@jamsr-ui/react";
+import { Text } from "@jamsr-ui/react";
 import { ChevronRightIcon } from "@jamsr-ui/shared-icons";
 
 const items = [
@@ -17,13 +17,13 @@ export const LeftSection = () => {
         {items.map((item, index) => (
           <li key={index} className="flex items-center">
             <ChevronRightIcon className="size-4" />
-            <Typography
+            <Text
               as="p"
               className="text-foreground-secondary"
               variant="paragraph2"
             >
               {item}
-            </Typography>
+            </Text>
           </li>
         ))}
       </ul>

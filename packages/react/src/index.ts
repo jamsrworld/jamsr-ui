@@ -43,10 +43,10 @@ export * from "@jamsr-ui/switch";
 export * from "@jamsr-ui/tab";
 export * from "@jamsr-ui/table";
 export * from "@jamsr-ui/tags-input";
+export * from "@jamsr-ui/text";
 export * from "@jamsr-ui/textarea";
 export * from "@jamsr-ui/toast";
 export * from "@jamsr-ui/tooltip";
-export * from "@jamsr-ui/typography";
 
 // Provider
 export * from "@jamsr-ui/core";

@@ -55,9 +55,9 @@ import {
   type TableRowProps,
 } from "@jamsr-ui/table";
 import { type TagsInputProps } from "@jamsr-ui/tags-input";
+import { type TextProps } from "@jamsr-ui/text";
 import { type TextareaProps } from "@jamsr-ui/textarea";
 import { type TooltipProps } from "@jamsr-ui/tooltip";
-import { type TypographyProps } from "@jamsr-ui/typography";
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
@@ -110,7 +110,7 @@ declare module "@jamsr-ui/styles" {
     tableColumn?: Partial<TableColumnProps>;
     tableHeader?: Partial<TableHeaderProps>;
     tableRow?: Partial<TableRowProps>;
-    typography?: Partial<TypographyProps>;
+    text?: Partial<TextProps>;
     tagsInput?: Partial<TagsInputProps>;
     textarea?: Partial<TextareaProps>;
     tooltip?: Partial<TooltipProps>;

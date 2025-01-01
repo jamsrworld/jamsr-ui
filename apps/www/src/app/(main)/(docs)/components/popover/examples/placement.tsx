@@ -2,7 +2,7 @@ import {
   Button,
   Popover,
   type PopoverProps,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 
 export const PopoverPlacement = () => {
@@ -31,7 +31,7 @@ export const PopoverPlacement = () => {
           placement={placement}
           triggerOn="hover"
         >
-          <Typography as="p">This is a Popover content</Typography>
+          <Text as="p">This is a Popover content</Text>
         </Popover>
       ))}
     </div>

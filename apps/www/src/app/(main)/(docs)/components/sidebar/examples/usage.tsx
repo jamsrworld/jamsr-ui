@@ -18,7 +18,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuItemButton,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 import { ChevronRightIcon, EmailIcon } from "@jamsr-ui/shared-icons";
 
@@ -174,15 +174,12 @@ export const SidebarUsage = () => {
               <div className="flex items-center gap-2">
                 <Avatar src={logo} width={100} height={100} alt={name} />
                 <div className="flex flex-col text-left">
-                  <Typography as="p" className="text-sm">
+                  <Text as="p" className="text-sm">
                     {name}
-                  </Typography>
-                  <Typography
-                    as="p"
-                    className="text-xs text-foreground-secondary"
-                  >
+                  </Text>
+                  <Text as="p" className="text-xs text-foreground-secondary">
                     {plan}
-                  </Typography>
+                  </Text>
                 </div>
               </div>
             );
@@ -203,15 +200,12 @@ export const SidebarUsage = () => {
                   alt={name}
                 />
                 <div className="flex flex-col text-left">
-                  <Typography as="p" className="text-sm">
+                  <Text as="p" className="text-sm">
                     {name}
-                  </Typography>
-                  <Typography
-                    as="p"
-                    className="text-xs text-foreground-secondary"
-                  >
+                  </Text>
+                  <Text as="p" className="text-xs text-foreground-secondary">
                     {plan}
-                  </Typography>
+                  </Text>
                 </div>
               </SelectItem>
             );
@@ -277,15 +271,12 @@ export const SidebarUsage = () => {
                 height={100}
               />
               <div>
-                <Typography as="p" className="text-sm">
+                <Text as="p" className="text-sm">
                   {user.name}
-                </Typography>
-                <Typography
-                  as="p"
-                  className="text-xs text-foreground-secondary"
-                >
+                </Text>
+                <Text as="p" className="text-xs text-foreground-secondary">
                   {user.email}
-                </Typography>
+                </Text>
               </div>
             </div>
           }

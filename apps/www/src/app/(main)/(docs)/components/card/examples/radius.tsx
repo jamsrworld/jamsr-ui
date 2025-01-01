@@ -1,4 +1,4 @@
-import { Card, CardContent, type CardProps, Typography } from "@jamsr-ui/react";
+import { Card, CardContent, type CardProps, Text } from "@jamsr-ui/react";
 
 export const CardRadius = () => {
   const radii: CardProps["radius"][] = [
@@ -16,11 +16,11 @@ export const CardRadius = () => {
       {radii.map((radius) => (
         <Card key={radius} radius={radius}>
           <CardContent>
-            <Typography as="p">Radius: {radius}</Typography>
-            <Typography as="p">
+            <Text as="p">Radius: {radius}</Text>
+            <Text as="p">
               This is the card body. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
-            </Typography>
+            </Text>
           </CardContent>
         </Card>
       ))}

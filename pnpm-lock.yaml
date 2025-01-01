@@ -314,9 +314,9 @@ importers:
       '@jamsr-ui/styles':
         specifier: workspace:^
         version: link:../../styles
-      '@jamsr-ui/typography':
+      '@jamsr-ui/text':
         specifier: workspace:^
-        version: link:../typography
+        version: link:../text
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -450,9 +450,9 @@ importers:
       '@jamsr-ui/styles':
         specifier: workspace:^
         version: link:../../styles
-      '@jamsr-ui/typography':
+      '@jamsr-ui/text':
         specifier: workspace:^
-        version: link:../typography
+        version: link:../text
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -624,9 +624,9 @@ importers:
       '@jamsr-ui/styles':
         specifier: workspace:^
         version: link:../../styles
-      '@jamsr-ui/typography':
+      '@jamsr-ui/text':
         specifier: workspace:^
-        version: link:../typography
+        version: link:../text
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -682,9 +682,9 @@ importers:
       '@jamsr-ui/table':
         specifier: workspace:^
         version: link:../table
-      '@jamsr-ui/typography':
+      '@jamsr-ui/text':
         specifier: workspace:^
-        version: link:../typography
+        version: link:../text
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1314,9 +1314,9 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
-      '@jamsr-ui/typography':
+      '@jamsr-ui/text':
         specifier: workspace:^
-        version: link:../typography
+        version: link:../text
       '@types/node':
         specifier: ^22.7.9
         version: 22.8.1
@@ -1649,9 +1649,9 @@ importers:
       '@jamsr-ui/styles':
         specifier: workspace:^
         version: link:../../styles
-      '@jamsr-ui/typography':
+      '@jamsr-ui/text':
         specifier: workspace:^
-        version: link:../typography
+        version: link:../text
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1771,6 +1771,28 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
 
+  packages/components/text:
+    dependencies:
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
+    devDependencies:
+      '@types/react':
+        specifier: 19.0.1
+        version: 19.0.1
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+
   packages/components/textarea:
     dependencies:
       '@jamsr-ui/button':
@@ -1854,28 +1876,6 @@ importers:
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons
-      '@types/react':
-        specifier: 19.0.1
-        version: 19.0.1
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: ^19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: ^19.0.0
-        version: 19.0.0(react@19.0.0)
-
-  packages/components/typography:
-    dependencies:
-      '@jamsr-ui/styles':
-        specifier: workspace:^
-        version: link:../../styles
-      '@jamsr-ui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -2138,6 +2138,9 @@ importers:
       '@jamsr-ui/tags-input':
         specifier: workspace:^
         version: link:../components/tags-input
+      '@jamsr-ui/text':
+        specifier: workspace:^
+        version: link:../components/text
       '@jamsr-ui/textarea':
         specifier: workspace:^
         version: link:../components/textarea
@@ -2150,9 +2153,6 @@ importers:
       '@jamsr-ui/tooltip':
         specifier: workspace:^
         version: link:../components/tooltip
-      '@jamsr-ui/typography':
-        specifier: workspace:^
-        version: link:../components/typography
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../utils

@@ -1,6 +1,6 @@
 "use client";
 
-import { Chip, Typography } from "@jamsr-ui/react";
+import { Chip, Text } from "@jamsr-ui/react";
 import { cn } from "@jamsr-ui/utils";
 import { type Route } from "next";
 import NextLink, { type LinkProps } from "next/link";
@@ -193,8 +193,8 @@ export const sidebarItems: {
         path: "/components/tooltip",
       },
       {
-        heading: "Typography",
-        path: "/components/typography",
+        heading: "Text",
+        path: "/components/text",
       },
     ],
   },
@@ -307,13 +307,13 @@ export const ComponentsSidebar = () => {
           return (
             <div key={idx} className="flex flex-col gap-2">
               <div className="flex items-center gap-1">
-                <Typography
+                <Text
                   as="p"
                   variant="paragraph2"
                   className="text-foreground-tertiary text-2xs font-medium uppercase"
                 >
                   {heading}
-                </Typography>
+                </Text>
                 {chip}
               </div>
               <div className="flex flex-col">

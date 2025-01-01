@@ -9,7 +9,7 @@ import {
 } from "@jamsr-ui/dialog";
 import { Divider } from "@jamsr-ui/divider";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { Typography } from "@jamsr-ui/typography";
+import { Text } from "../../text/src";
 import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useConfirmation } from "./use-confirmation";
 
@@ -76,13 +76,13 @@ export const Confirmation = ($props: ConfirmationProps) => {
           {title}
         </DialogHeader>
         <DialogBody>
-          <Typography
+          <Text
             as="p"
             variant="paragraph2"
             className={cn("text-center", classNames?.message)}
           >
             {message}
-          </Typography>
+          </Text>
         </DialogBody>
         <Divider />
         <div className="flex">

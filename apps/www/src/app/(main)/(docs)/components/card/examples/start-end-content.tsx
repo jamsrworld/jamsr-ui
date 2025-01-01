@@ -5,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   IconButton,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 import Image from "next/image";
 import { useId } from "react";
@@ -43,21 +43,21 @@ export const CardStartEndContent = () => {
           alt="Fruit"
           className="aspect-video w-full rounded-md object-cover"
         />
-        <Typography as="p">
+        <Text as="p">
           A react card component is a content container. It incorporates options
           for images, headers, and footers, a wide variety of content,
           contextual background colors, and excellent display options.
-        </Typography>
+        </Text>
         <div className="flex items-end gap-1">
-          <Typography as="h6" variant="h6">
+          <Text as="h6" variant="h6">
             $256
-          </Typography>
-          <Typography
+          </Text>
+          <Text
             as="h6"
             className="text-foreground-secondary line-through"
           >
             $999
-          </Typography>
+          </Text>
         </div>
       </CardContent>
     </Card>

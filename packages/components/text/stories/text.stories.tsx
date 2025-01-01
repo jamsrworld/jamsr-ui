@@ -1,16 +1,16 @@
 import { type Meta, type StoryObj } from "@storybook/react";
-import { Typography, typographyVariants, type TypographyProps } from "../src";
+import { Text, textVariants, type TextProps } from "../src";
 
-const meta: Meta<TypographyProps> = {
-  title: "Components/Typography",
-  component: Typography,
+const meta: Meta<TextProps> = {
+  title: "Components/Text",
+  component: Text,
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const Template = (props: TypographyProps) => (
-  <Typography {...props}>I'm a typography</Typography>
+const Template = (props: TextProps) => (
+  <Text {...props}>I'm a typography</Text>
 );
 
 export const Default: Story = {
@@ -18,21 +18,21 @@ export const Default: Story = {
   render: Template,
 };
 
-const TemplateAll = (props: TypographyProps) => {
+const TemplateAll = (props: TextProps) => {
   return (
     <div className="flex flex-col items-center gap-8">
-      {Object.keys(typographyVariants.variants.variant).map((item) => {
+      {Object.keys(textVariants.variants.variant).map((item) => {
         return (
-          <Typography
+          <Text
             key={item}
             // @ts-expect-error TypeError
             variant={item}
             className="max-w-screen-md text-balance text-center"
             {...props}
           >
-            I am {item} Typography Variant Create content to help spread the
+            I am {item} Text Variant Create content to help spread the
             word about Framer and earn 50% of
-          </Typography>
+          </Text>
         );
       })}
     </div>

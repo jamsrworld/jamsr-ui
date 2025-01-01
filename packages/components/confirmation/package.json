@@ -38,7 +38,7 @@
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/dialog": "workspace:^",
     "@jamsr-ui/divider": "workspace:^",
-    "@jamsr-ui/typography": "workspace:^",
+    "@jamsr-ui/text": "workspace:^",
     "@jamsr-ui/utils": "workspace:^",
     "zustand": "5.0.0"
   },

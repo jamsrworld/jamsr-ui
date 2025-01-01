@@ -2,7 +2,7 @@
 
 "use client";
 
-import { type ButtonProps, Card, Typography } from "@jamsr-ui/react";
+import { type ButtonProps, Card, Text } from "@jamsr-ui/react";
 import {
   Bar,
   BarChart,
@@ -75,9 +75,9 @@ const BarChartCard = (props: BarChartProps) => {
     <Card className="h-[300px]">
       <div className="flex flex-col gap-y-4 p-4">
         <dt>
-          <Typography as="h3" variant="paragraph2">
+          <Text as="h3" variant="paragraph2">
             {title}
-          </Typography>
+          </Text>
         </dt>
         <dd className="flex w-full justify-end gap-4 text-xs text-default-500">
           {categories.map((item, idx) => {
@@ -89,7 +89,7 @@ const BarChartCard = (props: BarChartProps) => {
                     backgroundColor: `hsl(var(--ui-${color}-${(idx + 1) * 200}))`,
                   }}
                 />
-                <Typography as="span">{item}</Typography>
+                <Text as="span">{item}</Text>
               </div>
             );
           })}

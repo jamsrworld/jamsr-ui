@@ -1,7 +1,7 @@
 "use client";
 
 import { useDisclosure } from "@jamsr-ui/hooks";
-import { Button, IconButton, Popover, Typography } from "@jamsr-ui/react";
+import { Button, IconButton, Popover, Text } from "@jamsr-ui/react";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
 
 export const PopoverControlled = () => {
@@ -19,7 +19,7 @@ export const PopoverControlled = () => {
         className="p-2"
         showArrow
       >
-        <Typography as="p">This is a Popover content</Typography>
+        <Text as="p">This is a Popover content</Text>
       </Popover>
       <Button onClick={onToggle}>{isOpen ? "Close" : "Open"}</Button>
     </div>

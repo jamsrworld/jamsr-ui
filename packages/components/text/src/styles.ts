@@ -1,7 +1,7 @@
 import { tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
-export const typographyVariants = tv({
+export const textVariants = tv({
   base: "transition-colors",
   variants: {
     variant: {
@@ -70,4 +70,4 @@ export const typographyVariants = tv({
   ],
 });
 
-export type TypographyVariants = VariantProps<typeof typographyVariants>;
+export type TextVariants = VariantProps<typeof textVariants>;

@@ -10,7 +10,7 @@ import {
   DialogHeader,
   type DialogProps,
   Repeater,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 
 const DialogItem = (
@@ -27,14 +27,14 @@ const DialogItem = (
         <DialogContent>
           <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">
-            <Typography as="h3">Im am dialog Body</Typography>
+            <Text as="h3">Im am dialog Body</Text>
             <Repeater repeat={2}>
-              <Typography as="p">
+              <Text as="p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Dignissimos corrupti est quos asperiores libero maiores amet non
                 obcaecati odio excepturi illo recusandae tenetur, qui earum
                 dolorem minus, quibusdam optio? Cum.
-              </Typography>
+              </Text>
             </Repeater>
           </DialogBody>
           <DialogFooter>

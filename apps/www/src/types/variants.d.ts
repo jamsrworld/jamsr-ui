@@ -45,10 +45,10 @@ export type VariantTypes = {
   "tab": ["as", "colors", "customized", "disabled-item", "disabled", "outside", "radius", "sizes", "usage", "variants", "with-icons"];
   "table": ["allow-hover", "bordered", "empty-state", "radius", "usage"];
   "tags-input": ["controlled", "default-value", "invalid-state", "radius", "usage"];
+  "text": ["all", "usage"];
   "textarea": ["controlled", "disabled", "error-state", "helper-text", "label-helper", "placeholder", "radius", "sizes", "usage", "variants", "with-end-content", "with-icon", "with-placeholder", "with-start-content", "without-label"];
   "toast": ["radius", "usage"];
   "tooltip": ["offset", "radius", "usage", "with-arrow"];
-  "typography": ["all", "usage"];
   "area-chart": ["area-chart-gradient", "area-chart-multi-series-gradient", "area-chart-multi-series-stack-gradient", "area-chart-multi-series-stack", "area-chart-multi-series", "area-chart-solid"];
   "bar-chart": ["bar-chart-custom", "bar-chart-multi-columns", "bar-chart-one-column", "bar-chart-stack", "bar-chart-vertical-multi-columns", "bar-chart-vertical-one-column", "bar-chart-vertical-stack"];
   "line-chart": ["line-chart-multi-series", "line-chart-simple"];

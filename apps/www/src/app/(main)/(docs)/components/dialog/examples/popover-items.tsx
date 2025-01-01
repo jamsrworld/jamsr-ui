@@ -11,7 +11,7 @@ import {
   Select,
   SelectItem,
   Tooltip,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 
 export const DialogPopoverItems = () => {
@@ -34,19 +34,19 @@ export const DialogPopoverItems = () => {
             <Tooltip title="I am tooltip">
               <Button>Tooltip</Button>
             </Tooltip>
-            <Typography as="h3">Im am dialog Body</Typography>
-            <Typography as="p">
+            <Text as="h3">Im am dialog Body</Text>
+            <Text as="p">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
               molestias sequi? Aperiam fugit dignissimos doloribus doloremque
               ullam commodi libero voluptatum accusantium ut est, explicabo
               eveniet repellat eius ad velit. Recusandae?
-            </Typography>
-            <Typography as="p">
+            </Text>
+            <Text as="p">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
               molestias sequi? Aperiam fugit dignissimos doloribus doloremque
               ullam commodi libero voluptatum accusantium ut est, explicabo
               eveniet repellat eius ad velit. Recusandae?
-            </Typography>
+            </Text>
           </DialogBody>
           <DialogFooter>
             <Button variant="light" onClick={onClose} color="secondary">

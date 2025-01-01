@@ -1,7 +1,7 @@
 "use client";
 
 import { useKeyPress } from "@jamsr-ui/hooks";
-import { Typography } from "@jamsr-ui/react";
+import { Text } from "@jamsr-ui/react";
 import { useState } from "react";
 
 export const UseKeypressAll = () => {
@@ -11,7 +11,7 @@ export const UseKeypressAll = () => {
   });
   return (
     <div className="flex flex-col items-start gap-2">
-      <Typography as="p">Start pressing a key</Typography>
+      <Text as="p">Start pressing a key</Text>
       <div className="flex gap-2">
         You Pressed <strong>{pressedKey}</strong>
       </div>

@@ -2,7 +2,7 @@ import {
   Button,
   Popover,
   type PopoverProps,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 
 export const PopoverRadius = () => {
@@ -26,7 +26,7 @@ export const PopoverRadius = () => {
           radius={radius}
           triggerOn="hover"
         >
-          <Typography as="p">This is a Popover content</Typography>
+          <Text as="p">This is a Popover content</Text>
         </Popover>
       ))}
     </div>

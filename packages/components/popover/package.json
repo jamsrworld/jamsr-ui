@@ -25,7 +25,7 @@
   "devDependencies": {
     "@jamsr-ui/icon-button": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
-    "@jamsr-ui/typography": "workspace:^",
+    "@jamsr-ui/text": "workspace:^",
     "@types/react": "19.0.1",
     "@types/node": "^22.7.9",
     "clean-package": "^2.2.0",

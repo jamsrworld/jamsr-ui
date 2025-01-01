@@ -8,7 +8,7 @@ import {
   DialogContent,
   DialogFooter,
   DialogHeader,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 
 export const DialogWithoutCloseButton = () => {
@@ -20,18 +20,18 @@ export const DialogWithoutCloseButton = () => {
         <DialogContent>
           <DialogHeader>Heading</DialogHeader>
           <DialogBody className="flex flex-col gap-4">
-            <Typography as="p">
+            <Text as="p">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
               molestias sequi? Aperiam fugit dignissimos doloribus doloremque
               ullam commodi libero voluptatum accusantium ut est, explicabo
               eveniet repellat eius ad velit. Recusandae?
-            </Typography>
-            <Typography as="p">
+            </Text>
+            <Text as="p">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
               molestias sequi? Aperiam fugit dignissimos doloribus doloremque
               ullam commodi libero voluptatum accusantium ut est, explicabo
               eveniet repellat eius ad velit. Recusandae?
-            </Typography>
+            </Text>
           </DialogBody>
           <DialogFooter>
             <Button variant="light" onClick={onClose} color="secondary">

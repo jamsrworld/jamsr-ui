@@ -1,6 +1,6 @@
 import { IconButton } from "@jamsr-ui/icon-button";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
-import { Typography } from "@jamsr-ui/typography";
+import { Text } from "@jamsr-ui/typography";
 import { type Meta, type StoryObj } from "@storybook/react";
 import { Popover, type PopoverProps } from "../src/popover";
 
@@ -23,7 +23,7 @@ const Template = (props: Partial<PopoverProps>) => {
         className="p-2"
         {...props}
       >
-        <Typography as="p">This is a Popover content</Typography>
+        <Text as="p">This is a Popover content</Text>
       </Popover>
     </div>
   );

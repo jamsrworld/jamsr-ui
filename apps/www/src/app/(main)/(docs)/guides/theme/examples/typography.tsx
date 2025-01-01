@@ -1,7 +1,7 @@
-import { Typography } from "@jamsr-ui/react";
+import { Text } from "@jamsr-ui/react";
 import React from "react";
 
-export const ThemeTypography = () => {
+export const ThemeText = () => {
   const classNames = [
     {
       name: "Foreground",
@@ -29,9 +29,9 @@ export const ThemeTypography = () => {
     <div>
       {classNames.map(({ className, name }, idx) => {
         return (
-          <Typography as="p" key={idx} className={className}>
+          <Text as="p" key={idx} className={className}>
             {name}
-          </Typography>
+          </Text>
         );
       })}
     </div>

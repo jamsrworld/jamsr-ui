@@ -1,14 +1,14 @@
 "use client";
 
 import { JAMSR_UI_GITHUB_URL } from "@/config";
-import { Divider, Link, Typography } from "@jamsr-ui/react";
+import { Divider, Link, Text } from "@jamsr-ui/react";
 
 export const AppFooter = () => {
   return (
     <>
       <Divider className="pt-4" />
       <footer className="z-10 flex items-center justify-center gap-1 py-4">
-        <Typography as="p">
+        <Text as="p">
           Built by{" "}
           <Link
             underline="always"
@@ -18,8 +18,8 @@ export const AppFooter = () => {
             Jamsrworld
           </Link>
           .
-        </Typography>
-        <Typography as="p">
+        </Text>
+        <Text as="p">
           Source Code is on{" "}
           <Link
             underline="always"
@@ -29,7 +29,7 @@ export const AppFooter = () => {
           >
             Github
           </Link>
-        </Typography>
+        </Text>
       </footer>
     </>
   );

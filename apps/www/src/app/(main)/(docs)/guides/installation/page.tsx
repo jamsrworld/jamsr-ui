@@ -9,7 +9,7 @@ import {
   Link,
   Tab,
   Tabs,
-  Typography,
+  Text,
 } from "@jamsr-ui/react";
 import { type Metadata } from "next";
 import { NpmIcon, PnpmIcon, YarnIcon } from "./assets/icons";
@@ -27,9 +27,9 @@ const items: { heading: string; content: React.ReactNode }[] = [
     heading: "Install Packages",
     content: (
       <div className="flex flex-col gap-4">
-        <Typography as="p">
+        <Text as="p">
           Use your preferred package manager to install JamsrUI:
-        </Typography>
+        </Text>
         <Tabs variant="underlined" defaultValue="pnpm">
           <Tab startContent={<NpmIcon />} value="npm" heading="npm">
             <CodeBlock>npm install @jamsr-ui/react framer-motion</CodeBlock>
@@ -48,10 +48,10 @@ const items: { heading: string; content: React.ReactNode }[] = [
     heading: "Configure Hoisted Dependencies (pnpm users only)",
     content: (
       <div className="flex flex-col gap-4">
-        <Typography as="p">
+        <Text as="p">
           If you're using <Code>pnpm</Code>, ensure that JamsrUI packages are
           hoisted to the root <Code> node_modules</Code>.
-        </Typography>
+        </Text>
         <div>
           <ul className="flex list-disc flex-col gap-4">
             <li className="space-y-4">
@@ -76,13 +76,13 @@ const items: { heading: string; content: React.ReactNode }[] = [
     heading: "Set Up Tailwind CSS",
     content: (
       <div className="flex flex-col gap-4">
-        <Typography as="p">
+        <Text as="p">
           JamsrUI is built on Tailwind CSS. Follow the official{" "}
           <Link target="_blank" href={TAILWIND_WEB_URL}>
             Tailwind CSS installation guide
           </Link>{" "}
           to set it up in your project.
-        </Typography>
+        </Text>
 
         <div>
           <ul className="flex list-disc flex-col gap-4">
@@ -125,10 +125,10 @@ export default config;
     heading: "Wrap Your Application with UIProvider",
     content: (
       <div className="flex flex-col gap-4">
-        <Typography as="p">
+        <Text as="p">
           To enable JamsrUI components, wrap your application with the{" "}
           <Code>UIProvider</Code>.
-        </Typography>
+        </Text>
         <CodeBlock>
           {`// app/page.ts
 import { UIProvider } from "@jamsr-ui/react";
@@ -148,10 +148,10 @@ function App() {
     heading: " Enjoy and Explore JamsrUI Components",
     content: (
       <div className="flex flex-col gap-4">
-        <Typography as="p">
+        <Text as="p">
           You're all set! Start using JamsrUI components in your project. Here's
           an example of implementing a button component:
-        </Typography>
+        </Text>
         <CodeBlock>
           {`import { Button } from "@jamsr-ui/react";
 
@@ -181,12 +181,12 @@ const Page = () => {
       <Alert variant="outlined" status="danger">
         JamsrUI is currently in development and it is not stable.
       </Alert>
-      <Typography as="p" variant="body1">
+      <Text as="p" variant="body1">
         Get started with{" "}
         <Link href={JAMSR_UI_TEMPLATE_GITHUB_URL} target="_blank">
           JamsrUI Next.js template
         </Link>{" "}
-      </Typography>
+      </Text>
       <Divider>OR</Divider>
       <div className="relative my-8 flex flex-col gap-8">
         <Divider
@@ -204,9 +204,9 @@ const Page = () => {
                 </Chip>
               </div>
               <div className="flex grow flex-col  gap-4 pt-1.5">
-                <Typography as="p" variant="h6">
+                <Text as="p" variant="h6">
                   {heading}
-                </Typography>
+                </Text>
                 {content}
               </div>
             </div>

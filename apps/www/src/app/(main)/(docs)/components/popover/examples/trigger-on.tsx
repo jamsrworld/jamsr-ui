@@ -1,4 +1,4 @@
-import { IconButton, Popover, Typography } from "@jamsr-ui/react";
+import { IconButton, Popover, Text } from "@jamsr-ui/react";
 import { InfoIcon } from "@jamsr-ui/shared-icons";
 
 export const PopoverTriggerOnHover = () => {
@@ -13,7 +13,7 @@ export const PopoverTriggerOnHover = () => {
         className="p-2"
         triggerOn="hover"
       >
-        <Typography as="p">This is a Popover content</Typography>
+        <Text as="p">This is a Popover content</Text>
       </Popover>
     </div>
   );

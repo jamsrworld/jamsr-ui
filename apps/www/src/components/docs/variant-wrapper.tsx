@@ -1,5 +1,5 @@
 import { toSlug } from "@/utils/fns";
-import { Tab, Tabs, Typography } from "@jamsr-ui/react";
+import { Tab, Tabs, Text } from "@jamsr-ui/react";
 import React from "react";
 import { CodeBlock } from "../code-block";
 
@@ -17,17 +17,17 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
   return (
     <section className="scroll-mt-20" id={id}>
       <div className="mb-2">
-        <Typography variant="h6" as="h1" className="text-xl font-medium">
+        <Text variant="h6" as="h1" className="text-xl font-medium">
           {heading}
-        </Typography>
+        </Text>
         {description && (
-          <Typography
+          <Text
             as="div"
             variant="paragraph"
             className="text-foreground-secondary"
           >
             {description}
-          </Typography>
+          </Text>
         )}
       </div>
       <div>

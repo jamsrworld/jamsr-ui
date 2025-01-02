@@ -1,9 +1,12 @@
 import { Code } from "@/components/code";
 import { CodeBlock } from "@/components/code-block";
 import { VariantPage } from "@/components/docs/variant-page";
+import { GithubDarkIcon } from "@/components/icons";
 import { JAMSR_UI_TEMPLATE_GITHUB_URL, TAILWIND_WEB_URL } from "@/config";
 import {
   Alert,
+  Card,
+  CardContent,
   Chip,
   Divider,
   Link,
@@ -12,10 +15,11 @@ import {
   Text,
 } from "@jamsr-ui/react";
 import { type Metadata } from "next";
+import NextLink from "next/link";
 import { NpmIcon, PnpmIcon, YarnIcon } from "./assets/icons";
 
 const title = "Installation";
-const description = "How to install and setup Jamsr UI in your project.";
+const description = "How to install and setup JamsrUI in your project.";
 
 export const metadata: Metadata = {
   title: "Installation",
@@ -155,7 +159,7 @@ function App() {
         <CodeBlock>
           {`import { Button } from "@jamsr-ui/react";
 
-export const Button = () => {
+export const ButtonExample = () => {
   return (
     <div className="flex gap-4">
       <Button color="default">Default</Button>
@@ -178,15 +182,24 @@ export const Button = () => {
 const Page = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <Alert variant="outlined" status="danger">
-        JamsrUI is currently in development and it is not stable.
-      </Alert>
-      <Text as="p" variant="body1">
-        Get started with{" "}
-        <Link href={JAMSR_UI_TEMPLATE_GITHUB_URL} target="_blank">
-          JamsrUI Next.js template
-        </Link>{" "}
-      </Text>
+      <Card
+        isBordered
+        radius="2xl"
+        as={NextLink}
+        href={JAMSR_UI_TEMPLATE_GITHUB_URL}
+        target="_blank"
+      >
+        <CardContent>
+          <Text as="p" variant="body1">
+            Kickstart with our Next.js Starter 🚀
+          </Text>
+          <Text as="p" className="text-foreground-tertiary">
+            Everything is setup to use JamsrUI
+          </Text>
+          <GithubDarkIcon className="absolute -right-2 top-0 size-32 rotate-45" />
+        </CardContent>
+      </Card>
+
       <Divider>OR</Divider>
       <div className="relative my-8 flex flex-col gap-8">
         <Divider

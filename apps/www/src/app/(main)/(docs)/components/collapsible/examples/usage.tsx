@@ -12,7 +12,7 @@ export const CollapsibleUsage = () => {
     <Collapsible>
       <Card>
         <CollapsibleTrigger>
-          <CardHeader heading="Can I use this in my project?" />
+          <CardHeader gutterBottom heading="Can I use this in my project?" />
         </CollapsibleTrigger>
         <CollapsibleContent>
           <CardContent>

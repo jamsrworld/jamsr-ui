@@ -28,6 +28,7 @@ export const CollapsibleWithState = () => {
                 }}
               </CollapsibleState>
             }
+            gutterBottom
           />
         </CollapsibleTrigger>
         <CollapsibleContent>

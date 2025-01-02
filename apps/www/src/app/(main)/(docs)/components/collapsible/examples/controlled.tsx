@@ -21,7 +21,7 @@ export const CollapsibleControlled = () => {
       <Collapsible isOpen={isOpen} onOpenChange={setIsOpen}>
         <Card>
           <CollapsibleTrigger>
-            <CardHeader heading="Can I use this in my project?" />
+            <CardHeader heading="Can I use this in my project?" gutterBottom />
           </CollapsibleTrigger>
           <CollapsibleContent>
             <CardContent>

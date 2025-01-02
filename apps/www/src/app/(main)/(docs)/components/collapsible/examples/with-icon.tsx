@@ -18,6 +18,7 @@ export const CollapsibleWithIcon = () => {
             endContent={
               <ChevronDownIcon className="transition-transform duration-200 group-data-[expanded=true]/collapsible:rotate-180" />
             }
+            gutterBottom
           />
         </CollapsibleTrigger>
         <CollapsibleContent>

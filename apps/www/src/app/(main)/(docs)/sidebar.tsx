@@ -313,7 +313,7 @@ export const sidebarItems: {
 export const ComponentsSidebar = () => {
   const pathname = usePathname();
   return (
-    <aside className="bg-background-tertiary fixed top-14 flex h-[calc(100vh-3.5rem)] min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden rounded-lg p-2 max-md:hidden">
+    <aside className="fixed top-14 flex h-[calc(100vh-3.5rem)] min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 max-md:hidden">
       <div className="mt-4 flex flex-col gap-4">
         {sidebarItems.map((item, idx) => {
           const { heading, items, chip } = item;
@@ -323,7 +323,7 @@ export const ComponentsSidebar = () => {
                 <Text
                   as="p"
                   variant="paragraph2"
-                  className="text-foreground-tertiary text-2xs font-medium uppercase"
+                  className="text-2xs font-medium uppercase text-foreground-tertiary"
                 >
                   {heading}
                 </Text>
@@ -338,9 +338,9 @@ export const ComponentsSidebar = () => {
                       key={path}
                       href={path as LinkProps<never>["href"]}
                       className={cn(
-                        "hover:bg-content1 rounded-lg p-2 text-sm font-normal capitalize",
+                        "rounded-lg border border-transparent px-5 py-2 text-sm font-normal capitalize hover:bg-content1",
                         isActive &&
-                          "bg-primary hover:bg-primary-300 text-white",
+                          "border-divider bg-content1 text-foreground-secondary hover:bg-content2",
                       )}
                     >
                       {heading}

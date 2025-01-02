@@ -1,5 +1,11 @@
 # @jamsr-ui/card
 
+## 0.0.91
+
+### Patch Changes
+
+- fix card
+
 ## 0.0.90
 
 ### Patch Changes

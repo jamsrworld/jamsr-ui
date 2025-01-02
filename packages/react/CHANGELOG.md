@@ -1,5 +1,15 @@
 # @jamsr-ui/react
 
+## 0.0.221
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/card@0.0.91
+  - @jamsr-ui/radio@0.0.87
+  - @jamsr-ui/select@0.0.105
+  - @jamsr-ui/tab@0.0.101
+
 ## 0.0.220
 
 ### Patch Changes

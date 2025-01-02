@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { DOMPropNames, DOMEventNames } from "./dom-props";
 
 interface DOMProps {

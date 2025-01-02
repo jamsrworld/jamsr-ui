@@ -6,7 +6,12 @@ import {
   useMergeRefs,
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import {
+  dataAttr,
+  deepMergeProps,
+  formLabelProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { AnimatePresence, m, type Variants } from "framer-motion";
 import { useId } from "react";
 import {
@@ -120,6 +125,7 @@ export const Switch = ($props: SwitchProps) => {
           >
             {label && (
               <label
+                {...formLabelProps()}
                 htmlFor={id}
                 data-slot="label"
                 className={styles.label({ className: classNames?.label })}

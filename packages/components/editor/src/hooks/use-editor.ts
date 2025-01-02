@@ -4,6 +4,7 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  formLabelProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -52,7 +53,7 @@ type Props = EditorVariantsProps & {
 
 export type UseEditorProps = Props & UIProps<"div", keyof Props>;
 export const useEditor = ($props: UseEditorProps) => {
-  const { editor:  Props = {}, globalConfig } = useUIStyle();
+  const { editor: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
   const {
     defaultValue,
@@ -221,6 +222,7 @@ export const useEditor = ($props: UseEditorProps) => {
     (props = {}) => {
       return {
         "data-slot": "label",
+        ...formLabelProps(),
         ...props,
         className: styles.label({
           className: cn(classNames?.label, props.className),

@@ -14,7 +14,7 @@ export const switchVariants = tv({
     thumb: "size-8 rounded-full bg-white shadow-md",
     helperText: "text-xs text-foreground-400",
     content: "grid grow gap-1",
-    label: "select-none text-sm ui-group-interactive:cursor-pointer",
+    label: "text-sm ui-group-interactive:cursor-pointer",
     description: "text-xs text-foreground-500",
     mainWrapper: "flex items-center justify-between gap-2",
     switchWrapper: "",

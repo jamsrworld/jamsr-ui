@@ -20,7 +20,7 @@ import {
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn, dataAttr, deepMergeProps } from "@jamsr-ui/utils";
+import { cn, dataAttr, deepMergeProps, formLabelProps } from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import {
   Children,
@@ -99,12 +99,13 @@ export const useSelect = ($props: UseSelectProps) => {
     propValue,
     onValueChange,
   );
-
   const [isOpen, setIsOpen] = useControlledState(
     defaultOpen,
     propOpen,
     onOpenChange,
   );
+  const id = useId();
+  const baseRef = useRef<HTMLDivElement>(null);
 
   const { isDisabled, ref: disableRef } = useIsDisabled({
     isDisabled: propIsDisabled,
@@ -213,7 +214,14 @@ export const useSelect = ($props: UseSelectProps) => {
     onMatch: handleTypeaheadMatch,
   });
   const click = useClick(context);
-  const dismiss = useDismiss(context);
+  const dismiss = useDismiss(context, {
+    outsidePress: (event) => {
+      const element = event.target as HTMLElement | null;
+      const isLabel =
+        baseRef.current?.contains(element) && element?.dataset.slot === "label";
+      return !isLabel;
+    },
+  });
   const role = useRole(context, { role: "listbox" });
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
     [listNav, typeahead, click, dismiss, role],
@@ -247,7 +255,6 @@ export const useSelect = ($props: UseSelectProps) => {
     return Array.from(selectedLabels).join(",");
   }, [renderValue, selectedLabels, value]);
 
-  const id = useId();
   const getBaseProps: PropGetter<ComponentProps<"div">> = (props) => {
     return {
       "data-component": "select",
@@ -260,6 +267,7 @@ export const useSelect = ($props: UseSelectProps) => {
       className: styles.base({
         className: cn(classNames?.base, className),
       }),
+      ref: baseRef,
       ...restProps,
     };
   };
@@ -277,6 +285,7 @@ export const useSelect = ($props: UseSelectProps) => {
       "data-slot": "label",
       className: styles.label({ className: classNames?.label }),
       htmlFor: id,
+      ...formLabelProps(),
       ...props,
     };
   };

@@ -1,3 +1,5 @@
+import { type ComponentProps } from "react";
+
 export type As<Props = any> = React.ElementType<Props>;
 export type PropsOf<T extends As> = React.ComponentPropsWithRef<T> & {
   as?: As;
@@ -25,3 +27,15 @@ export type ComponentPropsWithAs<
 } & Omit<React.ComponentProps<T>, "as" | "color" | keyof Y>;
 
 export type PropGetter<P = Record<string, unknown>> = (props?: P) => P;
+
+export const formLabelProps = () => {
+  const onMouseDown = (e: React.MouseEvent<HTMLLabelElement>) => {
+    e.preventDefault();
+  };
+
+  const onPointerDown = (e: React.PointerEvent<HTMLLabelElement>) => {
+    e.preventDefault();
+  };
+
+  return { onMouseDown, onPointerDown } satisfies ComponentProps<"label">;
+};

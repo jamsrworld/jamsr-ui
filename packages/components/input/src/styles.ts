@@ -10,7 +10,7 @@ export const inputVariants = tv({
   slots: {
     base: "group flex flex-col gap-1",
     labelWrapper: "flex items-center gap-2",
-    label: "shrink-0 select-none text-sm font-normal text-foreground",
+    label: "shrink-0 text-sm font-normal text-foreground",
     mainWrapper: "flex flex-col gap-1",
     inputWrapper: [
       "relative border-2 border-default-200",

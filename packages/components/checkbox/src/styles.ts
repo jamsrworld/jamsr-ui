@@ -15,7 +15,7 @@ export const checkbox = tv({
     ],
     wrapper: "flex gap-2",
     label:
-      "shrink-0 select-none text-sm font-normal leading-none text-foreground ui-group-interactive:cursor-pointer ui-group-disabled:cursor-not-allowed",
+      "shrink-0 text-sm font-normal leading-none text-foreground ui-group-interactive:cursor-pointer ui-group-disabled:cursor-not-allowed",
     helperText: "text-xs text-foreground-600",
     checkbox: [
       ...focusVisibleClasses,

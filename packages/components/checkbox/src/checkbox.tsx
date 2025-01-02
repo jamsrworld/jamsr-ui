@@ -6,7 +6,12 @@ import {
   useMergeRefs,
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import {
+  dataAttr,
+  deepMergeProps,
+  formLabelProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { m } from "framer-motion";
 import { useId, type ChangeEvent, type ComponentProps } from "react";
 import { CheckboxCheckIcon } from "./checkbox-check-icon";
@@ -116,6 +121,13 @@ export const Checkbox = ($props: CheckboxProps) => {
           disabled={!isInteractive}
           {...(isInteractive && {
             whileTap: { scale: 0.95 },
+            transition: {
+              type: "spring",
+              bounce: 0,
+              stiffness: 300,
+              damping: 20,
+              mass: 0.5,
+            },
           })}
         >
           <input
@@ -144,6 +156,7 @@ export const Checkbox = ($props: CheckboxProps) => {
                 data-slot="label"
                 className={styles.label({ className: classNames?.label })}
                 htmlFor={id}
+                {...formLabelProps()}
                 {...labelProps}
               >
                 {label}

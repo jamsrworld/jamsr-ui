@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import {
+  arrow,
+  autoUpdate,
+  flip,
   FloatingArrow,
   FloatingFocusManager,
   FloatingList,
   FloatingNode,
   FloatingOverlay,
   FloatingPortal,
-  arrow,
-  autoUpdate,
-  flip,
   offset,
   safePolygon,
   shift,
@@ -36,7 +36,7 @@ import {
   deepMergeProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence, m, type Variant } from "framer-motion";
 import {
   useEffect,
   useMemo,
@@ -67,8 +67,62 @@ export type MenuProps = MenuVariantProps & {
   lockScroll?: boolean;
 } & ComponentProps<"div">;
 
+const motionVariants = {
+  initial: (placement: Placement) => {
+    return {
+      opacity: 0,
+      ...(placement.startsWith("bottom") && {
+        top: -10,
+      }),
+      ...(placement.startsWith("top") && {
+        top: 10,
+      }),
+      ...(placement.startsWith("right") && {
+        left: -10,
+      }),
+      ...(placement.startsWith("left") && {
+        left: 10,
+      }),
+    } satisfies Variant;
+  },
+  animate: (placement: Placement) => {
+    return {
+      opacity: 1,
+      ...(placement.startsWith("bottom") && {
+        top: 0,
+      }),
+      ...(placement.startsWith("top") && {
+        top: 0,
+      }),
+      ...(placement.startsWith("right") && {
+        left: 0,
+      }),
+      ...(placement.startsWith("left") && {
+        left: 0,
+      }),
+    } satisfies Variant;
+  },
+  exit: (placement: Placement) => {
+    return {
+      opacity: 0,
+      ...(placement.startsWith("bottom") && {
+        top: 10,
+      }),
+      ...(placement.startsWith("top") && {
+        top: -10,
+      }),
+      ...(placement.startsWith("right") && {
+        left: 10,
+      }),
+      ...(placement.startsWith("left") && {
+        left: -10,
+      }),
+    } satisfies Variant;
+  },
+};
+
 export const MenuComponent = ($props: MenuProps) => {
-  const { menu:  Props = {}, globalConfig } = useUIStyle();
+  const { menu: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
   const parentId = useFloatingParentNodeId();
   const isNested = parentId != null;
@@ -265,9 +319,11 @@ export const MenuComponent = ($props: MenuProps) => {
                       className={styles.popover({
                         className: cn(className, classNames?.popover),
                       })}
-                      initial={{ opacity: 0, top: -10 }}
-                      animate={{ opacity: 1, top: 0 }}
-                      exit={{ opacity: 0, top: 10 }}
+                      variants={motionVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      custom={placement}
                       {...getFloatingProps()}
                     >
                       {showArrow && (

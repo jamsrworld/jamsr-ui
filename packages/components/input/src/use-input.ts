@@ -12,6 +12,7 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  formLabelProps,
   isEmpty,
   mergeProps,
   useDOMRef,
@@ -258,6 +259,7 @@ export const useInput = ($props: UseInputProps) => {
     (props) => {
       return {
         ...props,
+        ...formLabelProps(),
         "data-slot": "label",
         className: styles.label({
           className: cn(classNames?.label, props?.className),

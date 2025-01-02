@@ -88,7 +88,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     onBlur,
     radius,
   } = props;
-
+  const baseRef = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
   const [isFocused, setIsFocused] = useState(false);
   const [value = [], setValue] = useControlledState(
@@ -237,8 +237,14 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     virtual: true,
     loop: true,
   });
-
-  const dismiss = useDismiss(context);
+  const dismiss = useDismiss(context, {
+    outsidePress: (event) => {
+      const element = event.target as HTMLElement | null;
+      const isLabel =
+        baseRef.current?.contains(element) && element?.dataset.slot === "label";
+      return !isLabel;
+    },
+  });
   const role = useRole(context, { role: "listbox" });
 
   const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions(
@@ -316,6 +322,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       className: styles.base({
         className: cn(classNames?.base, className),
       }),
+      ref: baseRef,
       ...props,
     };
   };

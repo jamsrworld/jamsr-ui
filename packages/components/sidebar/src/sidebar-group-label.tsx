@@ -1,8 +1,12 @@
-import { cn, type UIProps } from "@jamsr-ui/utils";
+import { cn, type ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useSidebarContext } from "./sidebar-context";
 
-export type SidebarGroupLabelProps = UIProps<"div">;
-export const SidebarGroupLabel = (props: SidebarGroupLabelProps) => {
+export type SidebarGroupLabelProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T>;
+
+export const SidebarGroupLabel = <T extends React.ElementType = "div">(
+  props: SidebarGroupLabelProps<T>,
+) => {
   const { children, className: $className, ...restProps } = props;
   const { styles, classNames } = useSidebarContext();
   const className = styles.groupLabel({

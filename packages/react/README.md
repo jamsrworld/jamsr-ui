@@ -2,7 +2,7 @@
 
 **A Next.js UI Components Library for Developers**
 
-> **NOTE**: 🚧 Currently a work in progress. Stay tuned for updates!
+> **NOTE**: 🚧 Currently work in progress. Stay tuned for updates!
 
 ## 📖 **Overview**
 

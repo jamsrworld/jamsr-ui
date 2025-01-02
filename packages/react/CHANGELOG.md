@@ -1,5 +1,12 @@
 # @jamsr-ui/react
 
+## 0.0.220
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/sidebar@0.0.87
+
 ## 0.0.219
 
 ### Patch Changes

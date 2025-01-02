@@ -1,5 +1,11 @@
 # @jamsr-ui/sidebar
 
+## 0.0.87
+
+### Patch Changes
+
+- fix sidebar
+
 ## 0.0.86
 
 ### Patch Changes

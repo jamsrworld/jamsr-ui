@@ -1,13 +1,20 @@
-import { cn, type SlotsToClasses, type UIProps } from "@jamsr-ui/utils";
+import {
+  cn,
+  type ComponentPropsWithAs,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { useMemo } from "react";
 import { type SidebarContextType, SidebarProvider } from "./sidebar-context";
 import { sidebar, type SidebarSlots } from "./styles";
 
-export type SidebarProps = UIProps<"aside"> & {
-  classNames?: SlotsToClasses<SidebarSlots>;
-};
+export type SidebarProps<T extends React.ElementType = "aside"> =
+  ComponentPropsWithAs<T> & {
+    classNames?: SlotsToClasses<SidebarSlots>;
+  };
 
-export const Sidebar = (props: SidebarProps) => {
+export const Sidebar = <T extends React.ElementType = "aside">(
+  props: SidebarProps<T>,
+) => {
   const { children, className: $className, classNames, ...restProps } = props;
   const styles = sidebar();
   const className = styles.base({

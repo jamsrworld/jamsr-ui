@@ -63,11 +63,11 @@ const SemanticSwatch = ({
   );
 };
 const SwatchSet = ({ colors, isSemantic = false }: SwatchSetProps) => (
-  <div className="flex size-full flex-row flex-wrap items-center justify-center p-2">
+  <div className="flex w-full flex-row flex-wrap items-center justify-center p-2">
     {colors.map(({ title, items }) => (
-      <div key={title} className="flex size-full flex-col items-start">
+      <div key={title} className="flex w-full flex-col items-start">
         <h2 className="text-xl font-bold text-foreground">{title}</h2>
-        <div className="flex size-full flex-row flex-wrap items-center justify-start p-4">
+        <div className="flex w-full flex-row flex-wrap items-center justify-start p-4">
           {items.map((c, index) =>
             isSemantic ? (
               <SemanticSwatch

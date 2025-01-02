@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.67
+
+### Patch Changes
+
+- fix label, menu, switch
+
 ## 0.0.66
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.105
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.9
+  - @jamsr-ui/dnd@0.0.17
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/shared-icons@0.0.67
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.104
 
 ### Patch Changes

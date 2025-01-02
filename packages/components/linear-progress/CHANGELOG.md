@@ -1,5 +1,14 @@
 # @jamsr-ui/linear-progress
 
+## 0.0.8
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.7
 
 ### Patch Changes

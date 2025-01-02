@@ -1,5 +1,19 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.118
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/button@0.0.86
+  - @jamsr-ui/chip@0.0.94
+  - @jamsr-ui/input@0.0.109
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/shared-icons@0.0.67
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.117
 
 ### Patch Changes

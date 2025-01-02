@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/avatar",
-  "version": "0.0.80",
+  "version": "0.0.81",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",

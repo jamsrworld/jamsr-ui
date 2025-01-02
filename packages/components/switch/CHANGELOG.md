@@ -1,5 +1,16 @@
 # @jamsr-ui/switch
 
+## 0.0.89
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/text@0.0.3
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.88
 
 ### Patch Changes

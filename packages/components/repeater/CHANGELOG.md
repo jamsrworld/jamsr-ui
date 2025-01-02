@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.44
+
+### Patch Changes
+
+- fix label, menu, switch
+
 ## 0.0.43
 
 ### Patch Changes

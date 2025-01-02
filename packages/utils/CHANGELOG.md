@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.72
+
+### Patch Changes
+
+- fix label, menu, switch
+
 ## 0.0.71
 
 ### Patch Changes

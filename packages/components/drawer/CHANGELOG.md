@@ -1,5 +1,17 @@
 # @jamsr-ui/drawer
 
+## 1.0.82
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.11
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/shared-icons@0.0.67
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 1.0.81
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
   "name": "@jamsr-ui/prettier-config",
   "private": true,
-  "version": "0.0.25",
+  "version": "0.0.26",
   "main": "index.cjs",
   "scripts": {
     "typecheck": "tsc --noEmit"

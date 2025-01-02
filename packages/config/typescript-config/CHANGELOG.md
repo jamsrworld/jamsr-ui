@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.47
+
+### Patch Changes
+
+- fix label, menu, switch
+
 ## 0.0.46
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @jamsr-ui/accordion
 
+## 0.0.89
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.67
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.88
 
 ### Patch Changes

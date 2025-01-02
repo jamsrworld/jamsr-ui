@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.48
+
+### Patch Changes
+
+- fix label, menu, switch
+
 ## 0.0.47
 
 ### Patch Changes

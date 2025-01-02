@@ -1,5 +1,19 @@
 # @jamsr-ui/select
 
+## 0.0.105
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/button@0.0.86
+  - @jamsr-ui/chip@0.0.94
+  - @jamsr-ui/popover@0.0.82
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/shared-icons@0.0.67
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.104
 
 ### Patch Changes

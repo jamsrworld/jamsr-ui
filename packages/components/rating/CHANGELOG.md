@@ -1,5 +1,16 @@
 # @jamsr-ui/rating
 
+## 0.0.40
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.44
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/shared-icons@0.0.67
+  - @jamsr-ui/styles@0.0.16
+
 ## 0.0.39
 
 ### Patch Changes

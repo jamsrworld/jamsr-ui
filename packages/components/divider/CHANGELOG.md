@@ -1,5 +1,14 @@
 # @jamsr-ui/divider
 
+## 0.0.78
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.77
 
 ### Patch Changes

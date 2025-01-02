@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/typescript-config",
-  "version": "0.0.46",
+  "version": "0.0.47",
   "private": true,
   "license": "MIT",
   "publishConfig": {

@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.221
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/react@0.0.219
+
 ## 0.0.220
 
 ### Patch Changes

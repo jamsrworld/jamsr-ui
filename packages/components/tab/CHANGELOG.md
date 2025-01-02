@@ -1,5 +1,16 @@
 # @jamsr-ui/tab
 
+## 0.0.100
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/card@0.0.90
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.99
 
 ### Patch Changes

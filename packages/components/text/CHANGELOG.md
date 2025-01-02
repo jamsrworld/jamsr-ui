@@ -1,5 +1,14 @@
 # @jamsr-ui/typography
 
+## 0.0.3
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.2
 
 ### Patch Changes

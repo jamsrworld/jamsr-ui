@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/dnd",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

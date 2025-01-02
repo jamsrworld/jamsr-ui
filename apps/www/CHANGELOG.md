@@ -1,5 +1,20 @@
 # web
 
+## 0.1.201
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/dnd@0.0.17
+  - @jamsr-ui/core@0.0.46
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/react@0.0.219
+  - @jamsr-ui/shared-icons@0.0.67
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/theme@0.0.78
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.1.200
 
 ### Patch Changes

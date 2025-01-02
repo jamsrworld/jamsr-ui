@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.27
+
+### Patch Changes
+
+- fix label, menu, switch
+
 ## 0.0.26
 
 ### Patch Changes

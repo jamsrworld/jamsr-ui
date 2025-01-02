@@ -1,5 +1,15 @@
 # @jamsr-ui/radio
 
+## 0.0.87
+
+### Patch Changes
+
+- fix label, menu, switch
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.54
+  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/utils@0.0.72
+
 ## 0.0.86
 
 ### Patch Changes

@@ -51,7 +51,7 @@
     }
 
     .grip-column {
-      @apply w-[calc(100% + 1px)] border-l border-black/20 h-3 left-0 -ml-[1px] -top-3;
+      @apply w-[calc(100%+1px)] border-l border-black/20 h-3 left-0 -ml-[1px] -top-3;
       @apply dark:border-white/20;
 
       &:hover,
@@ -91,7 +91,7 @@
     }
 
     .grip-row {
-      @apply h-[calc(100% + 1px)] border-t border-black/20 -left-3 w-3 top-0 -mt-[1px];
+      @apply h-[calc(100%+1px)] border-t border-black/20 -left-3 w-3 top-0 -mt-[1px];
       @apply dark:border-white/20;
 
       &:hover,

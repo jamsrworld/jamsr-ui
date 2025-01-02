@@ -1,5 +1,12 @@
 # @jamsr-ui/rhf
 
+## 0.0.65
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.121
+
 ## 0.0.64
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # uitest6
 
+## 0.1.2
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.223
+
 ## 0.1.1
 
 ### Patch Changes

@@ -1,27 +1,13 @@
 {
   "name": "@jamsr-ui/styles",
-  "version": "0.0.16",
-  "main": "src/index.ts",
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
+  "version": "0.0.17",
+  "main": "./src/index.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
-  },
-  "exports": {
-    ".": "./src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^22.8.1",

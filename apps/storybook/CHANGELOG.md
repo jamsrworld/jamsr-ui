@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.224
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/react@0.0.222
+
 ## 0.0.223
 
 ### Patch Changes

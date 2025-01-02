@@ -1,5 +1,14 @@
 # @jamsr-ui/collapsible
 
+## 0.0.3
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.2
 
 ### Patch Changes

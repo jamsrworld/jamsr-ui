@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.48
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.47
 
 ### Patch Changes

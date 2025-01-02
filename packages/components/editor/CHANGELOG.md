@@ -1,5 +1,25 @@
 # @jamsr-ui/editor
 
+## 0.0.120
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/input@0.0.110
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/divider@0.0.79
+  - @jamsr-ui/file-upload-single@0.0.109
+  - @jamsr-ui/icon-button@0.0.12
+  - @jamsr-ui/menu@0.0.104
+  - @jamsr-ui/popover@0.0.83
+  - @jamsr-ui/repeater@0.0.45
+  - @jamsr-ui/select@0.0.106
+  - @jamsr-ui/switch@0.0.90
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/shared-icons@0.0.68
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.119
 
 ### Patch Changes

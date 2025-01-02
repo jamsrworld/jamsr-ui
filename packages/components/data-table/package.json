@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/data-table",
-  "version": "0.0.75",
+  "version": "0.0.76",
   "main": "src/index.ts",
   "sideEffects": false,
   "keywords": [

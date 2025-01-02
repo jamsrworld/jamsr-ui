@@ -1,5 +1,16 @@
 # @jamsr-ui/tab
 
+## 0.0.102
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/card@0.0.92
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.101
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @jamsr-ui/confirmation
 
+## 0.0.79
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/button@0.0.87
+  - @jamsr-ui/dialog@0.0.97
+  - @jamsr-ui/divider@0.0.79
+  - @jamsr-ui/text@0.0.4
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.78
 
 ### Patch Changes

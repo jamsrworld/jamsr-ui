@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.92
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/text@0.0.4
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.91
 
 ### Patch Changes

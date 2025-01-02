@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.45
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.44
 
 ### Patch Changes

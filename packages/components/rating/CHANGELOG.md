@@ -1,5 +1,16 @@
 # @jamsr-ui/rating
 
+## 0.0.41
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/repeater@0.0.45
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/shared-icons@0.0.68
+
 ## 0.0.40
 
 ### Patch Changes

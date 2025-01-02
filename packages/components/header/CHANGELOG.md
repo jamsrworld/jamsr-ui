@@ -1,5 +1,15 @@
 # @jamsr-ui/header
 
+## 0.0.85
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/divider@0.0.79
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.84
 
 ### Patch Changes

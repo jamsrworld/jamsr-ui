@@ -1,5 +1,17 @@
 # @jamsr-ui/input
 
+## 0.0.110
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/icon-button@0.0.12
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/shared-icons@0.0.68
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.109
 
 ### Patch Changes

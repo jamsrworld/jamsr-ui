@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.0.18
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.17
 
 ### Patch Changes

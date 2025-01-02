@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.49
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.48
 
 ### Patch Changes

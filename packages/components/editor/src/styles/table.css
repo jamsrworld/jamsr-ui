@@ -35,7 +35,7 @@
       &::before {
         @apply bg-black/20 h-full w-[1px] ml-2;
         @apply dark:bg-white/20;
-        content: '';
+        content: "";
       }
     }
 
@@ -51,13 +51,13 @@
     }
 
     .grip-column {
-      @apply w-[calc(100%+1px)] border-l border-black/20 h-3 left-0 -ml-[1px] -top-3;
+      @apply w-[calc(100% + 1px)] border-l border-black/20 h-3 left-0 -ml-[1px] -top-3;
       @apply dark:border-white/20;
 
       &:hover,
       &.selected {
         &::before {
-          content: '';
+          content: "";
           @apply w-2.5;
         }
       }
@@ -91,14 +91,14 @@
     }
 
     .grip-row {
-      @apply h-[calc(100%+1px)] border-t border-black/20 -left-3 w-3 top-0 -mt-[1px];
+      @apply h-[calc(100% + 1px)] border-t border-black/20 -left-3 w-3 top-0 -mt-[1px];
       @apply dark:border-white/20;
 
       &:hover,
       &.selected {
         &::before {
           @apply h-2.5;
-          content: '';
+          content: "";
         }
       }
       &:hover {

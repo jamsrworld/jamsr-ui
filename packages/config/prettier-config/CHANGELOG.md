@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.27
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.26
 
 ### Patch Changes

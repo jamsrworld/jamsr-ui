@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.68
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.67
 
 ### Patch Changes

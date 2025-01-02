@@ -1,5 +1,13 @@
 # @jamsr-ui/chart
 
+## 0.0.5
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.4
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @jamsr-ui/alert
 
+## 0.0.97
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/text@0.0.4
+  - @jamsr-ui/shared-icons@0.0.68
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.96
 
 ### Patch Changes

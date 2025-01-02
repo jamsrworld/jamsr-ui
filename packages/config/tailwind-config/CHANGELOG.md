@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.28
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.27
 
 ### Patch Changes

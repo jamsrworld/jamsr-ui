@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.73
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.72
 
 ### Patch Changes

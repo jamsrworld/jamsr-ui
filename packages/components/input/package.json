@@ -1,11 +1,8 @@
 {
   "name": "@jamsr-ui/input",
-  "version": "0.0.109",
+  "version": "0.0.110",
+  "main": "./src/index.ts",
   "sideEffects": false,
-  "exports": {
-    ".": "./src/index.ts",
-    "./input": "./src/input.tsx"
-  },
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",

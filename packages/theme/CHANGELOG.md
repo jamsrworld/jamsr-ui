@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.79
+
+### Patch Changes
+
+- fix treeshake
+
 ## 0.0.78
 
 ### Patch Changes

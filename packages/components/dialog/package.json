@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/dialog",
-  "version": "0.0.96",
+  "version": "0.0.97",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {

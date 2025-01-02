@@ -1,5 +1,18 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.106
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/circular-progress@0.0.10
+  - @jamsr-ui/dnd@0.0.18
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/shared-icons@0.0.68
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.105
 
 ### Patch Changes

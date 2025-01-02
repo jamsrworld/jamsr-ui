@@ -1,5 +1,19 @@
 # @jamsr-ui/select
 
+## 0.0.106
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/button@0.0.87
+  - @jamsr-ui/chip@0.0.95
+  - @jamsr-ui/popover@0.0.83
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/shared-icons@0.0.68
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.105
 
 ### Patch Changes

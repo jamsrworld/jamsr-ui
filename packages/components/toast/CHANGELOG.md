@@ -1,5 +1,14 @@
 # @jamsr-ui/toast
 
+## 0.0.39
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.38
 
 ### Patch Changes

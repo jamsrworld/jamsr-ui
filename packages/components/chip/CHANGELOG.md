@@ -1,5 +1,16 @@
 # @jamsr-ui/chip
 
+## 0.0.95
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/button@0.0.87
+  - @jamsr-ui/shared-icons@0.0.68
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.94
 
 ### Patch Changes

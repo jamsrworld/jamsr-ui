@@ -1,5 +1,17 @@
 # @jamsr-ui/button
 
+## 0.0.87
+
+### Patch Changes
+
+- fix treeshake
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/circular-progress@0.0.10
+  - @jamsr-ui/ripple@0.0.81
+  - @jamsr-ui/hooks@0.0.55
+  - @jamsr-ui/utils@0.0.73
+
 ## 0.0.86
 
 ### Patch Changes

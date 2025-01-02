@@ -1,6 +1,6 @@
 type Booleanish = boolean | "true" | "false";
 export const dataAttr = (condition: boolean | undefined) =>
-  (condition ? "true" : "false") as Booleanish;
+  (condition ? "true" : undefined) as Booleanish;
 
 export const isString = (value: unknown): value is string =>
   typeof value === "string";
@@ -18,7 +18,7 @@ export const isEmpty = (value: unknown) => {
   if (Array.isArray(value)) {
     return value.length === 0;
   }
-  if(typeof value === "number" && value === 0) return true;
+  if (typeof value === "number" && value === 0) return true;
   if (!value) return true;
   return false;
 };

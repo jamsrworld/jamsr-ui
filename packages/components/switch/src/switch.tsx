@@ -7,7 +7,7 @@ import {
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
-import { m, type Variants } from "framer-motion";
+import { AnimatePresence, m, type Variants } from "framer-motion";
 import { useId } from "react";
 import {
   switchVariants,
@@ -16,7 +16,6 @@ import {
 } from "./styles";
 
 const variants: Variants = {
-  initial: {},
   tapped: (size: SwitchVariantProps["size"]) => ({
     width: (size === "sm" && 22) || (size === "md" && 26) || 30,
   }),
@@ -155,29 +154,28 @@ export const Switch = ($props: SwitchProps) => {
             ref={refs}
             {...restProps}
           />
-          <m.button
-            data-slot="switch"
-            type="button"
-            data-interactive={dataAttr(isInteractive)}
-            className={styles.switch({ className: classNames?.switch })}
-            {...(isInteractive && {
-              onClick,
-              layout: true,
-              initial: false,
-              whileTap: "tapped",
-              animate: "initial",
-            })}
-            disabled={!isInteractive}
-            id={id}
-          >
-            <m.div
-              data-slot="thumb"
-              variants={variants}
-              custom={size}
-              layoutId={id}
-              className={styles.thumb({ className: classNames?.thumb })}
-            />
-          </m.button>
+          <AnimatePresence initial={false}>
+            <m.button
+              data-slot="switch"
+              type="button"
+              data-interactive={dataAttr(isInteractive)}
+              className={styles.switch({ className: classNames?.switch })}
+              {...(isInteractive && {
+                onClick,
+                whileTap: "tapped",
+              })}
+              disabled={!isInteractive}
+              id={id}
+            >
+              <m.div
+                data-slot="thumb"
+                variants={variants}
+                custom={size}
+                layoutId={id}
+                className={styles.thumb({ className: classNames?.thumb })}
+              />
+            </m.button>
+          </AnimatePresence>
         </div>
       </div>
       {helperText && (

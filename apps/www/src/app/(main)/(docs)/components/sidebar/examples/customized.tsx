@@ -221,6 +221,7 @@ export const SidebarCustomized = () => {
       </SidebarContent>
       <SidebarFooter>
         <Menu
+        
           trigger={
             <div className="flex w-full items-center gap-2 rounded-md px-2 py-1 hover:bg-content2">
               <Avatar

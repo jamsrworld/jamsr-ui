@@ -256,7 +256,7 @@ export const MenuComponent = ($props: MenuProps) => {
                   <FloatingFocusManager
                     context={context}
                     modal
-                    initialFocus={isNested ? -1 : 0}
+                    initialFocus={-1}
                     returnFocus={!isNested}
                   >
                     <m.ul

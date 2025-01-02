@@ -12,13 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@dnd-kit/core": "^6.1.0",
-    "@dnd-kit/sortable": "^8.0.0",
-    "@dnd-kit/utilities": "^3.2.2",
     "@faker-js/faker": "9.0.3",
     "@hookform/resolvers": "^3.9.0",
-    "@jamsr-ui/core": "workspace:^",
-    "@jamsr-ui/dnd": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/react": "workspace:*",
     "@jamsr-ui/shared-icons": "workspace:^",
@@ -32,18 +27,15 @@
     "color2k": "2.0.3",
     "framer-motion": "12.0.0-alpha.2",
     "highlight.js": "^11.10.0",
-    "next": "^15.0.0",
-    "prism-react-renderer": "^2.4.0",
+    "next": "15.1.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.53.1",
-    "react-is": "^19.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:^",
     "@types/node": "22.8.1",
-    "@types/prismjs": "^1.26.5",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
     "eslint-config-next": "15.0.1",

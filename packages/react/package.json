@@ -2,9 +2,7 @@
   "name": "@jamsr-ui/react",
   "version": "0.0.221",
   "main": "./src/index.ts",
-  "publishConfig": {
-    "access": "public"
-  },
+  "sideEffects": false,
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "test": "vitest",

@@ -1,11 +1,11 @@
 import { AnimatePresence, m } from "framer-motion";
 import { useCollapsibleContext } from "./collapsible-context";
 
-type Props = {
+export type CollapsibleContentProps = {
   children: React.ReactNode;
 };
 
-export const CollapsibleContent = (props: Props) => {
+export const CollapsibleContent = (props: CollapsibleContentProps) => {
   const { children } = props;
   const { isOpen, id } = useCollapsibleContext();
   return (

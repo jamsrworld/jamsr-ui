@@ -1,6 +1,15 @@
 "use client";
 
-export { Collapsible } from "./collapsible";
-export { CollapsibleContent } from "./collapsible-content";
-export { CollapsibleState } from "./collapsible-state";
-export { CollapsibleTrigger } from "./collapsible-trigger";
+export { Collapsible, type CollapsibleProps } from "./collapsible";
+export {
+  CollapsibleContent,
+  type CollapsibleContentProps,
+} from "./collapsible-content";
+export {
+  CollapsibleState,
+  type CollapsibleStateProps,
+} from "./collapsible-state";
+export {
+  CollapsibleTrigger,
+  type CollapsibleTriggerProps,
+} from "./collapsible-trigger";

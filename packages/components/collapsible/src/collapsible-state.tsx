@@ -3,7 +3,7 @@ import {
   useCollapsibleContext,
 } from "./collapsible-context";
 
-type CollapsibleStateProps = {
+export type CollapsibleStateProps = {
   children: (state: CollapsibleContextType) => React.ReactNode;
 };
 

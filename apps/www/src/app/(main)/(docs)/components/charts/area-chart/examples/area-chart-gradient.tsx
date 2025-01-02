@@ -7,7 +7,7 @@ import {
   Card,
   CardContent,
   CardHeader,
-  type ChartConfig
+  type ChartConfig,
 } from "@jamsr-ui/react";
 
 const chartData = [

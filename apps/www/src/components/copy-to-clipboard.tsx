@@ -1,6 +1,6 @@
 "use client";
 
-import { IconButton, IconButtonProps, toast } from "@jamsr-ui/react";
+import { IconButton, type IconButtonProps, toast } from "@jamsr-ui/react";
 import { useState } from "react";
 
 const CopyIcon = (props: React.SVGProps<SVGSVGElement>) => (

@@ -2,9 +2,9 @@
 import { cn, type UIProps } from "@jamsr-ui/utils";
 import { useCollapsibleContext } from "./collapsible-context";
 
-type Props = UIProps<"button">;
+export type CollapsibleTriggerProps = UIProps<"button">;
 
-export const CollapsibleTrigger = (props: Props) => {
+export const CollapsibleTrigger = (props: CollapsibleTriggerProps) => {
   const { children, as, className, onClick, ...restProps } = props;
   const Component = as ?? "button";
 

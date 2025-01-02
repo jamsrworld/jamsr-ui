@@ -6,4 +6,4 @@ export { TableCell, type TableCellProps } from "./table-cell";
 export { TableColumn, type TableColumnProps } from "./table-column";
 export { TableHeader, type TableHeaderProps } from "./table-head";
 export { TableRow, type TableRowProps } from "./table-row";
-export { useTable, type UseTableProps } from "./use-table";
+

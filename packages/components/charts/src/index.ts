@@ -6,5 +6,5 @@ export { ChartContainer } from "./chart-container";
 export { ChartTooltip } from "./chart-tooltip";
 export { LineChart, type LineChartProps } from "./line-chart";
 export { PieChart, type PieChartProps } from "./pie-chart";
-export * from "./types";
+export { type ChartConfig } from "./types";
 

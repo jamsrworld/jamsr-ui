@@ -7,7 +7,7 @@ import {
   CollapsibleProvider,
 } from "./collapsible-context";
 
-type Props = {
+export type CollapsibleProps = {
   children: React.ReactElement;
   defaultOpen?: boolean;
   isOpen?: boolean;
@@ -15,7 +15,7 @@ type Props = {
   isDisabled?: boolean;
 };
 
-export const Collapsible = (props: Props) => {
+export const Collapsible = (props: CollapsibleProps) => {
   const {
     children,
     defaultOpen = false,

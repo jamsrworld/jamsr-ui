@@ -1,3 +1,5 @@
+"use client";
+
 import { Repeater } from "@jamsr-ui/react";
 
 export const RepeaterUsage = () => {

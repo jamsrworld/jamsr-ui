@@ -1,7 +1,9 @@
+import { textVariants } from "@jamsr-ui/text";
 import { focusVisibleClasses, tv, type VariantProps } from "@jamsr-ui/utils";
 
 export const test = "";
 export const link = tv({
+  extend: textVariants,
   base: [
     "cursor-pointer select-none text-foreground-link",
     focusVisibleClasses,

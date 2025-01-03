@@ -14,7 +14,7 @@ type Props = {
 
 export type AvatarProps = Omit<ImageProps, "src"> & AvatarVariants & Props;
 export const Avatar = ($props: AvatarProps) => {
-  const { avatar:  Props = {}, globalConfig } = useUIStyle();
+  const { avatar: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
   const {
     size,
@@ -66,6 +66,8 @@ export const Avatar = ($props: AvatarProps) => {
           alt={alt}
           src={imgSrc}
           onError={handleOnError}
+          width={120}
+          height={120}
           {...restProps}
         />
       )}

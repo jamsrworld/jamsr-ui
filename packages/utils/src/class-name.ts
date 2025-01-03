@@ -45,15 +45,6 @@ export function deepMergeProps<T extends object, U extends object>(
             );
           }
         }
-      } else if (
-        typeof obj2[key] === "object" &&
-        obj2[key] !== null &&
-        !Array.isArray(obj2[key]) &&
-        typeof result[key] === "object" &&
-        result[key] !== null
-      ) {
-        // For other objects, perform a deep merge
-        result[key] = deepMergeProps(result[key], obj2[key]);
       } else {
         // Otherwise, directly assign obj2's value
         result[key] = obj2[key];

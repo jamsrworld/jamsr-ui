@@ -1,5 +1,13 @@
 # @jamsr-ui/typography
 
+## 0.0.5
+
+### Patch Changes
+
+- fix text,avatar,link
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.74
+
 ## 0.0.4
 
 ### Patch Changes

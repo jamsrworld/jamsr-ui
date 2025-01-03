@@ -4,7 +4,12 @@ import {
   useMergeRefs,
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { dataAttr, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import {
+  cn,
+  dataAttr,
+  deepMergeProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import {
   type InputHTMLAttributes,
   useCallback,
@@ -39,7 +44,7 @@ export type OtpInputProps = OtpInputVariantProps & {
 };
 
 export const OtpInput = ($props: OtpInputProps) => {
-  const { otpInput:  Props = {}, globalConfig } = useUIStyle();
+  const { otpInput: Props = {}, globalConfig } = useUIStyle();
   const props = deepMergeProps(Props, $props, globalConfig);
 
   const {
@@ -202,7 +207,6 @@ export const OtpInput = ($props: OtpInputProps) => {
   };
 
   const styles = otpInput({
-    className,
     isInvalid,
     radius,
   });
@@ -214,10 +218,13 @@ export const OtpInput = ($props: OtpInputProps) => {
       data-disabled={dataAttr(isDisabled)}
       aria-disabled={dataAttr(isDisabled)}
       data-slot="base"
-      className={styles?.base({ className: classNames?.base })}
+      className={styles?.base({ className: cn(classNames?.base, className) })}
       onBlur={onBlur}
     >
-      <div className={styles.wrapper({ className: classNames?.wrapper })}>
+      <div
+        data-slot="wrapper"
+        className={styles.wrapper({ className: classNames?.wrapper })}
+      >
         {label && (
           <label
             htmlFor={id}
@@ -228,6 +235,7 @@ export const OtpInput = ($props: OtpInputProps) => {
           </label>
         )}
         <div
+          data-slot="inputs-wrapper"
           className={styles.inputsWrapper({
             className: classNames?.inputsWrapper,
           })}

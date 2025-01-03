@@ -1,5 +1,12 @@
 # @jamsr-ui/stepper
 
+## 0.0.20
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.74
+
 ## 0.0.19
 
 ### Patch Changes

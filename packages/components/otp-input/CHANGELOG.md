@@ -1,5 +1,13 @@
 # @jamsr-ui/otp-input
 
+## 0.0.81
+
+### Patch Changes
+
+- fix text,avatar,link
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.74
+
 ## 0.0.80
 
 ### Patch Changes

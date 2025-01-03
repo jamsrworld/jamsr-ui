@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     typedRoutes: true,
+    optimizePackageImports: ["@jamsr-ui/react"],
   },
   images: {
     contentDispositionType: "inline",

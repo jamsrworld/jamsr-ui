@@ -4,7 +4,7 @@ import { Link, type LinkProps } from "@jamsr-ui/react";
 export const LinkUsage = (props: Partial<LinkProps>) => {
   const { children = "Go to homepage", ...restProps } = props;
   return (
-    <Link href="#" {...restProps}>
+    <Link href="/" {...restProps}>
       {children}
     </Link>
   );

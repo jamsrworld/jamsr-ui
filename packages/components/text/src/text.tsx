@@ -14,16 +14,7 @@ export const Text = <T extends React.ElementType = "div">(
 ) => {
   const { text: Props = {} } = useUIStyle();
   const props = deepMergeProps(Props, $props);
-
-  const {
-    as,
-    className,
-    variant,
-    gutterBottom,
-    gradient,
-    leading,
-    ...restProps
-  } = props;
+  const { as, className, variant, gradient, leading, ...restProps } = props;
   const Component = (as ?? "div") as unknown as React.ElementType;
 
   return (
@@ -32,7 +23,6 @@ export const Text = <T extends React.ElementType = "div">(
       className={textVariants({
         variant,
         leading,
-        gutterBottom,
         gradient,
         className,
       })}

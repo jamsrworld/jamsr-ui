@@ -1,5 +1,13 @@
 # @jamsr-ui/card
 
+## 0.0.93
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/text@0.0.5
+  - @jamsr-ui/utils@0.0.74
+
 ## 0.0.92
 
 ### Patch Changes

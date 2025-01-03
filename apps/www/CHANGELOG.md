@@ -1,5 +1,14 @@
 # web
 
+## 0.1.206
+
+### Patch Changes
+
+- fix text,avatar,link
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.74
+  - @jamsr-ui/react@0.0.224
+
 ## 0.1.205
 
 ### Patch Changes

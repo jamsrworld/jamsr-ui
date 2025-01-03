@@ -4,17 +4,18 @@ import { Inter } from "next/font/google";
 import "../styles/github.css";
 import "../styles/globals.css";
 import { AppProvider } from "./providers/app";
+import { SchemaDts } from "./providers/SchemaDts";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Jamsr UI",
-    default: "Jamsr UI",
+    template: "%s | JamsrUI",
+    default: "JamsrUI",
   },
   description:
     "A professionally crafted React component library that helps you build modern web applications faster. Fully customizable, accessible, and production-ready.",
-  applicationName: "Jamsr UI",
+  applicationName: "JamsrUI",
   category: "technology",
   publisher: "jamsrworld",
   alternates: {
@@ -46,6 +47,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${inter.className} text-base`}>
         <AppProvider>{children}</AppProvider>
+        <SchemaDts />
       </body>
       <GoogleAnalytics gaId="G-8JVSXK3JQL" />
     </html>

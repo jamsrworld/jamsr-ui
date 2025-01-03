@@ -313,7 +313,11 @@ export const sidebarItems: {
 export const ComponentsSidebar = () => {
   const pathname = usePathname();
   return (
-    <aside className="fixed top-14 flex h-[calc(100vh-3.5rem)] min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden rounded-lg bg-background-tertiary p-2 max-md:hidden">
+    <aside className="fixed top-14 flex h-[calc(100vh-3.5rem)] min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden border-r border-divider p-2 scrollbar-hide max-md:hidden">
+      {/* <Divider
+        orientation="vertical"
+        className="absolute right-0 top-0 h-full"
+      /> */}
       <div className="mt-4 flex flex-col gap-4">
         {sidebarItems.map((item, idx) => {
           const { heading, items, chip } = item;
@@ -338,9 +342,9 @@ export const ComponentsSidebar = () => {
                       key={path}
                       href={path as LinkProps<never>["href"]}
                       className={cn(
-                        "rounded-lg border border-transparent px-5 py-2 text-sm font-normal capitalize hover:bg-content1",
+                        "rounded-lg border border-transparent px-5 py-2 text-sm font-normal capitalize text-white hover:bg-content1",
                         isActive &&
-                          "border-divider bg-content1 text-foreground-secondary hover:bg-content2",
+                          "border-divider bg-content1 text-white hover:bg-content2",
                       )}
                     >
                       {heading}

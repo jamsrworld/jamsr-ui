@@ -27,17 +27,16 @@ const code = <T extends VariantTypes["chip"][number]>(variant: T) =>
 const Chip = () => {
   return (
     <VariantPage heading={title} description={description}>
-      <VariantWrapper heading="Usage" code={code("usage")}>
+      {/* <VariantWrapper heading="Usage" code={code("usage")}>
         <ChipUsage />
       </VariantWrapper>
-      
       <VariantWrapper heading="Colors" code={code("usage")}>
         <ChipColors />
-      </VariantWrapper>
+      </VariantWrapper> */}
       <VariantWrapper heading="Variants" code={code("usage")}>
         <ChipVariants />
       </VariantWrapper>
-      <VariantWrapper heading="Sizes" code={code("sizes")}>
+      {/* <VariantWrapper heading="Sizes" code={code("sizes")}>
         <ChipSizes />
       </VariantWrapper>
       <VariantWrapper heading="Radius" code={code("radius")}>
@@ -60,7 +59,7 @@ const Chip = () => {
       </VariantWrapper>
       <VariantWrapper heading="With Delete" code={code("with-delete")}>
         <ChipWithDelete />
-      </VariantWrapper>
+      </VariantWrapper> */}
     </VariantPage>
   );
 };

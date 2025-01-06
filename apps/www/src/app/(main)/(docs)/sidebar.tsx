@@ -342,9 +342,9 @@ export const ComponentsSidebar = () => {
                       key={path}
                       href={path as LinkProps<never>["href"]}
                       className={cn(
-                        "rounded-lg border border-transparent px-5 py-2 text-sm font-normal capitalize text-white hover:bg-content1",
+                        "rounded-lg border border-transparent px-5 py-2 text-sm font-normal capitalize hover:bg-content1",
                         isActive &&
-                          "border-divider bg-content1 text-white hover:bg-content2",
+                          "border-divider bg-content1 hover:bg-content2",
                       )}
                     >
                       {heading}

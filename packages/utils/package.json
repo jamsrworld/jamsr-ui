@@ -12,7 +12,7 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.3.0",
-    "tailwind-variants": "^0.2.1"
+    "tailwind-variants": "0.3.0"
   },
   "devDependencies": {
     "@types/node": "22.7.9",

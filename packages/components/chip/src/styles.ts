@@ -7,7 +7,6 @@ import {
 } from "@jamsr-ui/utils";
 
 export const test = "";
-
 const base = tv({
   slots: {
     base: "relative box-border inline-flex min-w-min max-w-fit shrink-0 items-center justify-between whitespace-nowrap rounded-full",
@@ -20,6 +19,7 @@ const base = tv({
       solid: "",
       outlined: "border",
       flat: "",
+      dot: "",
     },
     size: {
       sm: {

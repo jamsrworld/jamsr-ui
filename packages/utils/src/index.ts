@@ -1,8 +1,8 @@
 export {
   tv,
-  type VariantProps,
   type ClassProp,
   type ClassValue,
+  type VariantProps,
 } from "tailwind-variants";
 export { getRandomFromArray, includes } from "./array";
 export {
@@ -14,7 +14,7 @@ export {
   isString,
   isTrue,
 } from "./assertion";
-export { cn, mergeClassNames, deepMergeProps } from "./class-name";
+export { cn, deepMergeProps, mergeClassNames } from "./class-name";
 export {
   absoluteFullClasses,
   dataFocusVisibleClasses,
@@ -29,21 +29,26 @@ export {
   radiusVariant,
 } from "./color-variants";
 export {
+  formLabelProps,
   type As,
   type ComponentPropsWithAs,
   type PropGetter,
   type PropsOf,
   type UIProps,
-  formLabelProps,
 } from "./component";
 export {
+  createContext,
   type CreateContextOptions,
   type CreateContextReturn,
-  createContext,
 } from "./context";
 export { useDOMRef } from "./dom";
 export { filterDOMProps } from "./filter-dom-props";
+export { randomId } from "./fns";
 export { mergeProps } from "./merge-props";
 export { TRANSITION_VARIANTS } from "./transition";
-export { type SlotsToClasses, mapPropsVariants } from "./tv";
-export { randomId } from "./fns";
+export {
+  mapPropsVariants,
+  convertVariantsWithFn,
+  type SlotsToClasses,
+  type PropsWithVariants,
+} from "./tv";

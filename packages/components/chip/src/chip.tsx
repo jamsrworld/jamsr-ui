@@ -1,49 +1,52 @@
 import { CloseFilledIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
-import type { ComponentPropsWithAs, SlotsToClasses } from "@jamsr-ui/utils";
-import { cn, deepMergeProps } from "@jamsr-ui/utils";
+import type {
+  ComponentPropsWithAs,
+  PropsWithVariants,
+  SlotsToClasses,
+  UIProps,
+} from "@jamsr-ui/utils";
+import { cn, deepMergeProps, mapPropsVariants } from "@jamsr-ui/utils";
 import React from "react";
 import { chip, type ChipSlots, type ChipVariantsProps } from "./styles";
 
-export type ChipProps<T extends React.ElementType = "div"> =
-  ComponentPropsWithAs<T> & {
-    children: React.ReactNode;
-    onDelete?: () => void;
+type Props = PropsWithVariants<
+  {
     classNames?: SlotsToClasses<ChipSlots>;
-    startContent?: React.ReactNode;
-    endContent?: React.ReactNode;
-  } & ChipVariantsProps;
+    className?: string;
+  } & ChipVariantsProps,
+  ChipVariantsProps
+> & {
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
+  onDelete?: () => void;
+};
+
+export type ChipProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T, Props>;
 
 export const Chip = <T extends React.ElementType = "div">(
   $props: ChipProps<T>,
 ) => {
-  const { chip: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { chip: globalProps = {}, globalConfig } = useUIStyle();
+  const mergedProps = deepMergeProps(
+    globalProps,
+    $props,
+    globalConfig,
+  ) as UIProps<"div", Props>;
+  const [props, variantProps] = mapPropsVariants(mergedProps, chip.variantKeys);
   const {
     as,
     children,
     onDelete,
     className,
-    color,
-    size,
-    variant,
-    classNames,
-    isSquare,
-    radius,
-    isBordered,
     startContent,
     endContent,
+    classNames,
     ...restProps
   } = props;
-  const Comp = as ?? "div";
-  const styles = chip({
-    color,
-    size,
-    variant,
-    isSquare,
-    radius,
-    isBordered,
-  });
+  const Comp: React.ElementType = as ?? "div";
+  const styles = chip(variantProps);
   return (
     <Comp
       data-component="chip"
@@ -58,6 +61,7 @@ export const Chip = <T extends React.ElementType = "div">(
         data-slot="content"
       >
         {startContent}
+        {globalProps.children}
         {children}
         {endContent}
       </div>

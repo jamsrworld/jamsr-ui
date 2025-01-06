@@ -2285,8 +2285,8 @@ importers:
         specifier: ^2.3.0
         version: 2.5.3
       tailwind-variants:
-        specifier: ^0.2.1
-        version: 0.2.1(tailwindcss@3.4.13)
+        specifier: 0.3.0
+        version: 0.3.0(tailwindcss@3.4.13)
     devDependencies:
       '@types/node':
         specifier: 22.7.9
@@ -7261,8 +7261,11 @@ packages:
   tailwind-merge@2.5.3:
     resolution: {integrity: sha512-d9ZolCAIzom1nf/5p4LdD5zvjmgSxY0BGgdSvmXIoMYAiPdAW/dSpP7joCDYFY7r/HkEa2qmPtkgsu0xjQeQtw==}
 
-  tailwind-variants@0.2.1:
-    resolution: {integrity: sha512-2xmhAf4UIc3PijOUcJPA1LP4AbxhpcHuHM2C26xM0k81r0maAO6uoUSHl3APmvHZcY5cZCY/bYuJdfFa4eGoaw==}
+  tailwind-merge@2.6.0:
+    resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
+
+  tailwind-variants@0.3.0:
+    resolution: {integrity: sha512-ho2k5kn+LB1fT5XdNS3Clb96zieWxbStE9wNLK7D0AV64kdZMaYzAKo0fWl6fXLPY99ffF9oBJnIj5escEl/8A==}
     engines: {node: '>=16.x', pnpm: '>=7.x'}
     peerDependencies:
       tailwindcss: '*'
@@ -13503,9 +13506,11 @@ snapshots:
 
   tailwind-merge@2.5.3: {}
 
-  tailwind-variants@0.2.1(tailwindcss@3.4.13):
+  tailwind-merge@2.6.0: {}
+
+  tailwind-variants@0.3.0(tailwindcss@3.4.13):
     dependencies:
-      tailwind-merge: 2.5.3
+      tailwind-merge: 2.6.0
       tailwindcss: 3.4.13
 
   tailwindcss@3.4.13:

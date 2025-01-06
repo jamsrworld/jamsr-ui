@@ -3,11 +3,11 @@ import { radiusVariant, tv, type VariantProps } from "@jamsr-ui/utils";
 export const test = "";
 export const dialog = tv({
   slots: {
-    backdrop: "z-backdrop grid place-items-center",
+    backdrop: "z-backdrop grid place-items-center !overflow-clip",
     header: "p-4 text-base font-bold",
     body: "w-full p-4",
     content:
-      "relative z-dialog flex max-h-[calc(100dvh-4rem)] w-full flex-col overflow-y-auto bg-content1 shadow-lg backdrop-blur-3xl",
+      "relative z-dialog flex max-h-[calc(100dvh-4rem)] w-full flex-col overflow-y-auto bg-content1 shadow-lg",
     footer: "flex w-full items-center justify-end gap-2 p-4",
     closeButton: "absolute right-2 top-2 z-10",
   },

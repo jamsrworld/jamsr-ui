@@ -54,9 +54,9 @@ export const DialogContent = <T extends React.ElementType = "div">(
             <FloatingFocusManager context={context} modal>
               <m.div
                 {...(!isAnimationDisabled && {
-                  initial: { y: 50, opacity: 0 },
-                  animate: { y: 0, opacity: 1 },
-                  exit: { y: 50, opacity: 0 },
+                  initial: { scale: 0.95, opacity: 0 },
+                  animate: { scale: 1, opacity: 1 },
+                  exit: { scale: 0.95, opacity: 0 },
                   transition: {
                     type: "spring",
                     duration: isOpen === true ? 0.3 : 0.6,

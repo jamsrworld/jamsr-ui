@@ -13,6 +13,7 @@ const base = tv({
     content: "flex flex-1 items-center gap-1 font-normal text-inherit",
     closeButton:
       "z-10 cursor-pointer select-none appearance-none opacity-70 outline-none transition-opacity tap-highlight-transparent hover:opacity-100 active:opacity-disabled",
+    dot: "size-1.5 rounded-full",
   },
   variants: {
     variant: {
@@ -104,6 +105,41 @@ const solidVariant: CompoundVariant<ChipVariantsProps>[] = [
     variant: "solid",
     color: "danger",
     className: { base: colorVariants.solid.danger },
+  },
+];
+
+const dotVariant: CompoundVariant<ChipVariantsProps>[] = [
+  {
+    variant: "dot",
+    color: "default",
+    className: {
+      dot: colorVariants.solid.default,
+    },
+  },
+  {
+    variant: "dot",
+    color: "primary",
+    className: { dot: colorVariants.solid.primary },
+  },
+  {
+    variant: "dot",
+    color: "secondary",
+    className: { dot: colorVariants.solid.secondary },
+  },
+  {
+    variant: "dot",
+    color: "success",
+    className: { dot: colorVariants.solid.success },
+  },
+  {
+    variant: "dot",
+    color: "warning",
+    className: { dot: colorVariants.solid.warning },
+  },
+  {
+    variant: "dot",
+    color: "danger",
+    className: { dot: colorVariants.solid.danger },
   },
 ];
 
@@ -213,5 +249,6 @@ export const chip = tv({
     ...outlinedVariant,
     ...flatVariant,
     ...isBorderedVariant,
+    ...dotVariant,
   ],
 });

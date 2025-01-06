@@ -46,7 +46,9 @@ export const Chip = <T extends React.ElementType = "div">(
     ...restProps
   } = props;
   const Comp: React.ElementType = as ?? "div";
-  const styles = chip(variantProps);
+
+  const { variant } = variantProps;
+  const styles = chip({ ...variantProps, variant });
   return (
     <Comp
       data-component="chip"
@@ -62,6 +64,12 @@ export const Chip = <T extends React.ElementType = "div">(
       >
         {startContent}
         {globalProps.children}
+        {variant === "dot" && (
+          <div
+            data-slot="dot"
+            className={styles.dot({ className: classNames?.dot })}
+          />
+        )}
         {children}
         {endContent}
       </div>

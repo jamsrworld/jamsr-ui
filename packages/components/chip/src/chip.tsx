@@ -2,25 +2,26 @@ import { CloseFilledIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type {
   ComponentPropsWithAs,
-  PropsWithVariants,
   SlotsToClasses,
   UIProps,
 } from "@jamsr-ui/utils";
-import { cn, deepMergeProps, mapPropsVariants } from "@jamsr-ui/utils";
+import {
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import React from "react";
 import { chip, type ChipSlots, type ChipVariantsProps } from "./styles";
 
-type Props = PropsWithVariants<
-  {
-    classNames?: SlotsToClasses<ChipSlots>;
-    className?: string;
-  } & ChipVariantsProps,
-  ChipVariantsProps
-> & {
-  startContent?: React.ReactNode;
-  endContent?: React.ReactNode;
-  onDelete?: () => void;
-};
+type Props = {
+  classNames?: SlotsToClasses<ChipSlots>;
+  className?: string;
+} & ChipVariantsProps & {
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
+    onDelete?: () => void;
+  };
 
 export type ChipProps<T extends React.ElementType = "div"> =
   ComponentPropsWithAs<T, Props>;
@@ -28,13 +29,12 @@ export type ChipProps<T extends React.ElementType = "div"> =
 export const Chip = <T extends React.ElementType = "div">(
   $props: ChipProps<T>,
 ) => {
-  const { chip: globalProps = {}, globalConfig } = useUIStyle();
-  const mergedProps = deepMergeProps(
-    globalProps,
-    $props,
-    globalConfig,
-  ) as UIProps<"div", Props>;
+  const { chip: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
   const [props, variantProps] = mapPropsVariants(mergedProps, chip.variantKeys);
+
   const {
     as,
     children,

@@ -5,6 +5,8 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -20,7 +22,7 @@ import {
 } from "./styles";
 import { getFileExtension, getFileIconFromUrl, isImageExt } from "./utils";
 
-type Props = Omit<UploadVariants, "isDragActive"> & {
+type Props = {
   defaultValue?: null | string;
   value?: null | string;
   onValueChange?: (value: null | string) => void;
@@ -43,14 +45,19 @@ type Props = Omit<UploadVariants, "isDragActive"> & {
   uploadApiUrl: string;
   getFileUrlAfterUpload: (response: any) => string;
   label?: string;
-};
+} & UploadVariants;
 
-export type UseFileUploadSingleProps = Props & UIProps<"div", keyof Props>;
+export type UseFileUploadSingleProps = UIProps<"div", Props>;
 
 export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
-  const { fileUploadSingle: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
-
+  const { fileUploadSingle: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    singleUploadVariants.variantKeys,
+  );
   const {
     value: $value,
     defaultValue,
@@ -68,9 +75,6 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     fileName: $fileName,
     helperText,
     uploadIcon = <FileAddIcon className="shrink-0 text-inherit" />,
-    isAvatar,
-    isDisabled: propIsDisabled = false,
-    isInvalid,
     getFileIcon,
     as,
     inputName,
@@ -78,7 +82,6 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     onUploadSuccess,
     getFileUrlAfterUpload,
     label,
-    radius,
     ...restProps
   } = props;
   const xhrRef = useRef<XMLHttpRequest | null>(null);
@@ -87,6 +90,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     $value,
     onValueChange,
   );
+  const { isDisabled: propIsDisabled = false } = variantProps;
   const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled,
   });
@@ -242,11 +246,9 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
   });
 
   const styles = singleUploadVariants({
+    ...variantProps,
     isDisabled,
-    isAvatar,
     isDragActive,
-    isInvalid,
-    radius,
   });
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -421,7 +423,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     getImageProps,
     Component,
     uploadIcon,
-    isAvatar,
+    isAvatar: variantProps.isAvatar,
     description,
     info,
     previewUrl,

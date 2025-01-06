@@ -4,6 +4,7 @@ import {
   dataAttr,
   deepMergeProps,
   mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -15,19 +16,22 @@ import {
   type SkeletonVariantProps,
 } from "./style";
 
-interface Props extends UIProps<"div"> {
+type Props = {
   ref?: Ref<HTMLElement | null>;
   isLoading?: boolean;
   classNames?: SlotsToClasses<SkeletonSlots>;
-}
-
-export type UseSkeletonProps = Props & SkeletonVariantProps;
+} & SkeletonVariantProps;
+export type UseSkeletonProps = UIProps<"div"> & Props;
 
 export function useSkeleton($props: UseSkeletonProps) {
-  const { skeleton: Props = {} } = useUIStyle();
-  const $$props = deepMergeProps(Props, $props);
-
-  const [props, variantProps] = mapPropsVariants($$props, skeleton.variantKeys);
+  const { skeleton: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    skeleton.variantKeys,
+  );
   const {
     as,
     children,

@@ -1,34 +1,36 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
-import { deepMergeProps } from "@jamsr-ui/utils";
+import type { ComponentPropsWithAs, UIProps } from "@jamsr-ui/utils";
+import {
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import { link, type LinkVariants } from "./styles";
 
-export interface LinkProps2 {}
-export type LinkProps<T extends React.ElementType = "a"> =
-  ComponentPropsWithAs<T> & LinkVariants & LinkProps2;
-
-/*
-  
-export interface LinkProps<T extends React.ElementType = "a">
-  extends ComponentPropsWithAs<T>,
-    LinkVariants {}
-     */
+type Props = LinkVariants;
+export type LinkProps<T extends React.ElementType = "a"> = ComponentPropsWithAs<
+  T,
+  Props
+>;
 
 export const Link = <T extends React.ElementType = "a">(
   $props: LinkProps<T>,
 ) => {
-  const { link: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
-  const { as, children, className, underline, variant, ...restProps } = props;
+  const { link: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"a", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(mergedProps, link.variantKeys);
+  const { as, children, className, ...restProps } = props;
   const Component = as ?? "a";
 
   const styles = link({
     className,
-    underline,
-    variant,
+    ...variantProps,
   });
   return (
     <Component data-component="link" className={styles} {...restProps}>
+      {globalProps.children}
       {children}
     </Component>
   );

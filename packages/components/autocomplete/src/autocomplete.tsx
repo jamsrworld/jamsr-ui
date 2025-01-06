@@ -22,7 +22,6 @@ export const Autocomplete = (props: AutocompleteProps) => {
     childrenToRender,
     getEmptyContentProps,
   } = useAutocomplete(props);
-
   return (
     <div {...getBaseProps()}>
       <Input {...getInputProps()} />

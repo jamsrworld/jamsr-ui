@@ -5,6 +5,8 @@ import {
   dataAttr,
   deepMergeProps,
   formLabelProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -51,10 +53,16 @@ type Props = EditorVariantsProps & {
   isDisabled?: boolean;
 };
 
-export type UseEditorProps = Props & UIProps<"div", keyof Props>;
+export type UseEditorProps = UIProps<"div", Props>;
 export const useEditor = ($props: UseEditorProps) => {
-  const { editor: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { editor: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    editorVariants.variantKeys,
+  );
   const {
     defaultValue,
     onValueChange,
@@ -63,7 +71,6 @@ export const useEditor = ($props: UseEditorProps) => {
     placeholder = "Write something...",
     classNames,
     helperText,
-    isInvalid,
     as,
     className,
     extensionsProps,
@@ -142,7 +149,7 @@ export const useEditor = ($props: UseEditorProps) => {
   }, [editor?.commands]);
 
   const styles = editorVariants({
-    isInvalid,
+    ...variantProps,
     className,
   });
 

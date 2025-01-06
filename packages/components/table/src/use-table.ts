@@ -1,26 +1,35 @@
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn, deepMergeProps, mapPropsVariants } from "@jamsr-ui/utils";
+import {
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import { useCallback, useMemo, type ComponentProps } from "react";
 import { table, type TableSlots, type TableVariantProps } from "./styles";
 
-export type UseTableProps = TableVariantProps &
-  UIProps<"table"> & {
-    wrapperRef?: React.Ref<HTMLDivElement>;
-    children: React.ReactNode;
-    classNames?: SlotsToClasses<TableSlots>;
-    topContent?: React.ReactNode;
-    bottomContent?: React.ReactNode;
-    slotProps?: {
-      wrapperProps?: ComponentProps<"div">;
-    };
+type Props = TableVariantProps & {
+  wrapperRef?: React.Ref<HTMLDivElement>;
+  children: React.ReactNode;
+  classNames?: SlotsToClasses<TableSlots>;
+  topContent?: React.ReactNode;
+  bottomContent?: React.ReactNode;
+  slotProps?: {
+    wrapperProps?: ComponentProps<"div">;
   };
+};
+export type UseTableProps = UIProps<"table", Props>;
 
 export const useTable = ($props: UseTableProps) => {
-  const { table:  Props = {}, globalConfig } = useUIStyle();
-  const $$props = deepMergeProps(Props, $props, globalConfig);
-
-  const [props, variantProps] = mapPropsVariants($$props, table.variantKeys);
+  const { table: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"table", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    table.variantKeys,
+  );
   const {
     as,
     className,

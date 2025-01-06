@@ -1,33 +1,36 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import {
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type ComponentPropsWithAs,
+  type UIProps,
+} from "@jamsr-ui/utils";
 import { cardVariants, type CardVariants } from "./styles";
 
+type Props = CardVariants;
+
 export type CardProps<T extends React.ElementType = "div"> =
-  ComponentPropsWithAs<T> & CardVariants;
+  ComponentPropsWithAs<T, Props>;
 
 export const Card = <T extends React.ElementType = "div">(
   $props: CardProps<T>,
 ) => {
-  const { card: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
-  const {
-    as,
-    className: $className,
-    children,
-    bg,
-    radius,
-    isBordered,
-    isElevated,
-    ...restProps
-  } = props;
+  const { card: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    cardVariants.variantKeys,
+  );
+  const { as, className: $className, children, ...restProps } = props;
   const Component = as ?? "div";
   const { card } = useUIStyle();
   const className = cardVariants({
-    bg,
     className: cn(card?.className, $className),
-    radius,
-    isBordered,
-    isElevated,
+    ...variantProps,
   });
   return (
     <Component

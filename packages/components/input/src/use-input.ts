@@ -14,6 +14,8 @@ import {
   deepMergeProps,
   formLabelProps,
   isEmpty,
+  mapPropsVariants,
+  mergeGlobalProps,
   mergeProps,
   useDOMRef,
   type PropGetter,
@@ -57,26 +59,29 @@ type Props = {
   onClearInput?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   showClearButton?: boolean;
   isDisabled?: boolean;
-};
+} & InputVariantProps;
 
-type InputProps = UIProps<"input">;
-export type UseInputProps = InputProps & Props & InputVariantProps;
+export type UseInputProps = UIProps<"input", Props>;
 
 export const useInput = ($props: UseInputProps) => {
-  const { input: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { input: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    inputVariants.variantKeys,
+  );
   const {
     as,
     label,
     labelHelperContent,
     className,
     classNames,
-    size,
     isNumberInput,
     defaultValue,
     value: propValue,
     onValueChange,
-    isInvalid,
     type,
     isSecuredText,
     showPassword: propShowPassword,
@@ -84,26 +89,19 @@ export const useInput = ($props: UseInputProps) => {
     startContent,
     endContent,
     onChange,
-    fullWidth = false,
-    variant = "standard",
     helperText,
     decimalPrecision = 2,
     baseRef,
     inputWrapperRef: $inputWrapperRef,
     children,
     ref,
-    isRequired = false,
-    isOptional = false,
     slotProps = {},
     placeholder,
-    isFilled,
-    isTextarea,
     isClearable = false,
     onClearInput,
     showClearButton,
     disabled = false,
     isDisabled: $isDisabled = false,
-    radius,
     ...restProps
   } = props;
 
@@ -125,18 +123,8 @@ export const useInput = ($props: UseInputProps) => {
   const refs = useMergeRefs([ref, disableRef, focusRef, focusVisibleRef]);
   const inputDOMRef = useDOMRef(refs);
   const inputWrapperRef = useMergeRefs([hoverRef, $inputWrapperRef]);
-
-  const styles = inputVariants({
-    variant,
-    size,
-    isInvalid,
-    fullWidth,
-    isRequired,
-    isOptional,
-    isFilled,
-    isTextarea,
-    radius,
-  });
+  const styles = inputVariants(variantProps);
+  const { isRequired, isOptional, variant, isInvalid } = variantProps;
 
   const [value = "", setValue] = useControlledState(
     defaultValue,

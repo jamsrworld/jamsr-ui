@@ -6,6 +6,8 @@ import {
   deepMergeProps,
   filterDOMProps,
   isEmpty,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -23,15 +25,20 @@ type Props<T extends string> = {
   value?: T;
   onValueChange?: (value: T) => void;
   defaultValue?: T;
-};
+} & TabVariants;
 
-export type UseTabsProps<T extends string> = UIProps<"div"> &
-  TabVariants &
-  Props<T>;
+export type UseTabsProps<T extends string> = UIProps<"div", Props<T>>;
 
 export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
-  const { tabs: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tabs: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"div", Props<T>>;
+  // @ts-expect-error typeError
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    tabsVariant.variantKeys,
+  );
 
   const {
     classNames,
@@ -41,13 +48,6 @@ export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
     onValueChange,
     children,
     as,
-    color,
-    fullWidth,
-    isDisabled,
-    placement,
-    radius,
-    size,
-    variant,
     ...restProps
   } = props;
 
@@ -83,16 +83,7 @@ export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
         }) as ReactElement<TabProps> | null);
     return selected?.props.children as React.ReactElement;
   }, [children, value]);
-
-  const styles = tabsVariant({
-    color,
-    fullWidth,
-    isDisabled,
-    placement,
-    radius,
-    size,
-    variant,
-  });
+  const styles = tabsVariant(variantProps);
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
@@ -122,6 +113,7 @@ export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
     [classNames?.tabList, styles],
   );
 
+  const { isDisabled } = variantProps;
   const getTabProps: PropGetter<Partial<TabProps>> = useCallback(
     (props) => {
       const $isDisabled = isDisabled ?? props?.isDisabled ?? props?.disabled;

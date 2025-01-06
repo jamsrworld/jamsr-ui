@@ -8,6 +8,8 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
 import {
@@ -44,8 +46,14 @@ export type OtpInputProps = OtpInputVariantProps & {
 };
 
 export const OtpInput = ($props: OtpInputProps) => {
-  const { otpInput: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { otpInput: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    otpInput.variantKeys,
+  );
 
   const {
     numberOfDigits = 4,
@@ -58,13 +66,11 @@ export const OtpInput = ($props: OtpInputProps) => {
     inputProps,
     isNumeric = true,
     helperText,
-    isInvalid,
     label,
     onBlur,
     classNames,
     disabled = false,
     isDisabled: propIsDisabled = false,
-    radius,
   } = props;
 
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
@@ -206,11 +212,7 @@ export const OtpInput = ($props: OtpInputProps) => {
     e.target.setSelectionRange(0, e.target.value.length);
   };
 
-  const styles = otpInput({
-    isInvalid,
-    radius,
-  });
-
+  const styles = otpInput(variantProps);
   const id = useId();
   return (
     <div

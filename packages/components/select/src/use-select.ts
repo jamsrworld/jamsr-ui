@@ -20,7 +20,14 @@ import {
 } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn, dataAttr, deepMergeProps, formLabelProps } from "@jamsr-ui/utils";
+import {
+  cn,
+  dataAttr,
+  deepMergeProps,
+  formLabelProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import {
   Children,
@@ -59,11 +66,17 @@ type Props = SelectVariantProps & {
 };
 
 export type UseSelectInnerProps = Props;
-export type UseSelectProps = Props & UIProps<"div", keyof Props>;
+export type UseSelectProps = UIProps<"div", Props>;
 
 export const useSelect = ($props: UseSelectProps) => {
-  const { select: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { select: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    selectVariant.variantKeys,
+  );
 
   const {
     label,
@@ -74,9 +87,6 @@ export const useSelect = ($props: UseSelectProps) => {
     placeholder = "Select",
     className,
     classNames,
-    isInvalid,
-    color,
-    size: propSize,
     onOpenChange,
     defaultOpen,
     open: propOpen,
@@ -88,7 +98,6 @@ export const useSelect = ($props: UseSelectProps) => {
     endContent,
     as,
     isDisabled: propIsDisabled,
-    radius,
     returnFocus = true,
     ...restProps
   } = props;
@@ -143,11 +152,8 @@ export const useSelect = ($props: UseSelectProps) => {
   const elementsRef = useRef<(HTMLElement | null)[]>([]);
   const labelsRef = useRef<(string | null)[]>([]);
   const styles = selectVariant({
+    ...variantProps,
     className,
-    color,
-    size: propSize,
-    isInvalid,
-    radius,
   });
 
   const {

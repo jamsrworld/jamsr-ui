@@ -16,7 +16,6 @@ export const Tabs = <T extends string>(props: TabsProps<T>) => {
     contextValue,
   } = useTabs(props);
   const id = useId();
-
   return (
     <Component {...getBaseProps()}>
       <div {...getTabListProps()}>

@@ -4,7 +4,12 @@ import {
   FloatingPortal,
 } from "@floating-ui/react";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import {
+  deepMergeProps,
+  mergeGlobalProps,
+  type UIProps,
+  type ComponentPropsWithAs,
+} from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import { DialogCloseBtn } from "./dialog-close-btn";
 import { useDialogContext } from "./dialog-context";
@@ -15,8 +20,10 @@ export type DialogContentProps<T extends React.ElementType = "div"> =
 export const DialogContent = <T extends React.ElementType = "div">(
   $props: ComponentPropsWithAs<T, DialogContentProps>,
 ) => {
-  const { dialogContent:  Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { dialogContent: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"div">;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const props = deepMergeProps(globalProps, _props);
 
   const { as, children, className } = props;
   const {
@@ -66,6 +73,7 @@ export const DialogContent = <T extends React.ElementType = "div">(
                   {closeButton === null
                     ? null
                     : (closeButton ?? <DialogCloseBtn />)}
+                  {globalProps.children}
                   {children}
                 </Component>
               </m.div>

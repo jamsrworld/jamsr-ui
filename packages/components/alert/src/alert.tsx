@@ -2,6 +2,9 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type UIProps,
   type ComponentPropsWithAs,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
@@ -13,34 +16,42 @@ import {
   type AlertVariantProps,
 } from "./styles";
 
+type Props = {
+  heading?: React.ReactNode;
+  action?: React.ReactNode;
+  icon?: React.ReactNode;
+  classNames?: SlotsToClasses<AlertSlots>;
+} & AlertVariantProps;
+
 export type AlertProps<T extends React.ElementType = "div"> =
-  ComponentPropsWithAs<T, AlertVariantProps> & {
-    heading?: React.ReactNode;
-    action?: React.ReactNode;
-    icon?: React.ReactNode;
-    classNames?: SlotsToClasses<AlertSlots>;
-  };
+  ComponentPropsWithAs<T, Props>;
 
 export const Alert = <T extends React.ElementType = "div">(
   $props: AlertProps<T>,
 ) => {
-  const { alert:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { alert: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    alertVariant.variantKeys,
+  );
+
+  // const props = deepMergeProps(_globalProps, $props, globalConfig);
   const {
     children,
-    status,
     as,
     className: $className,
     action,
     heading,
-    variant,
     icon,
     classNames,
-    radius,
     ...restProps
   } = props;
+  const { status } = variantProps;
 
-  const styles = alertVariant({ status, variant, radius });
+  const styles = alertVariant(variantProps);
   const className = cn($className, classNames?.wrapper);
   const Component = as ?? "div";
 

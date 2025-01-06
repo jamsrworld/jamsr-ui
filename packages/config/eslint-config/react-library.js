@@ -115,5 +115,6 @@ module.exports = {
     "@typescript-eslint/promise-function-async": "off",
     "react/static-property-placement": "off",
     "class-methods-use-this": "off",
+    "@typescript-eslint/naming-convention": "off",
   },
 };

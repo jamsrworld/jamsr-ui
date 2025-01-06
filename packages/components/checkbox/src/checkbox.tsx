@@ -10,6 +10,8 @@ import {
   dataAttr,
   deepMergeProps,
   formLabelProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
 import { m } from "framer-motion";
@@ -39,8 +41,15 @@ export type CheckboxProps = CheckboxVariantProps & {
 };
 
 export const Checkbox = ($props: CheckboxProps) => {
-  const { checkbox: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { checkbox: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    checkbox.variantKeys,
+  );
+
   const id = useId();
   const {
     isChecked: $checked,
@@ -49,7 +58,6 @@ export const Checkbox = ($props: CheckboxProps) => {
     label,
     labelProps,
     onCheckedChange,
-    isInvalid,
     helperText,
     className,
     classNames,
@@ -57,7 +65,6 @@ export const Checkbox = ($props: CheckboxProps) => {
     isReadonly = false,
     disabled,
     onBlur,
-    radius,
     description,
     ...restProps
   } = props;
@@ -87,8 +94,7 @@ export const Checkbox = ($props: CheckboxProps) => {
 
   const styles = checkbox({
     className,
-    isInvalid,
-    radius,
+    ...variantProps,
   });
 
   const hasContent = !!label || !!description;
@@ -98,7 +104,7 @@ export const Checkbox = ($props: CheckboxProps) => {
       data-slot="base"
       data-checked={dataAttr(checked)}
       data-disabled={dataAttr(isDisabled)}
-      data-invalid={dataAttr(isInvalid)}
+      data-invalid={dataAttr(variantProps.isInvalid)}
       data-readonly={dataAttr(isReadonly)}
       data-hovered={dataAttr(isHovered)}
       aria-disabled={dataAttr(isDisabled)}

@@ -1,37 +1,43 @@
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, UIProps } from "@jamsr-ui/utils";
-import { cn, deepMergeProps } from "@jamsr-ui/utils";
-import { useCallback, useState } from "react";
+import {
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useCallback, useState } from "react";
 import { header, type HeaderVariantProps } from "./style";
 
-type Props = UIProps<"header"> & {
+type Props = HeaderVariantProps & {
   hideOnScroll?: boolean;
   isBordered?: boolean;
   visibleBound?: number;
 };
 
-export type UseHeaderProps = Props & HeaderVariantProps;
+export type UseHeaderProps = UIProps<"header", Props>;
 
 export const useHeader = ($props: UseHeaderProps) => {
-  const { header:  Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { header: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    header.variantKeys,
+  );
 
   const {
-    blur,
     className,
     children,
     isBordered = false,
     hideOnScroll = false,
     visibleBound = 80,
-    position,
     ...restProps
   } = props;
 
-  const style = header({
-    blur,
-    position,
-  });
+  const style = header(variantProps);
 
   const { scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(true);

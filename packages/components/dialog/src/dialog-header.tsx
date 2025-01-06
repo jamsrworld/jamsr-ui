@@ -1,5 +1,11 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { type ComponentPropsWithAs, cn, deepMergeProps } from "@jamsr-ui/utils";
+import {
+  type ComponentPropsWithAs,
+  type UIProps,
+  cn,
+  deepMergeProps,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import { useDialogContext } from "./dialog-context";
 
 export type DialogHeaderProps<T extends React.ElementType = "div"> =
@@ -8,8 +14,10 @@ export type DialogHeaderProps<T extends React.ElementType = "div"> =
 export const DialogHeader = <T extends React.ElementType = "div">(
   $props: DialogHeaderProps<T>,
 ) => {
-  const { dialogHeader:  Props = {},  } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { dialogHeader: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"div">;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const props = deepMergeProps(globalProps, _props);
 
   const { as, children, className: $className, ...restProps } = props;
   const { classNames, styles } = useDialogContext();

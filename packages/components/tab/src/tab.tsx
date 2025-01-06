@@ -1,5 +1,10 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { deepMergeProps, type ComponentPropsWithAs } from "@jamsr-ui/utils";
+import {
+  deepMergeProps,
+  mergeGlobalProps,
+  UIProps,
+  type ComponentPropsWithAs,
+} from "@jamsr-ui/utils";
 import { TabIndicator } from "./indicator";
 import { useTabsContext } from "./tabs-context";
 
@@ -17,8 +22,10 @@ export type TabProps<T extends React.ElementType = "button"> =
 export const Tab = <T extends React.ElementType = "button">(
   $props: TabProps<T>,
 ) => {
-  const { tab: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tab: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"button", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const props = deepMergeProps(globalProps, _props);
 
   const { heading, value, onClick, as, startContent, endContent } =
     props as TabProps;

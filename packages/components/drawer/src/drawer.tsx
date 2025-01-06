@@ -11,7 +11,13 @@ import {
 import { useControlledState } from "@jamsr-ui/hooks";
 import { type IconButtonProps } from "@jamsr-ui/icon-button";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import {
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { AnimatePresence, m } from "framer-motion";
 import { type ComponentProps, useMemo, useState } from "react";
 import { DrawerCloseButton } from "./drawer-close-btn";
@@ -36,8 +42,14 @@ export type DrawerProps = DrawerVariants & {
 };
 
 export const Drawer = ($props: DrawerProps) => {
-  const { drawer:  Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { drawer: _globalProps = {} } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    drawer.variantKeys,
+  );
 
   const [isAnimating, setIsAnimating] = useState(false);
   const {
@@ -46,13 +58,8 @@ export const Drawer = ($props: DrawerProps) => {
     defaultOpen,
     onOpenChange,
     className,
-    anchor = "right",
-    backdrop,
     classNames,
-    size,
     motionProps,
-    isBordered,
-    scrollBehavior,
     closeButton,
     slotProps,
     isDismissible = true,
@@ -83,13 +90,7 @@ export const Drawer = ($props: DrawerProps) => {
   const role = useRole(context);
   const interactions = useInteractions([click, dismiss, role]);
 
-  const styles = drawer({
-    anchor,
-    backdrop,
-    size,
-    isBordered,
-    scrollBehavior,
-  });
+  const styles = drawer(variantProps);
   const handleAnimationStart = () => {
     setIsAnimating(true);
   };
@@ -107,6 +108,7 @@ export const Drawer = ($props: DrawerProps) => {
     setIsOpen(false);
   };
 
+  const { anchor = "right" } = variantProps;
   return (
     <div data-component="drawer">
       <AnimatePresence initial={false}>

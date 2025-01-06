@@ -9,6 +9,8 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -19,32 +21,39 @@ import { useRadioGroupContext } from "./radio-group-context";
 import type { RadioSlots, RadioVariantProps } from "./styles";
 import { radioVariant } from "./styles";
 
-interface Props extends UIProps<"input", keyof RadioVariantProps> {
+type Props = {
   children?: React.ReactNode;
   description?: string | React.ReactNode;
   classNames?: SlotsToClasses<RadioSlots>;
   value?: string;
   defaultChecked?: boolean;
   isDisabled?: boolean;
-}
+} & RadioVariantProps;
 
-export type UseRadioProps = Props & RadioVariantProps;
+export type UseRadioProps = UIProps<"input", Props>;
 
 export const useRadio = ($props: UseRadioProps) => {
-  const { radio: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
-
+  const { radio: _globalProps = {} } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    radioVariant.variantKeys,
+  );
   const context = useRadioGroupContext();
+  const {
+    size = context?.size,
+    color = context?.color,
+    isInvalid = context?.isInvalid,
+  } = variantProps;
   const {
     as,
     children,
     className,
     classNames,
-    size = context?.size,
-    color = context?.color,
     isDisabled: propIsDisabled = context?.isDisabled,
     description,
-    isInvalid = context?.isInvalid,
     checked,
     defaultChecked,
     value,

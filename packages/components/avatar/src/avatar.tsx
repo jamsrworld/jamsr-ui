@@ -1,6 +1,10 @@
 import { AvatarIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { deepMergeProps } from "@jamsr-ui/utils";
+import {
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import NextImage, { type ImageProps } from "next/image";
 import { useState } from "react";
 import { type AvatarVariants, avatarVariants } from "./styles";
@@ -14,20 +18,22 @@ type Props = {
 
 export type AvatarProps = Omit<ImageProps, "src"> & AvatarVariants & Props;
 export const Avatar = ($props: AvatarProps) => {
-  const { avatar: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { avatar: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    avatarVariants.variantKeys,
+  );
   const {
-    size,
     alt,
     src,
-    isBordered,
     className,
     fallback,
     name,
     onError,
-    color: propColor,
     children,
-    radius,
     ...restProps
   } = props;
 
@@ -38,15 +44,15 @@ export const Avatar = ($props: AvatarProps) => {
   const fallBack = fallBackString || <AvatarIcon />;
   const [imgSrc, setImgSrc] = useState(src);
 
+  const { color: propColor } = variantProps;
   const color: AvatarProps["color"] = imgSrc
     ? (propColor ?? "default")
     : (propColor ?? getColorByName(fallBackString));
+
   const styles = avatarVariants({
-    size,
-    isBordered,
+    ...variantProps,
     className,
     color,
-    radius,
   });
 
   const handleOnError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {

@@ -16,7 +16,13 @@ import {
   type Placement,
 } from "@floating-ui/react";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import {
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { cloneElement, useRef, useState } from "react";
 import { tooltip, type TooltipSlots, type TooltipVariantProps } from "./styles";
 
@@ -34,8 +40,14 @@ export type TooltipProps = TooltipVariantProps & {
 };
 
 export const Tooltip = ($props: TooltipProps) => {
-  const { tooltip:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { tooltip: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    tooltip.variantKeys,
+  );
 
   const {
     title,
@@ -48,7 +60,6 @@ export const Tooltip = ($props: TooltipProps) => {
     openDelay = 400,
     className,
     classNames,
-    radius,
   } = props;
   const [isOpen, setIsOpen] = useState(false);
   const arrowRef = useRef(null);
@@ -103,7 +114,7 @@ export const Tooltip = ($props: TooltipProps) => {
 
   const styles = tooltip({
     className,
-    radius,
+    ...variantProps,
   });
 
   if (!enabled) return children;

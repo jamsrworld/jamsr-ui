@@ -11,6 +11,8 @@ import {
   dataAttr,
   deepMergeProps,
   isEmpty,
+  mapPropsVariants,
+  mergeGlobalProps,
   useDOMRef,
   type PropGetter,
   type SlotsToClasses,
@@ -37,43 +39,38 @@ type Props = {
   inputWrapperRef?: React.Ref<HTMLDivElement>;
   ref?: React.Ref<HTMLTextAreaElement>;
   isDisabled?: boolean;
-};
+} & TextareaVariantProps;
 
-export type UseTextareaProps = Props &
-  UIProps<"textarea"> &
-  TextareaVariantProps;
+export type UseTextareaProps = UIProps<"textarea", Props>;
 
 export const useTextarea = ($props: UseTextareaProps) => {
-  const { textarea:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
-
+  const { textarea: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    inputVariants.variantKeys,
+  );
   const {
     as,
     label,
     labelHelperContent,
     className,
     classNames,
-    size,
     defaultValue,
     value: propValue,
     onValueChange,
-    isInvalid = false,
     startContent,
     endContent,
     onChange,
-    fullWidth = false,
-    variant = "standard",
     helperText,
-    isFilled = false,
-    isOptional = false,
-    isRequired = false,
     placeholder,
     baseRef,
     inputWrapperRef,
     ref,
     disabled,
     isDisabled: propIsDisabled,
-    radius,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -92,15 +89,8 @@ export const useTextarea = ($props: UseTextareaProps) => {
   const inputDOMRef = useDOMRef<HTMLTextAreaElement>(refs);
 
   const styles = inputVariants({
-    variant,
-    size,
-    isInvalid,
+    ...variantProps,
     isTextarea: true,
-    fullWidth,
-    isFilled,
-    isOptional,
-    isRequired,
-    radius,
   });
 
   const [value, setValue] = useControlledState(
@@ -304,8 +294,8 @@ export const useTextarea = ($props: UseTextareaProps) => {
     helperText,
     startContent,
     endContent,
-    variant,
-    isInvalid,
+    variant: variantProps.variant,
+    isInvalid: variantProps.isInvalid,
     getBaseProps,
     labelHelperContent,
     getLabelWrapperProps,

@@ -20,7 +20,13 @@ import {
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
+import {
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
 import { cloneElement, useRef } from "react";
 import { popover, type PopoverSlots, type PopoverVariantProps } from "./styles";
 
@@ -42,8 +48,14 @@ export type PopoverProps = PopoverVariantProps & {
 };
 
 export const Popover = ($props: PopoverProps) => {
-  const { popover: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { popover: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    popover.variantKeys,
+  );
 
   const {
     trigger,
@@ -60,7 +72,6 @@ export const Popover = ($props: PopoverProps) => {
     offset: offsetValue = 4,
     classNames,
     lockScroll = true,
-    radius,
   } = props;
 
   const [open, setOpen] = useControlledState(
@@ -128,12 +139,8 @@ export const Popover = ($props: PopoverProps) => {
     }),
   );
 
-  const styles = popover({
-    radius,
-  });
-
+  const styles = popover(variantProps);
   if (!enabled) return trigger;
-
   return (
     <>
       {triggerContent}

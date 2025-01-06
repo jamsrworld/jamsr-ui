@@ -7,6 +7,8 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  mergeGlobalProps,
+  type UIProps,
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
 import { type MenuVariantProps } from "./styles";
@@ -27,8 +29,10 @@ export type MenuItemProps<T extends React.ElementType = "li"> =
 export const MenuItem = <T extends React.ElementType = "li">(
   $props: MenuItemProps<T>,
 ) => {
-  const { menuItem: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { menuItem: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"li", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const props = deepMergeProps(globalProps, _props);
   const {
     children,
     isDisabled,

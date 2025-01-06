@@ -17,7 +17,6 @@ export const Radio = (props: RadioProps) => {
     children,
     description,
   } = useRadio(props);
-
   return (
     <Component {...getBaseProps()}>
       <input {...getInputProps()} />

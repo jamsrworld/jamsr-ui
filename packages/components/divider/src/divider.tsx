@@ -1,8 +1,14 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { cn, deepMergeProps, type SlotsToClasses } from "@jamsr-ui/utils";
 import {
-  type DividerSlots,
+  cn,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type SlotsToClasses,
+} from "@jamsr-ui/utils";
+import {
   dividerVariants,
+  type DividerSlots,
   type DividerVariants,
 } from "./style";
 
@@ -13,29 +19,21 @@ export type DividerProps = DividerVariants & {
 };
 
 export const Divider = ($props: DividerProps) => {
-  const { divider: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
-
-  const {
-    className,
-    variant,
-    orientation = "horizontal",
-    children,
-    classNames,
-    color,
-    ...restProps
-  } = props;
-
-  const styles = dividerVariants({
-    variant,
-    orientation,
-    color,
-  });
+  const { divider: _globalProps = {} } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    dividerVariants.variantKeys,
+  );
+  const { className, children, classNames, ...restProps } = props;
+  const styles = dividerVariants(variantProps);
 
   const dividerClassNames = styles.divider({
     className: cn(classNames?.divider),
   });
-
+  const { orientation = "horizontal" } = variantProps;
   return (
     <div
       {...restProps}

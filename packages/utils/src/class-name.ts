@@ -1,6 +1,7 @@
 /* eslint-disable */
 import clsx, { type ClassValue } from "clsx";
 import { extendTailwindMerge } from "tailwind-merge";
+import { removeAttrsFromObject } from "./object";
 
 const tw = extendTailwindMerge({
   extend: {
@@ -35,7 +36,6 @@ export function deepMergeProps<T extends object, U extends object>(
       ) {
         // For classNames (object), merge the properties
         result[key] = { ...result[key] }; // Ensure classNames exists in result
-
         for (const subKey in obj2[key]) {
           if (obj2[key].hasOwnProperty(subKey)) {
             // Concatenate Tailwind classes for each key
@@ -80,4 +80,21 @@ export const mergeClassNames = <T extends Record<string, any>>(
   }
 
   return merged;
+};
+
+export const mergeGlobalProps = <T extends Record<string, any>>(
+  globalProps: Partial<T>,
+  props: T,
+): T => {
+  return deepMergeProps(
+    removeAttrsFromObject(globalProps, ["props"]),
+    globalProps?.props?.(props),
+  );
+};
+
+export const renderGlobalChildren = <T extends Record<string, any>>(
+  globalProps: T,
+  props: T,
+) => {
+  return globalProps?.children ?? globalProps?.props?.(props);
 };

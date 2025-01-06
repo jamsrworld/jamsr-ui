@@ -1,6 +1,6 @@
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs, UIProps } from "@jamsr-ui/utils";
-import { cn, deepMergeProps, isEmpty } from "@jamsr-ui/utils";
+import { cn, deepMergeProps, isEmpty, mergeGlobalProps } from "@jamsr-ui/utils";
 import { useTableContext } from "./table-context";
 import { TableEmptyState } from "./table-empty-state";
 
@@ -9,8 +9,10 @@ export type TableBodyProps = UIProps<"tbody">;
 export const TableBody = <T extends React.ElementType = "tbody">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableBody: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { tableBody: _globalProps = {} } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const props = deepMergeProps(globalProps, _props);
 
   const {
     as,
@@ -25,6 +27,7 @@ export const TableBody = <T extends React.ElementType = "tbody">(
   });
   return (
     <Component className={className} {...restProps}>
+      {globalProps.children}
       {children}
       {isEmpty(children) && <TableEmptyState />}
     </Component>

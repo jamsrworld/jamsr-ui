@@ -10,6 +10,8 @@ import {
   dataAttr,
   deepMergeProps,
   formLabelProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
 import { AnimatePresence, m, type Variants } from "framer-motion";
@@ -44,13 +46,19 @@ type Props = {
   readonly?: boolean;
   isReadonly?: boolean;
   ref?: React.RefObject<HTMLInputElement>;
-};
+} & SwitchVariantProps;
 
-export type SwitchProps = SwitchVariantProps & Props;
+export type SwitchProps = Props;
 
 export const Switch = ($props: SwitchProps) => {
-  const { switch: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { switch: _globalProps = {} } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    switchVariants.variantKeys,
+  );
   const id = useId();
   const {
     checked,
@@ -59,12 +67,8 @@ export const Switch = ($props: SwitchProps) => {
     onCheckedChange,
     label,
     description,
-    labelPlacement,
     isDisabled: propIsDisabled,
-    color,
     onBlur,
-    size,
-    isInvalid,
     helperText,
     className,
     classNames,
@@ -93,11 +97,8 @@ export const Switch = ($props: SwitchProps) => {
   });
   const refs = useMergeRefs([ref, disableRef, hoverRef, focusRef]);
   const styles = switchVariants({
-    color,
-    size,
-    labelPlacement,
+    ...variantProps,
     className,
-    isInvalid,
   });
   const onClick = () => setChecked((prev) => !prev);
   const hasContent = label ?? description;
@@ -176,7 +177,7 @@ export const Switch = ($props: SwitchProps) => {
               <m.div
                 data-slot="thumb"
                 variants={variants}
-                custom={size}
+                custom={variantProps.size}
                 layoutId={id}
                 className={styles.thumb({ className: classNames?.thumb })}
               />

@@ -18,6 +18,8 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
@@ -62,8 +64,14 @@ export type UseAutocompleteProps = Pick<
 };
 
 export const useAutocomplete = ($props: UseAutocompleteProps) => {
-  const { autocomplete: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { autocomplete: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    autocompleteVariant.variantKeys,
+  );
   const inputRef = useRef<HTMLInputElement | null>(null);
   const {
     className,
@@ -86,7 +94,6 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     inputProps,
     isDisabled,
     onBlur,
-    radius,
   } = props;
   const baseRef = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
@@ -184,7 +191,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
 
   const styles = autocompleteVariant({
     className,
-    radius,
+    ...variantProps,
   });
 
   const handleInputChange = useCallback(
@@ -377,7 +384,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       placeholder,
       helperText,
       isInvalid,
-      radius,
+      radius: variantProps.radius,
       ...inputProps,
       "data-slot": "input",
       value: inputValue,
@@ -425,10 +432,10 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     onBlur,
     onClearInput,
     placeholder,
-    radius,
     selectedItemsContent,
     setReference,
     startContent,
+    variantProps.radius,
   ]);
 
   return {

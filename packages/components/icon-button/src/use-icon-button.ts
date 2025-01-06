@@ -8,6 +8,8 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import {
   dataAttr,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type UIProps,
 } from "@jamsr-ui/utils";
@@ -26,8 +28,14 @@ type Props = UIProps<"button"> & {
 export type UseIconButtonProps = Props & ButtonVariantProps;
 
 export const useIconButton = ($props: UseIconButtonProps) => {
-  const { iconButton: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { iconButton: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    iconButton.variantKeys,
+  );
   const {
     as,
     children,
@@ -35,15 +43,10 @@ export const useIconButton = ($props: UseIconButtonProps) => {
     isLoading = false,
     disabled = false,
     isDisabled: $isDisabled = false,
-    color,
-    size,
-    variant,
     type = "button",
     disableRipple,
-    disableAnimation = false,
     ref: propRef,
     "aria-label": ariaLabel,
-    radius,
     ...restProps
   } = props;
 
@@ -62,14 +65,10 @@ export const useIconButton = ($props: UseIconButtonProps) => {
   const styles = useMemo(
     () =>
       iconButton({
-        size,
-        color,
+        ...variantProps,
         className,
-        variant,
-        disableAnimation,
-        radius,
       }),
-    [size, color, className, variant, disableAnimation, radius],
+    [variantProps, className],
   );
 
   const getButtonProps: PropGetter = useCallback(() => {

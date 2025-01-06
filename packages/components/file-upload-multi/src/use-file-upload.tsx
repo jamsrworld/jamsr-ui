@@ -2,7 +2,14 @@ import { useControlledState2, useIsDisabled } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
-import { cn, dataAttr, deepMergeProps, randomId } from "@jamsr-ui/utils";
+import {
+  cn,
+  dataAttr,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  randomId,
+} from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import { useCallback, useRef } from "react";
 import {
@@ -47,24 +54,27 @@ type Props = MultiUploadVariants & {
   inputName: string;
 };
 
-export type UseFileUploadMultiProps = Props & UIProps<"div", keyof Props>;
+export type UseFileUploadMultiProps = UIProps<"div", Props>;
 export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
-  const { fileUploadMulti:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
-
+  const { fileUploadMulti: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    multiUploadVariant.variantKeys,
+  );
   const {
     defaultValue,
     value: $value,
     className,
     classNames = {},
-    isDisabled: propIsDisabled = false,
     onFilesSelect,
     onValueChange,
     onError,
     showDeleteBtn = true,
     dropzoneOptions = {},
     onDelete,
-    isInvalid,
     helperText,
     info,
     uploadIcon = <FileAddIcon className="shrink-0 text-inherit" />,
@@ -74,7 +84,6 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     onUploadSuccess,
     getFileUrlAfterUpload,
     label,
-    radius,
     ...restProps
   } = props;
 
@@ -83,6 +92,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     $value,
     onValueChange,
   );
+  const { isDisabled: propIsDisabled = false } = variantProps;
   const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled,
   });
@@ -222,11 +232,10 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
   });
 
   const styles = multiUploadVariant({
+    ...variantProps,
     isDisabled,
     isDragActive,
-    isInvalid,
     className,
-    radius,
   });
 
   const overlayWrapperClassName = styles.overlayWrapper({

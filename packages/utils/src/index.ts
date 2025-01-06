@@ -14,7 +14,13 @@ export {
   isString,
   isTrue,
 } from "./assertion";
-export { cn, deepMergeProps, mergeClassNames } from "./class-name";
+export {
+  cn,
+  deepMergeProps,
+  mergeClassNames,
+  mergeGlobalProps,
+  renderGlobalChildren,
+} from "./class-name";
 export {
   absoluteFullClasses,
   dataFocusVisibleClasses,
@@ -46,9 +52,5 @@ export { filterDOMProps } from "./filter-dom-props";
 export { randomId } from "./fns";
 export { mergeProps } from "./merge-props";
 export { TRANSITION_VARIANTS } from "./transition";
-export {
-  mapPropsVariants,
-  convertVariantsWithFn,
-  type SlotsToClasses,
-  type PropsWithVariants,
-} from "./tv";
+export { mapPropsVariants, type SlotsToClasses } from "./tv";
+export { removeAttrsFromObject } from "./object";

@@ -1,35 +1,42 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { Text } from "../../text/src";
+import { Text } from "@jamsr-ui/text";
 import {
   cn,
   deepMergeProps,
   mergeClassNames,
+  mergeGlobalProps,
   type ComponentPropsWithAs,
+  type UIProps,
 } from "@jamsr-ui/utils";
 
-export type CardHeaderProps<T extends React.ElementType = "div"> =
-  ComponentPropsWithAs<T> & {
-    heading?: React.ReactNode;
-    subHeading?: React.ReactNode;
-    className?: string;
-    gutterBottom?: boolean;
-    startContent?: React.ReactNode;
-    endContent?: React.ReactNode;
-    classNames?: {
-      heading?: string;
-      subHeading?: string;
-      base?: string;
-      innerWrapper?: string;
-      startContent?: string;
-      endContent?: string;
-    };
+type Props = {
+  heading?: React.ReactNode;
+  subHeading?: React.ReactNode;
+  className?: string;
+  gutterBottom?: boolean;
+  startContent?: React.ReactNode;
+  endContent?: React.ReactNode;
+  classNames?: {
+    heading?: string;
+    subHeading?: string;
+    base?: string;
+    innerWrapper?: string;
+    startContent?: string;
+    endContent?: string;
   };
+};
+
+export type CardHeaderProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T> & Props;
 
 export const CardHeader = <T extends React.ElementType = "div">(
   $props: CardHeaderProps<T>,
 ) => {
-  const { cardHeader: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { cardHeader: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const props = deepMergeProps(globalProps, _props);
+
   const {
     as,
     heading,

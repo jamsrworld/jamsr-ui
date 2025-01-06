@@ -1,5 +1,11 @@
 import { useUIStyle } from "@jamsr-ui/styles";
-import { deepMergeProps, type PropGetter, type UIProps } from "@jamsr-ui/utils";
+import {
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type PropGetter,
+  type UIProps,
+} from "@jamsr-ui/utils";
 import { useCallback, useMemo } from "react";
 import {
   accordion,
@@ -10,39 +16,34 @@ import {
 type Props = {
   className?: string;
   isMultiple?: boolean;
-};
-
-export type UseAccordionProps = UIProps<"div"> &
-  Props &
-  AccordionItemVariantProps &
+} & AccordionItemVariantProps &
   AccordionGroupVariantProps;
 
+export type UseAccordionProps = UIProps<"div"> & Props;
+
 export const useAccordion = ($props: UseAccordionProps) => {
-  const { accordion:  Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { accordion: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    accordion.variantKeys,
+  );
 
   const {
     as,
     children,
     className,
     isMultiple = false,
-    fullWidth,
     hideIndicator,
-    variant = "splitted",
-    radius = "md",
     ...restProps
   } = props;
   const Component = as ?? "div";
 
   const styles = useMemo(
-    () =>
-      accordion({
-        className,
-        fullWidth,
-        variant,
-        radius,
-      }),
-    [className, fullWidth, radius, variant],
+    () => accordion({ ...variantProps, className }),
+    [className, variantProps],
   );
 
   const getBaseProps = useCallback<PropGetter>(
@@ -63,7 +64,6 @@ export const useAccordion = ($props: UseAccordionProps) => {
     getBaseProps,
     isMultiple,
     hideIndicator,
-    variant,
-    radius,
+    ...variantProps,
   };
 };

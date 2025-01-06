@@ -1,13 +1,19 @@
 import { useControlledState } from "@jamsr-ui/hooks";
 import { useUIStyle } from "@jamsr-ui/styles";
-import type { PropGetter, SlotsToClasses } from "@jamsr-ui/utils";
-import { cn, dataAttr, deepMergeProps } from "@jamsr-ui/utils";
+import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
+import {
+  cn,
+  dataAttr,
+  deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+} from "@jamsr-ui/utils";
 import type { ComponentProps } from "react";
 import { useCallback } from "react";
 import type { RatingSlots } from "./style";
 import { ratingVariants } from "./style";
 
-export type UseRatingProps = {
+type Props = {
   isReadonly?: boolean;
   isDisabled?: boolean;
   defaultValue?: number;
@@ -18,30 +24,34 @@ export type UseRatingProps = {
   className?: string;
   isInvalid?: boolean;
   helperText?: string;
-} & ComponentProps<"div">;
+};
+export type UseRatingProps = Props & ComponentProps<"div">;
 
 export const useRating = ($props: UseRatingProps) => {
-  const { rating: Props = {} } = useUIStyle();
-  const props = deepMergeProps(Props, $props);
+  const { rating: _globalProps = {} } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    ratingVariants.variantKeys,
+  );
 
   const {
     className,
     classNames,
     label,
     isReadonly,
-    isDisabled,
     onValueChange,
     value: propValue,
     defaultValue,
     helperText,
-    isInvalid,
     ...restProps
   } = props;
 
   const styles = ratingVariants({
     className,
-    isInvalid,
-    isDisabled,
+    ...variantProps,
   });
   const maxValue = 5;
 
@@ -146,7 +156,7 @@ export const useRating = ($props: UseRatingProps) => {
     getStarProps,
     helperText,
     styles,
-    isDisabled,
+    isDisabled: variantProps.isDisabled,
     isReadonly,
     classNames,
   };

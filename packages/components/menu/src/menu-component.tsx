@@ -34,6 +34,9 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
+  type UIProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
 import { AnimatePresence, m, type Variant } from "framer-motion";
@@ -47,7 +50,7 @@ import {
 import { menuVariants, type MenuSlots, type MenuVariantProps } from "./styles";
 import { MenuContext, useMenu, type MenuContextType } from "./use-menu";
 
-export type MenuProps = MenuVariantProps & {
+type Props = MenuVariantProps & {
   trigger: React.ReactNode;
   children?: React.ReactNode;
   triggerOn?: "hover" | "click";
@@ -65,7 +68,8 @@ export type MenuProps = MenuVariantProps & {
   closeOnEscapeKey?: boolean;
   closeOnOutsidePress?: boolean;
   lockScroll?: boolean;
-} & ComponentProps<"div">;
+};
+export type MenuProps = Props & ComponentProps<"div">;
 
 const motionVariants = {
   initial: (placement: Placement) => {
@@ -122,12 +126,19 @@ const motionVariants = {
 };
 
 export const MenuComponent = ($props: MenuProps) => {
-  const { menu: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { menu: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    menuVariants.variantKeys,
+  );
   const parentId = useFloatingParentNodeId();
   const isNested = parentId != null;
 
   const {
+    as,
     children,
     trigger,
     triggerOn = "click",
@@ -141,11 +152,9 @@ export const MenuComponent = ($props: MenuProps) => {
     onOpenChange,
     openDelay = 75,
     closeDelay = 0,
-    backdrop,
     closeOnEscapeKey = true,
     closeOnOutsidePress = true,
     lockScroll = true,
-    radius,
     ...restProps
   } = props;
 
@@ -247,10 +256,7 @@ export const MenuComponent = ($props: MenuProps) => {
     }
   }, [tree, isOpen, nodeId, parentId]);
 
-  const styles = menuVariants({
-    backdrop,
-    radius,
-  });
+  const styles = menuVariants(variantProps);
   const value: MenuContextType = useMemo(
     () => ({
       activeIndex,

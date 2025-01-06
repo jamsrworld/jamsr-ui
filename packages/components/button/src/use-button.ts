@@ -8,6 +8,8 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import {
   dataAttr,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type UIProps,
 } from "@jamsr-ui/utils";
@@ -26,10 +28,16 @@ type Props = UIProps<"button"> & {
 };
 
 export type UseButtonProps = Props & ButtonVariantProps;
-
 export const useButton = ($props: UseButtonProps) => {
-  const { button: Props = {}, globalConfig } = useUIStyle();
-  const props = deepMergeProps(Props, $props, globalConfig);
+  const { button: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(
+    mergedProps,
+    button.variantKeys,
+  );
+
   const {
     as,
     children,
@@ -39,16 +47,10 @@ export const useButton = ($props: UseButtonProps) => {
     isLoading = false,
     disabled = false,
     isDisabled: $isDisabled = false,
-    color,
-    size,
     spinnerPlacement = "start",
-    fullWidth,
-    variant,
     type = "button",
     disableRipple,
-    disableAnimation = false,
     ref: propRef,
-    radius,
     ...restProps
   } = props;
 
@@ -67,15 +69,10 @@ export const useButton = ($props: UseButtonProps) => {
   const styles = useMemo(
     () =>
       button({
-        size,
-        color,
+        ...variantProps,
         className,
-        fullWidth,
-        variant,
-        disableAnimation,
-        radius,
       }),
-    [size, color, className, fullWidth, variant, disableAnimation, radius],
+    [className, variantProps],
   );
 
   const getButtonProps: PropGetter = useCallback(() => {

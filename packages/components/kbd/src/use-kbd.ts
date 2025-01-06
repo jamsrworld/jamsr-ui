@@ -2,6 +2,8 @@ import { useUIStyle } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
+  mapPropsVariants,
+  mergeGlobalProps,
   type PropGetter,
   type SlotsToClasses,
   type UIProps,
@@ -10,35 +12,30 @@ import { useMemo } from "react";
 import { kbd, type KbdSlots, type KbdVariantProps } from "./styles";
 import { type KbdKey } from "./utils";
 
-type Props = UIProps<"kbd"> & {
+type Props = KbdVariantProps & {
   classNames?: SlotsToClasses<KbdSlots>;
   keys?: KbdKey | KbdKey[];
 };
 
-export type UseKbdProps = Props & KbdVariantProps;
+export type UseKbdProps = UIProps<"kbd"> & Props;
 
 export const useKbd = ($props: UseKbdProps) => {
-  const { kbd: kbdConfig = {} } = useUIStyle();
-  const props = deepMergeProps(kbdConfig, $props);
-  const {
-    as,
-    children,
-    className,
-    classNames,
-    keys,
-    title,
-    radius,
-    ...restProps
-  } = props;
+  const { kbd: _globalProps = {}, globalConfig } = useUIStyle();
+  const _props = $props as UIProps<"div", Props>;
+  const globalProps = mergeGlobalProps(_globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
+  const [props, variantProps] = mapPropsVariants(mergedProps, kbd.variantKeys);
+  const { as, children, className, classNames, keys, title, ...restProps } =
+    props;
   const Component = as ?? "kbd";
 
   const styles = useMemo(
     () =>
       kbd({
         className,
-        radius,
+        ...variantProps,
       }),
-    [className, radius],
+    [className, variantProps],
   );
 
   const keysToRender =

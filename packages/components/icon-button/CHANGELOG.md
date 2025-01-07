@@ -1,5 +1,17 @@
 # @jamsr-ui/icon-button
 
+## 0.0.14
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.12
+  - @jamsr-ui/ripple@0.0.83
+  - @jamsr-ui/hooks@0.0.56
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.13
 
 ### Patch Changes

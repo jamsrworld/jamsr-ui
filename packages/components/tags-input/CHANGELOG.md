@@ -1,5 +1,17 @@
 # @jamsr-ui/tags-input
 
+## 0.0.50
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/chip@0.0.97
+  - @jamsr-ui/input@0.0.112
+  - @jamsr-ui/hooks@0.0.56
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.49
 
 ### Patch Changes

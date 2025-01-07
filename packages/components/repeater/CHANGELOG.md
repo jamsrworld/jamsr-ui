@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.46
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.45
 
 ### Patch Changes

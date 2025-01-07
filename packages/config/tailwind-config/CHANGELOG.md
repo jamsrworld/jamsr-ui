@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.29
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.28
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.50
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.49
 
 ### Patch Changes

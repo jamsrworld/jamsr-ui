@@ -1,5 +1,16 @@
 # @jamsr-ui/tab
 
+## 0.0.104
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/card@0.0.94
+  - @jamsr-ui/hooks@0.0.56
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.103
 
 ### Patch Changes

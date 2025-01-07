@@ -1,5 +1,18 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.108
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.12
+  - @jamsr-ui/dnd@0.0.19
+  - @jamsr-ui/hooks@0.0.56
+  - @jamsr-ui/shared-icons@0.0.69
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.107
 
 ### Patch Changes

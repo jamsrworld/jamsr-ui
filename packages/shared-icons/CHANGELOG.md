@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.69
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.68
 
 ### Patch Changes

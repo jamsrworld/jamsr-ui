@@ -1,5 +1,15 @@
 # @jamsr-ui/header
 
+## 0.0.87
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.81
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.86
 
 ### Patch Changes

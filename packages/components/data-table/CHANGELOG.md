@@ -1,5 +1,24 @@
 # @jamsr-ui/data-table
 
+## 0.0.78
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/button@0.0.89
+  - @jamsr-ui/circular-progress@0.0.12
+  - @jamsr-ui/icon-button@0.0.14
+  - @jamsr-ui/linear-progress@0.0.11
+  - @jamsr-ui/repeater@0.0.46
+  - @jamsr-ui/select@0.0.108
+  - @jamsr-ui/skeleton@0.0.79
+  - @jamsr-ui/table@0.0.63
+  - @jamsr-ui/text@0.0.6
+  - @jamsr-ui/shared-icons@0.0.69
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.77
 
 ### Patch Changes

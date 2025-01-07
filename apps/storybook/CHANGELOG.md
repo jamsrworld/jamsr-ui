@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.227
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/react@0.0.225
+
 ## 0.0.226
 
 ### Patch Changes

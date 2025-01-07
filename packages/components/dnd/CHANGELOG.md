@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.0.19
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.18
 
 ### Patch Changes

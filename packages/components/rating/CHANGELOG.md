@@ -1,5 +1,16 @@
 # @jamsr-ui/rating
 
+## 0.0.42
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.46
+  - @jamsr-ui/hooks@0.0.56
+  - @jamsr-ui/shared-icons@0.0.69
+  - @jamsr-ui/styles@0.0.18
+
 ## 0.0.41
 
 ### Patch Changes

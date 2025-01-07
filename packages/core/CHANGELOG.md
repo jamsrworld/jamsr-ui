@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.48
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.47
 
 ### Patch Changes

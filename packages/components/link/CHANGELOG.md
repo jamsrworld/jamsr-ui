@@ -1,5 +1,15 @@
 # @jamsr-ui/link
 
+## 0.0.81
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/text@0.0.6
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.80
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @jamsr-ui/alert
 
+## 0.0.99
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/text@0.0.6
+  - @jamsr-ui/shared-icons@0.0.69
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.98
 
 ### Patch Changes

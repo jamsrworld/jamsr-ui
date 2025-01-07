@@ -1,5 +1,11 @@
 # @jamsr-ui/styles
 
+## 0.0.18
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.17
 
 ### Patch Changes

@@ -1,5 +1,25 @@
 # @jamsr-ui/editor
 
+## 0.0.123
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.81
+  - @jamsr-ui/file-upload-single@0.0.111
+  - @jamsr-ui/icon-button@0.0.14
+  - @jamsr-ui/input@0.0.112
+  - @jamsr-ui/menu@0.0.106
+  - @jamsr-ui/popover@0.0.85
+  - @jamsr-ui/repeater@0.0.46
+  - @jamsr-ui/select@0.0.108
+  - @jamsr-ui/switch@0.0.92
+  - @jamsr-ui/hooks@0.0.56
+  - @jamsr-ui/shared-icons@0.0.69
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.122
 
 ### Patch Changes

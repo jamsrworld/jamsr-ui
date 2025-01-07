@@ -1,5 +1,11 @@
 # @jamsr-ui/hooks
 
+## 0.0.56
+
+### Patch Changes
+
+- fix switch,chip
+
 ## 0.0.55
 
 ### Patch Changes

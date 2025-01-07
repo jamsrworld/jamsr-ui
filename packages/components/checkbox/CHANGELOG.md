@@ -1,5 +1,15 @@
 # @jamsr-ui/checkbox
 
+## 0.0.85
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.56
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.84
 
 ### Patch Changes

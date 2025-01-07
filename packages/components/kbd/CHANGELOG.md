@@ -1,5 +1,14 @@
 # @jamsr-ui/kbd
 
+## 0.0.16
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.15
 
 ### Patch Changes

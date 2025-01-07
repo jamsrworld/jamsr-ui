@@ -1,5 +1,13 @@
 # @jamsr-ui/chart
 
+## 0.0.7
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.6
 
 ### Patch Changes

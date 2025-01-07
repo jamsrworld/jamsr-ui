@@ -1,5 +1,26 @@
 # @jamsr-ui/rhf
 
+## 0.0.67
+
+### Patch Changes
+
+- fix switch,chip
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.0.121
+  - @jamsr-ui/checkbox@0.0.85
+  - @jamsr-ui/editor@0.0.123
+  - @jamsr-ui/file-upload-multi@0.0.108
+  - @jamsr-ui/file-upload-single@0.0.111
+  - @jamsr-ui/input@0.0.112
+  - @jamsr-ui/otp-input@0.0.82
+  - @jamsr-ui/radio@0.0.90
+  - @jamsr-ui/rating@0.0.42
+  - @jamsr-ui/select@0.0.108
+  - @jamsr-ui/switch@0.0.92
+  - @jamsr-ui/tags-input@0.0.50
+  - @jamsr-ui/textarea@0.0.112
+  - @jamsr-ui/utils@0.0.75
+
 ## 0.0.66
 
 ### Patch Changes

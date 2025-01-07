@@ -38,6 +38,7 @@ export const Input = <T extends React.ElementType = "div">(
     isClearable,
     hasValue,
     showClearButton,
+    slots,
   } = useInput(props);
   const id = useId();
 
@@ -57,7 +58,9 @@ export const Input = <T extends React.ElementType = "div">(
           size="sm"
           radius="full"
         >
-          {!showPassword ? <EyeOpenIcon /> : <EyeClosedIcon />}
+          {!showPassword
+            ? (slots.eyeOpenIcon ?? <EyeOpenIcon />)
+            : (slots.eyeClosedIcon ?? <EyeClosedIcon />)}
         </IconButton>
       )) ||
       endContent;
@@ -74,7 +77,7 @@ export const Input = <T extends React.ElementType = "div">(
           radius="full"
           {...getClearButtonProps()}
         >
-          <CloseIcon width={12} height={12} />
+          {slots.clearIcon ?? <CloseIcon width={12} height={12} />}
         </IconButton>,
       );
     }
@@ -95,6 +98,9 @@ export const Input = <T extends React.ElementType = "div">(
     isSecuredText,
     showClearButton,
     showPassword,
+    slots.clearIcon,
+    slots.eyeClosedIcon,
+    slots.eyeOpenIcon,
   ]);
 
   const getLabel = useMemo(() => {

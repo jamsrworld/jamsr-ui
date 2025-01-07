@@ -41,6 +41,10 @@ export const switchVariants = tv({
       },
     },
     size: {
+      xs: {
+        switch: "h-4 w-7 px-0.5",
+        thumb: "size-3",
+      },
       sm: {
         switch: "h-6 w-10",
         thumb: "size-4",

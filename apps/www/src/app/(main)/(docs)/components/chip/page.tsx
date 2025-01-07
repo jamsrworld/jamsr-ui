@@ -30,10 +30,10 @@ const Chip = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <ChipUsage />
       </VariantWrapper>
-      <VariantWrapper heading="Colors" code={code("usage")}>
+      <VariantWrapper heading="Colors" code={code("colors")}>
         <ChipColors />
       </VariantWrapper>
-      <VariantWrapper heading="Variants" code={code("usage")}>
+      <VariantWrapper heading="Variants" code={code("variants")}>
         <ChipVariants />
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>

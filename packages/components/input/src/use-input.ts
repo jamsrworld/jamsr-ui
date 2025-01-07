@@ -59,6 +59,11 @@ type Props = {
   onClearInput?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   showClearButton?: boolean;
   isDisabled?: boolean;
+  slots?: {
+    eyeOpenIcon?: React.ReactNode;
+    eyeClosedIcon?: React.ReactNode;
+    clearIcon?: React.ReactNode;
+  };
 } & InputVariantProps;
 
 export type UseInputProps = UIProps<"input", Props>;
@@ -102,6 +107,7 @@ export const useInput = ($props: UseInputProps) => {
     showClearButton,
     disabled = false,
     isDisabled: $isDisabled = false,
+    slots = {},
     ...restProps
   } = props;
 
@@ -437,6 +443,7 @@ export const useInput = ($props: UseInputProps) => {
     endContent,
     isClearable,
     variant,
+    slots,
     isInvalid,
     isSecuredText,
     showPassword,

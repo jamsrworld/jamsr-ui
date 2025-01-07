@@ -24,7 +24,11 @@ import {
 
 const variants: Variants = {
   tapped: (size: SwitchVariantProps["size"]) => ({
-    width: (size === "sm" && 22) || (size === "md" && 26) || 30,
+    width:
+      (size === "xs" && 14) ||
+      (size === "sm" && 22) ||
+      (size === "md" && 26) ||
+      30,
   }),
 };
 

@@ -59,7 +59,7 @@ import { type TextProps } from "@jamsr-ui/text";
 import { type TextareaProps } from "@jamsr-ui/textarea";
 import { type TooltipProps } from "@jamsr-ui/tooltip";
 
-type WithProps<T> = T & { props?: (props: T) => T };
+type WithProps<T> = Partial<T> & { props?: (props: Partial<T>) => Partial<T> };
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {

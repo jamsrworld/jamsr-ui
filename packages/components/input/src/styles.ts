@@ -33,6 +33,7 @@ export const inputVariants = tv({
     notation: "",
     contentWrapper: "flex h-full grow items-center",
     clearButton: "size-4",
+    icon: "",
   },
   variants: {
     fullWidth: {

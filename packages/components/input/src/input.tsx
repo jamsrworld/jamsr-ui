@@ -39,6 +39,7 @@ export const Input = <T extends React.ElementType = "div">(
     hasValue,
     showClearButton,
     slots,
+    classNames,
   } = useInput(props);
   const id = useId();
 
@@ -59,8 +60,12 @@ export const Input = <T extends React.ElementType = "div">(
           radius="full"
         >
           {!showPassword
-            ? (slots.eyeOpenIcon ?? <EyeOpenIcon />)
-            : (slots.eyeClosedIcon ?? <EyeClosedIcon />)}
+            ? (slots.eyeOpenIcon ?? (
+                <EyeOpenIcon className={classNames?.icon} />
+              ))
+            : (slots.eyeClosedIcon ?? (
+                <EyeClosedIcon className={classNames?.icon} />
+              ))}
         </IconButton>
       )) ||
       endContent;
@@ -77,7 +82,9 @@ export const Input = <T extends React.ElementType = "div">(
           radius="full"
           {...getClearButtonProps()}
         >
-          {slots.clearIcon ?? <CloseIcon width={12} height={12} />}
+          {slots.clearIcon ?? (
+            <CloseIcon className={classNames?.icon} width={12} height={12} />
+          )}
         </IconButton>,
       );
     }
@@ -89,6 +96,7 @@ export const Input = <T extends React.ElementType = "div">(
       </div>
     );
   }, [
+    classNames?.icon,
     endContent,
     getClearButtonProps,
     getEndContentProps,

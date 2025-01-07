@@ -110,7 +110,6 @@ export const useInput = ($props: UseInputProps) => {
     slots = {},
     ...restProps
   } = props;
-
   const Component = as ?? "div";
   const InputComponent = "input";
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
@@ -130,7 +129,12 @@ export const useInput = ($props: UseInputProps) => {
   const inputDOMRef = useDOMRef(refs);
   const inputWrapperRef = useMergeRefs([hoverRef, $inputWrapperRef]);
   const styles = inputVariants(variantProps);
-  const { isRequired, isOptional, variant, isInvalid } = variantProps;
+  const {
+    isRequired,
+    isOptional,
+    variant = "standard",
+    isInvalid,
+  } = variantProps;
 
   const [value = "", setValue] = useControlledState(
     defaultValue,

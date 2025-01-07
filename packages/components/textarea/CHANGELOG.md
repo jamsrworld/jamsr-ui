@@ -1,5 +1,11 @@
 # @jamsr-ui/input
 
+## 0.0.114
+
+### Patch Changes
+
+- fix textrarea
+
 ## 0.0.113
 
 ### Patch Changes

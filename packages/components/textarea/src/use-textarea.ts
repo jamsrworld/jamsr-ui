@@ -75,6 +75,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
   } = props;
   const Component = as ?? "div";
   const TextareaComponent = "textarea";
+  const { variant = "standard", isInvalid } = variantProps;
 
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLTextAreaElement>({
     isDisabled: propIsDisabled ?? disabled,
@@ -294,8 +295,8 @@ export const useTextarea = ($props: UseTextareaProps) => {
     helperText,
     startContent,
     endContent,
-    variant: variantProps.variant,
-    isInvalid: variantProps.isInvalid,
+    variant,
+    isInvalid,
     getBaseProps,
     labelHelperContent,
     getLabelWrapperProps,

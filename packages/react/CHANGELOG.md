@@ -1,5 +1,13 @@
 # @jamsr-ui/react
 
+## 0.0.228
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/textarea@0.0.114
+  - @jamsr-ui/rhf@0.0.69
+
 ## 0.0.227
 
 ### Patch Changes

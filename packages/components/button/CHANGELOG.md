@@ -1,5 +1,15 @@
 # @jamsr-ui/button
 
+## 0.0.90
+
+### Patch Changes
+
+- fix otp input, textarea, button, menu
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.76
+  - @jamsr-ui/circular-progress@0.0.13
+  - @jamsr-ui/ripple@0.0.84
+
 ## 0.0.89
 
 ### Patch Changes

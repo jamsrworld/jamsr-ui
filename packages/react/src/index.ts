@@ -16,8 +16,16 @@ export {
   type AutocompleteItemProps,
   type AutocompleteProps,
 } from "@jamsr-ui/autocomplete";
-export { Avatar, type AvatarProps } from "@jamsr-ui/avatar";
-export { Button, type ButtonProps } from "@jamsr-ui/button";
+export {
+  Avatar,
+  type AvatarProps,
+  type AvatarCustomProps,
+} from "@jamsr-ui/avatar";
+export {
+  Button,
+  type ButtonProps,
+  type ButtonCustomProps,
+} from "@jamsr-ui/button";
 export {
   Card,
   CardContent,

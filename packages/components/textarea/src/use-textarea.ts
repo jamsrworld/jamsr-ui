@@ -10,6 +10,7 @@ import {
   cn,
   dataAttr,
   deepMergeProps,
+  formLabelProps,
   isEmpty,
   mapPropsVariants,
   mergeGlobalProps,
@@ -170,6 +171,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
     (props) => {
       return {
         ...props,
+        ...formLabelProps(),
         "data-slot": "label",
         className: styles.label({
           className: cn(classNames?.label, props?.className),
@@ -228,6 +230,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
           className: styles.inputWrapper({
             className: cn(classNames?.inputWrapper, props?.className),
           }),
+
           onClick: handleFocusInput,
         };
       },
@@ -245,6 +248,8 @@ export const useTextarea = ($props: UseTextareaProps) => {
         placeholder,
         onChange: handleTextareaChange,
         ref: inputDOMRef,
+        disabled: isDisabled,
+        "aria-disabled": dataAttr(isDisabled),
         ...restProps,
         ...props,
       };
@@ -257,6 +262,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
       placeholder,
       handleTextareaChange,
       inputDOMRef,
+      isDisabled,
       restProps,
     ],
   );

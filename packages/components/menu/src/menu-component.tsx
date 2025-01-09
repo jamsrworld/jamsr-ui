@@ -39,7 +39,7 @@ import {
   type UIProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m, type Variant } from "framer-motion";
+import { AnimatePresence, m, type Variants, type Variant } from "framer-motion";
 import {
   useEffect,
   useMemo,
@@ -68,6 +68,7 @@ type Props = MenuVariantProps & {
   closeOnEscapeKey?: boolean;
   closeOnOutsidePress?: boolean;
   lockScroll?: boolean;
+  motionVariants?: Variants;
 };
 export type MenuProps = Props & ComponentProps<"div">;
 
@@ -155,6 +156,7 @@ export const MenuComponent = ($props: MenuProps) => {
     closeOnEscapeKey = true,
     closeOnOutsidePress = true,
     lockScroll = true,
+    motionVariants: propMotionVariants,
     ...restProps
   } = props;
 
@@ -318,18 +320,14 @@ export const MenuComponent = ($props: MenuProps) => {
                     modal
                     initialFocus={-1}
                     returnFocus={!isNested}
+                    disabled
                   >
-                    <m.ul
+                    <div
                       ref={refs.setFloating}
                       style={floatingStyles}
                       className={styles.popover({
                         className: cn(className, classNames?.popover),
                       })}
-                      variants={motionVariants}
-                      initial="initial"
-                      animate="animate"
-                      exit="exit"
-                      custom={placement}
                       {...getFloatingProps()}
                     >
                       {showArrow && (
@@ -341,8 +339,19 @@ export const MenuComponent = ($props: MenuProps) => {
                           })}
                         />
                       )}
-                      {children}
-                    </m.ul>
+                      <m.ul
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        custom={placement}
+                        variants={propMotionVariants ?? motionVariants}
+                        className={styles.content({
+                          className: cn(className, classNames?.content),
+                        })}
+                      >
+                        {children}
+                      </m.ul>
+                    </div>
                   </FloatingFocusManager>
                 </FloatingOverlay>
               </FloatingPortal>

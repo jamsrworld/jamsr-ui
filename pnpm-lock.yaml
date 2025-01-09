@@ -1535,6 +1535,9 @@ importers:
 
   packages/components/sidebar:
     dependencies:
+      '@jamsr-ui/hooks':
+        specifier: workspace:^
+        version: link:../../hooks
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../shared-icons

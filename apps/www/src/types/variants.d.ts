@@ -209,7 +209,14 @@ export type VariantTypes = {
     "without-lock-scroll",
   ];
   "number-input": [];
-  "otp-input": ["6-digits", "controlled", "numbers-only", "radius", "usage"];
+  "otp-input": [
+    "6-digits",
+    "controlled",
+    "numbers-only",
+    "on-complete",
+    "radius",
+    "usage",
+  ];
   pagination: [];
   popover: [
     "controlled",

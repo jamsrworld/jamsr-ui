@@ -5,7 +5,7 @@ export type SlotsToClasses<S extends string> = {
 };
 
 export const mapPropsVariants = <
-  T extends Record<string, unknown>,
+  T extends object,
   R extends readonly (keyof T)[],
 >(
   props: T,

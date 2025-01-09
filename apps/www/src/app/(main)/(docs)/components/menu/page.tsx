@@ -17,15 +17,16 @@ import { MenuTriggerOnHover } from "./examples/trigger-on-hover";
 import { MenuUsage } from "./examples/usage";
 import { MenuWithArrow } from "./examples/with-arrow";
 import { MenuWithoutLockScroll } from "./examples/without-lock-scroll";
+import { UIStylesProvider } from "@jamsr-ui/styles";
 
 const title = "Menu";
 const description =
   "A navigational component that displays a list of options or actions, allowing users to select from various choices within an interface in a structured manner.";
 
-  export const metadata: Metadata = {
-    title,
-    description,
-  };
+export const metadata: Metadata = {
+  title,
+  description,
+};
 const code = <T extends VariantTypes["menu"][number]>(variant: T) =>
   readVariantCode("menu", variant);
 
@@ -62,10 +63,13 @@ const Menu = () => {
       <VariantWrapper heading="With Arrow" code={code("with-arrow")}>
         <MenuWithArrow />
       </VariantWrapper>
-      <VariantWrapper heading="Prevent Close On Click " code={code("prevent-close")}>
+      <VariantWrapper
+        heading="Prevent Close On Click "
+        code={code("prevent-close")}
+      >
         <MenuPreventClose />
       </VariantWrapper>
-     
+
       <VariantWrapper heading="Offset" code={code("offset")}>
         <MenuOffset />
       </VariantWrapper>

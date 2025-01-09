@@ -1,5 +1,14 @@
 # web
 
+## 0.1.211
+
+### Patch Changes
+
+- fix otp input, textarea, button, menu
+- Updated dependencies
+  - @jamsr-ui/react@0.0.229
+  - @jamsr-ui/utils@0.0.76
+
 ## 0.1.210
 
 ### Patch Changes

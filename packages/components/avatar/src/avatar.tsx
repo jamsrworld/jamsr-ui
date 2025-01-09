@@ -10,13 +10,15 @@ import { useState } from "react";
 import { type AvatarVariants, avatarVariants } from "./styles";
 import { getColorByName, getFirstChar } from "./utils";
 
-type Props = {
+export interface AvatarCustomProps {}
+type Props = AvatarCustomProps & {
   name?: string;
   fallback?: string | ((_: { alt: string; name?: string }) => string);
   src?: null | ImageProps["src"];
 };
 
 export type AvatarProps = Omit<ImageProps, "src"> & AvatarVariants & Props;
+
 export const Avatar = ($props: AvatarProps) => {
   const { avatar: _globalProps = {}, globalConfig } = useUIStyle();
   const _props = $props;

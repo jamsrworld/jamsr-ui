@@ -16,16 +16,19 @@ import {
 import { useCallback, useMemo } from "react";
 import { button, type ButtonVariantProps } from "./styles";
 
-type Props = UIProps<"button"> & {
-  startContent?: React.ReactNode;
-  endContent?: React.ReactNode;
-  isLoading?: boolean;
-  isDisabled?: boolean;
-  spinnerPlacement?: "start" | "end";
-  disableRipple?: boolean;
-  disableAnimation?: boolean;
-  ref?: React.Ref<HTMLButtonElement>;
-};
+export interface ButtonCustomProps {}
+type Props = ButtonCustomProps &
+  UIProps<"button"> & {
+    startContent?: React.ReactNode;
+    endContent?: React.ReactNode;
+    isLoading?: boolean;
+    isDisabled?: boolean;
+    spinnerPlacement?: "start" | "end";
+    disableRipple?: boolean;
+    disableAnimation?: boolean;
+    ref?: React.Ref<HTMLButtonElement>;
+    spinner?: React.ReactNode;
+  };
 
 export type UseButtonProps = Props & ButtonVariantProps;
 export const useButton = ($props: UseButtonProps) => {
@@ -51,6 +54,7 @@ export const useButton = ($props: UseButtonProps) => {
     type = "button",
     disableRipple,
     ref: propRef,
+    spinner,
     ...restProps
   } = props;
 
@@ -90,6 +94,7 @@ export const useButton = ($props: UseButtonProps) => {
 
   return {
     Component,
+    spinner,
     children,
     styles,
     startContent,

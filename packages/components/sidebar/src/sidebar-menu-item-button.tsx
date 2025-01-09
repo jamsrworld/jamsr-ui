@@ -1,4 +1,5 @@
 import { cn, type ComponentPropsWithAs, dataAttr } from "@jamsr-ui/utils";
+import { useHover } from "@jamsr-ui/hooks";
 import { useSidebarContext } from "./sidebar-context";
 
 export type SidebarMenuItemButtonProps<T extends React.ElementType = "button"> =
@@ -23,6 +24,9 @@ export const SidebarMenuItemButton = <T extends React.ElementType = "button">(
   });
   const disabled = isDisabled || $disabled;
   const Component = as ?? "button";
+  const { isHovered, ref } = useHover<HTMLButtonElement>({
+    isDisabled: disabled,
+  });
   return (
     <Component
       type="button"
@@ -31,6 +35,8 @@ export const SidebarMenuItemButton = <T extends React.ElementType = "button">(
       disabled={disabled}
       data-disabled={dataAttr(disabled)}
       aria-disabled={dataAttr(disabled)}
+      data-hovered={dataAttr(isHovered)}
+      ref={ref}
       {...restProps}
     >
       {children}

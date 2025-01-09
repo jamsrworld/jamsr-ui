@@ -4,7 +4,6 @@ import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { useButton, type UseButtonProps } from "./use-button";
 
 export type ButtonProps = UseButtonProps;
-
 export const Button = <T extends React.ElementType = "button">(
   props: ComponentPropsWithAs<T, ButtonProps>,
 ) => {
@@ -19,8 +18,9 @@ export const Button = <T extends React.ElementType = "button">(
     styles,
     isDisabled,
     disableRipple,
+    spinner: propSpinner,
   } = useButton({ ...props });
-  const spinner = (
+  const spinner = propSpinner ?? (
     <CircularProgress size={20} strokeWidth={2} color="current" />
   );
   return (

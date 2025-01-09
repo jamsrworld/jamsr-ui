@@ -1,3 +1,3 @@
 "use client";
 
-export { Avatar, type AvatarProps } from "./avatar";
+export { Avatar, type AvatarProps, type AvatarCustomProps } from "./avatar";

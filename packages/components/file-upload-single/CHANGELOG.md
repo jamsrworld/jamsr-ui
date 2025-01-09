@@ -1,5 +1,13 @@
 # @jamsr-ui/file-upload-single
 
+## 0.0.112
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.76
+  - @jamsr-ui/circular-progress@0.0.13
+
 ## 0.0.111
 
 ### Patch Changes

@@ -30,7 +30,6 @@ const Avatar = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <AvatarUsage />
       </VariantWrapper>
-      
       <VariantWrapper heading="Fallbacks" code={code("fallbacks")}>
         <AvatarFallbacks />
       </VariantWrapper>

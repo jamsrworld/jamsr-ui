@@ -7,6 +7,7 @@ import { OtpInput6Digits } from "./examples/6-digits";
 import { OtpInputControlled } from "./examples/controlled";
 import { OtpInputRadius } from "./examples/radius";
 import { OtpInputUsage } from "./examples/usage";
+import { OtpInputOnComplete } from "./examples/on-complete";
 
 const title = "OTP Input";
 const description =
@@ -29,9 +30,11 @@ const OtpInput = () => {
       <VariantWrapper heading="6 Digits" code={code("6-digits")}>
         <OtpInput6Digits />
       </VariantWrapper>
-     
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <OtpInputControlled />
+      </VariantWrapper>
+      <VariantWrapper heading="On Complete" code={code("on-complete")}>
+        <OtpInputOnComplete />
       </VariantWrapper>
       <VariantWrapper heading="Radius" code={code("radius")}>
         <OtpInputRadius />

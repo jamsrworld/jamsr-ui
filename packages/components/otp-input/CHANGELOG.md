@@ -1,5 +1,13 @@
 # @jamsr-ui/otp-input
 
+## 0.0.83
+
+### Patch Changes
+
+- fix otp input, textarea, button, menu
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.76
+
 ## 0.0.82
 
 ### Patch Changes

@@ -43,6 +43,7 @@ export type OtpInputProps = OtpInputVariantProps & {
   helperText?: string;
   isDisabled?: boolean;
   disabled?: boolean;
+  onComplete?: (value: string) => void;
 };
 
 export const OtpInput = ($props: OtpInputProps) => {
@@ -71,6 +72,7 @@ export const OtpInput = ($props: OtpInputProps) => {
     classNames,
     disabled = false,
     isDisabled: propIsDisabled = false,
+    onComplete,
   } = props;
 
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
@@ -106,6 +108,13 @@ export const OtpInput = ($props: OtpInputProps) => {
       inputRefs.current[0]?.focus();
     }
   }, [autoFocus]);
+
+  useEffect(() => {
+    if (onComplete && value.trim().length === numberOfDigits) {
+      onComplete(value);
+    }
+  }, [numberOfDigits, onComplete, value]);
+
   const isNumInput = isNumeric;
 
   const isValidValueType = useCallback(

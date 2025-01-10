@@ -25,10 +25,10 @@ const title = "React Hook Form";
 const description =
   "React Hook Form is a library for managing form state and validation in React applications. It simplifies handling form inputs, validation, and submission, providing better performance and ease of use compared to traditional methods.";
 
-  export const metadata: Metadata = {
-    title,
-    description,
-  };
+export const metadata: Metadata = {
+  title,
+  description,
+};
 
 const code = <T extends VariantTypes["react-hook-form"][number]>(variant: T) =>
   readVariantCode("react-hook-form", variant);

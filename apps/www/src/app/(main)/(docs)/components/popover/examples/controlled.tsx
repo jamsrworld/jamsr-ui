@@ -12,7 +12,7 @@ export const PopoverControlled = () => {
         isOpen={isOpen}
         onOpenChange={setIsOpen}
         trigger={
-          <IconButton aria-label="Popover Trigger">
+          <IconButton label="Popover Trigger">
             <InfoIcon />
           </IconButton>
         }

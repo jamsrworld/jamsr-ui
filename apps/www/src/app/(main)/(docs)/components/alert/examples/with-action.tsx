@@ -26,7 +26,7 @@ export const AlertWithAction = () => {
           action={
             <div className="flex flex-row gap-2">
               <IconButton
-                aria-label="Close"
+                label="Close"
                 radius="full"
                 variant="light"
                 color="success"
@@ -34,7 +34,7 @@ export const AlertWithAction = () => {
                 <EyeClosedIcon className="size-5" />
               </IconButton>
               <IconButton
-                aria-label="Close"
+                label="Close"
                 onClick={handleClose}
                 radius="full"
                 color="danger"

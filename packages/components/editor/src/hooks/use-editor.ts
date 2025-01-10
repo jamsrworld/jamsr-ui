@@ -51,6 +51,7 @@ type Props = EditorVariantsProps & {
   label?: string;
   disabled?: boolean;
   isDisabled?: boolean;
+  isFormControl?: boolean;
 };
 
 export type UseEditorProps = UIProps<"div", Props>;
@@ -77,6 +78,7 @@ export const useEditor = ($props: UseEditorProps) => {
     label,
     disabled = false,
     isDisabled: propIsDisabled = false,
+    isFormControl = false,
     ...restProps
   } = props;
 
@@ -88,6 +90,7 @@ export const useEditor = ($props: UseEditorProps) => {
   );
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled || disabled,
+    isFormControl,
   });
   const { isHovered, ref: hoverRef } = useHover<HTMLDivElement>({
     isDisabled,

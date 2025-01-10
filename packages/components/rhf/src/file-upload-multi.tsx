@@ -85,6 +85,7 @@ export const RenderController = <
 
   return (
     <FileUploadMulti
+      isFormControl
       value={stateValue}
       onValueChange={setStateValue}
       onUploadSuccess={onUploadSuccess}

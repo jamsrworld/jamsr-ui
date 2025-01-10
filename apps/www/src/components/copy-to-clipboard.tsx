@@ -75,7 +75,7 @@ export const CopyToClipboard = (props: Props) => {
   return (
     <IconButton
       size="sm"
-      aria-label="Copy To Clipboard"
+      label="Copy To Clipboard"
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
       onClick={handleClick}
       radius={radius}

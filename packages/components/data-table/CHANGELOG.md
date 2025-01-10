@@ -1,5 +1,25 @@
 # @jamsr-ui/data-table
 
+## 0.0.81
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.17
+  - @jamsr-ui/button@0.0.92
+  - @jamsr-ui/select@0.0.111
+
+## 0.0.80
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.16
+  - @jamsr-ui/button@0.0.91
+  - @jamsr-ui/select@0.0.110
+
 ## 0.0.79
 
 ### Patch Changes

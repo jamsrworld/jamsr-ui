@@ -13,7 +13,7 @@ export const LinearProgressControlled = () => {
   return (
     <div className="flex items-center gap-4">
       <IconButton
-        aria-label="Decrease"
+        label="Decrease"
         isDisabled={!CanDecrease}
         onClick={OnDecrease}
       >
@@ -21,7 +21,7 @@ export const LinearProgressControlled = () => {
       </IconButton>
       <LinearProgress progress={value} />
       <IconButton
-        aria-label="Increase"
+        label="Increase"
         isDisabled={!CanIncrease}
         onClick={OnIncrease}
       >

@@ -1,5 +1,17 @@
 # @jamsr-ui/hooks
 
+## 0.0.58
+
+### Patch Changes
+
+- chore: input deps
+
+## 0.0.57
+
+### Patch Changes
+
+- fix input,icon-button
+
 ## 0.0.56
 
 ### Patch Changes

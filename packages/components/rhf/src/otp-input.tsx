@@ -21,6 +21,7 @@ export const RHFOtpInput = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <OtpInput
+            isFormControl
             value={value}
             onValueChange={onChange}
             onBlur={onBlur}

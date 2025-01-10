@@ -1,5 +1,21 @@
 # @jamsr-ui/otp-input
 
+## 0.0.85
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.84
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+
 ## 0.0.83
 
 ### Patch Changes

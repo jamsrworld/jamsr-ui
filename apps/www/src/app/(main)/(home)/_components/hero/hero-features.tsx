@@ -19,9 +19,7 @@ export const HeroFeatures = () => {
       <div className="size-1 rounded-full bg-foreground-tertiary" />
       <li className="text-sm text-foreground-tertiary">MIT License</li>
       <div className="size-1 rounded-full bg-foreground-tertiary" />
-      <li className="text-sm text-foreground-tertiary">
-        v{JAMSR_UI_VERSION} Unstable
-      </li>
+      <li className="text-sm text-foreground-tertiary">v{JAMSR_UI_VERSION}</li>
     </ul>
   );
 };

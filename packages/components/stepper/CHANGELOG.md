@@ -1,5 +1,20 @@
 # @jamsr-ui/stepper
 
+## 0.0.24
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+
 ## 0.0.22
 
 ### Patch Changes

@@ -28,6 +28,7 @@ type Props = ButtonCustomProps &
     disableAnimation?: boolean;
     ref?: React.Ref<HTMLButtonElement>;
     spinner?: React.ReactNode;
+    isFormControl?: boolean;
   };
 
 export type UseButtonProps = Props & ButtonVariantProps;
@@ -55,11 +56,13 @@ export const useButton = ($props: UseButtonProps) => {
     disableRipple,
     ref: propRef,
     spinner,
+    isFormControl = type === "submit" || type === "reset",
     ...restProps
   } = props;
 
   const { isDisabled, ref: disableRef } = useIsDisabled({
     isDisabled: isLoading || disabled || $isDisabled,
+    isFormControl,
   });
   const { isPressed, ref: pressRef } = usePress({
     isDisabled,

@@ -1,5 +1,20 @@
 # @jamsr-ui/menu
 
+## 0.0.109
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.108
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+
 ## 0.0.107
 
 ### Patch Changes

@@ -23,7 +23,7 @@ export const IconButtonVariantsColors = () => {
         <div key={variant} className="flex flex-wrap gap-4">
           {colors.map((color) => (
             <IconButton
-              aria-label={`${variant} - ${color}`}
+              label={`${variant} - ${color}`}
               key={`${variant}-${color}`}
               variant={variant}
               color={color}

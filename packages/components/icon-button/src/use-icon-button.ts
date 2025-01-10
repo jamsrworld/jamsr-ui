@@ -13,7 +13,7 @@ import {
   type PropGetter,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { useCallback, useMemo } from "react";
+import { type ComponentProps, useCallback, useId, useMemo } from "react";
 import { iconButton, type ButtonVariantProps } from "./styles";
 
 type Props = UIProps<"button"> & {
@@ -22,7 +22,9 @@ type Props = UIProps<"button"> & {
   disableRipple?: boolean;
   disableAnimation?: boolean;
   ref?: React.Ref<HTMLButtonElement>;
-  "aria-label": string;
+  spinner?: React.ReactNode;
+  label: string;
+  isFormControl?: boolean;
 };
 
 export type UseIconButtonProps = Props & ButtonVariantProps;
@@ -46,12 +48,15 @@ export const useIconButton = ($props: UseIconButtonProps) => {
     type = "button",
     disableRipple,
     ref: propRef,
-    "aria-label": ariaLabel,
+    label: ariaLabel,
+    spinner,
+    isFormControl = false,
     ...restProps
   } = props;
 
   const { isDisabled, ref: disableRef } = useIsDisabled({
     isDisabled: isLoading || disabled || $isDisabled,
+    isFormControl,
   });
   const { isPressed, ref: pressRef } = usePress({
     isDisabled,
@@ -71,27 +76,52 @@ export const useIconButton = ($props: UseIconButtonProps) => {
     [variantProps, className],
   );
 
+  const id = useId();
+
   const getButtonProps: PropGetter = useCallback(() => {
     return {
       ...restProps,
       disabled: isDisabled,
+      "data-component": "button",
       "data-disabled": dataAttr(isDisabled),
       "aria-disabled": dataAttr(isDisabled),
       "data-pressed": dataAttr(isPressed),
       "data-hovered": dataAttr(isHovered),
       "aria-label": ariaLabel,
+      "aria-labelledby": id,
+      className: styles,
       type,
       ref,
     };
-  }, [restProps, isDisabled, isPressed, isHovered, ariaLabel, type, ref]);
+  }, [
+    restProps,
+    isDisabled,
+    isPressed,
+    isHovered,
+    ariaLabel,
+    id,
+    styles,
+    type,
+    ref,
+  ]);
+
+  const getLabelProps: PropGetter<ComponentProps<"span">> = useCallback(() => {
+    return {
+      "aria-hidden": true,
+      id,
+      className: "sr-only",
+    };
+  }, [id]);
 
   return {
     Component,
     children,
-    styles,
     isDisabled,
     disableRipple,
     getButtonProps,
     isLoading,
+    getLabelProps,
+    spinner,
+    ariaLabel,
   };
 };

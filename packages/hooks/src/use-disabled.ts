@@ -1,19 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 
 type UseIsDisableProps = {
-  isDisabled?: boolean;
+  isDisabled: boolean;
+  isFormControl: boolean;
 };
 
 export const useIsDisabled = <T extends HTMLElement>(
-  props?: UseIsDisableProps,
+  props: UseIsDisableProps,
 ) => {
-  const { isDisabled: propIsDisabled = false } = props ?? {};
+  const { isDisabled: propIsDisabled, isFormControl } = props ?? {};
   const ref = useRef<T>(null);
   const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
     const input = ref.current;
-    if (!input || propIsDisabled) return () => {};
+    if (!input || propIsDisabled || !isFormControl) return () => {};
+
     const fieldset = input.closest("fieldset");
     if (!fieldset) return () => {};
     const updateState = () => {
@@ -28,10 +30,10 @@ export const useIsDisabled = <T extends HTMLElement>(
       attributeFilter: ["disabled"],
     });
     return () => observer.disconnect();
-  }, [propIsDisabled]);
+  }, [isFormControl, propIsDisabled]);
 
-  if (propIsDisabled) {
-    return { ref, isDisabled: true };
+  if (propIsDisabled || !isFormControl) {
+    return { ref, isDisabled: propIsDisabled };
   }
   return { ref, isDisabled };
 };

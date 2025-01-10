@@ -1,5 +1,20 @@
 # @jamsr-ui/sidebar
 
+## 0.0.93
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.92
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+
 ## 0.0.91
 
 ### Patch Changes

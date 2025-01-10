@@ -1,5 +1,27 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.125
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/button@0.0.92
+  - @jamsr-ui/input@0.0.116
+  - @jamsr-ui/chip@0.0.100
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.124
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/button@0.0.91
+  - @jamsr-ui/input@0.0.115
+  - @jamsr-ui/hooks@0.0.57
+  - @jamsr-ui/chip@0.0.99
+
 ## 0.0.123
 
 ### Patch Changes

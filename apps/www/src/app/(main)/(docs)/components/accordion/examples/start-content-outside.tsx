@@ -11,7 +11,7 @@ export const AccordionStartContentOutside = () => {
         heading="Accordion 1"
         subheading="Press to expand item 1"
         startContent={
-          <IconButton aria-label="success" color="success" variant="outlined">
+          <IconButton label="success" color="success" variant="outlined">
             <PlusIcon />
           </IconButton>
         }
@@ -23,7 +23,7 @@ export const AccordionStartContentOutside = () => {
         heading="Accordion 2"
         subheading="Press to expand item 2"
         startContent={
-          <IconButton aria-label="success" color="success" variant="outlined">
+          <IconButton label="success" color="success" variant="outlined">
             <PlusIcon />
           </IconButton>
         }
@@ -36,7 +36,7 @@ export const AccordionStartContentOutside = () => {
         heading="Disabled Accordion"
         subheading="Disabled Accordion Item"
         startContent={
-          <IconButton aria-label="success" color="success" variant="outlined">
+          <IconButton label="success" color="success" variant="outlined">
             <PlusIcon />
           </IconButton>
         }

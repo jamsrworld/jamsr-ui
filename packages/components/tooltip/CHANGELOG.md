@@ -1,5 +1,17 @@
 # @jamsr-ui/tooltip
 
+## 0.0.83
+
+### Patch Changes
+
+- chore: input deps
+
+## 0.0.82
+
+### Patch Changes
+
+- fix input,icon-button
+
 ## 0.0.81
 
 ### Patch Changes

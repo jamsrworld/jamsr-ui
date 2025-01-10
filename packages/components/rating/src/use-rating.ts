@@ -24,6 +24,7 @@ type Props = {
   className?: string;
   isInvalid?: boolean;
   helperText?: string;
+  isFormControl?: boolean;
 };
 export type UseRatingProps = Props & ComponentProps<"div">;
 
@@ -46,6 +47,7 @@ export const useRating = ($props: UseRatingProps) => {
     value: propValue,
     defaultValue,
     helperText,
+    isFormControl = false,
     ...restProps
   } = props;
 

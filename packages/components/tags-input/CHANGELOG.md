@@ -1,5 +1,24 @@
 # @jamsr-ui/tags-input
 
+## 0.0.54
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/input@0.0.116
+  - @jamsr-ui/chip@0.0.100
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.53
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/input@0.0.115
+  - @jamsr-ui/hooks@0.0.57
+  - @jamsr-ui/chip@0.0.99
+
 ## 0.0.52
 
 ### Patch Changes

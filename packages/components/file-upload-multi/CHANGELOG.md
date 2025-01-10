@@ -1,5 +1,21 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.111
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.110
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+
 ## 0.0.109
 
 ### Patch Changes

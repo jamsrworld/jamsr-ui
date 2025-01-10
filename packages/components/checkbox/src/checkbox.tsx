@@ -38,6 +38,7 @@ export type CheckboxProps = CheckboxVariantProps & {
   isDisabled?: boolean;
   disabled?: boolean;
   onBlur?: () => void;
+  isFormControl?: boolean;
 };
 
 export const Checkbox = ($props: CheckboxProps) => {
@@ -66,6 +67,7 @@ export const Checkbox = ($props: CheckboxProps) => {
     disabled,
     onBlur,
     description,
+    isFormControl = false,
     ...restProps
   } = props;
 
@@ -77,6 +79,7 @@ export const Checkbox = ($props: CheckboxProps) => {
 
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled ?? disabled,
+    isFormControl,
   });
   const isInteractive = !isDisabled && !isReadonly;
   const { isHovered, ref: hoverRef } = useHover({

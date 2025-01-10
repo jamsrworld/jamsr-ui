@@ -6,7 +6,7 @@ export const PopoverUsage = () => {
     <div className="grid place-content-center">
       <Popover
         trigger={
-          <IconButton aria-label="Popover Trigger">
+          <IconButton label="Popover Trigger">
             <InfoIcon />
           </IconButton>
         }

@@ -53,7 +53,7 @@ export const Input = <T extends React.ElementType = "div">(
     const content =
       (isSecuredText === true && (
         <IconButton
-          aria-label={showPassword ? "Show Password" : "Hide Password"}
+          label={showPassword ? "Show Password" : "Hide Password"}
           onClick={handleChangeInputType}
           variant="light"
           size="sm"
@@ -76,7 +76,7 @@ export const Input = <T extends React.ElementType = "div">(
     if (showClearButton ?? (isClearable && hasValue)) {
       contents.push(
         <IconButton
-          aria-label="Clear"
+          label="Clear"
           variant="solid"
           size="xs"
           radius="full"

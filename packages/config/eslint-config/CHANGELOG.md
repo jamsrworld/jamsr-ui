@@ -1,5 +1,17 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.52
+
+### Patch Changes
+
+- chore: input deps
+
+## 0.0.51
+
+### Patch Changes
+
+- fix input,icon-button
+
 ## 0.0.50
 
 ### Patch Changes

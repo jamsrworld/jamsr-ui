@@ -25,6 +25,7 @@ export const RHFAutocomplete = <T extends FieldValues>(props: Props<T>) => {
         };
         return (
           <Autocomplete
+            isFormControl
             value={$value}
             onValueChange={onValueChange}
             onBlur={onBlur}

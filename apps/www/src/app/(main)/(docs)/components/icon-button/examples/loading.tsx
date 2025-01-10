@@ -4,10 +4,10 @@ import { EmailIcon } from "@jamsr-ui/shared-icons";
 export const IconButtonLoading = () => {
   return (
     <div className="flex flex-row gap-4">
-      <IconButton aria-label="Loading Icon Button" isLoading>
+      <IconButton label="Loading Icon Button" isLoading>
         <EmailIcon />
       </IconButton>
-      <IconButton color="success" aria-label="Loading Icon Button" isLoading>
+      <IconButton color="success" label="Loading Icon Button" isLoading>
         <EmailIcon />
       </IconButton>
     </div>

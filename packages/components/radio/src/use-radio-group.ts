@@ -29,6 +29,7 @@ type Props<T extends string> = {
   label?: React.ReactNode;
   helperText?: React.ReactNode;
   defaultValue?: string;
+  isFormControl?: boolean;
 };
 
 export type UseRadioGroupProps<T extends string = string> = Props<T> &
@@ -57,6 +58,7 @@ export const useRadioGroup = <T extends string>(
     label,
     children,
     helperText,
+    isFormControl,
     ...restProps
   } = props as UseRadioGroupProps<string>;
 

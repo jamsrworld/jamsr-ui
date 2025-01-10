@@ -1,5 +1,35 @@
 # @jamsr-ui/editor
 
+## 0.0.127
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.114
+  - @jamsr-ui/icon-button@0.0.17
+  - @jamsr-ui/popover@0.0.88
+  - @jamsr-ui/select@0.0.111
+  - @jamsr-ui/switch@0.0.95
+  - @jamsr-ui/input@0.0.116
+  - @jamsr-ui/menu@0.0.109
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.126
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.113
+  - @jamsr-ui/icon-button@0.0.16
+  - @jamsr-ui/popover@0.0.87
+  - @jamsr-ui/select@0.0.110
+  - @jamsr-ui/switch@0.0.94
+  - @jamsr-ui/input@0.0.115
+  - @jamsr-ui/hooks@0.0.57
+  - @jamsr-ui/menu@0.0.108
+
 ## 0.0.125
 
 ### Patch Changes

@@ -1,5 +1,23 @@
 # @jamsr-ui/icon-button
 
+## 0.0.17
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/ripple@0.0.86
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.16
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+  - @jamsr-ui/ripple@0.0.85
+
 ## 0.0.15
 
 ### Patch Changes

@@ -22,6 +22,7 @@ export const RHFCheckbox = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <Checkbox
+            isFormControl
             isChecked={value}
             onCheckedChange={onChange}
             onBlur={onBlur}

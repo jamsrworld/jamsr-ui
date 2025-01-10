@@ -28,6 +28,7 @@ type Props = {
   value?: string;
   defaultChecked?: boolean;
   isDisabled?: boolean;
+  isFormControl?: boolean;
 } & RadioVariantProps;
 
 export type UseRadioProps = UIProps<"input", Props>;
@@ -52,17 +53,19 @@ export const useRadio = ($props: UseRadioProps) => {
     children,
     className,
     classNames,
-    isDisabled: propIsDisabled = context?.isDisabled,
+    isDisabled: propIsDisabled = context?.isDisabled ?? false,
     description,
     checked,
     defaultChecked,
     value,
     name,
+    isFormControl = false,
     ...restProps
   } = props;
 
   const { isDisabled, ref: disableRef } = useIsDisabled({
     isDisabled: propIsDisabled,
+    isFormControl,
   });
   const { isHovered, ref: hoverRef } = useHover({
     isDisabled,

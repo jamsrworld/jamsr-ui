@@ -55,7 +55,7 @@ export const AppHeader = () => {
         <div className="flex items-center gap-2">
           <SearchBar />
           <IconButton
-            aria-label="Twitter"
+            label="Twitter"
             as="a"
             href={JAMSR_UI_TWITTER_URL}
             target="_blank"
@@ -64,7 +64,7 @@ export const AppHeader = () => {
             <TwitterIcon />
           </IconButton>
           <IconButton
-            aria-label="Twitter"
+            label="Twitter"
             as="a"
             href={JAMSR_UI_GITHUB_URL}
             target="_blank"

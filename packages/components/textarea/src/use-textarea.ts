@@ -40,6 +40,7 @@ type Props = {
   inputWrapperRef?: React.Ref<HTMLDivElement>;
   ref?: React.Ref<HTMLTextAreaElement>;
   isDisabled?: boolean;
+  isFormControl?: boolean;
 } & TextareaVariantProps;
 
 export type UseTextareaProps = UIProps<"textarea", Props>;
@@ -70,8 +71,9 @@ export const useTextarea = ($props: UseTextareaProps) => {
     baseRef,
     inputWrapperRef,
     ref,
-    disabled,
-    isDisabled: propIsDisabled,
+    disabled = false,
+    isDisabled: propIsDisabled = false,
+    isFormControl = false,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -79,7 +81,8 @@ export const useTextarea = ($props: UseTextareaProps) => {
   const { variant = "standard", isInvalid } = variantProps;
 
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLTextAreaElement>({
-    isDisabled: propIsDisabled ?? disabled,
+    isDisabled: propIsDisabled || disabled,
+    isFormControl,
   });
   const { isFocused, ref: focusRef } = useFocus<HTMLTextAreaElement>({
     isDisabled,

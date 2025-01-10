@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/editor",
-  "version": "0.0.125",
+  "version": "0.0.127",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

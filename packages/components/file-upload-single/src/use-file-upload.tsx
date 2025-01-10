@@ -45,6 +45,7 @@ type Props = {
   uploadApiUrl: string;
   getFileUrlAfterUpload: (response: any) => string;
   label?: string;
+  isFormControl?: boolean;
 } & UploadVariants;
 
 export type UseFileUploadSingleProps = UIProps<"div", Props>;
@@ -82,6 +83,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     onUploadSuccess,
     getFileUrlAfterUpload,
     label,
+    isFormControl = false,
     ...restProps
   } = props;
   const xhrRef = useRef<XMLHttpRequest | null>(null);
@@ -93,6 +95,7 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
   const { isDisabled: propIsDisabled = false } = variantProps;
   const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled,
+    isFormControl,
   });
   const [previewUrl, setPreviewUrl] = useState<string | null>(value);
   const [progress, setProgress] = useState(0);

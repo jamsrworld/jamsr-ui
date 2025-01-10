@@ -18,7 +18,7 @@ export default function ToolbarItem({
 }) {
   return (
     <IconButton
-      aria-label={title!}
+      label={title!}
       onClick={onClick}
       title={title}
       size="sm"

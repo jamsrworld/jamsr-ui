@@ -1,5 +1,84 @@
 # @jamsr-ui/react
 
+## 0.0.231
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.114
+  - @jamsr-ui/file-upload-multi@0.0.111
+  - @jamsr-ui/autocomplete@0.0.125
+  - @jamsr-ui/confirmation@0.0.84
+  - @jamsr-ui/collapsible@0.0.8
+  - @jamsr-ui/icon-button@0.0.17
+  - @jamsr-ui/data-table@0.0.81
+  - @jamsr-ui/tags-input@0.0.54
+  - @jamsr-ui/otp-input@0.0.85
+  - @jamsr-ui/checkbox@0.0.88
+  - @jamsr-ui/textarea@0.0.117
+  - @jamsr-ui/popover@0.0.88
+  - @jamsr-ui/sidebar@0.0.93
+  - @jamsr-ui/stepper@0.0.24
+  - @jamsr-ui/tooltip@0.0.83
+  - @jamsr-ui/button@0.0.92
+  - @jamsr-ui/dialog@0.0.102
+  - @jamsr-ui/drawer@1.0.88
+  - @jamsr-ui/editor@0.0.127
+  - @jamsr-ui/rating@0.0.44
+  - @jamsr-ui/ripple@0.0.86
+  - @jamsr-ui/select@0.0.111
+  - @jamsr-ui/switch@0.0.95
+  - @jamsr-ui/input@0.0.116
+  - @jamsr-ui/radio@0.0.93
+  - @jamsr-ui/chip@0.0.100
+  - @jamsr-ui/menu@0.0.109
+  - @jamsr-ui/rhf@0.0.72
+  - @jamsr-ui/tab@0.0.107
+  - @jamsr-ui/alert@0.0.100
+  - @jamsr-ui/card@0.0.95
+  - @jamsr-ui/header@0.0.88
+  - @jamsr-ui/toast@0.0.42
+
+## 0.0.230
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.113
+  - @jamsr-ui/file-upload-multi@0.0.110
+  - @jamsr-ui/autocomplete@0.0.124
+  - @jamsr-ui/icon-button@0.0.16
+  - @jamsr-ui/data-table@0.0.80
+  - @jamsr-ui/otp-input@0.0.84
+  - @jamsr-ui/checkbox@0.0.87
+  - @jamsr-ui/textarea@0.0.116
+  - @jamsr-ui/popover@0.0.87
+  - @jamsr-ui/tooltip@0.0.82
+  - @jamsr-ui/button@0.0.91
+  - @jamsr-ui/dialog@0.0.101
+  - @jamsr-ui/drawer@1.0.87
+  - @jamsr-ui/editor@0.0.126
+  - @jamsr-ui/rating@0.0.43
+  - @jamsr-ui/select@0.0.110
+  - @jamsr-ui/switch@0.0.94
+  - @jamsr-ui/input@0.0.115
+  - @jamsr-ui/radio@0.0.92
+  - @jamsr-ui/rhf@0.0.71
+  - @jamsr-ui/alert@0.0.100
+  - @jamsr-ui/card@0.0.95
+  - @jamsr-ui/chip@0.0.99
+  - @jamsr-ui/confirmation@0.0.83
+  - @jamsr-ui/header@0.0.88
+  - @jamsr-ui/menu@0.0.108
+  - @jamsr-ui/tab@0.0.106
+  - @jamsr-ui/toast@0.0.42
+  - @jamsr-ui/tags-input@0.0.53
+  - @jamsr-ui/collapsible@0.0.7
+  - @jamsr-ui/ripple@0.0.85
+  - @jamsr-ui/sidebar@0.0.92
+  - @jamsr-ui/stepper@0.0.23
+
 ## 0.0.229
 
 ### Patch Changes

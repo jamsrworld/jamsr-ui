@@ -21,6 +21,7 @@ export const RHFSwitch = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <Switch
+            isFormControl
             checked={value}
             onCheckedChange={onChange}
             onBlur={onBlur}

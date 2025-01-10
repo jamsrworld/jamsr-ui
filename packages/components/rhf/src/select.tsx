@@ -25,6 +25,7 @@ export const RHFSelect = <T extends FieldValues>(props: Props<T>) => {
         };
         return (
           <Select
+            isFormControl
             value={$value}
             onValueChange={onValueChange}
             onBlur={onBlur}

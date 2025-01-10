@@ -1,5 +1,20 @@
 # @jamsr-ui/ripple
 
+## 0.0.86
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.85
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+
 ## 0.0.84
 
 ### Patch Changes

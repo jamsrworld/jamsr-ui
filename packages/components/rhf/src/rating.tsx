@@ -21,6 +21,7 @@ export const RHFRating = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <Rating
+            isFormControl
             value={value}
             onValueChange={onChange}
             onBlur={onBlur}

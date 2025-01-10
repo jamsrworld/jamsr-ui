@@ -18,7 +18,7 @@ export const DialogCloseBtn = (props: Partial<IconButtonProps>) => {
   });
   return (
     <IconButton
-      aria-label="Close"
+      label="Close"
       data-slot="close"
       type="button"
       variant="light"

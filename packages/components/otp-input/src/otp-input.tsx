@@ -44,6 +44,7 @@ export type OtpInputProps = OtpInputVariantProps & {
   isDisabled?: boolean;
   disabled?: boolean;
   onComplete?: (value: string) => void;
+  isFormControl?: boolean;
 };
 
 export const OtpInput = ($props: OtpInputProps) => {
@@ -73,10 +74,12 @@ export const OtpInput = ($props: OtpInputProps) => {
     disabled = false,
     isDisabled: propIsDisabled = false,
     onComplete,
+    isFormControl = false,
   } = props;
 
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled || disabled,
+    isFormControl,
   });
 
   const [value = "", setValue] = useControlledState(

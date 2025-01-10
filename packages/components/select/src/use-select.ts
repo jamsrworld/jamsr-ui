@@ -63,6 +63,7 @@ type Props = SelectVariantProps & {
   startContent?: React.ReactNode;
   endContent?: React.ReactNode;
   returnFocus?: boolean;
+  isFormControl?: boolean;
 };
 
 export type UseSelectInnerProps = Props;
@@ -97,8 +98,9 @@ export const useSelect = ($props: UseSelectProps) => {
     startContent,
     endContent,
     as,
-    isDisabled: propIsDisabled,
+    isDisabled: propIsDisabled = false,
     returnFocus = true,
+    isFormControl = false,
     ...restProps
   } = props;
 
@@ -118,6 +120,7 @@ export const useSelect = ($props: UseSelectProps) => {
 
   const { isDisabled, ref: disableRef } = useIsDisabled({
     isDisabled: propIsDisabled,
+    isFormControl,
   });
   const { isHovered, ref: hoverRef } = useHover({
     isDisabled,

@@ -1,5 +1,23 @@
 # web
 
+## 0.1.213
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+  - @jamsr-ui/react@0.0.231
+
+## 0.1.212
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+  - @jamsr-ui/react@0.0.230
+
 ## 0.1.211
 
 ### Patch Changes

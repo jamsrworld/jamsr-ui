@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/input",
-  "version": "0.0.114",
+  "version": "0.0.116",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@jamsr-ui/popover": "workspace:^",
-    "@types/react": "19.0.1",
     "@types/node": "^22.7.9",
+    "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

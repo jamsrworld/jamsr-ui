@@ -23,6 +23,7 @@ export const RHFTagsInput = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <TagsInput
+            isFormControl
             value={value as any}
             onValueChange={onChange as any}
             onBlur={onBlur}

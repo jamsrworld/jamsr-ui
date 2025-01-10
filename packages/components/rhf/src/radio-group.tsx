@@ -21,6 +21,7 @@ export const RHFRadioGroup = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <RadioGroup
+            isFormControl
             value={value}
             name={name}
             onValueChange={onChange}

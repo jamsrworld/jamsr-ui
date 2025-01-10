@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/stepper",
-  "version": "0.0.22",
+  "version": "0.0.24",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",

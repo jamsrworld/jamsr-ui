@@ -1,5 +1,23 @@
 # @jamsr-ui/input
 
+## 0.0.116
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.17
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.115
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.16
+  - @jamsr-ui/hooks@0.0.57
+
 ## 0.0.114
 
 ### Patch Changes

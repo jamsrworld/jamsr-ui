@@ -13,18 +13,16 @@ export const IconButton = <T extends React.ElementType = "button">(
     children,
     getButtonProps,
     isLoading,
-    styles,
     isDisabled,
     disableRipple,
+    getLabelProps,
+    spinner: propSpinner,
+    ariaLabel,
   } = useIconButton({ ...props });
-  const spinner = <CircularProgress size={30} color="current" />;
+  const spinner = propSpinner ?? <CircularProgress size={30} color="current" />;
   return (
-    <Component
-      data-component="button"
-      data-slot="base"
-      className={styles}
-      {...getButtonProps()}
-    >
+    <Component data-component="button" {...getButtonProps()}>
+      <span {...getLabelProps()}>{ariaLabel}</span>
       {isLoading ? spinner : children}
       {!isDisabled && !disableRipple && <Ripple isCenter />}
     </Component>

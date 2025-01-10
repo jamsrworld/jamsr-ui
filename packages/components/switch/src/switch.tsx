@@ -50,6 +50,7 @@ type Props = {
   readonly?: boolean;
   isReadonly?: boolean;
   ref?: React.RefObject<HTMLInputElement>;
+  isFormControl?: boolean;
 } & SwitchVariantProps;
 
 export type SwitchProps = Props;
@@ -71,15 +72,16 @@ export const Switch = ($props: SwitchProps) => {
     onCheckedChange,
     label,
     description,
-    isDisabled: propIsDisabled,
+    isDisabled: propIsDisabled = false,
     onBlur,
     helperText,
     className,
     classNames,
-    disabled,
+    disabled = false,
     ref,
     readonly,
     isReadonly: $isReadonly,
+    isFormControl = false,
     ...restProps
   } = props;
 
@@ -90,7 +92,8 @@ export const Switch = ($props: SwitchProps) => {
   );
   const isReadonly = readonly ?? $isReadonly;
   const { isDisabled, ref: disableRef } = useIsDisabled({
-    isDisabled: disabled ?? propIsDisabled,
+    isDisabled: disabled || propIsDisabled,
+    isFormControl,
   });
   const isInteractive = !isDisabled && !isReadonly;
   const { isHovered, ref: hoverRef } = useHover({

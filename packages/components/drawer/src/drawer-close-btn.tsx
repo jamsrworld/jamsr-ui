@@ -16,7 +16,7 @@ export const DrawerCloseButton = ($props: Partial<IconButtonProps>) => {
   });
   return (
     <IconButton
-      aria-label="Close"
+      label="Close"
       variant="light"
       radius="full"
       {...slotProps.closeButton}

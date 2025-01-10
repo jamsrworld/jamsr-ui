@@ -1,5 +1,27 @@
 # @jamsr-ui/select
 
+## 0.0.111
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.88
+  - @jamsr-ui/button@0.0.92
+  - @jamsr-ui/chip@0.0.100
+  - @jamsr-ui/hooks@0.0.58
+
+## 0.0.110
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.87
+  - @jamsr-ui/button@0.0.91
+  - @jamsr-ui/hooks@0.0.57
+  - @jamsr-ui/chip@0.0.99
+
 ## 0.0.109
 
 ### Patch Changes

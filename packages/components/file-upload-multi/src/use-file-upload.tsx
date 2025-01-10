@@ -52,6 +52,7 @@ type Props = MultiUploadVariants & {
   uploadApiUrl: string;
   getFileUrlAfterUpload: (response: any) => string;
   inputName: string;
+  isFormControl?: boolean;
 };
 
 export type UseFileUploadMultiProps = UIProps<"div", Props>;
@@ -59,7 +60,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
   const { fileUploadMulti: _globalProps = {}, globalConfig } = useUIStyle();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
-  const mergedProps = deepMergeProps(globalProps, _props);
+  const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
   const [props, variantProps] = mapPropsVariants(
     mergedProps,
     multiUploadVariant.variantKeys,
@@ -84,6 +85,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     onUploadSuccess,
     getFileUrlAfterUpload,
     label,
+    isFormControl = false,
     ...restProps
   } = props;
 
@@ -95,6 +97,7 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
   const { isDisabled: propIsDisabled = false } = variantProps;
   const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled,
+    isFormControl,
   });
 
   const xhrRefs = useRef<{ id: string; xhr: XMLHttpRequest }[]>([]);

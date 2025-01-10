@@ -1,5 +1,45 @@
 # @jamsr-ui/rhf
 
+## 0.0.72
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.114
+  - @jamsr-ui/file-upload-multi@0.0.111
+  - @jamsr-ui/autocomplete@0.0.125
+  - @jamsr-ui/tags-input@0.0.54
+  - @jamsr-ui/otp-input@0.0.85
+  - @jamsr-ui/checkbox@0.0.88
+  - @jamsr-ui/textarea@0.0.117
+  - @jamsr-ui/editor@0.0.127
+  - @jamsr-ui/rating@0.0.44
+  - @jamsr-ui/select@0.0.111
+  - @jamsr-ui/switch@0.0.95
+  - @jamsr-ui/input@0.0.116
+  - @jamsr-ui/radio@0.0.93
+
+## 0.0.71
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.113
+  - @jamsr-ui/file-upload-multi@0.0.110
+  - @jamsr-ui/autocomplete@0.0.124
+  - @jamsr-ui/otp-input@0.0.84
+  - @jamsr-ui/checkbox@0.0.87
+  - @jamsr-ui/textarea@0.0.116
+  - @jamsr-ui/editor@0.0.126
+  - @jamsr-ui/rating@0.0.43
+  - @jamsr-ui/select@0.0.110
+  - @jamsr-ui/switch@0.0.94
+  - @jamsr-ui/input@0.0.115
+  - @jamsr-ui/radio@0.0.92
+  - @jamsr-ui/tags-input@0.0.53
+
 ## 0.0.70
 
 ### Patch Changes

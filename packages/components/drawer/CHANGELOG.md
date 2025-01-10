@@ -1,5 +1,23 @@
 # @jamsr-ui/drawer
 
+## 1.0.88
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.17
+  - @jamsr-ui/hooks@0.0.58
+
+## 1.0.87
+
+### Patch Changes
+
+- fix input,icon-button
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.16
+  - @jamsr-ui/hooks@0.0.57
+
 ## 1.0.86
 
 ### Patch Changes

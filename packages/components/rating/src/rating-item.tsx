@@ -9,10 +9,18 @@ type Props = ComponentProps<"svg"> & {
   index: number;
   setValue: (value: number) => void;
   id: string;
+  isFormControl?: boolean;
 };
 
 export const RatingItem = (props: Props) => {
-  const { index: itemValue, value, setValue, id, ...restProps } = props;
+  const {
+    index: itemValue,
+    value,
+    setValue,
+    id,
+    isFormControl = false,
+    ...restProps
+  } = props;
   const handleOnChange = () => {
     setValue(itemValue);
   };
@@ -25,6 +33,7 @@ export const RatingItem = (props: Props) => {
   } = useRatingContext();
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled,
+    isFormControl,
   });
   const isInteractive = !isDisabled && !isReadonly;
   const handleMouseMove = () => {

@@ -61,6 +61,7 @@ export type UseAutocompleteProps = Pick<
   isMultiple?: boolean;
   children: React.ReactNode;
   inputProps?: Partial<InputProps>;
+  isFormControl?: boolean;
 };
 
 export const useAutocomplete = ($props: UseAutocompleteProps) => {
@@ -94,6 +95,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     inputProps,
     isDisabled,
     onBlur,
+    isFormControl,
   } = props;
   const baseRef = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);

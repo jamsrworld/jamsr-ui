@@ -20,7 +20,7 @@ export const TextPicker = (props: Props) => {
     <Menu
       trigger={
         <IconButton
-          aria-label="Text Picker"
+          label="Text Picker"
           disabled={isDisabled}
           size="sm"
           type="button"

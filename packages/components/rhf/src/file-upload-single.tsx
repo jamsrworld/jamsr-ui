@@ -49,6 +49,7 @@ export const RHFFileUploadSingle = <T extends FieldValues>(props: Props<T>) => {
         };
         return (
           <FileUploadSingle
+            isFormControl
             value={getFileUrlAfterUpload(value)}
             onValueChange={onValueChange}
             onUploadSuccess={onUploadSuccess}

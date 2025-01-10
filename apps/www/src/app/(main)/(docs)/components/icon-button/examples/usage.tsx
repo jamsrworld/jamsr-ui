@@ -5,7 +5,7 @@ import { EmailIcon } from "@jamsr-ui/shared-icons";
 
 export const IconButtonUsage = () => {
   return (
-    <IconButton aria-label="Icon Button Usage" color="primary">
+    <IconButton label="Icon Button Usage" color="primary">
       <EmailIcon />
     </IconButton>
   );

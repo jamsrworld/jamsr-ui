@@ -24,6 +24,7 @@ export const RHFEditor = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <Editor
+            isFormControl
             value={value}
             onValueChange={onChange}
             onBlur={onBlur}

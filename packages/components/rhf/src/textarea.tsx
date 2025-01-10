@@ -21,6 +21,7 @@ export const RHFTextarea = <T extends FieldValues>(props: Props<T>) => {
       }) => {
         return (
           <Textarea
+            isFormControl
             value={value}
             onValueChange={onChange}
             onBlur={onBlur}

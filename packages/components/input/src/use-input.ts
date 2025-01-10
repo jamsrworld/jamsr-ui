@@ -64,6 +64,7 @@ type Props = {
     eyeClosedIcon?: React.ReactNode;
     clearIcon?: React.ReactNode;
   };
+  isFormControl?: boolean;
 } & InputVariantProps;
 
 export type UseInputProps = UIProps<"input", Props>;
@@ -108,12 +109,14 @@ export const useInput = ($props: UseInputProps) => {
     disabled = false,
     isDisabled: $isDisabled = false,
     slots = {},
+    isFormControl = false,
     ...restProps
   } = props;
   const Component = as ?? "div";
   const InputComponent = "input";
   const { isDisabled, ref: disableRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: disabled || $isDisabled,
+    isFormControl,
   });
   const { isFocused, ref: focusRef } = useFocus<HTMLInputElement>({
     isDisabled,

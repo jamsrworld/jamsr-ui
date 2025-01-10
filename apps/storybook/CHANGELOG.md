@@ -1,5 +1,19 @@
 # @ui/storybook
 
+## 0.0.233
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/react@0.0.231
+
+## 0.0.232
+
+### Patch Changes
+
+- @jamsr-ui/react@0.0.230
+
 ## 0.0.231
 
 ### Patch Changes

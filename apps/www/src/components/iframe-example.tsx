@@ -15,7 +15,7 @@ export const IFrameExample = (props: Props) => {
           as="a"
           href={src}
           target="_blank"
-          aria-label="Open In New Tab"
+          label="Open In New Tab"
           className="absolute right-0 top-0 text-foreground-secondary"
           variant="outlined"
         >

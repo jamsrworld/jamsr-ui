@@ -1,5 +1,22 @@
 # @jamsr-ui/confirmation
 
+## 0.0.84
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/button@0.0.92
+  - @jamsr-ui/dialog@0.0.102
+
+## 0.0.83
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/button@0.0.91
+  - @jamsr-ui/dialog@0.0.101
+
 ## 0.0.82
 
 ### Patch Changes

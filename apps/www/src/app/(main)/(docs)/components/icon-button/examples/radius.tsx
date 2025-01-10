@@ -16,7 +16,7 @@ export const IconButtonRadius = () => {
     <div className="flex gap-4">
       {radii.map((radius) => (
         <IconButton
-          aria-label={`${radius} Icon Button`}
+          label={`${radius} Icon Button`}
           key={radius}
           radius={radius}
         >

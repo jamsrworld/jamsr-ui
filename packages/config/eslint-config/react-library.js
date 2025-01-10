@@ -116,5 +116,6 @@ module.exports = {
     "react/static-property-placement": "off",
     "class-methods-use-this": "off",
     "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-empty-interface": "off",
   },
 };

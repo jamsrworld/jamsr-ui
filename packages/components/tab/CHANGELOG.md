@@ -1,5 +1,22 @@
 # @jamsr-ui/tab
 
+## 0.0.107
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.58
+  - @jamsr-ui/card@0.0.95
+
+## 0.0.106
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/hooks@0.0.57
+  - @jamsr-ui/card@0.0.95
+
 ## 0.0.105
 
 ### Patch Changes

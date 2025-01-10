@@ -97,7 +97,7 @@ const Item = (props: ItemProps) => {
         />
       </div>
       <IconButton
-        aria-label="Reorder"
+        label="Reorder"
         className="absolute left-2 top-2 hidden group-hover:flex"
         size="xs"
         ref={setActivatorNodeRef}

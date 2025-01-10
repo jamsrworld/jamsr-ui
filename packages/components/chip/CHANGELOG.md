@@ -1,5 +1,20 @@
 # @jamsr-ui/chip
 
+## 0.0.100
+
+### Patch Changes
+
+- chore: input deps
+- Updated dependencies
+  - @jamsr-ui/button@0.0.92
+
+## 0.0.99
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/button@0.0.91
+
 ## 0.0.98
 
 ### Patch Changes

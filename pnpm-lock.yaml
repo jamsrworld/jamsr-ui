@@ -1106,9 +1106,6 @@ importers:
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
-      "hooks\_--workspace":
-        specifier: "link:@jamsr-ui/hooks\_--workspace"
-        version: "link:@jamsr-ui/hooks\_--workspace"
     devDependencies:
       '@jamsr-ui/popover':
         specifier: workspace:^

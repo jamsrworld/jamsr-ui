@@ -9,7 +9,7 @@ import {
 } from "@jamsr-ui/dialog";
 import { Divider } from "@jamsr-ui/divider";
 import { useUIStyle } from "@jamsr-ui/styles";
-import { Text } from "../../text/src";
+import { Text } from "@jamsr-ui/text";
 import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useConfirmation } from "./use-confirmation";
 

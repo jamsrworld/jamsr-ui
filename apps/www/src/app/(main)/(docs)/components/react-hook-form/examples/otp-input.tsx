@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { RHFOtpInput } from "@jamsr-ui/react";
+import { RHFOtpInput, toast } from "@jamsr-ui/react";
 import { useForm } from "react-hook-form";
 import { object, string } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";
@@ -33,6 +33,7 @@ export const RHFDemoOtpInput = () => {
         numberOfDigits={6}
         name="otp"
         label="Enter the Otp"
+        onComplete={(value) => toast.success(`Value is ${value}`)}
       />
     </RHFDemoWrapper>
   );

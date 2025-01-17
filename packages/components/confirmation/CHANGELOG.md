@@ -1,5 +1,13 @@
 # @jamsr-ui/confirmation
 
+## 0.0.85
+
+### Patch Changes
+
+- fix: dialog, otp input
+- Updated dependencies
+  - @jamsr-ui/dialog@0.0.103
+
 ## 0.0.84
 
 ### Patch Changes

@@ -82,6 +82,8 @@ export {
   DialogContent,
   DialogFooter,
   DialogHeader,
+  DialogTrigger,
+  DialogState,
   type DialogBodyProps,
   type DialogContentProps,
   type DialogFooterProps,

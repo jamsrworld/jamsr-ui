@@ -1,5 +1,12 @@
 # @jamsr-ui/rhf
 
+## 0.0.73
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/otp-input@0.0.86
+
 ## 0.0.72
 
 ### Patch Changes

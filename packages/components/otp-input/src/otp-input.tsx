@@ -112,11 +112,15 @@ export const OtpInput = ($props: OtpInputProps) => {
     }
   }, [autoFocus]);
 
-  useEffect(() => {
-    if (onComplete && value.trim().length === numberOfDigits) {
-      onComplete(value);
-    }
-  }, [numberOfDigits, onComplete, value]);
+  const checkForComplete = useCallback(
+    (value: string) => {
+      if (value.trim().length === numberOfDigits) {
+        onComplete?.(value);
+        inputRefs.current.forEach((e) => e?.blur());
+      }
+    },
+    [numberOfDigits, onComplete],
+  );
 
   const isNumInput = isNumeric;
 
@@ -144,6 +148,7 @@ export const OtpInput = ($props: OtpInputProps) => {
     newOtp[idx] = str || " ";
     const newValue = newOtp.join("");
     setValue(newValue);
+    checkForComplete(newValue);
   };
 
   const handleChange = (
@@ -210,10 +215,11 @@ export const OtpInput = ($props: OtpInputProps) => {
 
   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();
-    const text = e.clipboardData?.getData("text/plain");
+    const text = e.clipboardData?.getData("text/plain").trim();
     if (!text || !isValidValueType(text)) return;
     const newOtp = text.slice(0, numberOfDigits);
     setValue(newOtp);
+    checkForComplete(newOtp);
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>, idx: number) => {

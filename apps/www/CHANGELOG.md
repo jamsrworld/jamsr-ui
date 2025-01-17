@@ -1,5 +1,13 @@
 # web
 
+## 0.1.214
+
+### Patch Changes
+
+- fix: dialog, otp input
+- Updated dependencies
+  - @jamsr-ui/react@0.0.232
+
 ## 0.1.213
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/otp-input
 
+## 0.0.86
+
+### Patch Changes
+
+- fix: dialog, otp input
+
 ## 0.0.85
 
 ### Patch Changes

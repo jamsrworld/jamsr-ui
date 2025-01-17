@@ -1,5 +1,16 @@
 # @jamsr-ui/react
 
+## 0.0.232
+
+### Patch Changes
+
+- fix: dialog, otp input
+- Updated dependencies
+  - @jamsr-ui/confirmation@0.0.85
+  - @jamsr-ui/otp-input@0.0.86
+  - @jamsr-ui/dialog@0.0.103
+  - @jamsr-ui/rhf@0.0.73
+
 ## 0.0.231
 
 ### Patch Changes

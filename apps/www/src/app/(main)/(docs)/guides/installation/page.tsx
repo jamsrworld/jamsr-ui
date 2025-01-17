@@ -54,13 +54,13 @@ const items: { heading: string; content: React.ReactNode }[] = [
       <div className="flex flex-col gap-4">
         <Text as="p">
           If you're using <Code>pnpm</Code>, ensure that JamsrUI packages are
-          hoisted to the root <Code> node_modules</Code>.
+          hoisted to the root <Code> node_modules</Code>
         </Text>
         <div>
           <ul className="flex list-disc flex-col gap-4">
             <li className="space-y-4">
               <div>
-                Add the following line to your <Code>.npmrc</Code> file:
+                Create <Code>.npmrc</Code> file at root and add the following line:
               </div>
               <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
             </li>
@@ -106,12 +106,13 @@ import type { Config } from "tailwindcss";
 
 const config = withJamsrUI({
   content: [
-    // ...
-    // make sure it's pointing to the ROOT node_module
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // Ensure it points to the ROOT node_modules
     "./node_modules/@jamsr-ui/*/dist/*.js",
   ],
-  ...
-});
+}) satisfies Config;
 export default config;
 
 `}
@@ -119,7 +120,7 @@ export default config;
         <Alert variant="solid" status="default">
           <div>
             <strong>Note:</strong> For <Code> pnpm</Code> users in a monorepo
-            setup, ensure the path points to the root<Code>node_modules</Code>.
+            setup, ensure the path points to the root<Code>node_modules</Code>
           </div>
         </Alert>
       </div>
@@ -134,14 +135,18 @@ export default config;
           <Code>UIProvider</Code>.
         </Text>
         <CodeBlock>
-          {`// app/page.ts
+          {`// app/layout.tsx
 import { UIProvider } from "@jamsr-ui/react";
           
 function App() {
   return (
-    <UIProvider>
-      <YourApplication />
-    </UIProvider>
+    <html lang="en">
+      <body>
+        <UIProvider>
+          {children}
+        </UIProvider>
+      </body>
+    </html>
   );
 }`}
         </CodeBlock>

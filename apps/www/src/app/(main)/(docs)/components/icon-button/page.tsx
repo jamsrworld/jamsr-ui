@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   title,
   description,
 };
-const code = <T extends VariantTypes["button"][number]>(variant: T) =>
-  readVariantCode("button", variant);
+const code = <T extends VariantTypes["icon-button"][number]>(variant: T) =>
+  readVariantCode("icon-button", variant);
 
 const IconButton = () => {
   return (

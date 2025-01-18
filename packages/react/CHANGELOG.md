@@ -1,5 +1,42 @@
 # @jamsr-ui/react
 
+## 0.0.235
+
+### Patch Changes
+
+- feat copy to clipboard
+- Updated dependencies
+  - @jamsr-ui/copy-to-clipboard@0.0.1
+  - @jamsr-ui/avatar@0.0.86
+  - @jamsr-ui/button@0.0.93
+  - @jamsr-ui/accordion@0.0.94
+  - @jamsr-ui/card@0.0.95
+  - @jamsr-ui/select@0.0.113
+  - @jamsr-ui/sidebar@0.0.94
+  - @jamsr-ui/tags-input@0.0.55
+  - @jamsr-ui/alert@0.0.101
+  - @jamsr-ui/autocomplete@0.0.126
+  - @jamsr-ui/chip@0.0.101
+  - @jamsr-ui/confirmation@0.0.87
+  - @jamsr-ui/data-table@0.0.84
+  - @jamsr-ui/header@0.0.88
+  - @jamsr-ui/menu@0.0.110
+  - @jamsr-ui/tab@0.0.107
+  - @jamsr-ui/textarea@0.0.118
+  - @jamsr-ui/toast@0.0.42
+  - @jamsr-ui/dialog@0.0.105
+  - @jamsr-ui/drawer@1.0.89
+  - @jamsr-ui/editor@0.0.129
+  - @jamsr-ui/file-upload-multi@0.0.112
+  - @jamsr-ui/file-upload-single@0.0.115
+  - @jamsr-ui/icon-button@0.0.17
+  - @jamsr-ui/input@0.0.117
+  - @jamsr-ui/popover@0.0.89
+  - @jamsr-ui/rating@0.0.45
+  - @jamsr-ui/stepper@0.0.25
+  - @jamsr-ui/tooltip@0.0.84
+  - @jamsr-ui/rhf@0.0.75
+
 ## 0.0.234
 
 ### Patch Changes

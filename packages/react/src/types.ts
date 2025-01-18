@@ -18,6 +18,7 @@ import {
 import { type CheckboxProps } from "@jamsr-ui/checkbox";
 import { type ChipProps } from "@jamsr-ui/chip";
 import { type ConfirmationProps } from "@jamsr-ui/confirmation";
+import { CopyToClipboardProps } from "@jamsr-ui/copy-to-clipboard";
 import { type DataTableProps } from "@jamsr-ui/data-table";
 import {
   type DialogBodyProps,
@@ -63,6 +64,7 @@ type WithProps<T> = Partial<T> & { props?: (props: Partial<T>) => Partial<T> };
 
 declare module "@jamsr-ui/styles" {
   export interface UIStylesType {
+    copyToClipboard?: WithProps<CopyToClipboardProps>;
     accordion?: WithProps<AccordionProps>;
     accordionItem?: WithProps<AccordionItemProps>;
     alert?: WithProps<AlertProps>;

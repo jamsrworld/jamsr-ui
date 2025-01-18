@@ -1,5 +1,15 @@
 # web
 
+## 0.1.217
+
+### Patch Changes
+
+- feat copy to clipboard
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.70
+  - @jamsr-ui/react@0.0.235
+  - @jamsr-ui/editor@0.0.129
+
 ## 0.1.216
 
 ### Patch Changes

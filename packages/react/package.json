@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.234",
+  "version": "0.0.235",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -43,6 +43,7 @@
     "@jamsr-ui/circular-progress": "workspace:^",
     "@jamsr-ui/collapsible": "workspace:^",
     "@jamsr-ui/confirmation": "workspace:^",
+    "@jamsr-ui/copy-to-clipboard": "workspace:^",
     "@jamsr-ui/core": "workspace:^",
     "@jamsr-ui/data-table": "workspace:^",
     "@jamsr-ui/dialog": "workspace:^",

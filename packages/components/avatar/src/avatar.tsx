@@ -1,6 +1,7 @@
 import { AvatarIcon } from "@jamsr-ui/shared-icons";
 import { useUIStyle } from "@jamsr-ui/styles";
 import {
+  cn,
   deepMergeProps,
   mapPropsVariants,
   mergeGlobalProps,
@@ -15,6 +16,11 @@ type Props = AvatarCustomProps & {
   name?: string;
   fallback?: string | ((_: { alt: string; name?: string }) => string);
   src?: null | ImageProps["src"];
+  classNames?: {
+    base?: string;
+    image?: string;
+    fallbackIcon?: string;
+  };
 };
 
 export type AvatarProps = Omit<ImageProps, "src"> & AvatarVariants & Props;
@@ -36,6 +42,7 @@ export const Avatar = ($props: AvatarProps) => {
     name,
     onError,
     children,
+    classNames,
     ...restProps
   } = props;
 
@@ -43,7 +50,9 @@ export const Avatar = ($props: AvatarProps) => {
     (typeof children === "string" && getFirstChar(children)) ||
     (alt.length > 0 && getFirstChar(alt)) ||
     "";
-  const fallBack = fallBackString || <AvatarIcon />;
+  const fallBack = fallBackString || (
+    <AvatarIcon className={classNames?.fallbackIcon} />
+  );
   const [imgSrc, setImgSrc] = useState(src);
 
   const { color: propColor } = variantProps;
@@ -53,7 +62,7 @@ export const Avatar = ($props: AvatarProps) => {
 
   const styles = avatarVariants({
     ...variantProps,
-    className,
+    className: cn(classNames?.base, className),
     color,
   });
 
@@ -76,6 +85,7 @@ export const Avatar = ($props: AvatarProps) => {
           onError={handleOnError}
           width={120}
           height={120}
+          className={classNames?.image}
           {...restProps}
         />
       )}

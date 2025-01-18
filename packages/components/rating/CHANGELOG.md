@@ -1,5 +1,12 @@
 # @jamsr-ui/rating
 
+## 0.0.45
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.70
+
 ## 0.0.44
 
 ### Patch Changes

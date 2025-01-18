@@ -57,6 +57,12 @@ export {
   useConfirmation,
   type ConfirmationProps,
 } from "@jamsr-ui/confirmation";
+export {
+  CopyToClipboard,
+  useCopyToClipboard,
+  type CopyToClipboardProps,
+  type UseCopyToClipboardProps,
+} from "@jamsr-ui/copy-to-clipboard";
 export { UIProvider } from "@jamsr-ui/core";
 export {
   DataTable,

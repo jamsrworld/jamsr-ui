@@ -635,6 +635,37 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
 
+  packages/components/copy-to-clipboard:
+    dependencies:
+      '@jamsr-ui/icon-button':
+        specifier: workspace:^
+        version: link:../icon-button
+      '@jamsr-ui/shared-icons':
+        specifier: workspace:^
+        version: link:../../shared-icons
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
+    devDependencies:
+      '@types/node':
+        specifier: ^22.7.9
+        version: 22.8.1
+      '@types/react':
+        specifier: 19.0.1
+        version: 19.0.1
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+
   packages/components/data-table:
     dependencies:
       '@jamsr-ui/button':
@@ -2037,6 +2068,9 @@ importers:
       '@jamsr-ui/confirmation':
         specifier: workspace:^
         version: link:../components/confirmation
+      '@jamsr-ui/copy-to-clipboard':
+        specifier: workspace:^
+        version: link:../components/copy-to-clipboard
       '@jamsr-ui/core':
         specifier: workspace:^
         version: link:../core
@@ -9618,7 +9652,7 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.16.10
+      '@types/node': 22.8.1
 
   '@types/color-convert@2.0.4':
     dependencies:
@@ -9632,11 +9666,11 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 20.16.10
+      '@types/node': 22.8.1
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 20.16.10
+      '@types/node': 22.8.1
 
   '@types/d3-array@3.2.1': {}
 
@@ -9677,7 +9711,7 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.6':
     dependencies:
-      '@types/node': 20.16.10
+      '@types/node': 22.8.1
       '@types/qs': 6.9.16
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -9696,7 +9730,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.16.10
+      '@types/node': 22.8.1
 
   '@types/hast@3.0.4':
     dependencies:
@@ -9784,12 +9818,12 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.16.10
+      '@types/node': 22.8.1
 
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 20.16.10
+      '@types/node': 22.8.1
       '@types/send': 0.17.4
 
   '@types/unist@3.0.3': {}

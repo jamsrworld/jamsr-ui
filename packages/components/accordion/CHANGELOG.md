@@ -1,5 +1,12 @@
 # @jamsr-ui/accordion
 
+## 0.0.94
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.70
+
 ## 0.0.93
 
 ### Patch Changes

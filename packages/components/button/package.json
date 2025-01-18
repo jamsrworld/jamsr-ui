@@ -1,21 +1,7 @@
 {
   "name": "@jamsr-ui/button",
-  "version": "0.0.92",
-  "description": "",
+  "version": "0.0.93",
   "main": "./src/index.ts",
-  "sideEffects": false,
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",

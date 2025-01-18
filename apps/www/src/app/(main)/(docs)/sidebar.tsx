@@ -69,6 +69,10 @@ export const sidebarItems: {
         path: "/components/confirmation",
       },
       {
+        heading: "Copy To Clipboard",
+        path: "/components/copy-to-clipboard",
+      },
+      {
         heading: "Collapsible",
         path: "/components/collapsible",
       },

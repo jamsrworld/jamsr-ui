@@ -1,5 +1,12 @@
 # @jamsr-ui/stepper
 
+## 0.0.25
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.70
+
 ## 0.0.24
 
 ### Patch Changes

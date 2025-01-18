@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.70
+
+### Patch Changes
+
+- feat copy to clipboard
+
 ## 0.0.69
 
 ### Patch Changes

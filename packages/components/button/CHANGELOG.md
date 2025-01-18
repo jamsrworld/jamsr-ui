@@ -1,5 +1,11 @@
 # @jamsr-ui/button
 
+## 0.0.93
+
+### Patch Changes
+
+- feat copy to clipboard
+
 ## 0.0.92
 
 ### Patch Changes

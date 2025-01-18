@@ -1,5 +1,13 @@
 # @jamsr-ui/avatar
 
+## 0.0.86
+
+### Patch Changes
+
+- feat copy to clipboard
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.70
+
 ## 0.0.85
 
 ### Patch Changes

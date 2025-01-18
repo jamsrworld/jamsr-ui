@@ -2,7 +2,8 @@
 
 "use client";
 
-import { BarChart, Card, CardHeader, type ChartConfig } from "@jamsr-ui/react";
+import { BarChart, type ChartConfig } from "@jamsr-ui/charts";
+import { Card, CardHeader } from "@jamsr-ui/react";
 
 const chartData = [
   { weekday: "Mon", android: 20, ios: 30, web: 20, windows: 10 },

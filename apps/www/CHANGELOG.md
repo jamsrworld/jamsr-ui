@@ -1,5 +1,14 @@
 # web
 
+## 0.1.215
+
+### Patch Changes
+
+- fix dialog tooltip popover
+- Updated dependencies
+  - @jamsr-ui/react@0.0.233
+  - @jamsr-ui/editor@0.0.128
+
 ## 0.1.214
 
 ### Patch Changes

@@ -8,9 +8,14 @@ type Props = {
   children: (props: DialogStateProps) => React.ReactNode;
 };
 
-export const DialogState = (props: Props) => {
-  const { children } = props;
+export const useDialogState = (): DialogStateProps => {
   const { isOpen, setIsOpen } = useDialogContext();
   const onClose = () => setIsOpen(false);
-  return children({ isOpen, setIsOpen, onClose });
+  return { isOpen, setIsOpen, onClose };
+};
+
+export const DialogState = (props: Props) => {
+  const { children } = props;
+  const state = useDialogState();
+  return children(state);
 };

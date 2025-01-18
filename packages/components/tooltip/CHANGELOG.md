@@ -1,5 +1,11 @@
 # @jamsr-ui/tooltip
 
+## 0.0.84
+
+### Patch Changes
+
+- fix dialog tooltip popover
+
 ## 0.0.83
 
 ### Patch Changes

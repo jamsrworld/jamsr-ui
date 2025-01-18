@@ -60,6 +60,7 @@ export const Tooltip = ($props: TooltipProps) => {
     openDelay = 400,
     className,
     classNames,
+    ...restProps
   } = props;
   const [isOpen, setIsOpen] = useState(false);
   const arrowRef = useRef(null);
@@ -109,6 +110,7 @@ export const Tooltip = ($props: TooltipProps) => {
     children,
     getReferenceProps({
       ref,
+      ...restProps,
     }),
   );
 

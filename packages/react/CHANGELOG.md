@@ -1,5 +1,21 @@
 # @jamsr-ui/react
 
+## 0.0.233
+
+### Patch Changes
+
+- fix dialog tooltip popover
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.89
+  - @jamsr-ui/tooltip@0.0.84
+  - @jamsr-ui/dialog@0.0.104
+  - @jamsr-ui/editor@0.0.128
+  - @jamsr-ui/input@0.0.116
+  - @jamsr-ui/select@0.0.112
+  - @jamsr-ui/confirmation@0.0.86
+  - @jamsr-ui/rhf@0.0.74
+  - @jamsr-ui/data-table@0.0.82
+
 ## 0.0.232
 
 ### Patch Changes

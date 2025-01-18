@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.232",
+  "version": "0.0.233",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -75,11 +75,11 @@
     "@jamsr-ui/tab": "workspace:^",
     "@jamsr-ui/table": "workspace:^",
     "@jamsr-ui/tags-input": "workspace:^",
+    "@jamsr-ui/text": "workspace:^",
     "@jamsr-ui/textarea": "workspace:^",
     "@jamsr-ui/theme": "workspace:^",
     "@jamsr-ui/toast": "workspace:^",
     "@jamsr-ui/tooltip": "workspace:^",
-    "@jamsr-ui/text": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {

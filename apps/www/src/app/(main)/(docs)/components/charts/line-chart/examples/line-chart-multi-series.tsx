@@ -2,13 +2,8 @@
 
 "use client";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  type ChartConfig,
-  LineChart,
-} from "@jamsr-ui/react";
+import { LineChart, type ChartConfig } from "@jamsr-ui/charts";
+import { Card, CardContent, CardHeader } from "@jamsr-ui/react";
 
 const chartData = [
   { month: "January", window: 460, mac: 106 },

@@ -72,6 +72,7 @@ export const Popover = ($props: PopoverProps) => {
     offset: offsetValue = 4,
     classNames,
     lockScroll = true,
+    ...restProps
   } = props;
 
   const [open, setOpen] = useControlledState(
@@ -136,6 +137,7 @@ export const Popover = ($props: PopoverProps) => {
     trigger,
     getReferenceProps({
       ref,
+      ...restProps,
     }),
   );
 

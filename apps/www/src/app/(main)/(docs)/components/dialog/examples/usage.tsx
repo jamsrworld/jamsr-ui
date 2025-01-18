@@ -10,13 +10,22 @@ import {
   DialogTrigger,
   Repeater,
   Text,
+  Tooltip,
+  useDialogState,
 } from "@jamsr-ui/react";
+
+const InnerCloseButton = () => {
+  const { onClose } = useDialogState();
+  return <Button onClick={onClose}>Close Me</Button>;
+};
 
 export const DialogUsage = () => {
   return (
     <Dialog>
       <DialogTrigger>
-        <Button>Click Me!</Button>
+        <Tooltip title="Hello i am tooltip">
+          <Button>Click Me!</Button>
+        </Tooltip>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>Heading</DialogHeader>
@@ -29,6 +38,7 @@ export const DialogUsage = () => {
               dolorem minus, quibusdam optio? Cum.
             </Text>
           </Repeater>
+          <InnerCloseButton />
         </DialogBody>
         <DialogFooter>
           <DialogTrigger action="close">

@@ -1,6 +1,7 @@
 "use client";
 
-import { Card, CardHeader, type ChartConfig, PieChart } from "@jamsr-ui/react";
+import { type ChartConfig, PieChart } from "@jamsr-ui/charts";
+import { Card, CardHeader } from "@jamsr-ui/react";
 
 const chartData = [
   { name: "Search", value: 400 },
@@ -38,7 +39,6 @@ export const PieChart2 = () => {
       <CardHeader heading="Pie Chart" />
       <PieChart
         chartData={chartData}
-        height={250}
         height={250}
         width="100%"
         config={config}

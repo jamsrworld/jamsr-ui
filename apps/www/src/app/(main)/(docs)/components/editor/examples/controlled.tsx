@@ -1,6 +1,6 @@
 "use client";
 
-import { Editor } from "@jamsr-ui/react";
+import { Editor } from "@jamsr-ui/editor";
 import { useState } from "react";
 
 export const EditorControlled = () => {

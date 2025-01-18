@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.214",
+  "version": "0.1.215",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,6 +14,8 @@
   "dependencies": {
     "@faker-js/faker": "9.0.3",
     "@hookform/resolvers": "^3.9.0",
+    "@jamsr-ui/charts": "workspace:^",
+    "@jamsr-ui/editor": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/react": "workspace:*",
     "@jamsr-ui/shared-icons": "workspace:^",
@@ -31,6 +33,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.53.1",
+    "recharts": "^2.15.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

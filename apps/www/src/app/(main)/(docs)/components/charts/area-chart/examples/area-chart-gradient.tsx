@@ -2,13 +2,8 @@
 
 "use client";
 
-import {
-  AreaChart,
-  Card,
-  CardContent,
-  CardHeader,
-  type ChartConfig,
-} from "@jamsr-ui/react";
+import { type ChartConfig, AreaChart } from "@jamsr-ui/charts";
+import { Card, CardContent, CardHeader } from "@jamsr-ui/react";
 
 const chartData = [
   { month: "January", visitors: 266 },

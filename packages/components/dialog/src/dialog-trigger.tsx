@@ -16,9 +16,10 @@ export const DialogTrigger = (props: Props) => {
   };
 
   if (isValidElement(children)) {
-    return cloneElement(children, {
+    const clonedElem = cloneElement(children, {
       onClick: handleClick,
     });
+    return clonedElem;
   }
 
   console.warn("Invalid children passed to DialogTrigger");

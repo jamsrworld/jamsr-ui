@@ -1,5 +1,11 @@
 # @jamsr-ui/data-table
 
+## 0.0.83
+
+### Patch Changes
+
+- chore data table deps
+
 ## 0.0.82
 
 ### Patch Changes

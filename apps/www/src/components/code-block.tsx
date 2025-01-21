@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable tailwindcss/no-custom-classname */
 
-import { Card, CardContent, CardProps } from "@jamsr-ui/react";
+import { Card, CardContent, type CardProps } from "@jamsr-ui/react";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import typescript from "highlight.js/lib/languages/typescript";

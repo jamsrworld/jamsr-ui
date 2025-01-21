@@ -10,7 +10,7 @@ export const test = "";
 const base = tv({
   slots: {
     base: "relative box-border inline-flex min-w-min max-w-fit shrink-0 items-center justify-between whitespace-nowrap rounded-full",
-    content: "flex flex-1 items-center gap-1 font-normal text-inherit",
+    content: "flex flex-1 items-center gap-1 text-inherit",
     closeButton:
       "z-10 cursor-pointer select-none appearance-none opacity-70 outline-none transition-opacity tap-highlight-transparent hover:opacity-100 active:opacity-disabled",
     dot: "size-1.5 rounded-full",
@@ -23,6 +23,10 @@ const base = tv({
       dot: "",
     },
     size: {
+      xs: {
+        base: "h-5 px-0.5 text-xs",
+        content: "px-0.5",
+      },
       sm: {
         base: "h-6 px-1 text-xs",
         content: "px-1",

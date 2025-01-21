@@ -1,6 +1,6 @@
 import { type useInteractions } from "@floating-ui/react";
-import { createContext } from "@jamsr-ui/utils";
-import { type selectVariant } from "./styles";
+import { createContext, type SlotsToClasses } from "@jamsr-ui/utils";
+import { type SelectSlots, type selectVariant } from "./styles";
 
 export type SelectContextType = {
   activeIndex: number | null;
@@ -10,6 +10,8 @@ export type SelectContextType = {
   isMultiple: boolean;
   value: string[];
   styles: ReturnType<typeof selectVariant>;
+  classNames?: SlotsToClasses<SelectSlots>;
+  onSelectValue: (value: string) => void;
 };
 
 export const [SelectProvider, useSelectContext] =

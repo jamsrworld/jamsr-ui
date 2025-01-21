@@ -95,7 +95,6 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     inputProps,
     isDisabled,
     onBlur,
-    isFormControl,
   } = props;
   const baseRef = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
@@ -150,16 +149,14 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       const label =
         item?.renderLabel ??
         item?.label ??
-        ((typeof children === "string" && children) || "");
+        (typeof children === "string" ? children : (item?.value ?? ""));
 
       const onClose = () => setValue(getNewValue(val));
-
       const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
         e.nativeEvent.stopPropagation();
         e.nativeEvent.stopImmediatePropagation();
       };
-
       return (
         <Chip onClick={handleOnClick} onDelete={onClose} key={val}>
           {label}

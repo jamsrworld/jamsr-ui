@@ -46,6 +46,8 @@ export const Select = <T extends React.ElementType = "div">(
     getIndicatorProps,
     getScrollAreaProps,
     returnFocus,
+    bottomContent,
+    topContent,
   } = useSelect(props);
 
   return (
@@ -77,22 +79,25 @@ export const Select = <T extends React.ElementType = "div">(
                   context={context}
                   modal
                   returnFocus={returnFocus}
+                  initialFocus={-1}
                 >
                   <div {...getPopoverProps()}>
-                    <FloatingList
-                      elementsRef={elementsRef}
-                      labelsRef={labelsRef}
+                    <m.div
+                      initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                      exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      transition={{ duration: 0.2, ease: "easeOut" }}
+                      {...getContentProps()}
                     >
-                      <m.ul
-                        initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                        exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        {...getContentProps()}
+                      {topContent}
+                      <FloatingList
+                        elementsRef={elementsRef}
+                        labelsRef={labelsRef}
                       >
-                        <div {...getScrollAreaProps()}>{children}</div>
-                      </m.ul>
-                    </FloatingList>
+                        <ul {...getScrollAreaProps()}>{children}</ul>
+                      </FloatingList>
+                      {bottomContent}
+                    </m.div>
                   </div>
                 </FloatingFocusManager>
               </FloatingPortal>

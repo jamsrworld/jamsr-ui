@@ -64,6 +64,10 @@ type Props = SelectVariantProps & {
   endContent?: React.ReactNode;
   returnFocus?: boolean;
   isFormControl?: boolean;
+  onUncontrolledValueChange?: (values: string[]) => void;
+  topContent?: React.ReactNode;
+  bottomContent?: React.ReactNode;
+  disableTypeahead?: boolean;
 };
 
 export type UseSelectInnerProps = Props;
@@ -101,6 +105,10 @@ export const useSelect = ($props: UseSelectProps) => {
     isDisabled: propIsDisabled = false,
     returnFocus = true,
     isFormControl = false,
+    disableTypeahead = false,
+    onUncontrolledValueChange,
+    topContent,
+    bottomContent,
     ...restProps
   } = props;
 
@@ -144,7 +152,9 @@ export const useSelect = ($props: UseSelectProps) => {
       .map(
         (item) =>
           item?.label ??
-          (typeof item?.children === "string" ? item.children : ""),
+          (typeof item?.children === "string"
+            ? item.children
+            : (item?.value ?? "")),
       );
     return new Set(items);
   }, [selectItems, value]);
@@ -215,12 +225,14 @@ export const useSelect = ($props: UseSelectProps) => {
     selectedIndex,
     onNavigate: setActiveIndex,
     loop: true,
+    virtual: disableTypeahead === true,
   });
   const typeahead = useTypeahead(context, {
     listRef: labelsRef,
     activeIndex,
     selectedIndex,
     onMatch: handleTypeaheadMatch,
+    enabled: !disableTypeahead,
   });
   const click = useClick(context);
   const dismiss = useDismiss(context, {
@@ -236,6 +248,26 @@ export const useSelect = ($props: UseSelectProps) => {
     [listNav, typeahead, click, dismiss, role],
   );
 
+  const onSelectValue = useCallback(
+    (_value: string) => {
+      const values = value;
+      const getNewValue = (): string[] => {
+        if (!isMultiple) return [_value];
+        const $value = new Set(values);
+        if ($value.has(_value)) {
+          $value.delete(_value);
+          return [...$value];
+        }
+        $value.add(_value);
+        return [...$value];
+      };
+      const newValue = getNewValue();
+      onUncontrolledValueChange?.(newValue);
+      setValue(newValue);
+    },
+    [isMultiple, onUncontrolledValueChange, setValue, value],
+  );
+
   const contextValue: SelectContextType = useMemo(() => {
     return {
       activeIndex,
@@ -246,12 +278,16 @@ export const useSelect = ($props: UseSelectProps) => {
       isMultiple,
       value,
       styles,
+      classNames,
+      onSelectValue,
     };
   }, [
     activeIndex,
+    classNames,
     getItemProps,
     handleSelect,
     isMultiple,
+    onSelectValue,
     selectedIndex,
     setValue,
     styles,
@@ -263,6 +299,10 @@ export const useSelect = ($props: UseSelectProps) => {
     if (renderValue) return renderValue(Array.from(value));
     return Array.from(selectedLabels).join(",");
   }, [renderValue, selectedLabels, value]);
+
+  const preventMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+  }, []);
 
   const getBaseProps: PropGetter<ComponentProps<"div">> = (props) => {
     return {
@@ -366,11 +406,12 @@ export const useSelect = ($props: UseSelectProps) => {
     return {
       "data-slot": "content",
       className: styles.content({ className: classNames?.content }),
+      onMouseDown: preventMouseDown,
       ...props,
     };
   };
 
-  const getScrollAreaProps: PropGetter<ComponentProps<"div">> = (props) => {
+  const getScrollAreaProps: PropGetter<ComponentProps<"ul">> = (props) => {
     return {
       "data-slot": "scroll-area",
       className: styles.scrollArea({ className: classNames?.scrollArea }),
@@ -432,5 +473,7 @@ export const useSelect = ($props: UseSelectProps) => {
     contextValue,
     startContent,
     endContent,
+    topContent,
+    bottomContent,
   };
 };

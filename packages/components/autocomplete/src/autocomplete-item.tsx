@@ -41,9 +41,7 @@ export const AutocompleteItem = <T extends React.ElementType = "button">(
     styles,
   } = useAutocompleteContext();
 
-  const listLabel =
-    label ?? value ?? (typeof children === "string" ? children : "");
-
+  const listLabel = label ?? (typeof children === "string" ? children : value);
   if (!listLabel.length) {
     console.warn(`No label provided for list item with value ${value}`);
   }

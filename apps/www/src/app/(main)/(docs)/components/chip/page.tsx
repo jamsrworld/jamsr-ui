@@ -5,13 +5,14 @@ import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { ChipBordered } from "./examples/bordered";
 import { ChipColors } from "./examples/colors";
+import { ChipCustomize } from "./examples/customize";
 import { ChipRadius } from "./examples/radius";
 import { ChipSizes } from "./examples/sizes";
+import { StartEndContent } from "./examples/start-end-content";
 import { ChipUsage } from "./examples/usage";
 import { ChipVariants } from "./examples/variants";
 import { ChipVariantsColors } from "./examples/variants-colors";
 import { ChipWithDelete } from "./examples/with-delete";
-import { StartEndContent } from "./examples/start-end-content";
 
 const title = "Chip";
 const description =
@@ -59,6 +60,9 @@ const Chip = () => {
       </VariantWrapper>
       <VariantWrapper heading="With Delete" code={code("with-delete")}>
         <ChipWithDelete />
+      </VariantWrapper>
+      <VariantWrapper heading="Customize" code={code("customize")}>
+        <ChipCustomize />
       </VariantWrapper>
     </VariantPage>
   );

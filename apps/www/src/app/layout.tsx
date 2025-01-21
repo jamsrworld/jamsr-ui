@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} text-base`}>
+      <body className={`${inter.className} text-base antialiased`}>
         <AppProvider>{children}</AppProvider>
         <SchemaDts />
       </body>

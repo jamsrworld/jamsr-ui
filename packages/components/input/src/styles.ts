@@ -13,7 +13,7 @@ export const inputVariants = tv({
     label: "shrink-0 text-sm font-normal text-foreground",
     mainWrapper: "flex flex-col gap-1",
     inputWrapper: [
-      "relative border-2 border-default-200",
+      "relative",
       "grow overflow-hidden",
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
       "ui-group-focus:border-primary ui-group-focus:ring-primary",
@@ -43,11 +43,14 @@ export const inputVariants = tv({
     },
     radius: radiusVariant("inputWrapper"),
     variant: {
+      underlined: {
+        inputWrapper: "rounded-none border-b-2 border-default-200",
+      },
       standard: {
-        inputWrapper: "",
+        inputWrapper: "border-2 border-default-200",
       },
       outlined: {
-        inputWrapper: "relative",
+        inputWrapper: "border-2 border-default-200",
         startContent: "group-data-[filled-within=true]:mt-4",
         labelWrapper:
           "pointer-events-none absolute inset-0 flex size-full items-start justify-between",
@@ -92,21 +95,21 @@ export const inputVariants = tv({
   },
   compoundVariants: [
     {
-      variant: "standard",
+      variant: ["standard", "underlined"],
       size: "sm",
       className: {
         input: "py-1.5 text-sm placeholder:text-sm",
       },
     },
     {
-      variant: "standard",
+      variant: ["standard", "underlined"],
       size: "md",
       className: {
         input: "py-2 text-sm placeholder:text-sm",
       },
     },
     {
-      variant: "standard",
+      variant: ["standard", "underlined"],
       size: "lg",
       className: {
         input: "py-3 text-base placeholder:text-base",

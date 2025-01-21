@@ -1,5 +1,13 @@
 # web
 
+## 0.1.218
+
+### Patch Changes
+
+- fix autcomplete,avatar,button,select,input,chip
+  - @jamsr-ui/react@0.0.236
+  - @jamsr-ui/editor@0.0.130
+
 ## 0.1.217
 
 ### Patch Changes

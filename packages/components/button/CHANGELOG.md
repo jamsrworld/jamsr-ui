@@ -1,5 +1,11 @@
 # @jamsr-ui/button
 
+## 0.0.94
+
+### Patch Changes
+
+- fix autcomplete,avatar,button,select,input,chip
+
 ## 0.0.93
 
 ### Patch Changes

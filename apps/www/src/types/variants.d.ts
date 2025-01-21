@@ -8,7 +8,7 @@ export type VariantTypes = {
   "card": ["radius", "start-end-content", "usage", "variants", "with-form"];
   "charts": [];
   "checkbox": ["controlled", "description", "disabled", "invalid-state", "radius", "readonly", "usage"];
-  "chip": ["bordered", "colors", "radius", "sizes", "start-end-content", "usage", "variants-colors", "variants", "with-delete"];
+  "chip": ["bordered", "colors", "customize", "radius", "sizes", "start-end-content", "usage", "variants-colors", "variants", "with-delete"];
   "circular-progress": ["colors", "customization", "sizes", "usage", "with-label"];
   "collapsible": ["controlled", "usage", "with-icon", "with-state"];
   "confirmation": ["colors", "usage"];
@@ -39,7 +39,7 @@ export type VariantTypes = {
   "react-hook-form": ["autocomplete-multi", "autocomplete", "checkbox", "editor", "file-upload-multi-default-value", "file-upload-multi", "file-upload-single-default-value", "file-upload-single", "input", "otp-input", "radio-group", "rating", "select-multi", "select", "switch", "tags-input", "textarea"];
   "repeater": ["index", "usage"];
   "ripple": ["center", "usage"];
-  "select": ["controlled", "custom-render-complex", "custom-render-multi", "custom-render-value", "disabled-items", "disabled", "invalid-state", "multiple-controlled", "multiple", "placeholder", "radius", "sizes", "start-end-items", "usage", "with-helper-text", "without-label"];
+  "select": ["controlled", "custom-render-complex", "custom-render-multi-search", "custom-render-multi", "custom-render-value", "disabled-items", "disabled", "invalid-state", "multiple-controlled", "multiple", "placeholder", "radius", "sizes", "start-end-items", "usage", "with-helper-text", "without-label"];
   "sidebar": ["customized", "header-footer", "nested", "usage"];
   "skeleton": ["usage"];
   "slider": [];

@@ -6,6 +6,7 @@ import { type Metadata } from "next";
 import { SelectControlled } from "./examples/controlled";
 import { SelectCustomRenderComplex } from "./examples/custom-render-complex";
 import { SelectCustomRenderMulti } from "./examples/custom-render-multi";
+import { SelectCustomRenderMultiSearch } from "./examples/custom-render-multi-search";
 import { SelectCustomRenderValue } from "./examples/custom-render-value";
 import { SelectDisabled } from "./examples/disabled";
 import { SelectDisabledItems } from "./examples/disabled-items";
@@ -24,10 +25,10 @@ const title = "Select";
 const description =
   "The Select component provides a dropdown menu that allows users to choose one or more options from a list. It is commonly used for form inputs, offering a compact way to present multiple choices.";
 
-  export const metadata: Metadata = {
-    title,
-    description,
-  };
+export const metadata: Metadata = {
+  title,
+  description,
+};
 const code = <T extends VariantTypes["select"][number]>(variant: T) =>
   readVariantCode("select", variant);
 
@@ -96,6 +97,12 @@ const Select = () => {
         code={code("custom-render-multi")}
       >
         <SelectCustomRenderMulti />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Custom Render Multi Search"
+        code={code("custom-render-multi-search")}
+      >
+        <SelectCustomRenderMultiSearch />
       </VariantWrapper>
     </VariantPage>
   );

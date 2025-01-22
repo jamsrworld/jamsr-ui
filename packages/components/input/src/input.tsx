@@ -140,7 +140,7 @@ export const Input = <T extends React.ElementType = "div">(
     variant,
   ]);
 
-  const Fieldset = (variant === "bordered"
+  const Fieldset = (variant === "outlined"
     ? "fieldset"
     : "div") as unknown as "div";
 
@@ -153,7 +153,7 @@ export const Input = <T extends React.ElementType = "div">(
             variant === "underlined" ||
             variant === "bordered") &&
             getLabel}
-          {variant === "bordered" && (
+          {variant === "outlined" && (
             <legend {...getLegendProps()}>{label}</legend>
           )}
           <div {...getInnerWrapperProps()}>

@@ -1,5 +1,13 @@
 # web
 
+## 0.1.222
+
+### Patch Changes
+
+- fix: input variant
+  - @jamsr-ui/editor@0.0.134
+  - @jamsr-ui/react@0.0.240
+
 ## 0.1.221
 
 ### Patch Changes

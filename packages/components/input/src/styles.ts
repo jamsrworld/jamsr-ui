@@ -57,7 +57,7 @@ export const inputVariants = tv({
           "group-data-[has-end-content=true]:pr-2",
         ],
       },
-      outlined: {
+      bordered: {
         inputWrapper: "border-2 border-default-200",
         startContent: "ui-group-filled-within:mt-4",
         label:
@@ -67,7 +67,7 @@ export const inputVariants = tv({
           "group-data-[has-end-content=true]:pr-3",
         ],
       },
-      bordered: {
+      outlined: {
         inputWrapper: "border-2 border-default-200",
         label:
           "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-0",
@@ -117,7 +117,7 @@ export const inputVariants = tv({
     // filled
     {
       isFilled: true,
-      variant: ["standard", "outlined", "bordered"],
+      variant: ["standard", "bordered", "outlined"],
       className: {
         inputWrapper: "border-none",
       },
@@ -173,9 +173,9 @@ export const inputVariants = tv({
         input: "py-3 text-base placeholder:text-base",
       },
     },
-    // outlined
+    // bordered
     {
-      variant: "outlined",
+      variant: "bordered",
       size: "sm",
       className: {
         input: "px-3 py-1 group-data-[has-label=true]:pt-5",
@@ -183,7 +183,7 @@ export const inputVariants = tv({
       },
     },
     {
-      variant: "outlined",
+      variant: "bordered",
       size: "md",
       className: {
         input: "px-3 py-1.5 group-data-[has-label=true]:pt-5",
@@ -191,16 +191,16 @@ export const inputVariants = tv({
       },
     },
     {
-      variant: "outlined",
+      variant: "bordered",
       size: "lg",
       className: {
         input: "px-3 py-2 group-data-[has-label=true]:pt-6",
         label: "text-base ui-group-filled-within:text-xs",
       },
     },
-    // bordered
+    // outlined
     {
-      variant: "bordered",
+      variant: "outlined",
       size: "sm",
       className: {
         input: "px-3 py-2",
@@ -208,18 +208,18 @@ export const inputVariants = tv({
       },
     },
     {
-      variant: "bordered",
+      variant: "outlined",
       size: "md",
       className: {
-        input: "p-3",
+        input: "px-3 py-2.5",
         label: "text-base ui-group-filled-within:text-xs",
       },
     },
     {
-      variant: "bordered",
+      variant: "outlined",
       size: "lg",
       className: {
-        input: "px-3 py-4",
+        input: "p-3",
         label: "text-base ui-group-filled-within:text-xs",
       },
     },

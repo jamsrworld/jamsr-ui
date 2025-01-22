@@ -1,5 +1,13 @@
 # @jamsr-ui/avatar
 
+## 0.0.88
+
+### Patch Changes
+
+- fix avatar remove next deps
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.77
+
 ## 0.0.87
 
 ### Patch Changes

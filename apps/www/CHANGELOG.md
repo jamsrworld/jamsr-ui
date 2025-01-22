@@ -1,5 +1,17 @@
 # web
 
+## 0.1.219
+
+### Patch Changes
+
+- fix avatar remove next deps
+- Updated dependencies
+  - @jamsr-ui/react@0.0.237
+  - @jamsr-ui/utils@0.0.77
+  - @jamsr-ui/charts@0.0.9
+  - @jamsr-ui/editor@0.0.131
+  - @jamsr-ui/hooks@0.0.59
+
 ## 0.1.218
 
 ### Patch Changes

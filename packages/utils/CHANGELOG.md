@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.77
+
+### Patch Changes
+
+- fix avatar remove next deps
+
 ## 0.0.76
 
 ### Patch Changes

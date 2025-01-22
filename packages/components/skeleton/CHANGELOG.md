@@ -1,5 +1,12 @@
 # @jamsr-ui/skeleton
 
+## 0.0.81
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.77
+
 ## 0.0.80
 
 ### Patch Changes

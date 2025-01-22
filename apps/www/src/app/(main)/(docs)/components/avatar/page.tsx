@@ -11,6 +11,7 @@ import { AvatarImageFallback } from "./examples/image-fallback";
 import { AvatarSizes } from "./examples/sizes";
 import { AvatarUsage } from "./examples/usage";
 import { AvatarRadius } from "./examples/radius";
+import { AvatarNextJsUsage } from "./examples/nextjs-usage";
 
 const title = "Avatar";
 const description =
@@ -50,6 +51,9 @@ const Avatar = () => {
       </VariantWrapper>
       <VariantWrapper heading="Bordered" code={code("bordered")}>
         <AvatarBordered />
+      </VariantWrapper>
+      <VariantWrapper heading="NextJs Image" code={code("nextjs-usage")}>
+        <AvatarNextJsUsage />
       </VariantWrapper>
     </VariantPage>
   );

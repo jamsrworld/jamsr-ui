@@ -27,6 +27,9 @@ const Link = () => {
       <VariantWrapper heading="Underline" code={code("underline")}>
         <LinkUnderline />
       </VariantWrapper>
+      {/* <VariantWrapper heading="NextJs Usage" code={code("underline")}>
+        <LinkUnderline />
+      </VariantWrapper> */}
     </VariantPage>
   );
 };

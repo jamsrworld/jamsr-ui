@@ -29,6 +29,7 @@ export type ComponentPropsWithAs<
   as?: T;
 } & Omit<React.ComponentProps<T>, "as" | "color" | keyof Y>;
 
+
 export type PropGetter<P = Record<string, unknown>> = (props?: P) => P;
 
 export const formLabelProps = () => {

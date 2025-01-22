@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/avatar",
-  "version": "0.0.87",
+  "version": "0.0.88",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -12,12 +12,10 @@
   "devDependencies": {
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "peerDependencies": {
-    "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

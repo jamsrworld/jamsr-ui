@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/autocomplete",
-  "version": "0.0.127",
+  "version": "0.0.128",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {

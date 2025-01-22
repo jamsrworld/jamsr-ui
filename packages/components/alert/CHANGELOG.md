@@ -1,5 +1,13 @@
 # @jamsr-ui/alert
 
+## 0.0.102
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.77
+  - @jamsr-ui/text@0.0.8
+
 ## 0.0.101
 
 ### Patch Changes

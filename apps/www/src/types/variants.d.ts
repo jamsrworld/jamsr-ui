@@ -2,7 +2,7 @@ export type VariantTypes = {
   "accordion": ["custom-icon", "disabled", "end-content-outside", "end-content", "multiple-selection", "radius", "start-content-outside", "start-content", "subheading", "usage", "variants", "without-icon"];
   "alert": ["custom-icon", "radius", "status", "usage", "variants", "with-action", "with-description", "without-icon"];
   "autocomplete": ["choose-country", "controlled", "disabled-items", "disabled", "error-state", "helper-text", "multiple-controlled", "multiple-custom-render", "multiple", "start-end-content", "usage"];
-  "avatar": ["bordered", "colors", "fallback-color", "fallbacks", "image-fallback", "radius", "sizes", "usage"];
+  "avatar": ["bordered", "colors", "fallback-color", "fallbacks", "image-fallback", "nextjs-usage", "radius", "sizes", "usage"];
   "breadcrumbs": [];
   "button": ["colors", "disabled", "loading", "radius", "sizes", "usage", "variants-colors", "variants", "with-icons"];
   "card": ["radius", "start-end-content", "usage", "variants", "with-form"];

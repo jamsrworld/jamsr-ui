@@ -1,5 +1,12 @@
 # @jamsr-ui/toast
 
+## 0.0.43
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.77
+
 ## 0.0.42
 
 ### Patch Changes

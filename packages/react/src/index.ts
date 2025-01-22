@@ -94,6 +94,7 @@ export {
   type DrawerBodyProps,
   type DrawerProps,
 } from "@jamsr-ui/drawer";
+export { Editor, EditorContent, type EditorProps } from "@jamsr-ui/editor";
 export {
   FileUploadMulti,
   type FileUploadMultiProps,

@@ -160,12 +160,13 @@ export const useInput = ($props: UseInputProps) => {
   );
 
   const isFilledWithin =
-    !isEmpty(placeholder) ||
-    !isEmpty(value) ||
-    !isEmpty(startContent) ||
-    isFocused ||
-    // if input type number has invalid value then value becomes empty string
-    (type === "number" && inputDOMRef.current?.validity.badInput === true);
+    (label?.length ?? 0) > 0 &&
+    (!isEmpty(placeholder) ||
+      !isEmpty(value) ||
+      !isEmpty(startContent) ||
+      isFocused ||
+      // if input type number has invalid value then value becomes empty string
+      (type === "number" && inputDOMRef.current?.validity.badInput === true));
 
   const hasLabel = !isEmpty(label) || !isEmpty(labelHelperContent);
   const hasStartContent = !isEmpty(startContent);
@@ -268,6 +269,19 @@ export const useInput = ($props: UseInputProps) => {
       };
     },
     [styles, classNames?.label],
+  );
+
+  const getLegendProps: PropGetter<ComponentProps<"legend">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "legend",
+        className: styles.legend({
+          className: cn(classNames?.legend, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.legend],
   );
 
   const getInnerWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
@@ -471,5 +485,6 @@ export const useInput = ($props: UseInputProps) => {
     getContentWrapperProps,
     getClearButtonProps,
     showClearButton,
+    getLegendProps,
   };
 };

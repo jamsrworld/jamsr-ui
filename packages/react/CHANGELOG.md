@@ -1,5 +1,19 @@
 # @jamsr-ui/react
 
+## 0.0.239
+
+### Patch Changes
+
+- feat: input variant
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.133
+  - @jamsr-ui/input@0.0.121
+  - @jamsr-ui/theme@0.0.81
+  - @jamsr-ui/rhf@0.0.79
+  - @jamsr-ui/autocomplete@0.0.130
+  - @jamsr-ui/tags-input@0.0.59
+  - @jamsr-ui/textarea@0.0.122
+
 ## 0.0.238
 
 ### Patch Changes

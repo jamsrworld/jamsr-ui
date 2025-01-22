@@ -1,6 +1,7 @@
 import { StartIcon } from "@/components/icons";
 import { JAMSR_UI_GITHUB_URL, JAMSR_UI_VERSION } from "@/config";
-import { GithubStarsCount } from "./github-stars-count";
+import { GithubStarsCount, ReactPackageVersion } from "./github";
+import { Suspense } from "react";
 
 export const HeroFeatures = () => {
   return (
@@ -13,13 +14,21 @@ export const HeroFeatures = () => {
           rel="noreferrer"
         >
           <StartIcon className="size-4" />
-          <GithubStarsCount /> stars on GitHub
+          <Suspense>
+            <GithubStarsCount />
+          </Suspense>{" "}
+          stars on GitHub
         </a>
       </li>
       <div className="size-1 rounded-full bg-foreground-tertiary" />
       <li className="text-sm text-foreground-tertiary">MIT License</li>
       <div className="size-1 rounded-full bg-foreground-tertiary" />
-      <li className="text-sm text-foreground-tertiary">v{JAMSR_UI_VERSION}</li>
+      <li className="text-sm text-foreground-tertiary">
+        v
+        <Suspense>
+          <ReactPackageVersion />
+        </Suspense>
+      </li>
     </ul>
   );
 };

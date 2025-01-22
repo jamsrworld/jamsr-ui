@@ -40,6 +40,7 @@ export const Input = <T extends React.ElementType = "div">(
     showClearButton,
     slots,
     classNames,
+    getLegendProps,
   } = useInput(props);
   const id = useId();
 
@@ -112,13 +113,21 @@ export const Input = <T extends React.ElementType = "div">(
   ]);
 
   const getLabel = useMemo(() => {
-    return !label ? null : (
-      <div {...getLabelWrapperProps()}>
-        <label htmlFor={id} {...getLabelProps()}>
-          {label} {hasNotation && <span {...getNotationProps()}>*</span>}
-        </label>
-        {labelHelper}
-      </div>
+    if (!label) return null;
+    if (variant === "standard") {
+      return (
+        <div {...getLabelWrapperProps()}>
+          <label htmlFor={id} {...getLabelProps()}>
+            {label} {hasNotation && <span {...getNotationProps()}>*</span>}
+          </label>
+          {labelHelper}
+        </div>
+      );
+    }
+    return (
+      <label htmlFor={id} {...getLabelProps()}>
+        {label} {hasNotation && <span {...getNotationProps()}>*</span>}
+      </label>
     );
   }, [
     getLabelProps,
@@ -128,14 +137,25 @@ export const Input = <T extends React.ElementType = "div">(
     id,
     label,
     labelHelper,
+    variant,
   ]);
+
+  const Fieldset = (variant === "bordered"
+    ? "fieldset"
+    : "div") as unknown as "div";
 
   return (
     <Component data-component="input" {...getBaseProps()}>
       <div {...getMainWrapperProps()}>
         {variant === "standard" && getLabel}
-        <div {...getInputWrapperProps()}>
-          {variant === "outlined" && getLabel}
+        <Fieldset {...getInputWrapperProps()}>
+          {(variant === "outlined" ||
+            variant === "underlined" ||
+            variant === "bordered") &&
+            getLabel}
+          {variant === "bordered" && (
+            <legend {...getLegendProps()}>{label}</legend>
+          )}
           <div {...getInnerWrapperProps()}>
             {getStartContent}
             <div {...getContentWrapperProps()}>
@@ -144,7 +164,7 @@ export const Input = <T extends React.ElementType = "div">(
             </div>
             {getEndContent}
           </div>
-        </div>
+        </Fieldset>
       </div>
       {helperText && <div {...getHelperProps()}>{helperText}</div>}
     </Component>

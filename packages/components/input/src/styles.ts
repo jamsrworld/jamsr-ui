@@ -14,26 +14,27 @@ export const inputVariants = tv({
     mainWrapper: "flex flex-col gap-1",
     inputWrapper: [
       "relative",
-      "grow overflow-hidden",
+      "grow",
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
       "ui-group-focus:border-primary ui-group-focus:ring-primary",
       "ui-group-hover:border-default-400",
       ...groupDataFocusVisibleClasses,
     ],
-    innerWrapper: "flex h-full items-center",
+    innerWrapper: ["flex h-full items-center"],
     input: [
-      "block grow bg-transparent px-3 font-normal",
+      "block grow bg-transparent font-normal",
       "placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
-      "group-data-[has-start-content=true]:pl-2",
-      "group-data-[has-end-content=true]:pr-2",
+      "group-data-[has-start-content=true]:pl-0",
+      "group-data-[has-end-content=true]:pr-0",
     ],
     helper: "text-xs text-foreground-600",
-    startContent: "flex items-center gap-1 pl-2 text-foreground-500",
-    endContent: "flex items-center gap-1 pr-2 text-foreground-500",
+    startContent: "flex items-center gap-1 pr-2 text-foreground-500",
+    endContent: "flex items-center gap-1 pl-2 text-foreground-500",
     notation: "",
     contentWrapper: "flex h-full grow items-center",
     clearButton: "size-4",
     icon: "",
+    legend: "",
   },
   variants: {
     fullWidth: {
@@ -45,17 +46,37 @@ export const inputVariants = tv({
     variant: {
       underlined: {
         inputWrapper: "rounded-none border-b-2 border-default-200",
+        label:
+          "absolute top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-0 ui-group-filled-within:translate-y-0 ui-group-filled-within:text-xs",
+        innerWrapper: "pt-2",
       },
       standard: {
         inputWrapper: "border-2 border-default-200",
+        innerWrapper: [
+          "group-data-[has-start-content=true]:pl-2",
+          "group-data-[has-end-content=true]:pr-2",
+        ],
       },
       outlined: {
         inputWrapper: "border-2 border-default-200",
-        startContent: "group-data-[filled-within=true]:mt-4",
-        labelWrapper:
-          "pointer-events-none absolute inset-0 flex size-full items-start justify-between",
+        startContent: "ui-group-filled-within:mt-4",
         label:
-          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 group-data-[filled-within=true]:top-3.5",
+          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-3.5",
+        innerWrapper: [
+          "group-data-[has-start-content=true]:pl-3",
+          "group-data-[has-end-content=true]:pr-3",
+        ],
+      },
+      bordered: {
+        inputWrapper: "border-2 border-default-200",
+        label:
+          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-0",
+        legend:
+          "invisible ml-2 h-1 max-w-[0.01px] text-xs ui-group-filled-within:max-w-md ui-group-filled-within:pl-2",
+        innerWrapper: [
+          "group-data-[has-start-content=true]:pl-3",
+          "group-data-[has-end-content=true]:pr-3",
+        ],
       },
     },
     size: {
@@ -88,28 +109,65 @@ export const inputVariants = tv({
     },
     isFilled: {
       true: {
-        inputWrapper:
-          "border-none bg-default-100 ui-group-hover:bg-default-100/70",
+        inputWrapper: "bg-default-100 ui-group-hover:bg-default-100/70",
       },
     },
   },
   compoundVariants: [
+    // filled
     {
-      variant: ["standard", "underlined"],
+      isFilled: true,
+      variant: ["standard", "outlined", "bordered"],
+      className: {
+        inputWrapper: "border-none",
+      },
+    },
+    // standard
+    {
+      variant: ["standard"],
+      size: "sm",
+      className: {
+        input: "px-3 py-1.5 text-sm placeholder:text-sm",
+      },
+    },
+    {
+      variant: ["standard"],
+      size: "md",
+      className: {
+        input: "px-3 py-2 text-sm placeholder:text-sm",
+      },
+    },
+    {
+      variant: ["standard"],
+      size: "lg",
+      className: {
+        input: "p-3 text-base placeholder:text-base",
+      },
+    },
+    // underlined
+    {
+      variant: ["underlined"],
+      isFilled: true,
+      className: {
+        inputWrapper: "px-2",
+      },
+    },
+    {
+      variant: ["underlined"],
       size: "sm",
       className: {
         input: "py-1.5 text-sm placeholder:text-sm",
       },
     },
     {
-      variant: ["standard", "underlined"],
+      variant: ["underlined"],
       size: "md",
       className: {
         input: "py-2 text-sm placeholder:text-sm",
       },
     },
     {
-      variant: ["standard", "underlined"],
+      variant: ["underlined"],
       size: "lg",
       className: {
         input: "py-3 text-base placeholder:text-base",
@@ -120,24 +178,49 @@ export const inputVariants = tv({
       variant: "outlined",
       size: "sm",
       className: {
-        input: "px-3 pb-1 pt-5",
-        label: "text-sm group-data-[filled-within=true]:text-xs",
+        input: "px-3 py-1 group-data-[has-label=true]:pt-5",
+        label: "text-sm ui-group-filled-within:text-xs",
       },
     },
     {
       variant: "outlined",
       size: "md",
       className: {
-        input: "px-3 pb-1.5 pt-5",
-        label: "text-base group-data-[filled-within=true]:text-xs",
+        input: "px-3 py-1.5 group-data-[has-label=true]:pt-5",
+        label: "text-base ui-group-filled-within:text-xs",
       },
     },
     {
       variant: "outlined",
       size: "lg",
       className: {
-        input: "px-3 pb-2 pt-6",
-        label: "text-base group-data-[filled-within=true]:text-xs",
+        input: "px-3 py-2 group-data-[has-label=true]:pt-6",
+        label: "text-base ui-group-filled-within:text-xs",
+      },
+    },
+    // bordered
+    {
+      variant: "bordered",
+      size: "sm",
+      className: {
+        input: "px-3 py-2",
+        label: "text-sm ui-group-filled-within:text-xs",
+      },
+    },
+    {
+      variant: "bordered",
+      size: "md",
+      className: {
+        input: "p-3",
+        label: "text-base ui-group-filled-within:text-xs",
+      },
+    },
+    {
+      variant: "bordered",
+      size: "lg",
+      className: {
+        input: "px-3 py-4",
+        label: "text-base ui-group-filled-within:text-xs",
       },
     },
   ],

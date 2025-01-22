@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.238",
+  "version": "0.0.239",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -13,22 +13,14 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@testing-library/react": "^16.1.0",
-    "@types/eslint": "^8.56.5",
     "@types/node": "22.7.9",
     "@types/react": "19.0.1",
-    "@typescript-eslint/parser": "^7.10.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
     "clean-package": "^2.2.0",
-    "eslint": "^8",
     "framer-motion": "12.0.0-alpha.2",
-    "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "@jamsr-ui/accordion": "workspace:^",
@@ -37,7 +29,6 @@
     "@jamsr-ui/avatar": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/card": "workspace:^",
-    "@jamsr-ui/charts": "workspace:^",
     "@jamsr-ui/checkbox": "workspace:^",
     "@jamsr-ui/chip": "workspace:^",
     "@jamsr-ui/circular-progress": "workspace:^",

@@ -1,5 +1,13 @@
 # @jamsr-ui/editor
 
+## 0.0.133
+
+### Patch Changes
+
+- feat: input variant
+- Updated dependencies
+  - @jamsr-ui/input@0.0.121
+
 ## 0.0.132
 
 ### Patch Changes

@@ -25,15 +25,18 @@ import { InputWithIcon } from "./examples/with-icon";
 import { InputWithPlaceholder } from "./examples/with-placeholder";
 import { InputWithStartContent } from "./examples/with-start-content";
 import { InputWithoutLabel } from "./examples/without-label";
+import { InputUnderlinedAllProps } from "./examples/underlined-all-props";
+import { InputStandardAllProps } from "./examples/standard-all-props";
+import { InputBorderedAllProps } from "./examples/bordered-all-props";
 
 const title = "Input";
 const description =
   "A form element that allows users to input and submit data, supporting various types such as text, numbers, and more for seamless data entry.";
 
-  export const metadata: Metadata = {
-    title,
-    description,
-  };
+export const metadata: Metadata = {
+  title,
+  description,
+};
 const code = <T extends VariantTypes["input"][number]>(variant: T) =>
   readVariantCode("input", variant);
 
@@ -43,7 +46,7 @@ const Input = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <InputUsage />
       </VariantWrapper>
-    
+
       <VariantWrapper heading="Controlled" code={code("controlled")}>
         <InputControlled />
       </VariantWrapper>
@@ -101,7 +104,7 @@ const Input = () => {
       <VariantWrapper heading="Optional" code={code("optional")}>
         <InputOptional />
       </VariantWrapper>
-      
+
       <VariantWrapper heading="Placeholder" code={code("placeholder")}>
         <InputPlaceholder />
       </VariantWrapper>
@@ -115,10 +118,28 @@ const Input = () => {
         <InputNumberOnly />
       </VariantWrapper>
       <VariantWrapper
+        heading="Standard All Props"
+        code={code("standard-all-props")}
+      >
+        <InputStandardAllProps />
+      </VariantWrapper>
+      <VariantWrapper
         heading="Outlined All Props"
         code={code("outlined-all-props")}
       >
         <InputOutlinedAllProps />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Underlined All Props"
+        code={code("underlined-all-props")}
+      >
+        <InputUnderlinedAllProps />
+      </VariantWrapper>
+      <VariantWrapper
+        heading="Bordered All Props"
+        code={code("bordered-all-props")}
+      >
+        <InputBorderedAllProps />
       </VariantWrapper>
     </VariantPage>
   );

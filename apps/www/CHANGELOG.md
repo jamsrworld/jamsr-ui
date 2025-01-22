@@ -1,5 +1,15 @@
 # web
 
+## 0.1.221
+
+### Patch Changes
+
+- feat: input variant
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.133
+  - @jamsr-ui/react@0.0.239
+  - @jamsr-ui/theme@0.0.81
+
 ## 0.1.220
 
 ### Patch Changes

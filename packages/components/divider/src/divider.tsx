@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -19,7 +19,7 @@ export type DividerProps = DividerVariants & {
 };
 
 export const Divider = ($props: DividerProps) => {
-  const { divider: _globalProps = {} } = useUIStyle();
+  const { divider: _globalProps = {} } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

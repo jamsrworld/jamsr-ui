@@ -4,7 +4,7 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -34,7 +34,7 @@ type Props = {
 export type UseRadioProps = UIProps<"input", Props>;
 
 export const useRadio = ($props: UseRadioProps) => {
-  const { radio: _globalProps = {} } = useUIStyle();
+  const { radio: _globalProps = {} } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

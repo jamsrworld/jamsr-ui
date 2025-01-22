@@ -1,5 +1,5 @@
 import { useControlledState, useHover, useIsDisabled } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -56,7 +56,7 @@ type Props = EditorVariantsProps & {
 
 export type UseEditorProps = UIProps<"div", Props>;
 export const useEditor = ($props: UseEditorProps) => {
-  const { editor: _globalProps = {}, globalConfig } = useUIStyle();
+  const { editor: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

@@ -1,5 +1,14 @@
 # @jamsr-ui/table
 
+## 0.0.66
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.65
 
 ### Patch Changes

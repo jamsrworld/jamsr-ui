@@ -1,5 +1,4 @@
-import { type LinkProps } from "@jamsr-ui/react";
-import { LinkUsage } from "./usage";
+import { Link, type LinkProps } from "@jamsr-ui/react";
 
 export const LinkUnderline = () => {
   const underlines: LinkProps["underline"][] = ["always", "hover", "never"];
@@ -7,9 +6,9 @@ export const LinkUnderline = () => {
     <div className="flex gap-2">
       {underlines.map((item) => {
         return (
-          <LinkUsage key={item} underline={item}>
+          <Link href="/" key={item} underline={item}>
             underline="{item}"
-          </LinkUsage>
+          </Link>
         );
       })}
     </div>

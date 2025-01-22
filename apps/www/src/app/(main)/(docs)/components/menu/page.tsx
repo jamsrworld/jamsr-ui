@@ -17,7 +17,7 @@ import { MenuTriggerOnHover } from "./examples/trigger-on-hover";
 import { MenuUsage } from "./examples/usage";
 import { MenuWithArrow } from "./examples/with-arrow";
 import { MenuWithoutLockScroll } from "./examples/without-lock-scroll";
-import { UIStylesProvider } from "@jamsr-ui/styles";
+import { UIConfigProvider } from "@jamsr-ui/styles";
 
 const title = "Menu";
 const description =

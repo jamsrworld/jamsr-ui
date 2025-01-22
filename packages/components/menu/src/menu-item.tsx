@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useFloatingTree, useListItem } from "@floating-ui/react";
 import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -29,7 +29,7 @@ export type MenuItemProps<T extends React.ElementType = "li"> =
 export const MenuItem = <T extends React.ElementType = "li">(
   $props: MenuItemProps<T>,
 ) => {
-  const { menuItem: _globalProps = {} } = useUIStyle();
+  const { menuItem: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"li", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);

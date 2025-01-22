@@ -15,7 +15,7 @@ import {
   useRole,
   type Placement,
 } from "@floating-ui/react";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -40,7 +40,7 @@ export type TooltipProps = TooltipVariantProps & {
 };
 
 export const Tooltip = ($props: TooltipProps) => {
-  const { tooltip: _globalProps = {}, globalConfig } = useUIStyle();
+  const { tooltip: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   type ComponentPropsWithAs,
   type UIProps,
@@ -14,7 +14,7 @@ export type DialogBodyProps<T extends React.ElementType = "div"> =
 export const DialogBody = <T extends React.ElementType = "div">(
   $props: ComponentPropsWithAs<T, DialogBodyProps>,
 ) => {
-  const { dialogBody: _globalProps = {} } = useUIStyle();
+  const { dialogBody: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"div">;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);

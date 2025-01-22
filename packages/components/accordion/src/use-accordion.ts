@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   deepMergeProps,
   mapPropsVariants,
@@ -22,7 +22,7 @@ type Props = {
 export type UseAccordionProps = UIProps<"div"> & Props;
 
 export const useAccordion = ($props: UseAccordionProps) => {
-  const { accordion: _globalProps = {}, globalConfig } = useUIStyle();
+  const { accordion: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

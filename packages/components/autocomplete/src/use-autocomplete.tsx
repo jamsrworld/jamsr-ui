@@ -14,7 +14,7 @@ import {
 import { Chip } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import type { InputProps } from "@jamsr-ui/input";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -65,7 +65,7 @@ export type UseAutocompleteProps = Pick<
 };
 
 export const useAutocomplete = ($props: UseAutocompleteProps) => {
-  const { autocomplete: _globalProps = {}, globalConfig } = useUIStyle();
+  const { autocomplete: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

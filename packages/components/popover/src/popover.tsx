@@ -19,7 +19,7 @@ import {
   type Placement,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -48,7 +48,7 @@ export type PopoverProps = PopoverVariantProps & {
 };
 
 export const Popover = ($props: PopoverProps) => {
-  const { popover: _globalProps = {}, globalConfig } = useUIStyle();
+  const { popover: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

@@ -5,7 +5,7 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   dataAttr,
   deepMergeProps,
@@ -56,7 +56,7 @@ type Props = {
 export type SwitchProps = Props;
 
 export const Switch = ($props: SwitchProps) => {
-  const { switch: _globalProps = {} } = useUIStyle();
+  const { switch: _globalProps = {} } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

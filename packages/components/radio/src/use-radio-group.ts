@@ -1,5 +1,5 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -39,7 +39,7 @@ export type UseRadioGroupProps<T extends string = string> = Props<T> &
 export const useRadioGroup = <T extends string>(
   $props: UseRadioGroupProps<T>,
 ) => {
-  const { radioGroup: Props = {} } = useUIStyle();
+  const { radioGroup: Props = {} } = useUIConfig();
   const props = deepMergeProps(Props, $props);
 
   const {

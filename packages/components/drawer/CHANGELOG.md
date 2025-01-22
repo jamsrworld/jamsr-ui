@@ -1,5 +1,16 @@
 # @jamsr-ui/drawer
 
+## 1.0.91
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.19
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/hooks@0.0.60
+
 ## 1.0.90
 
 ### Patch Changes

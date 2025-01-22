@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -29,7 +29,7 @@ export type AlertProps<T extends React.ElementType = "div"> =
 export const Alert = <T extends React.ElementType = "div">(
   $props: AlertProps<T>,
 ) => {
-  const { alert: _globalProps = {}, globalConfig } = useUIStyle();
+  const { alert: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);
@@ -38,7 +38,6 @@ export const Alert = <T extends React.ElementType = "div">(
     alertVariant.variantKeys,
   );
 
-  // const props = deepMergeProps(_globalProps, $props, globalConfig);
   const {
     children,
     as,

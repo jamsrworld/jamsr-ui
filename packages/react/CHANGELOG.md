@@ -1,5 +1,59 @@
 # @jamsr-ui/react
 
+## 0.0.238
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.117
+  - @jamsr-ui/copy-to-clipboard@0.0.3
+  - @jamsr-ui/file-upload-multi@0.0.114
+  - @jamsr-ui/autocomplete@0.0.129
+  - @jamsr-ui/confirmation@0.0.90
+  - @jamsr-ui/icon-button@0.0.19
+  - @jamsr-ui/tags-input@0.0.58
+  - @jamsr-ui/accordion@0.0.96
+  - @jamsr-ui/otp-input@0.0.88
+  - @jamsr-ui/checkbox@0.0.90
+  - @jamsr-ui/skeleton@0.0.82
+  - @jamsr-ui/textarea@0.0.121
+  - @jamsr-ui/divider@0.0.84
+  - @jamsr-ui/popover@0.0.91
+  - @jamsr-ui/stepper@0.0.27
+  - @jamsr-ui/tooltip@0.0.86
+  - @jamsr-ui/avatar@0.0.89
+  - @jamsr-ui/button@0.0.96
+  - @jamsr-ui/dialog@0.0.107
+  - @jamsr-ui/drawer@1.0.91
+  - @jamsr-ui/editor@0.0.132
+  - @jamsr-ui/header@0.0.90
+  - @jamsr-ui/rating@0.0.47
+  - @jamsr-ui/select@0.0.116
+  - @jamsr-ui/switch@0.0.97
+  - @jamsr-ui/alert@0.0.103
+  - @jamsr-ui/input@0.0.120
+  - @jamsr-ui/radio@0.0.95
+  - @jamsr-ui/table@0.0.66
+  - @jamsr-ui/card@0.0.97
+  - @jamsr-ui/chip@0.0.104
+  - @jamsr-ui/link@0.0.84
+  - @jamsr-ui/menu@0.0.112
+  - @jamsr-ui/text@0.0.9
+  - @jamsr-ui/kbd@0.0.19
+  - @jamsr-ui/tab@0.0.109
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/rhf@0.0.78
+  - @jamsr-ui/data-table@0.0.87
+  - @jamsr-ui/sidebar@0.0.96
+  - @jamsr-ui/toast@0.0.44
+  - @jamsr-ui/circular-progress@0.0.15
+  - @jamsr-ui/linear-progress@0.0.14
+  - @jamsr-ui/ripple@0.0.88
+  - @jamsr-ui/charts@0.0.10
+  - @jamsr-ui/collapsible@0.0.10
+
 ## 0.0.237
 
 ### Patch Changes

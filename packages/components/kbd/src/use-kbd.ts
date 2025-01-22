@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -20,7 +20,7 @@ type Props = KbdVariantProps & {
 export type UseKbdProps = UIProps<"kbd"> & Props;
 
 export const useKbd = ($props: UseKbdProps) => {
-  const { kbd: _globalProps = {}, globalConfig } = useUIStyle();
+  const { kbd: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

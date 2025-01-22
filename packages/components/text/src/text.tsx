@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   deepMergeProps,
   mapPropsVariants,
@@ -18,7 +18,7 @@ export type TextProps<T extends React.ElementType = "div"> = Props &
 export const Text = <T extends React.ElementType = "div">(
   $props: TextProps<T>,
 ) => {
-  const { text: _globalProps = {} } = useUIStyle();
+  const { text: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

@@ -1,5 +1,12 @@
 # @jamsr-ui/chart
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.9
 
 ### Patch Changes

@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
 import React from "react";
 import { DialogProvider } from "./dialog-context";
@@ -9,7 +9,7 @@ export type DialogProps = UseDialogProps & {
 };
 
 export const Dialog = ($props: DialogProps) => {
-  const { dialog: _globalProps = {}, globalConfig } = useUIStyle();
+  const { dialog: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props, globalConfig);

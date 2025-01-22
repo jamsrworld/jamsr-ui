@@ -1,5 +1,13 @@
 # @jamsr-ui/collapsible
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.0.9
 
 ### Patch Changes

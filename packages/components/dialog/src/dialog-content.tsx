@@ -3,7 +3,7 @@ import {
   FloatingOverlay,
   FloatingPortal,
 } from "@floating-ui/react";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   deepMergeProps,
   mergeGlobalProps,
@@ -20,7 +20,7 @@ export type DialogContentProps<T extends React.ElementType = "div"> =
 export const DialogContent = <T extends React.ElementType = "div">(
   $props: ComponentPropsWithAs<T, DialogContentProps>,
 ) => {
-  const { dialogContent: _globalProps = {} } = useUIStyle();
+  const { dialogContent: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"div">;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);

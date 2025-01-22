@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.0.237",
+  "version": "0.0.238",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {

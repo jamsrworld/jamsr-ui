@@ -1,6 +1,6 @@
 "use client";
 
-import { CopyToClipboard, toast, UIStylesProvider } from "@jamsr-ui/react";
+import { CopyToClipboard, toast, UIConfigProvider } from "@jamsr-ui/react";
 
 export const CopyToClipboardGlobalConfig = () => {
   const onSuccess = ({ message }: { message?: string }) => {
@@ -15,7 +15,7 @@ export const CopyToClipboardGlobalConfig = () => {
   };
 
   return (
-    <UIStylesProvider
+    <UIConfigProvider
       copyToClipboard={{
         onSuccess,
         onError,
@@ -27,6 +27,6 @@ export const CopyToClipboardGlobalConfig = () => {
       <CopyToClipboard content="Text2" message="Text 2">
         Click me to copy 2
       </CopyToClipboard>
-    </UIStylesProvider>
+    </UIConfigProvider>
   );
 };

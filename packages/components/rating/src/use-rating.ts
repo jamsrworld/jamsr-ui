@@ -1,5 +1,5 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -29,7 +29,7 @@ type Props = {
 export type UseRatingProps = Props & ComponentProps<"div">;
 
 export const useRating = ($props: UseRatingProps) => {
-  const { rating: _globalProps = {} } = useUIStyle();
+  const { rating: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

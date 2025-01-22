@@ -1,5 +1,15 @@
 # @jamsr-ui/chip
 
+## 0.0.104
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/button@0.0.96
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.103
 
 ### Patch Changes

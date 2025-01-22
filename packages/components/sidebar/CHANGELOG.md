@@ -1,5 +1,14 @@
 # @jamsr-ui/sidebar
 
+## 0.0.96
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.0.95
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 import { useControlledState, useIsDisabled } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -51,7 +51,7 @@ type Props = {
 export type UseFileUploadSingleProps = UIProps<"div", Props>;
 
 export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
-  const { fileUploadSingle: _globalProps = {}, globalConfig } = useUIStyle();
+  const { fileUploadSingle: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

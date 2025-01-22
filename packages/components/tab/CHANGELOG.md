@@ -1,5 +1,16 @@
 # @jamsr-ui/tab
 
+## 0.0.109
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/card@0.0.97
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.0.108
 
 ### Patch Changes

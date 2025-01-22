@@ -2,13 +2,13 @@
 
 "use client";
 
-import { Chip, UIStylesProvider } from "@jamsr-ui/react";
+import { Chip, UIConfigProvider } from "@jamsr-ui/react";
 import { cn } from "@jamsr-ui/utils";
 
 export const ChipCustomize = () => {
   return (
     <div className="flex flex-wrap gap-4">
-      <UIStylesProvider
+      <UIConfigProvider
         chip={{
           props({ variant, color }) {
             return variant === "dot"
@@ -28,7 +28,7 @@ export const ChipCustomize = () => {
         <Chip variant="dot" color="danger">
           Hello
         </Chip>
-      </UIStylesProvider>
+      </UIConfigProvider>
     </div>
   );
 };

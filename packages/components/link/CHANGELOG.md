@@ -1,5 +1,15 @@
 # @jamsr-ui/link
 
+## 0.0.84
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/text@0.0.9
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.83
 
 ### Patch Changes

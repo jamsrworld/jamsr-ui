@@ -1,5 +1,18 @@
 # @jamsr-ui/confirmation
 
+## 0.0.90
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.84
+  - @jamsr-ui/button@0.0.96
+  - @jamsr-ui/dialog@0.0.107
+  - @jamsr-ui/text@0.0.9
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.89
 
 ### Patch Changes

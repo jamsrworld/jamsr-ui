@@ -1,5 +1,15 @@
 # @jamsr-ui/popover
 
+## 0.0.91
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.0.90
 
 ### Patch Changes

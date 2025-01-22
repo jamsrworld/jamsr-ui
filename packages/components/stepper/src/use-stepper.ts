@@ -1,5 +1,5 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -24,7 +24,7 @@ type Props = UIProps<"div"> & {
 export type UseStepperProps = Props & StepperVariantsProps;
 
 export const useStepper = ($props: UseStepperProps) => {
-  const { stepper: Props = {} } = useUIStyle();
+  const { stepper: Props = {} } = useUIConfig();
   const props = deepMergeProps(Props, $props);
 
   const {

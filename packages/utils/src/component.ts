@@ -7,8 +7,8 @@ export type PropsOf<T extends As> = React.ComponentPropsWithRef<T> & {
 
 export type UIProps<
   T extends As = "div",
-  MergedKeys extends object = object,
-  OmitKeys extends object = object,
+  MergedKeys extends object = NonNullable<unknown>,
+  OmitKeys extends object = NonNullable<unknown>,
 > = Omit<
   PropsOf<T>,
   | "ref"

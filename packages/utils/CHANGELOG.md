@@ -1,5 +1,11 @@
 # @jamsr-ui/utils
 
+## 0.0.78
+
+### Patch Changes
+
+- fix: avatar, link
+
 ## 0.0.77
 
 ### Patch Changes

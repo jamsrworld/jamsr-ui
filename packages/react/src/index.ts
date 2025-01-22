@@ -175,8 +175,8 @@ export {
 export { Skeleton, type SkeletonProps } from "@jamsr-ui/skeleton";
 export { Stepper, type StepperProps } from "@jamsr-ui/stepper";
 export {
-  UIStylesProvider,
-  useUIStyle,
+  UIConfigProvider,
+  useUIConfig,
   type UIStylesType,
 } from "@jamsr-ui/styles";
 export { Switch, type SwitchProps } from "@jamsr-ui/switch";

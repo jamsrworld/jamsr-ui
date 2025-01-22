@@ -7,7 +7,7 @@ import {
   useMergeRefs,
 } from "@jamsr-ui/hooks";
 import { type IconButtonProps } from "@jamsr-ui/icon-button";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -70,7 +70,7 @@ type Props = {
 export type UseInputProps = UIProps<"input", Props>;
 
 export const useInput = ($props: UseInputProps) => {
-  const { input: _globalProps = {}, globalConfig } = useUIStyle();
+  const { input: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

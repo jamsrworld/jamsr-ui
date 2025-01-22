@@ -1,5 +1,12 @@
 # @jamsr-ui/hooks
 
+## 0.0.60
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.59
 
 ### Patch Changes

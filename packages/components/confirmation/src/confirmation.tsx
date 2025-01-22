@@ -8,7 +8,7 @@ import {
   DialogHeader,
 } from "@jamsr-ui/dialog";
 import { Divider } from "@jamsr-ui/divider";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import { Text } from "@jamsr-ui/text";
 import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useConfirmation } from "./use-confirmation";
@@ -33,7 +33,7 @@ export type ConfirmationProps = {
 };
 
 export const Confirmation = ($props: ConfirmationProps) => {
-  const { confirmation: Props = {} } = useUIStyle();
+  const { confirmation: Props = {} } = useUIConfig();
   const props = deepMergeProps(Props, $props);
 
   const { isOpen, onClose, options: confirmation } = useConfirmation();

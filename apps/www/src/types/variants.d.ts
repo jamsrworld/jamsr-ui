@@ -2,7 +2,7 @@ export type VariantTypes = {
   "accordion": ["custom-icon", "disabled", "end-content-outside", "end-content", "multiple-selection", "radius", "start-content-outside", "start-content", "subheading", "usage", "variants", "without-icon"];
   "alert": ["custom-icon", "radius", "status", "usage", "variants", "with-action", "with-description", "without-icon"];
   "autocomplete": ["choose-country", "controlled", "disabled-items", "disabled", "error-state", "helper-text", "multiple-controlled", "multiple-custom-render", "multiple", "start-end-content", "usage"];
-  "avatar": ["bordered", "colors", "fallback-color", "fallbacks", "image-fallback", "nextjs-usage", "radius", "sizes", "usage"];
+  "avatar": ["avatar.d", "bordered", "colors", "fallback-color", "fallbacks", "image-fallback", "nextjs-usage", "radius", "sizes", "usage"];
   "breadcrumbs": [];
   "button": ["colors", "disabled", "loading", "radius", "sizes", "usage", "variants-colors", "variants", "with-icons"];
   "card": ["radius", "start-end-content", "usage", "variants", "with-form"];
@@ -28,7 +28,7 @@ export type VariantTypes = {
   "input": ["clearable", "controlled", "disabled", "error-state", "filled", "helper-text", "label-helper", "numbers-only", "optional", "outlined-all-props", "placeholder", "radius", "required", "secured-text", "sizes", "standard-all-props", "usage", "variants", "with-end-content", "with-icon", "with-placeholder", "with-start-content", "without-label"];
   "kbd": ["keys", "radius", "usage"];
   "linear-progress": ["colors", "controlled", "usage"];
-  "link": ["underline", "usage"];
+  "link": ["nextjs-usage", "underline", "usage"];
   "menu": ["backdrop", "colors", "controlled", "customize", "nested", "offset", "placement", "prevent-close", "radius", "start-end-content", "trigger-on-hover", "usage", "with-arrow", "without-lock-scroll"];
   "number-input": [];
   "otp-input": ["6-digits", "controlled", "numbers-only", "on-complete", "radius", "usage"];

@@ -1,7 +1,8 @@
+import { forwardType } from "@jamsr-ui/utils";
 import { useAvatar, type UseAvatarProps } from "./use-avatar";
 
 export interface AvatarProps extends UseAvatarProps {}
-export const Avatar = (props: AvatarProps) => {
+export const Avatar = forwardType<"img", AvatarProps>((props: AvatarProps) => {
   const { Component, fallBack, getBaseProps, getImageProps, imgSrc } =
     useAvatar(props);
   return (
@@ -9,4 +10,4 @@ export const Avatar = (props: AvatarProps) => {
       {!imgSrc ? fallBack : <Component {...getImageProps()} />}
     </div>
   );
-};
+});

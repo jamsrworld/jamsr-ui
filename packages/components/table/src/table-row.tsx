@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -13,7 +13,7 @@ export type TableRowProps = UIProps<"tr">;
 export const TableRow = <T extends React.ElementType = "tr">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableRow: _globalProps = {} } = useUIStyle();
+  const { tableRow: _globalProps = {} } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);

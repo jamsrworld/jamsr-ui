@@ -1,11 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Link, type LinkProps } from "@jamsr-ui/react";
+import { Link } from "@jamsr-ui/react";
 
-export const LinkUsage = (props: Partial<LinkProps>) => {
-  const { children = "Go to homepage", ...restProps } = props;
-  return (
-    <Link href="/" {...restProps}>
-      {children}
-    </Link>
-  );
+export const LinkUsage = () => {
+  return <Link href="/">Go to homepage </Link>;
 };

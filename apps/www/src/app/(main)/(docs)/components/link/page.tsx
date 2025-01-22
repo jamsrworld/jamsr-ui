@@ -1,10 +1,11 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { VariantWrapper } from "@/components/docs/variant-wrapper";
-import { type Metadata } from "next";
-import { readVariantCode } from "@/utils/read-code";
 import { type VariantTypes } from "@/types/variants";
-import { LinkUsage } from "./examples/usage";
+import { readVariantCode } from "@/utils/read-code";
+import { type Metadata } from "next";
+import { LinkNextJsUsage } from "./examples/nextjs-usage";
 import { LinkUnderline } from "./examples/underline";
+import { LinkUsage } from "./examples/usage";
 
 const title = "Link";
 const description =
@@ -27,9 +28,9 @@ const Link = () => {
       <VariantWrapper heading="Underline" code={code("underline")}>
         <LinkUnderline />
       </VariantWrapper>
-      {/* <VariantWrapper heading="NextJs Usage" code={code("underline")}>
-        <LinkUnderline />
-      </VariantWrapper> */}
+      <VariantWrapper heading="NextJs Usage" code={code("nextjs-usage")}>
+        <LinkNextJsUsage />
+      </VariantWrapper>
     </VariantPage>
   );
 };

@@ -1,5 +1,14 @@
 # @jamsr-ui/rating
 
+## 0.0.47
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.0.46
 
 ### Patch Changes

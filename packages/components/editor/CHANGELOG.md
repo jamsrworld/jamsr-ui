@@ -1,5 +1,23 @@
 # @jamsr-ui/editor
 
+## 0.0.132
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.117
+  - @jamsr-ui/icon-button@0.0.19
+  - @jamsr-ui/divider@0.0.84
+  - @jamsr-ui/popover@0.0.91
+  - @jamsr-ui/select@0.0.116
+  - @jamsr-ui/switch@0.0.97
+  - @jamsr-ui/input@0.0.120
+  - @jamsr-ui/menu@0.0.112
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.0.131
 
 ### Patch Changes

@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -22,7 +22,7 @@ type Props = TableVariantProps & {
 export type UseTableProps = UIProps<"table", Props>;
 
 export const useTable = ($props: UseTableProps) => {
-  const { table: _globalProps = {}, globalConfig } = useUIStyle();
+  const { table: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props as UIProps<"table", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

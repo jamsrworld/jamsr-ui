@@ -1,6 +1,6 @@
 import { useControlledState2, useIsDisabled } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -57,7 +57,7 @@ type Props = MultiUploadVariants & {
 
 export type UseFileUploadMultiProps = UIProps<"div", Props>;
 export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
-  const { fileUploadMulti: _globalProps = {}, globalConfig } = useUIStyle();
+  const { fileUploadMulti: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

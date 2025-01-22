@@ -1,7 +1,7 @@
 "use client";
 
 export {
-  UIStylesProvider,
+  UIConfigProvider,
   type UIStylesType,
-  useUIStyle,
+  useUIConfig,
 } from "./styles-provider";

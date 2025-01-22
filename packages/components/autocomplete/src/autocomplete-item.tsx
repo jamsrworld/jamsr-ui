@@ -1,7 +1,7 @@
 import { useListItem } from "@floating-ui/react";
 import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { dataAttr, deepMergeProps } from "@jamsr-ui/utils";
 import { useAutocompleteContext } from "./use-autocomplete-context";
@@ -19,7 +19,7 @@ export type AutocompleteItemProps<T extends React.ElementType = "button"> =
 export const AutocompleteItem = <T extends React.ElementType = "button">(
   $props: AutocompleteItemProps<T>,
 ) => {
-  const { autocompleteItem: Props = {} } = useUIStyle();
+  const { autocompleteItem: Props = {} } = useUIConfig();
   const props = deepMergeProps(Props, $props);
   const {
     children,

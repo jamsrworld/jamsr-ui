@@ -1,5 +1,18 @@
 # web
 
+## 0.1.220
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.132
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/react@0.0.238
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/charts@0.0.10
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.1.219
 
 ### Patch Changes

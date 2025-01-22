@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { PropGetter, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -19,7 +19,7 @@ type Props = HeaderVariantProps & {
 export type UseHeaderProps = UIProps<"header", Props>;
 
 export const useHeader = ($props: UseHeaderProps) => {
-  const { header: _globalProps = {} } = useUIStyle();
+  const { header: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

@@ -1,7 +1,7 @@
 import { Chip } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { Input, type InputProps } from "@jamsr-ui/input";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
 import { useCallback, useMemo, useState } from "react";
 
@@ -15,7 +15,7 @@ type Props = {
 export type TagsInputProps = Omit<InputProps, keyof Props> & Props;
 
 export const TagsInput = ($props: TagsInputProps) => {
-  const { tagsInput: _globalProps = {}, globalConfig } = useUIStyle();
+  const { tagsInput: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props, globalConfig);

@@ -1,5 +1,25 @@
 # @jamsr-ui/rhf
 
+## 0.0.78
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.0.117
+  - @jamsr-ui/file-upload-multi@0.0.114
+  - @jamsr-ui/autocomplete@0.0.129
+  - @jamsr-ui/tags-input@0.0.58
+  - @jamsr-ui/otp-input@0.0.88
+  - @jamsr-ui/checkbox@0.0.90
+  - @jamsr-ui/textarea@0.0.121
+  - @jamsr-ui/editor@0.0.132
+  - @jamsr-ui/rating@0.0.47
+  - @jamsr-ui/select@0.0.116
+  - @jamsr-ui/switch@0.0.97
+  - @jamsr-ui/input@0.0.120
+  - @jamsr-ui/radio@0.0.95
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.77
 
 ### Patch Changes

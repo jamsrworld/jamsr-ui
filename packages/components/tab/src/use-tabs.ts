@@ -1,5 +1,5 @@
 import { useControlledState } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -30,7 +30,7 @@ type Props<T extends string> = {
 export type UseTabsProps<T extends string> = UIProps<"div", Props<T>>;
 
 export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
-  const { tabs: _globalProps = {}, globalConfig } = useUIStyle();
+  const { tabs: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props as UIProps<"div", Props<T>>;
   // @ts-expect-error typeError
   const globalProps = mergeGlobalProps(_globalProps, _props);

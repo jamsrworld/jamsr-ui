@@ -1,37 +1,21 @@
-import { useUIStyle } from "@jamsr-ui/styles";
-import type { ComponentPropsWithAs, UIProps } from "@jamsr-ui/utils";
-import {
-  deepMergeProps,
-  mapPropsVariants,
-  mergeGlobalProps,
-} from "@jamsr-ui/utils";
-import { link, type LinkVariants } from "./styles";
+import { forwardType } from "@jamsr-ui/utils";
+import { useLink, type UseLinkProps } from "./use-link";
 
-type Props = LinkVariants;
-export type LinkProps<T extends React.ElementType = "a"> = ComponentPropsWithAs<
-  T,
-  Props
->;
-
-export const Link = <T extends React.ElementType = "a">(
-  $props: LinkProps<T>,
-) => {
-  const { link: _globalProps = {} } = useUIStyle();
-  const _props = $props as UIProps<"a", Props>;
-  const globalProps = mergeGlobalProps(_globalProps, _props);
-  const mergedProps = deepMergeProps(globalProps, _props);
-  const [props, variantProps] = mapPropsVariants(mergedProps, link.variantKeys);
-  const { as, children, className, ...restProps } = props;
-  const Component = as ?? "a";
-
-  const styles = link({
-    className,
-    ...variantProps,
-  });
+export interface LinkProps extends UseLinkProps {}
+export const Link = forwardType<"a", LinkProps>((props: LinkProps) => {
+  const { Component, children, getLinkProps, globalChildren } = useLink(props);
   return (
-    <Component data-component="link" className={styles} {...restProps}>
-      {globalProps.children}
+    <Component {...getLinkProps()}>
+      {globalChildren}
       {children}
     </Component>
   );
-};
+});
+
+<>
+  {/* <Link href="/" target="_blank" src="" />; */}
+  <Link href="/" target="_blank" />
+  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+  <Link as="img" src="" />
+  <Link href="/" as="img" src="" alt="" />;
+</>;

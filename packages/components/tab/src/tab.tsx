@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   deepMergeProps,
   mergeGlobalProps,
@@ -22,7 +22,7 @@ export type TabProps<T extends React.ElementType = "button"> =
 export const Tab = <T extends React.ElementType = "button">(
   $props: TabProps<T>,
 ) => {
-  const { tab: _globalProps = {} } = useUIStyle();
+  const { tab: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"button", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);

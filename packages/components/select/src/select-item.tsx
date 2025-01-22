@@ -1,7 +1,7 @@
 import { useListItem } from "@floating-ui/react";
 import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -24,7 +24,7 @@ export type SelectItemProps<T extends React.ElementType = "button"> =
 export const SelectItem = <T extends React.ElementType = "button">(
   $props: SelectItemProps<T>,
 ) => {
-  const { selectItem: _globalProps = {} } = useUIStyle();
+  const { selectItem: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"button", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);

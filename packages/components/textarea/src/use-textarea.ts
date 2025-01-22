@@ -21,7 +21,7 @@ import {
 } from "@jamsr-ui/utils";
 import { useCallback, type ComponentProps } from "react";
 
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import { type TextareaSlots, type TextareaVariantProps } from "./style";
 
 type Props = {
@@ -46,7 +46,7 @@ type Props = {
 export type UseTextareaProps = UIProps<"textarea", Props>;
 
 export const useTextarea = ($props: UseTextareaProps) => {
-  const { textarea: _globalProps = {}, globalConfig } = useUIStyle();
+  const { textarea: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

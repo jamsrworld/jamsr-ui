@@ -1,5 +1,5 @@
 import { AvatarIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -27,7 +27,7 @@ interface Props {
 export type UseAvatarProps = UIProps<"img", Props> & AvatarVariants;
 
 export const useAvatar = ($props: UseAvatarProps) => {
-  const { avatar: _globalProps = {}, globalConfig } = useUIStyle();
+  const { avatar: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

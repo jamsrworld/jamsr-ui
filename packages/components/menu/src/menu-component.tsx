@@ -29,7 +29,7 @@ import {
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { ChevronRightIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -127,7 +127,7 @@ const motionVariants = {
 };
 
 export const MenuComponent = ($props: MenuProps) => {
-  const { menu: _globalProps = {}, globalConfig } = useUIStyle();
+  const { menu: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

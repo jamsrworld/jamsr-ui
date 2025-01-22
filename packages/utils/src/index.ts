@@ -51,6 +51,7 @@ export { useDOMRef } from "./dom";
 export { filterDOMProps } from "./filter-dom-props";
 export { randomId } from "./fns";
 export { mergeProps } from "./merge-props";
+export { removeAttrsFromObject } from "./object";
 export { TRANSITION_VARIANTS } from "./transition";
 export { mapPropsVariants, type SlotsToClasses } from "./tv";
-export { removeAttrsFromObject } from "./object";
+export { forwardType } from "./type";

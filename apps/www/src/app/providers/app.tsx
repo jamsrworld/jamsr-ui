@@ -4,7 +4,7 @@ import {
   Confirmation,
   ToastProvider,
   UIProvider,
-  UIStylesProvider,
+  UIConfigProvider,
 } from "@jamsr-ui/react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -19,7 +19,7 @@ export const AppProvider = (props: Props) => {
       <Analytics />
       <ToastProvider />
       <Confirmation />
-      <UIStylesProvider>{children}</UIStylesProvider>
+      <UIConfigProvider>{children}</UIConfigProvider>
     </UIProvider>
   );
 };

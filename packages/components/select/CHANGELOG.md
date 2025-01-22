@@ -1,5 +1,18 @@
 # @jamsr-ui/select
 
+## 0.0.116
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.91
+  - @jamsr-ui/button@0.0.96
+  - @jamsr-ui/chip@0.0.104
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+  - @jamsr-ui/hooks@0.0.60
+
 ## 0.0.115
 
 ### Patch Changes

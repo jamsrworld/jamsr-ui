@@ -18,7 +18,7 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -74,7 +74,7 @@ export type UseSelectInnerProps = Props;
 export type UseSelectProps = UIProps<"div", Props>;
 
 export const useSelect = ($props: UseSelectProps) => {
-  const { select: _globalProps = {}, globalConfig } = useUIStyle();
+  const { select: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

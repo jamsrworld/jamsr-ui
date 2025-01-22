@@ -1,6 +1,6 @@
 import { IconButton, type IconButtonProps } from "@jamsr-ui/icon-button";
 import { CheckIcon, CopyIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -27,7 +27,7 @@ export type CopyToClipboardProps = UseCopyToClipboardProps & {
 };
 
 export const CopyToClipboard = ($props: CopyToClipboardProps) => {
-  const { copyToClipboard: _globalProps = {} } = useUIStyle();
+  const { copyToClipboard: _globalProps = {} } = useUIConfig();
   const globalProps = mergeGlobalProps(_globalProps, $props);
   const props = deepMergeProps(globalProps, $props);
 

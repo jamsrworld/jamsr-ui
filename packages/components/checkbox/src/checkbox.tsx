@@ -5,7 +5,7 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   dataAttr,
   deepMergeProps,
@@ -42,7 +42,7 @@ export type CheckboxProps = CheckboxVariantProps & {
 };
 
 export const Checkbox = ($props: CheckboxProps) => {
-  const { checkbox: _globalProps = {}, globalConfig } = useUIStyle();
+  const { checkbox: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

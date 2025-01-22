@@ -1,5 +1,14 @@
 # @jamsr-ui/tooltip
 
+## 0.0.86
+
+### Patch Changes
+
+- fix: avatar, link
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/utils@0.0.78
+
 ## 0.0.85
 
 ### Patch Changes

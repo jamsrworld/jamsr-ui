@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/button",
-  "version": "0.0.95",
+  "version": "0.0.96",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",

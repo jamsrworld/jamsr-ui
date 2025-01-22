@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import { Text } from "@jamsr-ui/text";
 import {
   cn,
@@ -32,7 +32,7 @@ export type CardHeaderProps<T extends React.ElementType = "div"> =
 export const CardHeader = <T extends React.ElementType = "div">(
   $props: CardHeaderProps<T>,
 ) => {
-  const { cardHeader: _globalProps = {} } = useUIStyle();
+  const { cardHeader: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);
@@ -50,7 +50,7 @@ export const CardHeader = <T extends React.ElementType = "div">(
   } = props;
   const Component = as ?? "div";
 
-  const { cardHeader } = useUIStyle();
+  const { cardHeader } = useUIConfig();
   const classNames = mergeClassNames(cardHeader?.classNames, $classNames);
   return (
     <Component

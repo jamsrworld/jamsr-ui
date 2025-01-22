@@ -3,7 +3,7 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -48,7 +48,7 @@ export type OtpInputProps = OtpInputVariantProps & {
 };
 
 export const OtpInput = ($props: OtpInputProps) => {
-  const { otpInput: _globalProps = {}, globalConfig } = useUIStyle();
+  const { otpInput: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

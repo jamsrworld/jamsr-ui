@@ -1,5 +1,5 @@
 import { CloseFilledIcon } from "@jamsr-ui/shared-icons";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type {
   ComponentPropsWithAs,
   SlotsToClasses,
@@ -29,7 +29,7 @@ export type ChipProps<T extends React.ElementType = "div"> =
 export const Chip = <T extends React.ElementType = "div">(
   $props: ChipProps<T>,
 ) => {
-  const { chip: _globalProps = {}, globalConfig } = useUIStyle();
+  const { chip: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

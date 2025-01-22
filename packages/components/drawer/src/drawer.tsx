@@ -10,7 +10,7 @@ import {
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { type IconButtonProps } from "@jamsr-ui/icon-button";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   deepMergeProps,
@@ -42,7 +42,7 @@ export type DrawerProps = DrawerVariants & {
 };
 
 export const Drawer = ($props: DrawerProps) => {
-  const { drawer: _globalProps = {} } = useUIStyle();
+  const { drawer: _globalProps = {} } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

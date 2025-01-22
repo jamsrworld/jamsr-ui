@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   cn,
   dataAttr,
@@ -24,7 +24,7 @@ type Props = {
 export type UseSkeletonProps = UIProps<"div"> & Props;
 
 export function useSkeleton($props: UseSkeletonProps) {
-  const { skeleton: _globalProps = {} } = useUIStyle();
+  const { skeleton: _globalProps = {} } = useUIConfig();
   const _props = $props as UIProps<"div", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);

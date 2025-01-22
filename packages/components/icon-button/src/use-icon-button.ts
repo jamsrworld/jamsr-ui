@@ -4,7 +4,7 @@ import {
   useMergeRefs,
   usePress,
 } from "@jamsr-ui/hooks";
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import {
   dataAttr,
   deepMergeProps,
@@ -30,7 +30,7 @@ type Props = UIProps<"button"> & {
 export type UseIconButtonProps = Props & ButtonVariantProps;
 
 export const useIconButton = ($props: UseIconButtonProps) => {
-  const { iconButton: _globalProps = {}, globalConfig } = useUIStyle();
+  const { iconButton: _globalProps = {}, globalConfig } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props, globalConfig);

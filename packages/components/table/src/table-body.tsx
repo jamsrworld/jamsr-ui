@@ -1,4 +1,4 @@
-import { useUIStyle } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/styles";
 import type { ComponentPropsWithAs, UIProps } from "@jamsr-ui/utils";
 import { cn, deepMergeProps, isEmpty, mergeGlobalProps } from "@jamsr-ui/utils";
 import { useTableContext } from "./table-context";
@@ -9,7 +9,7 @@ export type TableBodyProps = UIProps<"tbody">;
 export const TableBody = <T extends React.ElementType = "tbody">(
   $props: ComponentPropsWithAs<T>,
 ) => {
-  const { tableBody: _globalProps = {} } = useUIStyle();
+  const { tableBody: _globalProps = {} } = useUIConfig();
   const _props = $props;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);

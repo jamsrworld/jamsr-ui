@@ -19,11 +19,11 @@ import NextLink from "next/link";
 import { NpmIcon, PnpmIcon, YarnIcon } from "./assets/icons";
 
 const title = "Installation";
-const description = "How to install and setup JamsrUI in your project.";
+const description = "Install and Configure JamsrUI in your Next.js project.";
 
 export const metadata: Metadata = {
-  title: "Installation",
-  description,
+  title: "Install and Configure JamsrUI in Next.js",
+  description:"How to Install JamsrUI in a Next.js Project",
 };
 
 const items: { heading: string; content: React.ReactNode }[] = [
@@ -60,7 +60,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
           <ul className="flex list-disc flex-col gap-4">
             <li className="space-y-4">
               <div>
-                Create <Code>.npmrc</Code> file at root and add the following line:
+                Create <Code>.npmrc</Code> file at the root directory of your project:
               </div>
               <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
             </li>

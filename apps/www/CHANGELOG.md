@@ -1,5 +1,14 @@
 # web
 
+## 0.1.223
+
+### Patch Changes
+
+- fix: input outlined variant
+- Updated dependencies
+  - @jamsr-ui/editor@0.0.135
+  - @jamsr-ui/react@0.0.241
+
 ## 0.1.222
 
 ### Patch Changes

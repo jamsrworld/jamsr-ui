@@ -1,5 +1,11 @@
 # @jamsr-ui/input
 
+## 0.0.123
+
+### Patch Changes
+
+- fix: input outlined variant
+
 ## 0.0.122
 
 ### Patch Changes

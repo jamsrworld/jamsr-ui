@@ -32,7 +32,7 @@ export const inputVariants = tv({
     endContent: "flex items-center gap-1 pl-2 text-foreground-500",
     notation: "",
     contentWrapper: "flex h-full grow items-center",
-    clearButton: "size-4",
+    clearButton: "mr-2 size-4",
     icon: "",
     legend: "",
   },
@@ -70,7 +70,7 @@ export const inputVariants = tv({
       outlined: {
         inputWrapper: "border-2 border-default-200",
         label:
-          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-0",
+          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-[-2.5px]",
         legend:
           "invisible ml-2 h-1 max-w-[0.01px] text-xs ui-group-filled-within:max-w-md ui-group-filled-within:pl-2",
         innerWrapper: [

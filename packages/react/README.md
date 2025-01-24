@@ -2,7 +2,7 @@
 
 **A Next.js UI Components Library for Developers**
 
-> **NOTE**: 🚧 Currently work in progress. Stay tuned for updates!
+> **NOTE**: 🚨 JamsrUI is currently in its early stages of development and may still contain bugs.
 
 ## 📖 **Overview**
 

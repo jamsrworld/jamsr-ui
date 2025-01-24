@@ -25,6 +25,23 @@ export const sidebarItems: {
     ],
   },
   {
+    heading: "Installation",
+    items: [
+      {
+        heading: "Next.js",
+        path: "/installation/next",
+      },
+      {
+        heading: "Vite",
+        path: "/installation/vite",
+      },
+      {
+        heading: "Remix",
+        path: "/installation/remix",
+      },
+    ],
+  },
+  {
     heading: "Components",
     items: [
       {

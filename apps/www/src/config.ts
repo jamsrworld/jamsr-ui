@@ -1,6 +1,12 @@
-export const JAMSR_UI_TEMPLATE_GITHUB_URL =
+export const JAMSR_UI_NEXT_APP_TEMPLATE_GITHUB_URL =
   "https://github.com/jamsrworld/jamsr-ui-next-app-template";
+
+export const JAMSR_UI_REACT_TEMPLATE_GITHUB_URL =
+  "https://github.com/jamsrworld/jamsr-ui-react-template";
+
 export const JAMSR_UI_GITHUB_URL = "https://github.com/jamsrworld/jamsr-ui";
 export const JAMSR_UI_TWITTER_URL = "https://x.com/jamsrworld";
 export const TAILWIND_WEB_URL = "https://tailwindcss.com/docs/installation";
-export const JAMSR_UI_VERSION = "0.0.235";
+export const TAILWIND_VITE_URL = "https://v3.tailwindcss.com/docs/guides/vite";
+
+export const VITE_WEB_URL = "https://vite.dev/guide/";

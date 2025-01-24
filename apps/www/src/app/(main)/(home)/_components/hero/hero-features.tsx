@@ -1,7 +1,7 @@
 import { StartIcon } from "@/components/icons";
-import { JAMSR_UI_GITHUB_URL, JAMSR_UI_VERSION } from "@/config";
-import { GithubStarsCount, ReactPackageVersion } from "./github";
+import { JAMSR_UI_GITHUB_URL } from "@/config";
 import { Suspense } from "react";
+import { GithubStarsCount, ReactPackageVersion } from "./github";
 
 export const HeroFeatures = () => {
   return (

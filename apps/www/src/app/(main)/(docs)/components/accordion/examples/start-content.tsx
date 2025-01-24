@@ -4,6 +4,7 @@ import {
   Avatar,
   type AvatarProps,
 } from "@jamsr-ui/react";
+
 import { useId } from "react";
 
 const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

@@ -16,7 +16,7 @@ export const ChipCustomize = () => {
                   classNames: {
                     base: cn(
                       "border-2 border-divider",
-                      color === "danger" && "border-danger",
+                      color === "danger" && "border-danger text-danger",
                     ),
                   },
                 }
@@ -28,6 +28,7 @@ export const ChipCustomize = () => {
         <Chip variant="dot" color="danger">
           Hello
         </Chip>
+        
       </UIConfigProvider>
     </div>
   );

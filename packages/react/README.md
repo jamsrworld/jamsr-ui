@@ -5,7 +5,7 @@
 
 ## 📖 **Overview**
 
-[JamsrUI](https://jamsr-ui.jamsrworld.com) is a developer-friendly and production-ready UI components library for **Next.js** projects. It simplifies frontend development by offering reusable, customizable, and efficient UI components to help you build world-class websites faster.
+[JamsrUI](https://jamsr-ui.jamsrworld.com) is a developer-friendly and production-ready UI components library for **React** projects. It simplifies frontend development by offering reusable, customizable, and efficient UI components to help you build world-class websites faster.
 
 ## 🚀 Getting Started 
 
@@ -13,7 +13,7 @@ Boost & Build your websites using [JamsrUI](https://jamsr-ui.jamsrworld.com).
 
 ## ✨ Features
 
-- 🚀 **Production-Ready**: Optimized for modern Next.js projects.
+- 🚀 **Production-Ready**: Optimized for modern React projects.
 - 🎨 **Customizable**: Easily override styles and themes.
 - 🛠️ **Reusable Components**: Save time with prebuilt, efficient UI elements.
 - ⚡ **Developer-Friendly**: Simple API and well-documented usage.

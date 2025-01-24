@@ -5,6 +5,8 @@ const content = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 export const AccordionUsage = () => {
   return (
+
+    
     <Accordion>
       <AccordionItem aria-label="Accordion 1" heading="Accordion 1">
         {content}

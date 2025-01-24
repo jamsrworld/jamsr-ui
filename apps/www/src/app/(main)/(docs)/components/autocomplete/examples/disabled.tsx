@@ -59,18 +59,20 @@ const animals = [
   },
 ];
 
-export const AutocompleteDisabled = (props: Partial<AutocompleteProps>) => {
+export const AutocompleteDisabled = () => {
   return (
-    <Autocomplete isDisabled label="Animal" {...props}>
-      {animals.map((animal) => (
-        <AutocompleteItem
-          key={animal.value}
-          value={animal.value}
-          label={animal.label}
-        >
-          {animal.label}
-        </AutocompleteItem>
-      ))}
-    </Autocomplete>
+    <div>
+      <Autocomplete isDisabled label="Animal" placeholder="Select an animal">
+        {animals.map((animal) => (
+          <AutocompleteItem
+            key={animal.value}
+            value={animal.value}
+            label={animal.label}
+          >
+            {animal.label}
+          </AutocompleteItem>
+        ))}
+      </Autocomplete>
+    </div>
   );
 };

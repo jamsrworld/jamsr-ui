@@ -1,7 +1,7 @@
 import { Alert, type AlertProps } from "@jamsr-ui/react";
 
 export const AlertRadius = () => {
-  const radii: AlertProps["radius"][] = [
+  const radius: AlertProps["radius"][] = [
     "none",
     "sm",
     "md",
@@ -13,7 +13,7 @@ export const AlertRadius = () => {
   ];
   return (
     <div className="grid gap-4">
-      {radii.map((radius) => (
+      {radius.map((radius) => (
         <Alert key={radius} radius={radius} status="info">
           {radius}: This is an {radius} Radius Alert
         </Alert>

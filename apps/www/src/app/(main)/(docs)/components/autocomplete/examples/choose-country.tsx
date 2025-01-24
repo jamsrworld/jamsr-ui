@@ -1,4 +1,3 @@
-import type { AutocompleteProps } from "@jamsr-ui/react";
 import { Autocomplete, AutocompleteItem } from "@jamsr-ui/react";
 
 export const countries = [
@@ -426,12 +425,10 @@ export const countries = [
   { code: "ZW", label: "Zimbabwe", phone: "263" },
 ];
 
-export const AutocompleteChooseCountry = (
-  props: Partial<AutocompleteProps>,
-) => {
+export const AutocompleteChooseCountry = () => {
   return (
     <div>
-      <Autocomplete label="Country" {...props}>
+      <Autocomplete label="Country">
         {countries.map((item) => {
           const content = (
             <div className="flex items-center gap-2">

@@ -1,5 +1,24 @@
 # @jamsr-ui/data-table
 
+## 0.0.88
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.16
+  - @jamsr-ui/linear-progress@0.0.15
+  - @jamsr-ui/select@0.0.117
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/button@0.0.97
+  - @jamsr-ui/icon-button@0.0.20
+  - @jamsr-ui/repeater@0.0.47
+  - @jamsr-ui/skeleton@0.0.83
+  - @jamsr-ui/table@0.0.67
+  - @jamsr-ui/text@0.0.10
+  - @jamsr-ui/shared-icons@0.0.71
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.87
 
 ### Patch Changes

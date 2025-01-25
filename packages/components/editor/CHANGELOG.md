@@ -1,5 +1,25 @@
 # @jamsr-ui/editor
 
+## 0.0.136
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/select@0.0.117
+  - @jamsr-ui/switch@0.0.98
+  - @jamsr-ui/menu@0.0.113
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/divider@0.0.85
+  - @jamsr-ui/file-upload-single@0.0.118
+  - @jamsr-ui/icon-button@0.0.20
+  - @jamsr-ui/input@0.0.124
+  - @jamsr-ui/popover@0.0.92
+  - @jamsr-ui/repeater@0.0.47
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/shared-icons@0.0.71
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.135
 
 ### Patch Changes

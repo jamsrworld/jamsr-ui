@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.47
+
+### Patch Changes
+
+- chore: update framer motion
+
 ## 0.0.46
 
 ### Patch Changes

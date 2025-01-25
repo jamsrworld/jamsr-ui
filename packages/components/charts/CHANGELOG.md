@@ -1,5 +1,13 @@
 # @jamsr-ui/chart
 
+## 0.0.11
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+
 ## 0.0.10
 
 ### Patch Changes

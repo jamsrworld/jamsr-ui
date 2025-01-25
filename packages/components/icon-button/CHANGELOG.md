@@ -1,5 +1,17 @@
 # @jamsr-ui/icon-button
 
+## 0.0.20
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.16
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/ripple@0.0.89
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.19
 
 ### Patch Changes

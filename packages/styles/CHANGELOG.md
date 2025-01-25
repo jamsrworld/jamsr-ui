@@ -1,5 +1,11 @@
 # @jamsr-ui/styles
 
+## 0.0.20
+
+### Patch Changes
+
+- chore: update framer motion
+
 ## 0.0.19
 
 ### Patch Changes

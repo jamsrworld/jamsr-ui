@@ -1,5 +1,18 @@
 # @jamsr-ui/confirmation
 
+## 0.0.91
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/dialog@0.0.108
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/button@0.0.97
+  - @jamsr-ui/divider@0.0.85
+  - @jamsr-ui/text@0.0.10
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.90
 
 ### Patch Changes

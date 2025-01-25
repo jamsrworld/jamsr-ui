@@ -1,5 +1,14 @@
 # @jamsr-ui/skeleton
 
+## 0.0.83
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.82
 
 ### Patch Changes

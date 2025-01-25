@@ -1,5 +1,11 @@
 # @jamsr-ui/typescript-config
 
+## 0.0.50
+
+### Patch Changes
+
+- chore: update framer motion
+
 ## 0.0.49
 
 ### Patch Changes

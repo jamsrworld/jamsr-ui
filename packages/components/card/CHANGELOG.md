@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.98
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/text@0.0.10
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.97
 
 ### Patch Changes

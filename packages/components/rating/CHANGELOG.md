@@ -1,5 +1,16 @@
 # @jamsr-ui/rating
 
+## 0.0.48
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.47
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/shared-icons@0.0.71
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.47
 
 ### Patch Changes

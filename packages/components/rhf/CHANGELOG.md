@@ -1,5 +1,26 @@
 # @jamsr-ui/rhf
 
+## 0.0.82
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/checkbox@0.0.91
+  - @jamsr-ui/select@0.0.117
+  - @jamsr-ui/switch@0.0.98
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/autocomplete@0.0.133
+  - @jamsr-ui/editor@0.0.136
+  - @jamsr-ui/file-upload-multi@0.0.115
+  - @jamsr-ui/file-upload-single@0.0.118
+  - @jamsr-ui/input@0.0.124
+  - @jamsr-ui/otp-input@0.0.89
+  - @jamsr-ui/radio@0.0.96
+  - @jamsr-ui/rating@0.0.48
+  - @jamsr-ui/tags-input@0.0.62
+  - @jamsr-ui/textarea@0.0.125
+
 ## 0.0.81
 
 ### Patch Changes

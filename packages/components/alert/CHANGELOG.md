@@ -1,5 +1,16 @@
 # @jamsr-ui/alert
 
+## 0.0.104
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/text@0.0.10
+  - @jamsr-ui/shared-icons@0.0.71
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.103
 
 ### Patch Changes

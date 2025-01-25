@@ -1,5 +1,14 @@
 # @jamsr-ui/collapsible
 
+## 0.0.11
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/hooks@0.0.61
+
 ## 0.0.10
 
 ### Patch Changes

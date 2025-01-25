@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.244
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/react@0.0.242
+
 ## 0.0.243
 
 ### Patch Changes

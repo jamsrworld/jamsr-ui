@@ -1,5 +1,14 @@
 # @jamsr-ui/divider
 
+## 0.0.85
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.84
 
 ### Patch Changes

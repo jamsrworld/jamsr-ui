@@ -1,5 +1,20 @@
 # web
 
+## 0.1.224
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/react@0.0.242
+  - @jamsr-ui/theme@0.0.82
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/charts@0.0.11
+  - @jamsr-ui/editor@0.0.136
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/shared-icons@0.0.71
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.1.223
 
 ### Patch Changes

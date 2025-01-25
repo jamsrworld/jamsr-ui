@@ -1,5 +1,16 @@
 # @jamsr-ui/tab
 
+## 0.0.110
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/card@0.0.98
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.109
 
 ### Patch Changes

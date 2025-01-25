@@ -1,5 +1,13 @@
 # @jamsr-ui/hooks
 
+## 0.0.61
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+
 ## 0.0.60
 
 ### Patch Changes

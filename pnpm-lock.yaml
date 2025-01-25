@@ -57,8 +57,8 @@ importers:
         specifier: workspace:^
         version: link:../../packages/react
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -202,8 +202,8 @@ importers:
         specifier: 2.0.3
         version: 2.0.3
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
@@ -282,8 +282,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -502,8 +502,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -558,8 +558,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -583,8 +583,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -623,8 +623,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -755,8 +755,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -845,8 +845,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1080,8 +1080,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1207,8 +1207,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1272,8 +1272,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1478,8 +1478,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1561,8 +1561,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1595,8 +1595,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1651,8 +1651,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1685,8 +1685,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1722,8 +1722,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1996,8 +1996,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -2190,8 +2190,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       postcss:
         specifier: ^8.4.38
         version: 8.4.47
@@ -2318,8 +2318,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: 12.0.0-alpha.2
-        version: 12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^12.0.5
+        version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -5405,12 +5405,12 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@12.0.0-alpha.2:
-    resolution: {integrity: sha512-s603YLhCoX3GKaPDZnywwoFdd1T6gDFCfevVRek+TCpbvazUkITh+YZ3a6kqTvn4Aj7qQWT3vAmzWIjl/LsCFA==}
+  framer-motion@12.0.5:
+    resolution: {integrity: sha512-OgfUHfL+u80uCf6VzkV7j3+H2W9zPMdV+40bug4ftB0C2+0FpfNca2rbH2Fouq2R7//bjw6tJhOwXsrsM4+LKw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
-      react: ^19.0.0-rc.1
-      react-dom: ^19.0.0-rc.1
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
     peerDependenciesMeta:
       '@emotion/is-prop-valid':
         optional: true
@@ -6222,6 +6222,12 @@ packages:
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  motion-dom@12.0.0:
+    resolution: {integrity: sha512-CvYd15OeIR6kHgMdonCc1ihsaUG4MYh/wrkz8gZ3hBX/uamyZCXN9S9qJoYF03GqfTt7thTV/dxnHYX4+55vDg==}
+
+  motion-utils@12.0.0:
+    resolution: {integrity: sha512-MNFiBKbbqnmvOjkPyOKgHUp3Q6oiokLkI1bEwm5QA28cxMZrv0CbbBGDNmhF6DIXsi1pCQBSs0dX8xjeER1tmA==}
 
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -11687,8 +11693,10 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@12.0.0-alpha.2(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  framer-motion@12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
+      motion-dom: 12.0.0
+      motion-utils: 12.0.0
       tslib: 2.8.1
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
@@ -12494,6 +12502,12 @@ snapshots:
   minimist@1.2.8: {}
 
   minipass@7.1.2: {}
+
+  motion-dom@12.0.0:
+    dependencies:
+      motion-utils: 12.0.0
+
+  motion-utils@12.0.0: {}
 
   mri@1.2.0: {}
 

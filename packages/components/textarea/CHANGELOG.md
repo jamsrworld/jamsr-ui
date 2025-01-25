@@ -1,5 +1,18 @@
 # @jamsr-ui/input
 
+## 0.0.125
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/button@0.0.97
+  - @jamsr-ui/input@0.0.124
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/shared-icons@0.0.71
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.124
 
 ### Patch Changes

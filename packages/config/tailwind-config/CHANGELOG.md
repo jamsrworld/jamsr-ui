@@ -1,5 +1,11 @@
 # @jamsr-ui/tailwind-config
 
+## 0.0.30
+
+### Patch Changes
+
+- chore: update framer motion
+
 ## 0.0.29
 
 ### Patch Changes

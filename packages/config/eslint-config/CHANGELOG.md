@@ -1,5 +1,11 @@
 # @jamsr-ui/eslint-config
 
+## 0.0.53
+
+### Patch Changes
+
+- chore: update framer motion
+
 ## 0.0.52
 
 ### Patch Changes

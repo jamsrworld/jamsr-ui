@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.0.29
+
+### Patch Changes
+
+- chore: update framer motion
+
 ## 0.0.28
 
 ### Patch Changes

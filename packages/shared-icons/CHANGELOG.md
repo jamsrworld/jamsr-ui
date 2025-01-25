@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.71
+
+### Patch Changes
+
+- chore: update framer motion
+
 ## 0.0.70
 
 ### Patch Changes

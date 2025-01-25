@@ -1,5 +1,17 @@
 # @jamsr-ui/drawer
 
+## 1.0.92
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/icon-button@0.0.20
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/shared-icons@0.0.71
+  - @jamsr-ui/styles@0.0.20
+
 ## 1.0.91
 
 ### Patch Changes

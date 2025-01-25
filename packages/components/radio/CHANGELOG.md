@@ -1,5 +1,15 @@
 # @jamsr-ui/radio
 
+## 0.0.96
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/hooks@0.0.61
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.95
 
 ### Patch Changes

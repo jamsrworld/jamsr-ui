@@ -1,5 +1,14 @@
 # @jamsr-ui/kbd
 
+## 0.0.20
+
+### Patch Changes
+
+- chore: update framer motion
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.79
+  - @jamsr-ui/styles@0.0.20
+
 ## 0.0.19
 
 ### Patch Changes

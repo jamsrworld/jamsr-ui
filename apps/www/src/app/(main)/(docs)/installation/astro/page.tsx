@@ -1,9 +1,8 @@
 import { VariantPage } from "@/components/docs/variant-page";
 import { type Metadata } from "next";
 
-const title = "Remix Installation";
-const description = "Install and Configure JamsrUI in your Remix project.";
-
+const title = "Astro Installation";
+const description = "Install and Configure JamsrUI in your Astro project.";
 
 export const metadata: Metadata = {
   title,

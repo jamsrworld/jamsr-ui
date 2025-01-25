@@ -5,11 +5,9 @@ import { GithubDarkIcon } from "@/components/icons";
 import {
   JAMSR_UI_REACT_TEMPLATE_GITHUB_URL,
   TAILWIND_VITE_URL,
-  TAILWIND_WEB_URL,
   VITE_WEB_URL,
 } from "@/config";
 import {
-  Alert,
   Card,
   CardContent,
   Chip,
@@ -23,12 +21,12 @@ import { type Metadata } from "next";
 import NextLink from "next/link";
 import { NpmIcon, PnpmIcon, YarnIcon } from "../assets/icons";
 
-const title = "Installation";
+const title = "Vite Installation";
 const description = "Install and Configure JamsrUI in your Vite project.";
 
 export const metadata: Metadata = {
-  title: "Install and Configure JamsrUI in Vite",
-  description: "How to Install JamsrUI in a Vite Project",
+  title,
+  description,
 };
 
 const items: { heading: string; content: React.ReactNode }[] = [
@@ -69,7 +67,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
           Use your preferred package manager to install JamsrUI:
         </Text>
         <Tabs variant="underlined" defaultValue="pnpm">
-        <Tab startContent={<PnpmIcon />} value="pnpm" heading="pnpm">
+          <Tab startContent={<PnpmIcon />} value="pnpm" heading="pnpm">
             <CodeBlock>pnpm add @jamsr-ui/react framer-motion</CodeBlock>
           </Tab>
           <Tab startContent={<NpmIcon />} value="npm" heading="npm">
@@ -78,7 +76,6 @@ const items: { heading: string; content: React.ReactNode }[] = [
           <Tab startContent={<YarnIcon />} value="yarn" heading="yarn">
             <CodeBlock>yarn add @jamsr-ui/react framer-motion</CodeBlock>
           </Tab>
-          
         </Tabs>
       </div>
     ),
@@ -95,7 +92,8 @@ const items: { heading: string; content: React.ReactNode }[] = [
           <ul className="flex list-disc flex-col gap-4">
             <li className="space-y-4">
               <div>
-                Create <Code>.npmrc</Code> file at the root directory of your project:
+                Create <Code>.npmrc</Code> file at the root directory of your
+                project:
               </div>
               <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
             </li>
@@ -110,13 +108,11 @@ const items: { heading: string; content: React.ReactNode }[] = [
         </div>
       </div>
     ),
-  },{
+  },
+  {
     heading: "Edit tailwind.config.js file",
     content: (
       <div className="flex flex-col gap-4">
-       
-      
-
         <CodeBlock>
           {`// tailwind.config.ts
 import { withJamsrUI } from "@jamsr-ui/theme";
@@ -135,7 +131,6 @@ export default config;
 
 `}
         </CodeBlock>
-       
       </div>
     ),
   },

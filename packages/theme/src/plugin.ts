@@ -70,7 +70,10 @@ export const jamsrUiPlugins = (config?: UIThemeConfig) => {
         );
         addVariant("ui-loaded", "&[data-loaded=true]");
         addVariant("ui-filled-within", "&[data-filled-within=true]");
-        addVariant("ui-group-filled-within", ":merge(.group)[data-filled-within=true] &");
+        addVariant(
+          "ui-group-filled-within",
+          ":merge(.group)[data-filled-within=true] &",
+        );
         addVariant("ui-focus-visible", "&[data-focus-visible=true]");
         addVariant("ui-readonly", "&[data-readonly=true]");
         addVariant("ui-group-readonly", ":merge(.group)[data-readonly=true] &");

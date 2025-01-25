@@ -12,15 +12,15 @@ export const sidebarItems: {
   items: { heading: string; path: Route }[];
 }[] = [
   {
-    heading: "Guides",
+    heading: "Getting Started",
     items: [
       {
         heading: "Installation",
-        path: "/guides/installation",
+        path: "/installation",
       },
       {
         heading: "Theme",
-        path: "/guides/theme",
+        path: "/theme",
       },
     ],
   },
@@ -38,6 +38,14 @@ export const sidebarItems: {
       {
         heading: "Remix",
         path: "/installation/remix",
+      },
+      {
+        heading: "Astro",
+        path: "/installation/astro",
+      },
+      {
+        heading: "Gatsby",
+        path: "/installation/gatsby",
       },
     ],
   },

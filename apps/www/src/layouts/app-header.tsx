@@ -11,7 +11,7 @@ import { SearchBar } from "./search-bar";
 const navLinks: { label: string; href: Route }[] = [
   {
     label: "Docs",
-    href: "/guides/installation",
+    href: "/installation",
   },
   {
     label: "Components",
@@ -19,7 +19,7 @@ const navLinks: { label: string; href: Route }[] = [
   },
   {
     label: "Theme",
-    href: "/guides/theme",
+    href: "/theme",
   },
   {
     label: "Charts",

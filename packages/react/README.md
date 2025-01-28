@@ -1,6 +1,6 @@
 # 🚀 **JamsrUI**
 
-**A React UI Components Library for Developers**
+**A comprehensive React UI component library designed for developers, with Tailwind CSS integration for seamless styling.**
 
 
 ## 📖 **Overview**
@@ -38,6 +38,3 @@ We welcome contributions from developers of all skill levels!
 
 If you find **JamsrUI** helpful, consider giving it a ⭐ on [GitHub](https://github.com/jamsrworld/jamsr-ui).
 
-## 📄 License
-
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).  

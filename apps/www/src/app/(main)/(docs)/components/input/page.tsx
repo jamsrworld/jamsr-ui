@@ -11,19 +11,17 @@ import { InputFilled } from "./examples/filled";
 import { InputHelperText } from "./examples/helper-text";
 import { InputLabelHelper } from "./examples/label-helper";
 import { InputNumberOnly } from "./examples/numbers-only";
-import { InputOptional } from "./examples/optional";
+import { InputOptional, InputRequiredOptional } from "./examples/required-optional";
 import { InputOutlinedAllProps } from "./examples/outlined-all-props";
 import { InputPlaceholder } from "./examples/placeholder";
 import { InputRadius } from "./examples/radius";
-import { InputRequired } from "./examples/required";
 import { InputSecuredText } from "./examples/secured-text";
 import { InputSizes } from "./examples/sizes";
 import { InputUsage } from "./examples/usage";
 import { InputVariants } from "./examples/variants";
-import { InputWithEndContent } from "./examples/with-end-content";
 import { InputWithIcon } from "./examples/with-icon";
 import { InputWithPlaceholder } from "./examples/with-placeholder";
-import { InputWithStartContent } from "./examples/with-start-content";
+import { InputWithStartContent } from "./examples/start-end-content";
 import { InputWithoutLabel } from "./examples/without-label";
 import { InputUnderlinedAllProps } from "./examples/underlined-all-props";
 import { InputStandardAllProps } from "./examples/standard-all-props";
@@ -84,25 +82,19 @@ const Input = () => {
         <InputWithoutLabel />
       </VariantWrapper>
       <VariantWrapper
-        heading="With Start Content"
-        code={code("with-start-content")}
+        heading="Start & End Content"
+        code={code("start-end-content")}
       >
         <InputWithStartContent />
+
       </VariantWrapper>
-      <VariantWrapper
-        heading="With End Content"
-        code={code("with-end-content")}
-      >
-        <InputWithEndContent />
-      </VariantWrapper>
+      
       <VariantWrapper heading="With Icon" code={code("with-icon")}>
         <InputWithIcon />
       </VariantWrapper>
-      <VariantWrapper heading="Required" code={code("required")}>
-        <InputRequired />
-      </VariantWrapper>
-      <VariantWrapper heading="Optional" code={code("optional")}>
-        <InputOptional />
+     
+      <VariantWrapper heading="Required & Optional" code={code("required-optional")}>
+        <InputRequiredOptional />
       </VariantWrapper>
 
       <VariantWrapper heading="Placeholder" code={code("placeholder")}>

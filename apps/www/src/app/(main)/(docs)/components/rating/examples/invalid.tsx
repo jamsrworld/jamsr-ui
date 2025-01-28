@@ -1,10 +1,5 @@
-import { RatingUsage } from "./usage";
+import { Rating } from "@jamsr-ui/react";
 
 export const RatingInvalid = () => {
-  return (
-    <RatingUsage
-      helperText="Rating is required"
-      isInvalid
-    />
-  );
+  return <Rating helperText="Rating is required" isInvalid label="Rate your feedback!"/>;
 };

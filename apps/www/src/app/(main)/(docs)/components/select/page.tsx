@@ -50,7 +50,7 @@ const Select = () => {
       <VariantWrapper heading="Disabled Items" code={code("disabled-items")}>
         <SelectDisabledItems />
       </VariantWrapper>
-      <VariantWrapper heading="Start End Items" code={code("start-end-items")}>
+      <VariantWrapper heading="Start & End Items" code={code("start-end-items")}>
         <SelectStartEndItems />
       </VariantWrapper>
       <VariantWrapper heading="Placeholder" code={code("placeholder")}>

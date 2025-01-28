@@ -1,5 +1,5 @@
-import { RatingUsage } from "./usage";
+import { Rating } from "@jamsr-ui/react";
 
 export const RatingDisabled = () => {
-  return <RatingUsage isDisabled />;
+  return <Rating isDisabled label="Rate your feedback!" />;
 };

@@ -6,10 +6,17 @@ export const InputNumberOnly = () => {
       <Input label="Amount" isNumberInput startContent="$" />
       <Input label="Percentage" isNumberInput endContent="%" />
       <Input
-        label="Your fav. number"
+        label="With decimal"
         isNumberInput
         decimalPrecision={0}
-        placeholder="Without decimal precision"
+        placeholder="With decimal precision"
+      />
+      <Input
+        label="Custom decimal precision"
+        isNumberInput
+        // Change value here to see the difference
+        decimalPrecision={4}
+        placeholder="Custom decimal precision"
       />
     </div>
   );

@@ -1,7 +1,6 @@
 "use client";
 
-import { type SelectProps } from "@jamsr-ui/react";
-import { SelectUsage } from "./usage";
+import { Select, SelectItem, type SelectProps } from "@jamsr-ui/react";
 
 export const SelectRadius = () => {
   const radii: SelectProps["radius"][] = [
@@ -14,9 +13,20 @@ export const SelectRadius = () => {
     "3xl",
   ];
   return (
-    <div className="min-h-[80px]">
+    <div className="min-h-[80px] space-y-2">
       {radii.map((radius) => (
-        <SelectUsage radius={radius} key={radius} />
+        <Select
+          className="max-w-sm"
+          label="Select Label"
+          radius={radius}
+          key={radius}
+        >
+          <SelectItem value="apple">Apple</SelectItem>
+          <SelectItem value="blueberry">Blueberry</SelectItem>
+          <SelectItem value="watermelon">Watermelon</SelectItem>
+          <SelectItem value="banana">Banana</SelectItem>
+          <SelectItem value="orange">Orange</SelectItem>
+        </Select>
       ))}
     </div>
   );

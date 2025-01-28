@@ -1,5 +1,5 @@
-import { RatingUsage } from "./usage";
+import { Rating } from "@jamsr-ui/react";
 
 export const RatingUsageValue = () => {
-  return <RatingUsage defaultValue={3} />;
+  return <Rating defaultValue={3} label="Rate your feedback!" />;
 };

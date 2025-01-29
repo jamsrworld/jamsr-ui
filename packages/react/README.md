@@ -5,7 +5,7 @@
 
 ## 📖 **Overview**
 
-[JamsrUI](https://jamsr-ui.jamsrworld.com) is a developer-friendly and production-ready UI components library for **React** projects. It simplifies frontend development by offering reusable, customizable, and efficient UI components to help you build world-class websites faster.
+[JamsrUI](https://jamsr-ui.jamsrworld.com) is designed to help developers build modern, fast and visually appealing web applications with ease.
 
 ## 🚀 Getting Started 
 

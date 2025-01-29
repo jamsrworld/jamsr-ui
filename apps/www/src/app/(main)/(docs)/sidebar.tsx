@@ -15,6 +15,10 @@ export const sidebarItems: {
     heading: "Getting Started",
     items: [
       {
+        heading: "Introduction",
+        path: "/introduction",
+      },
+      {
         heading: "Installation",
         path: "/installation",
       },

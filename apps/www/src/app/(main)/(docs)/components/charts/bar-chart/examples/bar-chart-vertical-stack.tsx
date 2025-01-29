@@ -17,19 +17,19 @@ const chartData = [
 
 const config: ChartConfig = {
   chrome: {
-    color: "hsl(var(--ui-primary))",
+    color: "var(--ui-primary)",
     label: "Chrome",
   },
   firefox: {
-    color: "hsl(var(--ui-secondary))",
+    color: "var(--ui-secondary)",
     label: "Firefox",
   },
   safari: {
-    color: "hsl(var(--ui-warning))",
+    color: "var(--ui-warning)",
     label: "Safari",
   },
   edge: {
-    color: "hsl(var(--ui-danger))",
+    color: "var(--ui-danger)",
     label: "Edge",
   },
 };

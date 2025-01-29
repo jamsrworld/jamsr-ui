@@ -95,7 +95,7 @@ const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
                         <div
                           className="size-2 flex-none rounded-full"
                           style={{
-                            backgroundColor: `hsl(var(--ui-${color}-${(index + 1) * 200}))`,
+                            backgroundColor: `var(--ui-${color}-${(index + 1) * 200})`,
                           }}
                         />
                         <div className="flex w-full items-center justify-between gap-x-2 pr-1 text-xs text-default-700">
@@ -124,7 +124,7 @@ const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
               {chartData.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
-                  fill={`hsl(var(--ui-${color}-${(index + 1) * 200}))`}
+                  fill={`var(--ui-${color}-${(index + 1) * 200})`}
                 />
               ))}
             </Pie>
@@ -150,7 +150,7 @@ const CircleChartCard = (props: CircleChartProps & { className?: string }) => {
               <span
                 className="size-2 rounded-full"
                 style={{
-                  backgroundColor: `hsl(var(--ui-${color}-${(index + 1) * 200}))`,
+                  backgroundColor: `var(--ui-${color}-${(index + 1) * 200})`,
                 }}
               />
               <span className="capitalize">{category}</span>

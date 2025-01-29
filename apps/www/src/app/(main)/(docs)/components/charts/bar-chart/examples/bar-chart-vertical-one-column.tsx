@@ -17,7 +17,7 @@ const chartData = [
 
 const config: ChartConfig = {
   tablet: {
-    color: "hsl(var(--ui-primary))",
+    color: "var(--ui-primary)",
     label: "Tablet Sales",
   },
 };

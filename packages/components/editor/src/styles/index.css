@@ -1,9 +1,11 @@
-@import "blocks.css";
-@import "code.css";
-@import "lists.css";
-@import "placeholder.css";
-@import "table.css";
-@import "typography.css";
+@reference "../../../../../apps/www/src/styles/globals.css";
+
+@import "./blocks.css";
+@import "./code.css";
+@import "./lists.css";
+@import "./placeholder.css";
+@import "./table.css";
+@import "./typography.css";
 
 .ProseMirror {
   @apply caret-black dark:caret-white outline-0 pr-8 pl-20 py-16 z-0 lg:pl-8 lg:pr-8;

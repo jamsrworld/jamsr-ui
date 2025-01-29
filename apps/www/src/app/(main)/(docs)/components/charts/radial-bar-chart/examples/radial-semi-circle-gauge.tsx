@@ -33,13 +33,13 @@ const data: CircleChartProps[] = [
     title: "Conversion",
     color: "success",
     total: 1000,
-    chartData: [{ name: "Sales", value: 750, fill: "hsl(var(--ui-success))" }],
+    chartData: [{ name: "Sales", value: 750, fill: "var(--ui-success)" }],
   },
   {
     title: "Bounce Rate",
     color: "warning",
     total: 100,
-    chartData: [{ name: "Exits", value: 80, fill: "hsl(var(--ui-warning))" }],
+    chartData: [{ name: "Exits", value: 80, fill: "var(--ui-warning)" }],
   },
 ];
 
@@ -81,7 +81,7 @@ const CircleChartCard = (props: CircleChartProps & CardProps) => {
               animationDuration={1000}
               animationEasing="ease"
               background={{
-                fill: "hsl(var(--ui-default-100))",
+                fill: "var(--ui-default-100))",
               }}
               cornerRadius={12}
               dataKey="value"
@@ -89,7 +89,7 @@ const CircleChartCard = (props: CircleChartProps & CardProps) => {
               {chartData.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
-                  fill={`hsl(var(--ui-${color === "default" ? "foreground" : color}))`}
+                  fill={`var(--ui-${color === "default" ? "foreground" : color})`}
                 />
               ))}
             </RadialBar>

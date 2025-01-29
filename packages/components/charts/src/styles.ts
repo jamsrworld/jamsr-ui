@@ -24,10 +24,10 @@ export const chartStyles: ChartStyles = {
     tickMargin: 10,
     ...props,
     tick: {
-      fill: "hsl(var(--ui-default-500))",
+      fill: "var(--ui-default-500)",
       ...(props?.tick as object),
       style: {
-        fontSize: "var(--fs-xs)",
+        fontSize: "var(--ui-fs-xs)",
         ...props?.style,
       },
     },
@@ -37,10 +37,10 @@ export const chartStyles: ChartStyles = {
     tickLine: false,
     ...props,
     tick: {
-      fill: "hsl(var(--ui-default-400))",
+      fill: "var(--ui-default-400)",
       ...(props?.tick as object),
       style: {
-        fontSize: "var(--fs-xs)",
+        fontSize: "var(--ui-fs-xs)",
         ...props?.style,
       },
     },

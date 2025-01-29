@@ -22,16 +22,16 @@ const chartData = [
 
 const config: ChartConfig = {
   visitors: {
-    color: "hsl(var(--ui-success))",
+    color: "var(--ui-success)",
     colors: [
       {
         offset: "10%",
-        stopColor: "hsl(var(--ui-success-500))",
+        stopColor: "var(--ui-success-500)",
         stopOpacity: 0.3,
       },
       {
         offset: "100%",
-        stopColor: "hsl(var(--ui-success-100))",
+        stopColor: "var(--ui-success-100)",
         stopOpacity: 0.1,
       },
     ],

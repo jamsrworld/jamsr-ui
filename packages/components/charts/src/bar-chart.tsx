@@ -91,7 +91,7 @@ export const BarChart = (props: BarChartProps) => {
         {cartesianGrid !== false && (
           <CartesianGrid
             vertical={false}
-            stroke="hsl(var(--ui-divider))"
+            stroke="var(--ui-divider)"
             {...(layout === "vertical" && {
               vertical: true,
               horizontal: false,

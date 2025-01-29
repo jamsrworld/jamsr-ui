@@ -93,7 +93,7 @@ export const AreaChart = (props: AreaChartProps) => {
           <CartesianGrid
             vertical={false}
             strokeDasharray="3 3"
-            stroke="hsl(var(--ui-divider))"
+            stroke="var(--ui-divider)"
             {...cartesianGrid}
           />
         )}
@@ -125,7 +125,7 @@ export const AreaChart = (props: AreaChartProps) => {
                 ...areaProps,
                 activeDot: {
                   fill: strokeColor,
-                  stroke: "hsl(var(--ui-background))",
+                  stroke: "var(--ui-background)",
                   ...(areaProps?.activeDot as object),
                 },
               })}

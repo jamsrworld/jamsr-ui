@@ -17,19 +17,19 @@ const formatTotal = (total: number) => {
 const config: ChartConfig = {
   search: {
     label: "Search",
-    color: "hsl(var(--ui-warning-200))",
+    color: "var(--ui-warning-200)",
   },
   direct: {
     label: "Direct",
-    color: "hsl(var(--ui-warning-400))",
+    color: "var(--ui-warning-400)",
   },
   social: {
     label: "Social",
-    color: "hsl(var(--ui-warning-600))",
+    color: "var(--ui-warning-600)",
   },
   referral: {
     label: "Referral",
-    color: "hsl(var(--ui-warning-800))",
+    color: "var(--ui-warning-800)",
   },
 };
 

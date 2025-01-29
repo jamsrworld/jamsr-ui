@@ -22,7 +22,7 @@ const chartData = [
 
 const config: ChartConfig = {
   visitors: {
-    color: "hsl(var(--ui-success))",
+    color: "var(--ui-success)",
   },
 };
 

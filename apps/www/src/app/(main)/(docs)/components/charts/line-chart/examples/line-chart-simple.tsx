@@ -23,7 +23,7 @@ const chartData = [
 const config: ChartConfig = {
   views: {
     label: "Views",
-    color: "hsl(var(--ui-success))",
+    color: "var(--ui-success)",
   },
 };
 

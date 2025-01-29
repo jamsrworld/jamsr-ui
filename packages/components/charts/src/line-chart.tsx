@@ -91,7 +91,7 @@ export const LineChart = (props: LineChartProps) => {
         {cartesianGrid !== false && (
           <CartesianGrid
             strokeDasharray="3 3"
-            stroke="hsl(var(--ui-divider))"
+            stroke="var(--ui-divider)"
             vertical={false}
             {...cartesianGrid}
           />
@@ -126,7 +126,7 @@ export const LineChart = (props: LineChartProps) => {
                 },
                 activeDot: {
                   fill: strokeColor,
-                  stroke: "hsl(var(--ui-background))",
+                  stroke: "var(--ui-background)",
                   strokeWidth: 2,
                   ...(lineProps?.activeDot as object),
                 },

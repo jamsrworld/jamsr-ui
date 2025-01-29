@@ -13,7 +13,7 @@
     "**/Thumbs.db": true,
     "**/node_modules": false,
     "**/.turbo": true,
-    "**/dist": true,
+    "**/dist": false,
     "**/.next": true
   },
   "explorerExclude.backup": {},

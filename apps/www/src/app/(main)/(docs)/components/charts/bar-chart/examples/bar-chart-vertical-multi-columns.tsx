@@ -17,11 +17,11 @@ const chartData = [
 
 const config: ChartConfig = {
   mobile: {
-    color: "hsl(var(--ui-primary))",
+    color: "var(--ui-primary)",
     label: "Mobile Sales",
   },
   desktop: {
-    color: "hsl(var(--ui-secondary))",
+    color: "var(--ui-secondary)",
     label: "Desktop Sales",
   },
 };

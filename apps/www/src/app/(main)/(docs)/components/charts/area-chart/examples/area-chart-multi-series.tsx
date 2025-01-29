@@ -23,11 +23,11 @@ const chartData = [
 const config: ChartConfig = {
   window: {
     label: "Window",
-    color: "hsl(var(--ui-success))",
+    color: "var(--ui-success)",
   },
   mac: {
     label: "Mac",
-    color: "hsl(var(--ui-warning))",
+    color: "var(--ui-warning)",
   },
 };
 export const AreaChartMultiSeries = () => {

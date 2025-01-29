@@ -17,19 +17,19 @@ const chartData = [
 
 const config: ChartConfig = {
   android: {
-    color: "hsl(var(--ui-primary))",
+    color: "var(--ui-primary)",
     label: "Android",
   },
   ios: {
-    color: "hsl(var(--ui-secondary))",
+    color: "var(--ui-secondary)",
     label: "iOS",
   },
   web: {
-    color: "hsl(var(--ui-warning))",
+    color: "var(--ui-warning)",
     label: "Web",
   },
   windows: {
-    color: "hsl(var(--ui-danger))",
+    color: "var(--ui-danger)",
     label: "Windows",
   },
 };

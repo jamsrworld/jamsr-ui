@@ -23,32 +23,32 @@ const chartData = [
 const config: ChartConfig = {
   window: {
     label: "Window",
-    color: "hsl(var(--ui-success))",
+    color: "var(--ui-success)",
     colors: [
       {
         offset: "10%",
-        stopColor: "hsl(var(--ui-success-500))",
+        stopColor: "var(--ui-success-500)",
         stopOpacity: 0.3,
       },
       {
         offset: "100%",
-        stopColor: "hsl(var(--ui-success-100))",
+        stopColor: "var(--ui-success-100)",
         stopOpacity: 0.1,
       },
     ],
   },
   mac: {
     label: "Mac",
-    color: "hsl(var(--ui-warning))",
+    color: "var(--ui-warning)",
     colors: [
       {
         offset: "10%",
-        stopColor: "hsl(var(--ui-warning-500))",
+        stopColor: "var(--ui-warning-500)",
         stopOpacity: 0.3,
       },
       {
         offset: "100%",
-        stopColor: "hsl(var(--ui-warning-100))",
+        stopColor: "var(--ui-warning-100)",
         stopOpacity: 0.1,
       },
     ],

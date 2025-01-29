@@ -1,0 +1,129 @@
+:root {
+  /* Background Colors */
+  --ui-background: #000000;
+  --ui-background-secondary: #030303;
+  --ui-background-tertiary: #010101;
+  --ui-background-inverse: #ffffff;
+
+  /* Foreground Colors */
+  --ui-foreground-50: #18181b;
+  --ui-foreground-100: #27272a;
+  --ui-foreground-200: #3f3f46;
+  --ui-foreground-300: #52525b;
+  --ui-foreground-400: #71717a;
+  --ui-foreground-500: #a1a1aa;
+  --ui-foreground-600: #d4d4d8;
+  --ui-foreground-700: #e4e4e7;
+  --ui-foreground-800: #f4f4f5;
+  --ui-foreground-900: #fafafa;
+  --ui-foreground-default: #eaebec;
+  --ui-foreground-link: #0B84FF;
+  --ui-foreground-secondary: #9295a5;
+  --ui-foreground-tertiary: #8A8A8E;
+  --ui-foreground-inverse: #000000;
+
+  /* Divider Colors */
+  --ui-divider-light: #070809;
+  --ui-divider: #25292d;
+  --ui-divider-dark: #353b41;
+
+  /* Focus Color */
+  --ui-focus: #006FEE;
+
+  /* Overlay Color */
+  --ui-overlay: #000000;
+
+  /* Content Colors */
+  --ui-content1-background: #18181b;
+  --ui-content1-foreground: #fafafa;
+  --ui-content2-background: #27272a;
+  --ui-content2-foreground: #f4f4f5;
+  --ui-content3-background: #3f3f46;
+  --ui-content3-foreground: #e4e4e7;
+  --ui-content4-background: #52525b;
+  --ui-content4-foreground: #d4d4d8;
+
+  /* Default Colors */
+  --ui-default-50: #18181b;
+  --ui-default-100: #27272a;
+  --ui-default-200: #3f3f46;
+  --ui-default-300: #52525b;
+  --ui-default-400: #71717a;
+  --ui-default-500: #a1a1aa;
+  --ui-default-600: #d4d4d8;
+  --ui-default-700: #e4e4e7;
+  --ui-default-800: #f4f4f5;
+  --ui-default-900: #fafafa;
+  --ui-default-foreground: #fff;
+  --ui-default: #3f3f46;
+
+  /* Primary Colors */
+  --ui-primary-50: #001731;
+  --ui-primary-100: #002e62;
+  --ui-primary-200: #004493;
+  --ui-primary-300: #005bc4;
+  --ui-primary-400: #006FEE;
+  --ui-primary-500: #338ef7;
+  --ui-primary-600: #66aaf9;
+  --ui-primary-700: #99c7fb;
+  --ui-primary-800: #cce3fd;
+  --ui-primary-900: #e6f1fe;
+  --ui-primary-foreground: #fff;
+  --ui-primary: #006FEE;
+
+  /* Secondary Colors */
+  --ui-secondary-50: #180828;
+  --ui-secondary-100: #301050;
+  --ui-secondary-200: #481878;
+  --ui-secondary-300: #6020a0;
+  --ui-secondary-400: #7828c8;
+  --ui-secondary-500: #9353d3;
+  --ui-secondary-600: #ae7ede;
+  --ui-secondary-700: #c9a9e9;
+  --ui-secondary-800: #e4d4f4;
+  --ui-secondary-900: #f2eafa;
+  --ui-secondary-foreground: #fff;
+  --ui-secondary: #9353d3;
+
+  /* Success Colors */
+  --ui-success-50: #052814;
+  --ui-success-100: #095028;
+  --ui-success-200: #0e793c;
+  --ui-success-300: #12a150;
+  --ui-success-400: #17c964;
+  --ui-success-500: #45d483;
+  --ui-success-600: #74dfa2;
+  --ui-success-700: #a2e9c1;
+  --ui-success-800: #d1f4e0;
+  --ui-success-900: #e8faf0;
+  --ui-success-foreground: #000;
+  --ui-success: #17c964;
+
+  /* Warning Colors */
+  --ui-warning-50: #312107;
+  --ui-warning-100: #62420e;
+  --ui-warning-200: #936316;
+  --ui-warning-300: #c4841d;
+  --ui-warning-400: #f5a524;
+  --ui-warning-500: #f7b750;
+  --ui-warning-600: #f9c97c;
+  --ui-warning-700: #fbdba7;
+  --ui-warning-800: #fdedd3;
+  --ui-warning-900: #fefce8;
+  --ui-warning-foreground: #000;
+  --ui-warning: #f5a524;
+
+  /* Danger Colors */
+  --ui-danger-50: #310413;
+  --ui-danger-100: #610726;
+  --ui-danger-200: #920b3a;
+  --ui-danger-300: #c20e4d;
+  --ui-danger-400: #f31260;
+  --ui-danger-500: #f54180;
+  --ui-danger-600: #f871a0;
+  --ui-danger-700: #faa0bf;
+  --ui-danger-800: #fdd0df;
+  --ui-danger-900: #fee7ef;
+  --ui-danger-foreground: #ffffff;
+  --ui-danger: #f31260;
+}

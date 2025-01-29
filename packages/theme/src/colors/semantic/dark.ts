@@ -1,9 +1,7 @@
 import { readableColor } from "color2k";
 import { swapColorValues } from "../../utils";
 import { commonColors as common } from "../common";
-import { type ThemeColors } from "../types";
-
-// const swapColorValues = <T>(value: T) => value;
+import { type ThemeColors } from "../../types";
 
 export const themeColorsDark: ThemeColors = {
   background: {

@@ -21,7 +21,6 @@ export const dataFocusVisibleClasses = [
 
 export const groupDataFocusVisibleClasses = [
   "outline-none",
-  "outline-solid",
   "group-data-[focus-visible=true]:z-10",
   "group-data-[focus-visible=true]:ring-2",
   "group-data-[focus-visible=true]:ring-focus",

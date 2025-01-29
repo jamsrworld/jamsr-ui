@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} text-base antialiased`}>
+    <html lang="en" className="dark text-base text-foreground bg-background">
+      <body className={`${inter.className} antialiased`}>
         <AppProvider>{children}</AppProvider>
         <SchemaDts />
       </body>

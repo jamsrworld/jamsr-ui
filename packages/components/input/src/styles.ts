@@ -18,7 +18,6 @@ export const inputVariants = tv({
       "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
       "ui-group-focus:border-primary ui-group-focus:ring-primary",
       "ui-group-hover:border-default-400",
-      ...groupDataFocusVisibleClasses,
     ],
     innerWrapper: ["flex h-full items-center"],
     input: [

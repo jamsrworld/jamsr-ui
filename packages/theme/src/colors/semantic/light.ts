@@ -1,8 +1,7 @@
 import { readableColor } from "color2k";
 import { commonColors as common } from "../common";
-import { type ThemeColors } from "../types";
 
-export const themeColorsLight: ThemeColors = {
+export const themeColorsLight = {
   background: {
     DEFAULT: "#ffffff",
     secondary: "#efefef",

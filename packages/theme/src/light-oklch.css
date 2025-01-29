@@ -1,0 +1,120 @@
+:root {
+  --ui-background: oklch(100% 0 0);
+  --ui-background-secondary: oklch(94.5% 0 0);
+  --ui-background-tertiary: oklch(96.5% 0.005 260);
+  --ui-background-inverse: oklch(0% 0 0);
+
+  --ui-foreground-50: oklch(98.5% 0 0);
+  --ui-foreground-100: oklch(96.5% 0 0);
+  --ui-foreground-200: oklch(90.5% 0.005 260);
+  --ui-foreground-300: oklch(84.5% 0.01 260);
+  --ui-foreground-400: oklch(67% 0.02 260);
+  --ui-foreground-500: oklch(49% 0.02 260);
+  --ui-foreground-600: oklch(36% 0.02 260);
+  --ui-foreground-700: oklch(28% 0.02 260);
+  --ui-foreground-800: oklch(18% 0.01 260);
+  --ui-foreground-900: oklch(12% 0.01 260);
+  --ui-foreground-default: oklch(13% 0.01 260);
+  --ui-foreground-link: oklch(50% 0.2 260);
+  --ui-foreground-secondary: oklch(49% 0.02 260);
+  --ui-foreground-tertiary: oklch(67% 0.02 260);
+  --ui-foreground-inverse: oklch(100% 0 0);
+
+  --ui-divider-light: oklch(96.5% 0.005 260);
+  --ui-divider: oklch(92% 0.01 260);
+  --ui-divider-dark: oklch(84.5% 0.01 260);
+
+  --ui-focus: oklch(50% 0.2 260);
+
+  --ui-overlay: oklch(0% 0 0);
+
+  --ui-content1-background: oklch(100% 0 0);
+  --ui-content1-foreground: oklch(13% 0.01 260);
+
+  --ui-content2-background: oklch(96.5% 0 0);
+  --ui-content2-foreground: oklch(18% 0.01 260);
+
+  --ui-content3-background: oklch(90.5% 0.005 260);
+  --ui-content3-foreground: oklch(28% 0.02 260);
+
+  --ui-content4-background: oklch(84.5% 0.01 260);
+  --ui-content4-foreground: oklch(36% 0.02 260);
+
+  --ui-default-50: oklch(98.5% 0 0);
+  --ui-default-100: oklch(96.5% 0 0);
+  --ui-default-200: oklch(90.5% 0.005 260);
+  --ui-default-300: oklch(84.5% 0.01 260);
+  --ui-default-400: oklch(67% 0.02 260);
+  --ui-default-500: oklch(49% 0.02 260);
+  --ui-default-600: oklch(36% 0.02 260);
+  --ui-default-700: oklch(28% 0.02 260);
+  --ui-default-800: oklch(18% 0.01 260);
+  --ui-default-900: oklch(12% 0.01 260);
+  --ui-default-foreground: oklch(0% 0 0);
+  --ui-default: oklch(90.5% 0.005 260);
+
+  --ui-primary-50: oklch(95% 0.1 260);
+  --ui-primary-100: oklch(90% 0.15 260);
+  --ui-primary-200: oklch(85% 0.2 260);
+  --ui-primary-300: oklch(80% 0.25 260);
+  --ui-primary-400: oklch(75% 0.3 260);
+  --ui-primary-500: oklch(70% 0.35 260);
+  --ui-primary-600: oklch(60% 0.3 260);
+  --ui-primary-700: oklch(50% 0.25 260);
+  --ui-primary-800: oklch(40% 0.2 260);
+  --ui-primary-900: oklch(30% 0.15 260);
+  --ui-primary-foreground: oklch(100% 0 0);
+  --ui-primary: oklch(70% 0.35 260);
+
+  --ui-secondary-50: oklch(95% 0.1 300);
+  --ui-secondary-100: oklch(90% 0.15 300);
+  --ui-secondary-200: oklch(85% 0.2 300);
+  --ui-secondary-300: oklch(80% 0.25 300);
+  --ui-secondary-400: oklch(75% 0.3 300);
+  --ui-secondary-500: oklch(70% 0.35 300);
+  --ui-secondary-600: oklch(60% 0.3 300);
+  --ui-secondary-700: oklch(50% 0.25 300);
+  --ui-secondary-800: oklch(40% 0.2 300);
+  --ui-secondary-900: oklch(30% 0.15 300);
+  --ui-secondary-foreground: oklch(100% 0 0);
+  --ui-secondary: oklch(70% 0.35 300);
+
+  --ui-success-50: oklch(95% 0.1 150);
+  --ui-success-100: oklch(90% 0.15 150);
+  --ui-success-200: oklch(85% 0.2 150);
+  --ui-success-300: oklch(80% 0.25 150);
+  --ui-success-400: oklch(75% 0.3 150);
+  --ui-success-500: oklch(70% 0.35 150);
+  --ui-success-600: oklch(60% 0.3 150);
+  --ui-success-700: oklch(50% 0.25 150);
+  --ui-success-800: oklch(40% 0.2 150);
+  --ui-success-900: oklch(30% 0.15 150);
+  --ui-success-foreground: oklch(0% 0 0);
+  --ui-success: oklch(70% 0.35 150);
+
+  --ui-warning-50: oklch(95% 0.1 50);
+  --ui-warning-100: oklch(90% 0.15 50);
+  --ui-warning-200: oklch(85% 0.2 50);
+  --ui-warning-300: oklch(80% 0.25 50);
+  --ui-warning-400: oklch(75% 0.3 50);
+  --ui-warning-500: oklch(70% 0.35 50);
+  --ui-warning-600: oklch(60% 0.3 50);
+  --ui-warning-700: oklch(50% 0.25 50);
+  --ui-warning-800: oklch(40% 0.2 50);
+  --ui-warning-900: oklch(30% 0.15 50);
+  --ui-warning-foreground: oklch(0% 0 0);
+  --ui-warning: oklch(70% 0.35 50);
+
+  --ui-danger-50: oklch(95% 0.1 20);
+  --ui-danger-100: oklch(90% 0.15 20);
+  --ui-danger-200: oklch(85% 0.2 20);
+  --ui-danger-300: oklch(80% 0.25 20);
+  --ui-danger-400: oklch(75% 0.3 20);
+  --ui-danger-500: oklch(70% 0.35 20);
+  --ui-danger-600: oklch(60% 0.3 20);
+  --ui-danger-700: oklch(50% 0.25 20);
+  --ui-danger-800: oklch(40% 0.2 20);
+  --ui-danger-900: oklch(30% 0.15 20);
+  --ui-danger-foreground: oklch(100% 0 0);
+  --ui-danger: oklch(70% 0.35 20);
+}

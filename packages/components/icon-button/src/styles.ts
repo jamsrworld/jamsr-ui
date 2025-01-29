@@ -4,6 +4,7 @@ import { colorVariants, radiusBaseVariant, tv } from "@jamsr-ui/utils";
 const baseVariant = tv({
   base: [
     "z-0",
+    "cursor-pointer",
     "shrink-0",
     "group",
     "relative",

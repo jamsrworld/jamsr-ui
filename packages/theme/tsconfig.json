@@ -7,7 +7,8 @@
     "**/**/*.tsx",
     "**/**/*.ts",
     ".eslintrc.cjs",
-    "prettier.config.cjs"
+    "prettier.config.cjs",
+    "postcss.config.mjs"
   ],
   "exclude": ["node_modules", "dist"]
 }

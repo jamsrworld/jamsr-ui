@@ -1,5 +1,5 @@
-import { type TooltipProps } from "@jamsr-ui/react";
-import { TooltipUsage } from "./usage";
+import { IconButton, Tooltip, type TooltipProps } from "@jamsr-ui/react";
+import { InfoIcon } from "@jamsr-ui/shared-icons";
 
 export const TooltipRadius = () => {
   const radii: TooltipProps["radius"][] = [
@@ -12,9 +12,13 @@ export const TooltipRadius = () => {
     "3xl",
   ];
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex gap-4  min-h-[100px] items-center justify-center">
       {radii.map((radius) => (
-        <TooltipUsage key={radius} radius={radius} />
+        <Tooltip title="I am tooltip" key={radius} radius={radius}>
+          <IconButton label="Click Me!">
+            <InfoIcon width={24} height={24} />
+          </IconButton>
+        </Tooltip>
       ))}
     </div>
   );

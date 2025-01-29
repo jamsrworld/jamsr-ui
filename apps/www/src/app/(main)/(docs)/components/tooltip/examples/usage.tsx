@@ -6,7 +6,7 @@ type Props = TooltipProps;
 export const TooltipUsage = (props: Partial<Props>) => {
   return (
     <div className="grid min-h-[100px] place-items-center">
-      <Tooltip title="I am tooltip" {...props}>
+      <Tooltip title="I am tooltip">
         <IconButton label="Click Me!">
           <InfoIcon width={24} height={24} />
         </IconButton>

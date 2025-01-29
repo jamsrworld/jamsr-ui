@@ -174,6 +174,11 @@
   --text-3xl: var(--ui-fs-3xl);
   --text-4xl: var(--ui-fs-4xl);
   --text-5xl: var(--ui-fs-5xl);
+
+  /* Shadow */
+  --shadow-sm: var(--ui-box-shadow-sm);
+  --shadow-md: var(--ui-box-shadow-md);
+  --shadow-lg: var(--ui-box-shadow-lg);
 }
 
 :root {
@@ -197,133 +202,124 @@
 :root,
 .light,
 [data-theme="light"] {
-  /* Background Colors */
   --ui-background: oklch(100% 0 0);
-  --ui-background-secondary: oklch(94.5% 0 0);
-  --ui-background-tertiary: oklch(96.5% 0.005 260);
+  --ui-background-secondary: oklch(95.2% 0 0);
+  --ui-background-tertiary: oklch(97% 0.003 264.5);
   --ui-background-inverse: oklch(0% 0 0);
 
-  /* Foreground Colors */
   --ui-foreground-50: oklch(98.5% 0 0);
-  --ui-foreground-100: oklch(96.5% 0 0);
-  --ui-foreground-200: oklch(90.5% 0.005 260);
-  --ui-foreground-300: oklch(84.5% 0.01 260);
-  --ui-foreground-400: oklch(67% 0.02 260);
-  --ui-foreground-500: oklch(49% 0.02 260);
-  --ui-foreground-600: oklch(36% 0.02 260);
-  --ui-foreground-700: oklch(28% 0.02 260);
-  --ui-foreground-800: oklch(18% 0.01 260);
-  --ui-foreground-900: oklch(12% 0.01 260);
-  --ui-foreground: oklch(13% 0.01 260);
-  --ui-foreground-link: oklch(50% 0.2 260);
-  --ui-foreground-secondary: oklch(49% 0.02 260);
-  --ui-foreground-tertiary: oklch(67% 0.02 260);
+  --ui-foreground-100: oklch(96.7% 0.001 286.4);
+  --ui-foreground-200: oklch(92% 0.004 286.3);
+  --ui-foreground-300: oklch(87.1% 0.005 286.3);
+  --ui-foreground-400: oklch(71.2% 0.013 286.1);
+  --ui-foreground-500: oklch(55.2% 0.014 285.9);
+  --ui-foreground-600: oklch(44.2% 0.015 285.8);
+  --ui-foreground-700: oklch(37% 0.012 285.8);
+  --ui-foreground-800: oklch(27.4% 0.005 286);
+  --ui-foreground-900: oklch(21% 0.006 285.9);
+  --ui-foreground: oklch(23.2% 0.004 286.1);
+  --ui-foreground-link: oklch(52.2% 0.177 255.8);
+  --ui-foreground-secondary: oklch(54% 0.008 286.1);
+  --ui-foreground-tertiary: oklch(62.2% 0.007 286.2);
   --ui-foreground-inverse: oklch(100% 0 0);
 
-  /* Divider Colors */
-  --ui-divider-light: oklch(96.5% 0.005 260);
-  --ui-divider: oklch(92% 0.01 260);
-  --ui-divider-dark: oklch(84.5% 0.01 260);
+  --ui-divider-light: oklch(96.8% 0.002 325.6);
+  --ui-divider: oklch(93.2% 0.002 325.6);
+  --ui-divider-dark: oklch(85.9% 0.002 325.6);
 
-  /* Focus Color */
-  --ui-focus: oklch(50% 0.2 260);
+  --ui-focus: oklch(56.7% 0.209 257.9);
 
-  /* Overlay Color */
   --ui-overlay: oklch(0% 0 0);
 
-  /* Content Colors */
   --ui-content1: oklch(100% 0 0);
-  --ui-content1-foreground: oklch(13% 0.01 260);
-  --ui-content2: oklch(96.5% 0 0);
-  --ui-content2-foreground: oklch(18% 0.01 260);
-  --ui-content3: oklch(90.5% 0.005 260);
-  --ui-content3-foreground: oklch(28% 0.02 260);
-  --ui-content4: oklch(84.5% 0.01 260);
-  --ui-content4-foreground: oklch(36% 0.02 260);
+  --ui-content1-foreground: oklch(20.4% 0.013 233.3);
 
-  /* Default Colors */
+  --ui-content2: oklch(96.7% 0.001 286.4);
+  --ui-content2-foreground: oklch(27.4% 0.005 286);
+
+  --ui-content3: oklch(92% 0.004 286.3);
+  --ui-content3-foreground: oklch(37% 0.012 285.8);
+
+  --ui-content4: oklch(87.1% 0.005 286.3);
+  --ui-content4-foreground: oklch(44.2% 0.015 285.8);
+
   --ui-default-50: oklch(98.5% 0 0);
-  --ui-default-100: oklch(96.5% 0 0);
-  --ui-default-200: oklch(90.5% 0.005 260);
-  --ui-default-300: oklch(84.5% 0.01 260);
-  --ui-default-400: oklch(67% 0.02 260);
-  --ui-default-500: oklch(49% 0.02 260);
-  --ui-default-600: oklch(36% 0.02 260);
-  --ui-default-700: oklch(28% 0.02 260);
-  --ui-default-800: oklch(18% 0.01 260);
-  --ui-default-900: oklch(12% 0.01 260);
+  --ui-default-100: oklch(96.7% 0.001 286.4);
+  --ui-default-200: oklch(92% 0.004 286.3);
+  --ui-default-300: oklch(87.1% 0.005 286.3);
+  --ui-default-400: oklch(71.2% 0.013 286.1);
+  --ui-default-500: oklch(55.2% 0.014 285.9);
+  --ui-default-600: oklch(44.2% 0.015 285.8);
+  --ui-default-700: oklch(37% 0.012 285.8);
+  --ui-default-800: oklch(27.4% 0.005 286);
+  --ui-default-900: oklch(21% 0.006 285.9);
   --ui-default-foreground: oklch(0% 0 0);
-  --ui-default: oklch(90.5% 0.005 260);
+  --ui-default: oklch(92% 0.004 286.3);
 
-  /* Primary Colors */
-  --ui-primary-50: oklch(95% 0.1 260);
-  --ui-primary-100: oklch(90% 0.15 260);
-  --ui-primary-200: oklch(85% 0.2 260);
-  --ui-primary-300: oklch(80% 0.25 260);
-  --ui-primary-400: oklch(75% 0.3 260);
-  --ui-primary-500: oklch(70% 0.35 260);
-  --ui-primary-600: oklch(60% 0.3 260);
-  --ui-primary-700: oklch(50% 0.25 260);
-  --ui-primary-800: oklch(40% 0.2 260);
-  --ui-primary-900: oklch(30% 0.15 260);
+  --ui-primary-50: oklch(95.4% 0.021 252.5);
+  --ui-primary-100: oklch(90.7% 0.043 251.5);
+  --ui-primary-200: oklch(81.6% 0.089 252);
+  --ui-primary-300: oklch(72.7% 0.135 253.3);
+  --ui-primary-400: oklch(64.7% 0.178 254.8);
+  --ui-primary-500: oklch(56.7% 0.209 257.9);
+  --ui-primary-600: oklch(49.2% 0.18 257.7);
+  --ui-primary-700: oklch(40.1% 0.144 257.2);
+  --ui-primary-800: oklch(30.7% 0.103 255.6);
+  --ui-primary-900: oklch(20.3% 0.06 251.8);
   --ui-primary-foreground: oklch(100% 0 0);
-  --ui-primary: oklch(70% 0.35 260);
+  --ui-primary: oklch(56.7% 0.209 257.9);
 
-  /* Secondary Colors */
-  --ui-secondary-50: oklch(95% 0.1 300);
-  --ui-secondary-100: oklch(90% 0.15 300);
-  --ui-secondary-200: oklch(85% 0.2 300);
-  --ui-secondary-300: oklch(80% 0.25 300);
-  --ui-secondary-400: oklch(75% 0.3 300);
-  --ui-secondary-500: oklch(70% 0.35 300);
-  --ui-secondary-600: oklch(60% 0.3 300);
-  --ui-secondary-700: oklch(50% 0.25 300);
-  --ui-secondary-800: oklch(40% 0.2 300);
-  --ui-secondary-900: oklch(30% 0.15 300);
+  --ui-secondary-50: oklch(94.8% 0.023 308.2);
+  --ui-secondary-100: oklch(89.3% 0.046 307.9);
+  --ui-secondary-200: oklch(78.5% 0.095 307.1);
+  --ui-secondary-300: oklch(67.8% 0.145 305.9);
+  --ui-secondary-400: oklch(57.7% 0.192 304);
+  --ui-secondary-500: oklch(48.8% 0.225 300.5);
+  --ui-secondary-600: oklch(41.7% 0.189 300.8);
+  --ui-secondary-700: oklch(34.2% 0.151 301.3);
+  --ui-secondary-800: oklch(26.4% 0.11 302.1);
+  --ui-secondary-900: oklch(18.1% 0.064 303.7);
   --ui-secondary-foreground: oklch(100% 0 0);
-  --ui-secondary: oklch(70% 0.35 300);
+  --ui-secondary: oklch(48.8% 0.225 300.5);
 
-  /* Success Colors */
-  --ui-success-50: oklch(95% 0.1 150);
-  --ui-success-100: oklch(90% 0.15 150);
-  --ui-success-200: oklch(85% 0.2 150);
-  --ui-success-300: oklch(80% 0.25 150);
-  --ui-success-400: oklch(75% 0.3 150);
-  --ui-success-500: oklch(70% 0.35 150);
-  --ui-success-600: oklch(60% 0.3 150);
-  --ui-success-700: oklch(50% 0.25 150);
-  --ui-success-800: oklch(40% 0.2 150);
-  --ui-success-900: oklch(30% 0.15 150);
+  --ui-success-50: oklch(96.9% 0.023 161.8);
+  --ui-success-100: oklch(93.7% 0.045 160.4);
+  --ui-success-200: oklch(87.6% 0.09 159.1);
+  --ui-success-300: oklch(82.4% 0.133 156.8);
+  --ui-success-400: oklch(77.4% 0.168 154.2);
+  --ui-success-500: oklch(73.3% 0.193 150.8);
+  --ui-success-600: oklch(62.2% 0.163 151);
+  --ui-success-700: oklch(50.6% 0.13 151.4);
+  --ui-success-800: oklch(38% 0.094 152.3);
+  --ui-success-900: oklch(24.6% 0.055 154.1);
   --ui-success-foreground: oklch(0% 0 0);
-  --ui-success: oklch(70% 0.35 150);
+  --ui-success: oklch(73.3% 0.193 150.8);
 
-  /* Warning Colors */
-  --ui-warning-50: oklch(95% 0.1 50);
-  --ui-warning-100: oklch(90% 0.15 50);
-  --ui-warning-200: oklch(85% 0.2 50);
-  --ui-warning-300: oklch(80% 0.25 50);
-  --ui-warning-400: oklch(75% 0.3 50);
-  --ui-warning-500: oklch(70% 0.35 50);
-  --ui-warning-600: oklch(60% 0.3 50);
-  --ui-warning-700: oklch(50% 0.25 50);
-  --ui-warning-800: oklch(40% 0.2 50);
-  --ui-warning-900: oklch(30% 0.15 50);
+  --ui-warning-50: oklch(98.7% 0.026 102.2);
+  --ui-warning-100: oklch(95.2% 0.038 80);
+  --ui-warning-200: oklch(90.6% 0.076 79.6);
+  --ui-warning-300: oklch(86.2% 0.11 78.3);
+  --ui-warning-400: oklch(82% 0.139 76.3);
+  --ui-warning-500: oklch(78.2% 0.158 72.3);
+  --ui-warning-600: oklch(66.3% 0.133 72.6);
+  --ui-warning-700: oklch(53.8% 0.106 73.1);
+  --ui-warning-800: oklch(40.6% 0.078 74.2);
+  --ui-warning-900: oklch(26.2% 0.046 76.3);
   --ui-warning-foreground: oklch(0% 0 0);
-  --ui-warning: oklch(70% 0.35 50);
+  --ui-warning: oklch(78.2% 0.158 72.3);
 
-  /* Danger Colors */
-  --ui-danger-50: oklch(95% 0.1 20);
-  --ui-danger-100: oklch(90% 0.15 20);
-  --ui-danger-200: oklch(85% 0.2 20);
-  --ui-danger-300: oklch(80% 0.25 20);
-  --ui-danger-400: oklch(75% 0.3 20);
-  --ui-danger-500: oklch(70% 0.35 20);
-  --ui-danger-600: oklch(60% 0.3 20);
-  --ui-danger-700: oklch(50% 0.25 20);
-  --ui-danger-800: oklch(40% 0.2 20);
-  --ui-danger-900: oklch(30% 0.15 20);
+  --ui-danger-50: oklch(94.9% 0.027 354.5);
+  --ui-danger-100: oklch(90% 0.054 356.3);
+  --ui-danger-200: oklch(80.4% 0.113 357.7);
+  --ui-danger-300: oklch(72.2% 0.171 0.4);
+  --ui-danger-400: oklch(65.6% 0.218 4.6);
+  --ui-danger-500: oklch(61.9% 0.242 11.3);
+  --ui-danger-600: oklch(52.4% 0.204 10.7);
+  --ui-danger-700: oklch(42.6% 0.164 9.9);
+  --ui-danger-800: oklch(32.1% 0.121 8.8);
+  --ui-danger-900: oklch(20.8% 0.073 5.6);
   --ui-danger-foreground: oklch(100% 0 0);
-  --ui-danger: oklch(70% 0.35 20);
+  --ui-danger: oklch(61.9% 0.242 11.3);
 
   /* Shadows */
   --ui-box-shadow-sm: 0px 0px 5px 0px rgba(0, 0, 0, 0.02),
@@ -338,131 +334,131 @@
 [data-theme="dark"] {
   /* Background Colors */
   --ui-background: oklch(0% 0 0);
-  --ui-background-secondary: oklch(1.5% 0 0);
-  --ui-background-tertiary: oklch(0.5% 0 0);
+  --ui-background-secondary: oklch(9.7% 0 0);
+  --ui-background-tertiary: oklch(6.7% 0 0);
   --ui-background-inverse: oklch(100% 0 0);
 
   /* Foreground Colors */
-  --ui-foreground-50: oklch(12% 0.01 260);
-  --ui-foreground-100: oklch(18% 0.01 260);
-  --ui-foreground-200: oklch(28% 0.02 260);
-  --ui-foreground-300: oklch(36% 0.02 260);
-  --ui-foreground-400: oklch(49% 0.02 260);
-  --ui-foreground-500: oklch(67% 0.02 260);
-  --ui-foreground-600: oklch(84.5% 0.01 260);
-  --ui-foreground-700: oklch(90.5% 0.005 260);
-  --ui-foreground-800: oklch(96.5% 0 0);
+  --ui-foreground-50: oklch(21% 0.006 285.9);
+  --ui-foreground-100: oklch(27.4% 0.005 286);
+  --ui-foreground-200: oklch(37% 0.012 285.8);
+  --ui-foreground-300: oklch(44.2% 0.015 285.8);
+  --ui-foreground-400: oklch(55.2% 0.014 285.9);
+  --ui-foreground-500: oklch(71.2% 0.013 286.1);
+  --ui-foreground-600: oklch(87.1% 0.005 286.3);
+  --ui-foreground-700: oklch(92% 0.004 286.3);
+  --ui-foreground-800: oklch(96.7% 0.001 286.4);
   --ui-foreground-900: oklch(98.5% 0 0);
-  --ui-foreground: oklch(93% 0.005 260);
-  --ui-foreground-link: oklch(60% 0.2 260);
-  --ui-foreground-secondary: oklch(67% 0.02 260);
-  --ui-foreground-tertiary: oklch(67% 0.02 260);
+  --ui-foreground: oklch(94% 0.002 247.8);
+  --ui-foreground-link: oklch(62.4% 0.206 255.5);
+  --ui-foreground-secondary: oklch(67.3% 0.024 277.3);
+  --ui-foreground-tertiary: oklch(63.5% 0.006 286.2);
   --ui-foreground-inverse: oklch(0% 0 0);
 
   /* Divider Colors */
-  --ui-divider-light: oklch(3% 0 0);
-  --ui-divider: oklch(18% 0.01 260);
-  --ui-divider-dark: oklch(25% 0.01 260);
+  --ui-divider-light: oklch(13.3% 0.003 246.1);
+  --ui-divider: oklch(27.9% 0.009 248.2);
+  --ui-divider-dark: oklch(34.9% 0.013 248.2);
 
   /* Focus Color */
-  --ui-focus: oklch(50% 0.2 260);
+  --ui-focus: oklch(56.7% 0.209 257.9);
 
   /* Overlay Color */
   --ui-overlay: oklch(0% 0 0);
 
   /* Content Colors */
-  --ui-content1: oklch(12% 0.01 260);
+  --ui-content1: oklch(21% 0.006 285.9);
   --ui-content1-foreground: oklch(98.5% 0 0);
-  --ui-content2: oklch(18% 0.01 260);
-  --ui-content2-foreground: oklch(96.5% 0 0);
-  --ui-content3: oklch(28% 0.02 260);
-  --ui-content3-foreground: oklch(90.5% 0.005 260);
-  --ui-content4: oklch(36% 0.02 260);
-  --ui-content4-foreground: oklch(84.5% 0.01 260);
+  --ui-content2: oklch(27.4% 0.005 286);
+  --ui-content2-foreground: oklch(96.7% 0.001 286.4);
+  --ui-content3: oklch(37% 0.012 285.8);
+  --ui-content3-foreground: oklch(92% 0.004 286.3);
+  --ui-content4: oklch(44.2% 0.015 285.8);
+  --ui-content4-foreground: oklch(87.1% 0.005 286.3);
 
   /* Default Colors */
-  --ui-default-50: oklch(12% 0.01 260);
-  --ui-default-100: oklch(18% 0.01 260);
-  --ui-default-200: oklch(28% 0.02 260);
-  --ui-default-300: oklch(36% 0.02 260);
-  --ui-default-400: oklch(49% 0.02 260);
-  --ui-default-500: oklch(67% 0.02 260);
-  --ui-default-600: oklch(84.5% 0.01 260);
-  --ui-default-700: oklch(90.5% 0.005 260);
-  --ui-default-800: oklch(96.5% 0 0);
+  --ui-default-50: oklch(21% 0.006 285.9);
+  --ui-default-100: oklch(27.4% 0.005 286);
+  --ui-default-200: oklch(37% 0.012 285.8);
+  --ui-default-300: oklch(44.2% 0.015 285.8);
+  --ui-default-400: oklch(55.2% 0.014 285.9);
+  --ui-default-500: oklch(71.2% 0.013 286.1);
+  --ui-default-600: oklch(87.1% 0.005 286.3);
+  --ui-default-700: oklch(92% 0.004 286.3);
+  --ui-default-800: oklch(96.7% 0.001 286.4);
   --ui-default-900: oklch(98.5% 0 0);
   --ui-default-foreground: oklch(100% 0 0);
-  --ui-default: oklch(28% 0.02 260);
+  --ui-default: oklch(37% 0.012 285.8);
 
   /* Primary Colors */
-  --ui-primary-50: oklch(30% 0.15 260);
-  --ui-primary-100: oklch(40% 0.2 260);
-  --ui-primary-200: oklch(50% 0.25 260);
-  --ui-primary-300: oklch(60% 0.3 260);
-  --ui-primary-400: oklch(70% 0.35 260);
-  --ui-primary-500: oklch(80% 0.25 260);
-  --ui-primary-600: oklch(85% 0.2 260);
-  --ui-primary-700: oklch(90% 0.15 260);
-  --ui-primary-800: oklch(95% 0.1 260);
-  --ui-primary-900: oklch(97% 0.05 260);
+  --ui-primary-50: oklch(20.3% 0.06 251.8);
+  --ui-primary-100: oklch(30.7% 0.103 255.6);
+  --ui-primary-200: oklch(40.1% 0.144 257.2);
+  --ui-primary-300: oklch(49.2% 0.18 257.7);
+  --ui-primary-400: oklch(56.7% 0.209 257.9);
+  --ui-primary-500: oklch(64.7% 0.178 254.8);
+  --ui-primary-600: oklch(72.7% 0.135 253.3);
+  --ui-primary-700: oklch(81.6% 0.089 252);
+  --ui-primary-800: oklch(90.7% 0.043 251.5);
+  --ui-primary-900: oklch(95.4% 0.021 252.5);
   --ui-primary-foreground: oklch(100% 0 0);
-  --ui-primary: oklch(70% 0.35 260);
+  --ui-primary: oklch(56.7% 0.209 257.9);
 
   /* Secondary Colors */
-  --ui-secondary-50: oklch(30% 0.15 300);
-  --ui-secondary-100: oklch(40% 0.2 300);
-  --ui-secondary-200: oklch(50% 0.25 300);
-  --ui-secondary-300: oklch(60% 0.3 300);
-  --ui-secondary-400: oklch(70% 0.35 300);
-  --ui-secondary-500: oklch(80% 0.25 300);
-  --ui-secondary-600: oklch(85% 0.2 300);
-  --ui-secondary-700: oklch(90% 0.15 300);
-  --ui-secondary-800: oklch(95% 0.1 300);
-  --ui-secondary-900: oklch(97% 0.05 300);
+  --ui-secondary-50: oklch(18.1% 0.064 303.7);
+  --ui-secondary-100: oklch(26.4% 0.11 302.1);
+  --ui-secondary-200: oklch(34.2% 0.151 301.3);
+  --ui-secondary-300: oklch(41.7% 0.189 300.8);
+  --ui-secondary-400: oklch(48.8% 0.225 300.5);
+  --ui-secondary-500: oklch(57.7% 0.192 304);
+  --ui-secondary-600: oklch(67.8% 0.145 305.9);
+  --ui-secondary-700: oklch(78.5% 0.095 307.1);
+  --ui-secondary-800: oklch(89.3% 0.046 307.9);
+  --ui-secondary-900: oklch(94.8% 0.023 308.2);
   --ui-secondary-foreground: oklch(100% 0 0);
-  --ui-secondary: oklch(70% 0.35 300);
+  --ui-secondary: oklch(57.7% 0.192 304);
 
   /* Success Colors */
-  --ui-success-50: oklch(30% 0.15 150);
-  --ui-success-100: oklch(40% 0.2 150);
-  --ui-success-200: oklch(50% 0.25 150);
-  --ui-success-300: oklch(60% 0.3 150);
-  --ui-success-400: oklch(70% 0.35 150);
-  --ui-success-500: oklch(80% 0.25 150);
-  --ui-success-600: oklch(85% 0.2 150);
-  --ui-success-700: oklch(90% 0.15 150);
-  --ui-success-800: oklch(95% 0.1 150);
-  --ui-success-900: oklch(97% 0.05 150);
+  --ui-success-50: oklch(24.6% 0.055 154.1);
+  --ui-success-100: oklch(38% 0.094 152.3);
+  --ui-success-200: oklch(50.6% 0.13 151.4);
+  --ui-success-300: oklch(62.2% 0.163 151);
+  --ui-success-400: oklch(73.3% 0.193 150.8);
+  --ui-success-500: oklch(77.4% 0.168 154.2);
+  --ui-success-600: oklch(82.4% 0.133 156.8);
+  --ui-success-700: oklch(87.6% 0.09 159.1);
+  --ui-success-800: oklch(93.7% 0.045 160.4);
+  --ui-success-900: oklch(96.9% 0.023 161.8);
   --ui-success-foreground: oklch(0% 0 0);
-  --ui-success: oklch(70% 0.35 150);
+  --ui-success: oklch(73.3% 0.193 150.8);
 
   /* Warning Colors */
-  --ui-warning-50: oklch(30% 0.15 50);
-  --ui-warning-100: oklch(40% 0.2 50);
-  --ui-warning-200: oklch(50% 0.25 50);
-  --ui-warning-300: oklch(60% 0.3 50);
-  --ui-warning-400: oklch(70% 0.35 50);
-  --ui-warning-500: oklch(80% 0.25 50);
-  --ui-warning-600: oklch(85% 0.2 50);
-  --ui-warning-700: oklch(90% 0.15 50);
-  --ui-warning-800: oklch(95% 0.1 50);
-  --ui-warning-900: oklch(97% 0.05 50);
+  --ui-warning-50: oklch(26.2% 0.046 76.3);
+  --ui-warning-100: oklch(40.6% 0.078 74.2);
+  --ui-warning-200: oklch(53.8% 0.106 73.1);
+  --ui-warning-300: oklch(66.3% 0.133 72.6);
+  --ui-warning-400: oklch(78.2% 0.158 72.3);
+  --ui-warning-500: oklch(82% 0.139 76.3);
+  --ui-warning-600: oklch(86.2% 0.11 78.3);
+  --ui-warning-700: oklch(90.6% 0.076 79.6);
+  --ui-warning-800: oklch(95.2% 0.038 80);
+  --ui-warning-900: oklch(98.7% 0.026 102.2);
   --ui-warning-foreground: oklch(0% 0 0);
-  --ui-warning: oklch(70% 0.35 50);
+  --ui-warning: oklch(78.2% 0.158 72.3);
 
   /* Danger Colors */
-  --ui-danger-50: oklch(30% 0.15 20);
-  --ui-danger-100: oklch(40% 0.2 20);
-  --ui-danger-200: oklch(50% 0.25 20);
-  --ui-danger-300: oklch(60% 0.3 20);
-  --ui-danger-400: oklch(70% 0.35 20);
-  --ui-danger-500: oklch(80% 0.25 20);
-  --ui-danger-600: oklch(85% 0.2 20);
-  --ui-danger-700: oklch(90% 0.15 20);
-  --ui-danger-800: oklch(95% 0.1 20);
-  --ui-danger-900: oklch(97% 0.05 20);
+  --ui-danger-50: oklch(20.8% 0.073 5.6);
+  --ui-danger-100: oklch(32.1% 0.121 8.8);
+  --ui-danger-200: oklch(42.6% 0.164 9.9);
+  --ui-danger-300: oklch(52.4% 0.204 10.7);
+  --ui-danger-400: oklch(61.9% 0.242 11.3);
+  --ui-danger-500: oklch(65.6% 0.218 4.6);
+  --ui-danger-600: oklch(72.2% 0.171 0.4);
+  --ui-danger-700: oklch(80.4% 0.113 357.7);
+  --ui-danger-800: oklch(90% 0.054 356.3);
+  --ui-danger-900: oklch(94.9% 0.027 354.5);
   --ui-danger-foreground: oklch(100% 0 0);
-  --ui-danger: oklch(70% 0.35 20);
+  --ui-danger: oklch(61.9% 0.242 11.3);
 
   /* Shadows */
   --ui-box-shadow-sm: 0px 0px 5px 0px rgba(0, 0, 0, 0.05),
@@ -474,6 +470,23 @@
   --ui-box-shadow-lg: 0px 0px 30px 0px rgba(0, 0, 0, 0.07),
     0px 30px 60px 0px rgba(0, 0, 0, 0.26),
     inset 0px 0px 1px 0px hsla(0, 0%, 100%, 0.15);
+}
+
+/*  utility */
+@utility z-backdrop {
+  z-index: 98;
+}
+@utility z-popover {
+  z-index: 99;
+}
+@utility z-dialog {
+  z-index: 99;
+}
+@utility z-header {
+  z-index: 60;
+}
+@utility z-drawer {
+  z-index: 60;
 }
 
 /*  variants */

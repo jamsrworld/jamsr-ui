@@ -29,7 +29,7 @@ export const Hero = () => {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button
             as={Link}
-            href="/installation"
+            href="/introduction"
             size="lg"
             color="primary"
             radius="full"

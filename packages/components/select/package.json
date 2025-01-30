@@ -26,7 +26,7 @@
     "@jamsr-ui/avatar": "workspace:^",
     "@jamsr-ui/card": "workspace:^",
     "@types/react": "19.0.1",
-    "@types/node": "^22.7.9",
+    "@types/node": "^22.12.0",
     "clean-package": "^2.2.0",
     "framer-motion": ">=12",
     "react": ">=19",

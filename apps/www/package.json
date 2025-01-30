@@ -39,7 +39,7 @@
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:^",
     "@tailwindcss/postcss": "^4.0.0",
-    "@types/node": "22.8.1",
+    "@types/node": "22.12.0",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
     "eslint-config-next": "15.0.1",

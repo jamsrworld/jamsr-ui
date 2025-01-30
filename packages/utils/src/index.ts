@@ -54,4 +54,4 @@ export { mergeProps } from "./merge-props";
 export { removeAttrsFromObject } from "./object";
 export { TRANSITION_VARIANTS } from "./transition";
 export { mapPropsVariants, type SlotsToClasses } from "./tv";
-export { forwardType } from "./type";
+export { forwardType } from "./types";

@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.51
+
+### Patch Changes
+
+- fix: link, avatar types
+
 ## 0.0.50
 
 ### Patch Changes

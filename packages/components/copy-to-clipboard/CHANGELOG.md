@@ -1,5 +1,14 @@
 # @jamsr-ui/copy-to-clipboard
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.73
+  - @jamsr-ui/utils@0.0.81
+  - @jamsr-ui/icon-button@0.0.22
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,8 +1,7 @@
 {
   "name": "@jamsr-ui/utils",
-  "version": "0.0.80",
+  "version": "0.0.81",
   "main": "./src/index.ts",
-  "sideEffects": false,
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",

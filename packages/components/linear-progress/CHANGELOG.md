@@ -1,5 +1,12 @@
 # @jamsr-ui/linear-progress
 
+## 0.0.17
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.81
+
 ## 0.0.16
 
 ### Patch Changes

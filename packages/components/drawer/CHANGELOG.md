@@ -1,5 +1,15 @@
 # @jamsr-ui/drawer
 
+## 1.0.94
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.73
+  - @jamsr-ui/hooks@0.0.63
+  - @jamsr-ui/utils@0.0.81
+  - @jamsr-ui/icon-button@0.0.22
+
 ## 1.0.93
 
 ### Patch Changes

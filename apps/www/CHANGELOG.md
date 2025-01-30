@@ -1,5 +1,19 @@
 # web
 
+## 0.1.226
+
+### Patch Changes
+
+- fix: link, avatar types
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.73
+  - @jamsr-ui/hooks@0.0.63
+  - @jamsr-ui/theme@0.0.84
+  - @jamsr-ui/utils@0.0.81
+  - @jamsr-ui/editor@0.0.138
+  - @jamsr-ui/react@0.0.244
+  - @jamsr-ui/charts@0.0.13
+
 ## 0.1.225
 
 ### Patch Changes

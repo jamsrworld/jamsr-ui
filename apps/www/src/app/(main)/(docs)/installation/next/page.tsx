@@ -4,7 +4,7 @@ import { VariantPage } from "@/components/docs/variant-page";
 import { GithubDarkIcon } from "@/components/icons";
 import {
   JAMSR_UI_NEXT_APP_TEMPLATE_GITHUB_URL,
-  TAILWIND_WEB_URL,
+  TAILWIND_NEXT_WEB_URL,
 } from "@/config";
 import {
   Alert,
@@ -37,9 +37,39 @@ const items: { heading: string; content: React.ReactNode }[] = [
         <Text as="p">
           Use your preferred package manager to install JamsrUI:
         </Text>
-        <Tabs variant="underlined" defaultValue="pnpm">
+        <Tabs variant="underlined" defaultValue="npm">
           <Tab startContent={<PnpmIcon />} value="pnpm" heading="pnpm">
             <CodeBlock>pnpm add @jamsr-ui/react framer-motion</CodeBlock>
+            {
+              <div className="flex flex-col gap-4 mt-8">
+                <Text as="h4" variant="h6">
+                  Configure Hoisted Dependencies (pnpm users only)
+                </Text>
+                <Text as="p">
+                  If you're using <Code>pnpm</Code>, ensure that JamsrUI
+                  packages are hoisted to the root <Code> node_modules</Code>
+                </Text>
+                <div>
+                  <ul className="flex list-disc flex-col gap-4">
+                    <li className="space-y-4">
+                      <div>
+                        Create <Code>.npmrc</Code> file at the root directory of
+                        your project:
+                      </div>
+                      <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
+                    </li>
+                    <li className="space-y-4">
+                      <div>
+                        Delete the existing <Code> node_modules</Code> directory
+                        and reinstall dependencies:
+                      </div>
+                      <CodeBlock>pnpm install</CodeBlock>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              // ),
+            }
           </Tab>
           <Tab startContent={<NpmIcon />} value="npm" heading="npm">
             <CodeBlock>npm install @jamsr-ui/react framer-motion</CodeBlock>
@@ -51,42 +81,14 @@ const items: { heading: string; content: React.ReactNode }[] = [
       </div>
     ),
   },
-  {
-    heading: "Configure Hoisted Dependencies (pnpm users only)",
-    content: (
-      <div className="flex flex-col gap-4">
-        <Text as="p">
-          If you're using <Code>pnpm</Code>, ensure that JamsrUI packages are
-          hoisted to the root <Code> node_modules</Code>
-        </Text>
-        <div>
-          <ul className="flex list-disc flex-col gap-4">
-            <li className="space-y-4">
-              <div>
-                Create <Code>.npmrc</Code> file at the root directory of your
-                project:
-              </div>
-              <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
-            </li>
-            <li className="space-y-4">
-              <div>
-                Delete the existing <Code> node_modules</Code> directory and
-                reinstall dependencies:
-              </div>
-              <CodeBlock>pnpm install</CodeBlock>
-            </li>
-          </ul>
-        </div>
-      </div>
-    ),
-  },
+
   {
     heading: "Set Up Tailwind CSS",
     content: (
       <div className="flex flex-col gap-4">
         <Text as="p">
           JamsrUI is built on Tailwind CSS. Follow the official{" "}
-          <Link target="_blank" href={TAILWIND_WEB_URL}>
+          <Link target="_blank" href={TAILWIND_NEXT_WEB_URL}>
             Tailwind CSS installation guide
           </Link>{" "}
           to set it up in your project.
@@ -97,28 +99,20 @@ const items: { heading: string; content: React.ReactNode }[] = [
             <li className="space-y-4">
               <div>
                 After setting up Tailwind CSS, modify your{" "}
-                <Code> tailwind.config.ts</Code> to include JamsrUI components:
+                <Code> globals.css</Code> to include JamsrUI components:
               </div>
             </li>
           </ul>
         </div>
 
         <CodeBlock>
-          {`// tailwind.config.ts
-import { withJamsrUI } from "@jamsr-ui/theme";
-import type { Config } from "tailwindcss";
+          {`// globals.css
+@import "tailwindcss";
 
-const config = withJamsrUI({
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    // Ensure it points to the ROOT node_modules
-    "./node_modules/@jamsr-ui/*/dist/*.js",
-  ],
-}) satisfies Config;
-export default config;
-
+// import these lines
+@import "@jamsr-ui/theme/styles.css";
+@source "../../node_modules/@jamsr-ui";
+// import these lines
 `}
         </CodeBlock>
         <Alert variant="solid" status="default">

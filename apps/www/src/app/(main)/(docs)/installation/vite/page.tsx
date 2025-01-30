@@ -44,17 +44,14 @@ const items: { heading: string; content: React.ReactNode }[] = [
     ),
   },
   {
-    heading: "Add Tailwind CSS and its configuration",
+    heading: "Set Up Tailwind CSS",
     content: (
       <div className="flex flex-col gap-4">
         <Text as="p">
           Install{" "}
           <Link target="_blank" href={TAILWIND_VITE_URL}>
             Tailwind CSS
-          </Link>{" "}
-          and its peer dependencies, then generate your{" "}
-          <Code>tailwind.config.js</Code> and <Code>postcss.config.js</Code>
-          files.
+          </Link>
         </Text>
       </div>
     ),
@@ -66,9 +63,39 @@ const items: { heading: string; content: React.ReactNode }[] = [
         <Text as="p">
           Use your preferred package manager to install JamsrUI:
         </Text>
-        <Tabs variant="underlined" defaultValue="pnpm">
+        <Tabs variant="underlined" defaultValue="npm">
           <Tab startContent={<PnpmIcon />} value="pnpm" heading="pnpm">
             <CodeBlock>pnpm add @jamsr-ui/react framer-motion</CodeBlock>
+            {
+              <div className="flex flex-col gap-4 mt-8">
+                <Text as="h4" variant="h6">
+                  Configure Hoisted Dependencies (pnpm users only)
+                </Text>
+                <Text as="p">
+                  If you're using <Code>pnpm</Code>, ensure that JamsrUI
+                  packages are hoisted to the root <Code> node_modules</Code>
+                </Text>
+                <div>
+                  <ul className="flex list-disc flex-col gap-4">
+                    <li className="space-y-4">
+                      <div>
+                        Create <Code>.npmrc</Code> file at the root directory of
+                        your project:
+                      </div>
+                      <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
+                    </li>
+                    <li className="space-y-4">
+                      <div>
+                        Delete the existing <Code> node_modules</Code> directory
+                        and reinstall dependencies:
+                      </div>
+                      <CodeBlock>pnpm install</CodeBlock>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              // ),
+            }
           </Tab>
           <Tab startContent={<NpmIcon />} value="npm" heading="npm">
             <CodeBlock>npm install @jamsr-ui/react framer-motion</CodeBlock>
@@ -80,55 +107,19 @@ const items: { heading: string; content: React.ReactNode }[] = [
       </div>
     ),
   },
+
   {
-    heading: "Configure Hoisted Dependencies (pnpm users only)",
-    content: (
-      <div className="flex flex-col gap-4">
-        <Text as="p">
-          If you're using <Code>pnpm</Code>, ensure that JamsrUI packages are
-          hoisted to the root <Code> node_modules</Code>
-        </Text>
-        <div>
-          <ul className="flex list-disc flex-col gap-4">
-            <li className="space-y-4">
-              <div>
-                Create <Code>.npmrc</Code> file at the root directory of your
-                project:
-              </div>
-              <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
-            </li>
-            <li className="space-y-4">
-              <div>
-                Delete the existing <Code> node_modules</Code> directory and
-                reinstall dependencies:
-              </div>
-              <CodeBlock>pnpm install</CodeBlock>
-            </li>
-          </ul>
-        </div>
-      </div>
-    ),
-  },
-  {
-    heading: "Edit tailwind.config.js file",
+    heading: "Edit index.css file",
     content: (
       <div className="flex flex-col gap-4">
         <CodeBlock>
-          {`// tailwind.config.ts
-import { withJamsrUI } from "@jamsr-ui/theme";
-import type { Config } from "tailwindcss";
+          {`// index.css
+@import "tailwindcss";
 
-const config = withJamsrUI({
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    // Ensure it points to the ROOT node_modules
-    "./node_modules/@jamsr-ui/*/dist/*.js",
-  ],
-}) satisfies Config;
-export default config;
-
+// import these lines
+@import "@jamsr-ui/theme/styles.css";
+@source "../../node_modules/@jamsr-ui";
+// import these lines
 `}
         </CodeBlock>
       </div>

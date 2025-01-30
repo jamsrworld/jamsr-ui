@@ -11,7 +11,7 @@ import { SearchBar } from "./search-bar";
 const navLinks: { label: string; href: Route }[] = [
   {
     label: "Docs",
-    href: "/installation",
+    href: "/introduction",
   },
   {
     label: "Components",

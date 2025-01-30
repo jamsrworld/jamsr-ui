@@ -1,5 +1,16 @@
 # @jamsr-ui/rating
 
+## 0.0.49
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/repeater@0.0.48
+  - @jamsr-ui/shared-icons@0.0.72
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/hooks@0.0.62
+
 ## 0.0.48
 
 ### Patch Changes

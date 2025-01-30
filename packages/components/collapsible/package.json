@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/collapsible",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",
@@ -11,14 +11,14 @@
   "devDependencies": {
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "framer-motion": "^12.0.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "framer-motion": ">=12",
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "peerDependencies": {
-    "framer-motion": "^12.0.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "framer-motion": ">=12",
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "dependencies": {
     "@jamsr-ui/utils": "workspace:^",

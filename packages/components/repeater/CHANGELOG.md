@@ -1,5 +1,11 @@
 # @jamsr-ui/repeater
 
+## 0.0.48
+
+### Patch Changes
+
+- feat: tailwind 4
+
 ## 0.0.47
 
 ### Patch Changes

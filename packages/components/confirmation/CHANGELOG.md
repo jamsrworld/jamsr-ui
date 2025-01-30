@@ -1,5 +1,18 @@
 # @jamsr-ui/confirmation
 
+## 0.0.92
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/divider@0.0.86
+  - @jamsr-ui/button@0.0.98
+  - @jamsr-ui/dialog@0.0.109
+  - @jamsr-ui/text@0.0.11
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.91
 
 ### Patch Changes

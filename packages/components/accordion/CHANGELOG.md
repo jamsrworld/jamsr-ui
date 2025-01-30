@@ -1,5 +1,15 @@
 # @jamsr-ui/accordion
 
+## 0.0.98
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/shared-icons@0.0.72
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.97
 
 ### Patch Changes

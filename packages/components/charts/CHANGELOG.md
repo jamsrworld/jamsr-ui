@@ -1,5 +1,13 @@
 # @jamsr-ui/chart
 
+## 0.0.12
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.11
 
 ### Patch Changes

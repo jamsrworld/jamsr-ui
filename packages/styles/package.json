@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/styles",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -13,15 +13,15 @@
     "@types/node": "^22.8.1",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": ">=19",
+    "react-dom": ">=19",
     "tailwindcss": "^4.0.0",
     "tw-colors": "^3.3.1",
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "clean-package": "../../clean-package.config.json"
 }

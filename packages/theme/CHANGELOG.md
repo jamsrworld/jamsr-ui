@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.83
+
+### Patch Changes
+
+- feat: tailwind 4
+
 ## 0.0.82
 
 ### Patch Changes

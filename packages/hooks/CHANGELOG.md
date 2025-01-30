@@ -1,5 +1,13 @@
 # @jamsr-ui/hooks
 
+## 0.0.62
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.61
 
 ### Patch Changes

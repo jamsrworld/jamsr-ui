@@ -11,11 +11,3 @@ export const Link = forwardType<"a", LinkProps>((props: LinkProps) => {
     </Component>
   );
 });
-
-<>
-  {/* <Link href="/" target="_blank" src="" />; */}
-  <Link href="/" target="_blank" />
-  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-  <Link as="img" src="" />
-  <Link href="/" as="img" src="" alt="" />;
-</>;

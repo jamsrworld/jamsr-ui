@@ -1,7 +1,7 @@
 {
   "name": "@ui/storybook",
   "private": true,
-  "version": "0.0.244",
+  "version": "0.0.245",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@jamsr-ui/react": "workspace:^",
-    "framer-motion": "^12.0.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "framer-motion": ">=12",
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",

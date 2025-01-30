@@ -57,13 +57,13 @@ importers:
         specifier: workspace:^
         version: link:../../packages/react
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
     devDependencies:
       '@chromatic-com/storybook':
@@ -202,7 +202,7 @@ importers:
         specifier: 2.0.3
         version: 2.0.3
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       highlight.js:
         specifier: ^11.10.0
@@ -211,10 +211,10 @@ importers:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
       react-hook-form:
         specifier: ^7.53.1
@@ -282,13 +282,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/alert:
@@ -316,10 +316,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/autocomplete:
@@ -359,10 +359,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/avatar:
@@ -384,10 +384,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/button:
@@ -421,10 +421,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/card:
@@ -452,10 +452,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/charts:
@@ -474,10 +474,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/checkbox:
@@ -502,13 +502,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/chip:
@@ -533,10 +533,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/circular-progress:
@@ -558,13 +558,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/collapsible:
@@ -583,13 +583,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/confirmation:
@@ -623,13 +623,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/copy-to-clipboard:
@@ -657,10 +657,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/data-table:
@@ -706,8 +706,8 @@ importers:
         specifier: ^8.4.1
         version: 8.4.1
       '@tanstack/react-table':
-        specifier: ^8.20.6
-        version: 8.20.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: '>=8'
+        version: 8.20.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -715,10 +715,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/dialog:
@@ -755,13 +755,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/divider:
@@ -780,10 +780,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/dnd:
@@ -808,10 +808,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/drawer:
@@ -845,13 +845,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/editor:
@@ -892,6 +892,9 @@ importers:
       '@jamsr-ui/switch':
         specifier: workspace:^
         version: link:../switch
+      '@jamsr-ui/theme':
+        specifier: workspace:^
+        version: link:../../theme
       '@jamsr-ui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -972,11 +975,14 @@ importers:
         specifier: 2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
+      tailwindcss:
+        specifier: ^4.0.0
+        version: 4.0.0
 
   packages/components/file-upload-multi:
     dependencies:
@@ -1012,10 +1018,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/file-upload-single:
@@ -1049,10 +1055,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/header:
@@ -1080,13 +1086,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/icon-button:
@@ -1120,10 +1126,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/input:
@@ -1157,10 +1163,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/kbd:
@@ -1182,10 +1188,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/linear-progress:
@@ -1207,13 +1213,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/link:
@@ -1235,10 +1241,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/menu:
@@ -1272,13 +1278,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/otp-input:
@@ -1303,10 +1309,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/popover:
@@ -1343,10 +1349,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/radio:
@@ -1374,10 +1380,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/rating:
@@ -1408,7 +1414,7 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
 
   packages/components/repeater:
@@ -1420,10 +1426,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/rhf:
@@ -1478,13 +1484,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
       react-hook-form:
         specifier: ^7.53.1
@@ -1512,10 +1518,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/select:
@@ -1561,13 +1567,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/sidebar:
@@ -1595,13 +1601,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/skeleton:
@@ -1620,10 +1626,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/stepper:
@@ -1651,13 +1657,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/switch:
@@ -1685,13 +1691,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/tab:
@@ -1722,13 +1728,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/table:
@@ -1747,10 +1753,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/tags-input:
@@ -1784,10 +1790,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/text:
@@ -1806,10 +1812,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/textarea:
@@ -1843,10 +1849,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/toast:
@@ -1871,10 +1877,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/components/tooltip:
@@ -1902,10 +1908,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/config/eslint-config:
@@ -1996,13 +2002,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/hooks:
@@ -2021,10 +2027,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/react:
@@ -2190,16 +2196,16 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       postcss:
         specifier: ^8.4.38
         version: 8.4.47
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
       typescript:
         specifier: ^5.4.5
@@ -2214,10 +2220,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
 
   packages/styles:
@@ -2232,10 +2238,10 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
       tailwindcss:
         specifier: ^4.0.0
@@ -2284,10 +2290,10 @@ importers:
         specifier: ^8.5.1
         version: 8.5.1
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
       tailwindcss:
         specifier: ^4.0.0
@@ -2318,13 +2324,13 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       framer-motion:
-        specifier: ^12.0.5
+        specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: '>=19'
         version: 19.0.0(react@19.0.0)
       tailwindcss:
         specifier: ^4.0.0
@@ -3686,13 +3692,6 @@ packages:
 
   '@tanstack/react-table@8.20.5':
     resolution: {integrity: sha512-WEHopKw3znbUZ61s9i0+i9g8drmDo6asTWbrQh8Us63DAk/M0FkmIqERew6P71HI75ksZ2Pxyuf4vvKh9rAkiA==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-
-  '@tanstack/react-table@8.20.6':
-    resolution: {integrity: sha512-w0jluT718MrOKthRcr2xsjqzx+oEM7B7s/XXyfs19ll++hlId3fjTm+B2zrR3ijpANpkzBAr15j1XGVOMxpggQ==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '>=16.8'
@@ -9428,12 +9427,6 @@ snapshots:
       tailwindcss: 4.0.0
 
   '@tanstack/react-table@8.20.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
-    dependencies:
-      '@tanstack/table-core': 8.20.5
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-
-  '@tanstack/react-table@8.20.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@tanstack/table-core': 8.20.5
       react: 19.0.0

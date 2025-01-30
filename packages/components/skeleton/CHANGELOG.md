@@ -1,5 +1,14 @@
 # @jamsr-ui/skeleton
 
+## 0.0.84
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.83
 
 ### Patch Changes

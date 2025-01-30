@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.0.50
+
+### Patch Changes
+
+- feat: tailwind 4
+
 ## 0.0.49
 
 ### Patch Changes

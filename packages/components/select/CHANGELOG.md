@@ -1,5 +1,19 @@
 # @jamsr-ui/select
 
+## 0.0.118
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/popover@0.0.93
+  - @jamsr-ui/button@0.0.98
+  - @jamsr-ui/chip@0.0.106
+  - @jamsr-ui/shared-icons@0.0.72
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/hooks@0.0.62
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.117
 
 ### Patch Changes

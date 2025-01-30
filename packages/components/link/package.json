@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/link",
-  "version": "0.0.85",
+  "version": "0.0.86",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",
@@ -11,12 +11,12 @@
   "devDependencies": {
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "dependencies": {
     "@jamsr-ui/styles": "workspace:^",

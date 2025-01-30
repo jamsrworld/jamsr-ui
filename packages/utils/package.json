@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/utils",
-  "version": "0.0.79",
+  "version": "0.0.80",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -18,15 +18,15 @@
     "@types/node": "22.7.9",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "framer-motion": "^12.0.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "framer-motion": ">=12",
+    "react": ">=19",
+    "react-dom": ">=19",
     "tailwindcss": "^4.0.0"
   },
   "peerDependencies": {
-    "framer-motion": "^12.0.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "framer-motion": ">=12",
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "clean-package": "../../clean-package.config.json"
 }

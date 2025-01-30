@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/table",
-  "version": "0.0.67",
+  "version": "0.0.68",
   "main": "src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -25,12 +25,12 @@
   "devDependencies": {
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react-dom": "^19.0.0",
-    "react": "^19.0.0"
+    "react-dom": ">=19",
+    "react": ">=19"
   },
   "peerDependencies": {
-    "react-dom": "^19.0.0",
-    "react": "^19.0.0"
+    "react-dom": ">=19",
+    "react": ">=19"
   },
   "clean-package": "../../../clean-package.config.json"
 }

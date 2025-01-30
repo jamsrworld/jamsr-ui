@@ -7,7 +7,6 @@ export default defineConfig({
   clean: true,
   minify: true,
   splitting: true,
-  
   esbuildOptions(options) {
     options.banner = {
       js: '"use client"',

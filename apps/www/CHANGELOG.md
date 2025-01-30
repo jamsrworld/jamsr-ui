@@ -1,5 +1,20 @@
 # web
 
+## 0.1.225
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/charts@0.0.12
+  - @jamsr-ui/editor@0.0.137
+  - @jamsr-ui/shared-icons@0.0.72
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/hooks@0.0.62
+  - @jamsr-ui/react@0.0.243
+  - @jamsr-ui/theme@0.0.83
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.1.224
 
 ### Patch Changes

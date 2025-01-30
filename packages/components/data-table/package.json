@@ -1,20 +1,7 @@
 {
   "name": "@jamsr-ui/data-table",
-  "version": "0.0.88",
+  "version": "0.0.89",
   "main": "src/index.ts",
-  "sideEffects": false,
-  "keywords": [
-    "react",
-    "ui"
-  ],
-  "author": "@jamsrworld",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
@@ -23,11 +10,11 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@tanstack/react-table": "^8.20.6",
+    "@tanstack/react-table": ">=8",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {
@@ -46,7 +33,7 @@
   },
   "peerDependencies": {
     "@tanstack/react-table": ">=8",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=19",
+    "react-dom": ">=19"
   }
 }

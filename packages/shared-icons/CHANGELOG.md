@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.0.72
+
+### Patch Changes
+
+- feat: tailwind 4
+
 ## 0.0.71
 
 ### Patch Changes

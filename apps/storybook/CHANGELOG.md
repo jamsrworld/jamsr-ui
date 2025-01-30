@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.0.245
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/react@0.0.243
+
 ## 0.0.244
 
 ### Patch Changes

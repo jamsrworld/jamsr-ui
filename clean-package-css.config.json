@@ -12,7 +12,7 @@
                 "import": "./dist/index.mjs",
                 "require": "./dist/index.js"
             },
-            "./style.css": "./dist/index.css"
+            "./styles.css": "./dist/styles.css"
         },
         "description": "A react js ui library with tailwindcss",
         "keywords": [

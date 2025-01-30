@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/tags-input",
-  "version": "0.0.62",
+  "version": "0.0.63",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [
@@ -26,12 +26,12 @@
     "@types/react": "19.0.1",
     "@types/node": "^22.7.9",
     "clean-package": "^2.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=19",
+    "react-dom": ">=19"
   },
   "dependencies": {
     "@jamsr-ui/chip": "workspace:^",

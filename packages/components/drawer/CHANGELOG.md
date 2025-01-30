@@ -1,5 +1,17 @@
 # @jamsr-ui/drawer
 
+## 1.0.93
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.0.21
+  - @jamsr-ui/shared-icons@0.0.72
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/hooks@0.0.62
+  - @jamsr-ui/utils@0.0.80
+
 ## 1.0.92
 
 ### Patch Changes

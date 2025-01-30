@@ -1,5 +1,18 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.0.116
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.0.17
+  - @jamsr-ui/dnd@0.0.21
+  - @jamsr-ui/shared-icons@0.0.72
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/hooks@0.0.62
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.115
 
 ### Patch Changes

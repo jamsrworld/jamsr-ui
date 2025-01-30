@@ -1,5 +1,15 @@
 # @jamsr-ui/card
 
+## 0.0.99
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/text@0.0.11
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.98
 
 ### Patch Changes

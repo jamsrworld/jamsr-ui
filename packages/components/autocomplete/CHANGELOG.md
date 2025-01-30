@@ -1,5 +1,19 @@
 # @jamsr-ui/autocomplete
 
+## 0.0.134
+
+### Patch Changes
+
+- feat: tailwind 4
+- Updated dependencies
+  - @jamsr-ui/button@0.0.98
+  - @jamsr-ui/input@0.0.125
+  - @jamsr-ui/chip@0.0.106
+  - @jamsr-ui/shared-icons@0.0.72
+  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/hooks@0.0.62
+  - @jamsr-ui/utils@0.0.80
+
 ## 0.0.133
 
 ### Patch Changes

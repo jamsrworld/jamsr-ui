@@ -1,6 +1,6 @@
 {
-  "name": "@jamsr-ui/accordion",
-  "version": "0.0.102",
+  "name": "@jamsr-ui/next",
+  "version": "0.0.0",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",
@@ -9,22 +9,20 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@jamsr-ui/avatar": "workspace:^",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "framer-motion": ">=12",
+    "next": ">=15",
     "react": ">=19",
     "react-dom": ">=19"
   },
   "peerDependencies": {
-    "framer-motion": ">=12",
+    "next": ">=15",
     "react": ">=19",
     "react-dom": ">=19"
   },
+  "clean-package": "../../../clean-package.config.json",
   "dependencies": {
-    "@jamsr-ui/shared-icons": "workspace:^",
-    "@jamsr-ui/styles": "workspace:^",
-    "@jamsr-ui/utils": "workspace:^"
-  },
-  "clean-package": "../../../clean-package.config.json"
+    "@jamsr-ui/avatar": "workspace:^",
+    "@jamsr-ui/link": "workspace:^"
+  }
 }

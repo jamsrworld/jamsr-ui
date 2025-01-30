@@ -308,6 +308,19 @@ export const sidebarItems: {
       },
     ],
   },
+  {
+    heading: "NextJs",
+    items: [
+      {
+        heading: "Avatar",
+        path: "/components/next/avatar",
+      },
+      {
+        heading: "Link",
+        path: "/components/next/link",
+      },
+    ],
+  },
   // {
   //   heading: "Hooks",
   //   items: [

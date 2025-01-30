@@ -171,6 +171,9 @@ importers:
       '@jamsr-ui/hooks':
         specifier: workspace:^
         version: link:../../packages/hooks
+      '@jamsr-ui/next':
+        specifier: workspace:^
+        version: link:../../packages/frameworks/next
       '@jamsr-ui/react':
         specifier: workspace:*
         version: link:../../packages/react
@@ -275,9 +278,6 @@ importers:
       '@jamsr-ui/avatar':
         specifier: workspace:^
         version: link:../avatar
-      '@jamsr-ui/tailwind-config':
-        specifier: workspace:^
-        version: link:../../config/tailwind-config
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -1979,21 +1979,6 @@ importers:
 
   packages/config/prettier-config: {}
 
-  packages/config/tailwind-config:
-    devDependencies:
-      '@jamsr-ui/theme':
-        specifier: workspace:^
-        version: link:../../theme
-      '@types/node':
-        specifier: ^20.11.24
-        version: 20.16.10
-      tailwindcss:
-        specifier: ^4.0.1
-        version: 4.0.1
-      typescript:
-        specifier: ^5.4.5
-        version: 5.6.2
-
   packages/config/typescript-config: {}
 
   packages/core:
@@ -2007,6 +1992,31 @@ importers:
       framer-motion:
         specifier: '>=12'
         version: 12.0.5(@emotion/is-prop-valid@0.8.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react:
+        specifier: '>=19'
+        version: 19.0.0
+      react-dom:
+        specifier: '>=19'
+        version: 19.0.0(react@19.0.0)
+
+  packages/frameworks/next:
+    dependencies:
+      '@jamsr-ui/avatar':
+        specifier: workspace:^
+        version: link:../../components/avatar
+      '@jamsr-ui/link':
+        specifier: workspace:^
+        version: link:../../components/link
+    devDependencies:
+      '@types/react':
+        specifier: 19.0.1
+        version: 19.0.1
+      clean-package:
+        specifier: ^2.2.0
+        version: 2.2.0
+      next:
+        specifier: '>=15'
+        version: 15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: '>=19'
         version: 19.0.0
@@ -4071,9 +4081,6 @@ packages:
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
-
-  '@types/node@20.16.10':
-    resolution: {integrity: sha512-vQUKgWTjEIRFCvK6CyriPH3MZYiYlNy0fKiEYHWbcoWLEgs4opurGGKlebrTLqdSMIbXImH6XExNiIyNUv3WpA==}
 
   '@types/node@20.17.14':
     resolution: {integrity: sha512-w6qdYetNL5KRBiSClK/KWai+2IMEJuAj+EujKCumalFOwXtvOXaEan9AuwcRID2IcOIAWSIfR495hBtgKlx2zg==}
@@ -9827,10 +9834,6 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.16.10':
-    dependencies:
-      undici-types: 6.19.8
-
   '@types/node@20.17.14':
     dependencies:
       undici-types: 6.19.8
@@ -9860,7 +9863,7 @@ snapshots:
 
   '@types/react-dom@19.0.1':
     dependencies:
-      '@types/react': 19.0.1
+      '@types/react': 19.0.7
 
   '@types/react@18.3.12':
     dependencies:

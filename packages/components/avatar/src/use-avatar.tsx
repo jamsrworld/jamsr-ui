@@ -5,10 +5,10 @@ import {
   deepMergeProps,
   mapPropsVariants,
   mergeGlobalProps,
-  type UIProps,
   type PropGetter,
+  type UIProps,
 } from "@jamsr-ui/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { type AvatarProps } from "./avatar";
 import { type AvatarVariants, avatarVariants } from "./styles";
 import { getColorByName, getFirstChar } from "./utils";
@@ -59,6 +59,9 @@ export const useAvatar = ($props: UseAvatarProps) => {
     <AvatarIcon className={classNames?.fallbackIcon} />
   );
   const [imgSrc, setImgSrc] = useState(src);
+  useEffect(() => {
+    setImgSrc(src);
+  }, [src]);
 
   const { color: propColor } = variantProps;
   const color: AvatarProps["color"] = imgSrc

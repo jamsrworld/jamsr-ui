@@ -22,27 +22,27 @@ export type MergeWithAs<
   as?: AsComponent;
 };
 
-type RenderFunction<Component extends As, Props extends object = object> = {
-  <AsComponent extends As = Component>(
-    props: React.ComponentPropsWithoutRef<AsComponent> &
-      Omit<Props, keyof React.ComponentPropsWithoutRef<AsComponent>> & {
-        as?: AsComponent;
-      },
-  ): React.ReactElement | null;
-  displayName?: string | undefined;
-};
-
 // type RenderFunction<Component extends As, Props extends object = object> = {
 //   <AsComponent extends As = Component>(
-//     props: MergeWithAs<
-//       React.ComponentPropsWithoutRef<Component>,
-//       React.ComponentPropsWithoutRef<AsComponent>,
-//       Props,
-//       AsComponent
-//     >,
+//     props: React.ComponentPropsWithoutRef<AsComponent> &
+//       Omit<Props, keyof React.ComponentPropsWithoutRef<AsComponent>> & {
+//         as?: AsComponent;
+//       },
 //   ): React.ReactElement | null;
 //   displayName?: string | undefined;
 // };
+
+type RenderFunction<Component extends As, Props extends object = object> = {
+  <AsComponent extends As = Component>(
+    props: MergeWithAs<
+      React.ComponentPropsWithoutRef<Component>,
+      React.ComponentPropsWithoutRef<AsComponent>,
+      Props,
+      AsComponent
+    >,
+  ): React.ReactElement | null;
+  displayName?: string | undefined;
+};
 
 // type RenderFunction<Component extends As, Props extends object = object> = {
 //   <AsComponent extends As = Component>(

@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.0.85
+
+### Patch Changes
+
+- fix: avatar types
+
 ## 0.0.84
 
 ### Patch Changes

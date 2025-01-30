@@ -1,5 +1,18 @@
 # web
 
+## 0.1.228
+
+### Patch Changes
+
+- fix: avatar types
+- Updated dependencies
+  - @jamsr-ui/theme@0.0.85
+  - @jamsr-ui/utils@0.0.83
+  - @jamsr-ui/react@0.0.246
+  - @jamsr-ui/editor@0.0.140
+  - @jamsr-ui/charts@0.0.15
+  - @jamsr-ui/hooks@0.0.65
+
 ## 0.1.227
 
 ### Patch Changes

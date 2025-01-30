@@ -1,5 +1,13 @@
 # @jamsr-ui/avatar
 
+## 0.0.94
+
+### Patch Changes
+
+- fix: avatar types
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.83
+
 ## 0.0.93
 
 ### Patch Changes

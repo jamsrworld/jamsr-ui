@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/card",
-  "version": "0.0.101",
+  "version": "0.0.102",
   "main": "./src/index.ts",
   "sideEffects": false,
   "keywords": [

@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/accordion",
-  "version": "0.0.100",
+  "version": "0.0.101",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {

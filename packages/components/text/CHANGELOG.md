@@ -1,5 +1,12 @@
 # @jamsr-ui/typography
 
+## 0.0.14
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.83
+
 ## 0.0.13
 
 ### Patch Changes

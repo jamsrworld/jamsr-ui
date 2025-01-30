@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/kbd",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsup",

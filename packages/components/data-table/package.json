@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/data-table",
-  "version": "0.0.91",
+  "version": "0.0.92",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup",

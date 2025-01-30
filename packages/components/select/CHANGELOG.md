@@ -1,5 +1,16 @@
 # @jamsr-ui/select
 
+## 0.0.122
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.84
+  - @jamsr-ui/button@0.0.102
+  - @jamsr-ui/chip@0.0.110
+  - @jamsr-ui/popover@0.0.97
+  - @jamsr-ui/hooks@0.0.66
+
 ## 0.0.121
 
 ### Patch Changes

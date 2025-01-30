@@ -1,5 +1,12 @@
 # @jamsr-ui/tooltip
 
+## 0.0.92
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.84
+
 ## 0.0.91
 
 ### Patch Changes

@@ -6,7 +6,7 @@
   --animate-progress: progress 1s infinite linear;
   --animate-ripple: ripple 1s linear;
 
-  @keyframes --animate-progress {
+  @keyframes progress {
     0% {
       transform: translateX(-50%) scaleX(0.2);
     }
@@ -14,22 +14,20 @@
       transform: translateX(100%) scaleX(1);
     }
   }
+}
 
-  @keyframes ripple {
-    0% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(4);
-      opacify: 0;
-    }
+@keyframes ripple {
+  0% {
+    transform: scale(0);
   }
-
-  @keyframes shimmer {
-    100% {
-      transform: translateX(100%);
-    }
+  100% {
+    transform: scale(4);
+    opacify: 0;
+  }
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
   }
 }
 

@@ -1,5 +1,16 @@
 # web
 
+## 0.1.229
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.84
+  - @jamsr-ui/charts@0.0.16
+  - @jamsr-ui/editor@0.0.141
+  - @jamsr-ui/hooks@0.0.66
+  - @jamsr-ui/react@0.0.247
+
 ## 0.1.228
 
 ### Patch Changes

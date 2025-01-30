@@ -31,7 +31,7 @@ export const Ripple = (props: Props) => {
           <span
             key={i}
             className={cn(
-              "absolute origin-center scale-0 animate-ripple rounded-full bg-current opacity-15",
+              "absolute origin-center animate-ripple rounded-full bg-current opacity-15",
               classNames?.ripple,
             )}
             style={{

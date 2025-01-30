@@ -1,5 +1,12 @@
 # @jamsr-ui/kbd
 
+## 0.0.25
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.84
+
 ## 0.0.24
 
 ### Patch Changes

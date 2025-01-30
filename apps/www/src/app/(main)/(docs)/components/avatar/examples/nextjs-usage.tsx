@@ -1,5 +1,5 @@
-import { Avatar, UIConfigProvider } from "@jamsr-ui/react";
-import NextImage, { type ImageProps } from "next/image";
+import { Avatar } from "@jamsr-ui/react";
+import NextImage from "next/image";
 import Image from "~/catalyst.png";
 
 // requires with UIConfigProvider
@@ -21,7 +21,6 @@ export const AvatarNextJsUsage = () => {
         <Avatar alt="" src={Image} width={100} height={100} />
       </UIConfigProvider> */}
       <Avatar as={NextImage} alt="" src={Image} width={100} height={100} />
-      <Avatar alt="" src="" fallback="" />
     </div>
   );
 };

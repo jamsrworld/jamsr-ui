@@ -21,7 +21,7 @@
     "framer-motion": ">=12",
     "react": ">=19",
     "react-dom": ">=19",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^4.0.1"
   },
   "peerDependencies": {
     "framer-motion": ">=12",

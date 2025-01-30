@@ -44,7 +44,7 @@
     "postcss": "^8.4.38",
     "storybook": "^8.1.1",
     "storybook-dark-mode": "^4.0.1",
-    "tailwindcss": "^4.0.0",
+    "tailwindcss": "^4.0.1",
     "typescript": "^5.4.5",
     "vite": "^5.2.0",
     "vite-tsconfig-paths": "^4.3.2"

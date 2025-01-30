@@ -109,11 +109,11 @@ const items: { heading: string; content: React.ReactNode }[] = [
   },
 
   {
-    heading: "Edit globals.css file",
+    heading: "Edit index.css file",
     content: (
       <div className="flex flex-col gap-4">
         <CodeBlock>
-          {`// globals.css
+          {`// index.css
 @import "tailwindcss";
 
 // import these lines

@@ -1,5 +1,13 @@
 # @jamsr-ui/checkbox
 
+## 0.0.94
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.82
+  - @jamsr-ui/hooks@0.0.64
+
 ## 0.0.93
 
 ### Patch Changes

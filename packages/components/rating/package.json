@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/rating",
-  "version": "0.0.50",
+  "version": "0.0.51",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"

@@ -21,7 +21,7 @@ export const AvatarNextJsUsage = () => {
         <Avatar alt="" src={Image} width={100} height={100} />
       </UIConfigProvider> */}
       <Avatar as={NextImage} alt="" src={Image} width={100} height={100} />
-      <Avatar src="" fallback="" />
+      <Avatar alt="" src="" fallback="" />
     </div>
   );
 };

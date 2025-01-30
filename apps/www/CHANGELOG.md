@@ -1,5 +1,17 @@
 # web
 
+## 0.1.227
+
+### Patch Changes
+
+- fix: types
+- Updated dependencies
+  - @jamsr-ui/utils@0.0.82
+  - @jamsr-ui/charts@0.0.14
+  - @jamsr-ui/editor@0.0.139
+  - @jamsr-ui/hooks@0.0.64
+  - @jamsr-ui/react@0.0.245
+
 ## 0.1.226
 
 ### Patch Changes

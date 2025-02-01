@@ -56,7 +56,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
                         Create <Code>.npmrc</Code> file at the root directory of
                         your project:
                       </div>
-                      <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
+                      <CodeBlock>node-linker=hoisted</CodeBlock>
                     </li>
                     <li className="space-y-4">
                       <div>
@@ -109,10 +109,11 @@ const items: { heading: string; content: React.ReactNode }[] = [
           {`// globals.css
 @import "tailwindcss";
 
-// import these lines
+/* add these two lines */
 @import "@jamsr-ui/theme/styles.css";
 @source "../../node_modules/@jamsr-ui";
-// import these lines
+/* add these two lines */
+
 `}
         </CodeBlock>
         <Alert variant="solid" status="default">

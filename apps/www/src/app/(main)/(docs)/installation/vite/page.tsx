@@ -116,10 +116,11 @@ const items: { heading: string; content: React.ReactNode }[] = [
           {`// index.css
 @import "tailwindcss";
 
-// import these lines
+/* add these two lines */
 @import "@jamsr-ui/theme/styles.css";
 @source "../../node_modules/@jamsr-ui";
-// import these lines
+/* add these two lines */
+
 `}
         </CodeBlock>
       </div>

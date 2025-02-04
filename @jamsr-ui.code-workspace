@@ -153,10 +153,6 @@
       "path": "packages/config/prettier-config"
     },
     {
-      "name": "📦 @jamsr-ui/tailwind-config",
-      "path": "packages/config/tailwind-config"
-    },
-    {
       "name": "📦 @jamsr-ui/typescript-config",
       "path": "packages/config/typescript-config"
     },

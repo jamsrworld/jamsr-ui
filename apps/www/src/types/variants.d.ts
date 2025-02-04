@@ -30,6 +30,7 @@ export type VariantTypes = {
   "linear-progress": ["colors", "controlled", "usage"];
   "link": ["nextjs-usage", "underline", "usage"];
   "menu": ["backdrop", "colors", "controlled", "customize", "nested", "offset", "placement", "prevent-close", "radius", "start-end-content", "trigger-on-hover", "usage", "with-arrow", "without-lock-scroll"];
+  "next": [];
   "number-input": [];
   "otp-input": ["6-digits", "controlled", "numbers-only", "on-complete", "radius", "usage"];
   "pagination": [];

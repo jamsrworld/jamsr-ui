@@ -1,5 +1,11 @@
 # @jamsr-ui/core
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
 ## 0.0.51
 
 ### Patch Changes

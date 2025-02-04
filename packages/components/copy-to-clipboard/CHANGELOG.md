@@ -1,5 +1,19 @@
 # @jamsr-ui/copy-to-clipboard
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/icon-button@0.1.0
+  - @jamsr-ui/shared-icons@0.1.0
+  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/utils@0.1.0
+
 ## 0.0.9
 
 ### Patch Changes

@@ -1,5 +1,29 @@
 # @jamsr-ui/rhf
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.1.0
+  - @jamsr-ui/checkbox@0.1.0
+  - @jamsr-ui/editor@0.1.0
+  - @jamsr-ui/file-upload-multi@0.1.0
+  - @jamsr-ui/file-upload-single@0.1.0
+  - @jamsr-ui/input@0.1.0
+  - @jamsr-ui/otp-input@0.1.0
+  - @jamsr-ui/radio@0.1.0
+  - @jamsr-ui/rating@0.1.0
+  - @jamsr-ui/select@0.1.0
+  - @jamsr-ui/switch@0.1.0
+  - @jamsr-ui/tags-input@0.1.0
+  - @jamsr-ui/textarea@0.1.0
+  - @jamsr-ui/utils@0.1.0
+
 ## 0.0.87
 
 ### Patch Changes

@@ -1,5 +1,27 @@
 # @jamsr-ui/data-table
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/button@0.1.0
+  - @jamsr-ui/circular-progress@0.1.0
+  - @jamsr-ui/icon-button@0.1.0
+  - @jamsr-ui/linear-progress@0.1.0
+  - @jamsr-ui/repeater@0.1.0
+  - @jamsr-ui/select@0.1.0
+  - @jamsr-ui/skeleton@0.1.0
+  - @jamsr-ui/table@0.1.0
+  - @jamsr-ui/text@0.1.0
+  - @jamsr-ui/shared-icons@0.1.0
+  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/utils@0.1.0
+
 ## 0.0.93
 
 ### Patch Changes

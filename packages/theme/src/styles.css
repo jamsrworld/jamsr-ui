@@ -489,6 +489,10 @@
 
 /*  variants */
 
+@utility rounded-inherit{
+  border-radius: inherit;
+}
+
 @custom-variant dark (&:where(.dark, .dark *,[data-theme="dark"]));
 @custom-variant light (&:where(.light, .light *,[data-theme="light"]));
 

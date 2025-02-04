@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/input",
-  "version": "0.0.129",
+  "version": "0.1.0",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {

@@ -1,5 +1,20 @@
 # @jamsr-ui/file-upload-single
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.1.0
+  - @jamsr-ui/hooks@0.1.0
+  - @jamsr-ui/shared-icons@0.1.0
+  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/utils@0.1.0
+
 ## 0.0.123
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
 ## 0.0.85
 
 ### Patch Changes

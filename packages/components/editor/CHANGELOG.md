@@ -1,5 +1,29 @@
 # @jamsr-ui/editor
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/theme@0.1.0
+  - @jamsr-ui/divider@0.1.0
+  - @jamsr-ui/file-upload-single@0.1.0
+  - @jamsr-ui/icon-button@0.1.0
+  - @jamsr-ui/input@0.1.0
+  - @jamsr-ui/menu@0.1.0
+  - @jamsr-ui/popover@0.1.0
+  - @jamsr-ui/repeater@0.1.0
+  - @jamsr-ui/select@0.1.0
+  - @jamsr-ui/switch@0.1.0
+  - @jamsr-ui/hooks@0.1.0
+  - @jamsr-ui/shared-icons@0.1.0
+  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/utils@0.1.0
+
 ## 0.0.141
 
 ### Patch Changes

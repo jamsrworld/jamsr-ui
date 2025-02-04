@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/theme",
-  "version": "0.0.85",
+  "version": "0.1.0",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup && cp src/styles.css dist/styles.css",

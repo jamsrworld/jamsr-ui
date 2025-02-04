@@ -82,6 +82,7 @@ export const Alert = <T extends React.ElementType = "div">(
     >
       <Icon />
       <div
+        data-slot="mainContent"
         className={styles.mainContent({ className: classNames?.mainContent })}
       >
         {heading && (
@@ -94,7 +95,9 @@ export const Alert = <T extends React.ElementType = "div">(
         )}
         <div
           data-slot="description"
-          className={styles.description({ className: classNames?.description })}
+          className={styles.description({
+            className: classNames?.description,
+          })}
         >
           {children}
         </div>

@@ -1,5 +1,11 @@
 # @jamsr-ui/prettier-config
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
 ## 0.0.29
 
 ### Patch Changes

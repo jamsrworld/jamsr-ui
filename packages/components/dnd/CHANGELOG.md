@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.1.0
+
+### Minor Changes
+
+- tailwind4
+
 ## 0.0.21
 
 ### Patch Changes

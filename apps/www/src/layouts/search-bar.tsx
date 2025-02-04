@@ -88,7 +88,7 @@ export const SearchBar = () => {
               endContent={
                 search.length > 0 ? (
                   <IconButton
-                    aria-label="Clear Search"
+                    label="Clear Search"
                     onClick={onClearSearch}
                     size="sm"
                     radius="full"
@@ -105,7 +105,7 @@ export const SearchBar = () => {
               {filteredItems.map((item) => (
                 <NextLink
                   href={item.path}
-                  key={item.heading}
+                  key={item.path}
                   className="flex items-center gap-2 rounded-xl bg-content2 p-4 text-foreground hover:bg-content3"
                   onClick={(e) => handleLinkClick(e, item.path)}
                 >

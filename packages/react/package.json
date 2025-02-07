@@ -1,6 +1,6 @@
 {
   "name": "@jamsr-ui/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
@@ -56,7 +56,6 @@
     "@jamsr-ui/radio": "workspace:^",
     "@jamsr-ui/rating": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
-    "@jamsr-ui/rhf": "workspace:^",
     "@jamsr-ui/ripple": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/sidebar": "workspace:^",

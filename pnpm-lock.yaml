@@ -177,6 +177,9 @@ importers:
       '@jamsr-ui/react':
         specifier: workspace:*
         version: link:../../packages/react
+      '@jamsr-ui/rhf':
+        specifier: workspace:^
+        version: link:../../packages/components/rhf
       '@jamsr-ui/shared-icons':
         specifier: workspace:^
         version: link:../../packages/shared-icons
@@ -2147,9 +2150,6 @@ importers:
       '@jamsr-ui/repeater':
         specifier: workspace:^
         version: link:../components/repeater
-      '@jamsr-ui/rhf':
-        specifier: workspace:^
-        version: link:../components/rhf
       '@jamsr-ui/ripple':
         specifier: workspace:^
         version: link:../components/ripple

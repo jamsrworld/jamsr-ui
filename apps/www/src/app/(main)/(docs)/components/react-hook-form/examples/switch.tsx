@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { RHFSwitch } from "@jamsr-ui/react";
+import { RHFSwitch } from "@jamsr-ui/rhf";
 import { useForm } from "react-hook-form";
 import { literal, object } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";

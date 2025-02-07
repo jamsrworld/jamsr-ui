@@ -3,8 +3,8 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
-import { LinkUsage } from "./examples/usage";
 import { LinkUnderline } from "./examples/underline";
+import { LinkUsage } from "./examples/usage";
 
 const title = "Link";
 const description =

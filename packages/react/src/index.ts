@@ -130,22 +130,6 @@ export {
 } from "@jamsr-ui/radio";
 export { Rating, type RatingProps } from "@jamsr-ui/rating";
 export { Repeater } from "@jamsr-ui/repeater";
-export {
-  RHFAutocomplete,
-  RHFCheckbox,
-  RHFEditor,
-  RHFFileUploadMulti,
-  RHFFileUploadSingle,
-  RHFInput,
-  RHFOtpInput,
-  RHFProvider,
-  RHFRadioGroup,
-  RHFRating,
-  RHFSelect,
-  RHFSwitch,
-  RHFTagsInput,
-  RHFTextarea,
-} from "@jamsr-ui/rhf";
 export { Ripple } from "@jamsr-ui/ripple";
 export {
   Select,

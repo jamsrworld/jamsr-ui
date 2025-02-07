@@ -1,7 +1,8 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { AutocompleteItem, RHFAutocomplete } from "@jamsr-ui/react";
+import { AutocompleteItem } from "@jamsr-ui/react";
+import { RHFAutocomplete } from "@jamsr-ui/rhf";
 import { useForm } from "react-hook-form";
 import { array, object, string } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";

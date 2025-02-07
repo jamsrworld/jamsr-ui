@@ -1,10 +1,11 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Radio, RHFRadioGroup } from "@jamsr-ui/react";
+import { Radio } from "@jamsr-ui/react";
 import { useForm } from "react-hook-form";
 import { object, string } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";
+import { RHFRadioGroup } from "@jamsr-ui/rhf";
 
 type FormValues = {
   paymentMethod: string;

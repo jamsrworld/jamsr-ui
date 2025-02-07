@@ -41,11 +41,13 @@ export const RHFProvider = <
         // eslint-disable-next-line @typescript-eslint/no-misused-promises
         onSubmit={onSubmit}
         className="relative"
+        data-component="rhfForm"
         {...restProps}
       >
         <fieldset
           disabled={isPending || isDisabled}
           className={cn("flex flex-col gap-4", className)}
+          data-slot="fieldset"
         >
           {children}
         </fieldset>

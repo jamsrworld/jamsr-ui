@@ -4,12 +4,8 @@ import { type ImageMetadata } from "@/app/config";
 import { CDN_API_URL, CDN_UPLOAD_URL } from "@/utils/config";
 import { zodImage } from "@/utils/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  Button,
-  type FileUploadError,
-  RHFFileUploadSingle,
-  toast,
-} from "@jamsr-ui/react";
+import { Button, type FileUploadError, toast } from "@jamsr-ui/react";
+import { RHFFileUploadSingle } from "@jamsr-ui/rhf";
 import { useForm } from "react-hook-form";
 import { object } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";

@@ -1,5 +1,14 @@
 # web
 
+## 0.2.2
+
+### Patch Changes
+
+- refactor: rhf
+- Updated dependencies
+  - @jamsr-ui/rhf@0.1.1
+  - @jamsr-ui/react@0.1.1
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,10 +1,10 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { RHFRating } from "@jamsr-ui/react";
 import { useForm } from "react-hook-form";
 import { number, object } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";
+import { RHFRating } from "@jamsr-ui/rhf";
 
 type FormValues = {
   rating: number;

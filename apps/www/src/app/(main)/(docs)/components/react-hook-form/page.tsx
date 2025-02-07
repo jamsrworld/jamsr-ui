@@ -20,6 +20,7 @@ import { RHFDemoSwitch } from "./examples/switch";
 import { RHFDemoTagsInput } from "./examples/tags-input";
 import { RHFDemoTextarea } from "./examples/textarea";
 import { RHFDemoAutocompleteMulti } from "./examples/autocomplete-multi";
+import { UIConfigProvider } from "@jamsr-ui/styles";
 
 const title = "React Hook Form";
 const description =

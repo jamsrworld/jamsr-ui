@@ -1,4 +1,4 @@
 "use client";
 
 export { Avatar, type AvatarProps } from "./avatar";
-export { Link } from "./link";
+export { Link, type LinkProps } from "./link";

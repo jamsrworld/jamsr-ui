@@ -1,5 +1,13 @@
 # web
 
+## 0.2.1
+
+### Patch Changes
+
+- fix next-link
+- Updated dependencies
+  - @jamsr-ui/next@0.1.1
+
 ## 0.2.0
 
 ### Minor Changes

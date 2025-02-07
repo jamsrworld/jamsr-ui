@@ -4,6 +4,7 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { LinkUsage } from "./examples/usage";
+import { LinkUnderline } from "./examples/underline";
 
 const title = "Link";
 const description =
@@ -22,6 +23,9 @@ const Link = () => {
     <VariantPage heading={title} description={description}>
       <VariantWrapper heading="Usage" code={code("usage")}>
         <LinkUsage />
+      </VariantWrapper>
+      <VariantWrapper heading="Underline" code={code("underline")}>
+        <LinkUnderline />
       </VariantWrapper>
     </VariantPage>
   );

@@ -1,5 +1,19 @@
 # web
 
+## 0.2.3
+
+### Patch Changes
+
+- fix: editor
+- Updated dependencies
+  - @jamsr-ui/editor@0.1.1
+  - @jamsr-ui/utils@0.1.1
+  - @jamsr-ui/rhf@0.1.2
+  - @jamsr-ui/react@0.1.2
+  - @jamsr-ui/charts@0.1.1
+  - @jamsr-ui/hooks@0.1.1
+  - @jamsr-ui/next@0.1.2
+
 ## 0.2.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jamsr-ui/rating
 
+## 0.1.1
+
+### Patch Changes
+
+- @jamsr-ui/hooks@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes

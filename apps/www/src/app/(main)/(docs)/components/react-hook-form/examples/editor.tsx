@@ -24,8 +24,25 @@ const schema = object({
 
 export const RHFDemoEditor = () => {
   const defaultValues: FormValues = {
-    description: {},
+    description: {
+      type: "doc",
+      content: [
+        {
+          type: "paragraph",
+          attrs: {
+            textAlign: null,
+          },
+          content: [
+            {
+              type: "text",
+              text: "→ © hey there",
+            },
+          ],
+        },
+      ],
+    },
   };
+
   const methods = useForm<FormValues>({
     defaultValues,
     resolver: zodResolver(schema),

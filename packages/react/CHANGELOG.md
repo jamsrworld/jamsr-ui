@@ -1,5 +1,55 @@
 # @jamsr-ui/react
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/editor@0.1.1
+  - @jamsr-ui/utils@0.1.1
+  - @jamsr-ui/accordion@0.1.1
+  - @jamsr-ui/alert@0.1.1
+  - @jamsr-ui/autocomplete@0.1.1
+  - @jamsr-ui/avatar@0.1.1
+  - @jamsr-ui/button@0.1.1
+  - @jamsr-ui/card@0.1.1
+  - @jamsr-ui/checkbox@0.1.1
+  - @jamsr-ui/chip@0.1.1
+  - @jamsr-ui/circular-progress@0.1.1
+  - @jamsr-ui/collapsible@0.1.1
+  - @jamsr-ui/confirmation@0.1.1
+  - @jamsr-ui/copy-to-clipboard@0.1.1
+  - @jamsr-ui/data-table@0.1.1
+  - @jamsr-ui/dialog@0.1.1
+  - @jamsr-ui/divider@0.1.1
+  - @jamsr-ui/drawer@1.1.1
+  - @jamsr-ui/file-upload-multi@0.1.1
+  - @jamsr-ui/file-upload-single@0.1.1
+  - @jamsr-ui/header@0.1.1
+  - @jamsr-ui/icon-button@0.1.1
+  - @jamsr-ui/input@0.1.1
+  - @jamsr-ui/kbd@0.1.1
+  - @jamsr-ui/linear-progress@0.1.1
+  - @jamsr-ui/link@0.1.1
+  - @jamsr-ui/menu@0.1.1
+  - @jamsr-ui/otp-input@0.1.1
+  - @jamsr-ui/popover@0.1.1
+  - @jamsr-ui/radio@0.1.1
+  - @jamsr-ui/rating@0.1.1
+  - @jamsr-ui/ripple@0.1.1
+  - @jamsr-ui/select@0.1.1
+  - @jamsr-ui/sidebar@0.1.1
+  - @jamsr-ui/skeleton@0.1.1
+  - @jamsr-ui/stepper@0.1.1
+  - @jamsr-ui/switch@0.1.1
+  - @jamsr-ui/tab@0.1.1
+  - @jamsr-ui/table@0.1.1
+  - @jamsr-ui/tags-input@0.1.1
+  - @jamsr-ui/text@0.1.1
+  - @jamsr-ui/textarea@0.1.1
+  - @jamsr-ui/toast@0.1.1
+  - @jamsr-ui/tooltip@0.1.1
+
 ## 0.1.1
 
 ### Patch Changes

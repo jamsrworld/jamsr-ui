@@ -19,6 +19,7 @@ export const Editor = (props: EditorProps) => {
     label,
     getInputProps,
   } = useEditor(props);
+  
   return (
     <Component {...getBaseProps()}>
       <input {...getInputProps()} className="hidden" aria-hidden />

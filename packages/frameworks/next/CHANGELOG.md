@@ -1,5 +1,12 @@
 # @jamsr-ui/next
 
+## 0.1.2
+
+### Patch Changes
+
+- @jamsr-ui/avatar@0.1.1
+- @jamsr-ui/link@0.1.1
+
 ## 0.1.1
 
 ### Patch Changes

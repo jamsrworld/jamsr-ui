@@ -23,7 +23,6 @@ export function deepMergeProps<T extends object, U extends object>(
   globalConfig?: Partial<T>,
 ): U {
   const result = { ...obj1 } as any;
-
   for (const key in obj2) {
     if (obj2.hasOwnProperty(key)) {
       if (key === "className") {
@@ -51,8 +50,8 @@ export function deepMergeProps<T extends object, U extends object>(
       }
     }
   }
-  return { ...globalConfig, ...result };
-  // return result;
+  const output = { ...globalConfig, ...result };
+  return output;
 }
 
 export const mergeClassNames = <T extends Record<string, any>>(

@@ -18,6 +18,7 @@ import Subscript from "@tiptap/extension-subscript";
 import Superscript from "@tiptap/extension-superscript";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
+import Text from "@tiptap/extension-text";
 import TextAlign from "@tiptap/extension-text-align";
 import Underline from "@tiptap/extension-underline";
 import Youtube from "@tiptap/extension-youtube";
@@ -35,6 +36,7 @@ import {
   type EditorVariantsProps,
   type EditorVariantsSlots,
 } from "../styles";
+import Typography from "@tiptap/extension-typography";
 
 type Props = EditorVariantsProps & {
   value?: JSONContent;
@@ -64,6 +66,7 @@ export const useEditor = ($props: UseEditorProps) => {
     mergedProps,
     editorVariants.variantKeys,
   );
+
   const {
     defaultValue,
     onValueChange,
@@ -106,6 +109,8 @@ export const useEditor = ($props: UseEditorProps) => {
       TaskItem,
       Underline,
       Superscript,
+      Text,
+      Typography,
       Link.configure({
         openOnClick: false,
       }),
@@ -141,11 +146,9 @@ export const useEditor = ($props: UseEditorProps) => {
     ...options,
   });
 
-  // editor.set
-
   useEffect(() => {
     editor?.setEditable(!isDisabled);
-  }, [editor, isDisabled]);
+  }, [isDisabled]);
 
   const handleOnClick = useCallback(() => {
     editor?.commands.focus();

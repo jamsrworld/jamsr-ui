@@ -16,8 +16,8 @@ export const selectVariant = tv({
     label: "inline-flex w-max shrink-0 text-sm font-normal text-foreground",
     trigger: [
       "relative flex w-full flex-row items-center gap-3 border-2 border-default-200 px-3 py-2 outline-none",
-      "focus:border-primary ui-group-hover:border-default-400 ui-group-open:border-primary",
-      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
+      "focus:border-primary uig-hover:border-default-400 uig-open:border-primary",
+      "uig-disabled:cursor-not-allowed uig-disabled:opacity-60",
     ],
     helperText: "text-xs text-foreground-600",
     indicator:

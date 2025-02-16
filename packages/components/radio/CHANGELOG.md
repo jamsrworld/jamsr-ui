@@ -1,5 +1,11 @@
 # @jamsr-ui/radio
 
+## 0.1.2
+
+### Patch Changes
+
+- fix group classes
+
 ## 0.1.1
 
 ### Patch Changes

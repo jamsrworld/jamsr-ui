@@ -1,5 +1,11 @@
 # @jamsr-ui/theme
 
+## 0.1.1
+
+### Patch Changes
+
+- fix group classes
+
 ## 0.1.0
 
 ### Minor Changes

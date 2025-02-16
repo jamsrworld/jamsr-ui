@@ -20,7 +20,7 @@ export const radioVariant = tv({
       "box-border",
       "border-default-200",
       "rounded-full",
-      "ui-group-hover:border-default-400",
+      "uig-hover:border-default-400",
       // focus ring
       ...groupDataFocusVisibleClasses,
     ],
@@ -33,8 +33,8 @@ export const radioVariant = tv({
       "scale-0",
       "origin-center",
       "rounded-full",
-      "ui-group-selected:opacity-100",
-      "ui-group-selected:scale-100",
+      "uig-selected:opacity-100",
+      "uig-selected:scale-100",
     ],
     label: "relative select-none text-foreground",
     description: "relative text-foreground-400",
@@ -43,27 +43,27 @@ export const radioVariant = tv({
     color: {
       default: {
         control: "bg-default-500 text-default-foreground",
-        wrapper: "ui-group-selected:border-default-500",
+        wrapper: "uig-selected:border-default-500",
       },
       primary: {
         control: "bg-primary text-primary-foreground",
-        wrapper: "ui-group-selected:border-primary",
+        wrapper: "uig-selected:border-primary",
       },
       secondary: {
         control: "bg-secondary text-secondary-foreground",
-        wrapper: "ui-group-selected:border-secondary",
+        wrapper: "uig-selected:border-secondary",
       },
       success: {
         control: "bg-success text-success-foreground",
-        wrapper: "ui-group-selected:border-success",
+        wrapper: "uig-selected:border-success",
       },
       warning: {
         control: "bg-warning text-warning-foreground",
-        wrapper: "ui-group-selected:border-warning",
+        wrapper: "uig-selected:border-warning",
       },
       danger: {
         control: "bg-danger text-danger-foreground",
-        wrapper: "ui-group-selected:border-danger",
+        wrapper: "uig-selected:border-danger",
       },
     },
     size: {
@@ -92,7 +92,7 @@ export const radioVariant = tv({
     isInvalid: {
       true: {
         control: "bg-danger text-danger-foreground",
-        wrapper: "border-danger ui-group-selected:border-danger",
+        wrapper: "border-danger uig-selected:border-danger",
         label: "text-danger",
         description: "text-danger-300",
       },

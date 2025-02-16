@@ -496,39 +496,43 @@
 @custom-variant dark (&:where(.dark, .dark *,[data-theme="dark"]));
 @custom-variant light (&:where(.light, .light *,[data-theme="light"]));
 
+@custom-variant uig-has-start-content (&:is(:where(.group[data-has-start-content=true]) &));
+@custom-variant uig-has-end-content (&:is(:where(.group[data-has-end-content=true]) &));
+@custom-variant uig-has-label (&:is(:where(.group[data-has-label=true]) &));
+
 @custom-variant ui-hover (&[data-hovered=true]);
-@custom-variant ui-group-hover (&:is(:where(.group[data-hovered=true]) &));
+@custom-variant uig-hover (&:is(:where(.group[data-hovered=true]) &));
 
 @custom-variant ui-selected (&[data-selected=true]);
-@custom-variant ui-group-selected (&:is(:where(.group[data-selected=true]) &));
+@custom-variant uig-selected (&:is(:where(.group[data-selected=true]) &));
 
 @custom-variant ui-checked (&[data-checked=true]);
-@custom-variant ui-group-checked (&:is(:where(.group[data-checked=true]) &));
+@custom-variant uig-checked (&:is(:where(.group[data-checked=true]) &));
 
 @custom-variant ui-focus (&[data-focused=true]);
-@custom-variant ui-group-focus (&:is(:where(.group[data-focused=true]) &));
+@custom-variant uig-focus (&:is(:where(.group[data-focused=true]) &));
 
 @custom-variant ui-pressed (&[data-pressed=true]);
-@custom-variant ui-group-pressed (&:is(:where(.group[data-pressed=true]) &));
+@custom-variant uig-pressed (&:is(:where(.group[data-pressed=true]) &));
 
 @custom-variant ui-active (&[data-active=true]);
-@custom-variant ui-group-active (&:is(:where(.group[data-active=true]) &));
+@custom-variant uig-active (&:is(:where(.group[data-active=true]) &));
 
 @custom-variant ui-open (&[data-open=true]);
-@custom-variant ui-group-open (&:is(:where(.group[data-open=true]) &));
+@custom-variant uig-open (&:is(:where(.group[data-open=true]) &));
 
 @custom-variant ui-interactive (&[data-interactive=true]);
-@custom-variant ui-group-interactive (&:is(:where(.group[data-interactive=true]) &));
+@custom-variant uig-interactive (&:is(:where(.group[data-interactive=true]) &));
 
 @custom-variant ui-loaded (&[data-loaded=true]);
 
 @custom-variant ui-filled-within (&[data-filled-within=true]);
-@custom-variant ui-group-filled-within (&:is(:where(.group[data-filled-within=true]) &));
+@custom-variant uig-filled-within (&:is(:where(.group[data-filled-within=true]) &));
 
 @custom-variant ui-focus-visible (&[data-focus-visible=true]);
 
 @custom-variant ui-readonly (&[data-readonly=true]);
-@custom-variant ui-group-readonly (&:is(:where(.group[data-readonly=true]) &));
+@custom-variant uig-readonly (&:is(:where(.group[data-readonly=true]) &));
 
 @custom-variant ui-disabled (&[data-disabled=true]);
-@custom-variant ui-group-disabled (&:is(:where(.group[data-disabled=true]) &));
+@custom-variant uig-disabled (&:is(:where(.group[data-disabled=true]) &));

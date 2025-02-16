@@ -10,16 +10,16 @@ export const inputVariants = tv({
     inputWrapper: [
       "relative",
       "grow",
-      "ui-group-disabled:cursor-not-allowed ui-group-disabled:opacity-60",
-      "ui-group-focus:border-primary ui-group-focus:ring-primary",
-      "ui-group-hover:border-default-400",
+      "uig-disabled:cursor-not-allowed uig-disabled:opacity-60",
+      "uig-focus:border-primary uig-focus:ring-primary",
+      "uig-hover:border-default-400",
     ],
     innerWrapper: ["flex h-full items-center"],
     input: [
       "block grow bg-transparent font-normal",
       "placeholder:text-foreground-400 read-only:cursor-not-allowed focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
-      "group-data-[has-start-content=true]:pl-0",
-      "group-data-[has-end-content=true]:pr-0",
+      "uig-has-start-content:pl-0",
+      "uig-has-end-content:pr-0",
     ],
     helper: "text-xs text-foreground-600",
     startContent: "flex items-center gap-1 pr-2 text-foreground-500",
@@ -41,35 +41,35 @@ export const inputVariants = tv({
       underlined: {
         inputWrapper: "rounded-b-none border-b-2 border-default-200",
         label:
-          "absolute top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-0 ui-group-filled-within:translate-y-0 ui-group-filled-within:text-xs",
+          "absolute top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 uig-filled-within:top-0 uig-filled-within:translate-y-0 uig-filled-within:text-xs",
         innerWrapper: "pt-2",
       },
       standard: {
         inputWrapper: "border-2 border-default-200",
         innerWrapper: [
-          "group-data-[has-start-content=true]:pl-2",
-          "group-data-[has-end-content=true]:pr-2",
+          "uig-has-start-content:pl-2",
+          "uig-has-end-content:pr-2",
         ],
       },
       bordered: {
         inputWrapper: "border-2 border-default-200",
-        startContent: "ui-group-filled-within:mt-4",
+        startContent: "uig-filled-within:mt-4",
         label:
-          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-3.5",
+          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 uig-filled-within:top-3.5",
         innerWrapper: [
-          "group-data-[has-start-content=true]:pl-3",
-          "group-data-[has-end-content=true]:pr-3",
+          "uig-has-start-content:pl-3",
+          "uig-has-end-content:pr-3",
         ],
       },
       outlined: {
         inputWrapper: "border-2 border-default-200",
         label:
-          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 ui-group-filled-within:top-[-2.5px]",
+          "absolute left-3 top-1/2 -translate-y-1/2 text-foreground-400 transition-all duration-200 uig-filled-within:top-[-2.5px]",
         legend:
-          "invisible ml-2 h-1 max-w-[0.01px] text-xs ui-group-filled-within:max-w-md ui-group-filled-within:pl-2",
+          "invisible ml-2 h-1 max-w-[0.01px] text-xs uig-filled-within:max-w-md uig-filled-within:pl-2",
         innerWrapper: [
-          "group-data-[has-start-content=true]:pl-3",
-          "group-data-[has-end-content=true]:pr-3",
+          "uig-has-start-content:pl-3",
+          "uig-has-end-content:pr-3",
         ],
       },
     },
@@ -103,7 +103,7 @@ export const inputVariants = tv({
     },
     isFilled: {
       true: {
-        inputWrapper: "bg-default-100/50 ui-group-hover:bg-default-100",
+        inputWrapper: "bg-default-100/50 uig-hover:bg-default-100",
       },
     },
   },
@@ -172,16 +172,16 @@ export const inputVariants = tv({
       variant: "bordered",
       size: "sm",
       className: {
-        input: "px-3 py-1 group-data-[has-label=true]:pt-5",
-        label: "text-sm ui-group-filled-within:text-xs",
+        input: "px-3 py-1 uig-has-label:pt-5",
+        label: "text-sm uig-filled-within:text-xs",
       },
     },
     {
       variant: "bordered",
       size: "md",
       className: {
-        input: "px-3 py-1.5 group-data-[has-label=true]:pt-5",
-        label: "text-base ui-group-filled-within:text-xs",
+        input: "px-3 py-1.5 uig-has-label:pt-5",
+        label: "text-base uig-filled-within:text-xs",
       },
     },
     {
@@ -189,7 +189,7 @@ export const inputVariants = tv({
       size: "lg",
       className: {
         input: "px-3 py-2 group-data-[has-label=true]:pt-6",
-        label: "text-base ui-group-filled-within:text-xs",
+        label: "text-base uig-filled-within:text-xs",
       },
     },
     // outlined
@@ -198,7 +198,7 @@ export const inputVariants = tv({
       size: "sm",
       className: {
         input: "px-3 py-2",
-        label: "text-sm ui-group-filled-within:text-xs",
+        label: "text-sm uig-filled-within:text-xs",
       },
     },
     {
@@ -206,7 +206,7 @@ export const inputVariants = tv({
       size: "md",
       className: {
         input: "px-3 py-2.5",
-        label: "text-base ui-group-filled-within:text-xs",
+        label: "text-base uig-filled-within:text-xs",
       },
     },
     {
@@ -214,7 +214,7 @@ export const inputVariants = tv({
       size: "lg",
       className: {
         input: "p-3",
-        label: "text-base ui-group-filled-within:text-xs",
+        label: "text-base uig-filled-within:text-xs",
       },
     },
   ],

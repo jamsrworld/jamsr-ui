@@ -15,13 +15,13 @@ export const checkbox = tv({
     ],
     wrapper: "flex gap-2",
     label:
-      "shrink-0 text-sm font-normal leading-none text-foreground ui-group-interactive:cursor-pointer ui-group-disabled:cursor-not-allowed",
+      "shrink-0 text-sm font-normal leading-none text-foreground uig-interactive:cursor-pointer uig-disabled:cursor-not-allowed",
     helperText: "text-xs text-foreground-600",
     checkbox: [
       ...focusVisibleClasses,
-      "border-default-200 ui-group-hover:border-default-400",
-      "relative size-5 appearance-none border-2 ui-group-checked:border-primary ui-group-checked:bg-primary ui-group-interactive:cursor-pointer",
-      "ui-group-disabled:cursor-not-allowed",
+      "border-default-200 uig-hover:border-default-400",
+      "relative size-5 appearance-none border-2 uig-checked:border-primary uig-checked:bg-primary uig-interactive:cursor-pointer",
+      "uig-disabled:cursor-not-allowed",
     ],
     trigger: [
       "relative flex size-max items-center",

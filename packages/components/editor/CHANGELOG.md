@@ -1,5 +1,16 @@
 # @jamsr-ui/editor
 
+## 0.1.2
+
+### Patch Changes
+
+- fix group classes
+- Updated dependencies
+  - @jamsr-ui/select@0.1.2
+  - @jamsr-ui/switch@0.1.2
+  - @jamsr-ui/input@0.1.2
+  - @jamsr-ui/theme@0.1.1
+
 ## 0.1.1
 
 ### Patch Changes

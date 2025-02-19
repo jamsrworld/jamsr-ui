@@ -5,6 +5,7 @@ import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { LinkUnderline } from "./examples/underline";
 import { LinkUsage } from "./examples/usage";
+import { LinkGlobalConfig } from "./examples/global-config";
 
 const title = "Link";
 const description =
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const code = <T extends VariantTypes["link"][number]>(variant: T) =>
+const code = <T extends VariantTypes["next-link"][number]>(variant: T) =>
   readVariantCode("link", variant, "next");
 
 const Link = () => {
@@ -26,6 +27,9 @@ const Link = () => {
       </VariantWrapper>
       <VariantWrapper heading="Underline" code={code("underline")}>
         <LinkUnderline />
+      </VariantWrapper>
+      <VariantWrapper heading="Global Config" code={code("global-config")}>
+        <LinkGlobalConfig />
       </VariantWrapper>
     </VariantPage>
   );

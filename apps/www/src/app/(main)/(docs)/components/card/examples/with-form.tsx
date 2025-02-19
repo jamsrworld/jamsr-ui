@@ -5,11 +5,9 @@ import {
   Card,
   CardContent,
   CardHeader,
-  RHFInput,
-  RHFProvider,
-  RHFSelect,
   SelectItem,
 } from "@jamsr-ui/react";
+import { RHFInput, RHFProvider, RHFSelect } from "@jamsr-ui/rhf";
 import { useForm } from "react-hook-form";
 
 type FormValues = {

@@ -1,5 +1,11 @@
 # @jamsr-ui/next
 
+## 0.1.3
+
+### Patch Changes
+
+- feat: editor text,json,html
+
 ## 0.1.2
 
 ### Patch Changes

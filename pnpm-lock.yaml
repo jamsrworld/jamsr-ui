@@ -2016,6 +2016,12 @@ importers:
       '@jamsr-ui/link':
         specifier: workspace:^
         version: link:../../components/link
+      '@jamsr-ui/styles':
+        specifier: workspace:^
+        version: link:../../styles
+      '@jamsr-ui/utils':
+        specifier: workspace:^
+        version: link:../../utils
     devDependencies:
       '@types/react':
         specifier: 19.0.1

@@ -1,5 +1,16 @@
 # web
 
+## 0.2.5
+
+### Patch Changes
+
+- feat: editor text,json,html
+- Updated dependencies
+  - @jamsr-ui/editor@0.1.3
+  - @jamsr-ui/next@0.1.3
+  - @jamsr-ui/react@0.1.4
+  - @jamsr-ui/rhf@0.1.4
+
 ## 0.2.4
 
 ### Patch Changes

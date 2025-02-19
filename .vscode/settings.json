@@ -62,5 +62,6 @@
     ".*Classes.*",
     ".*classNames.*"
   ],
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "onFocusChange",
+  "tailwindCSS.experimental.configFile": "packages/theme/src/styles.css"
 }

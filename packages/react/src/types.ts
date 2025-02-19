@@ -119,5 +119,9 @@ declare module "@jamsr-ui/styles" {
     textarea?: WithProps<TextareaProps>;
     tooltip?: WithProps<TooltipProps>;
     stepper?: WithProps<StepperProps>;
+    next?: {
+      avatar?: WithProps<AvatarProps>;
+      link?: WithProps<LinkProps>;
+    };
   }
 }

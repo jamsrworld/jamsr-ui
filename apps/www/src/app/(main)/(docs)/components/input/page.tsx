@@ -3,6 +3,7 @@ import { VariantWrapper } from "@/components/docs/variant-wrapper";
 import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
+import { InputBorderedAllProps } from "./examples/bordered-all-props";
 import { InputClearable } from "./examples/clearable";
 import { InputControlled } from "./examples/controlled";
 import { InputDisabled } from "./examples/disabled";
@@ -11,21 +12,20 @@ import { InputFilled } from "./examples/filled";
 import { InputHelperText } from "./examples/helper-text";
 import { InputLabelHelper } from "./examples/label-helper";
 import { InputNumberOnly } from "./examples/numbers-only";
-import { InputOptional, InputRequiredOptional } from "./examples/required-optional";
 import { InputOutlinedAllProps } from "./examples/outlined-all-props";
 import { InputPlaceholder } from "./examples/placeholder";
 import { InputRadius } from "./examples/radius";
+import { InputRequiredOptional } from "./examples/required-optional";
 import { InputSecuredText } from "./examples/secured-text";
 import { InputSizes } from "./examples/sizes";
+import { InputStandardAllProps } from "./examples/standard-all-props";
+import { InputWithStartContent } from "./examples/start-end-content";
+import { InputUnderlinedAllProps } from "./examples/underlined-all-props";
 import { InputUsage } from "./examples/usage";
 import { InputVariants } from "./examples/variants";
 import { InputWithIcon } from "./examples/with-icon";
 import { InputWithPlaceholder } from "./examples/with-placeholder";
-import { InputWithStartContent } from "./examples/start-end-content";
 import { InputWithoutLabel } from "./examples/without-label";
-import { InputUnderlinedAllProps } from "./examples/underlined-all-props";
-import { InputStandardAllProps } from "./examples/standard-all-props";
-import { InputBorderedAllProps } from "./examples/bordered-all-props";
 
 const title = "Input";
 const description =
@@ -86,14 +86,16 @@ const Input = () => {
         code={code("start-end-content")}
       >
         <InputWithStartContent />
-
       </VariantWrapper>
-      
+
       <VariantWrapper heading="With Icon" code={code("with-icon")}>
         <InputWithIcon />
       </VariantWrapper>
-     
-      <VariantWrapper heading="Required & Optional" code={code("required-optional")}>
+
+      <VariantWrapper
+        heading="Required & Optional"
+        code={code("required-optional")}
+      >
         <InputRequiredOptional />
       </VariantWrapper>
 

@@ -1,5 +1,13 @@
 # @jamsr-ui/react
 
+## 0.1.4
+
+### Patch Changes
+
+- feat: editor text,json,html
+- Updated dependencies
+  - @jamsr-ui/editor@0.1.3
+
 ## 0.1.3
 
 ### Patch Changes

@@ -20,7 +20,12 @@ export const ThemeSwitcher = () => {
   }, [isDark]);
 
   return (
-    <IconButton variant="light" aria-label="Toggle Theme" onClick={toggleTheme}>
+    <IconButton
+      label="Toggle Theme"
+      variant="light"
+      aria-label="Toggle Theme"
+      onClick={toggleTheme}
+    >
       {!isDark ? <MoonIcon /> : <SunIcon />}
     </IconButton>
   );

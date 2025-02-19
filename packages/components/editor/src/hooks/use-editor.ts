@@ -22,7 +22,7 @@ import Text from "@tiptap/extension-text";
 import TextAlign from "@tiptap/extension-text-align";
 import Underline from "@tiptap/extension-underline";
 import Youtube from "@tiptap/extension-youtube";
-import type { EditorOptions, JSONContent } from "@tiptap/react";
+import type { EditorOptions, JSONContent, HTMLContent } from "@tiptap/react";
 import { useEditor as useEditorBase } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { all, createLowlight } from "lowlight";
@@ -39,9 +39,9 @@ import {
 import Typography from "@tiptap/extension-typography";
 
 type Props = EditorVariantsProps & {
-  value?: JSONContent;
-  defaultValue?: JSONContent;
-  onValueChange?: (content: JSONContent) => void;
+  value?: JSONContent | HTMLContent;
+  defaultValue?: JSONContent | HTMLContent;
+  onValueChange?: (content: JSONContent | HTMLContent) => void;
   options?: Partial<EditorOptions>;
   placeholder?: string;
   classNames?: SlotsToClasses<EditorVariantsSlots>;
@@ -54,6 +54,7 @@ type Props = EditorVariantsProps & {
   disabled?: boolean;
   isDisabled?: boolean;
   isFormControl?: boolean;
+  contentType?: "json" | "html" | "text";
 };
 
 export type UseEditorProps = UIProps<"div", Props>;
@@ -82,6 +83,7 @@ export const useEditor = ($props: UseEditorProps) => {
     disabled = false,
     isDisabled: propIsDisabled = false,
     isFormControl = false,
+    contentType = "json",
     ...restProps
   } = props;
 
@@ -141,7 +143,11 @@ export const useEditor = ($props: UseEditorProps) => {
       }
     },
     onUpdate({ editor }) {
-      setValue?.(editor.getJSON());
+      const value =
+        (contentType === "json" && editor.getJSON()) ||
+        (contentType === "html" && editor.getHTML()) ||
+        editor.getText();
+      setValue?.(value);
     },
     ...options,
   });

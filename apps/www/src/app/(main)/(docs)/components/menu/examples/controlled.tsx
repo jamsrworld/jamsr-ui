@@ -22,7 +22,7 @@ export const MenuControlled = () => {
         <MenuItem isDisabled>Redo</MenuItem>
         <MenuItem>Cut</MenuItem>
         <MenuItem isDisabled>Edit</MenuItem>
-        <MenuItem className="hover:bg-danger">Delete</MenuItem>
+        <MenuItem color="danger">Delete</MenuItem>
       </Menu>
       <Button onClick={onToggle}> {isOpen ? "Close" : "Open"}</Button>
     </div>

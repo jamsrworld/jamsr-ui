@@ -1,5 +1,5 @@
 import { toSlug } from "@/utils/fns";
-import { Tab, Tabs, Text } from "@jamsr-ui/react";
+import { Tab, Tabs, Text, UIConfigProvider } from "@jamsr-ui/react";
 import React from "react";
 import { CodeBlock } from "../code-block";
 
@@ -45,7 +45,7 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
               <div
                 className={`overflow-hidden rounded-xl border border-divider ${noGutter ? "" : "p-4"} ${bg === "secondary" ? "bg-content2 dark:bg-transparent" : ""}`}
               >
-                {children}
+                <UIConfigProvider>{children}</UIConfigProvider>
               </div>
             </Tab>
             <Tab heading="Code" value="code">
@@ -63,7 +63,7 @@ export const VariantWrapper = (props: VariantWrapperProps) => {
           <div
             className={`rounded-xl border border-divider ${noGutter ? "" : "p-4"} ${bg === "secondary" ? "bg-content2 dark:bg-transparent" : ""}`}
           >
-            {children}
+            <UIConfigProvider>{children}</UIConfigProvider>
           </div>
         )}
       </div>

@@ -6,12 +6,13 @@ export const ButtonRadius = () => {
     "sm",
     "md",
     "lg",
+    "xl",
     "2xl",
     "3xl",
     "full",
   ];
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-wrap gap-4">
       {radii.map((radius) => (
         <Button key={radius} radius={radius}>
           {radius}

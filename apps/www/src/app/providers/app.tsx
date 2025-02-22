@@ -19,7 +19,9 @@ export const AppProvider = (props: Props) => {
       <Analytics />
       <ToastProvider />
       <Confirmation />
-      <UIConfigProvider>{children}</UIConfigProvider>
+      <UIConfigProvider globalConfig={{ radius: "xl" }}>
+        {children}
+      </UIConfigProvider>
     </UIProvider>
   );
 };

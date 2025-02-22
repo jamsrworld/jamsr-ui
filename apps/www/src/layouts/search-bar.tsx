@@ -1,6 +1,6 @@
 "use client";
 
-import { sidebarItems } from "@/app/(main)/(docs)/sidebar";
+import { sidebarItems } from "@/app/(main)/(docs)/sidebar/config";
 import { SearchIcon } from "@/components/icons";
 import { NextLink } from "@/components/next";
 import { useDisclosure, useKeyPress } from "@jamsr-ui/hooks";

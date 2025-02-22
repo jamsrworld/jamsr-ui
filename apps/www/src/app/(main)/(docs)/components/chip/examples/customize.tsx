@@ -28,8 +28,14 @@ export const ChipCustomize = () => {
         <Chip variant="dot" color="danger">
           Hello
         </Chip>
-        
       </UIConfigProvider>
+      <Chip
+        variant="dot"
+        color="success"
+        className="border-b-2 text-success rounded-none border-success"
+      >
+        Hello
+      </Chip>
     </div>
   );
 };

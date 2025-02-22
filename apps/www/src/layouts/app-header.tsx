@@ -18,6 +18,14 @@ const navLinks: { label: string; href: Route }[] = [
     href: "/components/accordion",
   },
   {
+    label: "Blocks",
+    href: "/blocks",
+  },
+  {
+    label: "Templates",
+    href: "/templates",
+  },
+  {
     label: "Theme",
     href: "/theme",
   },
@@ -26,6 +34,7 @@ const navLinks: { label: string; href: Route }[] = [
     href: "/components/charts/area-chart",
   },
 ];
+
 export const AppHeader = () => {
   return (
     <Header isBordered>

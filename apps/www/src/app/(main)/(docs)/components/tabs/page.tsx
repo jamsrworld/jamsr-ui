@@ -16,7 +16,7 @@ import { TabVariants } from "./examples/variants";
 import { TabWithIcons } from "./examples/with-icons";
 import { TabCustomized } from "./examples/customized";
 
-const title = "Tab";
+const title = "Tabs";
 const description =
   "Tabs structure content into organized sections, providing users with a streamlined way to navigate between them.";
 
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   description,
 };
 
-const code = <T extends VariantTypes["tab"][number]>(variant: T) =>
-  readVariantCode("tab", variant);
+const code = <T extends VariantTypes["tabs"][number]>(variant: T) =>
+  readVariantCode("tabs", variant);
 
 const Tab = () => {
   return (
@@ -34,7 +34,6 @@ const Tab = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <TabUsage />
       </VariantWrapper>
-
       <VariantWrapper
         heading="Variants"
         code={code("variants")}

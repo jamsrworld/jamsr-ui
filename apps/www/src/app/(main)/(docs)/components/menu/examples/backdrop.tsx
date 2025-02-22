@@ -19,7 +19,7 @@ const MenuUsage = (props: Pick<MenuProps, "backdrop">) => {
       <MenuItem isDisabled>Redo</MenuItem>
       <MenuItem>Cut</MenuItem>
       <MenuItem isDisabled>Edit</MenuItem>
-      <MenuItem className="hover:bg-danger">Delete</MenuItem>
+      <MenuItem color="danger">Delete</MenuItem>
     </Menu>
   );
 };

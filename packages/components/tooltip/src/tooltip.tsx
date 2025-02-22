@@ -131,8 +131,8 @@ export const Tooltip = ($props: TooltipProps) => {
             ref={refs.setFloating}
             style={floatingStyles}
             {...getFloatingProps()}
-            className={styles.base({
-              className: cn(className, classNames?.base),
+            className={styles.content({
+              className: cn(className, classNames?.content),
             })}
           >
             {showArrow && (
@@ -140,7 +140,7 @@ export const Tooltip = ($props: TooltipProps) => {
                 ref={arrowRef}
                 context={context}
                 className={styles.arrow({
-                  className: classNames?.base,
+                  className: classNames?.arrow,
                 })}
               />
             )}

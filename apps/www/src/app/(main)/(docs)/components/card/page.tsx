@@ -9,6 +9,7 @@ import { CardUsage } from "./examples/usage";
 import { CardVariants } from "./examples/variants";
 import { CardRadius } from "./examples/radius";
 import { CardWithForm } from "./examples/with-form";
+import { CardWithDivider } from "./examples/with-divider";
 
 const title = "Card";
 const description =
@@ -24,11 +25,11 @@ const code = <T extends VariantTypes["card"][number]>(variant: T) =>
 
 const Card = () => {
   return (
-    <VariantPage heading={title} description={description} >
+    <VariantPage heading={title} description={description}>
       <VariantWrapper bg="secondary" heading="Usage" code={code("usage")}>
         <CardUsage />
       </VariantWrapper>
-     
+
       <VariantWrapper
         bg="secondary"
         heading="Start End Content"
@@ -47,6 +48,13 @@ const Card = () => {
       </VariantWrapper>
       <VariantWrapper bg="secondary" heading="Radius" code={code("radius")}>
         <CardRadius />
+      </VariantWrapper>
+      <VariantWrapper
+        bg="secondary"
+        heading="With Divider"
+        code={code("with-divider")}
+      >
+        <CardWithDivider />
       </VariantWrapper>
       <VariantWrapper
         bg="secondary"

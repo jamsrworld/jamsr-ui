@@ -1,14 +1,8 @@
-"use client";
-
-import { Chip, Text } from "@jamsr-ui/react";
-import { cn } from "@jamsr-ui/utils";
-import { type Route } from "next";
-import NextLink, { type LinkProps } from "next/link";
-import { usePathname } from "next/navigation";
+import { Route } from "next";
 
 export const sidebarItems: {
   heading: string;
-  chip?: React.ReactNode;
+  tags?: string[];
   items: { heading: string; path: Route }[];
 }[] = [
   {
@@ -206,8 +200,8 @@ export const sidebarItems: {
         path: "/components/switch",
       },
       {
-        heading: "Tab",
-        path: "/components/tab",
+        heading: "Tabs",
+        path: "/components/tabs",
       },
       {
         heading: "Table",
@@ -237,7 +231,7 @@ export const sidebarItems: {
   },
   {
     heading: "Charts",
-    chip: <Chip size="sm">Development</Chip>,
+    tags: ["Development"],
     items: [
       {
         heading: "Area Chart",
@@ -355,53 +349,3 @@ export const sidebarItems: {
   //   ],
   // },
 ];
-
-export const ComponentsSidebar = () => {
-  const pathname = usePathname();
-  return (
-    <aside className="fixed top-14 flex h-[calc(100vh-3.5rem)] min-w-[240px] flex-col gap-4 overflow-y-auto overflow-x-hidden border-r border-divider p-2 scrollbar-hide max-md:hidden">
-      {/* <Divider
-        orientation="vertical"
-        className="absolute right-0 top-0 h-full"
-      /> */}
-      <div className="mt-4 flex flex-col gap-4">
-        {sidebarItems.map((item, idx) => {
-          const { heading, items, chip } = item;
-          return (
-            <div key={idx} className="flex flex-col gap-2">
-              <div className="flex items-center gap-1">
-                <Text
-                  as="p"
-                  variant="paragraph2"
-                  className="text-2xs font-medium uppercase text-foreground-tertiary"
-                >
-                  {heading}
-                </Text>
-                {chip}
-              </div>
-              <div className="flex flex-col">
-                {items.map((item) => {
-                  const { heading, path } = item;
-                  const isActive = pathname === path;
-                  return (
-                    <NextLink
-                      key={path}
-                      href={path as LinkProps<never>["href"]}
-                      className={cn(
-                        "rounded-lg border border-transparent px-5 py-2 text-sm font-normal capitalize hover:bg-content1",
-                        isActive &&
-                          "border-divider bg-content1 hover:bg-content2",
-                      )}
-                    >
-                      {heading}
-                    </NextLink>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </aside>
-  );
-};

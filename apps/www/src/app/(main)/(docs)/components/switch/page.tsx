@@ -13,15 +13,16 @@ import { SwitchReadonly } from "./examples/readonly";
 import { SwitchSizes } from "./examples/sizes";
 import { SwitchUsage } from "./examples/usage";
 import { SwitchWithLabel } from "./examples/with-label";
+import { SwitchCustomized } from "./examples/customized";
 
 const title = "Switch";
 const description =
   "A Switch component allows users to toggle between two states, typically representing an on/off or active/inactive choice. It is commonly used for enabling or disabling features in a user interface.";
 
-  export const metadata: Metadata = {
-    title,
-    description,
-  };
+export const metadata: Metadata = {
+  title,
+  description,
+};
 const code = <T extends VariantTypes["switch"][number]>(variant: T) =>
   readVariantCode("switch", variant);
 
@@ -57,6 +58,9 @@ const Switch = () => {
       </VariantWrapper>
       <VariantWrapper heading="Invalid State" code={code("invalid-state")}>
         <SwitchInvalidState />
+      </VariantWrapper>
+      <VariantWrapper heading="Customized" code={code("customized")}>
+        <SwitchCustomized />
       </VariantWrapper>
     </VariantPage>
   );

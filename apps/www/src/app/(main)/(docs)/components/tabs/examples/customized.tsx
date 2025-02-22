@@ -15,13 +15,12 @@ export const TabCustomized = () => {
     <Tabs
       classNames={{
         base: "bg-content2 rounded",
-        cursor: "rounded-full !bg-content-4",
+        cursor: "rounded-full uig-selected:bg-primary",
         panel: "bg-content3",
-        tab: "border border-gray-900",
-        // tabContent:"bg-content4"
-        // tabList:"bg-content4"
+        tabContent: "uig-selected:text-primary text-white font-medium",
       }}
       defaultValue="photos"
+      variant="underlined"
     >
       <Tab value="photos" heading="Photos">
         <TabContent />

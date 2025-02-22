@@ -5,7 +5,7 @@ export const test = "";
 export const link = tv({
   extend: textVariants,
   base: [
-    "cursor-pointer select-none text-foreground-link",
+    "cursor-pointer select-none text-foreground-link hover:text-foreground-link/80",
     focusVisibleClasses,
   ],
   variants: {

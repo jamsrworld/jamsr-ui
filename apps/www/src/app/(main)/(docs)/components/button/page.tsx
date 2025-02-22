@@ -5,6 +5,7 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { ButtonColors } from "./examples/colors";
+import { ButtonCustomized } from "./examples/customize";
 import { ButtonDisabled } from "./examples/disabled";
 import { ButtonLoading } from "./examples/loading";
 import { ButtonRadius } from "./examples/radius";
@@ -13,6 +14,7 @@ import { ButtonUsage } from "./examples/usage";
 import { ButtonVariants } from "./examples/variants";
 import { ButtonVariantsColors } from "./examples/variants-colors";
 import { ButtonWithIcons } from "./examples/with-icons";
+import { ButtonWithoutEffects } from "./examples/without-effects";
 
 const title = "Button";
 const description =
@@ -32,7 +34,6 @@ const Button = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <ButtonUsage />
       </VariantWrapper>
-
       <VariantWrapper
         heading="Variants"
         code={code("variants")}
@@ -110,6 +111,12 @@ const Button = () => {
         code={code("variants-colors")}
       >
         <ButtonVariantsColors />
+      </VariantWrapper>
+      <VariantWrapper heading="Without Effects" code={code("without-effects")}>
+        <ButtonWithoutEffects />
+      </VariantWrapper>
+      <VariantWrapper heading="Customization" code={code("customize")}>
+        <ButtonCustomized />
       </VariantWrapper>
 
       {/* <VariantWrapper

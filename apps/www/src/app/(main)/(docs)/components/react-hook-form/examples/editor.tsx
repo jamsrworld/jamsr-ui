@@ -7,39 +7,45 @@ import { RHFDemoWrapper } from "../components/wrapper";
 import { RHFEditor } from "@jamsr-ui/rhf";
 
 type FormValues = {
-  description: Record<string, unknown>;
+  data: {
+    description: Record<string, unknown>;
+  };
 };
 
 const schema = object({
-  description: record(any(), any()).refine((value) => {
-    if (typeof value !== "object" || Object.keys(value).length === 0) {
-      return false;
-    }
-    if (!value.content || !Array.isArray(value.content)) {
-      return false;
-    }
-    return Object.keys(value.content).length > 0;
-  }, "Description is required"),
+  data: object({
+    description: record(any(), any()).refine((value) => {
+      if (typeof value !== "object" || Object.keys(value).length === 0) {
+        return false;
+      }
+      if (!value.content || !Array.isArray(value.content)) {
+        return false;
+      }
+      return Object.keys(value.content).length > 0;
+    }, "Description is required"),
+  }),
 });
 
 export const RHFDemoEditor = () => {
   const defaultValues: FormValues = {
-    description: {
-      type: "doc",
-      content: [
-        {
-          type: "paragraph",
-          attrs: {
-            textAlign: null,
-          },
-          content: [
-            {
-              type: "text",
-              text: "→ © hey there",
+    data: {
+      description: {
+        type: "doc",
+        content: [
+          {
+            type: "paragraph",
+            attrs: {
+              textAlign: null,
             },
-          ],
-        },
-      ],
+            content: [
+              {
+                type: "text",
+                text: "→ © hey there",
+              },
+            ],
+          },
+        ],
+      },
     },
   };
 
@@ -55,7 +61,7 @@ export const RHFDemoEditor = () => {
   return (
     <RHFDemoWrapper methods={methods} isPending={false} onSubmit={onSubmit}>
       <RHFEditor<FormValues>
-        name="description"
+        name="data.description"
         label="Enter product description"
       />
     </RHFDemoWrapper>

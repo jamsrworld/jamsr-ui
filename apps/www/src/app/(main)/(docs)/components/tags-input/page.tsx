@@ -4,6 +4,7 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { TagsInputControlled } from "./examples/controlled";
+import { TagsInputCustomized } from "./examples/customized";
 import { TagsInputDefaultValue } from "./examples/default-value";
 import { TagsInputInvalidState } from "./examples/invalid-state";
 import { TagsInputRadius } from "./examples/radius";
@@ -13,10 +14,10 @@ const title = "Tags Input";
 const description =
   "A Tags Input component allows users to input multiple tags or keywords by typing and separating them with commas or pressing enter. It is commonly used for adding labels, categories, or keywords to items or content.";
 
-  export const metadata: Metadata = {
-    title,
-    description,
-  };
+export const metadata: Metadata = {
+  title,
+  description,
+};
 const code = <T extends VariantTypes["tags-input"][number]>(variant: T) =>
   readVariantCode("tags-input", variant);
 
@@ -37,6 +38,9 @@ const TagsInput = () => {
       </VariantWrapper>
       <VariantWrapper heading="Radius" code={code("radius")}>
         <TagsInputRadius />
+      </VariantWrapper>
+      <VariantWrapper heading="Customized" code={code("customized")}>
+        <TagsInputCustomized />
       </VariantWrapper>
     </VariantPage>
   );

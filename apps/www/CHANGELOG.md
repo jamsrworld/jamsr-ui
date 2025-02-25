@@ -1,5 +1,13 @@
 # web
 
+## 0.2.6
+
+### Patch Changes
+
+- feat: tagsInput chip custom
+  - @jamsr-ui/rhf@0.1.5
+  - @jamsr-ui/react@0.1.5
+
 ## 0.2.5
 
 ### Patch Changes

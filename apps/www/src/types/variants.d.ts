@@ -48,7 +48,7 @@ export type VariantTypes = {
   "switch": ["colors", "controlled", "customized", "description", "disabled", "invalid-state", "label-placement", "readonly", "sizes", "usage", "with-label"];
   "table": ["allow-hover", "bordered", "empty-state", "radius", "usage"];
   "tabs": ["as", "colors", "customized", "disabled-item", "disabled", "outside", "radius", "sizes", "usage", "variants", "with-icons"];
-  "tags-input": ["controlled", "default-value", "invalid-state", "radius", "usage"];
+  "tags-input": ["controlled", "customized", "default-value", "invalid-state", "radius", "usage"];
   "text": ["all", "usage"];
   "textarea": ["controlled", "disabled", "error-state", "helper-text", "label-helper", "placeholder", "radius", "sizes", "usage", "variants", "with-end-content", "with-icon", "with-placeholder", "with-start-content", "without-label"];
   "toast": ["radius", "usage"];

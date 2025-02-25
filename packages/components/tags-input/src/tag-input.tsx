@@ -1,4 +1,4 @@
-import { Chip } from "@jamsr-ui/chip";
+import { Chip, ChipProps } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { Input, type InputProps } from "@jamsr-ui/input";
 import { useUIConfig } from "@jamsr-ui/styles";
@@ -10,6 +10,9 @@ type Props = {
   onValueChange?: (value: string[]) => void;
   defaultValue?: string[];
   showClearButton?: boolean;
+  slotProps?: {
+    chip?: Partial<ChipProps>;
+  };
 };
 
 export type TagsInputProps = Omit<InputProps, keyof Props> & Props;
@@ -26,6 +29,7 @@ export const TagsInput = ($props: TagsInputProps) => {
     value,
     classNames,
     isClearable,
+    slotProps,
     ...restProps
   } = props;
   const delimiters = ["Enter", ","];
@@ -72,7 +76,11 @@ export const TagsInput = ($props: TagsInputProps) => {
 
   const renderTags = useMemo(() => {
     return [...values].map((value) => (
-      <Chip onDelete={() => handleOnDelete(value)} key={value}>
+      <Chip
+        {...slotProps?.chip}
+        onDelete={() => handleOnDelete(value)}
+        key={value}
+      >
         {value}
       </Chip>
     ));

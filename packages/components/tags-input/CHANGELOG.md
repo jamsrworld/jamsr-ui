@@ -1,5 +1,11 @@
 # @jamsr-ui/tags-input
 
+## 0.1.3
+
+### Patch Changes
+
+- feat: tagsInput chip custom
+
 ## 0.1.2
 
 ### Patch Changes

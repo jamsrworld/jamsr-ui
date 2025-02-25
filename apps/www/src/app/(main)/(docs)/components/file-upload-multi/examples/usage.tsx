@@ -37,7 +37,7 @@ export const FileUploadUsage = (props: Partial<FileUploadMultiProps>) => {
   };
 
   return (
-    <FileUploadMulti isDisabled
+    <FileUploadMulti
       label="Upload images"
       onUploadSuccess={onUploadSuccess}
       getFileUrlAfterUpload={getFileUrlAfterUpload}

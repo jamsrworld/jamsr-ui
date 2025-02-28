@@ -14,7 +14,7 @@ type User = {
 export function createRandomUser(): User {
   return {
     userId: faker.string.uuid(),
-    username: faker.internet.userName(),
+    username: faker.internet.username(),
     email: faker.internet.email(),
     avatar: faker.image.avatar(),
     password: faker.internet.password(),

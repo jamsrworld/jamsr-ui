@@ -22,7 +22,7 @@ export const RHFDemoCheckbox = () => {
     defaultValues,
     resolver: zodResolver(schema),
   });
-  const { handleSubmit, watch } = methods;
+  const { handleSubmit } = methods;
   const onSubmit = handleSubmit((values) => {
     console.log(values);
   });

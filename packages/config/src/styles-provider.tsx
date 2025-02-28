@@ -6,7 +6,7 @@ export interface UIConfigType {
     radius?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
   };
 }
-const UIStyleContext = createContext<UIConfigType>(
+const UIConfigContext = createContext<UIConfigType>(
   {} as unknown as UIConfigType,
 );
 
@@ -17,16 +17,16 @@ type Props = {
 export const UIConfigProvider = (props: Props) => {
   const { children, ...restProps } = props;
   return (
-    <UIStyleContext.Provider value={restProps}>
+    <UIConfigContext.Provider value={restProps}>
       {children}
-    </UIStyleContext.Provider>
+    </UIConfigContext.Provider>
   );
 };
 
 export const useUIConfig = (): UIConfigType => {
-  const context = useContext(UIStyleContext);
+  const context = useContext(UIConfigContext);
   if (!context) {
-    throw new Error("useUIConfig must be used within a UIStyleProvider");
+    throw new Error("useUIConfig must be used within a UIConfigProvider");
   }
   return context;
 };

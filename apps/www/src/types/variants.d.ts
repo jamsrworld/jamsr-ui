@@ -13,7 +13,7 @@ export type VariantTypes = {
   "collapsible": ["controlled", "usage", "with-icon", "with-state"];
   "confirmation": ["colors", "usage"];
   "copy-to-clipboard": ["events", "global-config", "sound-effect", "usage", "with-children", "without-button"];
-  "data-table": ["bordered", "columns", "customization", "empty-state", "server", "sticky-header", "usage", "without-pagination"];
+  "data-table": ["bordered", "columns", "customization", "empty-state", "global-config", "server", "sticky-header", "usage", "without-pagination"];
   "date-picker": [];
   "dialog": ["backdrop", "bordered", "custom-close-button", "customize", "non-dismissible", "popover-items", "radius", "scroll-behavior", "usage", "without-animation", "without-close-button"];
   "divider": ["colors", "customization", "orientation", "usage", "variants", "with-text"];
@@ -37,7 +37,7 @@ export type VariantTypes = {
   "popover": ["controlled", "placement", "radius", "trigger-on", "usage", "with-arrow", "without-lock-scroll"];
   "radio": ["checked", "colors", "disabled", "invalid", "radio-group-controlled", "radio-group-custom", "radio-group", "sizes", "usage"];
   "rating": ["controlled", "default-value", "disabled", "helper-text", "invalid", "readonly", "size", "usage"];
-  "react-hook-form": ["autocomplete-multi", "autocomplete", "checkbox", "editor", "file-upload-multi-default-value", "file-upload-multi", "file-upload-single-default-value", "file-upload-single", "input", "otp-input", "radio-group", "rating", "select-multi", "select", "switch", "tags-input", "textarea"];
+  "react-hook-form": ["autocomplete-multi", "autocomplete", "checkbox", "editor", "file-upload-multi-default-value", "file-upload-multi", "file-upload-single-default-value", "file-upload-single", "global-config", "input", "otp-input", "radio-group", "rating", "select-multi", "select", "switch", "tags-input", "textarea"];
   "repeater": ["index", "usage"];
   "ripple": ["center", "usage"];
   "select": ["controlled", "custom-render-complex", "custom-render-multi-search", "custom-render-multi", "custom-render-value", "disabled-items", "disabled", "invalid-state", "multiple-controlled", "multiple", "placeholder", "radius", "sizes", "start-end-items", "usage", "with-helper-text", "without-label"];

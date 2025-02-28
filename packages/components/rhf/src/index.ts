@@ -14,3 +14,8 @@ export { RHFSelect } from "./select";
 export { RHFSwitch } from "./switch";
 export { RHFTagsInput } from "./tags-input";
 export { RHFTextarea } from "./textarea";
+export {
+  UIRHFConfigProvider,
+  type UIRHFConfigType,
+  useUIRHFConfig,
+} from "./context-provider";

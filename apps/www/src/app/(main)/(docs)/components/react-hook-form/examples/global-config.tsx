@@ -3,7 +3,7 @@
 import { RHFInput } from "@jamsr-ui/rhf";
 import { useForm } from "react-hook-form";
 import { RHFDemoWrapper } from "../components/wrapper";
-import { UIRHFConfigProvider } from "@jamsr-ui/rhf/src/context-provider";
+import { UIRHFConfigProvider } from "@jamsr-ui/rhf";
 
 type FormValues = {
   username: string;

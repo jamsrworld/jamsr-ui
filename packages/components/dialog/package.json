@@ -10,8 +10,8 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@types/react": "19.0.1",
-    "@types/node": "^22.12.0",
+    "@types/node": "^22.13.5",
+    "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
     "framer-motion": "catalog:",
     "react": "catalog:",
@@ -23,12 +23,12 @@
     "react-dom": "catalog:"
   },
   "dependencies": {
-    "@floating-ui/react": "^0.26.16",
-    "@floating-ui/react-dom": "^2.1.0",
+    "@floating-ui/react": "^0.27.4",
+    "@floating-ui/react-dom": "^2.1.2",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/icon-button": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
-    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "clean-package": "../../../clean-package.config.json"

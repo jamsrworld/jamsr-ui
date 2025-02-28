@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@jamsr-ui/popover": "workspace:^",
-    "@types/node": "^22.12.0",
-    "@types/react": "19.0.1",
+    "@types/node": "^22.13.5",
+    "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
     "react": "catalog:",
     "react-dom": "catalog:"
@@ -22,10 +22,10 @@
     "react-dom": "catalog:"
   },
   "dependencies": {
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/icon-button": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
-    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "clean-package": "../../../clean-package.config.json"

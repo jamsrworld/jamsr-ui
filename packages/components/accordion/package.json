@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@jamsr-ui/avatar": "workspace:^",
-    "@types/react": "19.0.1",
+    "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
     "framer-motion": "catalog:",
     "react": "catalog:",
@@ -22,8 +22,8 @@
     "react-dom": "catalog:"
   },
   "dependencies": {
-    "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/config": "workspace:^",
+    "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "clean-package": "../../../clean-package.config.json"

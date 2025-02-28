@@ -25,7 +25,7 @@
   "devDependencies": {
     "@jamsr-ui/icon-button": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
-    "@types/react": "19.0.1",
+    "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
     "react": "catalog:",
     "react-dom": "catalog:"
@@ -35,7 +35,7 @@
     "react-dom": "catalog:"
   },
   "dependencies": {
-    "@floating-ui/react": "^0.26.16",
+    "@floating-ui/react": "^0.27.4",
     "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },

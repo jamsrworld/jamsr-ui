@@ -23,14 +23,14 @@
     "@jamsr-ui/utils": "workspace:^"
   },
   "devDependencies": {
-    "@types/react": "19.0.1",
+    "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
-    "react-dom": "catalog:",
-    "react": "catalog:"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "peerDependencies": {
-    "react-dom": "catalog:",
-    "react": "catalog:"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "clean-package": "../../../clean-package.config.json"
 }

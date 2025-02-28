@@ -1,4 +1,4 @@
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import {
   cn,

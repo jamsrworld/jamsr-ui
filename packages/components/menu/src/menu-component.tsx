@@ -29,7 +29,7 @@ import {
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { ChevronRightIcon } from "@jamsr-ui/shared-icons";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   dataAttr,

@@ -18,7 +18,7 @@
 
 - Updated dependencies
   - @jamsr-ui/divider@0.1.0
-  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/config@0.1.0
   - @jamsr-ui/utils@0.1.0
 
 ## 0.0.96
@@ -60,7 +60,7 @@
 - feat: tailwind 4
 - Updated dependencies
   - @jamsr-ui/divider@0.0.86
-  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/config@0.0.21
   - @jamsr-ui/utils@0.0.80
 
 ## 0.0.91
@@ -71,7 +71,7 @@
 - Updated dependencies
   - @jamsr-ui/utils@0.0.79
   - @jamsr-ui/divider@0.0.85
-  - @jamsr-ui/styles@0.0.20
+  - @jamsr-ui/config@0.0.20
 
 ## 0.0.90
 
@@ -80,7 +80,7 @@
 - fix: avatar, link
 - Updated dependencies
   - @jamsr-ui/divider@0.0.84
-  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/config@0.0.19
   - @jamsr-ui/utils@0.0.78
 
 ## 0.0.89
@@ -106,7 +106,7 @@
 - fix switch,chip
 - Updated dependencies
   - @jamsr-ui/divider@0.0.81
-  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/config@0.0.18
   - @jamsr-ui/utils@0.0.75
 
 ## 0.0.86
@@ -123,7 +123,7 @@
 
 - fix treeshake
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/config@0.0.17
   - @jamsr-ui/divider@0.0.79
   - @jamsr-ui/utils@0.0.73
 
@@ -134,7 +134,7 @@
 - fix label, menu, switch
 - Updated dependencies
   - @jamsr-ui/divider@0.0.78
-  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/config@0.0.16
   - @jamsr-ui/utils@0.0.72
 
 ## 0.0.83
@@ -144,7 +144,7 @@
 - refactor typography, sidebar, collapsible
 - Updated dependencies
   - @jamsr-ui/divider@0.0.77
-  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/config@0.0.15
   - @jamsr-ui/utils@0.0.71
 
 ## 0.0.82
@@ -155,7 +155,7 @@
 - Updated dependencies
   - @jamsr-ui/utils@0.0.70
   - @jamsr-ui/divider@0.0.76
-  - @jamsr-ui/styles@0.0.14
+  - @jamsr-ui/config@0.0.14
 
 ## 0.0.81
 
@@ -173,7 +173,7 @@
 - global config
 - Updated dependencies
   - @jamsr-ui/divider@0.0.74
-  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/config@0.0.13
   - @jamsr-ui/utils@0.0.68
 
 ## 0.0.79
@@ -183,7 +183,7 @@
 - added radius
 - Updated dependencies
   - @jamsr-ui/divider@0.0.73
-  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/config@0.0.12
   - @jamsr-ui/utils@0.0.67
 
 ## 0.0.78
@@ -193,7 +193,7 @@
 - react 19
 - Updated dependencies
   - @jamsr-ui/divider@0.0.72
-  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/config@0.0.11
   - @jamsr-ui/utils@0.0.66
 
 ## 0.0.77
@@ -203,7 +203,7 @@
 - react 19
 - Updated dependencies
   - @jamsr-ui/divider@0.0.71
-  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/config@0.0.10
   - @jamsr-ui/utils@0.0.65
 
 ## 0.0.76
@@ -214,7 +214,7 @@
 - Updated dependencies
   - @jamsr-ui/divider@0.0.70
   - @jamsr-ui/utils@0.0.64
-  - @jamsr-ui/styles@0.0.9
+  - @jamsr-ui/config@0.0.9
 
 ## 0.0.75
 
@@ -240,7 +240,7 @@
 - new components
 - Updated dependencies
   - @jamsr-ui/divider@0.0.67
-  - @jamsr-ui/styles@0.0.8
+  - @jamsr-ui/config@0.0.8
   - @jamsr-ui/utils@0.0.61
 
 ## 0.0.72
@@ -280,7 +280,7 @@
 - fix theme
 - Updated dependencies
   - @jamsr-ui/divider@0.0.63
-  - @jamsr-ui/styles@0.0.7
+  - @jamsr-ui/config@0.0.7
   - @jamsr-ui/utils@0.0.59
 
 ## 0.0.67
@@ -306,7 +306,7 @@
 - fix file upload
 - Updated dependencies
   - @jamsr-ui/divider@0.0.60
-  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/config@0.0.6
   - @jamsr-ui/utils@0.0.56
 
 ## 0.0.64
@@ -316,7 +316,7 @@
 - added global types
 - Updated dependencies
   - @jamsr-ui/divider@0.0.59
-  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/config@0.0.5
   - @jamsr-ui/utils@0.0.55
 
 ## 0.0.63

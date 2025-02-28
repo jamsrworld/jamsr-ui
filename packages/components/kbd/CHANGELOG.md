@@ -16,7 +16,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/config@0.1.0
   - @jamsr-ui/utils@0.1.0
 
 ## 0.0.25
@@ -53,7 +53,7 @@
 
 - feat: tailwind 4
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/config@0.0.21
   - @jamsr-ui/utils@0.0.80
 
 ## 0.0.20
@@ -63,7 +63,7 @@
 - chore: update framer motion
 - Updated dependencies
   - @jamsr-ui/utils@0.0.79
-  - @jamsr-ui/styles@0.0.20
+  - @jamsr-ui/config@0.0.20
 
 ## 0.0.19
 
@@ -71,7 +71,7 @@
 
 - fix: avatar, link
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/config@0.0.19
   - @jamsr-ui/utils@0.0.78
 
 ## 0.0.18
@@ -94,7 +94,7 @@
 
 - fix switch,chip
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/config@0.0.18
   - @jamsr-ui/utils@0.0.75
 
 ## 0.0.15
@@ -110,7 +110,7 @@
 
 - fix treeshake
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/config@0.0.17
   - @jamsr-ui/utils@0.0.73
 
 ## 0.0.13
@@ -119,7 +119,7 @@
 
 - fix label, menu, switch
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/config@0.0.16
   - @jamsr-ui/utils@0.0.72
 
 ## 0.0.12
@@ -128,7 +128,7 @@
 
 - refactor typography, sidebar, collapsible
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/config@0.0.15
   - @jamsr-ui/utils@0.0.71
 
 ## 0.0.11
@@ -138,7 +138,7 @@
 - fix hooks
 - Updated dependencies
   - @jamsr-ui/utils@0.0.70
-  - @jamsr-ui/styles@0.0.14
+  - @jamsr-ui/config@0.0.14
 
 ## 0.0.10
 
@@ -154,7 +154,7 @@
 
 - global config
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/config@0.0.13
   - @jamsr-ui/utils@0.0.68
 
 ## 0.0.8
@@ -163,7 +163,7 @@
 
 - added radius
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/config@0.0.12
   - @jamsr-ui/utils@0.0.67
 
 ## 0.0.7
@@ -172,7 +172,7 @@
 
 - react 19
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/config@0.0.11
   - @jamsr-ui/utils@0.0.66
 
 ## 0.0.6
@@ -181,7 +181,7 @@
 
 - react 19
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/config@0.0.10
   - @jamsr-ui/utils@0.0.65
 
 ## 0.0.5
@@ -191,7 +191,7 @@
 - fix components
 - Updated dependencies
   - @jamsr-ui/utils@0.0.64
-  - @jamsr-ui/styles@0.0.9
+  - @jamsr-ui/config@0.0.9
 
 ## 0.0.4
 
@@ -213,7 +213,7 @@
 
 - new components
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.8
+  - @jamsr-ui/config@0.0.8
   - @jamsr-ui/utils@0.0.61
 
 ## 0.0.1

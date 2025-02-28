@@ -19,18 +19,18 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react-dom": ">=19",
-    "react": ">=19"
+    "react-dom": "catalog:",
+    "react": "catalog:"
   },
   "peerDependencies": {
-    "react-dom": ">=19",
-    "react": ">=19"
+    "react-dom": "catalog:",
+    "react": "catalog:"
   },
   "clean-package": "../../../clean-package.config.json"
 }

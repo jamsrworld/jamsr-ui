@@ -1,5 +1,5 @@
 import { Avatar } from "@jamsr-ui/next";
-import { UIConfigProvider } from "@jamsr-ui/styles";
+import { UIConfigProvider } from "@jamsr-ui/config";
 import { useId } from "react";
 
 export const AvatarGlobalConfig = () => {

@@ -1,7 +1,7 @@
 import { Chip, ChipProps } from "@jamsr-ui/chip";
 import { useControlledState } from "@jamsr-ui/hooks";
 import { Input, type InputProps } from "@jamsr-ui/input";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
 import { useCallback, useMemo, useState } from "react";
 

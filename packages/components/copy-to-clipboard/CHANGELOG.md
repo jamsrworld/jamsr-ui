@@ -19,7 +19,7 @@
 - Updated dependencies
   - @jamsr-ui/icon-button@0.1.0
   - @jamsr-ui/shared-icons@0.1.0
-  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/config@0.1.0
   - @jamsr-ui/utils@0.1.0
 
 ## 0.0.9
@@ -63,7 +63,7 @@
 - Updated dependencies
   - @jamsr-ui/icon-button@0.0.21
   - @jamsr-ui/shared-icons@0.0.72
-  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/config@0.0.21
   - @jamsr-ui/utils@0.0.80
 
 ## 0.0.4
@@ -75,7 +75,7 @@
   - @jamsr-ui/utils@0.0.79
   - @jamsr-ui/icon-button@0.0.20
   - @jamsr-ui/shared-icons@0.0.71
-  - @jamsr-ui/styles@0.0.20
+  - @jamsr-ui/config@0.0.20
 
 ## 0.0.3
 
@@ -84,7 +84,7 @@
 - fix: avatar, link
 - Updated dependencies
   - @jamsr-ui/icon-button@0.0.19
-  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/config@0.0.19
   - @jamsr-ui/utils@0.0.78
 
 ## 0.0.2

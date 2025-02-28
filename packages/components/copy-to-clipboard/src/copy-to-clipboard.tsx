@@ -1,6 +1,6 @@
 import { IconButton, type IconButtonProps } from "@jamsr-ui/icon-button";
 import { CheckIcon, CopyIcon } from "@jamsr-ui/shared-icons";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   deepMergeProps,

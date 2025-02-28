@@ -6,8 +6,8 @@ import {
   type DialogProps,
 } from ".";
 
-declare module "@jamsr-ui/styles" {
-  export interface UIStylesType {
+declare module "@jamsr-ui/config" {
+  export interface UIConfigType {
     dialog?: Partial<DialogProps>;
     dialogHeader?: Partial<DialogHeaderProps>;
     dialogBody?: Partial<DialogBodyProps>;

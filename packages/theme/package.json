@@ -21,8 +21,8 @@
     "@types/node": "^22.12.0",
     "@types/react": "19.0.1",
     "postcss": "^8.5.1",
-    "react": ">=19",
-    "react-dom": ">=19",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "tailwindcss": "^4.0.1",
     "typescript": "^5.4.5",
     "clean-package": "^2.2.0"

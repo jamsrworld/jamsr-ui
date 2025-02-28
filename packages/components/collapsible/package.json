@@ -11,14 +11,14 @@
   "devDependencies": {
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "framer-motion": ">=12",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "framer-motion": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "peerDependencies": {
-    "framer-motion": ">=12",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "framer-motion": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "dependencies": {
     "@jamsr-ui/utils": "workspace:^",

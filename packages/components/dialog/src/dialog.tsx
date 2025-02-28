@@ -1,4 +1,4 @@
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
 import React from "react";
 import { DialogProvider } from "./dialog-context";

@@ -76,7 +76,7 @@
   - @jamsr-ui/hooks@0.1.0
   - @jamsr-ui/react@0.1.0
   - @jamsr-ui/shared-icons@0.1.0
-  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/config@0.1.0
   - @jamsr-ui/utils@0.1.0
 
 ## 0.1.229
@@ -138,7 +138,7 @@
   - @jamsr-ui/charts@0.0.12
   - @jamsr-ui/editor@0.0.137
   - @jamsr-ui/shared-icons@0.0.72
-  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/config@0.0.21
   - @jamsr-ui/hooks@0.0.62
   - @jamsr-ui/react@0.0.243
   - @jamsr-ui/theme@0.0.83
@@ -157,7 +157,7 @@
   - @jamsr-ui/editor@0.0.136
   - @jamsr-ui/hooks@0.0.61
   - @jamsr-ui/shared-icons@0.0.71
-  - @jamsr-ui/styles@0.0.20
+  - @jamsr-ui/config@0.0.20
 
 ## 0.1.223
 
@@ -193,7 +193,7 @@
 - fix: avatar, link
 - Updated dependencies
   - @jamsr-ui/editor@0.0.132
-  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/config@0.0.19
   - @jamsr-ui/react@0.0.238
   - @jamsr-ui/utils@0.0.78
   - @jamsr-ui/charts@0.0.10
@@ -307,7 +307,7 @@
   - @jamsr-ui/hooks@0.0.56
   - @jamsr-ui/react@0.0.225
   - @jamsr-ui/shared-icons@0.0.69
-  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/config@0.0.18
   - @jamsr-ui/theme@0.0.80
   - @jamsr-ui/utils@0.0.75
 
@@ -333,7 +333,7 @@
 
 - fix treeshake
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/config@0.0.17
   - @jamsr-ui/react@0.0.222
   - @jamsr-ui/hooks@0.0.55
   - @jamsr-ui/shared-icons@0.0.68
@@ -363,7 +363,7 @@
   - @jamsr-ui/hooks@0.0.54
   - @jamsr-ui/react@0.0.219
   - @jamsr-ui/shared-icons@0.0.67
-  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/config@0.0.16
   - @jamsr-ui/theme@0.0.78
   - @jamsr-ui/utils@0.0.72
 
@@ -378,7 +378,7 @@
   - @jamsr-ui/hooks@0.0.53
   - @jamsr-ui/react@0.0.218
   - @jamsr-ui/shared-icons@0.0.66
-  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/config@0.0.15
   - @jamsr-ui/theme@0.0.77
   - @jamsr-ui/utils@0.0.71
 
@@ -449,7 +449,7 @@
   - @jamsr-ui/core@0.0.44
   - @jamsr-ui/react@0.0.209
   - @jamsr-ui/shared-icons@0.0.65
-  - @jamsr-ui/styles@0.0.14
+  - @jamsr-ui/config@0.0.14
   - @jamsr-ui/theme@0.0.76
 
 ## 0.1.190
@@ -481,7 +481,7 @@
   - @jamsr-ui/hooks@0.0.51
   - @jamsr-ui/react@0.0.206
   - @jamsr-ui/shared-icons@0.0.64
-  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/config@0.0.13
   - @jamsr-ui/utils@0.0.68
 
 ## 0.1.187
@@ -503,7 +503,7 @@
   - @jamsr-ui/hooks@0.0.50
   - @jamsr-ui/react@0.0.204
   - @jamsr-ui/shared-icons@0.0.63
-  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/config@0.0.12
   - @jamsr-ui/utils@0.0.67
 
 ## 0.1.185
@@ -538,7 +538,7 @@
 - Updated dependencies
   - @jamsr-ui/dnd@0.0.12
   - @jamsr-ui/shared-icons@0.0.61
-  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/config@0.0.11
   - @jamsr-ui/hooks@0.0.49
   - @jamsr-ui/react@0.0.200
   - @jamsr-ui/theme@0.0.71
@@ -553,7 +553,7 @@
 - Updated dependencies
   - @jamsr-ui/dnd@0.0.11
   - @jamsr-ui/shared-icons@0.0.60
-  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/config@0.0.10
   - @jamsr-ui/hooks@0.0.48
   - @jamsr-ui/react@0.0.199
   - @jamsr-ui/theme@0.0.70
@@ -627,7 +627,7 @@
   - @jamsr-ui/dnd@0.0.10
   - @jamsr-ui/hooks@0.0.45
   - @jamsr-ui/shared-icons@0.0.59
-  - @jamsr-ui/styles@0.0.9
+  - @jamsr-ui/config@0.0.9
 
 ## 0.1.172
 
@@ -715,7 +715,7 @@
   - @jamsr-ui/hooks@0.0.43
   - @jamsr-ui/react@0.0.181
   - @jamsr-ui/shared-icons@0.0.57
-  - @jamsr-ui/styles@0.0.8
+  - @jamsr-ui/config@0.0.8
   - @jamsr-ui/utils@0.0.61
 
 ## 0.1.162
@@ -822,7 +822,7 @@
   - @jamsr-ui/hooks@0.0.42
   - @jamsr-ui/react@0.0.167
   - @jamsr-ui/shared-icons@0.0.55
-  - @jamsr-ui/styles@0.0.7
+  - @jamsr-ui/config@0.0.7
   - @jamsr-ui/theme@0.0.64
   - @jamsr-ui/utils@0.0.59
 
@@ -862,7 +862,7 @@
   - @jamsr-ui/hooks@0.0.41
   - @jamsr-ui/react@0.0.163
   - @jamsr-ui/shared-icons@0.0.54
-  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/config@0.0.6
   - @jamsr-ui/theme@0.0.62
   - @jamsr-ui/utils@0.0.56
 
@@ -886,7 +886,7 @@
   - @jamsr-ui/hooks@0.0.40
   - @jamsr-ui/react@0.0.161
   - @jamsr-ui/shared-icons@0.0.53
-  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/config@0.0.5
   - @jamsr-ui/theme@0.0.60
   - @jamsr-ui/utils@0.0.55
 
@@ -923,7 +923,7 @@
 
 - fix
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.4
+  - @jamsr-ui/config@0.0.4
   - @jamsr-ui/react@0.0.156
   - @jamsr-ui/theme@0.0.59
   - @jamsr-ui/utils@0.0.54

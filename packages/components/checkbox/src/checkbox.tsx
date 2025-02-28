@@ -5,7 +5,7 @@ import {
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   dataAttr,
   deepMergeProps,

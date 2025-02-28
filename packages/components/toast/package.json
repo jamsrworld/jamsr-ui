@@ -9,7 +9,7 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^",
     "react-hot-toast": "^2.4.1"
   },
@@ -17,12 +17,12 @@
     "@jamsr-ui/button": "workspace:^",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "peerDependencies": {
-    "react": ">=19",
-    "react-dom": ">=19"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "clean-package": "../../../clean-package.config.json"
 }

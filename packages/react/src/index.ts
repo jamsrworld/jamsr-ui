@@ -162,8 +162,8 @@ export { Stepper, type StepperProps } from "@jamsr-ui/stepper";
 export {
   UIConfigProvider,
   useUIConfig,
-  type UIStylesType,
-} from "@jamsr-ui/styles";
+  type UIConfigType,
+} from "@jamsr-ui/config";
 export { Switch, type SwitchProps } from "@jamsr-ui/switch";
 export { Tab, Tabs, type TabProps, type TabsProps } from "@jamsr-ui/tab";
 export {

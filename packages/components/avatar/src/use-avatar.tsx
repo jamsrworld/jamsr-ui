@@ -1,5 +1,5 @@
 import { AvatarIcon } from "@jamsr-ui/shared-icons";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   deepMergeProps,

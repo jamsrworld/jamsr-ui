@@ -19,7 +19,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.1.0
   - @jamsr-ui/shared-icons@0.1.0
-  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/config@0.1.0
   - @jamsr-ui/utils@0.1.0
 
 ## 0.0.118
@@ -62,7 +62,7 @@
 - feat: tailwind 4
 - Updated dependencies
   - @jamsr-ui/shared-icons@0.0.72
-  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/config@0.0.21
   - @jamsr-ui/hooks@0.0.62
   - @jamsr-ui/utils@0.0.80
 
@@ -75,7 +75,7 @@
   - @jamsr-ui/utils@0.0.79
   - @jamsr-ui/hooks@0.0.61
   - @jamsr-ui/shared-icons@0.0.71
-  - @jamsr-ui/styles@0.0.20
+  - @jamsr-ui/config@0.0.20
 
 ## 0.0.112
 
@@ -83,7 +83,7 @@
 
 - fix: avatar, link
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/config@0.0.19
   - @jamsr-ui/utils@0.0.78
   - @jamsr-ui/hooks@0.0.60
 
@@ -133,7 +133,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.56
   - @jamsr-ui/shared-icons@0.0.69
-  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/config@0.0.18
   - @jamsr-ui/utils@0.0.75
 
 ## 0.0.105
@@ -149,7 +149,7 @@
 
 - fix treeshake
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/config@0.0.17
   - @jamsr-ui/hooks@0.0.55
   - @jamsr-ui/shared-icons@0.0.68
   - @jamsr-ui/utils@0.0.73
@@ -162,7 +162,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.54
   - @jamsr-ui/shared-icons@0.0.67
-  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/config@0.0.16
   - @jamsr-ui/utils@0.0.72
 
 ## 0.0.102
@@ -173,7 +173,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.53
   - @jamsr-ui/shared-icons@0.0.66
-  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/config@0.0.15
   - @jamsr-ui/utils@0.0.71
 
 ## 0.0.101
@@ -197,7 +197,7 @@
   - @jamsr-ui/hooks@0.0.52
   - @jamsr-ui/utils@0.0.70
   - @jamsr-ui/shared-icons@0.0.65
-  - @jamsr-ui/styles@0.0.14
+  - @jamsr-ui/config@0.0.14
 
 ## 0.0.98
 
@@ -221,7 +221,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.51
   - @jamsr-ui/shared-icons@0.0.64
-  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/config@0.0.13
   - @jamsr-ui/utils@0.0.68
 
 ## 0.0.95
@@ -238,7 +238,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.50
   - @jamsr-ui/shared-icons@0.0.63
-  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/config@0.0.12
   - @jamsr-ui/utils@0.0.67
 
 ## 0.0.93
@@ -256,7 +256,7 @@
 - react 19
 - Updated dependencies
   - @jamsr-ui/shared-icons@0.0.61
-  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/config@0.0.11
   - @jamsr-ui/hooks@0.0.49
   - @jamsr-ui/utils@0.0.66
 
@@ -267,7 +267,7 @@
 - react 19
 - Updated dependencies
   - @jamsr-ui/shared-icons@0.0.60
-  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/config@0.0.10
   - @jamsr-ui/hooks@0.0.48
   - @jamsr-ui/utils@0.0.65
 
@@ -296,7 +296,7 @@
   - @jamsr-ui/utils@0.0.64
   - @jamsr-ui/hooks@0.0.45
   - @jamsr-ui/shared-icons@0.0.59
-  - @jamsr-ui/styles@0.0.9
+  - @jamsr-ui/config@0.0.9
 
 ## 0.0.87
 
@@ -331,7 +331,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.43
   - @jamsr-ui/shared-icons@0.0.57
-  - @jamsr-ui/styles@0.0.8
+  - @jamsr-ui/config@0.0.8
   - @jamsr-ui/utils@0.0.61
 
 ## 0.0.83
@@ -380,7 +380,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.42
   - @jamsr-ui/shared-icons@0.0.55
-  - @jamsr-ui/styles@0.0.7
+  - @jamsr-ui/config@0.0.7
   - @jamsr-ui/utils@0.0.59
 
 ## 0.0.76
@@ -405,7 +405,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.41
   - @jamsr-ui/shared-icons@0.0.54
-  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/config@0.0.6
   - @jamsr-ui/utils@0.0.56
 
 ## 0.0.73
@@ -416,7 +416,7 @@
 - Updated dependencies
   - @jamsr-ui/hooks@0.0.40
   - @jamsr-ui/shared-icons@0.0.53
-  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/config@0.0.5
   - @jamsr-ui/utils@0.0.55
 
 ## 0.0.72

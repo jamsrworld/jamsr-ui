@@ -2,6 +2,6 @@
 
 export {
   UIConfigProvider,
-  type UIStylesType,
+  type UIConfigType,
   useUIConfig,
 } from "./styles-provider";

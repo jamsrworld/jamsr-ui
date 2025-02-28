@@ -1,5 +1,5 @@
 {
-  "name": "@jamsr-ui/styles",
+  "name": "@jamsr-ui/config",
   "version": "0.1.0",
   "main": "./src/index.ts",
   "sideEffects": false,
@@ -13,15 +13,15 @@
     "@types/node": "^22.12.0",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": ">=19",
-    "react-dom": ">=19",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "tailwindcss": "^4.0.1",
     "tw-colors": "^3.3.1",
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "react": ">=19",
-    "react-dom": ">=19"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "clean-package": "../../clean-package.config.json"
 }

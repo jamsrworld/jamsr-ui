@@ -1,7 +1,7 @@
 import { useListItem } from "@floating-ui/react";
 import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
 import { CheckIcon } from "@jamsr-ui/shared-icons";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import type { ComponentPropsWithAs } from "@jamsr-ui/utils";
 import { dataAttr, deepMergeProps } from "@jamsr-ui/utils";
 import { useAutocompleteContext } from "./use-autocomplete-context";

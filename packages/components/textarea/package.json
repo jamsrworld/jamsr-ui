@@ -26,15 +26,15 @@
     "@types/react": "19.0.1",
     "@types/node": "^22.12.0",
     "clean-package": "^2.2.0",
-    "react-dom": ">=19",
-    "react": ">=19"
+    "react-dom": "catalog:",
+    "react": "catalog:"
   },
   "peerDependencies": {
-    "react-dom": ">=19",
-    "react": ">=19"
+    "react-dom": "catalog:",
+    "react": "catalog:"
   },
   "dependencies": {
-    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/input": "workspace:^",

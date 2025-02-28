@@ -1,121 +1,39 @@
-const { resolve } = require("node:path");
+import js from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier";
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import { config as baseConfig } from "./base.js";
 
-const project = resolve(process.cwd(), "tsconfig.json");
-
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  extends: [
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-    "plugin:tailwindcss/recommended",
-    "eslint:recommended",
-    "airbnb",
-    "airbnb-base",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "prettier",
-  ],
-  globals: {
-    React: true,
-    JSX: true,
-  },
-  env: {
-    node: true,
-    browser: true,
-  },
-  settings: {
-    "import/resolver": {
-      typescript: {
-        project,
+/**
+ * A custom ESLint configuration for libraries that use React.
+ *
+ * @type {import("eslint").Linter.Config} */
+export const config = [
+  ...baseConfig,
+  js.configs.recommended,
+  eslintConfigPrettier,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
+  {
+    languageOptions: {
+      ...pluginReact.configs.flat.recommended.languageOptions,
+      globals: {
+        ...globals.serviceworker,
+        ...globals.browser,
       },
     },
-    tailwindcss: {
-      // These are the default values but feel free to customize
-      callees: ["classnames", "clsx", "cn", "tv"],
-      cssFiles: [
-        "**/*.css",
-        "!**/node_modules",
-        "!**/.*",
-        "!**/dist",
-        "!**/build",
-      ],
-      cssFilesRefreshRate: 5_000,
-      removeDuplicates: true,
-      skipClassAttribute: false,
-      whitelist: [],
-      tags: [], // can be set to e.g. ['tw'] for use in tw`bg-blue`
-      classRegex: "^class(Name)?$", // can be modified to support custom attributes. E.g. "^tw$" for `twin.macro`
+  },
+  {
+    plugins: {
+      "react-hooks": pluginReactHooks,
+    },
+    settings: { react: { version: "detect" } },
+    rules: {
+      ...pluginReactHooks.configs.recommended.rules,
+      // React scope no longer necessary with new JSX transform.
+      "react/react-in-jsx-scope": "off",
     },
   },
-  ignorePatterns: [
-    // Ignore dotfiles
-    ".*.js",
-    "node_modules/",
-  ],
-  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
-  rules: {
-    "@typescript-eslint/array-type": "off",
-    "@typescript-eslint/consistent-type-definitions": "off",
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      {
-        prefer: "type-imports",
-        fixStyle: "inline-type-imports",
-      },
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      {
-        argsIgnorePattern: "^_",
-      },
-    ],
-    "@typescript-eslint/no-misused-promises": [
-      "error",
-      {
-        checksVoidReturn: {
-          attributes: false,
-        },
-      },
-    ],
-    "import/prefer-default-export": "off",
-    "react/function-component-definition": "off",
-    "react/jsx-props-no-spreading": "off",
-    "import/no-extraneous-dependencies": "off",
-    "arrow-body-style": "off",
-    "@typescript-eslint/no-shadow": "off",
-    "no-array-index-key": "off",
-    "no-param-reassign": "off",
-    "react/require-default-props": "off",
-    "@typescript-eslint/await-thenable": "error",
-    "@typescript-eslint/no-floating-promises": "error",
-    "@typescript-eslint/no-misused-promises": "error",
-    "@typescript-eslint/promise-function-async": "error",
-    "@typescript-eslint/require-await": "error",
-    "react/no-unescaped-entities": "off",
-    "react/no-array-index-key": "off",
-    "@typescript-eslint/no-unused-expressions": "off",
-    "no-underscore-dangle": "off",
-    "no-console": "off",
-    "no-void": "off",
-    "no-nested-ternary": "off",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        js: "never",
-        jsx: "never",
-        ts: "never",
-        tsx: "never",
-      },
-    ],
-    "@typescript-eslint/no-explicit-any": "off",
-    "react/prop-types": "off",
-    "@typescript-eslint/promise-function-async": "off",
-    "react/static-property-placement": "off",
-    "class-methods-use-this": "off",
-    "@typescript-eslint/naming-convention": "off",
-    "@typescript-eslint/no-empty-interface": "off",
-  },
-};
+];

@@ -1,4 +1,4 @@
 {
   "extends": "@jamsr-ui/typescript-config/base.json",
-  "include": [".eslintrc.cjs", "prettier.config.cjs"]
+  "include": ["eslint", "prettier.config.cjs"]
 }

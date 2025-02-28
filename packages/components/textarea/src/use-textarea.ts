@@ -21,7 +21,7 @@ import {
 } from "@jamsr-ui/utils";
 import { useCallback, type ComponentProps } from "react";
 
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import { type TextareaSlots, type TextareaVariantProps } from "./style";
 
 type Props = {

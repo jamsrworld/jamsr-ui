@@ -8,7 +8,7 @@ import {
   DialogHeader,
 } from "@jamsr-ui/dialog";
 import { Divider } from "@jamsr-ui/divider";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import { Text } from "@jamsr-ui/text";
 import { cn, deepMergeProps } from "@jamsr-ui/utils";
 import { useConfirmation } from "./use-confirmation";

@@ -13,12 +13,12 @@
     "@types/react": "19.0.1",
     "@types/node": "^22.12.0",
     "clean-package": "^2.2.0",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "peerDependencies": {
-    "react": ">=19",
-    "react-dom": ">=19"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.16",
@@ -27,7 +27,7 @@
     "@jamsr-ui/hooks": "workspace:^",
     "@jamsr-ui/input": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
-    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "clean-package": "../../../clean-package.config.json"

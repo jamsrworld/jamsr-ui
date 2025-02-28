@@ -15,7 +15,7 @@ import {
   useRole,
   type Placement,
 } from "@floating-ui/react";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   deepMergeProps,

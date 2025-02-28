@@ -5,8 +5,8 @@ import {
   type CardProps,
 } from ".";
 
-declare module "@jamsr-ui/styles" {
-  export interface UIStylesType {
+declare module "@jamsr-ui/config" {
+  export interface UIConfigType {
     card?: Partial<CardProps>;
     cardHeader?: Partial<CardHeaderProps>;
     cardFooter?: Partial<CardFooterProps>;

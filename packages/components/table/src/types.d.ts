@@ -7,8 +7,8 @@ import {
   type TableRowProps,
 } from ".";
 
-declare module "@jamsr-ui/styles" {
-  export interface UIStylesType {
+declare module "@jamsr-ui/config" {
+  export interface UIConfigType {
     table?: Partial<TableProps>;
     tableBody?: Partial<TableBodyProps>;
     tableCell?: Partial<TableCellProps>;

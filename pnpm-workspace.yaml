@@ -1,3 +1,10 @@
 packages:
   - "apps/*"
   - "packages/**/*"
+
+catalog:
+  react: ">=19"
+  react-dom: ">=19"
+  next: ">=15"
+  framer-motion: ">=12"
+  "@tanstack/react-table": ">=8"

@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useFloatingTree, useListItem } from "@floating-ui/react";
 import { useHover, useMergeRefs } from "@jamsr-ui/hooks";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   dataAttr,

@@ -10,11 +10,11 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@tanstack/react-table": ">=8",
+    "@tanstack/react-table": "catalog:",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {
@@ -26,14 +26,14 @@
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
-    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/table": "workspace:^",
     "@jamsr-ui/text": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {
-    "@tanstack/react-table": ">=8",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "@tanstack/react-table": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   }
 }

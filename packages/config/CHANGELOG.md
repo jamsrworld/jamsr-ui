@@ -1,4 +1,4 @@
-# @jamsr-ui/styles
+# @jamsr-ui/config
 
 ## 0.1.0
 

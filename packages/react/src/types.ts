@@ -62,8 +62,8 @@ import { type TooltipProps } from "@jamsr-ui/tooltip";
 
 type WithProps<T> = Partial<T> & { props?: (props: Partial<T>) => Partial<T> };
 
-declare module "@jamsr-ui/styles" {
-  export interface UIStylesType {
+declare module "@jamsr-ui/config" {
+  export interface UIConfigType {
     copyToClipboard?: WithProps<CopyToClipboardProps>;
     accordion?: WithProps<AccordionProps>;
     accordionItem?: WithProps<AccordionItemProps>;
@@ -119,9 +119,5 @@ declare module "@jamsr-ui/styles" {
     textarea?: WithProps<TextareaProps>;
     tooltip?: WithProps<TooltipProps>;
     stepper?: WithProps<StepperProps>;
-    next?: {
-      avatar?: WithProps<AvatarProps>;
-      link?: WithProps<LinkProps>;
-    };
   }
 }

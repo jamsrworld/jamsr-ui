@@ -5,7 +5,7 @@ import {
   type PropGetter,
   type UIProps,
 } from "@jamsr-ui/utils";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import { link, type LinkVariants } from "./styles";
 
 interface Props {}

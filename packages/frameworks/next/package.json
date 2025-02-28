@@ -11,20 +11,20 @@
   "devDependencies": {
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "next": ">=15",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "peerDependencies": {
-    "next": ">=15",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {
     "@jamsr-ui/avatar": "workspace:^",
     "@jamsr-ui/link": "workspace:^",
-    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"
   }
 }

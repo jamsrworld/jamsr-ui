@@ -146,7 +146,7 @@
   - @jamsr-ui/toast@0.1.0
   - @jamsr-ui/tooltip@0.1.0
   - @jamsr-ui/core@0.1.0
-  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/config@0.1.0
   - @jamsr-ui/utils@0.1.0
 
 ## 0.0.247
@@ -408,7 +408,7 @@
   - @jamsr-ui/kbd@0.0.21
   - @jamsr-ui/rhf@0.0.83
   - @jamsr-ui/tab@0.0.111
-  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/config@0.0.21
   - @jamsr-ui/theme@0.0.83
   - @jamsr-ui/utils@0.0.80
   - @jamsr-ui/core@0.0.50
@@ -468,7 +468,7 @@
   - @jamsr-ui/textarea@0.0.125
   - @jamsr-ui/toast@0.0.45
   - @jamsr-ui/tooltip@0.0.87
-  - @jamsr-ui/styles@0.0.20
+  - @jamsr-ui/config@0.0.20
 
 ## 0.0.241
 
@@ -550,7 +550,7 @@
   - @jamsr-ui/text@0.0.9
   - @jamsr-ui/kbd@0.0.19
   - @jamsr-ui/tab@0.0.109
-  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/config@0.0.19
   - @jamsr-ui/utils@0.0.78
   - @jamsr-ui/rhf@0.0.78
   - @jamsr-ui/data-table@0.0.87
@@ -922,7 +922,7 @@
   - @jamsr-ui/toast@0.0.41
   - @jamsr-ui/tooltip@0.0.80
   - @jamsr-ui/core@0.0.48
-  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/config@0.0.18
   - @jamsr-ui/theme@0.0.80
   - @jamsr-ui/utils@0.0.75
 
@@ -993,7 +993,7 @@
 - Updated dependencies
   - @jamsr-ui/editor@0.0.120
   - @jamsr-ui/input@0.0.110
-  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/config@0.0.17
   - @jamsr-ui/accordion@0.0.90
   - @jamsr-ui/alert@0.0.97
   - @jamsr-ui/autocomplete@0.0.119
@@ -1112,7 +1112,7 @@
   - @jamsr-ui/toast@0.0.38
   - @jamsr-ui/tooltip@0.0.77
   - @jamsr-ui/core@0.0.46
-  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/config@0.0.16
   - @jamsr-ui/theme@0.0.78
   - @jamsr-ui/utils@0.0.72
 
@@ -1169,7 +1169,7 @@
   - @jamsr-ui/toast@0.0.37
   - @jamsr-ui/tooltip@0.0.76
   - @jamsr-ui/core@0.0.45
-  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/config@0.0.15
   - @jamsr-ui/theme@0.0.77
   - @jamsr-ui/utils@0.0.71
 
@@ -1348,7 +1348,7 @@
   - @jamsr-ui/tooltip@0.0.75
   - @jamsr-ui/typography@0.0.83
   - @jamsr-ui/core@0.0.44
-  - @jamsr-ui/styles@0.0.14
+  - @jamsr-ui/config@0.0.14
   - @jamsr-ui/theme@0.0.76
 
 ## 0.0.208
@@ -1488,7 +1488,7 @@
   - @jamsr-ui/tooltip@0.0.73
   - @jamsr-ui/typography@0.0.80
   - @jamsr-ui/core@0.0.43
-  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/config@0.0.13
   - @jamsr-ui/utils@0.0.68
 
 ## 0.0.205
@@ -1555,7 +1555,7 @@
   - @jamsr-ui/tooltip@0.0.72
   - @jamsr-ui/typography@0.0.79
   - @jamsr-ui/core@0.0.42
-  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/config@0.0.12
   - @jamsr-ui/utils@0.0.67
 
 ## 0.0.203
@@ -1676,7 +1676,7 @@
   - @jamsr-ui/kbd@0.0.7
   - @jamsr-ui/rhf@0.0.45
   - @jamsr-ui/tab@0.0.93
-  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/config@0.0.11
   - @jamsr-ui/theme@0.0.71
   - @jamsr-ui/utils@0.0.66
   - @jamsr-ui/core@0.0.41
@@ -1731,7 +1731,7 @@
   - @jamsr-ui/kbd@0.0.6
   - @jamsr-ui/rhf@0.0.44
   - @jamsr-ui/tab@0.0.92
-  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/config@0.0.10
   - @jamsr-ui/theme@0.0.70
   - @jamsr-ui/utils@0.0.65
   - @jamsr-ui/core@0.0.40
@@ -1928,7 +1928,7 @@
   - @jamsr-ui/rating@0.0.28
   - @jamsr-ui/repeater@0.0.37
   - @jamsr-ui/show@0.0.2
-  - @jamsr-ui/styles@0.0.9
+  - @jamsr-ui/config@0.0.9
 
 ## 0.0.190
 
@@ -2182,7 +2182,7 @@
   - @jamsr-ui/tooltip@0.0.64
   - @jamsr-ui/typography@0.0.72
   - @jamsr-ui/core@0.0.37
-  - @jamsr-ui/styles@0.0.8
+  - @jamsr-ui/config@0.0.8
   - @jamsr-ui/utils@0.0.61
 
 ## 0.0.180
@@ -2452,7 +2452,7 @@
   - @jamsr-ui/tooltip@0.0.62
   - @jamsr-ui/typography@0.0.70
   - @jamsr-ui/core@0.0.36
-  - @jamsr-ui/styles@0.0.7
+  - @jamsr-ui/config@0.0.7
   - @jamsr-ui/theme@0.0.64
   - @jamsr-ui/utils@0.0.59
 
@@ -2605,7 +2605,7 @@
   - @jamsr-ui/tooltip@0.0.59
   - @jamsr-ui/typography@0.0.67
   - @jamsr-ui/core@0.0.35
-  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/config@0.0.6
   - @jamsr-ui/theme@0.0.62
   - @jamsr-ui/utils@0.0.56
 
@@ -2669,7 +2669,7 @@
   - @jamsr-ui/tooltip@0.0.58
   - @jamsr-ui/typography@0.0.66
   - @jamsr-ui/core@0.0.34
-  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/config@0.0.5
   - @jamsr-ui/theme@0.0.60
   - @jamsr-ui/utils@0.0.55
 
@@ -2723,7 +2723,7 @@
   - @jamsr-ui/input@0.0.72
   - @jamsr-ui/table@0.0.37
   - @jamsr-ui/card@0.0.69
-  - @jamsr-ui/styles@0.0.4
+  - @jamsr-ui/config@0.0.4
   - @jamsr-ui/utils@0.0.54
   - @jamsr-ui/rhf@0.0.9
   - @jamsr-ui/alert@0.0.73

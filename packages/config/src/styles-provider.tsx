@@ -1,18 +1,18 @@
 import { createContext, useContext } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface UIStylesType {
+export interface UIConfigType {
   globalConfig?: {
     radius?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
   };
 }
-const UIStyleContext = createContext<UIStylesType>(
-  {} as unknown as UIStylesType,
+const UIStyleContext = createContext<UIConfigType>(
+  {} as unknown as UIConfigType,
 );
 
 type Props = {
   children: React.ReactNode;
-} & UIStylesType;
+} & UIConfigType;
 
 export const UIConfigProvider = (props: Props) => {
   const { children, ...restProps } = props;
@@ -23,7 +23,7 @@ export const UIConfigProvider = (props: Props) => {
   );
 };
 
-export const useUIConfig = (): UIStylesType => {
+export const useUIConfig = (): UIConfigType => {
   const context = useContext(UIStyleContext);
   if (!context) {
     throw new Error("useUIConfig must be used within a UIStyleProvider");

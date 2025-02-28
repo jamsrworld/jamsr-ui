@@ -2,7 +2,7 @@ import {
   Avatar as BaseAvatar,
   AvatarProps as BaseAvatarProps,
 } from "@jamsr-ui/avatar";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
 import Image, { type ImageProps } from "next/image";
 

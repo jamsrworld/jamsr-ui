@@ -1,5 +1,5 @@
 import { Link as BaseLink, LinkProps as BaseLinkProps } from "@jamsr-ui/link";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
 import NexLink, { LinkProps as NexLinkProps } from "next/link";
 

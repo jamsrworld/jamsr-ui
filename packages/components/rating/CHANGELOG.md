@@ -18,7 +18,7 @@
   - @jamsr-ui/repeater@0.1.0
   - @jamsr-ui/hooks@0.1.0
   - @jamsr-ui/shared-icons@0.1.0
-  - @jamsr-ui/styles@0.1.0
+  - @jamsr-ui/config@0.1.0
 
 ## 0.0.53
 
@@ -54,7 +54,7 @@
 - Updated dependencies
   - @jamsr-ui/repeater@0.0.48
   - @jamsr-ui/shared-icons@0.0.72
-  - @jamsr-ui/styles@0.0.21
+  - @jamsr-ui/config@0.0.21
   - @jamsr-ui/hooks@0.0.62
 
 ## 0.0.48
@@ -66,7 +66,7 @@
   - @jamsr-ui/repeater@0.0.47
   - @jamsr-ui/hooks@0.0.61
   - @jamsr-ui/shared-icons@0.0.71
-  - @jamsr-ui/styles@0.0.20
+  - @jamsr-ui/config@0.0.20
 
 ## 0.0.47
 
@@ -74,7 +74,7 @@
 
 - fix: avatar, link
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.19
+  - @jamsr-ui/config@0.0.19
   - @jamsr-ui/hooks@0.0.60
 
 ## 0.0.46
@@ -115,7 +115,7 @@
   - @jamsr-ui/repeater@0.0.46
   - @jamsr-ui/hooks@0.0.56
   - @jamsr-ui/shared-icons@0.0.69
-  - @jamsr-ui/styles@0.0.18
+  - @jamsr-ui/config@0.0.18
 
 ## 0.0.41
 
@@ -123,7 +123,7 @@
 
 - fix treeshake
 - Updated dependencies
-  - @jamsr-ui/styles@0.0.17
+  - @jamsr-ui/config@0.0.17
   - @jamsr-ui/repeater@0.0.45
   - @jamsr-ui/hooks@0.0.55
   - @jamsr-ui/shared-icons@0.0.68
@@ -137,7 +137,7 @@
   - @jamsr-ui/repeater@0.0.44
   - @jamsr-ui/hooks@0.0.54
   - @jamsr-ui/shared-icons@0.0.67
-  - @jamsr-ui/styles@0.0.16
+  - @jamsr-ui/config@0.0.16
 
 ## 0.0.39
 
@@ -148,7 +148,7 @@
   - @jamsr-ui/repeater@0.0.43
   - @jamsr-ui/hooks@0.0.53
   - @jamsr-ui/shared-icons@0.0.66
-  - @jamsr-ui/styles@0.0.15
+  - @jamsr-ui/config@0.0.15
 
 ## 0.0.38
 
@@ -159,7 +159,7 @@
   - @jamsr-ui/hooks@0.0.52
   - @jamsr-ui/repeater@0.0.42
   - @jamsr-ui/shared-icons@0.0.65
-  - @jamsr-ui/styles@0.0.14
+  - @jamsr-ui/config@0.0.14
 
 ## 0.0.37
 
@@ -182,7 +182,7 @@
   - @jamsr-ui/repeater@0.0.41
   - @jamsr-ui/hooks@0.0.51
   - @jamsr-ui/shared-icons@0.0.64
-  - @jamsr-ui/styles@0.0.13
+  - @jamsr-ui/config@0.0.13
 
 ## 0.0.34
 
@@ -193,7 +193,7 @@
   - @jamsr-ui/repeater@0.0.40
   - @jamsr-ui/hooks@0.0.50
   - @jamsr-ui/shared-icons@0.0.63
-  - @jamsr-ui/styles@0.0.12
+  - @jamsr-ui/config@0.0.12
 
 ## 0.0.33
 
@@ -210,7 +210,7 @@
 - Updated dependencies
   - @jamsr-ui/repeater@0.0.39
   - @jamsr-ui/shared-icons@0.0.61
-  - @jamsr-ui/styles@0.0.11
+  - @jamsr-ui/config@0.0.11
   - @jamsr-ui/hooks@0.0.49
 
 ## 0.0.31
@@ -221,7 +221,7 @@
 - Updated dependencies
   - @jamsr-ui/repeater@0.0.38
   - @jamsr-ui/shared-icons@0.0.60
-  - @jamsr-ui/styles@0.0.10
+  - @jamsr-ui/config@0.0.10
   - @jamsr-ui/hooks@0.0.48
 
 ## 0.0.30
@@ -249,7 +249,7 @@
   - @jamsr-ui/repeater@0.0.37
   - @jamsr-ui/hooks@0.0.45
   - @jamsr-ui/shared-icons@0.0.59
-  - @jamsr-ui/styles@0.0.9
+  - @jamsr-ui/config@0.0.9
 
 ## 0.0.27
 
@@ -284,7 +284,7 @@
   - @jamsr-ui/repeater@0.0.34
   - @jamsr-ui/hooks@0.0.43
   - @jamsr-ui/shared-icons@0.0.57
-  - @jamsr-ui/styles@0.0.8
+  - @jamsr-ui/config@0.0.8
 
 ## 0.0.23
 
@@ -318,7 +318,7 @@
   - @jamsr-ui/repeater@0.0.31
   - @jamsr-ui/hooks@0.0.42
   - @jamsr-ui/shared-icons@0.0.55
-  - @jamsr-ui/styles@0.0.7
+  - @jamsr-ui/config@0.0.7
 
 ## 0.0.19
 
@@ -335,7 +335,7 @@
   - @jamsr-ui/repeater@0.0.30
   - @jamsr-ui/hooks@0.0.41
   - @jamsr-ui/shared-icons@0.0.54
-  - @jamsr-ui/styles@0.0.6
+  - @jamsr-ui/config@0.0.6
 
 ## 0.0.17
 
@@ -346,7 +346,7 @@
   - @jamsr-ui/repeater@0.0.29
   - @jamsr-ui/hooks@0.0.40
   - @jamsr-ui/shared-icons@0.0.53
-  - @jamsr-ui/styles@0.0.5
+  - @jamsr-ui/config@0.0.5
 
 ## 0.0.16
 

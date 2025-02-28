@@ -1,5 +1,5 @@
 import { Avatar } from "@jamsr-ui/react";
-import { UIConfigProvider } from "@jamsr-ui/styles";
+import { UIConfigProvider } from "@jamsr-ui/config";
 import NextImage, { ImageProps } from "next/image";
 import Image from "~/avatar.png";
 

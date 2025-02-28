@@ -19,7 +19,7 @@ import {
   type Placement,
 } from "@floating-ui/react";
 import { useControlledState } from "@jamsr-ui/hooks";
-import { useUIConfig } from "@jamsr-ui/styles";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   deepMergeProps,

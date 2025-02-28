@@ -16,10 +16,10 @@
     "@types/node": "22.7.9",
     "@types/react": "19.0.1",
     "clean-package": "^2.2.0",
-    "framer-motion": ">=12",
+    "framer-motion": "catalog:",
     "postcss": "^8.4.38",
-    "react": ">=19",
-    "react-dom": ">=19",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "typescript": "^5.4.5"
   },
   "dependencies": {
@@ -61,7 +61,7 @@
     "@jamsr-ui/sidebar": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
     "@jamsr-ui/stepper": "workspace:^",
-    "@jamsr-ui/styles": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/switch": "workspace:^",
     "@jamsr-ui/tab": "workspace:^",
     "@jamsr-ui/table": "workspace:^",
@@ -74,8 +74,8 @@
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {
-    "framer-motion": ">=12",
-    "react": ">=19"
+    "framer-motion": "catalog:",
+    "react": "catalog:"
   },
   "clean-package": "../../clean-package.config.json"
 }

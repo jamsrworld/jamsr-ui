@@ -4,12 +4,14 @@ import { type VariantTypes } from "@/types/variants";
 import { readVariantCode } from "@/utils/read-code";
 import { type Metadata } from "next";
 import { RHFDemoAutocomplete } from "./examples/autocomplete";
+import { RHFDemoAutocompleteMulti } from "./examples/autocomplete-multi";
 import { RHFDemoCheckbox } from "./examples/checkbox";
 import { RHFDemoEditor } from "./examples/editor";
 import { RHFDemoFileUploadMulti } from "./examples/file-upload-multi";
 import { RHFDemoFileUploadMultiDefaultValue } from "./examples/file-upload-multi-default-value";
 import { RHFDemoFileUploadSingle } from "./examples/file-upload-single";
 import { RHFDemoFileUploadSingleDefaultValue } from "./examples/file-upload-single-default-value";
+import { RHFGlobalConfig } from "./examples/global-config";
 import { RHFDemoInput } from "./examples/input";
 import { RHFDemoOtpInput } from "./examples/otp-input";
 import { RHFDemoRadioGroup } from "./examples/radio-group";
@@ -19,8 +21,6 @@ import { RHFDemoSelectMulti } from "./examples/select-multi";
 import { RHFDemoSwitch } from "./examples/switch";
 import { RHFDemoTagsInput } from "./examples/tags-input";
 import { RHFDemoTextarea } from "./examples/textarea";
-import { RHFDemoAutocompleteMulti } from "./examples/autocomplete-multi";
-import { UIConfigProvider } from "@jamsr-ui/config";
 
 const title = "React Hook Form";
 const description =
@@ -102,6 +102,9 @@ const DragDropDndKit = () => {
         code={code("file-upload-multi-default-value")}
       >
         <RHFDemoFileUploadMultiDefaultValue />
+      </VariantWrapper>
+      <VariantWrapper heading="Global Config" code={code("global-config")}>
+        <RHFGlobalConfig />
       </VariantWrapper>
     </VariantPage>
   );

@@ -1,6 +1,8 @@
 "use client";
 
+import { useUIConfig } from "@jamsr-ui/config";
 import { Table, type TableProps } from "@jamsr-ui/table";
+import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
 import type { ColumnDef, RowData, TableOptions } from "@tanstack/react-table";
 import {
   getCoreRowModel,
@@ -28,7 +30,10 @@ export type DataTableProps = Partial<TableProps> & {
   options?: TableOptions<RowData>;
 };
 
-export const DataTable = (props: DataTableProps) => {
+export const DataTable = ($props: DataTableProps) => {
+  const { dataTable: _globalProps = {}, globalConfig } = useUIConfig();
+  const globalProps = mergeGlobalProps(_globalProps, $props);
+  const props = deepMergeProps(globalProps, $props, globalConfig);
   const {
     sorting: propSorting,
     columns,

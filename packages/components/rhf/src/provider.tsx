@@ -4,6 +4,7 @@ import {
   type FieldValues,
   type UseFormReturn,
 } from "react-hook-form";
+import { useUIRHFConfig } from "./context-provider";
 
 export type RHFProviderProps<
   TFieldValues extends FieldValues,
@@ -35,18 +36,23 @@ export const RHFProvider = <
     isPending,
     ...restProps
   } = props;
+  const { provider } = useUIRHFConfig();
   return (
     <FormProvider {...methods}>
       <form
         // eslint-disable-next-line @typescript-eslint/no-misused-promises
         onSubmit={onSubmit}
-        className="relative"
+        className={cn("relative", provider?.classNames?.form)}
         data-component="rhfForm"
         {...restProps}
       >
         <fieldset
           disabled={isPending || isDisabled}
-          className={cn("flex flex-col gap-4", className)}
+          className={cn(
+            "flex flex-col gap-4",
+            provider?.classNames?.fieldset,
+            className,
+          )}
           data-slot="fieldset"
         >
           {children}

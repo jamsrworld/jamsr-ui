@@ -1,5 +1,26 @@
 # @jamsr-ui/rhf
 
+## 0.1.6
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.1.3
+  - @jamsr-ui/checkbox@0.1.3
+  - @jamsr-ui/editor@0.1.4
+  - @jamsr-ui/file-upload-multi@0.1.2
+  - @jamsr-ui/file-upload-single@0.1.2
+  - @jamsr-ui/input@0.1.3
+  - @jamsr-ui/otp-input@0.1.2
+  - @jamsr-ui/radio@0.1.3
+  - @jamsr-ui/rating@0.1.2
+  - @jamsr-ui/select@0.1.3
+  - @jamsr-ui/switch@0.1.3
+  - @jamsr-ui/tags-input@0.1.4
+  - @jamsr-ui/textarea@0.1.3
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.1.5
 
 ### Patch Changes

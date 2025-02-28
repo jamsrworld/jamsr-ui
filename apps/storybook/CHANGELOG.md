@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.1.6
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/react@0.1.6
+
 ## 0.1.5
 
 ### Patch Changes

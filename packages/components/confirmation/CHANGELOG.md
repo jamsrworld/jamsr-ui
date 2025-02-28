@@ -1,5 +1,18 @@
 # @jamsr-ui/confirmation
 
+## 0.1.2
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/button@0.1.2
+  - @jamsr-ui/dialog@0.1.2
+  - @jamsr-ui/divider@0.1.2
+  - @jamsr-ui/text@0.1.2
+  - @jamsr-ui/config@0.1.1
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

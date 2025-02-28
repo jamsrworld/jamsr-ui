@@ -1,5 +1,18 @@
 # @jamsr-ui/input
 
+## 0.1.3
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/button@0.1.2
+  - @jamsr-ui/input@0.1.3
+  - @jamsr-ui/config@0.1.1
+  - @jamsr-ui/hooks@0.1.2
+  - @jamsr-ui/shared-icons@0.1.1
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.1.2
 
 ### Patch Changes

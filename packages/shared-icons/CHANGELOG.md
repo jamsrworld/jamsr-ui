@@ -1,5 +1,11 @@
 # @jamsr-ui/shared-icons
 
+## 0.1.1
+
+### Patch Changes
+
+- chore: update eslint
+
 ## 0.1.0
 
 ### Minor Changes

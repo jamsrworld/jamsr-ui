@@ -1,5 +1,17 @@
 # @jamsr-ui/icon-button
 
+## 0.1.2
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/circular-progress@0.1.2
+  - @jamsr-ui/ripple@0.1.2
+  - @jamsr-ui/config@0.1.1
+  - @jamsr-ui/hooks@0.1.2
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

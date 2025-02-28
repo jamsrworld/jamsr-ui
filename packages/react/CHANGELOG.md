@@ -1,5 +1,61 @@
 # @jamsr-ui/react
 
+## 0.1.6
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/accordion@0.1.2
+  - @jamsr-ui/alert@0.1.2
+  - @jamsr-ui/autocomplete@0.1.3
+  - @jamsr-ui/avatar@0.1.2
+  - @jamsr-ui/button@0.1.2
+  - @jamsr-ui/card@0.1.2
+  - @jamsr-ui/checkbox@0.1.3
+  - @jamsr-ui/chip@0.1.2
+  - @jamsr-ui/circular-progress@0.1.2
+  - @jamsr-ui/collapsible@0.1.2
+  - @jamsr-ui/confirmation@0.1.2
+  - @jamsr-ui/copy-to-clipboard@0.1.2
+  - @jamsr-ui/data-table@0.1.3
+  - @jamsr-ui/dialog@0.1.2
+  - @jamsr-ui/divider@0.1.2
+  - @jamsr-ui/dnd@0.1.1
+  - @jamsr-ui/drawer@1.1.2
+  - @jamsr-ui/editor@0.1.4
+  - @jamsr-ui/file-upload-multi@0.1.2
+  - @jamsr-ui/file-upload-single@0.1.2
+  - @jamsr-ui/header@0.1.2
+  - @jamsr-ui/icon-button@0.1.2
+  - @jamsr-ui/input@0.1.3
+  - @jamsr-ui/kbd@0.1.2
+  - @jamsr-ui/linear-progress@0.1.2
+  - @jamsr-ui/link@0.1.2
+  - @jamsr-ui/menu@0.1.2
+  - @jamsr-ui/otp-input@0.1.2
+  - @jamsr-ui/popover@0.1.2
+  - @jamsr-ui/radio@0.1.3
+  - @jamsr-ui/rating@0.1.2
+  - @jamsr-ui/repeater@0.1.1
+  - @jamsr-ui/ripple@0.1.2
+  - @jamsr-ui/select@0.1.3
+  - @jamsr-ui/sidebar@0.1.2
+  - @jamsr-ui/skeleton@0.1.2
+  - @jamsr-ui/stepper@0.1.2
+  - @jamsr-ui/switch@0.1.3
+  - @jamsr-ui/tab@0.1.3
+  - @jamsr-ui/table@0.1.2
+  - @jamsr-ui/tags-input@0.1.4
+  - @jamsr-ui/text@0.1.2
+  - @jamsr-ui/textarea@0.1.3
+  - @jamsr-ui/toast@0.1.2
+  - @jamsr-ui/tooltip@0.1.2
+  - @jamsr-ui/config@0.1.1
+  - @jamsr-ui/core@0.1.1
+  - @jamsr-ui/theme@0.1.2
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.1.5
 
 ### Patch Changes

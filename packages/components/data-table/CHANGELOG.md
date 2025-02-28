@@ -1,5 +1,24 @@
 # @jamsr-ui/data-table
 
+## 0.1.3
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/button@0.1.2
+  - @jamsr-ui/circular-progress@0.1.2
+  - @jamsr-ui/icon-button@0.1.2
+  - @jamsr-ui/linear-progress@0.1.2
+  - @jamsr-ui/repeater@0.1.1
+  - @jamsr-ui/select@0.1.3
+  - @jamsr-ui/skeleton@0.1.2
+  - @jamsr-ui/table@0.1.2
+  - @jamsr-ui/text@0.1.2
+  - @jamsr-ui/config@0.1.1
+  - @jamsr-ui/shared-icons@0.1.1
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.1.2
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # web
 
+## 0.2.7
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/charts@0.1.2
+  - @jamsr-ui/editor@0.1.4
+  - @jamsr-ui/rhf@0.1.6
+  - @jamsr-ui/config@0.1.1
+  - @jamsr-ui/next@0.1.4
+  - @jamsr-ui/hooks@0.1.2
+  - @jamsr-ui/react@0.1.6
+  - @jamsr-ui/shared-icons@0.1.1
+  - @jamsr-ui/theme@0.1.2
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.2.6
 
 ### Patch Changes

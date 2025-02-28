@@ -1,5 +1,14 @@
 # @jamsr-ui/circular-progress
 
+## 0.1.2
+
+### Patch Changes
+
+- chore: update eslint
+- Updated dependencies
+  - @jamsr-ui/config@0.1.1
+  - @jamsr-ui/utils@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

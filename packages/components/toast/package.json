@@ -11,11 +11,11 @@
   "dependencies": {
     "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/utils": "workspace:^",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
     "@jamsr-ui/button": "workspace:^",
-    "@types/react": "19.0.1",
+    "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
     "react": "catalog:",
     "react-dom": "catalog:"

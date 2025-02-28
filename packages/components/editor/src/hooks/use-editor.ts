@@ -137,6 +137,7 @@ export const useEditor = ($props: UseEditorProps) => {
         nocookie: true,
       }),
     ],
+    immediatelyRender: false,
     onCreate({ editor }) {
       if (value) {
         editor.commands.setContent(value);

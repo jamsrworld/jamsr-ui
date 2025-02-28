@@ -9,23 +9,23 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "color": "^4.2.3",
+    "color": "^5.0.0",
     "color2k": "^2.0.3",
     "deepmerge": "^4.3.1",
     "flat": "^6.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.9",
     "@types/color": "^4.2.0",
     "@types/flat": "^5.0.5",
-    "@types/node": "^22.12.0",
-    "@types/react": "19.0.1",
-    "postcss": "^8.5.1",
+    "@types/node": "^22.13.5",
+    "@types/react": "19.0.10",
+    "clean-package": "^2.2.0",
+    "postcss": "^8.5.3",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "tailwindcss": "^4.0.1",
-    "typescript": "^5.4.5",
-    "clean-package": "^2.2.0"
+    "tailwindcss": "^4.0.9",
+    "typescript": "^5.7.3"
   },
   "clean-package": "../../clean-package-css.config.json"
 }

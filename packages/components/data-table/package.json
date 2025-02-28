@@ -9,9 +9,9 @@
     "postpack": "clean-package restore"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
+    "@faker-js/faker": "^9.5.0",
     "@tanstack/react-table": "catalog:",
-    "@types/react": "19.0.1",
+    "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
     "react": "catalog:",
     "react-dom": "catalog:"
@@ -20,13 +20,13 @@
   "dependencies": {
     "@jamsr-ui/button": "workspace:^",
     "@jamsr-ui/circular-progress": "workspace:^",
+    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/icon-button": "workspace:^",
     "@jamsr-ui/linear-progress": "workspace:^",
     "@jamsr-ui/repeater": "workspace:^",
     "@jamsr-ui/select": "workspace:^",
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/skeleton": "workspace:^",
-    "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/table": "workspace:^",
     "@jamsr-ui/text": "workspace:^",
     "@jamsr-ui/utils": "workspace:^"

@@ -1,5 +1,17 @@
 # @jamsr-ui/editor
 
+## 0.1.6
+
+### Patch Changes
+
+- fix: editor exports
+
+## 0.1.5
+
+### Patch Changes
+
+- fix: editor exports
+
 ## 0.1.4
 
 ### Patch Changes

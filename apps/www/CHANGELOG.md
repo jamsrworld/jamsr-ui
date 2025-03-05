@@ -1,5 +1,24 @@
 # web
 
+## 0.2.10
+
+### Patch Changes
+
+- fix: editor exports
+- Updated dependencies
+  - @jamsr-ui/editor@0.1.6
+  - @jamsr-ui/rhf@0.1.9
+  - @jamsr-ui/react@0.1.8
+
+## 0.2.9
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/editor@0.1.5
+  - @jamsr-ui/rhf@0.1.8
+  - @jamsr-ui/react@0.1.7
+
 ## 0.2.8
 
 ### Patch Changes

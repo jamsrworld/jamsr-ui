@@ -2,7 +2,7 @@ import { EditorContent } from "@tiptap/react";
 import { EditorMenuBar } from "./components/menu-bar";
 import type { UseEditorProps } from "./hooks/use-editor";
 import { useEditor } from "./hooks/use-editor";
-import "./styles/index.css";
+import "./styles.css";
 
 export type EditorProps = UseEditorProps;
 
@@ -19,7 +19,7 @@ export const Editor = (props: EditorProps) => {
     label,
     getInputProps,
   } = useEditor(props);
-  
+
   return (
     <Component {...getBaseProps()}>
       <input {...getInputProps()} className="hidden" aria-hidden />

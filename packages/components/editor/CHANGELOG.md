@@ -1,5 +1,26 @@
 # @jamsr-ui/editor
 
+## 0.1.7
+
+### Patch Changes
+
+- fix: use-hover,use-focus,tabs,collapsible
+- Updated dependencies
+  - @jamsr-ui/divider@0.1.3
+  - @jamsr-ui/file-upload-single@0.1.3
+  - @jamsr-ui/icon-button@0.1.3
+  - @jamsr-ui/input@0.1.4
+  - @jamsr-ui/menu@0.1.3
+  - @jamsr-ui/popover@0.1.3
+  - @jamsr-ui/repeater@0.1.2
+  - @jamsr-ui/select@0.1.4
+  - @jamsr-ui/switch@0.1.4
+  - @jamsr-ui/config@0.1.2
+  - @jamsr-ui/hooks@0.1.3
+  - @jamsr-ui/shared-icons@0.1.2
+  - @jamsr-ui/theme@0.1.3
+  - @jamsr-ui/utils@0.1.3
+
 ## 0.1.6
 
 ### Patch Changes

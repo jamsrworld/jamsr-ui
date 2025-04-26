@@ -1,5 +1,11 @@
 # @jamsr-ui/config
 
+## 0.1.2
+
+### Patch Changes
+
+- fix: use-hover,use-focus,tabs,collapsible
+
 ## 0.1.1
 
 ### Patch Changes

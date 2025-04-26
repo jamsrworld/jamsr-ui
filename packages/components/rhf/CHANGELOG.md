@@ -1,5 +1,26 @@
 # @jamsr-ui/rhf
 
+## 0.1.10
+
+### Patch Changes
+
+- fix: use-hover,use-focus,tabs,collapsible
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.1.4
+  - @jamsr-ui/checkbox@0.1.4
+  - @jamsr-ui/editor@0.1.7
+  - @jamsr-ui/file-upload-multi@0.1.3
+  - @jamsr-ui/file-upload-single@0.1.3
+  - @jamsr-ui/input@0.1.4
+  - @jamsr-ui/otp-input@0.1.3
+  - @jamsr-ui/radio@0.1.4
+  - @jamsr-ui/rating@0.1.3
+  - @jamsr-ui/select@0.1.4
+  - @jamsr-ui/switch@0.1.4
+  - @jamsr-ui/tags-input@0.1.5
+  - @jamsr-ui/textarea@0.1.4
+  - @jamsr-ui/utils@0.1.3
+
 ## 0.1.9
 
 ### Patch Changes

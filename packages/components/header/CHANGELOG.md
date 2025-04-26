@@ -1,5 +1,15 @@
 # @jamsr-ui/header
 
+## 0.1.3
+
+### Patch Changes
+
+- fix: use-hover,use-focus,tabs,collapsible
+- Updated dependencies
+  - @jamsr-ui/divider@0.1.3
+  - @jamsr-ui/config@0.1.2
+  - @jamsr-ui/utils@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes

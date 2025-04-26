@@ -1,5 +1,17 @@
 # @jamsr-ui/tags-input
 
+## 0.1.5
+
+### Patch Changes
+
+- fix: use-hover,use-focus,tabs,collapsible
+- Updated dependencies
+  - @jamsr-ui/chip@0.1.3
+  - @jamsr-ui/input@0.1.4
+  - @jamsr-ui/config@0.1.2
+  - @jamsr-ui/hooks@0.1.3
+  - @jamsr-ui/utils@0.1.3
+
 ## 0.1.4
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @ui/storybook
 
+## 0.1.9
+
+### Patch Changes
+
+- fix: use-hover,use-focus,tabs,collapsible
+- Updated dependencies
+  - @jamsr-ui/react@0.1.9
+
 ## 0.1.8
 
 ### Patch Changes

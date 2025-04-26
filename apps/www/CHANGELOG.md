@@ -1,5 +1,22 @@
 # web
 
+## 0.2.11
+
+### Patch Changes
+
+- fix: use-hover,use-focus,tabs,collapsible
+- Updated dependencies
+  - @jamsr-ui/charts@0.1.3
+  - @jamsr-ui/editor@0.1.7
+  - @jamsr-ui/rhf@0.1.10
+  - @jamsr-ui/config@0.1.2
+  - @jamsr-ui/next@0.1.5
+  - @jamsr-ui/hooks@0.1.3
+  - @jamsr-ui/react@0.1.9
+  - @jamsr-ui/shared-icons@0.1.2
+  - @jamsr-ui/theme@0.1.3
+  - @jamsr-ui/utils@0.1.3
+
 ## 0.2.10
 
 ### Patch Changes

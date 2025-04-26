@@ -17,7 +17,10 @@ export const usePress = <T extends HTMLElement>(
 
   useEffect(() => {
     const node = ref.current;
-    if (!node || isDisabled) return () => {};
+    if (!node || isDisabled) {
+      setIsPressed(false);
+      return () => {};
+    }
 
     const onPointerDown = () => {
       setIsPressed(true);

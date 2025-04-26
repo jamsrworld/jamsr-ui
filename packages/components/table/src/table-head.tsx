@@ -11,10 +11,10 @@ import { useTableContext } from "./table-context";
 export type TableHeaderProps = UIProps<"thead">;
 
 export const TableHeader = <T extends React.ElementType = "thead">(
-  $props: ComponentPropsWithAs<T>,
+  $props: ComponentPropsWithAs<T, TableHeaderProps>,
 ) => {
   const { tableHeader: _globalProps = {} } = useUIConfig();
-  const _props = $props;
+  const _props = $props as TableHeaderProps;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);
 

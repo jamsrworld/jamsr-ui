@@ -14,7 +14,7 @@ import {
   mergeGlobalProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { m } from "framer-motion";
+import { m } from "motion/react";
 import { useId, type ChangeEvent, type ComponentProps } from "react";
 import { CheckboxCheckIcon } from "./checkbox-check-icon";
 import {

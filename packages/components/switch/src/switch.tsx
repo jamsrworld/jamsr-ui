@@ -7,6 +7,7 @@ import {
 } from "@jamsr-ui/hooks";
 import { useUIConfig } from "@jamsr-ui/config";
 import {
+  cn,
   dataAttr,
   deepMergeProps,
   formLabelProps,
@@ -14,7 +15,7 @@ import {
   mergeGlobalProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m, type Variants } from "framer-motion";
+import { AnimatePresence, m, type Variants } from "motion/react";
 import { useId } from "react";
 import {
   switchVariants,
@@ -113,7 +114,7 @@ export const Switch = ($props: SwitchProps) => {
     <div
       data-component="switch"
       data-slot="base"
-      className={styles.base({ className: classNames?.base })}
+      className={styles.base({ className: cn(classNames?.base, className) })}
       onBlur={onBlur}
       data-disabled={dataAttr(isDisabled)}
       aria-disabled={dataAttr(isDisabled)}

@@ -1,10 +1,14 @@
 packages:
-  - "apps/*"
-  - "packages/**/*"
-
+  - apps/*
+  - packages/**/*
 catalog:
   react: ">=19"
   react-dom: ">=19"
   next: ">=15"
-  framer-motion: ">=12"
+  motion: ">=12"
+  "react-hook-form": ">=7"
   "@tanstack/react-table": ">=8"
+onlyBuiltDependencies:
+  - "@swc/core"
+  - esbuild
+  - sharp

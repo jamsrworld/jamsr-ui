@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-import { cn, type UIProps } from "@jamsr-ui/utils";
+import { cn, ComponentPropsWithAs, type UIProps } from "@jamsr-ui/utils";
 import { useCollapsibleContext } from "./collapsible-context";
 
 export type CollapsibleTriggerProps = UIProps<"button">;
 
-export const CollapsibleTrigger = (props: CollapsibleTriggerProps) => {
-  const { children, as, className, onClick, ...restProps } = props;
+export const CollapsibleTrigger = <T extends React.ElementType = "button">(
+  props: ComponentPropsWithAs<T, CollapsibleTriggerProps>,
+) => {
+  const { children, as, className, onClick, ...restProps } =
+    props as CollapsibleTriggerProps;
   const Component = as ?? "button";
 
   const { isOpen, setIsOpen, isDisabled } = useCollapsibleContext();

@@ -4,10 +4,10 @@ import { Button, Text } from "@jamsr-ui/react";
 import Link from "next/link";
 import { HeroFeatures } from "./hero-features";
 
-export const Hero = () => {
+export const HeroSection = () => {
   return (
     <section className="container relative mx-auto flex  flex-col  md:h-dvh md:justify-center">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_180%_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_180%_at_top,color-mix(in_srgb,var(--color-blue-500)_20%,transparent),_transparent,_transparent)] from-blue-500/20 via-transparent to-transparent" />
       <div className="relative flex flex-col items-center  gap-8 py-24 text-center">
         <Text
           as="h1"
@@ -41,7 +41,7 @@ export const Hero = () => {
             Start Building
           </Button>
           <CodeBlock radius="full" language="shell" copyPosition="right">
-            pnpm add @jamsr-ui/react framer-motion
+            pnpm add @jamsr-ui/react motion
           </CodeBlock>
         </div>
         <HeroFeatures />

@@ -18,7 +18,7 @@ import {
   mergeGlobalProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence, m } from "motion/react";
 import { type ComponentProps, useMemo, useState } from "react";
 import { DrawerCloseButton } from "./drawer-close-btn";
 import { motionDrawerVariants } from "./motion";

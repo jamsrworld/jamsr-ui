@@ -1,4 +1,4 @@
-import { LayoutGroup } from "framer-motion";
+import { LayoutGroup } from "motion/react";
 import { useId } from "react";
 import { TabContext } from "./tabs-context";
 import { useTabs, type UseTabsProps } from "./use-tabs";

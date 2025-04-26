@@ -1,6 +1,6 @@
 "use client";
 
-import { LazyMotion } from "framer-motion";
+import { LazyMotion } from "motion/react";
 
 const loadFeatures = async () => import("./features").then((res) => res.domMax);
 

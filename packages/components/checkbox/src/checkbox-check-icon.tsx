@@ -1,4 +1,4 @@
-import { m, type Variants } from "framer-motion";
+import { m, type Variants } from "motion/react";
 
 type Props = {
   isChecked: boolean;

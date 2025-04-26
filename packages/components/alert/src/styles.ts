@@ -4,7 +4,7 @@ import { radiusVariant, tv } from "@jamsr-ui/utils";
 export const test = "";
 export const alertVariant = tv({
   slots: {
-    wrapper: "relative flex gap-2 p-4 text-sm",
+    wrapper: "relative flex gap-2 p-4 text-sm [&>svg]:shrink-0",
     mainContent: "flex flex-col gap-1 self-center",
     description: "flex grow flex-col gap-1 self-center break-all",
     action: "absolute right-2 self-center",

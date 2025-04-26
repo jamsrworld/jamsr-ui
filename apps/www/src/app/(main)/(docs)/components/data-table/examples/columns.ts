@@ -27,7 +27,7 @@ export const USERS: User[] = faker.helpers.multiple(createRandomUser, {
   count: 100,
 });
 
-export const COLUMNS: ColumnDef<User>[] = [
+export const COLUMNS = [
   {
     accessorKey: "userId",
     header: "ID",
@@ -58,4 +58,4 @@ export const COLUMNS: ColumnDef<User>[] = [
     header: "Registered At",
     accessorFn: (row) => row.registeredAt.toLocaleDateString(),
   },
-];
+] satisfies ColumnDef<User>[];

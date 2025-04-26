@@ -39,7 +39,7 @@ import {
   type UIProps,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m, type Variants, type Variant } from "framer-motion";
+import { AnimatePresence, m, type Variants, type Variant } from "motion/react";
 import {
   useEffect,
   useMemo,

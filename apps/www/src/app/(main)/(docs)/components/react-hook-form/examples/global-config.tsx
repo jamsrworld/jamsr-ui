@@ -23,7 +23,16 @@ export const RHFGlobalConfig = () => {
   });
 
   return (
-    <UIRHFConfigProvider provider={{ classNames: { fieldset: "gap-12" } }}>
+    <UIRHFConfigProvider
+      provider={{
+        classNames: { fieldset: "gap-12" },
+        slotProps: {
+          form: {
+            autoComplete: "off",
+          },
+        },
+      }}
+    >
       <RHFDemoWrapper methods={methods} isPending={false} onSubmit={onSubmit}>
         <RHFInput<FormValues>
           name="username"

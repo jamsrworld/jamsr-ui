@@ -16,7 +16,7 @@
     "@types/node": "22.13.5",
     "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
-    "framer-motion": "catalog:",
+    "motion": "catalog:",
     "postcss": "^8.5.3",
     "react": "catalog:",
     "react-dom": "catalog:",
@@ -74,7 +74,7 @@
     "@jamsr-ui/utils": "workspace:^"
   },
   "peerDependencies": {
-    "framer-motion": "catalog:",
+    "motion": "catalog:",
     "react": "catalog:"
   },
   "clean-package": "../../clean-package.config.json"

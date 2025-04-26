@@ -1,1 +1,1 @@
-export { domMax } from "framer-motion";
+export { domMax } from "motion/react";

@@ -7,10 +7,10 @@ import { TableEmptyState } from "./table-empty-state";
 export type TableBodyProps = UIProps<"tbody">;
 
 export const TableBody = <T extends React.ElementType = "tbody">(
-  $props: ComponentPropsWithAs<T>,
+  $props: ComponentPropsWithAs<T, TableBodyProps>,
 ) => {
   const { tableBody: _globalProps = {} } = useUIConfig();
-  const _props = $props;
+  const _props = $props as TableBodyProps;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);
 

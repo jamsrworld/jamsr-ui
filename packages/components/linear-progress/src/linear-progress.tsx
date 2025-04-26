@@ -1,5 +1,5 @@
 import { cn } from "@jamsr-ui/utils";
-import { m } from "framer-motion";
+import { m } from "motion/react";
 import { type ComponentProps } from "react";
 import { type LinearProgressVariants, linearProgressVariants } from "./style";
 

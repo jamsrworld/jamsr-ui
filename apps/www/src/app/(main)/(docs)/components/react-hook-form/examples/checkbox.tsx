@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RHFCheckbox } from "@jamsr-ui/rhf";
 import { useForm } from "react-hook-form";
-import { literal, object } from "zod";
+import { boolean, object } from "zod";
 import { RHFDemoWrapper } from "../components/wrapper";
 
 type FormValues = {
@@ -11,7 +11,7 @@ type FormValues = {
 };
 
 const schema = object({
-  agree: literal(true),
+  agree: boolean(),
 });
 
 export const RHFDemoCheckbox = () => {

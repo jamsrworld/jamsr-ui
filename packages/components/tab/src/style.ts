@@ -20,6 +20,7 @@ export const tabsVariant = tv({
       "overflow-x-auto",
       "scrollbar-hide",
       "bg-default-100",
+      "max-w-full overflow-auto",
     ],
     tab: [
       "z-0 text-default-500",

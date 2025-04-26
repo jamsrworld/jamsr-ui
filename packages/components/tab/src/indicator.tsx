@@ -1,4 +1,4 @@
-import { m } from "framer-motion";
+import { m } from "motion/react";
 import { useTabsContext } from "./tabs-context";
 
 export const TabIndicator = () => {

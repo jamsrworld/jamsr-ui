@@ -3,7 +3,7 @@ import {
   TRANSITION_VARIANTS,
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence, m } from "motion/react";
 import { useMemo } from "react";
 import {
   useAccordionItem,

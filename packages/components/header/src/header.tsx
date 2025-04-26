@@ -1,5 +1,5 @@
 import { Divider } from "@jamsr-ui/divider";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence, m } from "motion/react";
 import { useHeader, type UseHeaderProps } from "./use-header";
 
 export type HeaderProps = UseHeaderProps;

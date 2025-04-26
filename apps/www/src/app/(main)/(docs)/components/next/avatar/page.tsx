@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 const code = <T extends VariantTypes["next-avatar"][number]>(variant: T) =>
+  // @ts-expect-error TODO:fix
   readVariantCode("avatar", variant, "next");
 
 const Avatar = () => {

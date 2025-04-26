@@ -8,7 +8,7 @@ import {
   type PropGetter,
   type SlotsToClasses,
 } from "@jamsr-ui/utils";
-import { type m } from "framer-motion";
+import { type m } from "motion/react";
 import {
   useCallback,
   useEffect,

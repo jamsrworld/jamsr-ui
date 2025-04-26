@@ -6,7 +6,7 @@ import {
   mapPropsVariants,
   mergeGlobalProps,
 } from "@jamsr-ui/utils";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useMotionValueEvent, useScroll } from "motion/react";
 import { useCallback, useState } from "react";
 import { header, type HeaderVariantProps } from "./style";
 

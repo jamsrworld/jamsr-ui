@@ -11,10 +11,10 @@ import { useTableContext } from "./table-context";
 export type TableColumnProps = UIProps<"th">;
 
 export const TableColumn = <T extends React.ElementType = "th">(
-  $props: ComponentPropsWithAs<T>,
+  $props: ComponentPropsWithAs<T, TableColumnProps>,
 ) => {
   const { tableColumn: _globalProps = {} } = useUIConfig();
-  const _props = $props;
+  const _props = $props as TableColumnProps;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const props = deepMergeProps(globalProps, _props);
 

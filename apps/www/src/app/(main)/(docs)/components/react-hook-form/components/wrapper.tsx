@@ -2,11 +2,21 @@ import { Button } from "@jamsr-ui/react";
 import { RHFProvider, RHFProviderProps } from "@jamsr-ui/rhf";
 import { type FieldValues } from "react-hook-form";
 
-type Props<T extends FieldValues> = {
+type Props<
+  TFieldValues extends FieldValues,
+  TContext = any,
+  TTransformedValues extends FieldValues | undefined = undefined,
+> = {
   children: React.ReactNode;
-} & RHFProviderProps<T>;
+} & RHFProviderProps<TFieldValues, TContext, TTransformedValues>;
 
-export const RHFDemoWrapper = <T extends FieldValues>(props: Props<T>) => {
+export const RHFDemoWrapper = <
+  TFieldValues extends FieldValues,
+  TContext = any,
+  TTransformedValues extends FieldValues | undefined = undefined,
+>(
+  props: Props<TFieldValues, TContext, TTransformedValues>,
+) => {
   const { children, ...restProps } = props;
   return (
     <RHFProvider {...restProps}>

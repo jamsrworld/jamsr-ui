@@ -25,16 +25,16 @@
   "devDependencies": {
     "@types/react": "19.0.10",
     "clean-package": "^2.2.0",
-    "framer-motion": "catalog:",
+    "motion": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-hook-form": "^7.54.2"
+    "react-hook-form": "catalog:"
   },
   "peerDependencies": {
-    "framer-motion": "catalog:",
+    "motion": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-hook-form": "^7.53.1"
+    "react-hook-form": "catalog:"
   },
   "clean-package": "../../../clean-package.config.json",
   "dependencies": {

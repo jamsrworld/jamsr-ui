@@ -18,6 +18,14 @@ export type RHFProviderProps<
 } & {
   isDisabled?: boolean;
   className?: string;
+  slotProps?: {
+    form?: React.ComponentProps<"form">;
+    fieldset?: React.ComponentProps<"fieldset">;
+  };
+  classNames?: {
+    form?: string;
+    fieldset: string;
+  };
 };
 
 export const RHFProvider = <
@@ -34,26 +42,42 @@ export const RHFProvider = <
     className,
     isDisabled,
     isPending,
+    classNames: _classNames,
+    slotProps: _slotProps,
     ...restProps
   } = props;
   const { provider } = useUIRHFConfig();
+
+  const slotProps = {
+    form: {
+      ...provider?.slotProps?.form,
+      ..._slotProps?.form,
+    },
+    fieldset: {
+      ...provider?.slotProps?.fieldset,
+      ..._slotProps?.fieldset,
+    },
+  };
+
+  const classNames = {
+    form: cn(provider?.classNames?.form, _classNames?.form),
+    fieldset: cn(provider?.classNames?.fieldset, _classNames?.fieldset),
+  };
+
   return (
-    <FormProvider {...methods}>
+    <FormProvider {...methods} {...restProps}>
       <form
-        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         onSubmit={onSubmit}
-        className={cn("relative", provider?.classNames?.form)}
+        className={cn("relative", classNames?.form)}
         data-component="rhfForm"
-        {...restProps}
+        data-slot="form"
+        {...slotProps.form}
       >
         <fieldset
           disabled={isPending || isDisabled}
-          className={cn(
-            "flex flex-col gap-4",
-            provider?.classNames?.fieldset,
-            className,
-          )}
+          className={cn("flex flex-col gap-4", classNames?.fieldset, className)}
           data-slot="fieldset"
+          {...slotProps.fieldset}
         >
           {children}
         </fieldset>

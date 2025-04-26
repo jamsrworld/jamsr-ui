@@ -2,6 +2,10 @@ import { createContext, useContext } from "react";
 
 export type UIRHFConfigType = {
   provider?: {
+    slotProps?: {
+      form?: React.ComponentProps<"form">;
+      fieldset?: React.ComponentProps<"fieldset">;
+    };
     classNames?: {
       form?: string;
       fieldset: string;

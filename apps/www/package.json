@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "9.5.0",
-    "@hookform/resolvers": "^4.1.2",
+    "@hookform/resolvers": "^4.1.3",
     "@jamsr-ui/charts": "workspace:^",
     "@jamsr-ui/config": "workspace:^",
     "@jamsr-ui/editor": "workspace:^",
@@ -24,31 +24,31 @@
     "@jamsr-ui/shared-icons": "workspace:^",
     "@jamsr-ui/theme": "workspace:*",
     "@jamsr-ui/utils": "workspace:^",
-    "@next/third-parties": "^15.2.0",
+    "@next/third-parties": "^15.3.1",
     "@tanstack/react-table": "8.21.2",
     "@vercel/analytics": "^1.5.0",
     "clean-package": "2.2.0",
     "color2k": "2.0.3",
-    "framer-motion": "catalog:",
+    "motion": "catalog:",
     "highlight.js": "^11.11.1",
     "next": "15.2.0",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-hook-form": "^7.54.2",
-    "recharts": "^2.15.1",
-    "zod": "^3.24.2"
+    "react-hook-form": "catalog:",
+    "recharts": "^2.15.3",
+    "zod": "^3.24.3"
   },
   "devDependencies": {
     "@jamsr-ui/eslint-config": "workspace:^",
-    "@tailwindcss/postcss": "^4.0.9",
+    "@tailwindcss/postcss": "^4.1.4",
     "@types/node": "22.13.5",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "eslint-config-next": "15.2.0",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.5.3",
-    "schema-dts": "^1.1.2",
-    "tailwindcss": "^4.0.9",
+    "schema-dts": "^1.1.5",
+    "tailwindcss": "^4.1.4",
     "typescript": "5.7.3"
   }
 }

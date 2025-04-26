@@ -1,5 +1,5 @@
 import { Avatar, Menu, MenuItem } from "@jamsr-ui/react";
-import { type Variants } from "framer-motion";
+import { type Variants } from "motion/react";
 
 const motionVariants: Variants = {
   initial: { scale: 0.97 },

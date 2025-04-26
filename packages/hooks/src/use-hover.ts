@@ -13,7 +13,10 @@ export const useHover = <T extends HTMLElement>(options?: UseHoverOptions) => {
 
   useEffect(() => {
     const node = ref.current;
-    if (!node || isDisabled) return () => {};
+    if (!node || isDisabled) {
+      setIsHovered(false);
+      return () => {};
+    }
 
     let enterTimeout: NodeJS.Timeout | null = null;
     let exitTimeout: NodeJS.Timeout | null = null;

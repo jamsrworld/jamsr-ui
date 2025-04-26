@@ -10,7 +10,7 @@ import {
   type UIProps,
   type ComponentPropsWithAs,
 } from "@jamsr-ui/utils";
-import { AnimatePresence, m } from "framer-motion";
+import { AnimatePresence, m } from "motion/react";
 import { DialogCloseBtn } from "./dialog-close-btn";
 import { useDialogContext } from "./dialog-context";
 

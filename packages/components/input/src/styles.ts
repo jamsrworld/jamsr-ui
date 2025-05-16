@@ -21,7 +21,8 @@ export const inputVariants = tv({
       "uig-has-start-content:pl-0",
       "uig-has-end-content:pr-0",
     ],
-    helper: "text-xs text-foreground-600",
+    helper: "text-xs text-foreground-tertiary",
+    errorMessage: "text-xs text-danger",
     startContent: "flex items-center gap-1 pr-2 text-foreground-500",
     endContent: "flex items-center gap-1 pl-2 text-foreground-500",
     notation: "",
@@ -82,7 +83,6 @@ export const inputVariants = tv({
     isInvalid: {
       true: {
         inputWrapper: "!border-danger",
-        helper: "text-danger",
         label: "text-danger",
       },
     },

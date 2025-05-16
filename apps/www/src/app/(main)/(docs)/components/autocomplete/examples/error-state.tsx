@@ -59,7 +59,7 @@ export const AutocompleteErrorState = () => {
     <div>
       <Autocomplete
         label="Animal"
-        helperText="Please choose one of the options"
+        errorMessage="Please choose one of the options"
         isInvalid
       >
         {animals.map((animal) => (

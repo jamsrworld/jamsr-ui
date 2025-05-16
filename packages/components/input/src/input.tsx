@@ -41,6 +41,9 @@ export const Input = <T extends React.ElementType = "div">(
     slots,
     classNames,
     getLegendProps,
+    getErrorMessageProps,
+    errorMessage,
+    isInvalid,
   } = useInput(props);
   const id = useId();
 
@@ -167,6 +170,7 @@ export const Input = <T extends React.ElementType = "div">(
         </Fieldset>
       </div>
       {helperText && <div {...getHelperProps()}>{helperText}</div>}
+      {isInvalid && <div {...getErrorMessageProps()}>{errorMessage}</div>}
     </Component>
   );
 };

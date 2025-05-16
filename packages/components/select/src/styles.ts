@@ -20,6 +20,7 @@ export const selectVariant = tv({
       "uig-disabled:cursor-not-allowed uig-disabled:opacity-60",
     ],
     helperText: "text-xs text-foreground-600",
+    errorMessage: "text-xs text-danger",
     indicator:
       "shrink-0 transition-transform duration-300 group-data-[open=true]:rotate-180",
     popover: "z-popover",
@@ -65,7 +66,6 @@ export const selectVariant = tv({
     },
     isInvalid: {
       true: {
-        helperText: "text-danger",
         label: "text-danger",
         trigger: "!border-danger",
       },

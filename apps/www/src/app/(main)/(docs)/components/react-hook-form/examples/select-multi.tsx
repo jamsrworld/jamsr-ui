@@ -12,7 +12,7 @@ type FormValues = {
 };
 
 const schema = object({
-  country: array(string().trim().min(1, "Country is required")),
+  country: array(string().trim()).min(1, "Country is required"),
 });
 
 export const RHFDemoSelectMulti = () => {

@@ -6,7 +6,7 @@ export const TagsInputInvalidState = () => {
       placeholder="Write your tags here...."
       label="Tags"
       isInvalid
-      helperText="Tags are required"
+      errorMessage="Tags are required"
     />
   );
 };

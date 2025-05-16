@@ -27,7 +27,7 @@ export const RHFInput = <T extends FieldValues>(props: Props<T>) => {
             onBlur={onBlur}
             isInvalid={!!error}
             data-invalid={!!error}
-            helperText={error?.message}
+            errorMessage={error?.message}
             {...restProps}
           />
         );

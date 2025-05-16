@@ -48,6 +48,9 @@ export const Select = <T extends React.ElementType = "div">(
     returnFocus,
     bottomContent,
     topContent,
+    errorMessage,
+    getErrorMessageProps,
+    isInvalid,
   } = useSelect(props);
 
   return (
@@ -105,6 +108,7 @@ export const Select = <T extends React.ElementType = "div">(
           </AnimatePresence>
         </SelectProvider>
         {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
+        {isInvalid && <div {...getErrorMessageProps()}>{errorMessage}</div>}
       </div>
     </Component>
   );

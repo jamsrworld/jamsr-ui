@@ -8,7 +8,7 @@ export const SelectInvalidState = () => {
         label="Select Label"
         placeholder="Choose Fruit"
         isInvalid
-        helperText="This field is required"
+        errorMessage="This field is required"
       >
         <SelectItem value="apple">Apple</SelectItem>
         <SelectItem value="blueberry">Blueberry</SelectItem>

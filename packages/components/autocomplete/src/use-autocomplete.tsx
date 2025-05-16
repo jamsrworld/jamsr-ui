@@ -12,9 +12,9 @@ import {
   useRole,
 } from "@floating-ui/react";
 import { Chip } from "@jamsr-ui/chip";
+import { useUIConfig } from "@jamsr-ui/config";
 import { useControlledState } from "@jamsr-ui/hooks";
 import type { InputProps } from "@jamsr-ui/input";
-import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   deepMergeProps,
@@ -48,6 +48,7 @@ export type UseAutocompleteProps = Pick<
   | "onBlur"
   | "isDisabled"
   | "radius"
+  | "errorMessage"
 > & {
   className?: string;
   classNames?: SlotsToClasses<AutocompleteSlots>;
@@ -95,6 +96,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     inputProps,
     isDisabled,
     onBlur,
+    errorMessage,
   } = props;
   const baseRef = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
@@ -382,6 +384,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
       endContent,
       placeholder,
       helperText,
+      errorMessage,
       isInvalid,
       radius: variantProps.radius,
       ...inputProps,
@@ -416,6 +419,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     };
   }, [
     endContent,
+    errorMessage,
     getReferenceProps,
     handleInputChange,
     handleInputKeyDown,

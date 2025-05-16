@@ -48,10 +48,10 @@
     "list.warningForeground": "#00eaffcc"
   },
   "tailwindCSS.experimental.classRegex": [
-    [
-      "tv\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
-      "\"(.*?)\""
-    ],
+    // [
+    //   "tv\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)",
+    //   "\"(.*?)\""
+    // ],
     ["Classes \\=([^;]*);", "'([^']*)'"],
     ["Classes \\=([^;]*);", "\"([^\"]*)\""],
     ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
@@ -63,6 +63,7 @@
     ".*Classes.*",
     ".*classNames.*"
   ],
+  "tailwindCSS.classFunctions": ["tv"],
   "files.autoSave": "onFocusChange",
   "tailwindCSS.experimental.configFile": "packages/theme/src/styles.css"
 }

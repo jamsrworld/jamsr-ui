@@ -36,6 +36,7 @@ type Props = {
   fullWidth?: boolean;
   isInvalid?: boolean;
   helperText?: string;
+  errorMessage?: string;
   baseRef?: React.Ref<HTMLDivElement>;
   inputWrapperRef?: React.Ref<HTMLDivElement>;
   ref?: React.Ref<HTMLTextAreaElement>;
@@ -74,6 +75,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
     disabled = false,
     isDisabled: propIsDisabled = false,
     isFormControl = false,
+    errorMessage,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -210,6 +212,19 @@ export const useTextarea = ($props: UseTextareaProps) => {
     [styles, classNames?.helper],
   );
 
+  const getErrorMessageProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "error-message",
+        className: styles.errorMessage({
+          className: cn(classNames?.errorMessage, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.errorMessage],
+  );
+
   const getMainWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -317,5 +332,7 @@ export const useTextarea = ($props: UseTextareaProps) => {
     getMainWrapperProps,
     getStartContentProps,
     getEndContentProps,
+    getErrorMessageProps,
+    errorMessage,
   };
 };

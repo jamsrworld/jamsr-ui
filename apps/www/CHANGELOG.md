@@ -1,5 +1,15 @@
 # web
 
+## 0.2.12
+
+### Patch Changes
+
+- feat: separate errormessage prop
+- Updated dependencies
+  - @jamsr-ui/rhf@0.1.11
+  - @jamsr-ui/react@0.1.10
+  - @jamsr-ui/editor@0.1.8
+
 ## 0.2.11
 
 ### Patch Changes

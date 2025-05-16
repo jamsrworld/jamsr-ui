@@ -46,6 +46,7 @@ type Props = {
   showPassword?: boolean;
   setShowPassword?: React.Dispatch<React.SetStateAction<boolean>>;
   isInvalid?: boolean;
+  errorMessage?: string;
   helperText?: string;
   baseRef?: React.Ref<HTMLDivElement>;
   inputWrapperRef?: React.Ref<HTMLDivElement>;
@@ -110,6 +111,7 @@ export const useInput = ($props: UseInputProps) => {
     isDisabled: $isDisabled = false,
     slots = {},
     isFormControl = false,
+    errorMessage,
     ...restProps
   } = props;
   const Component = as ?? "div";
@@ -310,6 +312,19 @@ export const useInput = ($props: UseInputProps) => {
     [styles, classNames?.helper],
   );
 
+  const getErrorMessageProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "error-message",
+        className: styles.errorMessage({
+          className: cn(classNames?.errorMessage, props?.className),
+        }),
+      };
+    },
+    [styles, classNames?.errorMessage],
+  );
+
   const getMainWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
     (props) => {
       return {
@@ -486,5 +501,7 @@ export const useInput = ($props: UseInputProps) => {
     getClearButtonProps,
     showClearButton,
     getLegendProps,
+    getErrorMessageProps,
+    errorMessage,
   };
 };

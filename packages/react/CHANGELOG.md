@@ -1,5 +1,18 @@
 # @jamsr-ui/react
 
+## 0.1.10
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/autocomplete@0.1.5
+  - @jamsr-ui/textarea@0.1.5
+  - @jamsr-ui/select@0.1.5
+  - @jamsr-ui/input@0.1.5
+  - @jamsr-ui/data-table@0.1.5
+  - @jamsr-ui/editor@0.1.8
+  - @jamsr-ui/tags-input@0.1.6
+
 ## 0.1.9
 
 ### Patch Changes

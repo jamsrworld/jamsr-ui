@@ -57,6 +57,7 @@ type Props = SelectVariantProps & {
   onOpenChange?: (value: boolean) => void;
   isMultiple?: boolean;
   className?: string;
+  errorMessage?: string;
   classNames?: SlotsToClasses<SelectSlots>;
   helperText?: React.ReactNode;
   renderValue?: (value: string[]) => React.ReactNode;
@@ -109,6 +110,7 @@ export const useSelect = ($props: UseSelectProps) => {
     onUncontrolledValueChange,
     topContent,
     bottomContent,
+    errorMessage,
     ...restProps
   } = props;
 
@@ -427,6 +429,14 @@ export const useSelect = ($props: UseSelectProps) => {
     };
   };
 
+  const getErrorMessageProps: PropGetter<ComponentProps<"div">> = (props) => {
+    return {
+      "data-slot": "error-message",
+      className: styles.errorMessage({ className: classNames?.errorMessage }),
+      ...props,
+    };
+  };
+
   const getStartContentProps: PropGetter<ComponentProps<"div">> = (props) => {
     return {
       "data-slot": "start-content",
@@ -475,5 +485,8 @@ export const useSelect = ($props: UseSelectProps) => {
     endContent,
     topContent,
     bottomContent,
+    getErrorMessageProps,
+    isInvalid: variantProps.isInvalid,
+    errorMessage,
   };
 };

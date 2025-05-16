@@ -1,5 +1,11 @@
 # @jamsr-ui/select
 
+## 0.1.5
+
+### Patch Changes
+
+- feat: separate errormessage prop
+
 ## 0.1.4
 
 ### Patch Changes

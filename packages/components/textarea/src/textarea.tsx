@@ -26,6 +26,9 @@ export const Textarea = <T extends React.ElementType = "div">(
     getStartContentProps,
     getEndContentProps,
     variant,
+    getErrorMessageProps,
+    isInvalid,
+    errorMessage,
   } = useTextarea(props);
   const id = useId();
 
@@ -65,6 +68,7 @@ export const Textarea = <T extends React.ElementType = "div">(
         </div>
       </div>
       {helperText && <div {...getHelperProps()}>{helperText}</div>}
+      {isInvalid && <div {...getErrorMessageProps()}>{errorMessage}</div>}
     </Component>
   );
 };

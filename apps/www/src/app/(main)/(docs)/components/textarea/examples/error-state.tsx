@@ -4,7 +4,7 @@ export const TextareaErrorState = () => {
   return (
     <Textarea
       label="Username"
-      helperText="Please use a unique username"
+      errorMessage="Please use a unique username"
       isInvalid
     />
   );

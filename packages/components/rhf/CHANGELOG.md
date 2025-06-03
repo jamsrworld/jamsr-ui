@@ -1,5 +1,14 @@
 # @jamsr-ui/rhf
 
+## 0.1.12
+
+### Patch Changes
+
+- @jamsr-ui/switch@0.1.5
+- @jamsr-ui/radio@0.1.4
+- @jamsr-ui/select@0.1.5
+- @jamsr-ui/editor@0.1.9
+
 ## 0.1.11
 
 ### Patch Changes

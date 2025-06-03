@@ -1,5 +1,24 @@
 # @jamsr-ui/react
 
+## 0.1.11
+
+### Patch Changes
+
+- fix: text as
+- Updated dependencies
+  - @jamsr-ui/text@0.1.4
+  - @jamsr-ui/alert@0.1.4
+  - @jamsr-ui/card@0.1.4
+  - @jamsr-ui/confirmation@0.1.4
+  - @jamsr-ui/data-table@0.1.6
+  - @jamsr-ui/link@0.1.4
+  - @jamsr-ui/popover@0.1.3
+  - @jamsr-ui/switch@0.1.5
+  - @jamsr-ui/radio@0.1.4
+  - @jamsr-ui/select@0.1.5
+  - @jamsr-ui/tab@0.1.5
+  - @jamsr-ui/editor@0.1.9
+
 ## 0.1.10
 
 ### Patch Changes

@@ -10,16 +10,14 @@ import { textVariants, type TextVariants } from "./styles";
 
 type Props = TextVariants;
 
-export type TextProps<T extends React.ElementType = "div"> = Props &
-  Omit<ComponentPropsWithAs<T, TextVariants>, "as"> & {
-    as: T;
-  };
+export type TextProps<T extends React.ElementType = "p"> = Props &
+  ComponentPropsWithAs<T, TextVariants>;
 
-export const Text = <T extends React.ElementType = "div">(
+export const Text = <T extends React.ElementType = "p">(
   $props: TextProps<T>,
 ) => {
   const { text: _globalProps = {} } = useUIConfig();
-  const _props = $props as UIProps<"div", Props>;
+  const _props = $props as UIProps<"p", Props>;
   const globalProps = mergeGlobalProps(_globalProps, _props);
   const mergedProps = deepMergeProps(globalProps, _props);
   const [props, variantProps] = mapPropsVariants(
@@ -28,7 +26,7 @@ export const Text = <T extends React.ElementType = "div">(
   );
 
   const { as, className, ...restProps } = props;
-  const Component = (as ?? "div") as unknown as React.ElementType;
+  const Component = (as ?? "p") as unknown as React.ElementType;
   return (
     <Component
       data-component="text"

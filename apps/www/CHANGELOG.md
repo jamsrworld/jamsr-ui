@@ -1,5 +1,16 @@
 # web
 
+## 0.2.13
+
+### Patch Changes
+
+- fix: text as
+- Updated dependencies
+  - @jamsr-ui/react@0.1.11
+  - @jamsr-ui/next@0.1.6
+  - @jamsr-ui/editor@0.1.9
+  - @jamsr-ui/rhf@0.1.12
+
 ## 0.2.12
 
 ### Patch Changes

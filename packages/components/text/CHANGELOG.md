@@ -1,5 +1,11 @@
 # @jamsr-ui/typography
 
+## 0.1.4
+
+### Patch Changes
+
+- fix: text as
+
 ## 0.1.3
 
 ### Patch Changes

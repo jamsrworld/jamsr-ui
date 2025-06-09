@@ -39,7 +39,7 @@ const Menu = () => {
       <VariantWrapper heading="Placement" code={code("placement")}>
         <MenuPlacement />
       </VariantWrapper>
-      <VariantWrapper heading="Radius" code={code("usage")}>
+      <VariantWrapper heading="Radius" code={code("radius")}>
         <MenuRadius />
       </VariantWrapper>
       <VariantWrapper heading="Colors" code={code("colors")}>
@@ -73,7 +73,7 @@ const Menu = () => {
       <VariantWrapper heading="Offset" code={code("offset")}>
         <MenuOffset />
       </VariantWrapper>
-      <VariantWrapper heading="Backdrop" code={code("customize")}>
+      <VariantWrapper heading="Backdrop" code={code("backdrop")}>
         <MenuBackdrop />
       </VariantWrapper>
       <VariantWrapper heading="Controlled" code={code("controlled")}>

@@ -39,7 +39,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
         </Text>
         <Tabs variant="underlined" defaultValue="npm">
           <Tab startContent={<PnpmIcon />} value="pnpm" heading="pnpm">
-            <CodeBlock>pnpm add @jamsr-ui/react framer-motion</CodeBlock>
+            <CodeBlock>pnpm add @jamsr-ui/react motion</CodeBlock>
             {
               <div className="flex flex-col gap-4 mt-8">
                 <Text as="h4" variant="h6">
@@ -56,7 +56,7 @@ const items: { heading: string; content: React.ReactNode }[] = [
                         Create <Code>.npmrc</Code> file at the root directory of
                         your project:
                       </div>
-                      <CodeBlock>node-linker=hoisted</CodeBlock>
+                      <CodeBlock>public-hoist-pattern[]=*@jamsr-ui/*</CodeBlock>
                     </li>
                     <li className="space-y-4">
                       <div>
@@ -72,10 +72,10 @@ const items: { heading: string; content: React.ReactNode }[] = [
             }
           </Tab>
           <Tab startContent={<NpmIcon />} value="npm" heading="npm">
-            <CodeBlock>npm install @jamsr-ui/react framer-motion</CodeBlock>
+            <CodeBlock>npm install @jamsr-ui/react motion</CodeBlock>
           </Tab>
           <Tab startContent={<YarnIcon />} value="yarn" heading="yarn">
-            <CodeBlock>yarn add @jamsr-ui/react framer-motion</CodeBlock>
+            <CodeBlock>yarn add @jamsr-ui/react motion</CodeBlock>
           </Tab>
         </Tabs>
       </div>

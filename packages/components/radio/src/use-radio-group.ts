@@ -1,5 +1,5 @@
-import { useControlledState } from "@jamsr-ui/hooks";
 import { useUIConfig } from "@jamsr-ui/config";
+import { useControlledState } from "@jamsr-ui/hooks";
 import {
   cn,
   deepMergeProps,
@@ -11,6 +11,7 @@ import type { ComponentProps } from "react";
 import { useCallback } from "react";
 import type { RadioProps } from "./radio";
 import { radioGroupVariant, type RadioGroupSlots } from "./styles";
+import { RadioValue } from "./type";
 
 type Common = Pick<
   RadioProps,
@@ -18,27 +19,25 @@ type Common = Pick<
 >;
 
 export type ContextType = Common & {
-  selectedValue: string;
-  onSelectedValueChange: (value: string) => void;
+  selectedValue: RadioValue;
+  onSelectedValueChange: (value: RadioValue) => void;
 };
 
-type Props<T extends string> = {
-  value?: T;
-  onValueChange?: (value: T) => void;
+type Props = {
+  value?: RadioValue;
+  onValueChange?: (value: RadioValue) => void;
   classNames?: SlotsToClasses<RadioGroupSlots>;
   label?: React.ReactNode;
   helperText?: React.ReactNode;
-  defaultValue?: string;
+  defaultValue?: RadioValue;
   isFormControl?: boolean;
 };
 
-export type UseRadioGroupProps<T extends string = string> = Props<T> &
+export type UseRadioGroupProps = Props &
   Omit<UIProps<"div">, "onChange"> &
   Common;
 
-export const useRadioGroup = <T extends string>(
-  $props: UseRadioGroupProps<T>,
-) => {
+export const useRadioGroup = ($props: UseRadioGroupProps) => {
   const { radioGroup: Props = {} } = useUIConfig();
   const props = deepMergeProps(Props, $props);
 
@@ -60,7 +59,7 @@ export const useRadioGroup = <T extends string>(
     helperText,
     isFormControl,
     ...restProps
-  } = props as UseRadioGroupProps<string>;
+  } = props as UseRadioGroupProps;
 
   const Component = as ?? "div";
 

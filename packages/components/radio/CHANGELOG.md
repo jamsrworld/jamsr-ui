@@ -1,5 +1,11 @@
 # @jamsr-ui/radio
 
+## 0.1.6
+
+### Patch Changes
+
+- feat: radio number value
+
 ## 0.1.5
 
 ### Patch Changes

@@ -1,10 +1,10 @@
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   useControlledState,
   useHover,
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIConfig } from "@jamsr-ui/config";
 import {
   cn,
   dataAttr,
@@ -20,12 +20,13 @@ import { useCallback } from "react";
 import { useRadioGroupContext } from "./radio-group-context";
 import type { RadioSlots, RadioVariantProps } from "./styles";
 import { radioVariant } from "./styles";
+import { RadioValue } from "./type";
 
 type Props = {
   children?: React.ReactNode;
   description?: string | React.ReactNode;
   classNames?: SlotsToClasses<RadioSlots>;
-  value?: string;
+  value?: RadioValue;
   defaultChecked?: boolean;
   isDisabled?: boolean;
   isFormControl?: boolean;
@@ -73,6 +74,7 @@ export const useRadio = ($props: UseRadioProps) => {
   const inputRef = useMergeRefs([disableRef]);
   const baseRef = useMergeRefs([hoverRef]);
 
+  const isNumberType = typeof value === "number";
   const [
     isChecked = context ? context.selectedValue === value : false,
     setChecked,
@@ -87,9 +89,10 @@ export const useRadio = ($props: UseRadioProps) => {
       if (!context) {
         setChecked(!!value);
       }
-      context?.onSelectedValueChange(value);
+      const formattedValue = isNumberType ? Number(value) : value;
+      context?.onSelectedValueChange(formattedValue);
     },
-    [context, setChecked],
+    [context, isNumberType, setChecked],
   );
 
   const styles = radioVariant({

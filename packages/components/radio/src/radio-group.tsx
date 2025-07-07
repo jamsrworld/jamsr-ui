@@ -3,16 +3,11 @@ import { RadioGroupProvider } from "./radio-group-context";
 import type { UseRadioGroupProps } from "./use-radio-group";
 import { useRadioGroup } from "./use-radio-group";
 
-export type RadioGroupProps<
-  T extends React.ElementType = "div",
-  V extends string = string,
-> = ComponentPropsWithAs<T, UseRadioGroupProps<V>>;
+export type RadioGroupProps<T extends React.ElementType = "div"> =
+  ComponentPropsWithAs<T, UseRadioGroupProps>;
 
-export const RadioGroup = <
-  T extends React.ElementType = "div",
-  V extends string = string,
->(
-  props: RadioGroupProps<T, V>,
+export const RadioGroup = <T extends React.ElementType = "div">(
+  props: RadioGroupProps<T>,
 ) => {
   const {
     Component,

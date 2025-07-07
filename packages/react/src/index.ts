@@ -49,6 +49,11 @@ export {
   type CollapsibleTriggerProps,
 } from "@jamsr-ui/collapsible";
 export {
+  UIConfigProvider,
+  useUIConfig,
+  type UIConfigType,
+} from "@jamsr-ui/config";
+export {
   Confirmation,
   useConfirmation,
   type ConfirmationProps,
@@ -127,6 +132,7 @@ export {
   RadioGroup,
   type RadioGroupProps,
   type RadioProps,
+  type RadioValue,
 } from "@jamsr-ui/radio";
 export { Rating, type RatingProps } from "@jamsr-ui/rating";
 export { Repeater } from "@jamsr-ui/repeater";
@@ -160,11 +166,6 @@ export {
 } from "@jamsr-ui/sidebar";
 export { Skeleton, type SkeletonProps } from "@jamsr-ui/skeleton";
 export { Stepper, type StepperProps } from "@jamsr-ui/stepper";
-export {
-  UIConfigProvider,
-  useUIConfig,
-  type UIConfigType,
-} from "@jamsr-ui/config";
 export { Switch, type SwitchProps } from "@jamsr-ui/switch";
 export { Tab, Tabs, type TabProps, type TabsProps } from "@jamsr-ui/tab";
 export {

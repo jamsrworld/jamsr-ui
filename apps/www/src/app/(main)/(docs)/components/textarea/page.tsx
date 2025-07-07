@@ -7,6 +7,7 @@ import { TextareaControlled } from "./examples/controlled";
 import { TextareaDisabled } from "./examples/disabled";
 import { TextareaErrorState } from "./examples/error-state";
 import { TextareaHelperText } from "./examples/helper-text";
+import { TextareaHorizontal } from "./examples/horizontal";
 import { TextareaLabelHelper } from "./examples/label-helper";
 import { TextareaPlaceholder } from "./examples/placeholder";
 import { TextareaRadius } from "./examples/radius";
@@ -23,10 +24,10 @@ const title = "Textarea";
 const description =
   "A Textarea component allows users to input multi-line text. It is commonly used for capturing longer user input, such as comments, messages, or descriptions, and offers flexible height for better content management.";
 
-  export const metadata: Metadata = {
-    title,
-    description,
-  };
+export const metadata: Metadata = {
+  title,
+  description,
+};
 const code = <T extends VariantTypes["textarea"][number]>(variant: T) =>
   readVariantCode("textarea", variant);
 
@@ -44,6 +45,9 @@ const Textarea = () => {
       </VariantWrapper>
       <VariantWrapper heading="Error State" code={code("error-state")}>
         <TextareaErrorState />
+      </VariantWrapper>
+      <VariantWrapper heading="Horizontal" code={code("horizontal")}>
+        <TextareaHorizontal />
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <TextareaDisabled />

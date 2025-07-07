@@ -1,4 +1,4 @@
-import { Select, type SelectProps } from "@jamsr-ui/select";
+import { Select, SelectValue, type SelectProps } from "@jamsr-ui/select";
 import {
   Controller,
   useFormContext,
@@ -20,7 +20,7 @@ export const RHFSelect = <T extends FieldValues>(props: Props<T>) => {
         fieldState: { error },
       }) => {
         const $value = isMultiple ? value : value ? [value] : [];
-        const onValueChange = (value: string[]) => {
+        const onValueChange = (value: SelectValue[]) => {
           onChange(isMultiple ? value : (value[0] ?? ""));
         };
         return (

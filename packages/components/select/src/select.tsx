@@ -55,9 +55,8 @@ export const Select = <T extends React.ElementType = "div">(
 
   return (
     <Component {...getBaseProps()}>
-      {/*  eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      {label && <label {...getLabelProps()}>{label}</label>}
       <div {...getMainWrapperProps()}>
+        {label && <label {...getLabelProps()}>{label}</label>}
         <button type="button" {...getTriggerProps()}>
           <div {...getInnerWrapperProps()}>
             {startContent && (
@@ -107,9 +106,9 @@ export const Select = <T extends React.ElementType = "div">(
             )}
           </AnimatePresence>
         </SelectProvider>
-        {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
-        {isInvalid && <div {...getErrorMessageProps()}>{errorMessage}</div>}
       </div>
+      {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
+      {isInvalid && <div {...getErrorMessageProps()}>{errorMessage}</div>}
     </Component>
   );
 };

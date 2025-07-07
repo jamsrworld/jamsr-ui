@@ -1,5 +1,5 @@
 import { IconButton } from "@jamsr-ui/icon-button";
-import { Select, SelectItem } from "@jamsr-ui/select";
+import { Select, SelectItem, SelectValue } from "@jamsr-ui/select";
 import {
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
@@ -16,7 +16,7 @@ type Props<T> = {
 };
 
 export const Pagination = <T,>({ table, take }: Props<T>) => {
-  const [value, setValue] = useState([take.toString()]);
+  const [value, setValue] = useState<SelectValue[]>([take.toString()]);
 
   useEffect(() => {
     table.setPageSize(Number(Array.from(value)[0] ?? rowPerPageOptions[0]));

@@ -10,6 +10,7 @@ import { SelectCustomRenderMultiSearch } from "./examples/custom-render-multi-se
 import { SelectCustomRenderValue } from "./examples/custom-render-value";
 import { SelectDisabled } from "./examples/disabled";
 import { SelectDisabledItems } from "./examples/disabled-items";
+import { SelectHorizontal } from "./examples/horizontal";
 import { SelectInvalidState } from "./examples/invalid-state";
 import { SelectMultiple } from "./examples/multiple";
 import { SelectMultipleControlled } from "./examples/multiple-controlled";
@@ -38,6 +39,9 @@ const Select = () => {
       <VariantWrapper heading="Usage" code={code("usage")}>
         <SelectUsage />
       </VariantWrapper>
+      {/* <VariantWrapper heading="Number Values" code={code("usage")}>
+        <SelectNumberValues />
+      </VariantWrapper> */}
       <VariantWrapper heading="Radius" code={code("radius")}>
         <SelectRadius />
       </VariantWrapper>
@@ -50,7 +54,10 @@ const Select = () => {
       <VariantWrapper heading="Disabled Items" code={code("disabled-items")}>
         <SelectDisabledItems />
       </VariantWrapper>
-      <VariantWrapper heading="Start & End Items" code={code("start-end-items")}>
+      <VariantWrapper
+        heading="Start & End Items"
+        code={code("start-end-items")}
+      >
         <SelectStartEndItems />
       </VariantWrapper>
       <VariantWrapper heading="Placeholder" code={code("placeholder")}>
@@ -67,6 +74,9 @@ const Select = () => {
       </VariantWrapper>
       <VariantWrapper heading="Invalid State" code={code("invalid-state")}>
         <SelectInvalidState />
+      </VariantWrapper>
+      <VariantWrapper heading="Horizontal" code={code("horizontal")}>
+        <SelectHorizontal />
       </VariantWrapper>
       <VariantWrapper heading="Sizes" code={code("sizes")}>
         <SelectSizes />

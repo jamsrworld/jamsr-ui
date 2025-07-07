@@ -12,13 +12,13 @@ import {
   useRole,
   useTypeahead,
 } from "@floating-ui/react";
+import { useUIConfig } from "@jamsr-ui/config";
 import {
   useControlledState,
   useHover,
   useIsDisabled,
   useMergeRefs,
 } from "@jamsr-ui/hooks";
-import { useUIConfig } from "@jamsr-ui/config";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -41,6 +41,7 @@ import {
 import type { SelectItemProps } from "./select-item";
 import type { SelectSlots, SelectVariantProps } from "./styles";
 import { selectVariant } from "./styles";
+import { SelectValue } from "./type";
 import type { SelectContextType } from "./use-select-context";
 
 type Props = SelectVariantProps & {
@@ -49,9 +50,10 @@ type Props = SelectVariantProps & {
   placeholder?: string;
   isInvalid?: boolean;
   isDisabled?: boolean;
-  value?: string[];
-  defaultValue?: string[];
-  onValueChange?: (value: string[]) => void;
+  value?: SelectValue[];
+  defaultValue?: SelectValue[];
+  onValueChange?: (value: SelectValue[]) => void;
+  onUncontrolledValueChange?: (values: SelectValue[]) => void;
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (value: boolean) => void;
@@ -65,7 +67,6 @@ type Props = SelectVariantProps & {
   endContent?: React.ReactNode;
   returnFocus?: boolean;
   isFormControl?: boolean;
-  onUncontrolledValueChange?: (values: string[]) => void;
   topContent?: React.ReactNode;
   bottomContent?: React.ReactNode;
   disableTypeahead?: boolean;
@@ -251,9 +252,9 @@ export const useSelect = ($props: UseSelectProps) => {
   );
 
   const onSelectValue = useCallback(
-    (_value: string) => {
+    (_value: SelectValue) => {
       const values = value;
-      const getNewValue = (): string[] => {
+      const getNewValue = (): SelectValue[] => {
         if (!isMultiple) return [_value];
         const $value = new Set(values);
         if ($value.has(_value)) {
@@ -298,7 +299,7 @@ export const useSelect = ($props: UseSelectProps) => {
   const hasValue = value.length > 0;
 
   const getRenderValue = useMemo(() => {
-    if (renderValue) return renderValue(Array.from(value));
+    if (renderValue) return renderValue(Array.from(value as string[]));
     return Array.from(selectedLabels).join(",");
   }, [renderValue, selectedLabels, value]);
 

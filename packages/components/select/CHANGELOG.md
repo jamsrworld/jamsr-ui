@@ -1,5 +1,11 @@
 # @jamsr-ui/select
 
+## 0.1.6
+
+### Patch Changes
+
+- fix: layouts
+
 ## 0.1.5
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # web
 
+## 0.2.14
+
+### Patch Changes
+
+- fix: layouts
+- Updated dependencies
+  - @jamsr-ui/rhf@0.1.13
+  - @jamsr-ui/react@0.1.12
+  - @jamsr-ui/editor@0.1.10
+
 ## 0.2.13
 
 ### Patch Changes

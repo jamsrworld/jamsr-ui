@@ -8,6 +8,7 @@ import { FileUploadControlled } from "./examples/controlled";
 import { FileUploadCustomized } from "./examples/customized";
 import { FileUploadUsageValue } from "./examples/default-value";
 import { FileUploadDisabled } from "./examples/disabled";
+import { FileUploadHorizontal } from "./examples/horizontal";
 import { FileUploadRadius } from "./examples/radius";
 import { FileUploadUsage } from "./examples/usage";
 
@@ -32,6 +33,9 @@ const FileUpload = () => {
       </VariantWrapper>
       <VariantWrapper heading="Avatar" code={code("avatar")}>
         <FileUploadAvatar />
+      </VariantWrapper>
+      <VariantWrapper heading="Horizontal" code={code("horizontal")}>
+        <FileUploadHorizontal />
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <FileUploadDisabled />

@@ -195,15 +195,16 @@ export const useRadio = ($props: UseRadioProps) => {
       return {
         onChange: onCheckedChange,
         type: "radio",
-        className: "sr-only",
+        className: "hidden",
         value,
         name: inputName,
+        disabled: isDisabled,
         ...props,
         ...restProps,
         ref: inputRef,
       };
     },
-    [inputName, onCheckedChange, inputRef, restProps, value],
+    [onCheckedChange, value, inputName, isDisabled, restProps, inputRef],
   );
 
   return {

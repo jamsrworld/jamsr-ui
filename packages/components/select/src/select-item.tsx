@@ -12,7 +12,7 @@ import {
 import { useSelectContext } from "./use-select-context";
 
 type Props = {
-  value: string;
+  value: number | string;
   label?: string;
   disabled?: boolean;
   isDisabled?: boolean;
@@ -49,7 +49,8 @@ export const SelectItem = <T extends React.ElementType = "button">(
     onSelectValue,
   } = useSelectContext();
 
-  const listLabel = label ?? (typeof children === "string" ? children : value);
+  const listLabel =
+    label ?? (typeof children === "string" ? children : String(value));
   if (!listLabel) {
     console.warn(`No label provided for list item with value ${value}`);
   }

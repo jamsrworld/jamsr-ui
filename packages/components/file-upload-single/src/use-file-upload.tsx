@@ -274,10 +274,23 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
   const getLabelProps: PropGetter<ComponentProps<"label">> = (props) => {
     return {
       "data-slot": "label",
-      className: styles.label({ className: classNames?.label }),
       ...props,
+      className: styles.label({ className: classNames?.label }),
     };
   };
+
+  const getWrapperProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props = {}) => {
+      return {
+        "data-slot": "wrapper",
+        ...props,
+        className: styles.wrapper({
+          className: classNames?.wrapper,
+        }),
+      };
+    },
+    [classNames?.wrapper, styles],
+  );
 
   const getDeleteBtnProps: PropGetter<ComponentProps<"button">> = useCallback(
     (props = {}) => {
@@ -445,5 +458,6 @@ export const useFileUploadSingle = ($props: UseFileUploadSingleProps) => {
     onRetry,
     label,
     inputRef,
+    getWrapperProps,
   };
 };

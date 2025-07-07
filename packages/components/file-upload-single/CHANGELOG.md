@@ -1,5 +1,11 @@
 # @jamsr-ui/file-upload-single
 
+## 0.1.4
+
+### Patch Changes
+
+- fix: layouts
+
 ## 0.1.3
 
 ### Patch Changes

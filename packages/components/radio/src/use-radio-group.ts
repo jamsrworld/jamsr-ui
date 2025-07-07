@@ -135,6 +135,17 @@ export const useRadioGroup = <T extends string>(
     [classNames?.helperText, styles],
   );
 
+  const getContentProps: PropGetter<ComponentProps<"div">> = useCallback(
+    (props) => {
+      return {
+        ...props,
+        "data-slot": "content",
+        className: styles.content({ className: classNames?.content }),
+      };
+    },
+    [classNames?.content, styles],
+  );
+
   return {
     Component,
     context,
@@ -145,5 +156,6 @@ export const useRadioGroup = <T extends string>(
     label,
     children,
     helperText,
+    getContentProps,
   };
 };

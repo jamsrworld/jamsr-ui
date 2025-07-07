@@ -12,7 +12,7 @@ import {
 } from "@jamsr-ui/react";
 
 export const FileUploadUsage = (props: Partial<FileUploadSingleProps>) => {
-  const { dropzoneOptions, isAvatar, ...restProps } = props;
+  const { dropzoneOptions, isAvatar, classNames, ...restProps } = props;
   const handleOnError = ({ message }: FileUploadError) => {
     console.log("error:->", message);
     toast.error(message);
@@ -39,6 +39,7 @@ export const FileUploadUsage = (props: Partial<FileUploadSingleProps>) => {
       inputName="file"
       classNames={{
         picker: isAvatar ? "" : "aspect-video h-40",
+        ...classNames,
       }}
       onError={handleOnError}
       onDelete={handleOnDelete}

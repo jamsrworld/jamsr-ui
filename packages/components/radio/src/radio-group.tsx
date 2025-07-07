@@ -24,13 +24,16 @@ export const RadioGroup = <
     label,
     children,
     helperText,
+    getContentProps,
   } = useRadioGroup(props);
 
   return (
     <Component {...getBaseProps()}>
-      {label && <span {...getLabelProps()}>{label}</span>}
-      <div {...getWrapperProps()}>
-        <RadioGroupProvider value={context}>{children}</RadioGroupProvider>
+      <div {...getContentProps()}>
+        {label && <span {...getLabelProps()}>{label}</span>}
+        <div {...getWrapperProps()}>
+          <RadioGroupProvider value={context}>{children}</RadioGroupProvider>
+        </div>
       </div>
       {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
     </Component>

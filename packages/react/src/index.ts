@@ -136,6 +136,7 @@ export {
   SelectItem,
   type SelectItemProps,
   type SelectProps,
+  type SelectValue,
 } from "@jamsr-ui/select";
 export {
   Sidebar,

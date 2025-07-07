@@ -5,6 +5,7 @@ export const test = "";
 export const singleUploadVariants = tv({
   slots: {
     base: "inline-flex flex-col gap-2",
+    wrapper: "inline-flex flex-col gap-2",
     picker:
       "group relative flex aspect-video select-none flex-col items-center justify-center border-2 border-solid border-default-200",
     image: "size-full rounded-inherit object-contain",

@@ -30,11 +30,9 @@ export const radioVariant = tv({
       "w-2",
       "h-2",
       "opacity-0",
-      "scale-0",
       "origin-center",
       "rounded-full",
       "uig-selected:opacity-100",
-      "uig-selected:scale-100",
     ],
     label: "relative select-none text-foreground",
     description: "relative text-foreground-400",
@@ -109,10 +107,11 @@ export const radioVariant = tv({
 export const radioGroupVariant = tv({
   slots: {
     base: "relative flex flex-col gap-2",
-    label: "relative text-foreground-500",
+    label: "shrink-0 text-sm font-normal text-foreground relative",
     wrapper:
       "flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row",
     helperText: "text-xs text-foreground-400",
+    content: "",
   },
   variants: {
     isInvalid: {

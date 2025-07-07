@@ -1,5 +1,16 @@
 # @jamsr-ui/rhf
 
+## 0.1.13
+
+### Patch Changes
+
+- fix: layouts
+- Updated dependencies
+  - @jamsr-ui/file-upload-single@0.1.4
+  - @jamsr-ui/select@0.1.6
+  - @jamsr-ui/radio@0.1.5
+  - @jamsr-ui/editor@0.1.10
+
 ## 0.1.12
 
 ### Patch Changes

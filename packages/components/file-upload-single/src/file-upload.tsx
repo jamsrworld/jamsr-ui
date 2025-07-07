@@ -45,6 +45,7 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
     getLabelProps,
     label,
     inputRef,
+    getWrapperProps,
   } = useFileUploadSingle(props);
   const htmlForId = useId();
   const inputProps = getInputProps();
@@ -56,50 +57,52 @@ export const FileUploadSingle = (props: FileUploadSingleProps) => {
   ]);
   return (
     <Component {...getBaseProps()}>
-      <label {...getLabelProps()} htmlFor={htmlForId}>
-        {label}
-      </label>
-      <div {...getPickerProps()} {...getRootProps()}>
-        <input id={htmlForId} {...inputProps} ref={mergedInputRefs} />
-        {isEmpty && uploadIcon}
-        {!isAvatar && isEmpty && (
-          <>
-            {description && <p {...getDescriptionProps()}>{description}</p>}
-            {info && <p {...getInfoProps()}>{info}</p>}
-          </>
-        )}
-        {!isImage && !isEmpty && (
-          <div {...getFileWrapperProps()}>
-            {fileIcon}
-            {fileName && <p {...getFileNameProps()}>{fileName}</p>}
-            {fileSize && (
-              <p {...getFileSizeProps()}>{formatFileSize(fileSize)}</p>
-            )}
-          </div>
-        )}
-        {previewUrl && (
-          <div {...getFileWrapperProps()}>
-            <img alt="" {...getImageProps()} />
-          </div>
-        )}
-        {showDeleteBtn && !isDisabled && !isEmpty && (
-          <button {...getDeleteBtnProps()} type="button">
-            <CloseFilledIcon className="size-4" />
-          </button>
-        )}
-        {!!progress && (
-          <div {...getOverlayProps()}>
-            <CircularProgress value={progress} />
-          </div>
-        )}
-        {isFailed && (
-          <div {...getOverlayProps()}>
-            <span>failed</span>
-            <button title="Delete" type="button" onClick={onRetry}>
-              <RefreshIcon />
+      <div {...getWrapperProps()}>
+        <label {...getLabelProps()} htmlFor={htmlForId}>
+          {label}
+        </label>
+        <div {...getPickerProps()} {...getRootProps()}>
+          <input id={htmlForId} {...inputProps} ref={mergedInputRefs} />
+          {isEmpty && uploadIcon}
+          {!isAvatar && isEmpty && (
+            <>
+              {description && <p {...getDescriptionProps()}>{description}</p>}
+              {info && <p {...getInfoProps()}>{info}</p>}
+            </>
+          )}
+          {!isImage && !isEmpty && (
+            <div {...getFileWrapperProps()}>
+              {fileIcon}
+              {fileName && <p {...getFileNameProps()}>{fileName}</p>}
+              {fileSize && (
+                <p {...getFileSizeProps()}>{formatFileSize(fileSize)}</p>
+              )}
+            </div>
+          )}
+          {previewUrl && (
+            <div {...getFileWrapperProps()}>
+              <img alt="" {...getImageProps()} />
+            </div>
+          )}
+          {showDeleteBtn && !isDisabled && !isEmpty && (
+            <button {...getDeleteBtnProps()} type="button">
+              <CloseFilledIcon className="size-4" />
             </button>
-          </div>
-        )}
+          )}
+          {!!progress && (
+            <div {...getOverlayProps()}>
+              <CircularProgress value={progress} />
+            </div>
+          )}
+          {isFailed && (
+            <div {...getOverlayProps()}>
+              <span>failed</span>
+              <button title="Delete" type="button" onClick={onRetry}>
+                <RefreshIcon />
+              </button>
+            </div>
+          )}
+        </div>
       </div>
       {helperText && <div {...getHelperTextProps()}>{helperText}</div>}
     </Component>

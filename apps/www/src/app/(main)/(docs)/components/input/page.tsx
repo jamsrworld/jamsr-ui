@@ -10,6 +10,7 @@ import { InputDisabled } from "./examples/disabled";
 import { InputErrorState } from "./examples/error-state";
 import { InputFilled } from "./examples/filled";
 import { InputHelperText } from "./examples/helper-text";
+import { InputHorizontal } from "./examples/horizontal";
 import { InputLabelHelper } from "./examples/label-helper";
 import { InputNumberOnly } from "./examples/numbers-only";
 import { InputOutlinedAllProps } from "./examples/outlined-all-props";
@@ -65,6 +66,9 @@ const Input = () => {
       </VariantWrapper>
       <VariantWrapper heading="Error State" code={code("error-state")}>
         <InputErrorState />
+      </VariantWrapper>
+      <VariantWrapper heading="Horizontal" code={code("horizontal")}>
+        <InputHorizontal />
       </VariantWrapper>
       <VariantWrapper heading="Disabled" code={code("disabled")}>
         <InputDisabled />

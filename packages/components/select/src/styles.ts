@@ -11,7 +11,7 @@ export const selectVariant = tv({
     base: ["group relative flex w-full flex-col gap-1 text-sm"],
     value: ["text-sm", "pointer-events-none", "flex grow flex-wrap"],
     placeholder: ["text-left", "text-foreground-400", "text-sm", "grow"],
-    mainWrapper: "flex w-full flex-col",
+    mainWrapper: "flex w-full flex-col gap-1",
     innerWrapper: "flex w-full items-center gap-2",
     label: "inline-flex w-max shrink-0 text-sm font-normal text-foreground",
     trigger: [

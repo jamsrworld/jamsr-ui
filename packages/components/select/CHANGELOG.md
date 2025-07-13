@@ -1,5 +1,11 @@
 # @jamsr-ui/select
 
+## 0.1.7
+
+### Patch Changes
+
+- fix: data table
+
 ## 0.1.6
 
 ### Patch Changes

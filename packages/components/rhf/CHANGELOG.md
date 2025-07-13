@@ -1,5 +1,13 @@
 # @jamsr-ui/rhf
 
+## 0.1.15
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/select@0.1.7
+  - @jamsr-ui/editor@0.1.11
+
 ## 0.1.14
 
 ### Patch Changes

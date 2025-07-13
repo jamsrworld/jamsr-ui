@@ -1,5 +1,14 @@
 # @jamsr-ui/react
 
+## 0.1.14
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/data-table@0.1.8
+  - @jamsr-ui/select@0.1.7
+  - @jamsr-ui/editor@0.1.11
+
 ## 0.1.13
 
 ### Patch Changes

@@ -8,7 +8,7 @@ import {
 export const test = "";
 export const selectVariant = tv({
   slots: {
-    base: ["group relative flex w-full flex-col gap-1 text-sm"],
+    base: ["group relative flex flex-col gap-1 text-sm"],
     value: ["text-sm", "pointer-events-none", "flex grow flex-wrap"],
     placeholder: ["text-left", "text-foreground-400", "text-sm", "grow"],
     mainWrapper: "flex w-full flex-col gap-1",
@@ -68,6 +68,11 @@ export const selectVariant = tv({
       true: {
         label: "text-danger",
         trigger: "!border-danger",
+      },
+    },
+    isFullWidth: {
+      true: {
+        base: "w-full",
       },
     },
   },

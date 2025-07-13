@@ -47,8 +47,10 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
     >
       <Select
         classNames={{
-          base: "items-center flex max-w-[80px] flex-row gap-2",
+          base: "w-max",
+          mainWrapper: "items-center flex flex-row gap-2",
           label: "shrink-0",
+          trigger: "max-w-[60px]",
         }}
         value={value}
         onValueChange={setValue}

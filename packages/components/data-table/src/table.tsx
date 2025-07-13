@@ -3,111 +3,105 @@
 import { useUIConfig } from "@jamsr-ui/config";
 import { Table, type TableProps } from "@jamsr-ui/table";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
-import type { ColumnDef, RowData, TableOptions } from "@tanstack/react-table";
+import type {
+  RowData,
+  SortingState,
+  TableOptions,
+} from "@tanstack/react-table";
 import {
   getCoreRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { useMemo } from "react";
+import { useState } from "react";
 import { Body } from "./body";
 import { Header } from "./header";
 import { usePagination } from "./hooks/use-pagination";
-import { useSorting } from "./hooks/use-sorting";
 import { Pagination } from "./pagination";
+import { LinearProgress } from "@jamsr-ui/linear-progress";
 
-export type DataTableProps = Partial<TableProps> & {
-  sorting: {
-    id: string;
-    desc: boolean;
+export type DataTableProps = Pick<TableOptions<RowData>, "data" | "columns"> &
+  Partial<Omit<TableOptions<RowData>, "data" | "columns">> &
+  Pick<
+    TableProps,
+    | "variant"
+    | "allowHover"
+    | "radius"
+    | "density"
+    | "isHeaderSticky"
+    | "classNames"
+    | "className"
+  > & {
+    hidePagination?: boolean;
+    tableProps?: Partial<TableProps>;
+    isLoading?: boolean;
   };
-  columns: ColumnDef<any>[];
-  isServer?: boolean;
-  hidePagination?: boolean;
-  data: unknown[];
-  rowCount?: number;
-  options?: TableOptions<RowData>;
-};
 
 export const DataTable = ($props: DataTableProps) => {
-  const { dataTable: _globalProps = {}, globalConfig } = useUIConfig();
+  const { dataTable: _globalProps = {} } = useUIConfig();
   const globalProps = mergeGlobalProps(_globalProps, $props);
-  const props = deepMergeProps(globalProps, $props, globalConfig);
+  const props = deepMergeProps(globalProps, $props);
   const {
-    sorting: propSorting,
     columns,
-    isServer = false,
     hidePagination = false,
-    bottomContent,
     data,
-    rowCount,
-    options,
-    ...restProps
+    tableProps,
+    variant,
+    allowHover,
+    radius,
+    density = "standard",
+    isHeaderSticky,
+    className,
+    classNames,
+    isLoading,
+    ...options
   } = props;
 
   const { pagination, take, onPaginationChange } = usePagination();
-  const { sorting, onSortingChange } = useSorting<string>(propSorting);
-
-  const allColumns = useMemo(() => {
-    return [
-      {
-        header: "#",
-        accessorKey: "#",
-        size: 50,
-        maxSize: 50,
-        cell: ({ row, table }) =>
-          (table
-            .getSortedRowModel()
-            ?.flatRows?.findIndex((flatRow) => flatRow.id === row.id) || 0) + 1,
-      },
-      ...columns,
-    ];
-  }, [columns]);
-
-  const pageCount = rowCount ? Math.round(rowCount / take) : 0;
+  const [sorting, onSortingChange] = useState<SortingState>([]);
 
   const table = useReactTable({
-    data,
-    // @ts-expect-error fix later
-    columns: allColumns,
     columnResizeMode: "onChange",
     getCoreRowModel: getCoreRowModel(),
-    state: {
-      sorting,
-      pagination,
-    },
-    ...(isServer
-      ? {
-          manualPagination: true,
-          manualSorting: true,
-          pageCount,
-        }
-      : {
-          getSortedRowModel: getSortedRowModel(),
-          getPaginationRowModel: getPaginationRowModel(),
-        }),
+    getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
     onPaginationChange,
     onSortingChange,
+    ...options,
     defaultColumn: {
       minSize: 100,
       size: 100,
       maxSize: 1e6,
+      ...options?.defaultColumn,
     },
-    ...options,
+    state: {
+      sorting,
+      pagination,
+      ...options?.state,
+    },
+    data,
+    columns,
   });
 
   return (
     <div className="relative w-full overflow-hidden overflow-x-auto text-sm">
+      {isLoading && <LinearProgress className="absolute top-0 left-0 z-1" />}
       <Table
-        density="standard"
+        density={density}
+        variant={variant}
+        allowHover={allowHover}
+        radius={radius}
+        isHeaderSticky={isHeaderSticky}
+        className={className}
+        classNames={classNames}
+        {...tableProps}
         bottomContent={
           <>
             {hidePagination ? null : <Pagination take={take} table={table} />}
-            {bottomContent}
+            {tableProps?.bottomContent}
           </>
         }
-        {...restProps}
       >
         <Header headerGroups={table.getHeaderGroups()} />
         <Body rows={table.getRowModel().rows} />

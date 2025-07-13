@@ -16,7 +16,6 @@ export const DataTableGlobalConfig = (props: Partial<DataTableProps>) => {
     >
       <DataTable
         columns={COLUMNS}
-        isServer={false}
         sorting={{
           id: "registeredAt",
           desc: false,

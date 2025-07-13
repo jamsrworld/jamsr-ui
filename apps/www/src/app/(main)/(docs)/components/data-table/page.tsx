@@ -10,6 +10,7 @@ import { DataTableGlobalConfig } from "./examples/global-config";
 import { DataTableStickyHeader } from "./examples/sticky-header";
 import { DataTableUsage } from "./examples/usage";
 import { DataTableWithoutPagination } from "./examples/without-pagination";
+import { DataTableServer } from "./examples/server";
 
 const title = "Data Table";
 const description =
@@ -45,6 +46,9 @@ const DataTable = () => {
       </VariantWrapper>
       <VariantWrapper heading="Empty State" code={code("empty-state")}>
         <DataTableEmptyState />
+      </VariantWrapper>
+      <VariantWrapper heading="Server" code={code("server")}>
+        <DataTableServer />
       </VariantWrapper>
       <VariantWrapper heading="Global Config" code={code("global-config")}>
         <DataTableGlobalConfig />

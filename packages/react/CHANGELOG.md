@@ -1,5 +1,13 @@
 # @jamsr-ui/react
 
+## 0.1.15
+
+### Patch Changes
+
+- fix: data table types
+- Updated dependencies
+  - @jamsr-ui/data-table@0.1.9
+
 ## 0.1.14
 
 ### Patch Changes

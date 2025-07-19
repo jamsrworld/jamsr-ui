@@ -80,7 +80,7 @@ declare module "@jamsr-ui/config" {
     checkbox?: WithProps<CheckboxProps>;
     chip?: WithProps<ChipProps>;
     confirmation?: WithProps<ConfirmationProps>;
-    dataTable?: WithProps<DataTableProps>;
+    dataTable?: WithProps<DataTableProps<any>>;
     dialog?: WithProps<DialogProps>;
     dialogBody?: WithProps<DialogBodyProps>;
     dialogContent?: WithProps<DialogContentProps>;

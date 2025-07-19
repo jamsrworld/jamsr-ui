@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import type { ColumnDef, SortingState } from "@tanstack/react-table";
 
-type User = {
+export type User = {
   userId: string;
   username: string;
   email: string;
@@ -33,7 +33,6 @@ export async function fetchData(options: {
   sorting: SortingState;
   keyword: string;
 }) {
-  console.log("🚀 ~ options:->", options);
   // Simulate some network latency
   await new Promise((r) => setTimeout(r, 500));
   const { keyword, pageIndex, pageSize, sorting = [] } = options;
@@ -68,7 +67,7 @@ export async function fetchData(options: {
   };
 }
 
-export const COLUMNS = [
+export const COLUMNS: ColumnDef<User>[] = [
   {
     accessorKey: "userId",
     header: "ID",
@@ -99,4 +98,4 @@ export const COLUMNS = [
     header: "Registered At",
     accessorFn: (row) => row.registeredAt.toLocaleDateString(),
   },
-] satisfies ColumnDef<User>[];
+];

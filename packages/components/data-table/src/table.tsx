@@ -1,13 +1,10 @@
 "use client";
 
 import { useUIConfig } from "@jamsr-ui/config";
+import { LinearProgress } from "@jamsr-ui/linear-progress";
 import { Table, type TableProps } from "@jamsr-ui/table";
 import { deepMergeProps, mergeGlobalProps } from "@jamsr-ui/utils";
-import type {
-  RowData,
-  SortingState,
-  TableOptions,
-} from "@tanstack/react-table";
+import type { SortingState, TableOptions } from "@tanstack/react-table";
 import {
   getCoreRowModel,
   getPaginationRowModel,
@@ -19,10 +16,12 @@ import { Body } from "./body";
 import { Header } from "./header";
 import { usePagination } from "./hooks/use-pagination";
 import { Pagination } from "./pagination";
-import { LinearProgress } from "@jamsr-ui/linear-progress";
 
-export type DataTableProps = Pick<TableOptions<RowData>, "data" | "columns"> &
-  Partial<Omit<TableOptions<RowData>, "data" | "columns">> &
+export type DataTableProps<TData> = Pick<
+  TableOptions<TData>,
+  "data" | "columns"
+> &
+  Partial<Omit<TableOptions<TData>, "data" | "columns">> &
   Pick<
     TableProps,
     | "variant"
@@ -38,7 +37,9 @@ export type DataTableProps = Pick<TableOptions<RowData>, "data" | "columns"> &
     isLoading?: boolean;
   };
 
-export const DataTable = ($props: DataTableProps) => {
+export const DataTable = <TData extends object>(
+  $props: DataTableProps<TData>,
+) => {
   const { dataTable: _globalProps = {} } = useUIConfig();
   const globalProps = mergeGlobalProps(_globalProps, $props);
   const props = deepMergeProps(globalProps, $props);

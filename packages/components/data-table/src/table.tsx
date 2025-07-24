@@ -15,7 +15,7 @@ import { useState } from "react";
 import { Body } from "./body";
 import { Header } from "./header";
 import { usePagination } from "./hooks/use-pagination";
-import { Pagination } from "./pagination";
+import { Pagination, PaginationProps } from "./pagination";
 
 export type DataTableProps<TData> = Pick<
   TableOptions<TData>,
@@ -35,6 +35,7 @@ export type DataTableProps<TData> = Pick<
     hidePagination?: boolean;
     tableProps?: Partial<TableProps>;
     isLoading?: boolean;
+    paginationProps?: Pick<PaginationProps<any>, "className" | "classNames">;
   };
 
 export const DataTable = <TData extends object>(
@@ -56,6 +57,7 @@ export const DataTable = <TData extends object>(
     className,
     classNames,
     isLoading,
+    paginationProps,
     ...options
   } = props;
 
@@ -99,7 +101,9 @@ export const DataTable = <TData extends object>(
         {...tableProps}
         bottomContent={
           <>
-            {hidePagination ? null : <Pagination take={take} table={table} />}
+            {hidePagination ? null : (
+              <Pagination take={take} table={table} {...paginationProps} />
+            )}
             {tableProps?.bottomContent}
           </>
         }

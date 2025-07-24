@@ -1,5 +1,12 @@
 # @jamsr-ui/icon-button
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/ripple@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes

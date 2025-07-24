@@ -1,5 +1,11 @@
 # @jamsr-ui/chip
 
+## 0.1.4
+
+### Patch Changes
+
+- @jamsr-ui/button@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes

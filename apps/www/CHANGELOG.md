@@ -1,5 +1,15 @@
 # web
 
+## 0.2.18
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/theme@0.1.4
+  - @jamsr-ui/react@0.1.16
+  - @jamsr-ui/editor@0.1.12
+  - @jamsr-ui/rhf@0.1.16
+
 ## 0.2.17
 
 ### Patch Changes

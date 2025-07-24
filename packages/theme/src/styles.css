@@ -4,7 +4,7 @@
 
   /* animations */
   --animate-progress: progress 1s infinite linear;
-  --animate-ripple: ripple 1s linear;
+  --animate-ripple: ripple 1s linear forwards;
 
   @keyframes progress {
     0% {

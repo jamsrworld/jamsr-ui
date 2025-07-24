@@ -1,5 +1,11 @@
 # @jamsr-ui/copy-to-clipboard
 
+## 0.1.4
+
+### Patch Changes
+
+- @jamsr-ui/icon-button@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes

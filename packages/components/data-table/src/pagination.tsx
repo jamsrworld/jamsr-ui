@@ -9,13 +9,24 @@ import {
 import { type Table } from "@tanstack/react-table";
 import { useEffect, useState } from "react";
 import { rowPerPageOptions } from "./hooks/use-pagination";
+import { cn } from "@jamsr-ui/utils";
 
-type Props<T> = {
+export type PaginationProps<T> = {
   table: Table<T>;
   take: number;
+  className?: string;
+  classNames?: {
+    root?: string;
+    pagesWrapper?: string;
+  };
 };
 
-export const Pagination = <T,>({ table, take }: Props<T>) => {
+export const Pagination = <T,>({
+  table,
+  take,
+  className,
+  classNames,
+}: PaginationProps<T>) => {
   const [value, setValue] = useState<SelectValue[]>([take.toString()]);
 
   useEffect(() => {
@@ -43,7 +54,11 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
   return (
     <div
       data-slot="pagination"
-      className="flex flex-col justify-between gap-4 md:flex-row md:items-center"
+      className={cn(
+        "flex flex-col justify-between gap-4 md:flex-row md:items-center",
+        classNames?.root,
+        className,
+      )}
     >
       <Select
         classNames={{
@@ -64,7 +79,7 @@ export const Pagination = <T,>({ table, take }: Props<T>) => {
           </SelectItem>
         ))}
       </Select>
-      <div className="flex gap-1 md:gap-4">
+      <div className={cn("flex gap-1 md:gap-4", classNames?.pagesWrapper)}>
         <div className="flex items-center justify-center text-sm font-medium">
           Page {currentPageIndex} of {totalPageCount}
         </div>

@@ -1,5 +1,14 @@
 # @jamsr-ui/data-table
 
+## 0.1.10
+
+### Patch Changes
+
+- fix: ripple
+  - @jamsr-ui/button@0.1.4
+  - @jamsr-ui/icon-button@0.1.4
+  - @jamsr-ui/select@0.1.8
+
 ## 0.1.9
 
 ### Patch Changes

@@ -29,9 +29,9 @@ export const Ripple = (props: Props) => {
       {ripples?.map((style, i) => {
         return (
           <span
-            key={i}
+            key={style.id}
             className={cn(
-              "absolute origin-center animate-ripple rounded-full bg-current opacity-15",
+              "absolute origin-center animate-ripple  rounded-full bg-current opacity-15",
               classNames?.ripple,
             )}
             style={{

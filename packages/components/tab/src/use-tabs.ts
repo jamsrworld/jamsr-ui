@@ -123,6 +123,7 @@ export const useTabs = <T extends string>($props: UseTabsProps<T>) => {
         "data-disabled": dataAttr($isDisabled),
         disabled: $isDisabled,
         "aria-disabled": $isDisabled,
+        type: "button",
         ...filterDOMProps(props ?? {}, {
           omitPropNames: new Set(["value"]),
         }),

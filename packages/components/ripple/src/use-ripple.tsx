@@ -1,4 +1,3 @@
-import { useDebounce } from "@jamsr-ui/hooks";
 import type React from "react";
 import { useEffect, useState } from "react";
 
@@ -6,56 +5,52 @@ export type UseRippleOptions = {
   isCenter?: boolean;
 };
 
+type Ripple = React.CSSProperties & { id: string };
+
 export const useRipple = <T extends HTMLElement>(
   ref: React.RefObject<T | null>,
   options: UseRippleOptions = {},
 ) => {
-  const [ripples, setRipples] = useState<
-    (React.CSSProperties & { id: string })[]
-  >([]);
+  const [ripples, setRipples] = useState<Ripple[]>([]);
   const { isCenter } = options;
+
   useEffect(() => {
-    if (ref.current) {
-      const elem = ref.current;
+    const elem = ref.current;
+    if (!elem) return;
+
+    const clickHandler = (e: MouseEvent) => {
+      const rect = elem.getBoundingClientRect();
+      const diameter = Math.max(elem.clientWidth, elem.clientHeight);
+
+      const left = isCenter
+        ? rect.width / 2 - diameter / 2
+        : e.clientX - rect.left - diameter / 2;
+      const top = isCenter
+        ? rect.height / 2 - diameter / 2
+        : e.clientY - rect.top - diameter / 2;
+
       const id = Math.random().toString(36).slice(2, 9);
-      const clickHandler = (e: MouseEvent) => {
-        const rect = elem.getBoundingClientRect();
-        const height = elem.clientHeight;
-        const width = elem.clientWidth;
-        const diameter = Math.max(width, height);
-
-        const left = isCenter
-          ? rect.width / 2 - diameter / 2
-          : e.clientX - rect.left - diameter / 2;
-        const top = isCenter
-          ? rect.height / 2 - diameter / 2
-          : e.clientY - rect.top - diameter / 2;
-
-        setRipples([
-          ...ripples,
-          {
-            id,
-            top,
-            left,
-            height: Math.max(width, height),
-            width: Math.max(width, height),
-          },
-        ]);
+      const newRipple: Ripple = {
+        id,
+        top,
+        left,
+        width: diameter,
+        height: diameter,
       };
 
-      elem.addEventListener("mousedown", clickHandler);
-      return () => {
-        elem.removeEventListener("mousedown", clickHandler);
-      };
-    }
-    return () => {};
-  }, [isCenter, ref, ripples]);
+      setRipples((prev) => [...prev, newRipple]);
 
-  const debounced = useDebounce(ripples, 500);
-  useEffect(() => {
-    if (debounced.length) {
-      setRipples([]);
-    }
-  }, [debounced.length]);
+      // Schedule removal of this ripple after 500ms
+      setTimeout(() => {
+        setRipples((prev) => prev.filter((r) => r.id !== id));
+      }, 500);
+    };
+
+    elem.addEventListener("mousedown", clickHandler);
+    return () => {
+      elem.removeEventListener("mousedown", clickHandler);
+    };
+  }, [isCenter, ref]);
+
   return ripples;
 };

@@ -1,5 +1,17 @@
 # @jamsr-ui/editor
 
+## 0.1.12
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/theme@0.1.4
+  - @jamsr-ui/icon-button@0.1.4
+  - @jamsr-ui/menu@0.1.3
+  - @jamsr-ui/select@0.1.8
+  - @jamsr-ui/input@0.1.6
+  - @jamsr-ui/popover@0.1.3
+
 ## 0.1.11
 
 ### Patch Changes

@@ -180,7 +180,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
   );
 
   const filteredItems = allItems.filter((item) =>
-    item?.label.toLowerCase().startsWith(inputValue.toLowerCase()),
+    item?.label.toLowerCase().includes(inputValue.toLowerCase()),
   );
   const renderedItems = isFocused ? allItems : filteredItems;
   const childrenToRender = renderedItems.map(

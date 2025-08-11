@@ -1,5 +1,11 @@
 # @jamsr-ui/autocomplete
 
+## 0.1.8
+
+### Patch Changes
+
+- fix: autocomplete search
+
 ## 0.1.7
 
 ### Patch Changes

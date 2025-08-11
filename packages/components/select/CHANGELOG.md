@@ -1,5 +1,11 @@
 # @jamsr-ui/select
 
+## 0.1.9
+
+### Patch Changes
+
+- fix: popover width
+
 ## 0.1.8
 
 ### Patch Changes

@@ -229,7 +229,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
         apply({ rects, elements, availableHeight }) {
           Object.assign(elements.floating.style, {
             maxHeight: `${Math.max(50, Math.min(400, availableHeight))}px`,
-            minWidth: `${rects.reference.width}px`,
+            width: `${rects.reference.width}px`,
           });
         },
         padding: 0,

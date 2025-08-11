@@ -1,5 +1,12 @@
 # @jamsr-ui/data-table
 
+## 0.1.11
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/select@0.1.9
+
 ## 0.1.10
 
 ### Patch Changes

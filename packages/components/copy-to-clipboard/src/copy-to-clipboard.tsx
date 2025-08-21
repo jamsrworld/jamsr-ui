@@ -62,7 +62,7 @@ export const CopyToClipboard = ($props: CopyToClipboardProps) => {
   const Icon = useMemo(() => {
     if (icon) {
       const content = icon({ isCopied });
-      cloneElement(content, {
+      return cloneElement(content, {
         className: cn(content.props.className, iconClassName),
       });
     }

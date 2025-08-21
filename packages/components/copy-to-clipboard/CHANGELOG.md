@@ -1,5 +1,11 @@
 # @jamsr-ui/copy-to-clipboard
 
+## 0.1.5
+
+### Patch Changes
+
+- fix: ctc
+
 ## 0.1.4
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @jamsr-ui/react
 
+## 0.1.19
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/copy-to-clipboard@0.1.5
+
 ## 0.1.18
 
 ### Patch Changes

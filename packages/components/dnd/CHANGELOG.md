@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.1.3
+
+### Patch Changes
+
+- fix: dnd,rhf
+
 ## 0.1.2
 
 ### Patch Changes

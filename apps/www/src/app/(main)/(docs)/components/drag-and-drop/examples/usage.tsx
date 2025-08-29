@@ -122,10 +122,19 @@ type Props = {
 export const DndGrid = (props: Props) => {
   const { isDisabled = false } = props;
   const [items, setItems] = useState<SortItem[]>(defaultItems);
+
+  const onReorder = () => {
+    console.log("🚀 ~ items:->", items);
+  };
   return (
     <Card>
       <CardContent className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <Sortable items={items} setItems={setItems} isDisabled={isDisabled}>
+        <Sortable
+          items={items}
+          setItems={setItems}
+          isDisabled={isDisabled}
+          onReorder={onReorder}
+        >
           {(props) => <Item {...props} />}
         </Sortable>
       </CardContent>

@@ -5,7 +5,7 @@ import {
   type FileUploadMultiState,
 } from "@jamsr-ui/file-upload-multi";
 import { randomId } from "@jamsr-ui/utils";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Controller,
   useFormContext,
@@ -43,8 +43,7 @@ export const RenderController = <
     getValueFromResponse,
     ...restProps
   } = props;
-  const value = Array.isArray($value) ? $value : [];
-
+  const value = useMemo(() => (Array.isArray($value) ? $value : []), [$value]);
   const uploadsDefault = value.map((item) => ({
     id: randomId(),
     response: item,
@@ -82,6 +81,10 @@ export const RenderController = <
       response: schema,
     });
   };
+
+  useEffect(() => {
+    setStateValue(defaultState);
+  }, [defaultState]);
 
   return (
     <FileUploadMulti

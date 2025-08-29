@@ -1,5 +1,12 @@
 # @jamsr-ui/file-upload-multi
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/dnd@0.1.3
+
 ## 0.1.3
 
 ### Patch Changes

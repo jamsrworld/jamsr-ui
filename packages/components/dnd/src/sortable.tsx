@@ -28,12 +28,13 @@ type Props<T> = {
   setItems: React.Dispatch<React.SetStateAction<T[]>>;
   children: (_: SortableItemProps & { item: T }) => React.ReactNode;
   isDisabled?: boolean;
+  onReorder?: () => void;
 };
 
 export const Sortable = <T extends { id: UniqueIdentifier }>(
   props: Props<T>,
 ) => {
-  const { items, children, setItems, isDisabled } = props;
+  const { items, children, setItems, isDisabled, onReorder } = props;
   // for drag overlay
   const [activeId, setActiveId] = useState<null | string | number>(null);
 
@@ -68,7 +69,11 @@ export const Sortable = <T extends { id: UniqueIdentifier }>(
     const overIndex = items.findIndex((item) => item.id === over.id);
 
     if (activeIndex !== overIndex) {
-      setItems((prev) => arrayMove<T>(prev, activeIndex, overIndex));
+      setItems((prev) => {
+        const newData = arrayMove<T>(prev, activeIndex, overIndex);
+        return newData;
+      });
+      onReorder?.();
     }
   };
 

@@ -1,5 +1,12 @@
 # @jamsr-ui/rhf
 
+## 0.1.19
+
+### Patch Changes
+
+- fix: dnd,rhf
+  - @jamsr-ui/file-upload-multi@0.1.4
+
 ## 0.1.18
 
 ### Patch Changes

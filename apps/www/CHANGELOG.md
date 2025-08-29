@@ -1,5 +1,14 @@
 # web
 
+## 0.2.22
+
+### Patch Changes
+
+- fix: dnd,rhf
+- Updated dependencies
+  - @jamsr-ui/rhf@0.1.19
+  - @jamsr-ui/react@0.1.20
+
 ## 0.2.21
 
 ### Patch Changes

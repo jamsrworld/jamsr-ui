@@ -1,6 +1,6 @@
+import { useUIConfig } from "@jamsr-ui/config";
 import { useControlledState2, useIsDisabled } from "@jamsr-ui/hooks";
 import { FileAddIcon } from "@jamsr-ui/shared-icons";
-import { useUIConfig } from "@jamsr-ui/config";
 import type { PropGetter, SlotsToClasses, UIProps } from "@jamsr-ui/utils";
 import {
   cn,
@@ -94,6 +94,11 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
     $value,
     onValueChange,
   );
+
+  // useEffect(() => {
+  //   if ($value) setValue($value);
+  // }, [$value]);
+
   const { isDisabled: propIsDisabled = false } = variantProps;
   const { isDisabled, ref: inputRef } = useIsDisabled<HTMLInputElement>({
     isDisabled: propIsDisabled,
@@ -208,7 +213,9 @@ export const useFileUploadMulti = ($props: UseFileUploadMultiProps) => {
           progress: "PENDING",
         };
       });
-      setValue((prev) => [...prev, ...selectedFiles]);
+      setValue((prev) => {
+        return [...prev, ...selectedFiles];
+      });
       selectedFiles.forEach((file) => {
         if (file.file) uploadFile(file.id, file.file);
       });

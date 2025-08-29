@@ -6,7 +6,10 @@ import {
 } from "@jamsr-ui/shared-icons";
 import { useId } from "react";
 import { ProgressView } from "./progress-view";
-import type { FileUploadMultiState, UseFileUploadMultiProps } from "./use-file-upload";
+import type {
+  FileUploadMultiState,
+  UseFileUploadMultiProps,
+} from "./use-file-upload";
 import { useFileUploadMulti } from "./use-file-upload";
 
 export type FileUploadMultiProps = UseFileUploadMultiProps;

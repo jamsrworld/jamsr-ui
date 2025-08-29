@@ -10,6 +10,7 @@ export const useControlledState2 = <T>(
   useEffect(() => {
     onValueChange?.(controlledValue as T);
   }, [onValueChange, controlledValue]);
+
   return [controlledValue, setControlledValue] as [
     T,
     React.Dispatch<React.SetStateAction<T>>,

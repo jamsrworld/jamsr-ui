@@ -1,5 +1,13 @@
 # @jamsr-ui/data-table
 
+## 0.1.12
+
+### Patch Changes
+
+- @jamsr-ui/button@0.1.5
+- @jamsr-ui/icon-button@0.1.5
+- @jamsr-ui/select@0.1.10
+
 ## 0.1.11
 
 ### Patch Changes

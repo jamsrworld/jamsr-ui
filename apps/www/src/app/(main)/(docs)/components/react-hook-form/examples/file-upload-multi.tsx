@@ -4,7 +4,7 @@ import { type ImageMetadata } from "@/app/config";
 import { CDN_API_URL, CDN_UPLOAD_URL } from "@/utils/config";
 import { zodImage } from "@/utils/zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { type FileUploadError, toast } from "@jamsr-ui/react";
+import { Button, type FileUploadError, toast } from "@jamsr-ui/react";
 import { RHFFileUploadMulti } from "@jamsr-ui/rhf";
 import { useForm } from "react-hook-form";
 import { array, object } from "zod";
@@ -31,7 +31,8 @@ export const RHFDemoFileUploadMulti = (props: Props) => {
     defaultValues,
     resolver: zodResolver(schema),
   });
-  const { handleSubmit } = methods;
+  const { handleSubmit, reset, watch } = methods;
+  console.log("🚀 ~ watch:->", watch("images"));
 
   const onSubmit = handleSubmit((values) => {
     console.log(values);
@@ -56,6 +57,17 @@ export const RHFDemoFileUploadMulti = (props: Props) => {
         onError={handleError}
         getValueFromResponse={(response) => response}
       />
+      <div>
+        <Button
+          onClick={() =>
+            reset({
+              images: [],
+            })
+          }
+        >
+          Reset
+        </Button>
+      </div>
     </RHFDemoWrapper>
   );
 };

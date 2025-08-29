@@ -1,5 +1,44 @@
 # @jamsr-ui/react
 
+## 0.1.22
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-multi@0.1.6
+  - @jamsr-ui/autocomplete@0.1.9
+  - @jamsr-ui/button@0.1.5
+  - @jamsr-ui/checkbox@0.1.5
+  - @jamsr-ui/collapsible@0.1.4
+  - @jamsr-ui/dialog@0.1.5
+  - @jamsr-ui/drawer@1.1.5
+  - @jamsr-ui/editor@0.1.14
+  - @jamsr-ui/file-upload-single@0.1.5
+  - @jamsr-ui/icon-button@0.1.5
+  - @jamsr-ui/input@0.1.7
+  - @jamsr-ui/menu@0.1.4
+  - @jamsr-ui/otp-input@0.1.4
+  - @jamsr-ui/popover@0.1.4
+  - @jamsr-ui/radio@0.1.7
+  - @jamsr-ui/rating@0.1.4
+  - @jamsr-ui/ripple@0.1.5
+  - @jamsr-ui/select@0.1.10
+  - @jamsr-ui/sidebar@0.1.4
+  - @jamsr-ui/stepper@0.1.4
+  - @jamsr-ui/switch@0.1.6
+  - @jamsr-ui/tab@0.1.7
+  - @jamsr-ui/tags-input@0.1.8
+  - @jamsr-ui/textarea@0.1.7
+  - @jamsr-ui/alert@0.1.4
+  - @jamsr-ui/card@0.1.4
+  - @jamsr-ui/chip@0.1.5
+  - @jamsr-ui/confirmation@0.1.6
+  - @jamsr-ui/data-table@0.1.12
+  - @jamsr-ui/header@0.1.3
+  - @jamsr-ui/toast@0.1.3
+  - @jamsr-ui/copy-to-clipboard@0.1.6
+  - @jamsr-ui/tooltip@0.1.3
+
 ## 0.1.21
 
 ### Patch Changes

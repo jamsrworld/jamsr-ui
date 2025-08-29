@@ -5,7 +5,7 @@ import {
   type FileUploadMultiState,
 } from "@jamsr-ui/file-upload-multi";
 import { randomId } from "@jamsr-ui/utils";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Controller,
   useFormContext,
@@ -44,32 +44,34 @@ export const RenderController = <
     ...restProps
   } = props;
   const value = useMemo(() => (Array.isArray($value) ? $value : []), [$value]);
-  const uploadsDefault = value.map((item) => ({
-    id: randomId(),
-    response: item,
-  }));
-  const defaultState: FileUploadMultiState[] = uploadsDefault.map((item) => ({
-    file: null,
-    id: item.id,
-    preview: getFileUrlAfterUpload(item.response),
-    progress: "COMPLETE",
-  }));
+  const uploadsDefault = useMemo(
+    () =>
+      value.map((item) => ({
+        id: randomId(),
+        response: item,
+      })),
+    [value],
+  );
+
+  const defaultState: FileUploadMultiState[] = useMemo(
+    () =>
+      uploadsDefault.map((item) => ({
+        file: null,
+        id: item.id,
+        preview: getFileUrlAfterUpload(item.response),
+        progress: "COMPLETE",
+      })),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [uploadsDefault],
+  );
   const uploadsRef =
     useRef<{ id: string; response: Record<string, string> }[]>(uploadsDefault);
   const [stateValue, setStateValue] =
     useState<FileUploadMultiState[]>(defaultState);
 
-  useEffect(() => {
-    const finalValue = stateValue
-      .map((item) => {
-        const upload = uploadsRef.current.find((upload) => {
-          return upload.id === item.id;
-        });
-        return upload?.response;
-      })
-      .filter(Boolean);
-    onChange(finalValue);
-  }, [stateValue, onChange]);
+  // useEffect(() => {
+  //   setStateValue(defaultState);
+  // }, [defaultState]);
 
   const onUploadSuccess = (data: {
     id: string;
@@ -82,15 +84,24 @@ export const RenderController = <
     });
   };
 
-  useEffect(() => {
-    setStateValue(defaultState);
-  }, [defaultState]);
-
+  const onValueChange = useCallback((items: FileUploadMultiState[]) => {
+    setStateValue(items);
+    const finalValue = items
+      .map((item) => {
+        const upload = uploadsRef.current.find((upload) => {
+          return upload.id === item.id;
+        });
+        return upload?.response;
+      })
+      .filter(Boolean);
+    onChange(finalValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <FileUploadMulti
       isFormControl
       value={stateValue}
-      onValueChange={setStateValue}
+      onValueChange={onValueChange}
       onUploadSuccess={onUploadSuccess}
       onBlur={onBlur}
       showDeleteBtn

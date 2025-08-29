@@ -1,5 +1,16 @@
 # web
 
+## 0.2.24
+
+### Patch Changes
+
+- fix: rhf
+- Updated dependencies
+  - @jamsr-ui/rhf@0.1.21
+  - @jamsr-ui/hooks@0.1.4
+  - @jamsr-ui/react@0.1.22
+  - @jamsr-ui/editor@0.1.14
+
 ## 0.2.23
 
 ### Patch Changes

@@ -6,7 +6,7 @@ import {
 } from "@jamsr-ui/shared-icons";
 import { useId } from "react";
 import { ProgressView } from "./progress-view";
-import type { UseFileUploadMultiProps } from "./use-file-upload";
+import type { FileUploadMultiState, UseFileUploadMultiProps } from "./use-file-upload";
 import { useFileUploadMulti } from "./use-file-upload";
 
 export type FileUploadMultiProps = UseFileUploadMultiProps;
@@ -47,13 +47,17 @@ export const FileUploadMulti = (props: FileUploadMultiProps) => {
       ? (inputProps?.ref as React.RefObject<HTMLInputElement>)
       : undefined,
   ]);
+
+  const onValueChange = (value: FileUploadMultiState[]) => {
+    setValue(value);
+  };
   return (
     <Component {...getBaseProps()}>
       <label {...getLabelProps()} htmlFor={htmlForId}>
         {label}
       </label>
       <div {...getInnerWrapperProps()}>
-        <Sortable items={value} setItems={setValue}>
+        <Sortable value={value} onValueChange={onValueChange}>
           {({
             item,
             attributes,

@@ -1,5 +1,13 @@
 # @jamsr-ui/react
 
+## 0.1.21
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-multi@0.1.5
+  - @jamsr-ui/dnd@0.1.4
+
 ## 0.1.20
 
 ### Patch Changes

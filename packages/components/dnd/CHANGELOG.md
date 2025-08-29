@@ -1,5 +1,11 @@
 # @jamsr-ui/dnd
 
+## 0.1.4
+
+### Patch Changes
+
+- fix: dnd,upload
+
 ## 0.1.3
 
 ### Patch Changes

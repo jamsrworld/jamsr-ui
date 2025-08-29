@@ -1,5 +1,13 @@
 # web
 
+## 0.2.23
+
+### Patch Changes
+
+- fix: dnd,upload
+  - @jamsr-ui/rhf@0.1.20
+  - @jamsr-ui/react@0.1.21
+
 ## 0.2.22
 
 ### Patch Changes

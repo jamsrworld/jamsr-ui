@@ -1,5 +1,12 @@
 # @jamsr-ui/rhf
 
+## 0.1.20
+
+### Patch Changes
+
+- Updated dependencies
+  - @jamsr-ui/file-upload-multi@0.1.5
+
 ## 0.1.19
 
 ### Patch Changes

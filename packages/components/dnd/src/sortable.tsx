@@ -24,17 +24,16 @@ import { useState } from "react";
 import { SortableItem, type SortableItemProps } from "./sortable-item";
 
 type Props<T> = {
-  items: T[];
-  setItems: React.Dispatch<React.SetStateAction<T[]>>;
+  value: T[];
+  onValueChange?: (item: T[]) => void;
   children: (_: SortableItemProps & { item: T }) => React.ReactNode;
   isDisabled?: boolean;
-  onReorder?: () => void;
 };
 
 export const Sortable = <T extends { id: UniqueIdentifier }>(
   props: Props<T>,
 ) => {
-  const { items, children, setItems, isDisabled, onReorder } = props;
+  const { value, children, isDisabled, onValueChange } = props;
   // for drag overlay
   const [activeId, setActiveId] = useState<null | string | number>(null);
 
@@ -58,22 +57,18 @@ export const Sortable = <T extends { id: UniqueIdentifier }>(
     const { active, over } = event;
     if (!over) return;
 
-    const activeItem = items.find((item) => item.id === active.id);
-    const overItem = items.find((item) => item.id === over.id);
+    const activeItem = value.find((item) => item.id === active.id);
+    const overItem = value.find((item) => item.id === over.id);
 
     if (!activeItem || !overItem) {
       return;
     }
 
-    const activeIndex = items.findIndex((item) => item.id === active.id);
-    const overIndex = items.findIndex((item) => item.id === over.id);
+    const activeIndex = value.findIndex((item) => item.id === active.id);
+    const overIndex = value.findIndex((item) => item.id === over.id);
 
     if (activeIndex !== overIndex) {
-      setItems((prev) => {
-        const newData = arrayMove<T>(prev, activeIndex, overIndex);
-        return newData;
-      });
-      onReorder?.();
+      onValueChange?.(arrayMove<T>(value, activeIndex, overIndex));
     }
   };
 
@@ -81,7 +76,7 @@ export const Sortable = <T extends { id: UniqueIdentifier }>(
     setActiveId(null);
   };
 
-  const activeItem = items.find((item) => item.id === activeId);
+  const activeItem = value.find((item) => item.id === activeId);
   return (
     <DndContext
       sensors={sensors}
@@ -91,8 +86,8 @@ export const Sortable = <T extends { id: UniqueIdentifier }>(
       onDragCancel={handleDragCancel}
       modifiers={[restrictToWindowEdges]}
     >
-      <SortableContext items={items} strategy={rectSortingStrategy}>
-        {items.map((item) => (
+      <SortableContext items={value} strategy={rectSortingStrategy}>
+        {value.map((item) => (
           <SortableItem key={item.id} id={item.id} isDisabled={isDisabled}>
             {(props) => children({ item, ...props })}
           </SortableItem>

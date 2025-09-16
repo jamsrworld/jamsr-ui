@@ -1,5 +1,11 @@
 # @jamsr-ui/autocomplete
 
+## 0.1.10
+
+### Patch Changes
+
+- feat: onInputvaluechange
+
 ## 0.1.9
 
 ### Patch Changes

@@ -56,6 +56,7 @@ export type UseAutocompleteProps = Pick<
   value?: string[];
   defaultValue?: string[];
   onValueChange?: (value: string[]) => void;
+  onInputValueChange?: (value: string) => void;
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (value: boolean) => void;
@@ -97,6 +98,7 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
     isDisabled,
     onBlur,
     errorMessage,
+    onInputValueChange,
   } = props;
   const baseRef = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(1);
@@ -198,11 +200,12 @@ export const useAutocomplete = ($props: UseAutocompleteProps) => {
   const handleInputChange = useCallback(
     (value: string) => {
       setInputValue(value);
+      onInputValueChange?.(value);
       setIsOpen(true);
       setIsFocused(false);
       setActiveIndex(0);
     },
-    [setIsOpen],
+    [onInputValueChange, setIsOpen],
   );
 
   const handleToggleOpen = useCallback(() => {

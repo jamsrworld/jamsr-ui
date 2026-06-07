@@ -1,11 +1,16 @@
 "use client";
-import { useInput } from "./use-input";
+
+import { Input as InputPrimitive } from "@base-ui/react/input";
+import { useHover } from "@jamsrui/hooks";
+import { dataAttr } from "@jamsrui/utils";
 
 export const Input = (props: Input.Props) => {
-  const { getInputProps } = useInput(props);
-  return <input {...getInputProps()} />;
+  const { isHovered, ref } = useHover();
+  return (
+    <InputPrimitive ref={ref} data-hovered={dataAttr(isHovered)} {...props} />
+  );
 };
 
 export namespace Input {
-  export interface Props extends useInput.Props {}
+  export interface Props extends InputPrimitive.Props {}
 }

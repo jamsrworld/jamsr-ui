@@ -9,13 +9,13 @@ export const InputPrefixSuffix = () => {
         <Field.Label>Amount</Field.Label>
         <InputGroup variant="solid">
           <InputGroup.Prefix>$</InputGroup.Prefix>
-          <Input />
+          <InputGroup.Input />
         </InputGroup>
       </Field>
       <Field>
         <Field.Label>Discount</Field.Label>
         <InputGroup variant="solid">
-          <Input />
+          <InputGroup.Input />
           <InputGroup.Suffix>%</InputGroup.Suffix>
         </InputGroup>
       </Field>
@@ -23,7 +23,7 @@ export const InputPrefixSuffix = () => {
         <Field.Label>Website</Field.Label>
         <InputGroup variant="solid">
           <InputGroup.Prefix>https://</InputGroup.Prefix>
-          <Input />
+          <InputGroup.Input />
           <InputGroup.Suffix>.com</InputGroup.Suffix>
         </InputGroup>
       </Field>

@@ -1,10 +1,9 @@
 "use client";
 
 import { EyeClosedIcon, EyeOpenIcon } from "@jamsrui/icons";
-import { IconButton } from "jamsrui/icon-button";
-import { Input } from "jamsrui/input";
-import { InputGroup } from "jamsrui/input-group";
 import { Field } from "jamsrui/field";
+import { IconButton } from "jamsrui/icon-button";
+import { InputGroup } from "jamsrui/input-group";
 import { useState } from "react";
 
 export const InputPasswordToggle = () => {
@@ -16,7 +15,7 @@ export const InputPasswordToggle = () => {
     <Field>
       <Field.Label>Password</Field.Label>
       <InputGroup>
-        <Input
+        <InputGroup.Input
           type={showPassword ? "text" : "password"}
           placeholder="Enter your name"
         />

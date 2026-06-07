@@ -1,5 +1,6 @@
 import {
   InputGroup as InputGroupRoot,
+  InputGroupInput,
   InputGroupPrefix,
   InputGroupSuffix,
 } from "./input-group";
@@ -7,6 +8,7 @@ import {
 export const InputGroup = Object.assign(InputGroupRoot, {
   Prefix: InputGroupPrefix,
   Suffix: InputGroupSuffix,
+  Input: InputGroupInput,
 });
 
 export namespace InputGroup {

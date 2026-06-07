@@ -4,7 +4,7 @@ import type { VariantProps } from "tailwind-variants";
 
 export const inputStyles = tv({
   base: [
-    "focus:outline-none disabled:status-disabled placeholder:text-foreground-secondary bg-transparent font-normal",
+    "outline-none disabled:status-disabled placeholder:text-foreground-secondary bg-transparent font-normal",
   ],
   variants: {
     variant: {
@@ -36,13 +36,3 @@ export const inputStyles = tv({
 });
 
 export type InputVariants = VariantProps<typeof inputStyles>;
-
-export const inputGroupInputStyles = tv({
-  base: ["w-full px-3 py-2 text-sm placeholder:text-sm focus:outline-none"],
-  variants: {
-    variant: {
-      bordered: "",
-      solid: "bg-surface data-hovered:bg-surface/90",
-    },
-  },
-});

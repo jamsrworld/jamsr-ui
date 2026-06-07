@@ -6,7 +6,7 @@ import { InputGroup as InputGroupUI } from "@jamsrui/react";
 
 import { inputGroupStyles } from "./styles";
 
-import type { VariantProps } from "tailwind-variants";
+import { cn, type VariantProps } from "tailwind-variants";
 
 type InputGroupVariants = VariantProps<typeof inputGroupStyles>;
 
@@ -53,6 +53,16 @@ export const InputGroupSuffix = (props: InputGroupSuffix.Props) => {
     <InputGroupUI.Suffix
       {...props}
       className={styles.suffix({ className: props.className })}
+    />
+  );
+};
+
+export const InputGroupInput = (props: InputGroupUI.Input) => {
+  const { styles } = useInputGroupContext();
+  return (
+    <InputGroupUI.Input
+      {...props}
+      className={styles.input({ className: cn(props.className) })}
     />
   );
 };

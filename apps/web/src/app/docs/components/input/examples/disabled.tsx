@@ -13,7 +13,7 @@ export const InputDisabled = () => {
         <Field.Label>Enter your name</Field.Label>
         <InputGroup>
           <InputGroup.Prefix>https://</InputGroup.Prefix>
-          <Input />
+          <InputGroup.Input />
           <InputGroup.Suffix>.com</InputGroup.Suffix>
         </InputGroup>
       </Field>

@@ -2,10 +2,9 @@
 
 import { CloseIcon } from "@jamsrui/icons";
 import { Description } from "jamsrui/description";
-import { IconButton } from "jamsrui/icon-button";
-import { Input } from "jamsrui/input";
-import { InputGroup } from "jamsrui/input-group";
 import { Field } from "jamsrui/field";
+import { IconButton } from "jamsrui/icon-button";
+import { InputGroup } from "jamsrui/input-group";
 import { useState } from "react";
 
 export const InputControlled = () => {
@@ -16,7 +15,7 @@ export const InputControlled = () => {
     <Field className="max-w-62 w-full">
       <Field.Label>Name</Field.Label>
       <InputGroup>
-        <Input value={value} onValueChange={setValue} />
+        <InputGroup.Input value={value} onValueChange={setValue} />
         {hasValue && (
           <InputGroup.Suffix>
             <IconButton

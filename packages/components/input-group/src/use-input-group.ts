@@ -8,11 +8,12 @@ import {
   useHover,
   useMergeRefs,
 } from "@jamsrui/hooks";
+import { useFieldContext } from "@jamsrui/textfield";
 import { dataAttr } from "@jamsrui/utils";
 
 import type { PropGetter, UIProps } from "@jamsrui/utils";
 
-import { useFieldContext } from "@jamsrui/textfield";
+import type { InputGroupInput } from "./input-group-input";
 import type { InputGroupPrefix } from "./input-group-prefix";
 import type { InputGroupRoot } from "./input-group-root";
 import type { InputGroupSuffix } from "./input-group-suffix";
@@ -95,14 +96,24 @@ export const useInputGroup = (props: useInputGroup.Props) => {
     [],
   );
 
+  const getInputProps: PropGetter<InputGroupInput.Props> = useCallback(
+    (props) => ({
+      "data-slot": "input",
+      ref: inputRefs,
+      ...props,
+    }),
+    [inputRefs],
+  );
+
   return useMemo(
     () => ({
       getRootProps,
       getPrefixProps,
       getSuffixProps,
+      getInputProps,
       inputRefs,
     }),
-    [getRootProps, getPrefixProps, getSuffixProps, inputRefs],
+    [getRootProps, getPrefixProps, getSuffixProps, getInputProps, inputRefs],
   );
 };
 

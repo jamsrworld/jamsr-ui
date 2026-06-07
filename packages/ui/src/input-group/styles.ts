@@ -1,23 +1,24 @@
 import { tv } from "tailwind-variants";
 
-import { dataFocusVisibleClasses } from "../utils/variants";
-
 export const inputGroupStyles = tv({
   slots: {
     root: [
       "flex items-center group overflow-hidden",
-      "rounded-md data-disabled:status-disabled",
-      ...dataFocusVisibleClasses,
+      "data-disabled:status-disabled",
     ],
     prefix: "pl-3 text-sm text-foreground-secondary select-none",
     suffix: "pr-3 text-sm text-foreground-secondary select-none",
+    input: [
+      "placeholder:text-foreground-secondary bg-transparent font-normal",
+      "grow outline-none",
+    ],
   },
   variants: {
     variant: {
       bordered: {
         root: [
           "border border-border focus-within:border-focus",
-          "data-hovered:not-focus:border-border-dark",
+          "data-hovered:not-focus-within:border-border-dark",
           "group-data-invalid:border-danger",
         ],
       },
@@ -25,9 +26,22 @@ export const inputGroupStyles = tv({
         root: "bg-surface data-hovered:bg-surface/90",
       },
     },
+    size: {
+      sm: { input: "px-3 py-1.5 text-sm placeholder:text-sm" },
+      md: { input: "px-3 py-2 text-sm placeholder:text-sm" },
+      lg: { input: "px-3 py-2 text-base placeholder:text-base" },
+    },
+    radius: {
+      none: { root: "rounded-none" },
+      sm: { root: "rounded-sm" },
+      md: { root: "rounded-md" },
+      lg: { root: "rounded-lg" },
+      full: { root: "rounded-full" },
+    },
   },
   defaultVariants: {
     radius: "md",
     variant: "bordered",
+    size: "md",
   },
 });

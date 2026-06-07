@@ -23,6 +23,7 @@
     "@jamsrui/description": "workspace:^",
     "@jamsrui/field-error": "workspace:^",
     "@jamsrui/hooks": "workspace:^",
+    "@jamsrui/input": "workspace:^",
     "@jamsrui/label": "workspace:^",
     "@jamsrui/textfield": "workspace:^",
     "@jamsrui/utils": "workspace:^"

@@ -1,4 +1,5 @@
 import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
@@ -25,61 +26,42 @@ const Input = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+      <CodeExampleV2 title="Usage" url={resolvePath("usage.tsx")}>
         <InputUsage />
-      </CodeExample>
-      <CodeExample title="With Label" url={resolvePath("with-label.tsx")}>
+      </CodeExampleV2>
+      <CodeExampleV2 title="With Label" url={resolvePath("with-label.tsx")}>
         <InputWithLabel />
-      </CodeExample>
-      <CodeExample
-        isCentered
+      </CodeExampleV2>
+      <CodeExampleV2
         title="With Description"
         url={resolvePath("with-description.tsx")}
       >
         <InputWithDescription />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Controlled"
-        url={resolvePath("controlled.tsx")}
-      >
+      </CodeExampleV2>
+      <CodeExampleV2 title="Controlled" url={resolvePath("controlled.tsx")}>
         <InputControlled />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Error State"
-        url={resolvePath("error-state.tsx")}
-      >
+      </CodeExampleV2>
+      <CodeExampleV2 title="Error State" url={resolvePath("error-state.tsx")}>
         <InputErrorState />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Disabled"
-        url={resolvePath("disabled.tsx")}
-      >
+      </CodeExampleV2>
+      <CodeExampleV2 title="Disabled" url={resolvePath("disabled.tsx")}>
         <InputDisabled />
-      </CodeExample>
-      <CodeExample
-        isCentered
+      </CodeExampleV2>
+      <CodeExampleV2
         title="Prefix & Suffix"
         url={resolvePath("prefix-suffix.tsx")}
       >
         <InputPrefixSuffix />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="With Icon"
-        url={resolvePath("with-icon.tsx")}
-      >
+      </CodeExampleV2>
+      <CodeExampleV2 title="With Icon" url={resolvePath("with-icon.tsx")}>
         <InputWithIcon />
-      </CodeExample>
-      <CodeExample
+      </CodeExampleV2>
+      <CodeExampleV2
         title="Password Toggle"
         url={resolvePath("password-toggle.tsx")}
-        isCentered
       >
         <InputPasswordToggle />
-      </CodeExample>
+      </CodeExampleV2>
     </DocsPage>
   );
 };

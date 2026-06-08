@@ -12,12 +12,18 @@ export const PreviewCardBackdrop = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {backdrops.map((backdrop) => (
-        <PreviewCard key={backdrop} backdrop={backdrop}>
+        <PreviewCard
+          key={backdrop}
+          backdrop={backdrop}
+        >
           <PreviewCard.Trigger render={<Button>{backdrop}</Button>} />
           <PreviewCard.Content className="w-64">
             <div className="flex gap-4">
               <Avatar className="size-10">
-                <Avatar.Image alt="Base UI" src="https://github.com/mui.png" />
+                <Avatar.Image
+                  alt="Base UI"
+                  src="https://github.com/mui.png"
+                />
                 <Avatar.Fallback>BUI</Avatar.Fallback>
               </Avatar>
               <div className="flex flex-col">

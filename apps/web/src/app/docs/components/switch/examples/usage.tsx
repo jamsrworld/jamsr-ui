@@ -22,7 +22,10 @@ const SwitchUsage2 = () => {
     <div className="flex items-center gap-2">
       <Switch id={id} />
       <div className="flex flex-col">
-        <Label htmlFor={id} className="text-sm font-medium">
+        <Label
+          htmlFor={id}
+          className="text-sm font-medium"
+        >
           Press Me!
         </Label>
         <div className="text-xs text-foreground-secondary">
@@ -38,7 +41,10 @@ const SwitchUsage3 = () => {
   return (
     <div className="flex items-center gap-2">
       <Switch id={id} />
-      <Label htmlFor={id} className="flex flex-col">
+      <Label
+        htmlFor={id}
+        className="flex flex-col"
+      >
         <span className="text-sm font-medium">Press Me!</span>
         <span className="text-xs text-foreground-secondary">
           This is a description

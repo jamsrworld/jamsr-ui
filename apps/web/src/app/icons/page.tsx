@@ -133,7 +133,10 @@ const Page = () => {
           <h2 className="text-2xl mb-4">{item.title}</h2>
           <div className="grid grid-cols-4 gap-4">
             {item.items.map((icon) => (
-              <div key={icon.title} className="flex flex-col items-center">
+              <div
+                key={icon.title}
+                className="flex flex-col items-center"
+              >
                 <icon.icon className="w-8 h-8" />
                 <span>{icon.title}</span>
               </div>

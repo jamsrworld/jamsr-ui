@@ -6,7 +6,11 @@ export const LinkUnderline = () => {
     <div className="flex gap-2">
       {underlines.map((item) => {
         return (
-          <Link href="/" key={item} underline={item}>
+          <Link
+            href="/"
+            key={item}
+            underline={item}
+          >
             underline="{item}"
           </Link>
         );

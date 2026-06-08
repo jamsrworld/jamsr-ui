@@ -8,7 +8,10 @@ export const CheckboxControlled = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <Field orientation="horizontal">
-      <Checkbox checked={isChecked} onCheckedChange={setIsChecked} />
+      <Checkbox
+        checked={isChecked}
+        onCheckedChange={setIsChecked}
+      />
       <Field.Label>
         {isChecked
           ? "I agree to receive marketing emails"

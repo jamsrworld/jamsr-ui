@@ -19,17 +19,33 @@ export const metadata: Metadata = {
 const DataGrid = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description} size="lg">
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+      size="lg"
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <DataGridUsage />
       </CodeExample>
-      <CodeExample title="Server Side" url={resolvePath("server.tsx")}>
+      <CodeExample
+        title="Server Side"
+        url={resolvePath("server.tsx")}
+      >
         <DataGridServerSide />
       </CodeExample>
-      <CodeExample title="Empty State" url={resolvePath("empty-state.tsx")}>
+      <CodeExample
+        title="Empty State"
+        url={resolvePath("empty-state.tsx")}
+      >
         <DataGridEmptyState />
       </CodeExample>
-      <CodeExample title="Sticky Header" url={resolvePath("sticky-header.tsx")}>
+      <CodeExample
+        title="Sticky Header"
+        url={resolvePath("sticky-header.tsx")}
+      >
         <DataGridStickyHeader />
       </CodeExample>
     </DocsPage>

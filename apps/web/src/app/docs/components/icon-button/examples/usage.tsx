@@ -5,7 +5,10 @@ import { EmailIcon } from "@jamsrui/icons";
 
 export const IconButtonUsage = () => {
   return (
-    <IconButton label="Icon Button Usage" color="primary">
+    <IconButton
+      label="Icon Button Usage"
+      color="primary"
+    >
       <EmailIcon />
     </IconButton>
   );

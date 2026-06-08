@@ -18,14 +18,26 @@ export const metadata: Metadata = {
 const RadioGroup = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <RadioUsage />
       </CodeExample>
-      <CodeExample title="Number Usage" url={resolvePath("number-usage.tsx")}>
+      <CodeExample
+        title="Number Usage"
+        url={resolvePath("number-usage.tsx")}
+      >
         <RadioNumberUsage />
       </CodeExample>
-      <CodeExample title="Colors" url={resolvePath("colors.tsx")}>
+      <CodeExample
+        title="Colors"
+        url={resolvePath("colors.tsx")}
+      >
         <RadioColors />
       </CodeExample>
     </DocsPage>

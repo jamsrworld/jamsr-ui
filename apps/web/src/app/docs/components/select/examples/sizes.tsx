@@ -12,12 +12,18 @@ const apples = [
 const SelectUsage = (props: { size: Select.Props["size"] }) => {
   const { size } = props;
   return (
-    <Select size={size} items={apples}>
+    <Select
+      size={size}
+      items={apples}
+    >
       <Label>Fruit</Label>
       <Select.Trigger className="min-w-40" />
       <Select.Content>
         {apples.map(({ label, value }) => (
-          <Select.Item key={label} value={value}>
+          <Select.Item
+            key={label}
+            value={value}
+          >
             <Select.ItemIndicator />
             <Select.ItemText>{label}</Select.ItemText>
           </Select.Item>

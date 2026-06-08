@@ -21,11 +21,20 @@ export const metadata: Metadata = {
 const Accordion = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <AccordionUsage />
       </CodeExample>
-      <CodeExample title="Disabled" url={resolvePath("disabled.tsx")}>
+      <CodeExample
+        title="Disabled"
+        url={resolvePath("disabled.tsx")}
+      >
         <AccordionDisabled />
       </CodeExample>
       <CodeExample
@@ -34,13 +43,22 @@ const Accordion = () => {
       >
         <AccordionMultipleSelection />
       </CodeExample>
-      <CodeExample title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <AccordionRadius />
       </CodeExample>
-      <CodeExample title="Variants" url={resolvePath("variants.tsx")}>
+      <CodeExample
+        title="Variants"
+        url={resolvePath("variants.tsx")}
+      >
         <AccordionVariants />
       </CodeExample>
-      <CodeExample title="Without Icon" url={resolvePath("without-icon.tsx")}>
+      <CodeExample
+        title="Without Icon"
+        url={resolvePath("without-icon.tsx")}
+      >
         <AccordionWithoutIcon />
       </CodeExample>
     </DocsPage>

@@ -14,7 +14,10 @@ export const metadata: Metadata = {
 const Charts = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
       <Text>Coming Soon!</Text>
     </DocsPage>
   );

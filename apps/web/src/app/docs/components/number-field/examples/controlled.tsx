@@ -13,7 +13,10 @@ export const NumberFieldControlled = () => {
     setValue(value);
   };
   return (
-    <NumberField value={value} onValueChange={handleChange}>
+    <NumberField
+      value={value}
+      onValueChange={handleChange}
+    >
       <NumberField.ScrubArea>Width</NumberField.ScrubArea>
       <NumberField.Group>
         <NumberField.Decrement />

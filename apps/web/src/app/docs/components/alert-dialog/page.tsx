@@ -20,8 +20,15 @@ export const metadata: Metadata = {
 const Confirmation = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <AlertDialogUsage />
       </CodeExample>
       <CodeExample
@@ -31,7 +38,11 @@ const Confirmation = () => {
       >
         <AlertDialogBackdrop />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <AlertDialogRadius />
       </CodeExample>
       <CodeExample

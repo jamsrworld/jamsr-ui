@@ -7,7 +7,10 @@ export const AvatarUsage = () => {
   const id = useId();
   return (
     <Avatar>
-      <Avatar.Image alt="John" src={`https://i.pravatar.cc/300?u=${id}`} />
+      <Avatar.Image
+        alt="John"
+        src={`https://i.pravatar.cc/300?u=${id}`}
+      />
       <Avatar.Fallback />
     </Avatar>
   );

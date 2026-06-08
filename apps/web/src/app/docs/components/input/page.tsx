@@ -1,4 +1,3 @@
-import { CodeExample } from "@/components/code-example";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
@@ -22,46 +21,82 @@ export const metadata: Metadata = {
   description,
 };
 
+const inputVariants = {
+  variant: {
+    options: ["solid", "bordered"],
+    defaultValue: "solid",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
 const Input = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExampleV2 title="Usage" url={resolvePath("usage.tsx")}>
-        <InputUsage />
-      </CodeExampleV2>
-      <CodeExampleV2 title="With Label" url={resolvePath("with-label.tsx")}>
-        <InputWithLabel />
-      </CodeExampleV2>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={inputVariants}
+        component={InputUsage}
+      />
+      <CodeExampleV2
+        title="With Label"
+        url={resolvePath("with-label.tsx")}
+        variants={inputVariants}
+        component={InputWithLabel}
+      />
       <CodeExampleV2
         title="With Description"
         url={resolvePath("with-description.tsx")}
-      >
-        <InputWithDescription />
-      </CodeExampleV2>
-      <CodeExampleV2 title="Controlled" url={resolvePath("controlled.tsx")}>
-        <InputControlled />
-      </CodeExampleV2>
-      <CodeExampleV2 title="Error State" url={resolvePath("error-state.tsx")}>
-        <InputErrorState />
-      </CodeExampleV2>
-      <CodeExampleV2 title="Disabled" url={resolvePath("disabled.tsx")}>
-        <InputDisabled />
-      </CodeExampleV2>
+        variants={inputVariants}
+        component={InputWithDescription}
+      />
+      <CodeExampleV2
+        title="Controlled"
+        url={resolvePath("controlled.tsx")}
+        variants={inputVariants}
+        component={InputControlled}
+      />
+      <CodeExampleV2
+        title="Error State"
+        url={resolvePath("error-state.tsx")}
+        variants={inputVariants}
+        component={InputErrorState}
+      />
+      <CodeExampleV2
+        title="Disabled"
+        url={resolvePath("disabled.tsx")}
+        variants={inputVariants}
+        component={InputDisabled}
+      />
       <CodeExampleV2
         title="Prefix & Suffix"
         url={resolvePath("prefix-suffix.tsx")}
-      >
-        <InputPrefixSuffix />
-      </CodeExampleV2>
-      <CodeExampleV2 title="With Icon" url={resolvePath("with-icon.tsx")}>
-        <InputWithIcon />
-      </CodeExampleV2>
+        variants={inputVariants}
+        component={InputPrefixSuffix}
+      />
+      <CodeExampleV2
+        title="With Icon"
+        url={resolvePath("with-icon.tsx")}
+        variants={inputVariants}
+        component={InputWithIcon}
+      />
       <CodeExampleV2
         title="Password Toggle"
         url={resolvePath("password-toggle.tsx")}
-      >
-        <InputPasswordToggle />
-      </CodeExampleV2>
+        variants={inputVariants}
+        component={InputPasswordToggle}
+      />
     </DocsPage>
   );
 };

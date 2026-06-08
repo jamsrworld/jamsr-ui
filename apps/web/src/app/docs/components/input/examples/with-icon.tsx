@@ -3,22 +3,21 @@
 import { EmailIcon } from "@jamsrui/icons";
 import { Field } from "jamsrui/field";
 import { InputGroup } from "jamsrui/input-group";
-import { InputVariantProvider } from "../components/variant-provider";
+import { type Input } from "jamsrui/input";
 
-export const InputWithIcon = () => {
+export const InputWithIcon = (props: Input.Variants) => {
   return (
-    <InputVariantProvider>
-      {(props) => (
-        <Field>
-          <Field.Label>Email</Field.Label>
-          <InputGroup {...props}>
-            <InputGroup.Prefix>
-              <EmailIcon />
-            </InputGroup.Prefix>
-            <InputGroup.Input placeholder="Enter your email" type="email" />
-          </InputGroup>
-        </Field>
-      )}
-    </InputVariantProvider>
+    <Field>
+      <Field.Label>Email</Field.Label>
+      <InputGroup {...props}>
+        <InputGroup.Prefix>
+          <EmailIcon />
+        </InputGroup.Prefix>
+        <InputGroup.Input
+          placeholder="Enter your email"
+          type="email"
+        />
+      </InputGroup>
+    </Field>
   );
 };

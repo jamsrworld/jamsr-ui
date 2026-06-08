@@ -33,7 +33,11 @@ export const DrawerAnchors = () => {
   return (
     <div className="flex gap-4">
       {anchors.map((anchor) => (
-        <DrawerItem key={anchor} swipeDirection={anchor} btnText={anchor} />
+        <DrawerItem
+          key={anchor}
+          swipeDirection={anchor}
+          btnText={anchor}
+        />
       ))}
     </div>
   );

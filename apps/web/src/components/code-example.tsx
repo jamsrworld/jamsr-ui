@@ -20,9 +20,15 @@ export const DocsPageSection = (props: {
   const { title, description, children } = props;
   const id = title.toLowerCase().replace(" ", "-");
   return (
-    <section id={id} className="flex flex-col gap-2">
+    <section
+      id={id}
+      className="flex flex-col gap-2"
+    >
       <div>
-        <Text render={<h1 />} variant="h5">
+        <Text
+          render={<h1 />}
+          variant="h5"
+        >
           {title}
         </Text>
         <Text className="text-foreground-secondary">{description}</Text>
@@ -37,9 +43,15 @@ export const CodeExample = async (props: CodeExampleProps) => {
   const code = await readSourceCode(url);
   const id = title.toLowerCase().replace(" ", "-");
   return (
-    <section id={id} className="flex flex-col gap-2">
+    <section
+      id={id}
+      className="flex flex-col gap-2"
+    >
       <div>
-        <Text render={<a href={`#${id}`} />} variant="h5">
+        <Text
+          render={<a href={`#${id}`} />}
+          variant="h5"
+        >
           {title}
         </Text>
         {description && <Text>{description}</Text>}

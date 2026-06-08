@@ -19,8 +19,15 @@ export const metadata: Metadata = {
 const Clipboard = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <ClipboardUsage />
       </CodeExample>
       <CodeExample
@@ -37,7 +44,11 @@ const Clipboard = () => {
       >
         <ClipboardWithoutIcon />
       </CodeExample>
-      <CodeExample isCentered title="Events" url={resolvePath("events.tsx")}>
+      <CodeExample
+        isCentered
+        title="Events"
+        url={resolvePath("events.tsx")}
+      >
         <ClipboardEvents />
       </CodeExample>
       <CodeExample

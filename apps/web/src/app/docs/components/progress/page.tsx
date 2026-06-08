@@ -15,8 +15,15 @@ export const metadata: Metadata = {
 const Progress = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <ProgressUsage />
       </CodeExample>
     </DocsPage>

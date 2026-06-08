@@ -11,7 +11,10 @@ export const PopoverBackdrop = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {backdrops.map((backdrop) => (
-        <Popover key={backdrop} backdrop={backdrop}>
+        <Popover
+          key={backdrop}
+          backdrop={backdrop}
+        >
           <Popover.Trigger render={<Button>{backdrop}</Button>} />
           <Popover.Content>
             <Text>

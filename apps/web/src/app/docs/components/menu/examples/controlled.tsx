@@ -9,7 +9,10 @@ export const MenuControlled = () => {
   const { isOpen, onToggle, setIsOpen } = useDisclosure();
   return (
     <div className="flex items-center justify-center gap-4">
-      <Menu open={isOpen} onOpenChange={setIsOpen}>
+      <Menu
+        open={isOpen}
+        onOpenChange={setIsOpen}
+      >
         <Menu.Trigger
           render={
             <Button>
@@ -25,7 +28,10 @@ export const MenuControlled = () => {
           <Menu.Item>Play Last</Menu.Item>
           <Menu.Item>Share</Menu.Item>
           <Menu.Item>Favorite</Menu.Item>
-          <Menu.Item disabled color="danger">
+          <Menu.Item
+            disabled
+            color="danger"
+          >
             Delete
           </Menu.Item>
         </Menu.Content>

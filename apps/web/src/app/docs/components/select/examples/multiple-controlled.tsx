@@ -35,7 +35,11 @@ export const SelectMultipleControlled = () => {
   const [value, setValue] = useState<Language[]>([]);
   return (
     <div className="flex flex-col gap-2">
-      <Select multiple value={value} onValueChange={setValue}>
+      <Select
+        multiple
+        value={value}
+        onValueChange={setValue}
+      >
         <Label>Fruit</Label>
         <Select.Trigger className="min-w-80">
           <Select.Value>
@@ -48,7 +52,10 @@ export const SelectMultipleControlled = () => {
         <Select.Content>
           {values.map((value) => {
             return (
-              <Select.Item key={value} value={value}>
+              <Select.Item
+                key={value}
+                value={value}
+              >
                 <Select.ItemIndicator />
                 <Select.ItemText>{languages[value]}</Select.ItemText>
               </Select.Item>

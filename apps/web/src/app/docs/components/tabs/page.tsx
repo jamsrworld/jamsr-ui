@@ -21,8 +21,14 @@ export const metadata: Metadata = {
 const Tabs = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <TabsUsage />
       </CodeExample>
       <CodeExample
@@ -32,13 +38,25 @@ const Tabs = () => {
       >
         <TabVariants />
       </CodeExample>
-      <CodeExample isCentered title="Colors" url={resolvePath("colors.tsx")}>
+      <CodeExample
+        isCentered
+        title="Colors"
+        url={resolvePath("colors.tsx")}
+      >
         <TabColors />
       </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sizes"
+        url={resolvePath("sizes.tsx")}
+      >
         <TabSizes />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <TabRadius />
       </CodeExample>
       <CodeExample

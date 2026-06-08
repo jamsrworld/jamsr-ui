@@ -11,7 +11,10 @@ export const SwitchSizes = () => {
   return (
     <div className="flex flex-col gap-4">
       {examples.map((example) => (
-        <Field key={example.size} orientation="horizontal">
+        <Field
+          key={example.size}
+          orientation="horizontal"
+        >
           <Switch size={example.size} />
           <Field.Label>{example.label}</Field.Label>
         </Field>

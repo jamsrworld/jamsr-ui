@@ -8,7 +8,10 @@ export const MenuCustomized = () => {
         render={
           <button>
             <Avatar>
-              <Avatar.Image src="https://i.pravatar.cc/150" alt="JamsrUI" />
+              <Avatar.Image
+                src="https://i.pravatar.cc/150"
+                alt="JamsrUI"
+              />
             </Avatar>
           </button>
         }

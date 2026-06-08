@@ -10,7 +10,10 @@ export const TooltipWithGroup = () => {
           <Tooltip.Trigger
             render={
               <IconButton label="Click Me!">
-                <InfoIcon width={24} height={24} />
+                <InfoIcon
+                  width={24}
+                  height={24}
+                />
               </IconButton>
             }
           />
@@ -20,7 +23,10 @@ export const TooltipWithGroup = () => {
           <Tooltip.Trigger
             render={
               <IconButton label="Click Me!">
-                <EmailIcon width={24} height={24} />
+                <EmailIcon
+                  width={24}
+                  height={24}
+                />
               </IconButton>
             }
           />

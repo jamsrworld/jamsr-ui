@@ -8,7 +8,10 @@ export const SwitchControlled = () => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <Field orientation="horizontal">
-      <Switch checked={isChecked} onCheckedChange={setIsChecked} />
+      <Switch
+        checked={isChecked}
+        onCheckedChange={setIsChecked}
+      />
       <Field.Content>
         <Field.Label>Are you ok?</Field.Label>
         <Field.Description>

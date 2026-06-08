@@ -13,7 +13,11 @@ export const IconButtonColors = () => {
   return (
     <div className="flex gap-4">
       {colors.map((color) => (
-        <IconButton label={`${color} Icon Button`} key={color} color={color}>
+        <IconButton
+          label={`${color} Icon Button`}
+          key={color}
+          color={color}
+        >
           <EmailIcon />
         </IconButton>
       ))}

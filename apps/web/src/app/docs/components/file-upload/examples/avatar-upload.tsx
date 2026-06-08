@@ -35,7 +35,10 @@ export const FileUploadAvatarUpload = () => {
         <input {...getInputProps({})} />
         {avatar ? (
           <Avatar className="size-full">
-            <Avatar.Image src={avatar.preview} alt={avatar.file.name} />
+            <Avatar.Image
+              src={avatar.preview}
+              alt={avatar.file.name}
+            />
             <IconButton
               label="Remove"
               size="sm"
@@ -59,7 +62,10 @@ export const FileUploadAvatarUpload = () => {
         )}
       </div>
       <Text className="font-medium mt-2">Upload Avatar</Text>
-      <Text variant="paragraph2" className="text-foreground-secondary">
+      <Text
+        variant="paragraph2"
+        className="text-foreground-secondary"
+      >
         PNG, JPG up to 2MB
       </Text>
     </div>

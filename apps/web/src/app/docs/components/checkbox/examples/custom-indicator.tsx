@@ -9,7 +9,10 @@ export const CheckboxCustomIndicator = () => {
   const [checked, setChecked] = useState(false);
   return (
     <Field orientation="horizontal">
-      <Checkbox checked={checked} onCheckedChange={setChecked}>
+      <Checkbox
+        checked={checked}
+        onCheckedChange={setChecked}
+      >
         <Checkbox.Indicator>{checked ? <PlusIcon /> : null}</Checkbox.Indicator>
       </Checkbox>
       <Field.Content>

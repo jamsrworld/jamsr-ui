@@ -17,11 +17,20 @@ export const metadata: Metadata = {
 const Text = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <TextUsage />
       </CodeExample>
-      <CodeExample title="Variants" url={resolvePath("variants.tsx")}>
+      <CodeExample
+        title="Variants"
+        url={resolvePath("variants.tsx")}
+      >
         <TextVariants />
       </CodeExample>
     </DocsPage>

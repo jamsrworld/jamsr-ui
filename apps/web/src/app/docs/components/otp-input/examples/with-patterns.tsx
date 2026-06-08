@@ -10,7 +10,10 @@ export const OtpInputWithPatterns = () => {
     <div className="flex flex-col gap-8">
       <div>
         <Label>Only digits</Label>
-        <OtpInput maxLength={4} pattern={REGEXP_ONLY_DIGITS}>
+        <OtpInput
+          maxLength={4}
+          pattern={REGEXP_ONLY_DIGITS}
+        >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />
             <OtpInput.Slot index={1} />
@@ -21,7 +24,10 @@ export const OtpInputWithPatterns = () => {
       </div>
       <div>
         <Label>Only characters</Label>
-        <OtpInput maxLength={4} pattern={REGEXP_ONLY_CHARS}>
+        <OtpInput
+          maxLength={4}
+          pattern={REGEXP_ONLY_CHARS}
+        >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />
             <OtpInput.Slot index={1} />

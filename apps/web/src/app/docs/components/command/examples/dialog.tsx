@@ -34,7 +34,10 @@ export const CommandDialogDemo = () => {
         </kbd>{" "}
         to open the command menu
       </p>
-      <Command.Dialog open={open} onOpenChange={setOpen}>
+      <Command.Dialog
+        open={open}
+        onOpenChange={setOpen}
+      >
         <Command.Input placeholder="Type a command or search..." />
         <Command.List>
           <Command.Empty>No results found.</Command.Empty>

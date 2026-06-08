@@ -12,7 +12,10 @@ export const CircularProgressColors = () => {
   return (
     <div className="flex flex-col gap-6">
       {colors.map((color) => (
-        <CircularProgress key={color} color={color} />
+        <CircularProgress
+          key={color}
+          color={color}
+        />
       ))}
     </div>
   );

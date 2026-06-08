@@ -20,7 +20,10 @@ export const IconButtonVariantsColors = () => {
   return (
     <div className="flex flex-col flex-wrap gap-4">
       {variants.map((variant) => (
-        <div key={variant} className="flex flex-wrap gap-4">
+        <div
+          key={variant}
+          className="flex flex-wrap gap-4"
+        >
           {colors.map((color) => (
             <IconButton
               label={`${variant} - ${color}`}

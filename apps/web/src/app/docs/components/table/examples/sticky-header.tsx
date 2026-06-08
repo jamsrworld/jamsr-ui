@@ -2,7 +2,10 @@ import { Table } from "jamsrui/table";
 
 export const TableStickyHeader = () => {
   return (
-    <Table aria-label="Example static collection table" isHeaderSticky>
+    <Table
+      aria-label="Example static collection table"
+      isHeaderSticky
+    >
       <Table.Header>
         <Table.Row>
           <Table.Column>Name</Table.Column>

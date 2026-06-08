@@ -8,7 +8,11 @@ export const TextVariants = () => {
     <div className="flex flex-col items-center gap-8">
       {textVariants.map((item) => {
         return (
-          <Text key={item} variant={item} className="line-clamp-2">
+          <Text
+            key={item}
+            variant={item}
+            className="line-clamp-2"
+          >
             I am {item} Text Variant Create content to help spread the word
             about Framer and earn 50% of. Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Obcaecati sequi repellendus iste recusandae

@@ -25,12 +25,18 @@ export const SelectControlledNumber = () => {
   const [value, setValue] = useState<Fruits>(Fruits.APPLE);
   return (
     <div className="flex flex-col gap-2">
-      <Select value={value} onValueChange={setValue}>
+      <Select
+        value={value}
+        onValueChange={setValue}
+      >
         <Label>Fruit</Label>
         <Select.Trigger className="min-w-40" />
         <Select.Content>
           {fruits.map(({ label, value }) => (
-            <Select.Item key={label} value={value}>
+            <Select.Item
+              key={label}
+              value={value}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>{label}</Select.ItemText>
             </Select.Item>

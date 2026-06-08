@@ -5,7 +5,10 @@ export const ChipRadius = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {radii.map((radius) => (
-        <Chip key={radius} radius={radius}>
+        <Chip
+          key={radius}
+          radius={radius}
+        >
           {radius}
         </Chip>
       ))}

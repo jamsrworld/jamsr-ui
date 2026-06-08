@@ -35,13 +35,20 @@ export const SidebarHeader = () => {
     <div className="flex gap-1 items-center">
       <WorkspaceSwitcher />
       <div className="ml-auto flex gap-1 items-center">
-        <IconButton label="Search" variant="light" size="sm">
+        <IconButton
+          label="Search"
+          variant="light"
+          size="sm"
+        >
           <Icon
             icon="hugeicons:search-01"
             className="text-foreground-secondary"
           />
         </IconButton>
-        <IconButton label="Draft" size="sm">
+        <IconButton
+          label="Draft"
+          size="sm"
+        >
           <Icon icon="mynaui:edit-one-solid" />
         </IconButton>
       </div>

@@ -18,7 +18,10 @@ export const IconButtonLoading = () => {
         >
           <EmailIcon />
         </IconButton>
-        <IconButton label="Loading Icon Button" isLoading={isLoading}>
+        <IconButton
+          label="Loading Icon Button"
+          isLoading={isLoading}
+        >
           {isLoading ? <CircularProgress /> : <EmailIcon />}
         </IconButton>
       </div>

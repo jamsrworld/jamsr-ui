@@ -209,7 +209,10 @@ const users = [
 
 export const SelectCustomRenderMultiple = () => {
   return (
-    <Select size="lg" multiple>
+    <Select
+      size="lg"
+      multiple
+    >
       <Select.Trigger className="min-w-40">
         <Select.Value placeholder="Select users">
           {(values: string[]) => {
@@ -220,8 +223,14 @@ export const SelectCustomRenderMultiple = () => {
                   const selectedUser = users.find((u) => u.email === value);
                   if (!selectedUser) return <></>;
                   return (
-                    <Chip key={selectedUser.id} className="p-2">
-                      <Avatar className="shrink-0" size="xs">
+                    <Chip
+                      key={selectedUser.id}
+                      className="p-2"
+                    >
+                      <Avatar
+                        className="shrink-0"
+                        size="xs"
+                      >
                         <Avatar.Image
                           src={selectedUser.avatar}
                           alt={selectedUser.name}
@@ -250,12 +259,21 @@ export const SelectCustomRenderMultiple = () => {
       <Select.Content>
         {users.map((user) => {
           return (
-            <Select.Item key={user.id} value={user.email}>
+            <Select.Item
+              key={user.id}
+              value={user.email}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>
                 <div className="flex items-center gap-2">
-                  <Avatar className="shrink-0" size="sm">
-                    <Avatar.Image src={user.avatar} alt={user.name} />
+                  <Avatar
+                    className="shrink-0"
+                    size="sm"
+                  >
+                    <Avatar.Image
+                      src={user.avatar}
+                      alt={user.name}
+                    />
                     <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
                   </Avatar>
                   <div className="flex flex-col">

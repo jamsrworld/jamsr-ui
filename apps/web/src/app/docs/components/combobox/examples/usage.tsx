@@ -47,7 +47,10 @@ export const ComboboxUsage = () => {
           <Combobox.Empty>No fruits found.</Combobox.Empty>
           <Combobox.List>
             {(item: Fruit) => (
-              <Combobox.Item key={item.value} value={item}>
+              <Combobox.Item
+                key={item.value}
+                value={item}
+              >
                 <Combobox.ItemIndicator />
                 <span>{item.label}</span>
               </Combobox.Item>

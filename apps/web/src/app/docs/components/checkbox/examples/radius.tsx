@@ -13,7 +13,10 @@ export const CheckboxRadius = () => {
   return (
     <div className="grid gap-4">
       {radiusExamples.map((item) => (
-        <Field key={item.value} orientation="horizontal">
+        <Field
+          key={item.value}
+          orientation="horizontal"
+        >
           <Checkbox radius={item.value} />
           <Field.Label>{item.label}</Field.Label>
         </Field>

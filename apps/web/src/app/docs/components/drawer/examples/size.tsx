@@ -38,7 +38,11 @@ export const DrawerSize = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {sizes.map((size) => (
-        <DrawerItem btnText={`Size ${size}`} key={size} size={size} />
+        <DrawerItem
+          btnText={`Size ${size}`}
+          key={size}
+          size={size}
+        />
       ))}
     </div>
   );

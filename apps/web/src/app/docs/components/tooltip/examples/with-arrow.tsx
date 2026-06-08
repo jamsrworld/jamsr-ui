@@ -8,7 +8,10 @@ export const TooltipWithArrow = () => {
       <Tooltip.Trigger
         render={
           <IconButton label="Click Me!">
-            <InfoIcon width={24} height={24} />
+            <InfoIcon
+              width={24}
+              height={24}
+            />
           </IconButton>
         }
       />

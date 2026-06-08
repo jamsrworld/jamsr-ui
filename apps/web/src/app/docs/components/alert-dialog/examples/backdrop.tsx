@@ -10,7 +10,10 @@ export const AlertDialogBackdrop = () => {
   return (
     <div className="flex gap-2">
       {backdrops.map((backdrop) => (
-        <AlertDialog key={backdrop} backdrop={backdrop}>
+        <AlertDialog
+          key={backdrop}
+          backdrop={backdrop}
+        >
           <AlertDialog.Trigger render={<Button>Backdrop {backdrop}</Button>} />
           <AlertDialog.Content>
             <AlertDialog.Title>Are you sure?</AlertDialog.Title>

@@ -5,8 +5,7 @@ import { Metadata } from "next";
 import { NavigationMenuUsage } from "./examples/usage";
 
 const title = "Navigation Menu";
-const description =
-  "A collection of links and menus for website navigation.";
+const description = "A collection of links and menus for website navigation.";
 
 export const metadata: Metadata = {
   title,
@@ -16,8 +15,15 @@ export const metadata: Metadata = {
 const NavigationMenuPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <NavigationMenuUsage />
       </CodeExample>
     </DocsPage>

@@ -14,8 +14,14 @@ export const metadata = {
 const Page = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={metadata.title} description={metadata.description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={metadata.title}
+      description={metadata.description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <FileUploadUsage />
       </CodeExample>
       <CodeExample
@@ -25,7 +31,10 @@ const Page = () => {
       >
         <FileUploadAvatarUpload />
       </CodeExample>
-      <CodeExample title="List Upload" url={resolvePath("list-upload.tsx")}>
+      <CodeExample
+        title="List Upload"
+        url={resolvePath("list-upload.tsx")}
+      >
         <FileUploadListUpload />
       </CodeExample>
     </DocsPage>

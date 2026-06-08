@@ -50,7 +50,10 @@ export const ScrollArea: React.FC<{
         setIsHorizontalScrollable,
       }}
     >
-      <div className="group relative" style={{ width, height }}>
+      <div
+        className="group relative"
+        style={{ width, height }}
+      >
         {children}
       </div>
     </ScrollAreaContext.Provider>
@@ -258,7 +261,11 @@ export const ScrollBar: React.FC<{
   };
 
   return (
-    <div ref={trackRef} className={trackClass} onClick={handleTrackClick}>
+    <div
+      ref={trackRef}
+      className={trackClass}
+      onClick={handleTrackClick}
+    >
       <div
         ref={thumbRef}
         className={thumbClass}

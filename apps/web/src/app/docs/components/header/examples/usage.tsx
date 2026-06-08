@@ -4,7 +4,10 @@ import { Header } from "jamsrui/header";
 export const HeaderUsage = (props: Header.Props) => {
   return (
     <>
-      <Header className="flex justify-between px-4" {...props}>
+      <Header
+        className="flex justify-between px-4"
+        {...props}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="h-10"

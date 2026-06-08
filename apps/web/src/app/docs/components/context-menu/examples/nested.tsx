@@ -31,7 +31,10 @@ export const ContextMenuNested = () => {
             </ContextMenu.SubmenuRoot>
           </ContextMenu.SubmenuContent>
         </ContextMenu.SubmenuRoot>
-        <ContextMenu.Item disabled color="danger">
+        <ContextMenu.Item
+          disabled
+          color="danger"
+        >
           Delete
         </ContextMenu.Item>
       </ContextMenu.Content>

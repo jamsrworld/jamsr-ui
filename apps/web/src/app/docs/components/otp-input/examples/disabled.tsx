@@ -2,7 +2,10 @@ import { OtpInput } from "jamsrui/otp-input";
 
 export const OtpInputDisabled = () => {
   return (
-    <OtpInput maxLength={4} disabled>
+    <OtpInput
+      maxLength={4}
+      disabled
+    >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />
         <OtpInput.Slot index={1} />

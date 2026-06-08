@@ -16,8 +16,15 @@ export const metadata: Metadata = {
 const Separator = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <SeparatorUsage />
       </CodeExample>
     </DocsPage>

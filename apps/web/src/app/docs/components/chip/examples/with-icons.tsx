@@ -8,7 +8,10 @@ export const ChipWithIcons = () => {
         <EmailIcon />
         Default
       </Chip>
-      <Chip variant="soft" color="primary">
+      <Chip
+        variant="soft"
+        color="primary"
+      >
         <EmailIcon />
         Default
       </Chip>
@@ -16,7 +19,10 @@ export const ChipWithIcons = () => {
         <CheckIcon />
         Default
       </Chip>
-      <Chip variant="bordered" color="secondary">
+      <Chip
+        variant="bordered"
+        color="secondary"
+      >
         Default
         <CheckIcon />
       </Chip>

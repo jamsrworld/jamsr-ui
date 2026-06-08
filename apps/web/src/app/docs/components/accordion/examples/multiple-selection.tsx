@@ -2,7 +2,10 @@ import { Accordion } from "jamsrui/accordion";
 
 export const AccordionMultipleSelection = () => {
   return (
-    <Accordion variant="splitted" multiple>
+    <Accordion
+      variant="splitted"
+      multiple
+    >
       <Accordion.Item>
         <Accordion.Trigger>
           Accordion 1

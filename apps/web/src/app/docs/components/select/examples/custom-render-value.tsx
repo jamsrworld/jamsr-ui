@@ -212,8 +212,14 @@ function renderValue(value?: string) {
   if (!selectedUser) return "Select a user";
   return (
     <div className="flex items-center gap-2">
-      <Avatar className="shrink-0" size="sm">
-        <Avatar.Image src={selectedUser.avatar} alt={selectedUser.name} />
+      <Avatar
+        className="shrink-0"
+        size="sm"
+      >
+        <Avatar.Image
+          src={selectedUser.avatar}
+          alt={selectedUser.name}
+        />
         <Avatar.Fallback>{selectedUser.name.charAt(0)}</Avatar.Fallback>
       </Avatar>
       <div className="flex flex-col">
@@ -240,12 +246,21 @@ export const SelectCustomRenderValue = () => {
       <Select.Content>
         {users.map((user) => {
           return (
-            <Select.Item key={user.id} value={user.email}>
+            <Select.Item
+              key={user.id}
+              value={user.email}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>
                 <div className="flex items-center gap-2">
-                  <Avatar className="shrink-0" size="sm">
-                    <Avatar.Image src={user.avatar} alt={user.name} />
+                  <Avatar
+                    className="shrink-0"
+                    size="sm"
+                  >
+                    <Avatar.Image
+                      src={user.avatar}
+                      alt={user.name}
+                    />
                     <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
                   </Avatar>
                   <div className="flex flex-col">

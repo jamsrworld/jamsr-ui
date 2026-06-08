@@ -21,20 +21,38 @@ export const metadata: Metadata = {
 const Table = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <TableUsage />
       </CodeExample>
-      <CodeExample title="Bordered" url={resolvePath("bordered.tsx")}>
+      <CodeExample
+        title="Bordered"
+        url={resolvePath("bordered.tsx")}
+      >
         <TableBordered />
       </CodeExample>
-      <CodeExample title="Allow Hover" url={resolvePath("allow-hover.tsx")}>
+      <CodeExample
+        title="Allow Hover"
+        url={resolvePath("allow-hover.tsx")}
+      >
         <TableAllowHover />
       </CodeExample>
-      <CodeExample title="Sticky Header" url={resolvePath("sticky-header.tsx")}>
+      <CodeExample
+        title="Sticky Header"
+        url={resolvePath("sticky-header.tsx")}
+      >
         <TableStickyHeader />
       </CodeExample>
-      <CodeExample title="Empty State" url={resolvePath("empty-state.tsx")}>
+      <CodeExample
+        title="Empty State"
+        url={resolvePath("empty-state.tsx")}
+      >
         <TableEmptyState />
       </CodeExample>
       <CodeExample

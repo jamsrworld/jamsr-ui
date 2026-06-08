@@ -5,37 +5,33 @@ import { Field } from "jamsrui/field";
 import { IconButton } from "jamsrui/icon-button";
 import { InputGroup } from "jamsrui/input-group";
 import { useState } from "react";
-import { InputVariantProvider } from "../components/variant-provider";
+import { type Input } from "jamsrui/input";
 
-export const InputPasswordToggle = () => {
+export const InputPasswordToggle = (props: Input.Variants) => {
   const [showPassword, setShowPassword] = useState(false);
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <InputVariantProvider>
-      {(props) => (
-        <Field>
-          <Field.Label>Password</Field.Label>
-          <InputGroup {...props}>
-            <InputGroup.Input
-              type={showPassword ? "text" : "password"}
-              placeholder="Enter your name"
-            />
-            <InputGroup.Suffix>
-              <IconButton
-                size="sm"
-                radius="full"
-                label="Toggle password"
-                variant="light"
-                onClick={handleTogglePassword}
-              >
-                {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
-              </IconButton>
-            </InputGroup.Suffix>
-          </InputGroup>
-        </Field>
-      )}
-    </InputVariantProvider>
+    <Field>
+      <Field.Label>Password</Field.Label>
+      <InputGroup {...props}>
+        <InputGroup.Input
+          type={showPassword ? "text" : "password"}
+          placeholder="Enter your name"
+        />
+        <InputGroup.Suffix>
+          <IconButton
+            size="sm"
+            radius="full"
+            label="Toggle password"
+            variant="light"
+            onClick={handleTogglePassword}
+          >
+            {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
+          </IconButton>
+        </InputGroup.Suffix>
+      </InputGroup>
+    </Field>
   );
 };

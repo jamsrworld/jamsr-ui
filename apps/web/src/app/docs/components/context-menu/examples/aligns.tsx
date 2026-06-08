@@ -24,7 +24,10 @@ export const ContextMenuAligns = () => {
             <ContextMenu.Item>Play Last</ContextMenu.Item>
             <ContextMenu.Item>Share</ContextMenu.Item>
             <ContextMenu.Item>Favorite</ContextMenu.Item>
-            <ContextMenu.Item disabled color="danger">
+            <ContextMenu.Item
+              disabled
+              color="danger"
+            >
               Delete
             </ContextMenu.Item>
           </ContextMenu.Content>

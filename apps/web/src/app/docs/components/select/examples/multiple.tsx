@@ -44,7 +44,10 @@ export const SelectMultiple = () => {
       <Select.Content>
         {values.map((value) => {
           return (
-            <Select.Item key={value} value={value}>
+            <Select.Item
+              key={value}
+              value={value}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>{languages[value]}</Select.ItemText>
             </Select.Item>

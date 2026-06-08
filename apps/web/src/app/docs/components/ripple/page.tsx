@@ -17,11 +17,20 @@ export const metadata: Metadata = {
 const Ripple = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <RippleUsage />
       </CodeExample>
-      <CodeExample title="Centered" url={resolvePath("centered.tsx")}>
+      <CodeExample
+        title="Centered"
+        url={resolvePath("centered.tsx")}
+      >
         <RippleAtCenter />
       </CodeExample>
     </DocsPage>

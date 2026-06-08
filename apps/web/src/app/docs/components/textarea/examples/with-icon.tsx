@@ -11,7 +11,10 @@ export const TextareaWithIcon = () => {
         <InputGroup.Prefix>
           <EmailIcon />
         </InputGroup.Prefix>
-        <Textarea placeholder="Enter your email" className="w-full" />
+        <Textarea
+          placeholder="Enter your email"
+          className="w-full"
+        />
       </InputGroup>
     </Field>
   );

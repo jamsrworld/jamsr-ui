@@ -16,7 +16,11 @@ export const SelectDisabledItems = () => {
       <Select.Trigger className="min-w-40" />
       <Select.Content>
         {apples.map(({ label, value, disabled }) => (
-          <Select.Item key={label} value={value} disabled={disabled}>
+          <Select.Item
+            key={label}
+            value={value}
+            disabled={disabled}
+          >
             <Select.ItemIndicator />
             <Select.ItemText>{label}</Select.ItemText>
           </Select.Item>

@@ -23,8 +23,15 @@ export const metadata: Metadata = {
 const Tooltip = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <TooltipUsage />
       </CodeExample>
       <CodeExample
@@ -34,16 +41,32 @@ const Tooltip = () => {
       >
         <TooltipWithArrow />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <TooltipRadius />
       </CodeExample>
-      <CodeExample isCentered title="Offset" url={resolvePath("offset.tsx")}>
+      <CodeExample
+        isCentered
+        title="Offset"
+        url={resolvePath("offset.tsx")}
+      >
         <TooltipOffset />
       </CodeExample>
-      <CodeExample isCentered title="Aligns" url={resolvePath("aligns.tsx")}>
+      <CodeExample
+        isCentered
+        title="Aligns"
+        url={resolvePath("aligns.tsx")}
+      >
         <TooltipAligns />
       </CodeExample>
-      <CodeExample isCentered title="Sides" url={resolvePath("sides.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sides"
+        url={resolvePath("sides.tsx")}
+      >
         <TooltipSides />
       </CodeExample>
       <CodeExample

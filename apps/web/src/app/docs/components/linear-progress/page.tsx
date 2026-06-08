@@ -18,11 +18,22 @@ export const metadata: Metadata = {
 const LinearProgress = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <LinearProgressUsage />
       </CodeExample>
-      <CodeExample isCentered title="Colors" url={resolvePath("colors.tsx")}>
+      <CodeExample
+        isCentered
+        title="Colors"
+        url={resolvePath("colors.tsx")}
+      >
         <LinearProgressColors />
       </CodeExample>
       <CodeExample

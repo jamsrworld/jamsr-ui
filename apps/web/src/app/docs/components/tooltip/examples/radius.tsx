@@ -7,11 +7,17 @@ export const TooltipRadius = () => {
   return (
     <div className="flex gap-4  min-h-25 items-center justify-center">
       {radii.map((radius) => (
-        <Tooltip key={radius} radius={radius}>
+        <Tooltip
+          key={radius}
+          radius={radius}
+        >
           <Tooltip.Trigger
             render={
               <IconButton label="Click Me!">
-                <InfoIcon width={24} height={24} />
+                <InfoIcon
+                  width={24}
+                  height={24}
+                />
               </IconButton>
             }
           />

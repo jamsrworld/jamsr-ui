@@ -32,7 +32,10 @@ export const SwitchColors = () => {
   return (
     <div className="flex flex-col gap-4">
       {data.map((item) => (
-        <Field key={item.color} orientation="horizontal">
+        <Field
+          key={item.color}
+          orientation="horizontal"
+        >
           <Switch color={item.color} />
           <Field.Content>
             <Field.Label className="capitalize">{item.color}</Field.Label>

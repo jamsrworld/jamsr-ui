@@ -13,7 +13,10 @@ enum Gender {
 export const RadioNumberUsage = () => {
   const [gender, setGender] = useState<Gender>(Gender.MALE);
   return (
-    <RadioGroup value={gender} onValueChange={setGender}>
+    <RadioGroup
+      value={gender}
+      onValueChange={setGender}
+    >
       <Label>Select your favorite city</Label>
       <Field orientation="horizontal">
         <Radio value={Gender.MALE} />

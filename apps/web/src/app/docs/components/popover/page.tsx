@@ -23,8 +23,15 @@ export const metadata: Metadata = {
 const Popover = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <PopoverUsage />
       </CodeExample>
       <CodeExample
@@ -34,10 +41,18 @@ const Popover = () => {
       >
         <PopoverWithArrow />
       </CodeExample>
-      <CodeExample isCentered title="Sides" url={resolvePath("sides.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sides"
+        url={resolvePath("sides.tsx")}
+      >
         <PopoverSides />
       </CodeExample>
-      <CodeExample isCentered title="Aligns" url={resolvePath("aligns.tsx")}>
+      <CodeExample
+        isCentered
+        title="Aligns"
+        url={resolvePath("aligns.tsx")}
+      >
         <PopoverAligns />
       </CodeExample>
       <CodeExample
@@ -47,7 +62,11 @@ const Popover = () => {
       >
         <PopoverOpenOnHover />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <PopoverRadius />
       </CodeExample>
       <CodeExample

@@ -2,7 +2,6 @@ import { InfoIcon, SearchIcon, TrashIcon } from "@jamsrui/icons";
 import { Kbd } from "jamsrui/kbd";
 import { ContextMenu } from "jamsrui/context-menu";
 
-
 export const ContextMenuStartEndContent = () => {
   return (
     <ContextMenu>
@@ -19,7 +18,10 @@ export const ContextMenuStartEndContent = () => {
             className="text-foreground-secondary"
           />
           Add to Library
-          <Kbd className="ml-auto" keys={["command"]}>
+          <Kbd
+            className="ml-auto"
+            keys={["command"]}
+          >
             L
           </Kbd>
         </ContextMenu.Item>
@@ -30,7 +32,10 @@ export const ContextMenuStartEndContent = () => {
             className="text-foreground-secondary"
           />
           Add to Playlist
-          <Kbd className="ml-auto" keys={["command"]}>
+          <Kbd
+            className="ml-auto"
+            keys={["command"]}
+          >
             P
           </Kbd>
         </ContextMenu.Item>
@@ -41,7 +46,10 @@ export const ContextMenuStartEndContent = () => {
             className="text-foreground-secondary"
           />
           Share
-          <Kbd className="ml-auto" keys={["command"]}>
+          <Kbd
+            className="ml-auto"
+            keys={["command"]}
+          >
             S
           </Kbd>
         </ContextMenu.Item>
@@ -52,18 +60,27 @@ export const ContextMenuStartEndContent = () => {
             className="text-foreground-secondary"
           />
           Favorite
-          <Kbd className="ml-auto" keys={["command"]}>
+          <Kbd
+            className="ml-auto"
+            keys={["command"]}
+          >
             F
           </Kbd>
         </ContextMenu.Item>
-        <ContextMenu.Item color="danger" className="hover:bg-danger">
+        <ContextMenu.Item
+          color="danger"
+          className="hover:bg-danger"
+        >
           <TrashIcon
             width={20}
             height={20}
             className="text-foreground-secondary"
           />
           Delete
-          <Kbd className="ml-auto" keys={["command"]}>
+          <Kbd
+            className="ml-auto"
+            keys={["command"]}
+          >
             D
           </Kbd>
         </ContextMenu.Item>

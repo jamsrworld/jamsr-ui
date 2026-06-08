@@ -23,11 +23,22 @@ export const metadata: Metadata = {
 const Button = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <ButtonUsage />
       </CodeExample>
-      <CodeExample isCentered title="Colors" url={resolvePath("colors.tsx")}>
+      <CodeExample
+        isCentered
+        title="Colors"
+        url={resolvePath("colors.tsx")}
+      >
         <ButtonColors />
       </CodeExample>
       <CodeExample
@@ -37,10 +48,18 @@ const Button = () => {
       >
         <ButtonVariants />
       </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sizes"
+        url={resolvePath("sizes.tsx")}
+      >
         <ButtonSizes />
       </CodeExample>
-      <CodeExample isCentered title="Loading" url={resolvePath("loading.tsx")}>
+      <CodeExample
+        isCentered
+        title="Loading"
+        url={resolvePath("loading.tsx")}
+      >
         <ButtonLoading />
       </CodeExample>
       <CodeExample

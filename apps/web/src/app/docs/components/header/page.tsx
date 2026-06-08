@@ -16,14 +16,26 @@ export const metadata: Metadata = {
 const Header = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <IFrameExample src="/examples/header/usage" />
       </CodeExample>
-      <CodeExample title="Static" url={resolvePath("static.tsx")}>
+      <CodeExample
+        title="Static"
+        url={resolvePath("static.tsx")}
+      >
         <IFrameExample src="/examples/header/static" />
       </CodeExample>
-      <CodeExample title="Bordered" url={resolvePath("bordered.tsx")}>
+      <CodeExample
+        title="Bordered"
+        url={resolvePath("bordered.tsx")}
+      >
         <IFrameExample src="/examples/header/bordered" />
       </CodeExample>
       <CodeExample

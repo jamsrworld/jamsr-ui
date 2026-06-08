@@ -24,18 +24,34 @@ export const metadata: Metadata = {
 const Alert = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <AlertUsage />
       </CodeExample>
-      <CodeExample title="With Title" url={resolvePath("with-title.tsx")}>
+      <CodeExample
+        title="With Title"
+        url={resolvePath("with-title.tsx")}
+      >
         <AlertWithTitle />
       </CodeExample>
-      <CodeExample title="Status" url={resolvePath("status.tsx")}>
+      <CodeExample
+        title="Status"
+        url={resolvePath("status.tsx")}
+      >
         <AlertStatus />
       </CodeExample>
       <DocsPageSection title="Variants">
-        <CodeExample title="Solid" url={resolvePath("variants/solid.tsx")}>
+        <CodeExample
+          title="Solid"
+          url={resolvePath("variants/solid.tsx")}
+        >
           <AlertVariantSolid />
         </CodeExample>
         <CodeExample
@@ -44,11 +60,17 @@ const Alert = () => {
         >
           <AlertVariantBordered />
         </CodeExample>
-        <CodeExample title="Flat" url={resolvePath("variants/flat.tsx")}>
+        <CodeExample
+          title="Flat"
+          url={resolvePath("variants/flat.tsx")}
+        >
           <AlertVariantFlat />
         </CodeExample>
       </DocsPageSection>
-      <CodeExample title="With Action" url={resolvePath("with-action.tsx")}>
+      <CodeExample
+        title="With Action"
+        url={resolvePath("with-action.tsx")}
+      >
         <AlertWithAction />
       </CodeExample>
       <CodeExample
@@ -58,7 +80,10 @@ const Alert = () => {
       >
         <AlertCustomIcon />
       </CodeExample>
-      <CodeExample title="Without Icon" url={resolvePath("without-icon.tsx")}>
+      <CodeExample
+        title="Without Icon"
+        url={resolvePath("without-icon.tsx")}
+      >
         <AlertWithoutIcon />
       </CodeExample>
     </DocsPage>

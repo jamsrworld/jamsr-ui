@@ -10,7 +10,10 @@ export const PopoverControlled = () => {
   const { isOpen, setIsOpen, onToggle } = useDisclosure();
   return (
     <div className="flex flex-col items-center gap-4">
-      <Popover open={isOpen} onOpenChange={setIsOpen}>
+      <Popover
+        open={isOpen}
+        onOpenChange={setIsOpen}
+      >
         <Popover.Trigger
           render={
             <IconButton label="Popover Trigger">

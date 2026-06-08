@@ -2,7 +2,10 @@ import { Accordion } from "jamsrui/accordion";
 
 export const AccordionUsage = () => {
   return (
-    <Accordion variant="splitted" className="w-full">
+    <Accordion
+      variant="splitted"
+      className="w-full"
+    >
       <Accordion.Item>
         <Accordion.Trigger>
           Accordion 1<Accordion.Indicator />

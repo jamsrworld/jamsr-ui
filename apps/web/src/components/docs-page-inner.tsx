@@ -27,7 +27,10 @@ export const DocsPageInner = (props: Props) => {
         {!isOpen && <SidebarToggle />}
         <article className={cn("flex col-span-2 flex-col gap-8 w-full py-12")}>
           <div className="flex flex-col gap-2">
-            <Text render={<h1 />} variant="h2">
+            <Text
+              render={<h1 />}
+              variant="h2"
+            >
               {title}
             </Text>
             <Text className="text-foreground-secondary">{description}</Text>

@@ -15,7 +15,10 @@ export const MenuGroupExample = () => {
       <Menu.Content>
         <Menu.Group>
           <Menu.GroupLabel>Sort</Menu.GroupLabel>
-          <Menu.RadioGroup value={sortBy} onValueChange={setSortBy}>
+          <Menu.RadioGroup
+            value={sortBy}
+            onValueChange={setSortBy}
+          >
             <Menu.RadioItem value="date">
               <Menu.RadioItemIndicator />
               Date

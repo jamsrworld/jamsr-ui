@@ -13,11 +13,17 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <DocsPage title={title} description={description}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
       {THEME.dark.map((item) => {
         const { heading, items } = item;
         return (
-          <div key={heading} className="flex flex-col gap-2">
+          <div
+            key={heading}
+            className="flex flex-col gap-2"
+          >
             <Text variant="h6">{heading}</Text>
             <div className="grid grid-cols-4 gap-4">
               {items.map((item) => {

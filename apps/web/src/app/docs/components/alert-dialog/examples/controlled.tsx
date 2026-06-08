@@ -9,7 +9,10 @@ export const AlertDialogControlled = () => {
   return (
     <div>
       <Button onClick={() => setOpen(true)}>Click to delete!</Button>
-      <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialog
+        open={open}
+        onOpenChange={setOpen}
+      >
         <AlertDialog.Content>
           <AlertDialog.Title>Are you sure?</AlertDialog.Title>
           <AlertDialog.Description>

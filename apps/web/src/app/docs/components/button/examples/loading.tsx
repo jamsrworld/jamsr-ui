@@ -9,16 +9,28 @@ export const ButtonLoading = () => {
   return (
     <div>
       <div className="flex flex-row gap-4">
-        <Button isLoading={isLoading} color="danger">
+        <Button
+          isLoading={isLoading}
+          color="danger"
+        >
           Danger
         </Button>
-        <Button isLoading={isLoading} color="success">
+        <Button
+          isLoading={isLoading}
+          color="success"
+        >
           Success
         </Button>
-        <Button isLoading={isLoading} color="warning">
+        <Button
+          isLoading={isLoading}
+          color="warning"
+        >
           Warning
         </Button>
-        <Button color="secondary" isLoading={isLoading}>
+        <Button
+          color="secondary"
+          isLoading={isLoading}
+        >
           Saving...
         </Button>
       </div>

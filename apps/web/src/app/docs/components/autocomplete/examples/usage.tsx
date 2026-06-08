@@ -31,7 +31,10 @@ export const AutocompleteUsage = () => {
           <Autocomplete.Empty>No tags found.</Autocomplete.Empty>
           <Autocomplete.List>
             {(tag: Tag) => (
-              <Autocomplete.Item key={tag.id} value={tag}>
+              <Autocomplete.Item
+                key={tag.id}
+                value={tag}
+              >
                 {tag.value}
               </Autocomplete.Item>
             )}

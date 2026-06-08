@@ -31,11 +31,22 @@ export const metadata: Metadata = {
 const Select = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <SelectUsage />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <SelectRadius />
       </CodeExample>
       <CodeExample
@@ -101,7 +112,11 @@ const Select = () => {
       >
         <SelectWithIcons />
       </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sizes"
+        url={resolvePath("sizes.tsx")}
+      >
         <SelectSizes />
       </CodeExample>
       <CodeExample

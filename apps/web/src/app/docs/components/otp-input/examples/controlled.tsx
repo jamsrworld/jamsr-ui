@@ -7,7 +7,11 @@ export const OtpInputControlled = () => {
   const [value, setValue] = useState("");
   return (
     <div>
-      <OtpInput maxLength={4} value={value} onValueChange={setValue}>
+      <OtpInput
+        maxLength={4}
+        value={value}
+        onValueChange={setValue}
+      >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />
           <OtpInput.Slot index={1} />

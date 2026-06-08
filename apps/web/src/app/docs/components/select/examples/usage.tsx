@@ -16,7 +16,10 @@ export const SelectUsage = () => {
       <Select.Trigger className="min-w-40" />
       <Select.Content>
         {apples.map(({ label, value }) => (
-          <Select.Item key={label} value={value}>
+          <Select.Item
+            key={label}
+            value={value}
+          >
             <Select.ItemIndicator />
             <Select.ItemText>{label}</Select.ItemText>
           </Select.Item>

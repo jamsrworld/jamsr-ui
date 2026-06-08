@@ -11,14 +11,17 @@ export const PreviewCardWithArrow = () => {
         <PreviewCard.Arrow />
         <div className="flex justify-between space-x-4">
           <Avatar className="size-10">
-            <Avatar.Image alt="Base UI" src="https://github.com/mui.png" />
+            <Avatar.Image
+              alt="Base UI"
+              src="https://github.com/mui.png"
+            />
             <Avatar.Fallback>BUI</Avatar.Fallback>
           </Avatar>
           <div className="space-y-1">
             <Text variant="h6">Base UI</Text>
             <Text className="text-sm text-foreground-secondary">
-              Unstyled React components for building accessible web apps and design
-              systems.
+              Unstyled React components for building accessible web apps and
+              design systems.
             </Text>
             <div className="flex items-center pt-2">
               <span className="text-xs text-foreground-secondary text-muted-foreground">

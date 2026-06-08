@@ -7,7 +7,10 @@ export const AvatarRadius = () => {
   return (
     <div className="flex gap-2">
       {radii.map((radius) => (
-        <Avatar key={radius} radius={radius}>
+        <Avatar
+          key={radius}
+          radius={radius}
+        >
           <Avatar.Image src={`https://i.pravatar.cc/300?u=${id}${radius}`} />
           <Avatar.Fallback />
         </Avatar>

@@ -17,7 +17,10 @@ export const CheckboxGroupUsage = () => {
       >
         <label id={id}>How would you like to be notified?</label>
         <Field orientation="horizontal">
-          <Checkbox name="notifications" value="email" />
+          <Checkbox
+            name="notifications"
+            value="email"
+          />
           <Field.Content>
             <Field.Label>Email</Field.Label>
             <Field.Description>
@@ -26,7 +29,10 @@ export const CheckboxGroupUsage = () => {
           </Field.Content>
         </Field>
         <Field orientation="horizontal">
-          <Checkbox name="notifications" value="sms" />
+          <Checkbox
+            name="notifications"
+            value="sms"
+          />
           <Field.Content>
             <Field.Label>SMS</Field.Label>
             <Field.Description>
@@ -35,7 +41,10 @@ export const CheckboxGroupUsage = () => {
           </Field.Content>
         </Field>
         <Field orientation="horizontal">
-          <Checkbox name="notifications" value="push" />
+          <Checkbox
+            name="notifications"
+            value="push"
+          />
           <Field.Content>
             <Field.Label>Push</Field.Label>
             <Field.Description>
@@ -45,7 +54,10 @@ export const CheckboxGroupUsage = () => {
         </Field>
       </CheckboxGroup>
 
-      <Text className="text-foreground-tertiary mt-5" variant="caption">
+      <Text
+        className="text-foreground-tertiary mt-5"
+        variant="caption"
+      >
         You selected: {value.join(", ")}
       </Text>
     </div>

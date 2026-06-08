@@ -22,14 +22,29 @@ export const metadata: Metadata = {
 const Drawer = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <DrawerUsage />
       </CodeExample>
-      <CodeExample isCentered title="Anchors" url={resolvePath("anchors.tsx")}>
+      <CodeExample
+        isCentered
+        title="Anchors"
+        url={resolvePath("anchors.tsx")}
+      >
         <DrawerAnchors />
       </CodeExample>
-      <CodeExample isCentered title="Size" url={resolvePath("size.tsx")}>
+      <CodeExample
+        isCentered
+        title="Size"
+        url={resolvePath("size.tsx")}
+      >
         <DrawerSize />
       </CodeExample>
       <CodeExample

@@ -148,7 +148,10 @@ export const AppSidebar = () => {
           </Sidebar.Body>
           <Sidebar.Footer className="flex gap-2 items-center">
             <Text>Version 0.2.0</Text>
-            <Chip color="primary" size="sm">
+            <Chip
+              color="primary"
+              size="sm"
+            >
               Beta
             </Chip>
           </Sidebar.Footer>

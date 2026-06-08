@@ -22,7 +22,10 @@ export const CheckboxSizes = () => {
   return (
     <div className="flex flex-col gap-4">
       {checkboxExamples.map((item) => (
-        <Field key={item.size} orientation="horizontal">
+        <Field
+          key={item.size}
+          orientation="horizontal"
+        >
           <Checkbox size={item.size} />
           <Field.Content>
             <Field.Label>{item.label}</Field.Label>

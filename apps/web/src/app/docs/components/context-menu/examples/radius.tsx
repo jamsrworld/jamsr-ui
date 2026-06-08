@@ -1,4 +1,3 @@
-
 import { ContextMenu } from "jamsrui/context-menu";
 
 export const ContextMenuRadius = () => {
@@ -6,7 +5,10 @@ export const ContextMenuRadius = () => {
   return (
     <div className="flex flex-wrap justify-center gap-4">
       {radii.map((radius) => (
-        <ContextMenu key={radius} radius={radius}>
+        <ContextMenu
+          key={radius}
+          radius={radius}
+        >
           <ContextMenu.Trigger>
             <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
               Right Click Here
@@ -19,7 +21,10 @@ export const ContextMenuRadius = () => {
             <ContextMenu.Item>Play Last</ContextMenu.Item>
             <ContextMenu.Item>Share</ContextMenu.Item>
             <ContextMenu.Item>Favorite</ContextMenu.Item>
-            <ContextMenu.Item disabled color="danger">
+            <ContextMenu.Item
+              disabled
+              color="danger"
+            >
               Delete
             </ContextMenu.Item>
           </ContextMenu.Content>

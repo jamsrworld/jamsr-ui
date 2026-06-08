@@ -30,12 +30,14 @@ const handbookLinks = [
   {
     href: "#styling",
     title: "Styling",
-    description: "Components can be styled with plain CSS, Tailwind, or CSS-in-JS.",
+    description:
+      "Components can be styled with plain CSS, Tailwind, or CSS-in-JS.",
   },
   {
     href: "#animation",
     title: "Animation",
-    description: "Animate with CSS transitions, animations, or JavaScript libraries.",
+    description:
+      "Animate with CSS transitions, animations, or JavaScript libraries.",
   },
   {
     href: "#composition",

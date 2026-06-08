@@ -3,18 +3,16 @@
 import { Description } from "jamsrui/description";
 import { Input } from "jamsrui/input";
 import { Field } from "jamsrui/field";
-import { InputVariantProvider } from "../components/variant-provider";
 
-export const InputWithDescription = () => {
+export const InputWithDescription = (props: Input.Variants) => {
   return (
-    <InputVariantProvider>
-      {(props) => (
-        <Field>
-          <Field.Label>Username</Field.Label>
-          <Input {...props} placeholder="Enter your username" />
-          <Description>Please use a unique username</Description>
-        </Field>
-      )}
-    </InputVariantProvider>
+    <Field>
+      <Field.Label>Username</Field.Label>
+      <Input
+        {...props}
+        placeholder="Enter your username"
+      />
+      <Description>Please use a unique username</Description>
+    </Field>
   );
 };

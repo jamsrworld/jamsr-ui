@@ -299,7 +299,10 @@ export const CustomDateInput = React.forwardRef(
           onBlur={handleBlur}
           style={{ display: "inline-block", width: "2ch", textAlign: "center" }}
         />
-        <span aria-hidden="true" style={{ margin: "0 2px" }}>
+        <span
+          aria-hidden="true"
+          style={{ margin: "0 2px" }}
+        >
           /
         </span>
         <div
@@ -315,7 +318,10 @@ export const CustomDateInput = React.forwardRef(
           onBlur={handleBlur}
           style={{ display: "inline-block", width: "2ch", textAlign: "center" }}
         />
-        <span aria-hidden="true" style={{ margin: "0 2px" }}>
+        <span
+          aria-hidden="true"
+          style={{ margin: "0 2px" }}
+        >
           /
         </span>
         <div

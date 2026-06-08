@@ -26,8 +26,15 @@ export const metadata: Metadata = {
 const OtpInput = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <OtpInputUsage />
       </CodeExample>
       <CodeExample
@@ -65,7 +72,11 @@ const OtpInput = () => {
       >
         <OtpInputControlled />
       </CodeExample>
-      <CodeExample isCentered title="Invalid" url={resolvePath("invalid.tsx")}>
+      <CodeExample
+        isCentered
+        title="Invalid"
+        url={resolvePath("invalid.tsx")}
+      >
         <OtpInputInvalid />
       </CodeExample>
       <CodeExample
@@ -75,10 +86,18 @@ const OtpInput = () => {
       >
         <OtpInputDisabled />
       </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sizes"
+        url={resolvePath("sizes.tsx")}
+      >
         <OtpInputSizes />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <OtpInputRadius />
       </CodeExample>
       <CodeExample

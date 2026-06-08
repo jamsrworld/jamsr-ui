@@ -27,7 +27,10 @@ export const PreviewCardSides = () => {
           >
             <div className="flex gap-4">
               <Avatar className="size-10">
-                <Avatar.Image alt="Base UI" src="https://github.com/mui.png" />
+                <Avatar.Image
+                  alt="Base UI"
+                  src="https://github.com/mui.png"
+                />
                 <Avatar.Fallback>BUI</Avatar.Fallback>
               </Avatar>
               <div className="flex flex-col">

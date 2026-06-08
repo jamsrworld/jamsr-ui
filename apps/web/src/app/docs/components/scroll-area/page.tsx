@@ -16,9 +16,15 @@ export const metadata: Metadata = {
 const ScrollArea = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
       <Text>Coming Soon!</Text>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
+      <CodeExample
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <ScrollbarUsage />
       </CodeExample>
     </DocsPage>

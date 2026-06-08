@@ -24,8 +24,15 @@ export const metadata: Metadata = {
 const Checkbox = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <CheckboxUsage />
       </CodeExample>
       <CodeExample
@@ -42,10 +49,18 @@ const Checkbox = () => {
       >
         <CheckboxControlled />
       </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sizes"
+        url={resolvePath("sizes.tsx")}
+      >
         <CheckboxSizes />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <CheckboxRadius />
       </CodeExample>
       <CodeExample
@@ -55,7 +70,11 @@ const Checkbox = () => {
       >
         <CheckboxDisabled />
       </CodeExample>
-      <CodeExample isCentered title="Invalid" url={resolvePath("invalid.tsx")}>
+      <CodeExample
+        isCentered
+        title="Invalid"
+        url={resolvePath("invalid.tsx")}
+      >
         <CheckboxInvalid />
       </CodeExample>
       <CodeExample

@@ -13,11 +13,23 @@ export const LinearProgressControlled = () => {
   const CanDecrease = value > 0;
   return (
     <div className="flex w-full items-center gap-4">
-      <IconButton label="Decrease" disabled={!CanDecrease} onClick={OnDecrease}>
+      <IconButton
+        label="Decrease"
+        disabled={!CanDecrease}
+        onClick={OnDecrease}
+      >
         <MinusIcon />
       </IconButton>
-      <LinearProgress isIntermediate={false} progress={value} size="lg" />
-      <IconButton label="Increase" disabled={!CanIncrease} onClick={OnIncrease}>
+      <LinearProgress
+        isIntermediate={false}
+        progress={value}
+        size="lg"
+      />
+      <IconButton
+        label="Increase"
+        disabled={!CanIncrease}
+        onClick={OnIncrease}
+      >
         <PlusIcon />
       </IconButton>
     </div>

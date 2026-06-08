@@ -6,7 +6,10 @@ export const AlertDialogRadius = () => {
   return (
     <div className="flex gap-2 flex-wrap">
       {radii.map((radius) => (
-        <AlertDialog key={radius} radius={radius}>
+        <AlertDialog
+          key={radius}
+          radius={radius}
+        >
           <AlertDialog.Trigger render={<Button>Radius {radius}</Button>} />
           <AlertDialog.Content>
             <AlertDialog.Title>Are you sure?</AlertDialog.Title>

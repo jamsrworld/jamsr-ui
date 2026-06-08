@@ -27,7 +27,10 @@ const DialogItem = (
           </Dialog.Body>
           <Dialog.Footer>
             <Dialog.Cancel render={<Button>Cancel</Button>} />
-            <Button color="primary" variant="solid">
+            <Button
+              color="primary"
+              variant="solid"
+            >
               Submit
             </Button>
           </Dialog.Footer>
@@ -40,9 +43,19 @@ const DialogItem = (
 export const DialogScrollBehavior = () => {
   return (
     <div className="flex flex-wrap gap-4">
-      <DialogItem buttonText="Inside" scrollBehavior="inside" />
-      <DialogItem buttonText="Outside" scrollBehavior="outside" />
-      <DialogItem buttonText="Bordered" scrollBehavior="inside" isBordered />
+      <DialogItem
+        buttonText="Inside"
+        scrollBehavior="inside"
+      />
+      <DialogItem
+        buttonText="Outside"
+        scrollBehavior="outside"
+      />
+      <DialogItem
+        buttonText="Bordered"
+        scrollBehavior="inside"
+        isBordered
+      />
     </div>
   );
 };

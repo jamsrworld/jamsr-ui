@@ -13,7 +13,10 @@ const Page = () => {
   return (
     <div>
       <div className="p-4">
-        <ScrollArea width="300px" height="200px">
+        <ScrollArea
+          width="300px"
+          height="200px"
+        >
           <ScrollAreaViewport>
             <div className="px-5 py-[15px]">
               <div className="text-[15px] font-medium leading-[18px] text-violet11">

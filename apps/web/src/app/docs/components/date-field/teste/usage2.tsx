@@ -22,7 +22,10 @@ export default function Example() {
         alert(`Submitted date: ${value || "(empty/invalid)"}`);
       }}
     >
-      <label htmlFor="dob" style={{ display: "block", marginBottom: 8 }}>
+      <label
+        htmlFor="dob"
+        style={{ display: "block", marginBottom: 8 }}
+      >
         Date of birth
       </label>
 

@@ -19,7 +19,10 @@ export const DialogCustomCloseButton = () => {
         </Dialog.Body>
         <Dialog.Footer>
           <Dialog.Cancel render={<Button>Cancel</Button>} />
-          <Button color="primary" variant="solid">
+          <Button
+            color="primary"
+            variant="solid"
+          >
             Submit
           </Button>
         </Dialog.Footer>

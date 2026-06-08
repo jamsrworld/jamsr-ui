@@ -6,11 +6,17 @@ export const TextareaVariants = () => {
     <div className="flex flex-col gap-4">
       <Field>
         <Field.Label>Bordered</Field.Label>
-        <Textarea size="sm" variant="bordered" />
+        <Textarea
+          size="sm"
+          variant="bordered"
+        />
       </Field>
       <Field>
         <Field.Label>Solid</Field.Label>
-        <Textarea size="md" variant="solid" />
+        <Textarea
+          size="md"
+          variant="solid"
+        />
       </Field>
     </div>
   );

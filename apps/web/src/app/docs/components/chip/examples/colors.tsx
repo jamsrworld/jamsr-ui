@@ -12,7 +12,10 @@ export const ChipColors = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {colors.map((color) => (
-        <Chip color={color} key={color}>
+        <Chip
+          color={color}
+          key={color}
+        >
           {color}
         </Chip>
       ))}

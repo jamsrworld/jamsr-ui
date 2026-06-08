@@ -140,7 +140,10 @@ const SidebarNestedMenuItem = (props: NavItem & { isNested?: boolean }) => {
   const { icon, title, items = [], isNested, isActive, isDisabled } = props;
   const hasChild = items.length > 0;
   return (
-    <Collapsible defaultOpen={isActive} disabled={isDisabled}>
+    <Collapsible
+      defaultOpen={isActive}
+      disabled={isDisabled}
+    >
       <SidebarMenuItem className="relative">
         {isNested && (
           <div className="absolute -left-1 top-0 h-full w-px bg-content2" />
@@ -166,7 +169,11 @@ const SidebarNestedMenuItem = (props: NavItem & { isNested?: boolean }) => {
           <Collapsible.Content>
             <SidebarMenu className="pl-2 pt-1">
               {items.map((item, index) => (
-                <SidebarNestedMenuItem isNested key={index} {...item} />
+                <SidebarNestedMenuItem
+                  isNested
+                  key={index}
+                  {...item}
+                />
               ))}
             </SidebarMenu>
           </Collapsible.Content>
@@ -190,7 +197,12 @@ export const SidebarNested = () => {
                 <SidebarGroupLabel>{title}</SidebarGroupLabel>
                 <SidebarMenu>
                   {items.map((item) => {
-                    return <SidebarNestedMenuItem key={item.title} {...item} />;
+                    return (
+                      <SidebarNestedMenuItem
+                        key={item.title}
+                        {...item}
+                      />
+                    );
                   })}
                 </SidebarMenu>
               </SidebarGroup>

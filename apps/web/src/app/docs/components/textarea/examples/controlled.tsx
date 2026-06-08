@@ -16,7 +16,10 @@ export const TextareaControlled = () => {
     <Field className="max-w-62 w-full">
       <Field.Label>Name</Field.Label>
       <InputGroup>
-        <Textarea value={value} onValueChange={setValue} />
+        <Textarea
+          value={value}
+          onValueChange={setValue}
+        />
         {hasValue && (
           <IconButton
             variant="light"

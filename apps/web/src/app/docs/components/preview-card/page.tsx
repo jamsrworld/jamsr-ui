@@ -23,8 +23,15 @@ export const metadata: Metadata = {
 const PreviewCardPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExample
+        isCentered
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+      >
         <PreviewCardUsage />
       </CodeExample>
       <CodeExample
@@ -34,10 +41,18 @@ const PreviewCardPage = () => {
       >
         <PreviewCardWithArrow />
       </CodeExample>
-      <CodeExample isCentered title="Sides" url={resolvePath("sides.tsx")}>
+      <CodeExample
+        isCentered
+        title="Sides"
+        url={resolvePath("sides.tsx")}
+      >
         <PreviewCardSides />
       </CodeExample>
-      <CodeExample isCentered title="Aligns" url={resolvePath("aligns.tsx")}>
+      <CodeExample
+        isCentered
+        title="Aligns"
+        url={resolvePath("aligns.tsx")}
+      >
         <PreviewCardAligns />
       </CodeExample>
       <CodeExample
@@ -47,7 +62,11 @@ const PreviewCardPage = () => {
       >
         <PreviewCardOpenOnHover />
       </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
+      <CodeExample
+        isCentered
+        title="Radius"
+        url={resolvePath("radius.tsx")}
+      >
         <PreviewCardRadius />
       </CodeExample>
       <CodeExample

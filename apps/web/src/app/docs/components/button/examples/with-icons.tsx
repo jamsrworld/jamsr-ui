@@ -8,7 +8,10 @@ export const ButtonWithIcons = () => {
         <EmailIcon />
         Email
       </Button>
-      <Button variant="bordered" color="primary">
+      <Button
+        variant="bordered"
+        color="primary"
+      >
         Call us
         <TrashIcon />
       </Button>
@@ -16,7 +19,10 @@ export const ButtonWithIcons = () => {
         <ImageAddIcon />
         Upload Files
       </Button>
-      <Button variant="bordered" color="danger">
+      <Button
+        variant="bordered"
+        color="danger"
+      >
         Delete user
         <CloseIcon />
       </Button>

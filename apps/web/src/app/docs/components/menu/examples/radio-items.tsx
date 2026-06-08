@@ -9,7 +9,10 @@ export const MenuRadioItemsExample = () => {
     <Menu>
       <Menu.Trigger render={<Button>Sort</Button>} />
       <Menu.Content>
-        <Menu.RadioGroup value={sortBy} onValueChange={setSortBy}>
+        <Menu.RadioGroup
+          value={sortBy}
+          onValueChange={setSortBy}
+        >
           <Menu.RadioItem value="date">
             <Menu.RadioItemIndicator />
             Date

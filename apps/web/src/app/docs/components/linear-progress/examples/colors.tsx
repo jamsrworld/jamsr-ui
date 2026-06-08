@@ -11,7 +11,11 @@ export const LinearProgressColors = () => {
   return (
     <div className="flex w-full flex-col gap-6">
       {colors.map((color) => (
-        <LinearProgress key={color} color={color} isIntermediate />
+        <LinearProgress
+          key={color}
+          color={color}
+          isIntermediate
+        />
       ))}
     </div>
   );

@@ -1,12 +1,12 @@
 "use client";
 
 import { Input } from "jamsrui/input";
-import { InputVariantProvider } from "../components/variant-provider";
 
-export const InputUsage = () => {
+export const InputUsage = (props: Input.Props) => {
   return (
-    <InputVariantProvider>
-      {(props) => <Input {...props} placeholder="Enter your name" />}
-    </InputVariantProvider>
+    <Input
+      {...props}
+      placeholder="Enter your name"
+    />
   );
 };

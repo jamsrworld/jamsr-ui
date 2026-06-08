@@ -12,7 +12,10 @@ export const ContextMenuRadioItemsExample = () => {
         </div>
       </ContextMenu.Trigger>
       <ContextMenu.Content>
-        <ContextMenu.RadioGroup value={sortBy} onValueChange={setSortBy}>
+        <ContextMenu.RadioGroup
+          value={sortBy}
+          onValueChange={setSortBy}
+        >
           <ContextMenu.RadioItem value="date">
             <ContextMenu.RadioItemIndicator />
             Date

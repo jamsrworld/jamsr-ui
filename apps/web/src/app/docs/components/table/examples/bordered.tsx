@@ -2,7 +2,10 @@ import { Table } from "jamsrui/table";
 
 export const TableBordered = () => {
   return (
-    <Table aria-label="Example static collection table" variant="bordered">
+    <Table
+      aria-label="Example static collection table"
+      variant="bordered"
+    >
       <Table.Header>
         <Table.Row>
           <Table.Column>Name</Table.Column>

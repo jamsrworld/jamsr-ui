@@ -6,7 +6,10 @@ export const PopoverRadius = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {radii.map((radius) => (
-        <Popover key={radius} radius={radius}>
+        <Popover
+          key={radius}
+          radius={radius}
+        >
           <Popover.Trigger render={<Button>{radius}</Button>} />
           <Popover.Content>
             Popover is a non-modal dialog that floats around its disclosure.

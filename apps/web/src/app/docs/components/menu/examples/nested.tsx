@@ -28,7 +28,10 @@ export const MenuNested = () => {
             </Menu.SubmenuRoot>
           </Menu.SubmenuContent>
         </Menu.SubmenuRoot>
-        <Menu.Item disabled color="danger">
+        <Menu.Item
+          disabled
+          color="danger"
+        >
           Delete
         </Menu.Item>
       </Menu.Content>

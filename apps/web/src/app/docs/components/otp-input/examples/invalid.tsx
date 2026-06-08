@@ -2,7 +2,10 @@ import { OtpInput } from "jamsrui/otp-input";
 
 export const OtpInputInvalid = () => {
   return (
-    <OtpInput maxLength={4} isInvalid>
+    <OtpInput
+      maxLength={4}
+      isInvalid
+    >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />
         <OtpInput.Slot index={1} />

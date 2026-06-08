@@ -14,7 +14,12 @@ export const AvatarBordered = () => {
   return (
     <div className="flex gap-4">
       {colors.map((color) => (
-        <Avatar className="flex" key={color} color={color} isBordered>
+        <Avatar
+          className="flex"
+          key={color}
+          color={color}
+          isBordered
+        >
           <Avatar.Image
             alt="image"
             src={`https://i.pravatar.cc/300?u=${id}${color}`}

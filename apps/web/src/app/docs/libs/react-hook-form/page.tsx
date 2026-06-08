@@ -76,9 +76,15 @@ const Page = () => {
   };
 
   return (
-    <DocsPage title="React Hook Form" description="">
+    <DocsPage
+      title="React Hook Form"
+      description=""
+    >
       <FormProvider {...form}>
-        <form onSubmit={onSubmit} className="flex flex-col gap-8 max-w-md">
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col gap-8 max-w-md"
+        >
           {/* Username */}
           <RHFField<FormValues> name="username">
             <Field.Label>Username</Field.Label>
@@ -128,12 +134,18 @@ const Page = () => {
             </RHFField.NumberField>
           </RHFField>
           {/* Accepted Terms */}
-          <RHFField<FormValues> name="acceptedTerms" orientation="horizontal">
+          <RHFField<FormValues>
+            name="acceptedTerms"
+            orientation="horizontal"
+          >
             <RHFField.Checkbox />
             <Field.Label>Accept Terms and Conditions</Field.Label>
           </RHFField>
           {/* Dark Mode */}
-          <RHFField<FormValues> name="darkMode" orientation="horizontal">
+          <RHFField<FormValues>
+            name="darkMode"
+            orientation="horizontal"
+          >
             <Field.Label>Dark Mode</Field.Label>
             <RHFField.Switch />
           </RHFField>
@@ -219,7 +231,10 @@ const Page = () => {
               <RHFField.FieldError />
             </RHFField.Select>
           </RHFField>
-          <Button type="submit" color="primary">
+          <Button
+            type="submit"
+            color="primary"
+          >
             Submit
           </Button>
         </form>

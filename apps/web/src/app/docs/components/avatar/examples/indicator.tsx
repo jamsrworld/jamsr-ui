@@ -41,7 +41,11 @@ export const AvatarIndicatorExample = () => {
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Chip size="sm" isSquare color="primary">
+          <Chip
+            size="sm"
+            isSquare
+            color="primary"
+          >
             2
           </Chip>
         </Avatar.Indicator>
@@ -53,7 +57,11 @@ export const AvatarIndicatorExample = () => {
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Chip isSquare variant="dot" color="success">
+          <Chip
+            isSquare
+            variant="dot"
+            color="success"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
@@ -65,7 +73,11 @@ export const AvatarIndicatorExample = () => {
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Avatar size="sm" isBordered color="warning">
+          <Avatar
+            size="sm"
+            isBordered
+            color="warning"
+          >
             <Avatar.Image
               alt="John"
               src={`https://avatar.iran.liara.run/public/girl?username=Jamsr`}
@@ -83,7 +95,11 @@ export const AvatarIndicatorExample = () => {
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Chip isSquare variant="dot" color="primary">
+          <Chip
+            isSquare
+            variant="dot"
+            color="primary"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
@@ -96,7 +112,11 @@ export const AvatarIndicatorExample = () => {
         />
         <Avatar.Fallback />
         <Avatar.Indicator className="-top-2 -left-1">
-          <Chip isSquare variant="dot" color="danger">
+          <Chip
+            isSquare
+            variant="dot"
+            color="danger"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
@@ -109,7 +129,11 @@ export const AvatarIndicatorExample = () => {
         />
         <Avatar.Fallback />
         <Avatar.Indicator className="-top-2 -right-1">
-          <Chip isSquare variant="dot" color="success">
+          <Chip
+            isSquare
+            variant="dot"
+            color="success"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
@@ -122,7 +146,11 @@ export const AvatarIndicatorExample = () => {
         />
         <Avatar.Fallback />
         <Avatar.Indicator className="-bottom-2 -left-1">
-          <Chip isSquare variant="dot" color="warning">
+          <Chip
+            isSquare
+            variant="dot"
+            color="warning"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>

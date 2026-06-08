@@ -21,7 +21,10 @@ export const MenuAligns = () => {
             <Menu.Item>Play Last</Menu.Item>
             <Menu.Item>Share</Menu.Item>
             <Menu.Item>Favorite</Menu.Item>
-            <Menu.Item disabled color="danger">
+            <Menu.Item
+              disabled
+              color="danger"
+            >
               Delete
             </Menu.Item>
           </Menu.Content>

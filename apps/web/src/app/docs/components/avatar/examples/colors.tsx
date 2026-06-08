@@ -12,7 +12,10 @@ export const AvatarColors = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {colors.map((color) => (
-        <Avatar key={color} color={color}>
+        <Avatar
+          key={color}
+          color={color}
+        >
           <Avatar.Image alt="John Deo" />
           <Avatar.Fallback />
         </Avatar>

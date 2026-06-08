@@ -18,7 +18,10 @@ export const ContextMenuGroupExample = () => {
       <ContextMenu.Content>
         <ContextMenu.Group>
           <ContextMenu.GroupLabel>Sort</ContextMenu.GroupLabel>
-          <ContextMenu.RadioGroup value={sortBy} onValueChange={setSortBy}>
+          <ContextMenu.RadioGroup
+            value={sortBy}
+            onValueChange={setSortBy}
+          >
             <ContextMenu.RadioItem value="date">
               <ContextMenu.RadioItemIndicator />
               Date

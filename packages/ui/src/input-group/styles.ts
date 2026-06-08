@@ -1,4 +1,5 @@
 import { tv } from "tailwind-variants";
+import { focusWithinClasses } from "../utils/variants";
 
 export const inputGroupStyles = tv({
   slots: {
@@ -23,7 +24,7 @@ export const inputGroupStyles = tv({
         ],
       },
       solid: {
-        root: "bg-surface data-hovered:bg-surface/90",
+        root: ["bg-surface data-hovered:bg-surface/90", ...focusWithinClasses],
       },
     },
     size: {

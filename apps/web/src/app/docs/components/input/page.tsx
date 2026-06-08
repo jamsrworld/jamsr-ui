@@ -5,15 +5,12 @@ import { Metadata } from "next";
 import { InputControlled } from "./examples/controlled";
 import { InputDisabled } from "./examples/disabled";
 import { InputErrorState } from "./examples/error-state";
-import { InputRadius } from "./examples/radius";
-import { InputSizes } from "./examples/sizes";
+import { InputPasswordToggle } from "./examples/password-toggle";
 import { InputPrefixSuffix } from "./examples/prefix-suffix";
 import { InputUsage } from "./examples/usage";
 import { InputWithDescription } from "./examples/with-description";
 import { InputWithIcon } from "./examples/with-icon";
 import { InputWithLabel } from "./examples/with-label";
-import { InputPasswordToggle } from "./examples/password-toggle";
-import { InputVariants } from "./examples/variants";
 
 const title = "Input";
 const description =
@@ -28,14 +25,10 @@ const Input = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
+      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
         <InputUsage />
       </CodeExample>
-      <CodeExample
-        isCentered
-        title="With Label"
-        url={resolvePath("with-label.tsx")}
-      >
+      <CodeExample title="With Label" url={resolvePath("with-label.tsx")}>
         <InputWithLabel />
       </CodeExample>
       <CodeExample
@@ -51,19 +44,6 @@ const Input = () => {
         url={resolvePath("controlled.tsx")}
       >
         <InputControlled />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants"
-        url={resolvePath("variants.tsx")}
-      >
-        <InputVariants />
-      </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
-        <InputSizes />
-      </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
-        <InputRadius />
       </CodeExample>
       <CodeExample
         isCentered

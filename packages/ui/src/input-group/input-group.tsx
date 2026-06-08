@@ -3,10 +3,11 @@
 import { createContext, use, useMemo } from "react";
 
 import { InputGroup as InputGroupUI } from "@jamsrui/react";
+import { cn } from "tailwind-variants";
 
 import { inputGroupStyles } from "./styles";
 
-import { cn, type VariantProps } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
 
 type InputGroupVariants = VariantProps<typeof inputGroupStyles>;
 
@@ -23,8 +24,8 @@ const useInputGroupContext = () => {
 };
 
 export const InputGroup = (props: InputGroup.Props) => {
-  const { className, variant, ...restProps } = props;
-  const styles = inputGroupStyles({ variant });
+  const { className, variant, size, radius, ...restProps } = props;
+  const styles = inputGroupStyles({ variant, size, radius });
   const value = useMemo(() => ({ styles }), [styles]);
   return (
     <InputGroupContext value={value}>

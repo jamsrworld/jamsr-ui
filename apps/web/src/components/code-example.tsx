@@ -53,7 +53,7 @@ export const CodeExample = async (props: CodeExampleProps) => {
         <Tabs.Panel value="preview">
           <div
             className={cn(
-              "border min-h-50  border-border rounded-lg p-4",
+              "border min-h-50  border-border rounded-lg p-4 flex flex-col",
               isCentered && "flex items-center justify-center",
             )}
           >

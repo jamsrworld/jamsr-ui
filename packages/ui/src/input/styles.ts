@@ -33,7 +33,7 @@ export const inputStyles = tv({
   defaultVariants: {
     radius: "md",
     size: "md",
-    variant: "bordered",
+    variant: "solid",
   },
 });
 

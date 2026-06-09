@@ -3,6 +3,8 @@
 import { DocsPage } from "@/components/docs-page";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { EyeClosedIcon, EyeOpenIcon } from "@jamsrui/icons";
+import { useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
 import { Button } from "ui/button";
 import { Field } from "ui/field";
 import { IconButton } from "ui/icon-button";
@@ -13,8 +15,6 @@ import { OtpInput } from "ui/otp-input";
 import { Radio } from "ui/radio-group";
 import { RHFField } from "ui/rhf";
 import { Select } from "ui/select";
-import { useState } from "react";
-import { FormProvider, useForm } from "react-hook-form";
 import z, { boolean, number, object, string } from "zod";
 
 type FormValues = {
@@ -98,40 +98,36 @@ const Page = () => {
           </RHFField>
           {/* Password */}
           <RHFField<FormValues> name="password">
-            <Field>
-              <Field.Label>Password</Field.Label>
-              <InputGroup>
-                <RHFField.InputGroupInput
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Enter your name"
-                />
-                <InputGroup.Suffix>
-                  <IconButton
-                    size="sm"
-                    radius="full"
-                    label="Toggle password"
-                    variant="light"
-                    onClick={handleTogglePassword}
-                  >
-                    {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
-                  </IconButton>
-                </InputGroup.Suffix>
-              </InputGroup>
-              <RHFField.FieldError />
-            </Field>
+            <Field.Label>Password</Field.Label>
+            <InputGroup>
+              <RHFField.InputGroupInput
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your name"
+              />
+              <InputGroup.Suffix>
+                <IconButton
+                  size="sm"
+                  radius="full"
+                  label="Toggle password"
+                  variant="light"
+                  onClick={handleTogglePassword}
+                >
+                  {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
+                </IconButton>
+              </InputGroup.Suffix>
+            </InputGroup>
+            <RHFField.FieldError />
           </RHFField>
           {/* Bio */}
           <RHFField<FormValues> name="bio">
-            <Field>
-              <Field.Label>Bio</Field.Label>
-              <RHFField.TextArea />
-              <RHFField.FieldError />
-            </Field>
+            <Field.Label>Bio</Field.Label>
+            <RHFField.TextArea />
+            <RHFField.FieldError />
           </RHFField>
           {/* Age */}
           <RHFField<FormValues> name="age">
             <RHFField.NumberField>
-              <Label>Age</Label>
+              <Field.Label>Age</Field.Label>
               <NumberField.Group>
                 <NumberField.Input />
               </NumberField.Group>
@@ -191,8 +187,8 @@ const Page = () => {
           </RHFField>
           {/* Country */}
           <RHFField<FormValues> name="country">
+            <Field.Label>Country</Field.Label>
             <RHFField.Select>
-              <Label>Country</Label>
               <Select.Trigger>
                 <Select.Value placeholder="Select a country..." />
                 <Select.Icon />
@@ -216,8 +212,8 @@ const Page = () => {
           </RHFField>
           {/* Hobbies */}
           <RHFField<FormValues> name="hobbies">
+            <Field.Label>Hobbies</Field.Label>
             <RHFField.Select multiple>
-              <Label>Hobbies</Label>
               <Select.Trigger>
                 <Select.Value placeholder="Select hobbies..." />
                 <Select.Icon />

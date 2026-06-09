@@ -62,7 +62,7 @@ export const switchStyles = tv({
   },
   defaultVariants: {
     size: "md",
-    color: "success",
+    color: "primary",
   },
 });
 

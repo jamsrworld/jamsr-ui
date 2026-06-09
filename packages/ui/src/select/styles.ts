@@ -99,6 +99,6 @@ export const selectStyles = tv({
   defaultVariants: {
     size: "md",
     radius: "md",
-    variant: "bordered",
+    variant: "solid",
   },
 });

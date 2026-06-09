@@ -129,6 +129,7 @@ export const dataFocusVisibleClasses = [
   "data-focus-visible:outline-solid",
   "data-focus-visible:outline-focus",
   "data-focus-visible:outline-offset-2",
+  "has-data-invalid:data-focus-visible:outline-danger",
 ];
 
 export const groupDataFocusVisibleClasses = [

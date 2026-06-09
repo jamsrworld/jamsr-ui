@@ -22,8 +22,8 @@ const useNumberFieldContext = () => {
 };
 
 export const NumberField = (props: NumberField.Props) => {
-  const { className, isInvalid, ...rest } = props;
-  const styles = numberFieldStyles({ isInvalid });
+  const { className, variant, radius, ...rest } = props;
+  const styles = numberFieldStyles({ variant, radius });
   const value = useMemo(() => ({ styles }), [styles]);
   return (
     <NumberFieldContext value={value}>

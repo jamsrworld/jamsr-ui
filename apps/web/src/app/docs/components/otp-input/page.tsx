@@ -1,12 +1,11 @@
-import { OtpInput } from "ui/otp-input";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { VariantOptions } from "@/types";
+import { OtpInput } from "ui/otp-input";
 import { OtpInput6Digits } from "./examples/6-digits";
 import { OtpInputControlled } from "./examples/controlled";
-import { OtpInputCustomization } from "./examples/customization";
 import { OtpInputDisabled } from "./examples/disabled";
 import { OtpInputInvalid } from "./examples/invalid";
 import { OtpInputOnComplete } from "./examples/on-complete";
@@ -24,6 +23,10 @@ export const metadata: Metadata = {
 };
 
 const otpInputVariants: VariantOptions<OtpInput.Variants> = {
+  variant: {
+    options: ["bordered", "solid"],
+    defaultValue: "solid",
+  },
   size: {
     options: ["sm", "md", "lg"],
     defaultValue: "md",
@@ -88,12 +91,6 @@ const OtpInputPage = () => {
         url={resolvePath("disabled.tsx")}
         variants={otpInputVariants}
         component={OtpInputDisabled}
-      />
-      <CodeExampleV2
-        title="Customization"
-        url={resolvePath("customization.tsx")}
-        variants={otpInputVariants}
-        component={OtpInputCustomization}
       />
     </DocsPage>
   );

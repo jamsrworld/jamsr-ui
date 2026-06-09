@@ -7,10 +7,9 @@ export const checkboxStyles = tv({
     root: [
       "flex justify-center items-center",
       ...focusVisibleClasses,
-      "shrink-0 border-default data-hovered:border-default-hover",
-      "relative appearance-none border data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground",
+      "shrink-0",
+      "relative appearance-none",
       "data-disabled:status-disabled data-pressed:scale-90 transition-all duration-300",
-      "focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2",
     ],
     input:
       "absolute opacity-[0.0001] cursor-interactive disabled:cursor-disabled inset-0 z-1",
@@ -41,9 +40,21 @@ export const checkboxStyles = tv({
       lg: { root: "rounded-lg" },
       full: { root: "rounded-full" },
     },
+    variant: {
+      bordered: {
+        root: [
+          "border-default data-hovered:border-default-hover",
+          "border data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground",
+        ],
+      },
+      solid: {
+        root: "bg-surface data-hovered:bg-surface/90 data-checked:bg-primary",
+      },
+    },
   },
   defaultVariants: {
     radius: "md",
     size: "md",
+    variant: "solid",
   },
 });

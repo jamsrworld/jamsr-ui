@@ -43,7 +43,7 @@ export const inputGroupStyles = tv({
   },
   defaultVariants: {
     radius: "md",
-    variant: "bordered",
+    variant: "solid",
     size: "md",
   },
 });

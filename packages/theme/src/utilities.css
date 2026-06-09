@@ -32,7 +32,7 @@
 @utility status-disabled {
   opacity: var(--opacity-disabled);
   cursor: var(--cursor-disabled);
-  pointer-events: not-allowed;
+  pointer-events: none;
 }
 
 @utility rounded-inherit {

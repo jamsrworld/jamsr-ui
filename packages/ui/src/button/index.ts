@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { buttonStyles } from "./styles";
 import { Button as ButtonRoot } from "./button";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { buttonStyles } from "./styles";
 
 export const Button = ButtonRoot;
 

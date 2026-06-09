@@ -3,6 +3,8 @@
 import { createContext, use } from "react";
 
 import { Switch as SwitchPrimitive } from "@base-ui/react/switch";
+import { dataAttr } from "@jamsrui/utils";
+import { mergeProps, useFocusRing, useHover, usePress } from "react-aria";
 import { cn } from "tailwind-variants";
 
 import { switchStyles } from "./styles";
@@ -28,13 +30,22 @@ export const Switch = (props: Switch.Props) => {
     isInvalid,
     className,
     children = <SwitchThumb />,
+    disabled,
     ...restProps
   } = props;
   const styles = switchStyles({ color, size, isInvalid });
+
+  const { isPressed, pressProps } = usePress({ isDisabled: disabled });
+  const { focusProps, isFocusVisible, isFocused } = useFocusRing({});
+  const { hoverProps, isHovered } = useHover({ isDisabled: disabled });
   return (
     <SwitchContext value={{ styles }}>
       <SwitchPrimitive.Root
-        {...restProps}
+        data-focus-visible={dataAttr(isFocusVisible)}
+        data-focused={dataAttr(isFocused)}
+        data-hovered={dataAttr(isHovered)}
+        data-pressed={dataAttr(isPressed)}
+        {...mergeProps(pressProps, focusProps, hoverProps, restProps)}
         className={styles.root({ className: cn(className) })}
       >
         {children}

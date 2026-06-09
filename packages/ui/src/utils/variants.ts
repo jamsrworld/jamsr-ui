@@ -124,11 +124,11 @@ export const focusWithinClasses = [
 
 export const dataFocusVisibleClasses = [
   "outline-none",
-  "data-[focus-visible=true]:z-10",
-  "data-[focus-visible=true]:outline-2",
-  "data-[focus-visible=true]:outline-solid",
-  "data-[focus-visible=true]:outline-focus",
-  "data-[focus-visible=true]:outline-offset-2",
+  "data-focus-visible:z-10",
+  "data-focus-visible:outline-2",
+  "data-focus-visible:outline-solid",
+  "data-focus-visible:outline-focus",
+  "data-focus-visible:outline-offset-2",
 ];
 
 export const groupDataFocusVisibleClasses = [

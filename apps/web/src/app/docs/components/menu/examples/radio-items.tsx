@@ -1,12 +1,13 @@
 "use client";
+
 import { Button } from "jamsrui/button";
 import { Menu } from "jamsrui/menu";
 import { useState } from "react";
 
-export const MenuRadioItemsExample = () => {
+export const MenuRadioItemsExample = (props: Menu.Props) => {
   const [sortBy, setSortBy] = useState("date");
   return (
-    <Menu>
+    <Menu {...props}>
       <Menu.Trigger render={<Button>Sort</Button>} />
       <Menu.Content>
         <Menu.RadioGroup

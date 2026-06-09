@@ -2,6 +2,7 @@
 
 import { Combobox } from "jamsrui/combobox";
 import { ChevronDown, X } from "lucide-react";
+import React from "react";
 
 interface Fruit {
   label: string;
@@ -25,10 +26,15 @@ const fruits: Fruit[] = [
   { label: "Pomegranate", value: "pomegranate" },
 ];
 
-export const ComboboxUsage = () => {
+export const ComboboxUsage = (
+  props: Partial<React.ComponentProps<typeof Combobox>>,
+) => {
   return (
     <div className="w-full max-w-xs">
-      <Combobox items={fruits}>
+      <Combobox
+        items={fruits}
+        {...props}
+      >
         <label className="mb-1.5 block text-sm font-medium">
           Choose a fruit
         </label>

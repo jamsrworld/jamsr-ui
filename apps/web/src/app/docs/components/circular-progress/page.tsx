@@ -1,10 +1,8 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { CircularProgressColors } from "./examples/colors";
 import { CircularProgressCustomized } from "./examples/customized";
-import { CircularProgressSizes } from "./examples/sizes";
 import { CircularProgressUsage } from "./examples/usage";
 import { CircularProgressWithLabel } from "./examples/with-label";
 
@@ -17,50 +15,52 @@ export const metadata: Metadata = {
   description,
 };
 
-const CircularProgress = () => {
+const circularProgressVariants = {
+  color: {
+    options: [
+      "current",
+      "default",
+      "primary",
+      "danger",
+      "success",
+      "secondary",
+      "warning",
+    ],
+    defaultValue: "primary",
+  },
+  isIntermediate: {
+    options: ["true", "false"],
+    defaultValue: "true",
+  },
+};
+
+const CircularProgressPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
-        isCentered
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <CircularProgressUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={circularProgressVariants}
+        component={CircularProgressUsage}
+      />
+      <CodeExampleV2
         title="With Label"
         url={resolvePath("with-label.tsx")}
-      >
-        <CircularProgressWithLabel />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Colors"
-        url={resolvePath("colors.tsx")}
-      >
-        <CircularProgressColors />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Sizes"
-        url={resolvePath("sizes.tsx")}
-      >
-        <CircularProgressSizes />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={circularProgressVariants}
+        component={CircularProgressWithLabel}
+      />
+      <CodeExampleV2
         title="Customized"
         url={resolvePath("customized.tsx")}
-      >
-        <CircularProgressCustomized />
-      </CodeExample>
+        variants={circularProgressVariants}
+        component={CircularProgressCustomized}
+      />
     </DocsPage>
   );
 };
 
-export default CircularProgress;
+export default CircularProgressPage;

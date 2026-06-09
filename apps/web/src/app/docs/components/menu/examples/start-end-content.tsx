@@ -1,11 +1,13 @@
+"use client";
+
 import { ChevronUpIcon, InfoIcon, SearchIcon, TrashIcon } from "@jamsrui/icons";
 import { Button } from "jamsrui/button";
 import { Kbd } from "jamsrui/kbd";
 import { Menu } from "jamsrui/menu";
 
-export const MenuStartEndContent = () => {
+export const MenuStartEndContent = (props: Menu.Props) => {
   return (
-    <Menu>
+    <Menu {...props}>
       <Menu.Trigger
         render={
           <Button>

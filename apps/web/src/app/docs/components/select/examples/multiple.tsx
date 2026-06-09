@@ -2,6 +2,7 @@
 
 import { Label } from "jamsrui/label";
 import { Select } from "jamsrui/select";
+import React from "react";
 
 const languages = {
   javascript: "JavaScript",
@@ -29,14 +30,20 @@ function renderValue(value: Language[]) {
   return firstLanguage + additionalLanguages;
 }
 
-export const SelectMultiple = () => {
+export const SelectMultiple = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
+  const { multiple = true, ...rest } = props;
   return (
-    <Select multiple>
-      <Label>Fruit</Label>
+    <Select
+      multiple={multiple}
+      {...rest}
+    >
+      <Label>Language</Label>
       <Select.Trigger className="min-w-80">
         <Select.Value>
           {(value) => {
-            return renderValue(value);
+            return renderValue(value as Language[]);
           }}
         </Select.Value>
         <Select.Icon />

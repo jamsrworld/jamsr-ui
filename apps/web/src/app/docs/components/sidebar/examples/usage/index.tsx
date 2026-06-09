@@ -1,3 +1,5 @@
+"use client";
+
 import { Icon } from "@iconify/react";
 import { Sidebar } from "jamsrui/sidebar";
 import { AppSidebar } from "./app-sidebar";

@@ -1,16 +1,18 @@
 "use client";
-import { Description } from "jamsrui/description";
+
 import { OtpInput } from "jamsrui/otp-input";
 import { useState } from "react";
 
-export const OtpInputControlled = () => {
+export const OtpInputControlled = (props: OtpInput.Props) => {
   const [value, setValue] = useState("");
+  const { maxLength = 4, ...rest } = props;
   return (
-    <div>
+    <div className="flex flex-col gap-2">
       <OtpInput
-        maxLength={4}
         value={value}
-        onValueChange={setValue}
+        onChange={setValue}
+        maxLength={maxLength}
+        {...rest}
       >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />
@@ -19,7 +21,7 @@ export const OtpInputControlled = () => {
           <OtpInput.Slot index={3} />
         </OtpInput.Group>
       </OtpInput>
-      <Description>Value is {value}</Description>
+      <div className="text-sm text-foreground-secondary">Value: {value}</div>
     </div>
   );
 };

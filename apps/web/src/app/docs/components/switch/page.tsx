@@ -1,13 +1,11 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { SwitchColors } from "./examples/colors";
 import { SwitchControlled } from "./examples/controlled";
 import { SwitchCustomization } from "./examples/customization";
 import { SwitchDescription } from "./examples/description";
 import { SwitchDisabled } from "./examples/disabled";
-import { SwitchSizes } from "./examples/sizes";
 import { SwitchUsage } from "./examples/usage";
 import { SwitchWithLabel } from "./examples/with-label";
 
@@ -20,72 +18,75 @@ export const metadata: Metadata = {
   description,
 };
 
-const Switch = () => {
+const switchVariants = {
+  color: {
+    options: [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+    ],
+    defaultValue: "success",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+};
+
+const SwitchPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <SwitchUsage />
-      </CodeExample>
-      <CodeExample
+        variants={switchVariants}
+        component={SwitchUsage}
+      />
+      <CodeExampleV2
         isCentered
         title="With Label"
         url={resolvePath("with-label.tsx")}
-      >
-        <SwitchWithLabel />
-      </CodeExample>
-      <CodeExample
+        variants={switchVariants}
+        component={SwitchWithLabel}
+      />
+      <CodeExampleV2
         isCentered
         title="Description"
         url={resolvePath("description.tsx")}
-      >
-        <SwitchDescription />
-      </CodeExample>
-
-      <CodeExample
-        isCentered
-        title="Colors"
-        url={resolvePath("colors.tsx")}
-      >
-        <SwitchColors />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Sizes"
-        url={resolvePath("sizes.tsx")}
-      >
-        <SwitchSizes />
-      </CodeExample>
-      <CodeExample
+        variants={switchVariants}
+        component={SwitchDescription}
+      />
+      <CodeExampleV2
         isCentered
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-      >
-        <SwitchDisabled />
-      </CodeExample>
-      <CodeExample
+        variants={switchVariants}
+        component={SwitchDisabled}
+      />
+      <CodeExampleV2
         isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <SwitchControlled />
-      </CodeExample>
-      <CodeExample
+        variants={switchVariants}
+        component={SwitchControlled}
+      />
+      <CodeExampleV2
         isCentered
         title="Customization"
         url={resolvePath("customization.tsx")}
-      >
-        <SwitchCustomization />
-      </CodeExample>
+        variants={switchVariants}
+        component={SwitchCustomization}
+      />
     </DocsPage>
   );
 };
 
-export default Switch;
+export default SwitchPage;

@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "jamsrui/button";
 import { Drawer } from "jamsrui/drawer";
 
-export const DrawerNonDismissible = () => {
+export const DrawerNonDismissible = (props: Drawer.Props) => {
   return (
-    <Drawer disablePointerDismissal>
+    <Drawer
+      disablePointerDismissal
+      {...props}
+    >
       <Drawer.Trigger render={<Button>Click Me!</Button>} />
       <Drawer.Content>
         <Drawer.Title>Product Filter</Drawer.Title>

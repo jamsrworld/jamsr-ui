@@ -21,7 +21,7 @@ export const inputGroupStyles = tv({
         root: [
           "border border-border focus-within:border-focus",
           "data-hovered:not-focus-within:border-border-dark",
-          "group-data-invalid:border-danger",
+          "has-data-invalid:border-danger!",
         ],
       },
       solid: {

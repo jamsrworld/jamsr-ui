@@ -1,3 +1,5 @@
+"use client";
+
 import { Label } from "jamsrui/label";
 import {
   OtpInput,
@@ -5,14 +7,16 @@ import {
   REGEXP_ONLY_DIGITS,
 } from "jamsrui/otp-input";
 
-export const OtpInputWithPatterns = () => {
+export const OtpInputWithPatterns = (props: OtpInput.Props) => {
+  const { maxLength = 4, ...rest } = props;
   return (
     <div className="flex flex-col gap-8">
       <div>
         <Label>Only digits</Label>
         <OtpInput
-          maxLength={4}
+          maxLength={maxLength}
           pattern={REGEXP_ONLY_DIGITS}
+          {...rest}
         >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />
@@ -25,8 +29,9 @@ export const OtpInputWithPatterns = () => {
       <div>
         <Label>Only characters</Label>
         <OtpInput
-          maxLength={4}
+          maxLength={maxLength}
           pattern={REGEXP_ONLY_CHARS}
+          {...rest}
         >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />

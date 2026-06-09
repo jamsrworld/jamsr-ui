@@ -1,8 +1,7 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { LinkUnderline } from "./examples/underline";
 import { LinkUsage } from "./examples/usage";
 
 const title = "Link";
@@ -14,29 +13,29 @@ export const metadata: Metadata = {
   description,
 };
 
-const Link = () => {
+const linkVariants = {
+  underline: {
+    options: ["always", "hover", "never"],
+    defaultValue: "hover",
+  },
+};
+
+const LinkPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <LinkUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Underline"
-        url={resolvePath("underline.tsx")}
-      >
-        <LinkUnderline />
-      </CodeExample>
+        variants={linkVariants}
+        component={LinkUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Link;
+export default LinkPage;

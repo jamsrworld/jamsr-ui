@@ -19,10 +19,13 @@ const tags = [
 
 type Tag = (typeof tags)[number];
 
-export const AutocompleteUsage = () => {
+export const AutocompleteUsage = (props: Record<string, unknown>) => {
   return (
     <div className="w-full max-w-xs">
-      <Autocomplete items={tags}>
+      <Autocomplete
+        items={tags}
+        {...props}
+      >
         <label className="mb-1.5 block text-sm font-medium">
           Search tags
           <Autocomplete.Input placeholder="e.g. feature" />

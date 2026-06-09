@@ -4,9 +4,9 @@ import { Menu } from "jamsrui/menu";
 import { Menubar } from "jamsrui/menubar";
 import { ChevronRight } from "lucide-react";
 
-export const MenubarUsage = () => {
+export const MenubarUsage = (props: Menubar.Props) => {
   return (
-    <Menubar>
+    <Menubar {...props}>
       <Menu>
         <Menubar.Trigger>File</Menubar.Trigger>
         <Menu.Content>

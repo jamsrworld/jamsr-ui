@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "jamsrui/button";
 import { Drawer } from "jamsrui/drawer";
 
-export const DrawerUsage = () => {
+export const DrawerUsage = (props: Drawer.Props) => {
   return (
-    <Drawer swipeDirection="down">
+    <Drawer
+      swipeDirection="down"
+      {...props}
+    >
       <Drawer.Trigger render={<Button>Press Me!</Button>} />
       <Drawer.Content>
         <Drawer.Bar />

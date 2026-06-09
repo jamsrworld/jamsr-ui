@@ -1,4 +1,4 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
@@ -20,12 +20,11 @@ const DateFieldPage = () => {
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <DateInputUsage />
-      </CodeExample>
+        component={DateInputUsage}
+      />
     </DocsPage>
   );
 };

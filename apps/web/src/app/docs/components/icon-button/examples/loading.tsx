@@ -2,27 +2,21 @@
 
 import { EmailIcon } from "@jamsrui/icons";
 import { Button } from "jamsrui/button";
-import { CircularProgress } from "jamsrui/circular-progress";
 import { IconButton } from "jamsrui/icon-button";
 import { useState } from "react";
 
-export const IconButtonLoading = () => {
+export const IconButtonLoading = (props: IconButton.Props) => {
   const [isLoading, setIsLoading] = useState(false);
+  const { label = "Loading Icon Button", ...rest } = props;
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col items-center gap-4">
       <div className="flex flex-row gap-4">
         <IconButton
-          color="success"
-          label="Loading Icon Button"
+          label={label}
           isLoading={isLoading}
+          {...rest}
         >
           <EmailIcon />
-        </IconButton>
-        <IconButton
-          label="Loading Icon Button"
-          isLoading={isLoading}
-        >
-          {isLoading ? <CircularProgress /> : <EmailIcon />}
         </IconButton>
       </div>
       <Button onClick={() => setIsLoading(!isLoading)}>Toggle Loading</Button>

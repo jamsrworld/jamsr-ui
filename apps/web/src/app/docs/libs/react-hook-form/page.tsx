@@ -65,10 +65,15 @@ const Page = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = form.handleSubmit((values) => {
-    console.log(values);
-    // toast.success(<pre>{JSON.stringify(values, null, 2)}</pre>);
-  });
+  const onSubmit = form.handleSubmit(
+    (values) => {
+      console.log(values);
+      // toast.success(<pre>{JSON.stringify(values, null, 2)}</pre>);
+    },
+    (e) => {
+      console.log(e);
+    },
+  );
 
   const [showPassword, setShowPassword] = useState(false);
   const handleTogglePassword = () => {
@@ -96,7 +101,7 @@ const Page = () => {
             <Field>
               <Field.Label>Password</Field.Label>
               <InputGroup>
-                <RHFField.Input
+                <RHFField.InputGroupInput
                   type={showPassword ? "text" : "password"}
                   placeholder="Enter your name"
                 />
@@ -147,7 +152,10 @@ const Page = () => {
             orientation="horizontal"
           >
             <Field.Label>Dark Mode</Field.Label>
-            <RHFField.Switch />
+            <Field.Content>
+              <RHFField.Switch />
+              <RHFField.FieldError />
+            </Field.Content>
           </RHFField>
           {/* Gender */}
           <RHFField<FormValues> name="gender">

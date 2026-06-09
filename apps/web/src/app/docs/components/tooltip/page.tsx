@@ -1,12 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { TooltipAligns } from "./examples/aligns";
 import { TooltipControlled } from "./examples/controlled";
-import { TooltipOffset } from "./examples/offset";
-import { TooltipRadius } from "./examples/radius";
-import { TooltipSides } from "./examples/sides";
 import { TooltipUsage } from "./examples/usage";
 import { TooltipWithArrow } from "./examples/with-arrow";
 import { TooltipWithGroup } from "./examples/with-group";
@@ -20,71 +17,57 @@ export const metadata: Metadata = {
   description,
 };
 
-const Tooltip = () => {
+const tooltipVariants: VariantOptions<{
+  radius: "none" | "sm" | "md" | "lg" | "full";
+  showArrow: "true" | "false";
+}> = {
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+  showArrow: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+};
+
+const TooltipPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <TooltipUsage />
-      </CodeExample>
-      <CodeExample
+        variants={tooltipVariants}
+        component={TooltipUsage}
+      />
+      <CodeExampleV2
         isCentered
         title="With Arrow"
         url={resolvePath("with-arrow.tsx")}
-      >
-        <TooltipWithArrow />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Radius"
-        url={resolvePath("radius.tsx")}
-      >
-        <TooltipRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Offset"
-        url={resolvePath("offset.tsx")}
-      >
-        <TooltipOffset />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Aligns"
-        url={resolvePath("aligns.tsx")}
-      >
-        <TooltipAligns />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Sides"
-        url={resolvePath("sides.tsx")}
-      >
-        <TooltipSides />
-      </CodeExample>
-      <CodeExample
+        variants={tooltipVariants}
+        component={TooltipWithArrow}
+      />
+      <CodeExampleV2
         isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <TooltipControlled />
-      </CodeExample>
-      <CodeExample
+        variants={tooltipVariants}
+        component={TooltipControlled}
+      />
+      <CodeExampleV2
         isCentered
         title="With Group"
         url={resolvePath("with-group.tsx")}
-      >
-        <TooltipWithGroup />
-      </CodeExample>
+        variants={tooltipVariants}
+        component={TooltipWithGroup}
+      />
     </DocsPage>
   );
 };
 
-export default Tooltip;
+export default TooltipPage;

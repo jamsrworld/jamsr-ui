@@ -1,8 +1,15 @@
-import { Meter } from "jamsrui/meter";
+"use client";
 
-export const MeterUsage = () => {
+import { Meter } from "jamsrui/meter";
+import React from "react";
+
+export const MeterUsage = (props: React.ComponentProps<typeof Meter>) => {
+  const { value = 24, ...rest } = props;
   return (
-    <Meter value={24}>
+    <Meter
+      value={value}
+      {...rest}
+    >
       <Meter.Label>Label</Meter.Label>
       <Meter.Value />
       <Meter.Track>

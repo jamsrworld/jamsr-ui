@@ -1,32 +1,32 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
 import { CollapsibleUsage } from "./examples/usage";
 
 const title = "Collapsible";
-const description = "Collapsible";
+const description =
+  "An interactive component which can be expanded or collapsed.";
 
 export const metadata: Metadata = {
   title,
   description,
 };
 
-const Collapsible = () => {
+const CollapsiblePage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <CollapsibleUsage />
-      </CodeExample>
+        component={CollapsibleUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Collapsible;
+export default CollapsiblePage;

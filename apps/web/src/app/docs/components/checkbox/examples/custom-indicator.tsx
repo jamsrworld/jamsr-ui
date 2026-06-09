@@ -5,13 +5,14 @@ import { Checkbox } from "jamsrui/checkbox";
 import { Field } from "jamsrui/field";
 import { useState } from "react";
 
-export const CheckboxCustomIndicator = () => {
+export const CheckboxCustomIndicator = (props: Checkbox.Props) => {
   const [checked, setChecked] = useState(false);
   return (
     <Field orientation="horizontal">
       <Checkbox
         checked={checked}
         onCheckedChange={setChecked}
+        {...props}
       >
         <Checkbox.Indicator>{checked ? <PlusIcon /> : null}</Checkbox.Indicator>
       </Checkbox>

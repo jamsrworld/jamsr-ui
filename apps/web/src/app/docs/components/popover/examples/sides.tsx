@@ -1,19 +1,24 @@
+"use client";
+
 import { Button } from "jamsrui/button";
 import { Popover } from "jamsrui/popover";
 
-export const PopoverSides = () => {
-  const sides: Popover.Positioner["side"][] = [
-    "top",
-    "right",
-    "bottom",
-    "left",
-    "inline-end",
-    "inline-start",
-  ];
+export const PopoverSides = (props: Popover.Props) => {
+  const sides: (
+    | "top"
+    | "right"
+    | "bottom"
+    | "left"
+    | "inline-end"
+    | "inline-start"
+  )[] = ["top", "right", "bottom", "left", "inline-end", "inline-start"];
   return (
     <div className="flex flex-wrap gap-4">
       {sides.map((side) => (
-        <Popover key={side}>
+        <Popover
+          key={side}
+          {...props}
+        >
           <Popover.Trigger render={<Button>{side}</Button>} />
           <Popover.Content
             slotProps={{
@@ -23,8 +28,8 @@ export const PopoverSides = () => {
             }}
           >
             Popover is a non-modal dialog that floats around its disclosure.
-            It's commonly used for displaying additional rich content on top of
-            something.{" "}
+            It&apos;s commonly used for displaying additional rich content on
+            top of something.
           </Popover.Content>
         </Popover>
       ))}

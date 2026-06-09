@@ -22,7 +22,6 @@
     "@jamsrui/context": "workspace:^",
     "@jamsrui/core": "workspace:^",
     "@jamsrui/hooks": "workspace:^",
-    "@jamsrui/input-group": "workspace:^",
     "@jamsrui/textfield": "workspace:^",
     "@jamsrui/utils": "workspace:^"
   },

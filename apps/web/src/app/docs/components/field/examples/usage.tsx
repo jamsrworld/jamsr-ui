@@ -1,9 +1,11 @@
+"use client";
+
 import { Field } from "jamsrui/field";
 import { Input } from "jamsrui/input";
 
-export const FieldUsage = () => {
+export const FieldUsage = (props: Field.Props) => {
   return (
-    <Field>
+    <Field {...props}>
       <Field.Label>Name</Field.Label>
       <Input />
       <Field.Error match="valueMissing">Please enter your name</Field.Error>

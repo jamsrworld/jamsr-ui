@@ -4,7 +4,7 @@ import { AlertDialog } from "jamsrui/alert-dialog";
 import { Button } from "jamsrui/button";
 import { useState } from "react";
 
-export const AlertDialogControlled = () => {
+export const AlertDialogControlled = (props: AlertDialog.Props) => {
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -12,11 +12,12 @@ export const AlertDialogControlled = () => {
       <AlertDialog
         open={open}
         onOpenChange={setOpen}
+        {...props}
       >
         <AlertDialog.Content>
           <AlertDialog.Title>Are you sure?</AlertDialog.Title>
           <AlertDialog.Description>
-            You won't be able to revert this!
+            You won&apos;t be able to revert this!
           </AlertDialog.Description>
           <AlertDialog.Footer>
             <AlertDialog.Cancel onClick={() => setOpen(false)}>

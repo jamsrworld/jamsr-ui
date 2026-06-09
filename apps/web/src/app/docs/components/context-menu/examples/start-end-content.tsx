@@ -1,10 +1,12 @@
+"use client";
+
 import { InfoIcon, SearchIcon, TrashIcon } from "@jamsrui/icons";
 import { Kbd } from "jamsrui/kbd";
 import { ContextMenu } from "jamsrui/context-menu";
 
-export const ContextMenuStartEndContent = () => {
+export const ContextMenuStartEndContent = (props: ContextMenu.Props) => {
   return (
-    <ContextMenu>
+    <ContextMenu {...props}>
       <ContextMenu.Trigger>
         <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
           Right Click Here

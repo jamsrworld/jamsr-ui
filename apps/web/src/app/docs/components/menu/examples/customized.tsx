@@ -1,12 +1,17 @@
+"use client";
+
 import { Avatar } from "jamsrui/avatar";
 import { Menu } from "jamsrui/menu";
 
-export const MenuCustomized = () => {
+export const MenuCustomized = (props: Menu.Props) => {
   return (
-    <Menu radius="sm">
+    <Menu {...props}>
       <Menu.Trigger
         render={
-          <button>
+          <button
+            type="button"
+            className="cursor-pointer"
+          >
             <Avatar>
               <Avatar.Image
                 src="https://i.pravatar.cc/150"

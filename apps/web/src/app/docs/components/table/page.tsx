@@ -1,9 +1,7 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { TableAllowHover } from "./examples/allow-hover";
-import { TableBordered } from "./examples/bordered";
 import { TableCustomEmptyState } from "./examples/custom-empty-state";
 import { TableEmptyState } from "./examples/empty-state";
 import { TableStickyHeader } from "./examples/sticky-header";
@@ -18,51 +16,62 @@ export const metadata: Metadata = {
   description,
 };
 
-const Table = () => {
+const tableVariants = {
+  variant: {
+    options: ["solid", "bordered"],
+    defaultValue: "bordered",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+  density: {
+    options: ["compact", "standard", "comfortable"],
+    defaultValue: "compact",
+  },
+  allowHover: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+  separateRows: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+};
+
+const TablePage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <TableUsage />
-      </CodeExample>
-      <CodeExample
-        title="Bordered"
-        url={resolvePath("bordered.tsx")}
-      >
-        <TableBordered />
-      </CodeExample>
-      <CodeExample
-        title="Allow Hover"
-        url={resolvePath("allow-hover.tsx")}
-      >
-        <TableAllowHover />
-      </CodeExample>
-      <CodeExample
+        variants={tableVariants}
+        component={TableUsage}
+      />
+      <CodeExampleV2
         title="Sticky Header"
         url={resolvePath("sticky-header.tsx")}
-      >
-        <TableStickyHeader />
-      </CodeExample>
-      <CodeExample
+        variants={tableVariants}
+        component={TableStickyHeader}
+      />
+      <CodeExampleV2
         title="Empty State"
         url={resolvePath("empty-state.tsx")}
-      >
-        <TableEmptyState />
-      </CodeExample>
-      <CodeExample
+        variants={tableVariants}
+        component={TableEmptyState}
+      />
+      <CodeExampleV2
         title="Custom Empty State"
         url={resolvePath("custom-empty-state.tsx")}
-      >
-        <TableCustomEmptyState />
-      </CodeExample>
+        variants={tableVariants}
+        component={TableCustomEmptyState}
+      />
     </DocsPage>
   );
 };
 
-export default Table;
+export default TablePage;

@@ -1,41 +1,45 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { ToggleOutlined } from "./examples/outlined";
 import { ToggleUsage } from "./examples/usage";
 
 const title = "Toggle";
-const description = "Toggle";
+const description =
+  "A Toggle component allows users to switch between active and inactive states. It is useful for binary actions like text styling, filter states, or simple yes/no settings.";
 
 export const metadata: Metadata = {
   title,
   description,
 };
 
-const Toggle = () => {
+const toggleVariants = {
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  variant: {
+    options: ["default", "outline"],
+    defaultValue: "default",
+  },
+};
+
+const TogglePage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <ToggleUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Outlined"
-        url={resolvePath("outlined.tsx")}
-      >
-        <ToggleOutlined />
-      </CodeExample>
+        variants={toggleVariants}
+        component={ToggleUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Toggle;
+export default TogglePage;

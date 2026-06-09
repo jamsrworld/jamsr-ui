@@ -1,8 +1,8 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
-import { IFrameExample } from "@/components/iframe-example";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { HeaderUsage } from "./examples/usage";
 
 const title = "Header";
 const description =
@@ -13,39 +13,28 @@ export const metadata: Metadata = {
   description,
 };
 
-const Header = () => {
+const headerVariants = {
+  isBorder: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+};
+
+const HeaderPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <IFrameExample src="/examples/header/usage" />
-      </CodeExample>
-      <CodeExample
-        title="Static"
-        url={resolvePath("static.tsx")}
-      >
-        <IFrameExample src="/examples/header/static" />
-      </CodeExample>
-      <CodeExample
-        title="Bordered"
-        url={resolvePath("bordered.tsx")}
-      >
-        <IFrameExample src="/examples/header/bordered" />
-      </CodeExample>
-      <CodeExample
-        title="Hide On Scroll"
-        url={resolvePath("hide-on-scroll.tsx")}
-      >
-        <IFrameExample src="/examples/header/hide-on-scroll" />
-      </CodeExample>
+        component={HeaderUsage}
+        variants={headerVariants}
+      />
     </DocsPage>
   );
 };
 
-export default Header;
+export default HeaderPage;

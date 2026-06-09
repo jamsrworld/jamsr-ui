@@ -1,4 +1,4 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
@@ -6,13 +6,11 @@ import { OtpInput6Digits } from "./examples/6-digits";
 import { OtpInputControlled } from "./examples/controlled";
 import { OtpInputCustomization } from "./examples/customization";
 import { OtpInputDisabled } from "./examples/disabled";
+import { OtpInputInvalid } from "./examples/invalid";
 import { OtpInputOnComplete } from "./examples/on-complete";
-import { OtpInputRadius } from "./examples/radius";
-import { OtpInputSizes } from "./examples/sizes";
 import { OtpInputUsage } from "./examples/usage";
 import { OtpInputWithPatterns } from "./examples/with-patterns";
 import { OtpInputWithSeparators } from "./examples/with-separators";
-import { OtpInputInvalid } from "./examples/invalid";
 
 const title = "Otp Input";
 const description =
@@ -23,92 +21,89 @@ export const metadata: Metadata = {
   description,
 };
 
-const OtpInput = () => {
+const otpInputVariants = {
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
+const OtpInputPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <OtpInputUsage />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInputUsage}
+      />
+      <CodeExampleV2
         isCentered
         title="6 Digits"
         url={resolvePath("6-digits.tsx")}
-      >
-        <OtpInput6Digits />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInput6Digits}
+      />
+      <CodeExampleV2
         isCentered
         title="With Separators"
         url={resolvePath("with-separators.tsx")}
-      >
-        <OtpInputWithSeparators />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInputWithSeparators}
+      />
+      <CodeExampleV2
         isCentered
         title="On Complete"
         url={resolvePath("on-complete.tsx")}
-      >
-        <OtpInputOnComplete />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInputOnComplete}
+      />
+      <CodeExampleV2
         isCentered
         title="With Patterns"
         url={resolvePath("with-patterns.tsx")}
-      >
-        <OtpInputWithPatterns />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInputWithPatterns}
+      />
+      <CodeExampleV2
         isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <OtpInputControlled />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInputControlled}
+      />
+      <CodeExampleV2
         isCentered
         title="Invalid"
         url={resolvePath("invalid.tsx")}
-      >
-        <OtpInputInvalid />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInputInvalid}
+      />
+      <CodeExampleV2
         isCentered
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-      >
-        <OtpInputDisabled />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Sizes"
-        url={resolvePath("sizes.tsx")}
-      >
-        <OtpInputSizes />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Radius"
-        url={resolvePath("radius.tsx")}
-      >
-        <OtpInputRadius />
-      </CodeExample>
-      <CodeExample
+        variants={otpInputVariants}
+        component={OtpInputDisabled}
+      />
+      <CodeExampleV2
         isCentered
         title="Customization"
         url={resolvePath("customization.tsx")}
-      >
-        <OtpInputCustomization />
-      </CodeExample>
+        variants={otpInputVariants}
+        component={OtpInputCustomization}
+      />
     </DocsPage>
   );
 };
 
-export default OtpInput;
+export default OtpInputPage;

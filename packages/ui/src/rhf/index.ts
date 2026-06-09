@@ -2,6 +2,7 @@ import { RHFCheckbox } from "./rhf-checkbox";
 import { RHFField as RHFFieldRoot } from "./rhf-field";
 import { RHFFieldError } from "./rhf-field-error";
 import { RHFInput } from "./rhf-input";
+import { RHFInputGroupInput } from "./rhf-input-group-input";
 import { RHFNumberField } from "./rhf-number-field";
 import { RHFOtpInput } from "./rhf-otp-input";
 import { RHFRadioGroup } from "./rhf-radio-group";
@@ -20,6 +21,7 @@ export const RHFField = Object.assign(RHFFieldRoot, {
   RadioGroup: RHFRadioGroup,
   Select: RHFSelect,
   OtpInput: RHFOtpInput,
+  InputGroupInput: RHFInputGroupInput,
 });
 
 export namespace RHFField {

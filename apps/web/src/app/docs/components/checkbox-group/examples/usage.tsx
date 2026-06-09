@@ -3,9 +3,11 @@
 import { Checkbox, CheckboxGroup } from "jamsrui/checkbox";
 import { Field } from "jamsrui/field";
 import { Text } from "jamsrui/text";
-import { useId, useState } from "react";
+import React, { useId, useState } from "react";
 
-export const CheckboxGroupUsage = () => {
+export const CheckboxGroupUsage = (
+  props: React.ComponentProps<typeof CheckboxGroup>,
+) => {
   const [value, setValue] = useState<string[]>([]);
   const id = useId();
   return (
@@ -14,6 +16,7 @@ export const CheckboxGroupUsage = () => {
         aria-labelledby={id}
         value={value}
         onValueChange={setValue}
+        {...props}
       >
         <label id={id}>How would you like to be notified?</label>
         <Field orientation="horizontal">

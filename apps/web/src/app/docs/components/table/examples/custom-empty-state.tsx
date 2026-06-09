@@ -1,3 +1,5 @@
+"use client";
+
 import { FileIcon, RefreshIcon } from "@jamsrui/icons";
 import { Button } from "jamsrui/button";
 import {
@@ -9,6 +11,7 @@ import {
   TableRow,
 } from "jamsrui/table";
 import { Text } from "jamsrui/text";
+import React from "react";
 
 const CustomTableEmptyState = () => {
   return (
@@ -33,9 +36,19 @@ const CustomTableEmptyState = () => {
   );
 };
 
-export const TableCustomEmptyState = () => {
+export const TableCustomEmptyState = (props: any) => {
+  const { allowHover, separateRows, isHeaderSticky, ...rest } = props;
+  const allowHoverBool = allowHover === "true";
+  const separateRowsBool = separateRows === "true";
+  const isHeaderStickyBool = isHeaderSticky === "true";
+
   return (
-    <Table>
+    <Table
+      allowHover={allowHoverBool}
+      separateRows={separateRowsBool}
+      isHeaderSticky={isHeaderStickyBool}
+      {...rest}
+    >
       <TableHeader>
         <TableRow>
           <TableColumn>Name</TableColumn>

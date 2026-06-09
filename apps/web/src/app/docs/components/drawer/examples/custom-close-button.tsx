@@ -1,11 +1,24 @@
+"use client";
+
 import { Button } from "jamsrui/button";
 import { Drawer } from "jamsrui/drawer";
 
-export const DrawerCustomCloseBtn = () => {
+export const DrawerCustomCloseBtn = (props: Drawer.Props) => {
   return (
-    <Drawer>
+    <Drawer {...props}>
       <Drawer.Trigger render={<Button>Click Me!</Button>} />
       <Drawer.Content>
+        <Drawer.Close
+          className="absolute right-4 top-4"
+          render={
+            <Button
+              size="sm"
+              variant="light"
+            >
+              X
+            </Button>
+          }
+        />
         <Drawer.Title>Product Filter</Drawer.Title>
         <Drawer.Description>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque

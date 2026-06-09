@@ -3,7 +3,7 @@
 import { Description } from "jamsrui/description";
 import { Label } from "jamsrui/label";
 import { Select } from "jamsrui/select";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const languages = {
   javascript: "JavaScript",
@@ -31,20 +31,24 @@ function renderValue(value: Language[]) {
   return firstLanguage + additionalLanguages;
 }
 
-export const SelectMultipleControlled = () => {
+export const SelectMultipleControlled = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
   const [value, setValue] = useState<Language[]>([]);
+  const { multiple = true, ...rest } = props;
   return (
     <div className="flex flex-col gap-2">
       <Select
-        multiple
+        multiple={multiple}
         value={value}
-        onValueChange={setValue}
+        onValueChange={(val) => setValue(val as Language[])}
+        {...rest}
       >
-        <Label>Fruit</Label>
+        <Label>Language</Label>
         <Select.Trigger className="min-w-80">
           <Select.Value>
             {(value) => {
-              return renderValue(value);
+              return renderValue(value as Language[]);
             }}
           </Select.Value>
           <Select.Icon />

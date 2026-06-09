@@ -3,10 +3,13 @@
 import { DataGrid, useDataGridTable } from "jamsrui/data-grid";
 import { COLUMNS, USERS } from "./columns";
 
-export const DataGridStickyHeader = () => {
+export const DataGridStickyHeader = (props: Partial<DataGrid.Props>) => {
   const table = useDataGridTable({ columns: COLUMNS, data: USERS });
   return (
-    <DataGrid table={table}>
+    <DataGrid
+      table={table}
+      {...props}
+    >
       <DataGrid.Table isHeaderSticky />
       <DataGrid.Pagination />
     </DataGrid>

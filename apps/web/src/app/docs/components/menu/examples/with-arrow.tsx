@@ -1,10 +1,15 @@
+"use client";
+
 import { ChevronUpIcon } from "@jamsrui/icons";
 import { Button } from "jamsrui/button";
 import { Menu } from "jamsrui/menu";
 
-export const MenuWithArrow = () => {
+export const MenuWithArrow = (props: Menu.Props) => {
   return (
-    <Menu showArrow>
+    <Menu
+      showArrow
+      {...props}
+    >
       <Menu.Trigger
         render={
           <Button>

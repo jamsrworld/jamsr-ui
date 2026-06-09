@@ -2,6 +2,7 @@
 
 import { Avatar } from "jamsrui/avatar";
 import { Select } from "jamsrui/select";
+import React from "react";
 
 const users = [
   {
@@ -232,9 +233,15 @@ function renderValue(value?: string) {
   );
 }
 
-export const SelectCustomRenderValue = () => {
+export const SelectCustomRenderValue = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
+  const { size = "lg", ...rest } = props;
   return (
-    <Select size="lg">
+    <Select
+      size={size}
+      {...rest}
+    >
       <Select.Trigger className="min-w-40">
         <Select.Value placeholder="Select a user">
           {(value) => {

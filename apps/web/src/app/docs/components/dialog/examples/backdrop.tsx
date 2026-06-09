@@ -1,20 +1,16 @@
+"use client";
+
 import { Button } from "jamsrui/button";
 import { Dialog } from "jamsrui/dialog";
 import { Text } from "jamsrui/text";
 
-const DialogItem = (
-  props: Partial<Dialog.Props> & {
-    buttonText?: string;
-  },
-) => {
-  const { buttonText, ...restProps } = props;
+export const DialogBackdrop = (props: Dialog.Props) => {
   return (
-    <Dialog {...restProps}>
-      <Dialog.Trigger render={<Button>{buttonText}</Button>} />
+    <Dialog {...props}>
+      <Dialog.Trigger render={<Button>Open Dialog</Button>} />
       <Dialog.Content>
         <Dialog.Header>Heading</Dialog.Header>
         <Dialog.Body className="flex flex-col gap-4">
-          <Text>Im am dialog Body</Text>
           <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
             corrupti est quos asperiores libero maiores amet non obcaecati odio
@@ -33,24 +29,5 @@ const DialogItem = (
         </Dialog.Footer>
       </Dialog.Content>
     </Dialog>
-  );
-};
-
-export const DialogBackdrop = () => {
-  const backdrops: NonNullable<Dialog.Props["backdrop"]>[] = [
-    "transparent",
-    "opaque",
-    "blur",
-  ];
-  return (
-    <div className="flex flex-wrap gap-4">
-      {backdrops.map((backdrop) => (
-        <DialogItem
-          buttonText={`backdrop ${backdrop}`}
-          key={backdrop}
-          backdrop={backdrop}
-        />
-      ))}
-    </div>
   );
 };

@@ -1,12 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { DrawerAnchors } from "./examples/anchors";
-import { DrawerBackdrop } from "./examples/backdrop";
 import { DrawerCustomCloseBtn } from "./examples/custom-close-button";
 import { DrawerNonDismissible } from "./examples/non-dismissible";
-import { DrawerSize } from "./examples/size";
 import { DrawerUsage } from "./examples/usage";
 import { DrawerWithoutCloseButton } from "./examples/without-close-button";
 
@@ -19,64 +16,59 @@ export const metadata: Metadata = {
   description,
 };
 
-const Drawer = () => {
+const drawerVariants = {
+  swipeDirection: {
+    options: ["left", "right", "up", "down"],
+    defaultValue: "down",
+    label: "Swipe Direction",
+  },
+  size: {
+    options: ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "full"],
+    defaultValue: "md",
+  },
+  backdrop: {
+    options: ["transparent", "opaque", "blur"],
+    defaultValue: "opaque",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
+const DrawerPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
-        isCentered
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <DrawerUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Anchors"
-        url={resolvePath("anchors.tsx")}
-      >
-        <DrawerAnchors />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Size"
-        url={resolvePath("size.tsx")}
-      >
-        <DrawerSize />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={drawerVariants}
+        component={DrawerUsage}
+      />
+      <CodeExampleV2
         title="Custom Close Button"
         url={resolvePath("custom-close-button.tsx")}
-      >
-        <DrawerCustomCloseBtn />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Backdrop"
-        url={resolvePath("backdrop.tsx")}
-      >
-        <DrawerBackdrop />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={drawerVariants}
+        component={DrawerCustomCloseBtn}
+      />
+      <CodeExampleV2
         title="Without Close Button"
         url={resolvePath("without-close-button.tsx")}
-      >
-        <DrawerWithoutCloseButton />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={drawerVariants}
+        component={DrawerWithoutCloseButton}
+      />
+      <CodeExampleV2
         title="Non Dismissible"
         url={resolvePath("non-dismissible.tsx")}
-      >
-        <DrawerNonDismissible />
-      </CodeExample>
+        variants={drawerVariants}
+        component={DrawerNonDismissible}
+      />
     </DocsPage>
   );
 };
 
-export default Drawer;
+export default DrawerPage;

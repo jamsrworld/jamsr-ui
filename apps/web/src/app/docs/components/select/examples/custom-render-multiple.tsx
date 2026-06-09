@@ -3,6 +3,7 @@
 import { Avatar } from "jamsrui/avatar";
 import { Chip } from "jamsrui/chip";
 import { Select } from "jamsrui/select";
+import React from "react";
 
 const users = [
   {
@@ -207,11 +208,15 @@ const users = [
   },
 ];
 
-export const SelectCustomRenderMultiple = () => {
+export const SelectCustomRenderMultiple = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
+  const { size = "lg", multiple = true, ...rest } = props;
   return (
     <Select
-      size="lg"
-      multiple
+      size={size}
+      multiple={multiple}
+      {...rest}
     >
       <Select.Trigger className="min-w-40">
         <Select.Value placeholder="Select users">

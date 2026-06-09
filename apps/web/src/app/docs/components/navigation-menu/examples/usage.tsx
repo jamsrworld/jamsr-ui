@@ -46,9 +46,9 @@ const handbookLinks = [
   },
 ];
 
-export const NavigationMenuUsage = () => {
+export const NavigationMenuUsage = (props: NavigationMenu.Props) => {
   return (
-    <NavigationMenu>
+    <NavigationMenu {...props}>
       <NavigationMenu.List>
         <NavigationMenu.Item>
           <NavigationMenu.Trigger>
@@ -58,7 +58,7 @@ export const NavigationMenuUsage = () => {
             </NavigationMenu.Icon>
           </NavigationMenu.Trigger>
           <NavigationMenu.Content>
-            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2">
+            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 m-0 p-0 list-none">
               {gettingStartedLinks.map((item) => (
                 <li key={item.href}>
                   <NavigationMenu.Link
@@ -85,7 +85,7 @@ export const NavigationMenuUsage = () => {
             </NavigationMenu.Icon>
           </NavigationMenu.Trigger>
           <NavigationMenu.Content>
-            <ul className="flex w-75 flex-col gap-1">
+            <ul className="flex w-75 flex-col gap-1 m-0 p-0 list-none">
               {handbookLinks.map((item) => (
                 <li key={item.href}>
                   <NavigationMenu.Link

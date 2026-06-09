@@ -1,17 +1,35 @@
-import { Tabs } from "jamsrui/tabs";
+"use client";
 
-export const TabDisabled = () => {
+import { Tabs } from "jamsrui/tabs";
+import React from "react";
+
+export const TabDisabled = (props: React.ComponentProps<typeof Tabs>) => {
   return (
     <div className="flex flex-wrap gap-4">
       <Tabs
         defaultValue="photos"
         aria-label="Tabs variants"
-        disabled
+        {...props}
       >
         <Tabs.List>
-          <Tabs.Tab value="photos">Photos</Tabs.Tab>
-          <Tabs.Tab value="music">Music</Tabs.Tab>
-          <Tabs.Tab value="videos">Videos</Tabs.Tab>
+          <Tabs.Tab
+            value="photos"
+            disabled
+          >
+            Photos
+          </Tabs.Tab>
+          <Tabs.Tab
+            value="music"
+            disabled
+          >
+            Music
+          </Tabs.Tab>
+          <Tabs.Tab
+            value="videos"
+            disabled
+          >
+            Videos
+          </Tabs.Tab>
           <Tabs.Indicator />
         </Tabs.List>
       </Tabs>

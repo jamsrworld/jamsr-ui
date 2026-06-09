@@ -3,7 +3,7 @@
 import { Description } from "jamsrui/description";
 import { Label } from "jamsrui/label";
 import { Select } from "jamsrui/select";
-import { useState } from "react";
+import React, { useState } from "react";
 
 enum Fruits {
   APPLE = 1,
@@ -21,13 +21,16 @@ const fruits = [
   { label: "Orange", value: Fruits.ORANGE },
 ];
 
-export const SelectControlledNumber = () => {
-  const [value, setValue] = useState<Fruits>(Fruits.APPLE);
+export const SelectControlledNumber = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
+  const [value, setValue] = useState<Fruits | null>(Fruits.APPLE);
   return (
     <div className="flex flex-col gap-2">
       <Select
         value={value}
-        onValueChange={setValue}
+        onValueChange={(val) => setValue(val as Fruits | null)}
+        {...props}
       >
         <Label>Fruit</Label>
         <Select.Trigger className="min-w-40" />

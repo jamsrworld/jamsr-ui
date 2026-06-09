@@ -15,8 +15,6 @@ import { useRadioGroupContext } from "./radio-group-context";
 
 import type { PropGetter, UIProps } from "@jamsrui/utils";
 
-import type { RadioContent } from "./radio-content";
-import type { RadioControl } from "./radio-control";
 import type { RadioIndicator } from "./radio-indicator";
 import type { RadioInput } from "./radio-input";
 import type { RadioRoot } from "./radio-root";
@@ -105,7 +103,7 @@ export const useRadio = (props: useRadio.Props) => {
       handleInputChange,
     ],
   );
-  const getControlProps: PropGetter<RadioControl.Props> = useCallback(
+  const getControlProps: PropGetter<UIProps<"div">> = useCallback(
     (props) => ({
       ...props,
       "data-slot": "control",
@@ -119,7 +117,7 @@ export const useRadio = (props: useRadio.Props) => {
     }),
     [],
   );
-  const getContentProps: PropGetter<RadioContent.Props> = useCallback(
+  const getContentProps: PropGetter<UIProps<"div">> = useCallback(
     (props) => ({
       ...props,
       "data-slot": "content",

@@ -1,10 +1,12 @@
+"use client";
+
 import { Field } from "jamsrui/field";
 import { Label } from "jamsrui/label";
 import { Radio, RadioGroup } from "jamsrui/radio-group";
 
-export const RadioUsage = () => {
+export const RadioUsage = (props: RadioGroup.Props) => {
   return (
-    <RadioGroup>
+    <RadioGroup {...props}>
       <Label>Select your favorite city</Label>
       <Field orientation="horizontal">
         <Radio value="buenos-aires" />

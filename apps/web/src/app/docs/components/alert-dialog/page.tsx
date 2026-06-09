@@ -1,11 +1,10 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
 import { AlertDialogBackdrop } from "./examples/backdrop";
 import { AlertDialogControlled } from "./examples/controlled";
 import { AlertDialogCustomized } from "./examples/customized";
-import { AlertDialogRadius } from "./examples/radius";
 import { AlertDialogUsage } from "./examples/usage";
 
 const title = "Alert Dialog";
@@ -17,6 +16,21 @@ export const metadata: Metadata = {
   description,
 };
 
+const alertDialogVariants = {
+  radius: {
+    options: ["none", "sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  size: {
+    options: ["sm", "md", "lg", "xl"],
+    defaultValue: "md",
+  },
+  backdrop: {
+    options: ["transparent", "opaque", "blur"],
+    defaultValue: "opaque",
+  },
+};
+
 const Confirmation = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
@@ -24,41 +38,30 @@ const Confirmation = () => {
       title={title}
       description={description}
     >
-      <CodeExample
-        isCentered
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <AlertDialogUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={alertDialogVariants}
+        component={AlertDialogUsage}
+      />
+      <CodeExampleV2
         title="Backdrop"
         url={resolvePath("backdrop.tsx")}
-      >
-        <AlertDialogBackdrop />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Radius"
-        url={resolvePath("radius.tsx")}
-      >
-        <AlertDialogRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={alertDialogVariants}
+        component={AlertDialogBackdrop}
+      />
+      <CodeExampleV2
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <AlertDialogControlled />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={alertDialogVariants}
+        component={AlertDialogControlled}
+      />
+      <CodeExampleV2
         title="Customized"
         url={resolvePath("customized.tsx")}
-      >
-        <AlertDialogCustomized />
-      </CodeExample>
+        variants={alertDialogVariants}
+        component={AlertDialogCustomized}
+      />
     </DocsPage>
   );
 };

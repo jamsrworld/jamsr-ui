@@ -1,4 +1,4 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
@@ -13,21 +13,33 @@ export const metadata: Metadata = {
   description,
 };
 
-const Skeleton = () => {
+const skeletonVariants = {
+  isLoading: {
+    options: ["true", "false"],
+    defaultValue: "true",
+  },
+  disableAnimation: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+};
+
+const SkeletonPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
+        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <SkeletonUsage />
-      </CodeExample>
+        variants={skeletonVariants}
+        component={SkeletonUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Skeleton;
+export default SkeletonPage;

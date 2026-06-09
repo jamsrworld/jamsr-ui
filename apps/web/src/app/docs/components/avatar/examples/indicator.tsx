@@ -1,3 +1,5 @@
+"use client";
+
 import { Avatar } from "jamsrui/avatar";
 import { Chip } from "jamsrui/chip";
 
@@ -21,10 +23,10 @@ const BadgeIcon = () => {
   );
 };
 
-export const AvatarIndicatorExample = () => {
+export const AvatarIndicatorExample = (props: Avatar.Props) => {
   return (
     <div className="grid grid-cols-4 gap-4">
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/boy?username=John`}
@@ -34,7 +36,7 @@ export const AvatarIndicatorExample = () => {
           <BadgeIcon />
         </Avatar.Indicator>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=Jamsr`}
@@ -50,7 +52,7 @@ export const AvatarIndicatorExample = () => {
           </Chip>
         </Avatar.Indicator>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
@@ -66,7 +68,7 @@ export const AvatarIndicatorExample = () => {
           </Chip>
         </Avatar.Indicator>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
@@ -88,7 +90,7 @@ export const AvatarIndicatorExample = () => {
       </Avatar>
       {/*  */}
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
@@ -105,7 +107,7 @@ export const AvatarIndicatorExample = () => {
         </Avatar.Indicator>
       </Avatar>
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
@@ -122,7 +124,7 @@ export const AvatarIndicatorExample = () => {
         </Avatar.Indicator>
       </Avatar>
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
@@ -139,7 +141,7 @@ export const AvatarIndicatorExample = () => {
         </Avatar.Indicator>
       </Avatar>
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}

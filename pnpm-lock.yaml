@@ -1729,9 +1729,6 @@ importers:
       '@jamsrui/hooks':
         specifier: workspace:^
         version: link:../../hooks
-      '@jamsrui/input-group':
-        specifier: workspace:^
-        version: link:../input-group
       '@jamsrui/textfield':
         specifier: workspace:^
         version: link:../textfield

@@ -1,9 +1,15 @@
+"use client";
+
 import { OtpInput } from "jamsrui/otp-input";
 
-export const OtpInputWithSeparators = () => {
+export const OtpInputWithSeparators = (props: OtpInput.Props) => {
+  const { maxLength, ...rest } = props;
   return (
     <div className="flex flex-col gap-8">
-      <OtpInput maxLength={4}>
+      <OtpInput
+        maxLength={4}
+        {...rest}
+      >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />
           <OtpInput.Slot index={1} />
@@ -14,7 +20,10 @@ export const OtpInputWithSeparators = () => {
           <OtpInput.Slot index={3} />
         </OtpInput.Group>
       </OtpInput>
-      <OtpInput maxLength={6}>
+      <OtpInput
+        maxLength={6}
+        {...rest}
+      >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />
           <OtpInput.Slot index={1} />
@@ -27,7 +36,10 @@ export const OtpInputWithSeparators = () => {
           <OtpInput.Slot index={5} />
         </OtpInput.Group>
       </OtpInput>
-      <OtpInput maxLength={6}>
+      <OtpInput
+        maxLength={6}
+        {...rest}
+      >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />
           <OtpInput.Slot index={1} />

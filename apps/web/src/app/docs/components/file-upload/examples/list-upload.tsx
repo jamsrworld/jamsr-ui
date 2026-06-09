@@ -8,7 +8,9 @@ import { Text } from "jamsrui/text";
 import { formatBytes, useFileUpload } from "jamsrui/file-upload";
 import { cn } from "@jamsrui/utils";
 
-export const FileUploadListUpload = () => {
+import React from "react";
+
+export const FileUploadListUpload = (props: React.ComponentProps<"div">) => {
   const {
     getInputProps,
     isDragging,
@@ -24,7 +26,7 @@ export const FileUploadListUpload = () => {
     accept: "image/*",
   });
   return (
-    <div>
+    <div {...props}>
       <div
         {...getRootProps({})}
         className={cn(

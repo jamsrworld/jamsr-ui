@@ -1,11 +1,16 @@
+"use client";
+
 import { InfoIcon } from "@jamsrui/icons";
 import { IconButton } from "jamsrui/icon-button";
 import { Popover } from "jamsrui/popover";
 import { Text } from "jamsrui/text";
 
-export const PopoverWithArrow = () => {
+export const PopoverWithArrow = (props: Popover.Props) => {
   return (
-    <Popover showArrow>
+    <Popover
+      showArrow
+      {...props}
+    >
       <Popover.Trigger
         render={
           <IconButton label="Popover Trigger">

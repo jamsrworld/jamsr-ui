@@ -1,3 +1,5 @@
+"use client";
+
 import { Icon } from "@iconify/react";
 import { Avatar } from "jamsrui/avatar";
 import { IconButton } from "jamsrui/icon-button";
@@ -6,7 +8,7 @@ import { Text } from "jamsrui/text";
 
 const WorkspaceSwitcher = () => {
   return (
-    <Menu placement="bottom-start">
+    <Menu>
       <Menu.Trigger>
         <div className="flex gap-1 items-center hover:bg-surface-secondary p-0.5 rounded-sm">
           <Avatar size="sm">
@@ -17,7 +19,9 @@ const WorkspaceSwitcher = () => {
           <Icon icon="tabler:chevron-down" />
         </div>
       </Menu.Trigger>
-      <Menu.Content>
+      <Menu.Content
+        slotProps={{ positioner: { side: "bottom", align: "start" } }}
+      >
         <Menu.Item>Settings</Menu.Item>
         <Menu.Item>Invite and manage members</Menu.Item>
         <Menu.Separator />

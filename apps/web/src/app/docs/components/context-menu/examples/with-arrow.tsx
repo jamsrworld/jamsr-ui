@@ -1,8 +1,13 @@
+"use client";
+
 import { ContextMenu } from "jamsrui/context-menu";
 
-export const ContextMenuWithArrow = () => {
+export const ContextMenuWithArrow = (props: ContextMenu.Props) => {
   return (
-    <ContextMenu showArrow>
+    <ContextMenu
+      showArrow
+      {...props}
+    >
       <ContextMenu.Trigger>
         <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
           Right Click Here

@@ -1,10 +1,12 @@
+"use client";
+
 import { InfoIcon } from "@jamsrui/icons";
 import { IconButton } from "jamsrui/icon-button";
 import { Popover } from "jamsrui/popover";
 
-export const PopoverOpenOnHover = () => {
+export const PopoverOpenOnHover = (props: Popover.Props) => {
   return (
-    <Popover>
+    <Popover {...props}>
       <Popover.Trigger
         openOnHover
         render={
@@ -14,8 +16,8 @@ export const PopoverOpenOnHover = () => {
         }
       />
       <Popover.Content>
-        Popover is a non-modal dialog that floats around its disclosure. It's
-        commonly used for displaying additional rich content on top of
+        Popover is a non-modal dialog that floats around its disclosure.
+        It&apos;s commonly used for displaying additional rich content on top of
         something.
       </Popover.Content>
     </Popover>

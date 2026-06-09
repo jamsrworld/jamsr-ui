@@ -2,14 +2,14 @@
 import { ContextMenu } from "jamsrui/context-menu";
 import { useState } from "react";
 
-export const ContextMenuGroupExample = () => {
+export const ContextMenuGroupExample = (props: ContextMenu.Props) => {
   const [showMinimap, setShowMinimap] = useState(true);
   const [showSearch, setShowSearch] = useState(true);
   const [showSidebar, setShowSidebar] = useState(false);
   const [sortBy, setSortBy] = useState("date");
 
   return (
-    <ContextMenu>
+    <ContextMenu {...props}>
       <ContextMenu.Trigger>
         <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
           Right Click Here

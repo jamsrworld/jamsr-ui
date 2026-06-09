@@ -7,7 +7,9 @@ import { Text } from "jamsrui/text";
 import { useFileUpload } from "jamsrui/file-upload";
 import { cn } from "@jamsrui/utils";
 
-export const FileUploadAvatarUpload = () => {
+import React from "react";
+
+export const FileUploadAvatarUpload = (props: React.ComponentProps<"div">) => {
   const {
     getInputProps,
     isDragging,
@@ -23,7 +25,10 @@ export const FileUploadAvatarUpload = () => {
   });
   const avatar = files[0];
   return (
-    <div className="flex flex-col items-center text-center">
+    <div
+      className="flex flex-col items-center text-center"
+      {...props}
+    >
       <div
         {...getRootProps({})}
         className={cn(

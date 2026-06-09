@@ -1,28 +1,16 @@
+"use client";
+
 import { CheckIcon, EmailIcon } from "@jamsrui/icons";
 import { Chip } from "jamsrui/chip";
 
-export const ChipWithIcons = () => {
+export const ChipWithIcons = (props: Chip.Props) => {
   return (
     <div className="flex gap-4">
-      <Chip>
+      <Chip {...props}>
         <EmailIcon />
         Default
       </Chip>
-      <Chip
-        variant="soft"
-        color="primary"
-      >
-        <EmailIcon />
-        Default
-      </Chip>
-      <Chip>
-        <CheckIcon />
-        Default
-      </Chip>
-      <Chip
-        variant="bordered"
-        color="secondary"
-      >
+      <Chip {...props}>
         Default
         <CheckIcon />
       </Chip>

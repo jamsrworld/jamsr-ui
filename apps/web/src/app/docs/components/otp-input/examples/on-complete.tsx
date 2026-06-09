@@ -1,19 +1,17 @@
 "use client";
 
-import { toastManager } from "@/app/provider/toast";
 import { OtpInput } from "jamsrui/otp-input";
 
-export const OtpInputOnComplete = () => {
+export const OtpInputOnComplete = (props: OtpInput.Props) => {
+  const { maxLength = 4, ...rest } = props;
+  const handleComplete = (val: unknown) => {
+    console.log(`Completed: ${val}`);
+  };
   return (
     <OtpInput
-      maxLength={4}
-      onComplete={(value) => {
-        toastManager.add({
-          title: "OTP Completed",
-          description: `You entered: ${value}`,
-          type: "success",
-        });
-      }}
+      maxLength={maxLength}
+      onComplete={handleComplete}
+      {...rest}
     >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />

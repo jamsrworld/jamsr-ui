@@ -1,15 +1,10 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { IconButtonColors } from "./examples/colors";
 import { IconButtonDisabled } from "./examples/disabled";
 import { IconButtonLoading } from "./examples/loading";
-import { IconButtonRadius } from "./examples/radius";
-import { IconButtonSizes } from "./examples/sizes";
 import { IconButtonUsage } from "./examples/usage";
-import { IconButtonVariants } from "./examples/variants";
-import { IconButtonVariantsColors } from "./examples/variants-colors";
 
 const title = "IconButton";
 const description =
@@ -20,71 +15,62 @@ export const metadata: Metadata = {
   description,
 };
 
-const IconButton = () => {
+const iconButtonVariants = {
+  variant: {
+    options: ["solid", "bordered", "text", "light", "soft"],
+    defaultValue: "solid",
+  },
+  color: {
+    options: [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+    ],
+    defaultValue: "default",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
+const IconButtonPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <IconButtonUsage />
-      </CodeExample>
-      <CodeExample
+        variants={iconButtonVariants}
+        component={IconButtonUsage}
+      />
+      <CodeExampleV2
         isCentered
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-      >
-        <IconButtonDisabled />
-      </CodeExample>
-      <CodeExample
+        variants={iconButtonVariants}
+        component={IconButtonDisabled}
+      />
+      <CodeExampleV2
         isCentered
         title="Loading"
         url={resolvePath("loading.tsx")}
-      >
-        <IconButtonLoading />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Sizes"
-        url={resolvePath("sizes.tsx")}
-      >
-        <IconButtonSizes />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Radius"
-        url={resolvePath("radius.tsx")}
-      >
-        <IconButtonRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Colors"
-        url={resolvePath("colors.tsx")}
-      >
-        <IconButtonColors />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants Colors"
-        url={resolvePath("variants-colors.tsx")}
-      >
-        <IconButtonVariantsColors />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants"
-        url={resolvePath("variants.tsx")}
-      >
-        <IconButtonVariants />
-      </CodeExample>
+        variants={iconButtonVariants}
+        component={IconButtonLoading}
+      />
     </DocsPage>
   );
 };
 
-export default IconButton;
+export default IconButtonPage;

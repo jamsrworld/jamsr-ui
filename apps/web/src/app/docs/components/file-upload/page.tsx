@@ -1,4 +1,4 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
@@ -6,39 +6,38 @@ import { FileUploadAvatarUpload } from "./examples/avatar-upload";
 import { FileUploadListUpload } from "./examples/list-upload";
 import { FileUploadUsage } from "./examples/usage";
 
-export const metadata = {
-  title: "File Upload",
-  description: "File Upload",
-} satisfies Metadata;
+const title = "File Upload";
+const description = "A simple, hook-based file uploading utility.";
 
-const Page = () => {
+export const metadata: Metadata = {
+  title,
+  description,
+};
+
+const FileUploadPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
-      title={metadata.title}
-      description={metadata.description}
+      title={title}
+      description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <FileUploadUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        component={FileUploadUsage}
+      />
+      <CodeExampleV2
         title="Avatar Upload"
         url={resolvePath("avatar-upload.tsx")}
-      >
-        <FileUploadAvatarUpload />
-      </CodeExample>
-      <CodeExample
+        component={FileUploadAvatarUpload}
+      />
+      <CodeExampleV2
         title="List Upload"
         url={resolvePath("list-upload.tsx")}
-      >
-        <FileUploadListUpload />
-      </CodeExample>
+        component={FileUploadListUpload}
+      />
     </DocsPage>
   );
 };
 
-export default Page;
+export default FileUploadPage;

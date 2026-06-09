@@ -1,8 +1,14 @@
+"use client";
+
 import { Clipboard } from "jamsrui/clipboard";
 
-export const ClipboardUsage = () => {
+export const ClipboardUsage = (props: Clipboard.Props) => {
+  const { text = "Hello world!", ...rest } = props;
   return (
-    <Clipboard text="Hello world!">
+    <Clipboard
+      text={text}
+      {...rest}
+    >
       <Clipboard.Icon />
     </Clipboard>
   );

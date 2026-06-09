@@ -1,10 +1,12 @@
+"use client";
+
 import { ChevronUpIcon } from "@jamsrui/icons";
 import { Button } from "jamsrui/button";
 import { Menu } from "jamsrui/menu";
 
-export const MenuOffset = () => {
+export const MenuOffset = (props: Menu.Props) => {
   return (
-    <Menu>
+    <Menu {...props}>
       <Menu.Trigger
         render={
           <Button>

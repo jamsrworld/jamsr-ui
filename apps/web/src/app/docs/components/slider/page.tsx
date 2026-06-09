@@ -1,8 +1,8 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import SliderUsage from "./examples/usage";
+import { SliderUsage } from "./examples/usage";
 
 const title = "Slider";
 const description =
@@ -13,21 +13,29 @@ export const metadata: Metadata = {
   description,
 };
 
-const Slider = () => {
+const sliderVariants = {
+  orientation: {
+    options: ["horizontal", "vertical"],
+    defaultValue: "horizontal",
+  },
+};
+
+const SliderPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
+        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <SliderUsage />
-      </CodeExample>
+        variants={sliderVariants}
+        component={SliderUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Slider;
+export default SliderPage;

@@ -1,17 +1,11 @@
+"use client";
+
 import { LinearProgress } from "jamsrui/linear-progress";
 
-export const LinearProgressUsage = () => {
+export const LinearProgressUsage = (props: LinearProgress.Props) => {
   return (
     <div className="flex w-full flex-col gap-4">
-      <LinearProgress />
-      <LinearProgress
-        progress={20}
-        color="warning"
-      />
-      <LinearProgress
-        progress={80}
-        color="error"
-      />
+      <LinearProgress {...props} />
     </div>
   );
 };

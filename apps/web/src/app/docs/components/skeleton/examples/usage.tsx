@@ -1,20 +1,41 @@
-import { Skeleton } from "jamsrui/skeleton";
+"use client";
 
-export const SkeletonUsage = () => {
+import { Skeleton } from "jamsrui/skeleton";
+import React from "react";
+
+export const SkeletonUsage = (props: Record<string, unknown>) => {
+  const isLoading = props.isLoading === "true" || props.isLoading === undefined;
+  const disableAnimation = props.disableAnimation === "true";
   return (
-    <div className="w-[200px] space-y-5 p-4">
-      <Skeleton className="rounded-lg">
-        <div className="h-24 rounded-lg bg-surface" />
+    <div className="w-50 space-y-5 p-4">
+      <Skeleton
+        className="rounded-lg"
+        isLoading={isLoading}
+        disableAnimation={disableAnimation}
+      >
+        <div className="h-24 rounded-lg bg-default-300" />
       </Skeleton>
       <div className="space-y-3">
-        <Skeleton className="w-3/5 rounded-lg">
-          <div className="h-3 w-3/5 rounded-lg bg-surface" />
+        <Skeleton
+          className="w-3/5 rounded-lg"
+          isLoading={isLoading}
+          disableAnimation={disableAnimation}
+        >
+          <div className="h-3 rounded-lg bg-default-300" />
         </Skeleton>
-        <Skeleton className="w-4/5 rounded-lg">
-          <div className="h-3 w-4/5 rounded-lg bg-surface" />
+        <Skeleton
+          className="w-4/5 rounded-lg"
+          isLoading={isLoading}
+          disableAnimation={disableAnimation}
+        >
+          <div className="h-3 rounded-lg bg-default-300" />
         </Skeleton>
-        <Skeleton className="w-2/5 rounded-lg">
-          <div className="h-3 w-2/5 rounded-lg bg-surface" />
+        <Skeleton
+          className="w-2/5 rounded-lg"
+          isLoading={isLoading}
+          disableAnimation={disableAnimation}
+        >
+          <div className="h-3 rounded-lg bg-default-300" />
         </Skeleton>
       </div>
     </div>

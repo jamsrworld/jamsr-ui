@@ -5,13 +5,14 @@ import { ChevronUpIcon } from "@jamsrui/icons";
 import { Button } from "jamsrui/button";
 import { Menu } from "jamsrui/menu";
 
-export const MenuControlled = () => {
+export const MenuControlled = (props: Menu.Props) => {
   const { isOpen, onToggle, setIsOpen } = useDisclosure();
   return (
     <div className="flex items-center justify-center gap-4">
       <Menu
         open={isOpen}
         onOpenChange={setIsOpen}
+        {...props}
       >
         <Menu.Trigger
           render={

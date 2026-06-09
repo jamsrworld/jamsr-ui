@@ -1,4 +1,4 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
@@ -14,27 +14,36 @@ export const metadata: Metadata = {
   description,
 };
 
-const NumberInput = () => {
+const numberFieldVariants = {
+  isInvalid: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+};
+
+const NumberFieldPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
+        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <NumberFieldUsage />
-      </CodeExample>
-      <CodeExample
+        variants={numberFieldVariants}
+        component={NumberFieldUsage}
+      />
+      <CodeExampleV2
+        isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <NumberFieldControlled />
-      </CodeExample>
+        variants={numberFieldVariants}
+        component={NumberFieldControlled}
+      />
     </DocsPage>
   );
 };
 
-export default NumberInput;
+export default NumberFieldPage;

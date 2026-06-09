@@ -1,10 +1,14 @@
+"use client";
+
 import { OtpInput } from "jamsrui/otp-input";
 
-export const OtpInputDisabled = () => {
+export const OtpInputDisabled = (props: OtpInput.Props) => {
+  const { maxLength = 4, ...rest } = props;
   return (
     <OtpInput
-      maxLength={4}
       disabled
+      maxLength={maxLength}
+      {...rest}
     >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />

@@ -1,10 +1,15 @@
+"use client";
+
 import { Button } from "jamsrui/button";
 import { Dialog } from "jamsrui/dialog";
 import { Text } from "jamsrui/text";
 
-export const DialogCustomCloseButton = () => {
+export const DialogCustomCloseButton = (props: Dialog.Props) => {
   return (
-    <Dialog isBordered>
+    <Dialog
+      isBordered
+      {...props}
+    >
       <Dialog.Trigger render={<Button>Click Me!</Button>} />
       <Dialog.Content>
         <Dialog.Close color="danger" />

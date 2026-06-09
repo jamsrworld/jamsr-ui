@@ -6,7 +6,7 @@ import { PaginationState } from "@tanstack/react-table";
 import { useMemo, useState } from "react";
 import { COLUMNS, fetchData } from "./columns";
 
-export const DataGridServerSide = () => {
+export const DataGridServerSide = (props: Partial<DataGrid.Props>) => {
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 10,
@@ -29,7 +29,10 @@ export const DataGridServerSide = () => {
   });
 
   return (
-    <DataGrid table={table}>
+    <DataGrid
+      table={table}
+      {...props}
+    >
       <DataGrid.Table />
       <DataGrid.Pagination />
     </DataGrid>

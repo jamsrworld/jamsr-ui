@@ -1,10 +1,22 @@
-import { Table } from "jamsrui/table";
+"use client";
 
-export const TableStickyHeader = () => {
+import { Table } from "jamsrui/table";
+import React from "react";
+
+export const TableStickyHeader = (props: any) => {
+  const { allowHover, separateRows, isHeaderSticky, ...rest } = props;
+  const allowHoverBool = allowHover === "true";
+  const separateRowsBool = separateRows === "true";
+  const isHeaderStickyBool =
+    isHeaderSticky === "true" || isHeaderSticky === undefined;
+
   return (
     <Table
       aria-label="Example static collection table"
-      isHeaderSticky
+      allowHover={allowHoverBool}
+      separateRows={separateRowsBool}
+      isHeaderSticky={isHeaderStickyBool}
+      {...rest}
     >
       <Table.Header>
         <Table.Row>

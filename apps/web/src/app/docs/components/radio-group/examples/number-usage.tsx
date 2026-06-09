@@ -10,21 +10,22 @@ enum Gender {
   FEMALE = 2,
 }
 
-export const RadioNumberUsage = () => {
+export const RadioNumberUsage = (props: Partial<RadioGroup.Props>) => {
   const [gender, setGender] = useState<Gender>(Gender.MALE);
   return (
     <RadioGroup
       value={gender}
       onValueChange={setGender}
+      {...props}
     >
-      <Label>Select your favorite city</Label>
+      <Label>Select Gender</Label>
       <Field orientation="horizontal">
         <Radio value={Gender.MALE} />
-        <Field.Label>Buenos Aires</Field.Label>
+        <Field.Label>Male</Field.Label>
       </Field>
       <Field orientation="horizontal">
         <Radio value={Gender.FEMALE} />
-        <Field.Label>Sydney</Field.Label>
+        <Field.Label>Female</Field.Label>
       </Field>
     </RadioGroup>
   );

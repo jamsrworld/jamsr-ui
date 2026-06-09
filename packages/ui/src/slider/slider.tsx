@@ -24,8 +24,8 @@ const useSliderContext = () => {
 };
 
 export const Slider = (props: Slider.Props) => {
-  const { orientation, isDisabled, className, ...rest } = props;
-  const styles = sliderStyles({ orientation, isDisabled });
+  const { orientation, className, ...rest } = props;
+  const styles = sliderStyles({ orientation });
   const value = useMemo(() => ({ styles }), [styles]);
   return (
     <SliderContext value={value}>

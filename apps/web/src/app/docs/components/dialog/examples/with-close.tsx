@@ -1,10 +1,12 @@
+"use client";
+
 import { Button } from "jamsrui/button";
 import { Dialog } from "jamsrui/dialog";
 import { Text } from "jamsrui/text";
 
-export const DialogWithClose = () => {
+export const DialogWithClose = (props: Dialog.Props) => {
   return (
-    <Dialog>
+    <Dialog {...props}>
       <Dialog.Trigger render={<Button>Open Me</Button>} />
       <Dialog.Content>
         <Dialog.Header>

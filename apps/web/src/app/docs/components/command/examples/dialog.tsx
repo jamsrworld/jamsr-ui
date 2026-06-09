@@ -1,7 +1,7 @@
 "use client";
 
 import { Command } from "jamsrui/command";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Calculator,
   Calendar,
@@ -11,7 +11,9 @@ import {
   User,
 } from "lucide-react";
 
-export const CommandDialogDemo = () => {
+export const CommandDialogDemo = (
+  props: React.ComponentProps<typeof Command.Dialog>,
+) => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -37,6 +39,7 @@ export const CommandDialogDemo = () => {
       <Command.Dialog
         open={open}
         onOpenChange={setOpen}
+        {...props}
       >
         <Command.Input placeholder="Type a command or search..." />
         <Command.List>

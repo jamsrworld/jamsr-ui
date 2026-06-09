@@ -1,5 +1,8 @@
+"use client";
+
 import { Label } from "jamsrui/label";
 import { Select } from "jamsrui/select";
+import React from "react";
 
 const apples = [
   { label: "Gala", value: "gala" },
@@ -9,11 +12,15 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectDisabled = () => {
+export const SelectDisabled = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
+  const { disabled = true, ...rest } = props;
   return (
     <Select
       items={apples}
-      disabled
+      disabled={disabled}
+      {...rest}
     >
       <Label>Fruit</Label>
       <Select.Trigger className="min-w-40" />

@@ -1,14 +1,16 @@
+"use client";
+
 import { AlertDialog } from "jamsrui/alert-dialog";
 import { Button } from "jamsrui/button";
 
-export const AlertDialogUsage = () => {
+export const AlertDialogUsage = (props: AlertDialog.Props) => {
   return (
-    <AlertDialog>
+    <AlertDialog {...props}>
       <AlertDialog.Trigger render={<Button>Click to delete!</Button>} />
       <AlertDialog.Content>
         <AlertDialog.Title>Are you sure?</AlertDialog.Title>
         <AlertDialog.Description>
-          You won't be able to revert this!
+          You won&apos;t be able to revert this!
         </AlertDialog.Description>
         <AlertDialog.Footer>
           <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>

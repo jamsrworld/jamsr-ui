@@ -3,7 +3,7 @@
 import { Description } from "jamsrui/description";
 import { Label } from "jamsrui/label";
 import { Select } from "jamsrui/select";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const apples = [
   { label: "Gala", value: "gala" },
@@ -13,14 +13,17 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectControlled = () => {
-  const [value, setValue] = useState<string>("apple");
+export const SelectControlled = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
+  const [value, setValue] = useState<string | null>("gala");
   return (
     <div className="flex flex-col gap-2">
       <Select
         items={apples}
         value={value}
-        onValueChange={setValue}
+        onValueChange={(val) => setValue(val as string | null)}
+        {...props}
       >
         <Label>Fruit</Label>
         <Select.Trigger className="min-w-40" />

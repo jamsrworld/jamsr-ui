@@ -1,16 +1,18 @@
+"use client";
+
 import { AvatarIcon } from "@jamsrui/icons";
 import { Avatar } from "jamsrui/avatar";
 
-export const AvatarFallbacks = () => {
+export const AvatarFallbacks = (props: Avatar.Props) => {
   return (
     <div className="flex flex-wrap gap-4">
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Fallback>JD</Avatar.Fallback>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Fallback>A</Avatar.Fallback>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Fallback>
           <AvatarIcon />
         </Avatar.Fallback>

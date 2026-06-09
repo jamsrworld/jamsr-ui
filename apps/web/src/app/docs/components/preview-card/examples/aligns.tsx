@@ -1,14 +1,19 @@
+"use client";
+
 import { Avatar } from "jamsrui/avatar";
 import { Button } from "jamsrui/button";
 import { PreviewCard } from "jamsrui/preview-card";
 import { Text } from "jamsrui/text";
 
-export const PreviewCardAligns = () => {
-  const aligns: PreviewCard.Positioner["align"][] = ["start", "center", "end"];
+export const PreviewCardAligns = (props: PreviewCard.Props) => {
+  const aligns: ("start" | "center" | "end")[] = ["start", "center", "end"];
   return (
     <div className="flex flex-wrap gap-4">
       {aligns.map((align) => (
-        <PreviewCard key={align}>
+        <PreviewCard
+          key={align}
+          {...props}
+        >
           <PreviewCard.Trigger render={<Button>{align}</Button>} />
           <PreviewCard.Content
             className="w-64"

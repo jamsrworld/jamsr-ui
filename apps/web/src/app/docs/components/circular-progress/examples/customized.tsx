@@ -2,7 +2,7 @@
 
 import { CircularProgress } from "jamsrui/circular-progress";
 
-export const CircularProgressCustomized = () => {
+export const CircularProgressCustomized = (props: CircularProgress.Props) => {
   return (
     <div className="flex flex-wrap gap-4">
       <CircularProgress
@@ -10,6 +10,7 @@ export const CircularProgressCustomized = () => {
         size={100}
         strokeWidth={10}
         trackWidth={4}
+        {...props}
       />
       <CircularProgress
         isIntermediate={false}
@@ -18,6 +19,7 @@ export const CircularProgressCustomized = () => {
         progressWidth={16}
         value={30}
         startAngle={180}
+        {...props}
       >
         <CircularProgress.Track />
         <CircularProgress.Progress />

@@ -1,9 +1,12 @@
+"use client";
+
 import { Card } from "jamsrui/card";
 import { Collapsible } from "jamsrui/collapsible";
+import { type ComponentProps } from "react";
 
-export const CollapsibleUsage = () => {
+export const CollapsibleUsage = (props: ComponentProps<typeof Collapsible>) => {
   return (
-    <Collapsible>
+    <Collapsible {...props}>
       <Card>
         <Collapsible.Trigger>
           <Card.Header className="pb-3">

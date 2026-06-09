@@ -1,16 +1,17 @@
+"use client";
+
 import { ChevronUpIcon } from "@jamsrui/icons";
 import { Button } from "jamsrui/button";
 import { Menu } from "jamsrui/menu";
 
-const MenuUsage = (props: Pick<Menu.Props, "backdrop">) => {
-  const { backdrop } = props;
+export const MenuBackdrop = (props: Menu.Props) => {
   return (
-    <Menu backdrop={backdrop}>
+    <Menu {...props}>
       <Menu.Trigger
         render={
           <Button>
             <ChevronUpIcon />
-            {backdrop ?? "Open Me"}
+            Open Me
           </Button>
         }
       />
@@ -29,15 +30,5 @@ const MenuUsage = (props: Pick<Menu.Props, "backdrop">) => {
         </Menu.Item>
       </Menu.Content>
     </Menu>
-  );
-};
-
-export const MenuBackdrop = () => {
-  return (
-    <div className="flex justify-center gap-4">
-      <MenuUsage backdrop="transparent" />
-      <MenuUsage backdrop="opaque" />
-      <MenuUsage backdrop="blur" />
-    </div>
   );
 };

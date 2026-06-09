@@ -1,11 +1,13 @@
+"use client";
+
 import { Avatar } from "jamsrui/avatar";
 import { Link } from "jamsrui/link";
 import { PreviewCard } from "jamsrui/preview-card";
 import { Text } from "jamsrui/text";
 
-export const PreviewCardUsage = () => {
+export const PreviewCardUsage = (props: PreviewCard.Props) => {
   return (
-    <PreviewCard>
+    <PreviewCard {...props}>
       <PreviewCard.Trigger render={<Link href="#">@base-ui</Link>} />
       <PreviewCard.Content className="w-80 p-4">
         <div className="flex justify-between space-x-4">

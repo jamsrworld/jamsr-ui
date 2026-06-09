@@ -1,8 +1,7 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { LinearProgressColors } from "./examples/colors";
 import { LinearProgressControlled } from "./examples/controlled";
 import { LinearProgressUsage } from "./examples/usage";
 
@@ -15,36 +14,44 @@ export const metadata: Metadata = {
   description,
 };
 
-const LinearProgress = () => {
+const linearProgressVariants = {
+  color: {
+    options: ["primary", "secondary", "success", "warning", "error"],
+    defaultValue: "primary",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "sm",
+  },
+  isIntermediate: {
+    options: ["true", "false"],
+    defaultValue: "true",
+  },
+};
+
+const LinearProgressPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
+      <CodeExampleV2
         isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <LinearProgressUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Colors"
-        url={resolvePath("colors.tsx")}
-      >
-        <LinearProgressColors />
-      </CodeExample>
-      <CodeExample
+        variants={linearProgressVariants}
+        component={LinearProgressUsage}
+      />
+      <CodeExampleV2
         isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <LinearProgressControlled />
-      </CodeExample>
+        variants={linearProgressVariants}
+        component={LinearProgressControlled}
+      />
     </DocsPage>
   );
 };
 
-export default LinearProgress;
+export default LinearProgressPage;

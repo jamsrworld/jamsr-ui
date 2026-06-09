@@ -1,21 +1,26 @@
+"use client";
+
 import { Avatar } from "jamsrui/avatar";
 import { Button } from "jamsrui/button";
 import { PreviewCard } from "jamsrui/preview-card";
 import { Text } from "jamsrui/text";
 
-export const PreviewCardSides = () => {
-  const sides: PreviewCard.Positioner["side"][] = [
-    "top",
-    "right",
-    "bottom",
-    "left",
-    "inline-end",
-    "inline-start",
-  ];
+export const PreviewCardSides = (props: PreviewCard.Props) => {
+  const sides: (
+    | "top"
+    | "right"
+    | "bottom"
+    | "left"
+    | "inline-end"
+    | "inline-start"
+  )[] = ["top", "right", "bottom", "left", "inline-end", "inline-start"];
   return (
     <div className="flex flex-wrap gap-4">
       {sides.map((side) => (
-        <PreviewCard key={side}>
+        <PreviewCard
+          key={side}
+          {...props}
+        >
           <PreviewCard.Trigger render={<Button>{side}</Button>} />
           <PreviewCard.Content
             className="w-64"

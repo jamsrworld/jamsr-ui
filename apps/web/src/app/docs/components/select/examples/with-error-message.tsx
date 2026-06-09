@@ -1,5 +1,8 @@
+"use client";
+
 import { Field } from "jamsrui/field";
 import { Select } from "jamsrui/select";
+import React from "react";
 
 const apples = [
   { label: "Gala", value: "gala" },
@@ -9,12 +12,16 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectWithErrorMessage = () => {
+export const SelectWithErrorMessage = (
+  props: Partial<React.ComponentProps<typeof Select>>,
+) => {
+  const { isInvalid = true, ...rest } = props;
   return (
     <Field>
       <Select
         items={apples}
-        isInvalid
+        isInvalid={isInvalid}
+        {...rest}
       >
         <Field.Label>Fruit</Field.Label>
         <Select.Trigger className="min-w-40" />

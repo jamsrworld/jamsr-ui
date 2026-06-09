@@ -1,12 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { AvatarBordered } from "./examples/bordered";
-import { AvatarColors } from "./examples/colors";
 import { AvatarFallbacks } from "./examples/fallbacks";
 import { AvatarIndicatorExample } from "./examples/indicator";
-import { AvatarRadius } from "./examples/radius";
 import { AvatarUsage } from "./examples/usage";
 
 const title = "Avatar";
@@ -18,57 +15,59 @@ export const metadata: Metadata = {
   description,
 };
 
-const Avatar = () => {
+const avatarVariants = {
+  size: {
+    options: ["xs", "sm", "md", "lg", "xl"],
+    defaultValue: "md",
+  },
+  color: {
+    options: [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+    ],
+    defaultValue: "default",
+  },
+  isBordered: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "full",
+  },
+};
+
+const AvatarPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
       title={title}
       description={description}
     >
-      <CodeExample
-        isCentered
+      <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-      >
-        <AvatarUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Radius"
-        url={resolvePath("radius.tsx")}
-      >
-        <AvatarRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Colors"
-        url={resolvePath("colors.tsx")}
-      >
-        <AvatarColors />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={avatarVariants}
+        component={AvatarUsage}
+      />
+      <CodeExampleV2
         title="Fallbacks"
         url={resolvePath("fallbacks.tsx")}
-      >
-        <AvatarFallbacks />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Bordered"
-        url={resolvePath("bordered.tsx")}
-      >
-        <AvatarBordered />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={avatarVariants}
+        component={AvatarFallbacks}
+      />
+      <CodeExampleV2
         title="Indicator"
         url={resolvePath("indicator.tsx")}
-      >
-        <AvatarIndicatorExample />
-      </CodeExample>
+        variants={avatarVariants}
+        component={AvatarIndicatorExample}
+      />
     </DocsPage>
   );
 };
 
-export default Avatar;
+export default AvatarPage;

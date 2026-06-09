@@ -1,10 +1,15 @@
+"use client";
+
 import { Alert } from "jamsrui/alert";
 import { EmailIcon } from "@jamsrui/icons";
 
-export const AlertCustomIcon = () => {
+export const AlertCustomIcon = (props: Alert.Props) => {
   return (
     <div className="flex flex-col w-full gap-4">
-      <Alert status="warning">
+      <Alert
+        status="warning"
+        {...props}
+      >
         <Alert.Icon>
           <EmailIcon />
         </Alert.Icon>

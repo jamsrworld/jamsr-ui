@@ -1,4 +1,4 @@
-import { tv } from "tailwind-variants";
+import { tv, VariantProps } from "tailwind-variants";
 
 export const alertStyles = tv({
   slots: {
@@ -151,3 +151,5 @@ export const alertStyles = tv({
     variant: "solid",
   },
 });
+
+export type AlertVariants = VariantProps<typeof alertStyles>;

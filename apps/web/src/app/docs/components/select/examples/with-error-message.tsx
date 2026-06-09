@@ -13,7 +13,7 @@ const apples = [
 ];
 
 export const SelectWithErrorMessage = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   return (
     <Field invalid>

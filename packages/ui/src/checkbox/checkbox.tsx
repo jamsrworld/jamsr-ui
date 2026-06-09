@@ -87,3 +87,7 @@ export const CheckboxGroupRoot = (props: CheckboxGroupPrimitive.Props) => {
     />
   );
 };
+
+export namespace CheckboxGroupRoot {
+  export interface Props extends CheckboxGroupPrimitive.Props {}
+}

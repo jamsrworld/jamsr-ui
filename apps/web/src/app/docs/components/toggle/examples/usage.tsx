@@ -4,7 +4,7 @@ import { Toggle } from "ui/toggle";
 import { Bold, Italic, Underline } from "lucide-react";
 import React from "react";
 
-export const ToggleUsage = (props: React.ComponentProps<typeof Toggle>) => {
+export const ToggleUsage = (props: Toggle.Props) => {
   return (
     <div className="flex items-center gap-2">
       <Toggle {...props}>

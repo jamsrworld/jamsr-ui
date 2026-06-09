@@ -2,9 +2,8 @@
 
 import { Card } from "ui/card";
 import { Collapsible } from "ui/collapsible";
-import { type ComponentProps } from "react";
 
-export const CollapsibleUsage = (props: ComponentProps<typeof Collapsible>) => {
+export const CollapsibleUsage = (props: Collapsible.Props) => {
   return (
     <Collapsible {...props}>
       <Card>

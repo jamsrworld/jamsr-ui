@@ -5,7 +5,7 @@ import { Switch } from "ui/switch";
 import React from "react";
 
 export const SwitchDescription = (
-  props: React.ComponentProps<typeof Switch>,
+  props: Switch.Props,
 ) => {
   return (
     <Field orientation="horizontal">

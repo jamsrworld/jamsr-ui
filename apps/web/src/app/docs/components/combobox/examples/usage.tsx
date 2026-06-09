@@ -27,7 +27,7 @@ const fruits: Fruit[] = [
 ];
 
 export const ComboboxUsage = (
-  props: Partial<React.ComponentProps<typeof Combobox>>,
+  props: Partial<Combobox.Props>,
 ) => {
   return (
     <div className="w-full max-w-xs">

@@ -4,7 +4,7 @@ import { TimeField, TimeInput, TimeSegment } from "ui/time-field";
 import React from "react";
 
 export const TimeFieldUsage = (
-  props: React.ComponentProps<typeof TimeField>,
+  props: TimeField.Props,
 ) => {
   return (
     <TimeField {...props}>

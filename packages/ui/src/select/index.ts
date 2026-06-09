@@ -26,7 +26,7 @@ export const Select = Object.assign(SelectRoot, {
 export namespace Select {
   export type Variants = VariantProps<typeof selectStyles>;
   export type Props<
-    Value,
+    Value = unknown,
     Multiple extends boolean | undefined = false,
   > = SelectRoot.Props<Value, Multiple>;
 }

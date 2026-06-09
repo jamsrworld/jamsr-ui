@@ -3,7 +3,7 @@
 import { Meter } from "ui/meter";
 import React from "react";
 
-export const MeterUsage = (props: React.ComponentProps<typeof Meter>) => {
+export const MeterUsage = (props: Meter.Props) => {
   const { value = 24, ...rest } = props;
   return (
     <Meter

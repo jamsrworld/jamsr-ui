@@ -13,7 +13,7 @@ const apples = [
 ];
 
 export const SelectPlaceholder = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   return (
     <Field>

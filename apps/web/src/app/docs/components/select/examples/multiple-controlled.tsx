@@ -32,7 +32,7 @@ function renderValue(value: Language[]) {
 }
 
 export const SelectMultipleControlled = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   const [value, setValue] = useState<Language[]>([]);
   const { multiple = true, ...rest } = props;

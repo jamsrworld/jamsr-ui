@@ -3,7 +3,7 @@
 import { Slider } from "ui/slider";
 import React from "react";
 
-export const SliderUsage = (props: React.ComponentProps<typeof Slider>) => {
+export const SliderUsage = (props: Slider.Props) => {
   const isVertical = props.orientation === "vertical";
   return (
     <div className="flex items-center justify-center p-4 w-72 h-64">

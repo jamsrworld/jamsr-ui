@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import { Tabs } from "ui/tabs";
 import React from "react";
 
-export const TabWithIcons = (props: React.ComponentProps<typeof Tabs>) => {
+export const TabWithIcons = (props: Tabs.Props) => {
   return (
     <div className="flex flex-wrap gap-4">
       <Tabs

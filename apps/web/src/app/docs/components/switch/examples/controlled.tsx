@@ -5,7 +5,7 @@ import { Switch } from "ui/switch";
 import React, { useState } from "react";
 
 export const SwitchControlled = (
-  props: React.ComponentProps<typeof Switch>,
+  props: Switch.Props,
 ) => {
   const [isChecked, setIsChecked] = useState(false);
   return (

@@ -4,7 +4,7 @@ import { DateField } from "ui/date-field";
 import React from "react";
 
 export const DateInputUsage = (
-  props: React.ComponentProps<typeof DateField>,
+  props: DateField.Props,
 ) => {
   return (
     <DateField {...props}>

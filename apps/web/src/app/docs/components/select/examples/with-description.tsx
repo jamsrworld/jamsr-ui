@@ -14,7 +14,7 @@ const apples = [
 ];
 
 export const SelectWithDescription = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   return (
     <Field>

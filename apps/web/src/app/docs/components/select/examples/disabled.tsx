@@ -13,7 +13,7 @@ const apples = [
 ];
 
 export const SelectDisabled = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   const { disabled = true, ...rest } = props;
   return (

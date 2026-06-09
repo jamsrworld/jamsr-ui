@@ -3,7 +3,7 @@
 import { Progress } from "ui/progress";
 import React from "react";
 
-export const ProgressUsage = (props: React.ComponentProps<typeof Progress>) => {
+export const ProgressUsage = (props: Progress.Props) => {
   const { value = 24, ...rest } = props;
   return (
     <Progress

@@ -6,7 +6,7 @@ import { Text } from "ui/text";
 import React, { useId, useState } from "react";
 
 export const CheckboxGroupUsage = (
-  props: React.ComponentProps<typeof CheckboxGroup>,
+  props: CheckboxGroup.Props,
 ) => {
   const [value, setValue] = useState<string[]>([]);
   const id = useId();

@@ -4,7 +4,7 @@ import { Separator } from "ui/separator";
 import React from "react";
 
 export const SeparatorUsage = (
-  props: React.ComponentProps<typeof Separator>,
+  props: Separator.Props,
 ) => {
   return (
     <div className="flex flex-col gap-2 p-4 w-72">

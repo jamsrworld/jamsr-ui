@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import React from "react";
 
-export const ToolbarUsage = (props: React.ComponentProps<typeof Toolbar>) => {
+export const ToolbarUsage = (props: Toolbar.Props) => {
   const isVertical = props.orientation === "vertical";
   const groupClass = isVertical ? "flex-col" : "";
 

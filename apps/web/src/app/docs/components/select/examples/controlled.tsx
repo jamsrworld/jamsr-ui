@@ -13,7 +13,7 @@ const apples = [
 ];
 
 export const SelectControlled = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   const [value, setValue] = useState<string | null>("gala");
   return (

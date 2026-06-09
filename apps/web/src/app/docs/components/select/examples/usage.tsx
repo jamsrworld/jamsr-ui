@@ -12,7 +12,7 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectUsage = (props: React.ComponentProps<typeof Select>) => {
+export const SelectUsage = (props: Select.Props) => {
   return (
     <Field>
       <Select

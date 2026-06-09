@@ -3,7 +3,7 @@
 import { Tabs } from "ui/tabs";
 import React from "react";
 
-export const TabDisabled = (props: React.ComponentProps<typeof Tabs>) => {
+export const TabDisabled = (props: Tabs.Props) => {
   return (
     <div className="flex flex-wrap gap-4">
       <Tabs

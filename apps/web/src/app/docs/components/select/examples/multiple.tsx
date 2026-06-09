@@ -31,7 +31,7 @@ function renderValue(value: Language[]) {
 }
 
 export const SelectMultiple = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   const { multiple = true, ...rest } = props;
   return (

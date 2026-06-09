@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 export const CommandDialogDemo = (
-  props: React.ComponentProps<typeof Command.Dialog>,
+  props: Command.Dialog,
 ) => {
   const [open, setOpen] = useState(false);
 

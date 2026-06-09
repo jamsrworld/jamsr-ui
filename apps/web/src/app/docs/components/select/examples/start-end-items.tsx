@@ -6,7 +6,7 @@ import { Select } from "ui/select";
 import React from "react";
 
 export const SelectStartEndItems = (
-  props: Partial<React.ComponentProps<typeof Select>>,
+  props: Partial<Select.Props>,
 ) => {
   return (
     <Field>

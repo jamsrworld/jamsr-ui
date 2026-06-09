@@ -1,5 +1,7 @@
 import { tv } from "tailwind-variants";
 
+import type { VariantProps } from "tailwind-variants";
+
 export const accordionStyles = tv({
   slots: {
     root: "flex flex-col",
@@ -56,3 +58,5 @@ export const accordionStyles = tv({
     radius: "md",
   },
 });
+
+export type AccordionVariants = VariantProps<typeof accordionStyles>;

@@ -7,7 +7,6 @@ export const TextAreaUsage = (props: TextArea.Props) => {
     <TextArea
       {...props}
       placeholder="Enter your name"
-      rows={4}
     />
   );
 };

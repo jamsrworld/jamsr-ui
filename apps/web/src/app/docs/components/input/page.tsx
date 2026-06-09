@@ -1,6 +1,8 @@
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Input } from "jamsrui/input";
 import { Metadata } from "next";
 import { InputControlled } from "./examples/controlled";
 import { InputDisabled } from "./examples/disabled";
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const inputVariants = {
+const InputVariants: VariantOptions<Input.Variants> = {
   variant: {
     options: ["solid", "bordered"],
     defaultValue: "solid",
@@ -36,7 +38,7 @@ const inputVariants = {
   },
 };
 
-const Input = () => {
+const InputPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
@@ -46,59 +48,59 @@ const Input = () => {
       <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputUsage}
       />
       <CodeExampleV2
         title="With Label"
         url={resolvePath("with-label.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputWithLabel}
       />
       <CodeExampleV2
         title="With Description"
         url={resolvePath("with-description.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputWithDescription}
       />
       <CodeExampleV2
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputControlled}
       />
       <CodeExampleV2
         title="Error State"
         url={resolvePath("error-state.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputErrorState}
       />
       <CodeExampleV2
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputDisabled}
       />
       <CodeExampleV2
         title="Prefix & Suffix"
         url={resolvePath("prefix-suffix.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputPrefixSuffix}
       />
       <CodeExampleV2
         title="With Icon"
         url={resolvePath("with-icon.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputWithIcon}
       />
       <CodeExampleV2
         title="Password Toggle"
         url={resolvePath("password-toggle.tsx")}
-        variants={inputVariants}
+        variants={InputVariants}
         component={InputPasswordToggle}
       />
     </DocsPage>
   );
 };
 
-export default Input;
+export default InputPage;

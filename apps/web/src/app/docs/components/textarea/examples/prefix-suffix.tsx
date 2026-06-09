@@ -3,7 +3,6 @@
 import { Field } from "jamsrui/field";
 import { type Input } from "jamsrui/input";
 import { InputGroup } from "jamsrui/input-group";
-import { TextArea } from "jamsrui/textarea";
 
 export const TextAreaPrefixSuffix = (props: Input.Variants) => {
   return (

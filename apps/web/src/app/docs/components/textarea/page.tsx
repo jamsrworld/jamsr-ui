@@ -10,6 +10,8 @@ import { TextAreaUsage } from "./examples/usage";
 import { TextAreaWithDescription } from "./examples/with-description";
 import { TextAreaWithIcon } from "./examples/with-icon";
 import { TextAreaWithLabel } from "./examples/with-label";
+import { VariantOptions } from "@/types";
+import { TextArea } from "jamsrui/textarea";
 
 const title = "TextArea";
 const description =
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const textAreaVariants = {
+const TextAreaVariants: VariantOptions<TextArea.Variants> = {
   variant: {
     options: ["solid", "bordered"],
     defaultValue: "solid",
@@ -35,7 +37,7 @@ const textAreaVariants = {
   },
 };
 
-const TextArea = () => {
+const TextAreaPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
     <DocsPage
@@ -45,53 +47,53 @@ const TextArea = () => {
       <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaUsage}
       />
       <CodeExampleV2
         title="With Label"
         url={resolvePath("with-label.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaWithLabel}
       />
       <CodeExampleV2
         title="With Description"
         url={resolvePath("with-description.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaWithDescription}
       />
       <CodeExampleV2
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaControlled}
       />
       <CodeExampleV2
         title="Error State"
         url={resolvePath("error-state.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaErrorState}
       />
       <CodeExampleV2
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaDisabled}
       />
       <CodeExampleV2
         title="Prefix & Suffix"
         url={resolvePath("prefix-suffix.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaPrefixSuffix}
       />
       <CodeExampleV2
         title="With Icon"
         url={resolvePath("with-icon.tsx")}
-        variants={textAreaVariants}
+        variants={TextAreaVariants}
         component={TextAreaWithIcon}
       />
     </DocsPage>
   );
 };
 
-export default TextArea;
+export default TextAreaPage;

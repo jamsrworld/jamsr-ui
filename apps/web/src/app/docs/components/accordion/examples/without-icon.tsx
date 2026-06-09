@@ -1,8 +1,13 @@
+"use client";
+
 import { Accordion } from "jamsrui/accordion";
 
-export const AccordionWithoutIcon = () => {
+export const AccordionWithoutIcon = (props: Accordion.Props) => {
   return (
-    <Accordion variant="splitted">
+    <Accordion
+      {...props}
+      className="w-full"
+    >
       <Accordion.Item>
         <Accordion.Trigger>Accordion 1</Accordion.Trigger>
         <Accordion.Content>I am the accordion content</Accordion.Content>

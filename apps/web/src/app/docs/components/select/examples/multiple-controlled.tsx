@@ -31,9 +31,7 @@ function renderValue(value: Language[]) {
   return firstLanguage + additionalLanguages;
 }
 
-export const SelectMultipleControlled = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectMultipleControlled = (props: Partial<Select.Props>) => {
   const [value, setValue] = useState<Language[]>([]);
   const { multiple = true, ...rest } = props;
   return (

@@ -4,7 +4,6 @@ import { ratingStyles } from "./styles";
 
 import type { VariantProps } from "tailwind-variants";
 
-
 type RatingVariants = VariantProps<typeof ratingStyles>;
 
 export const Rating = (props: Rating.Props) => {

@@ -3,9 +3,7 @@
 import { Separator } from "ui/separator";
 import React from "react";
 
-export const SeparatorUsage = (
-  props: Separator.Props,
-) => {
+export const SeparatorUsage = (props: Separator.Props) => {
   return (
     <div className="flex flex-col gap-2 p-4 w-72">
       <div className="text-sm font-semibold">Jamsr UI</div>

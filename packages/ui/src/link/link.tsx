@@ -4,7 +4,6 @@ import { linkStyles } from "./styles";
 
 import type { VariantProps } from "tailwind-variants";
 
-
 type LinkVariantProps = VariantProps<typeof linkStyles>;
 
 export const Link = (props: Link.Props) => {

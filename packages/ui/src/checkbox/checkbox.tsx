@@ -4,6 +4,7 @@ import { createContext, use, useMemo } from "react";
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox-group";
+import { dataAttr } from "@jamsrui/utils";
 import { cn } from "tailwind-variants";
 
 import { checkboxStyles } from "./styles";
@@ -31,15 +32,17 @@ export const Checkbox = (props: Checkbox.Props) => {
     isInvalid,
     className,
     children = <CheckboxIndicator />,
+    variant,
     ...restProps
   } = props;
-  const styles = checkboxStyles({ size, radius, isInvalid });
+  const styles = checkboxStyles({ size, radius, variant });
   const value = useMemo(() => ({ styles }), [styles]);
   return (
     <CheckboxContext value={value}>
       <CheckboxPrimitive.Root
         {...restProps}
         className={styles.root({ className: cn(className) })}
+        data-invalid={dataAttr(isInvalid)}
       >
         {children}
       </CheckboxPrimitive.Root>
@@ -49,7 +52,9 @@ export const Checkbox = (props: Checkbox.Props) => {
 
 export namespace Checkbox {
   export interface Props
-    extends CheckboxPrimitive.Root.Props, CheckboxVariants {}
+    extends CheckboxPrimitive.Root.Props, CheckboxVariants {
+    isInvalid?: boolean;
+  }
 }
 
 export const CheckboxIndicator = (props: CheckboxPrimitive.Indicator.Props) => {
@@ -83,7 +88,7 @@ export const CheckboxGroupRoot = (props: CheckboxGroupPrimitive.Props) => {
   return (
     <CheckboxGroupPrimitive
       {...props}
-      className={cn("flex flex-col items-start gap-1", props.className)}
+      className={cn("flex flex-col items-start gap-2", props.className)}
     />
   );
 };

@@ -12,9 +12,7 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectWithErrorMessage = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectWithErrorMessage = (props: Partial<Select.Props>) => {
   return (
     <Field invalid>
       <Select

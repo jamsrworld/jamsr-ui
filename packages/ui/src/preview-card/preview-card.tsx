@@ -38,12 +38,15 @@ export const PreviewCard = (props: PreviewCard.Props) => {
 };
 
 export namespace PreviewCard {
-  export interface Props extends PreviewCardPrimitive.Root.Props, PreviewCardVariants {
+  export interface Props
+    extends PreviewCardPrimitive.Root.Props, PreviewCardVariants {
     showArrow?: boolean;
   }
 }
 
-export const PreviewCardTrigger = (props: PreviewCardPrimitive.Trigger.Props) => {
+export const PreviewCardTrigger = (
+  props: PreviewCardPrimitive.Trigger.Props,
+) => {
   return <PreviewCardPrimitive.Trigger {...props} />;
 };
 

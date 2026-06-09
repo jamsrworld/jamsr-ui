@@ -30,9 +30,7 @@ function renderValue(value: Language[]) {
   return firstLanguage + additionalLanguages;
 }
 
-export const SelectMultiple = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectMultiple = (props: Partial<Select.Props>) => {
   const { multiple = true, ...rest } = props;
   return (
     <Field>

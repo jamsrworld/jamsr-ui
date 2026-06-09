@@ -13,9 +13,7 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectWithDescription = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectWithDescription = (props: Partial<Select.Props>) => {
   return (
     <Field>
       <Field.Label>Fruit</Field.Label>

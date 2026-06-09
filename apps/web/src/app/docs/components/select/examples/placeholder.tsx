@@ -12,9 +12,7 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectPlaceholder = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectPlaceholder = (props: Partial<Select.Props>) => {
   return (
     <Field>
       <Field.Label>Fruit</Field.Label>

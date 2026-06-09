@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 const selectVariants: VariantOptions<Select.Variants> = {
   variant: {
     options: ["solid", "bordered"],
-    defaultValue: "bordered",
+    defaultValue: "solid",
   },
   size: {
     options: ["sm", "md", "lg"],

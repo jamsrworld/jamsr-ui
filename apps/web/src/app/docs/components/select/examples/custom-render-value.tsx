@@ -233,9 +233,7 @@ function renderValue(value?: string) {
   );
 }
 
-export const SelectCustomRenderValue = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectCustomRenderValue = (props: Partial<Select.Props>) => {
   const { size = "lg", ...rest } = props;
   return (
     <Select

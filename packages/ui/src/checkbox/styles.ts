@@ -10,6 +10,7 @@ export const checkboxStyles = tv({
       "shrink-0",
       "relative appearance-none",
       "data-disabled:status-disabled data-pressed:scale-90 transition-all duration-300",
+      "data-invalid:data-checked:bg-danger",
     ],
     input:
       "absolute opacity-[0.0001] cursor-interactive disabled:cursor-disabled inset-0 z-1",
@@ -28,11 +29,6 @@ export const checkboxStyles = tv({
         root: "size-5",
       },
     },
-    isInvalid: {
-      true: {
-        root: "border-danger! data-checked:bg-danger",
-      },
-    },
     radius: {
       none: { root: "rounded-none" },
       sm: { root: "rounded-sm" },
@@ -45,10 +41,14 @@ export const checkboxStyles = tv({
         root: [
           "border-default data-hovered:border-default-hover",
           "border data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground",
+          "data-invalid:border-danger",
         ],
       },
       solid: {
-        root: "bg-surface data-hovered:bg-surface/90 data-checked:bg-primary",
+        root: [
+          "bg-surface data-hovered:bg-surface/90 data-checked:bg-primary",
+          "data-invalid:outline data-invalid:outline-danger ",
+        ],
       },
     },
   },

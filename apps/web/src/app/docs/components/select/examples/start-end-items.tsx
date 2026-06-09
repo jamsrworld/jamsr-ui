@@ -5,9 +5,7 @@ import { Field } from "ui/field";
 import { Select } from "ui/select";
 import React from "react";
 
-export const SelectStartEndItems = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectStartEndItems = (props: Partial<Select.Props>) => {
   return (
     <Field>
       <Field.Label>Fruit</Field.Label>

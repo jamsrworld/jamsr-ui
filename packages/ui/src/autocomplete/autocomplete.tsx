@@ -9,9 +9,7 @@ const styles = autocompleteStyles();
 
 export const AutocompleteRoot = AutocompletePrimitive.Root;
 
-export const AutocompleteInput = (
-  props: AutocompletePrimitive.Input.Props,
-) => {
+export const AutocompleteInput = (props: AutocompletePrimitive.Input.Props) => {
   return (
     <AutocompletePrimitive.Input
       {...props}
@@ -42,9 +40,7 @@ export const AutocompleteTrigger = (
   );
 };
 
-export const AutocompleteClear = (
-  props: AutocompletePrimitive.Clear.Props,
-) => {
+export const AutocompleteClear = (props: AutocompletePrimitive.Clear.Props) => {
   return (
     <AutocompletePrimitive.Clear
       {...props}
@@ -81,9 +77,7 @@ export namespace AutocompleteContent {
   }
 }
 
-export const AutocompleteList = (
-  props: AutocompletePrimitive.List.Props,
-) => {
+export const AutocompleteList = (props: AutocompletePrimitive.List.Props) => {
   return (
     <AutocompletePrimitive.List
       {...props}
@@ -92,9 +86,7 @@ export const AutocompleteList = (
   );
 };
 
-export const AutocompleteItem = (
-  props: AutocompletePrimitive.Item.Props,
-) => {
+export const AutocompleteItem = (props: AutocompletePrimitive.Item.Props) => {
   return (
     <AutocompletePrimitive.Item
       {...props}
@@ -103,9 +95,7 @@ export const AutocompleteItem = (
   );
 };
 
-export const AutocompleteEmpty = (
-  props: AutocompletePrimitive.Empty.Props,
-) => {
+export const AutocompleteEmpty = (props: AutocompletePrimitive.Empty.Props) => {
   return (
     <AutocompletePrimitive.Empty
       {...props}
@@ -114,9 +104,7 @@ export const AutocompleteEmpty = (
   );
 };
 
-export const AutocompleteGroup = (
-  props: AutocompletePrimitive.Group.Props,
-) => {
+export const AutocompleteGroup = (props: AutocompletePrimitive.Group.Props) => {
   return (
     <AutocompletePrimitive.Group
       {...props}

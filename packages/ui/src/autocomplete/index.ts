@@ -20,7 +20,6 @@ import type { VariantProps } from "tailwind-variants";
 
 import type { autocompleteStyles } from "./styles";
 
-
 export const Autocomplete = Object.assign(AutocompleteRoot, {
   Input: AutocompleteInput,
   InputGroup: AutocompleteInputGroup,
@@ -39,6 +38,8 @@ export const Autocomplete = Object.assign(AutocompleteRoot, {
 });
 
 export namespace Autocomplete {
-  export interface Props extends React.ComponentProps<typeof AutocompleteRoot> {}
+  export interface Props extends React.ComponentProps<
+    typeof AutocompleteRoot
+  > {}
   export type Variants = VariantProps<typeof autocompleteStyles>;
 }

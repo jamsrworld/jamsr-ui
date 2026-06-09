@@ -12,9 +12,7 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectDisabled = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectDisabled = (props: Partial<Select.Props>) => {
   const { disabled = true, ...rest } = props;
   return (
     <Field>

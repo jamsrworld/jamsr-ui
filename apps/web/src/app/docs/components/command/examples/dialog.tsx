@@ -11,9 +11,7 @@ import {
   User,
 } from "lucide-react";
 
-export const CommandDialogDemo = (
-  props: Command.Dialog,
-) => {
+export const CommandDialogDemo = (props: Command.Dialog) => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {

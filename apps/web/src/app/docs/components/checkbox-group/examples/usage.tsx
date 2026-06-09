@@ -1,13 +1,12 @@
 "use client";
 
+import { useId, useState } from "react";
 import { Checkbox, CheckboxGroup } from "ui/checkbox";
 import { Field } from "ui/field";
+import { Label } from "ui/label";
 import { Text } from "ui/text";
-import React, { useId, useState } from "react";
 
-export const CheckboxGroupUsage = (
-  props: CheckboxGroup.Props,
-) => {
+export const CheckboxGroupUsage = (props: CheckboxGroup.Props) => {
   const [value, setValue] = useState<string[]>([]);
   const id = useId();
   return (
@@ -18,7 +17,7 @@ export const CheckboxGroupUsage = (
         onValueChange={setValue}
         {...props}
       >
-        <label id={id}>How would you like to be notified?</label>
+        <Label id={id}>How would you like to be notified?</Label>
         <Field orientation="horizontal">
           <Checkbox
             name="notifications"
@@ -56,7 +55,6 @@ export const CheckboxGroupUsage = (
           </Field.Content>
         </Field>
       </CheckboxGroup>
-
       <Text
         className="text-foreground-tertiary mt-5"
         variant="caption"

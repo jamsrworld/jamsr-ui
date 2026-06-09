@@ -22,6 +22,10 @@ export const metadata: Metadata = {
 };
 
 const checkboxVariants: VariantOptions<Checkbox.Variants> = {
+  variant: {
+    options: ["bordered", "solid"],
+    defaultValue: "solid",
+  },
   size: {
     options: ["sm", "md", "lg"],
     defaultValue: "md",

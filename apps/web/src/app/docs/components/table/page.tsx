@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const tableVariants: VariantOptions<Table.Variants> = {
   variant: {
     options: ["solid", "bordered"],
-    defaultValue: "bordered",
+    defaultValue: "solid",
   },
   radius: {
     options: ["none", "sm", "md", "lg", "full"],

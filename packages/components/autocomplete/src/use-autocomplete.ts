@@ -123,16 +123,17 @@ export const useAutocomplete = (props: useAutocomplete.Props) => {
       [],
     );
 
-  const getPositionerProps: PropGetter<AutocompletePositioner.Props> = useCallback(
-    (props) => ({
-      ...props,
-      "data-slot": "popover",
-      style: floatingStyles,
-      ...getFloatingProps({}),
-      ref: setFloating,
-    }),
-    [floatingStyles, getFloatingProps, setFloating],
-  );
+  const getPositionerProps: PropGetter<AutocompletePositioner.Props> =
+    useCallback(
+      (props) => ({
+        ...props,
+        "data-slot": "popover",
+        style: floatingStyles,
+        ...getFloatingProps({}),
+        ref: setFloating,
+      }),
+      [floatingStyles, getFloatingProps, setFloating],
+    );
 
   const getContentProps: PropGetter<AutocompleteContent.Props> = useCallback(
     (props) => ({

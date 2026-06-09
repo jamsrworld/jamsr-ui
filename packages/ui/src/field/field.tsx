@@ -63,7 +63,7 @@ export const FieldLabel = (props: FieldPrimitive.Label.Props) => {
 export const FieldContent = (props: FieldContent.Props) => {
   const { className, ...restProps } = props;
   return (
-    <div className={cn("flex flex-col gap-1", className)} {...restProps} />
+    <div className={cn("flex flex-col gap-0.5", className)} {...restProps} />
   );
 };
 

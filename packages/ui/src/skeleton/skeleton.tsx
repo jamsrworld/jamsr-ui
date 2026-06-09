@@ -4,7 +4,6 @@ import { skeletonStyles } from "./styles";
 
 import type { VariantProps } from "tailwind-variants";
 
-
 type SkeletonVariants = VariantProps<typeof skeletonStyles>;
 
 const SkeletonContent = (props: {

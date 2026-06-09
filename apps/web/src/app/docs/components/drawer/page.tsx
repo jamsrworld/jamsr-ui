@@ -19,7 +19,17 @@ export const metadata: Metadata = {
 
 const drawerVariants: VariantOptions<{
   swipeDirection: "left" | "right" | "up" | "down";
-  size: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "full";
+  size:
+    | "xs"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl"
+    | "2xl"
+    | "3xl"
+    | "4xl"
+    | "5xl"
+    | "full";
   backdrop: "transparent" | "opaque" | "blur";
   radius: "none" | "sm" | "md" | "lg" | "full";
 }> = {

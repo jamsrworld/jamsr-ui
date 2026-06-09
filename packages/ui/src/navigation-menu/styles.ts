@@ -48,6 +48,4 @@ export const navigationMenuStyles = tv({
   },
 });
 
-export type NavigationMenuVariants = VariantProps<
-  typeof navigationMenuStyles
->;
+export type NavigationMenuVariants = VariantProps<typeof navigationMenuStyles>;

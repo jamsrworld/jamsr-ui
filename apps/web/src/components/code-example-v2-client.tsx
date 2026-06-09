@@ -12,6 +12,7 @@ import {
   isValidElement,
   cloneElement,
 } from "react";
+import { ScrollArea } from "ui/scroll-area";
 
 type VariantOption = {
   options: string[];
@@ -170,12 +171,24 @@ export const CodeExampleV2Client = (props: Props) => {
             {renderChildren()}
           </div>
         )}
-        <div className="p-4 border-t border-border bg-background rounded-b-lg overflow-auto max-h-[50vh]">
+        {/* <div className="p-4 border-t border-border bg-background rounded-b-lg overflow-auto max-h-[50vh]">
           <div
             className="p-4 rounded-2xl [&_code]:text-sm [&_.shiki]:bg-background!"
             dangerouslySetInnerHTML={{ __html: finalHtml }}
           />
-        </div>
+        </div> */}
+
+        <ScrollArea>
+          <ScrollArea.Viewport className="max-h-250">
+            {/* <div dangerouslySetInnerHTML={{ __html: finalHtml }} /> */}
+            <div
+              className="p-4 rounded-2xl [&_code]:text-sm [&_.shiki]:bg-background!"
+              dangerouslySetInnerHTML={{ __html: finalHtml }}
+            />
+          </ScrollArea.Viewport>
+
+          <ScrollArea.Scrollbar />
+        </ScrollArea>
       </div>
     </section>
   );

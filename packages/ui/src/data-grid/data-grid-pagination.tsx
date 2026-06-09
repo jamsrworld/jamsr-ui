@@ -10,8 +10,8 @@ import {
 } from "@jamsrui/icons";
 import { cn } from "@jamsrui/utils";
 
+import { Field } from "../field";
 import { IconButton } from "../icon-button";
-import { Label } from "../label";
 import { Select } from "../select";
 import { useDataGridContext } from "./data-grid-context";
 
@@ -29,23 +29,27 @@ export const DataGridPaginationSelector = () => {
     setValue(value);
   };
   return (
-    <Select
-      className="flex flex-row items-center gap-2"
-      data-slot="pagination-selector"
-      onValueChange={onValueChange}
-      size="sm"
-      value={value}
-    >
-      <Label>Rows Per Page:</Label>
-      <Select.Trigger className="px-1" />
-      <Select.Content>
-        {[10, 20, 50, 100, 500].map((pageSize) => (
-          <Select.Item key={pageSize.toString()} value={pageSize}>
-            {pageSize.toString()}
-          </Select.Item>
-        ))}
-      </Select.Content>
-    </Select>
+    <Field className="grow max-w-40" orientation="horizontal">
+      <Field.Label className="whitespace-nowrap grid place-content-center">
+        Rows Per Page:
+      </Field.Label>
+      <Select
+        className="flex flex-row items-center gap-2"
+        data-slot="pagination-selector"
+        onValueChange={onValueChange}
+        size="sm"
+        value={value}
+      >
+        <Select.Trigger className="px-1" />
+        <Select.Content>
+          {[10, 20, 50, 100, 500].map((pageSize) => (
+            <Select.Item key={pageSize.toString()} value={pageSize}>
+              {pageSize.toString()}
+            </Select.Item>
+          ))}
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };
 

@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { scrollAreaStyles } from "./styles";
 import {
   ScrollArea as ScrollAreaRoot,
   ScrollAreaContent,
@@ -8,6 +6,10 @@ import {
   ScrollAreaThumb,
   ScrollAreaViewport,
 } from "./scroll-area";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { scrollAreaStyles } from "./styles";
 
 export const ScrollArea = Object.assign(ScrollAreaRoot, {
   Viewport: ScrollAreaViewport,

@@ -1,13 +1,12 @@
 "use client";
 
-import { AppLogo } from "@/components/app-logo";
-import { Chip } from "ui/chip";
-import { Sidebar } from "ui/sidebar";
-import { Text } from "ui/text";
 import { Route } from "next";
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ComponentProps } from "react";
 import { cn } from "tailwind-variants";
+import { ScrollArea } from "ui/scroll-area";
+import { Text } from "ui/text";
 
 const data: { title: string; items: { title: string; url: Route }[] }[] = [
   {
@@ -98,7 +97,9 @@ const data: { title: string; items: { title: string; url: Route }[] }[] = [
   },
 ];
 
-const LinkItem = ({ href, ...restProp }: LinkProps<Route>) => {
+type LinkProps = ComponentProps<typeof Link>;
+
+const LinkItem = ({ href, ...restProp }: LinkProps) => {
   const path = usePathname();
   const isActive = path === href;
   return (
@@ -106,8 +107,11 @@ const LinkItem = ({ href, ...restProp }: LinkProps<Route>) => {
       href={href}
       {...restProp}
       className={cn(
+        "text-foreground-secondary px-3 py-2 rounded-xl text-base w-full",
         restProp.className,
-        isActive ? "bg-background-quaternary" : "hover:bg-background-tertiary",
+        isActive
+          ? "bg-surface-secondary text-foreground"
+          : "hover:text-foreground",
       )}
     />
   );
@@ -115,48 +119,37 @@ const LinkItem = ({ href, ...restProp }: LinkProps<Route>) => {
 
 export const AppSidebar = () => {
   return (
-    <Sidebar width={250}>
-      <Sidebar.Container>
-        <Sidebar.Backdrop />
-        <Sidebar.Content>
-          <Sidebar.Header className="flex justify-between border-b border-border">
-            <AppLogo />
-            <Sidebar.Toggle />
-          </Sidebar.Header>
-          <Sidebar.Body>
+    <div className="sticky top-12 h-[calc(100vh-48px)] self-start overscroll-contain">
+      <ScrollArea className="h-full">
+        <ScrollArea.Viewport className="overscroll-contain h-full">
+          <div className="flex flex-col gap-2 min-w-55">
             {data.map((item) => {
               const { items, title } = item;
               return (
-                <Sidebar.Group key={title}>
-                  <Sidebar.GroupLabel>{title}</Sidebar.GroupLabel>
-                  <Sidebar.Menu>
-                    {items.map((item) => {
-                      return (
-                        <Sidebar.MenuItem key={item.title}>
-                          <Sidebar.MenuItemButton
-                            render={<LinkItem href={item.url} />}
-                          >
-                            {item.title}
-                          </Sidebar.MenuItemButton>
-                        </Sidebar.MenuItem>
-                      );
-                    })}
-                  </Sidebar.Menu>
-                </Sidebar.Group>
+                <div
+                  key={title}
+                  className="flex flex-col"
+                >
+                  <Text variant="h6">{title}</Text>
+                  {items.map((item) => {
+                    return (
+                      <LinkItem
+                        key={item.title}
+                        href={item.url}
+                      >
+                        {item.title}
+                      </LinkItem>
+                    );
+                  })}
+                </div>
               );
             })}
-          </Sidebar.Body>
-          <Sidebar.Footer className="flex gap-2 items-center">
-            <Text>Version 0.2.0</Text>
-            <Chip
-              color="primary"
-              size="sm"
-            >
-              Beta
-            </Chip>
-          </Sidebar.Footer>
-        </Sidebar.Content>
-      </Sidebar.Container>
-    </Sidebar>
+          </div>
+        </ScrollArea.Viewport>
+        <ScrollArea.Scrollbar orientation="vertical">
+          <ScrollArea.Thumb />
+        </ScrollArea.Scrollbar>
+      </ScrollArea>
+    </div>
   );
 };

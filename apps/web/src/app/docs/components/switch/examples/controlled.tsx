@@ -4,9 +4,7 @@ import { Field } from "ui/field";
 import { Switch } from "ui/switch";
 import React, { useState } from "react";
 
-export const SwitchControlled = (
-  props: Switch.Props,
-) => {
+export const SwitchControlled = (props: Switch.Props) => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <Field orientation="horizontal">

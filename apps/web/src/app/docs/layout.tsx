@@ -1,5 +1,3 @@
-import { Sidebar } from "ui/sidebar";
-import { AppHeader } from "./header";
 import { AppSidebar } from "./sidebar";
 
 type Props = {
@@ -9,13 +7,10 @@ type Props = {
 const Layout = (props: Props) => {
   const { children } = props;
   return (
-    <Sidebar.Wrapper>
+    <div className="flex px-6 mx-auto py-12 justify-center">
       <AppSidebar />
-      <Sidebar.Inset>
-        <AppHeader />
-        {children}
-      </Sidebar.Inset>
-    </Sidebar.Wrapper>
+      {children}
+    </div>
   );
 };
 

@@ -7,9 +7,7 @@ import { navigationMenuStyles } from "./styles";
 
 const styles = navigationMenuStyles();
 
-export const NavigationMenu = (
-  props: NavigationMenuPrimitive.Root.Props,
-) => {
+export const NavigationMenu = (props: NavigationMenuPrimitive.Root.Props) => {
   return (
     <NavigationMenuPrimitive.Root
       {...props}

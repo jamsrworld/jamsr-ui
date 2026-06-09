@@ -145,9 +145,7 @@ export const ComboboxGroupLabel = (
   );
 };
 
-export const ComboboxSeparator = (
-  props: ComboboxPrimitive.Separator.Props,
-) => {
+export const ComboboxSeparator = (props: ComboboxPrimitive.Separator.Props) => {
   return (
     <ComboboxPrimitive.Separator
       {...props}

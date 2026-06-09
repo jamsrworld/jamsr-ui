@@ -208,9 +208,7 @@ const users = [
   },
 ];
 
-export const SelectCustomRenderMultiple = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectCustomRenderMultiple = (props: Partial<Select.Props>) => {
   const { size = "lg", multiple = true, ...rest } = props;
   return (
     <Select

@@ -26,9 +26,7 @@ const fruits: Fruit[] = [
   { label: "Pomegranate", value: "pomegranate" },
 ];
 
-export const ComboboxUsage = (
-  props: Partial<Combobox.Props>,
-) => {
+export const ComboboxUsage = (props: Partial<Combobox.Props>) => {
   return (
     <div className="w-full max-w-xs">
       <Combobox

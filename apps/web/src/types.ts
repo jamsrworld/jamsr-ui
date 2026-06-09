@@ -9,4 +9,3 @@ export type VariantOptions<T> = {
     label?: string;
   };
 };
-

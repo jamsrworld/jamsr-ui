@@ -21,9 +21,7 @@ const fruits = [
   { label: "Orange", value: Fruits.ORANGE },
 ];
 
-export const SelectControlledNumber = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectControlledNumber = (props: Partial<Select.Props>) => {
   const [value, setValue] = useState<Fruits | null>(Fruits.APPLE);
   return (
     <div className="flex flex-col gap-2">

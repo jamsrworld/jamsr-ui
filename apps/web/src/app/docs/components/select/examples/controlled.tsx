@@ -12,9 +12,7 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectControlled = (
-  props: Partial<Select.Props>,
-) => {
+export const SelectControlled = (props: Partial<Select.Props>) => {
   const [value, setValue] = useState<string | null>("gala");
   return (
     <Field>

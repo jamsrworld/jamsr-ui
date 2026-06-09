@@ -12,15 +12,15 @@ export const buttonStyles = tv({
   ],
   variants: {
     variant: {
-      solid: "ring-1 ring-inset",
+      solid: "",
     },
     color: {
-      primary: "ring-primary-border",
-      secondary: "ring-secondary-border",
-      default: "ring-default-border",
-      success: "ring-success-border",
-      warning: "ring-warning-border",
-      danger: "ring-danger-border",
+      primary: "",
+      secondary: "",
+      default: "",
+      success: "",
+      warning: "",
+      danger: "",
     },
     size: {
       sm: "min-w-16 gap-1 px-3 py-1.5 text-xs",

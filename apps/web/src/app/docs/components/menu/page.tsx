@@ -1,4 +1,4 @@
-import { Menu } from "jamsrui/menu";
+import { Menu } from "ui/menu";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

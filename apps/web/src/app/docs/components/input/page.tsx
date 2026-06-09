@@ -2,7 +2,7 @@ import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
-import { Input } from "jamsrui/input";
+import { Input } from "ui/input";
 import { Metadata } from "next";
 import { InputControlled } from "./examples/controlled";
 import { InputDisabled } from "./examples/disabled";

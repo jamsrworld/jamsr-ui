@@ -1,5 +1,5 @@
-import { IconButton } from "jamsrui/icon-button";
-import { Tooltip } from "jamsrui/tooltip";
+import { IconButton } from "ui/icon-button";
+import { Tooltip } from "ui/tooltip";
 import { type Route } from "next";
 
 type Props = {

@@ -1,6 +1,6 @@
 "use client";
 
-import { OtpInput } from "jamsrui/otp-input";
+import { OtpInput } from "ui/otp-input";
 
 export const OtpInputOnComplete = (props: OtpInput.Props) => {
   const { maxLength = 4, ...rest } = props;

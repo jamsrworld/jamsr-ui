@@ -1,4 +1,4 @@
-import { Popover } from "jamsrui/popover";
+import { Popover } from "ui/popover";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

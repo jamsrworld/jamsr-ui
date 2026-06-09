@@ -2,9 +2,9 @@
 
 import { useDisclosure } from "@jamsrui/hooks";
 import { InfoIcon } from "@jamsrui/icons";
-import { Button } from "jamsrui/button";
-import { IconButton } from "jamsrui/icon-button";
-import { Popover } from "jamsrui/popover";
+import { Button } from "ui/button";
+import { IconButton } from "ui/icon-button";
+import { Popover } from "ui/popover";
 
 export const PopoverControlled = (props: Popover.Props) => {
   const { isOpen, setIsOpen, onToggle } = useDisclosure();

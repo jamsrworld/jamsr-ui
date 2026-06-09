@@ -1,6 +1,6 @@
 "use client";
 
-import { ContextMenu } from "jamsrui/context-menu";
+import { ContextMenu } from "ui/context-menu";
 
 export const ContextMenuNested = (props: ContextMenu.Props) => {
   return (

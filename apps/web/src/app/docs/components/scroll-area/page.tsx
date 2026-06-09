@@ -1,4 +1,4 @@
-import { ScrollArea } from "jamsrui/scroll-area";
+import { ScrollArea } from "ui/scroll-area";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

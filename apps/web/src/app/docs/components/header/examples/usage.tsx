@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "jamsrui/button";
-import { Header } from "jamsrui/header";
+import { Button } from "ui/button";
+import { Header } from "ui/header";
 
 export const HeaderUsage = (props: Header.Props) => {
   return (

@@ -2,10 +2,10 @@
 
 import { faker } from "@faker-js/faker";
 import type { ColumnDef } from "@tanstack/react-table";
-import { Avatar } from "jamsrui/avatar";
-import { Chip } from "jamsrui/chip";
-import { DataGrid } from "jamsrui/data-grid";
-import { Text } from "jamsrui/text";
+import { Avatar } from "ui/avatar";
+import { Chip } from "ui/chip";
+import { DataGrid } from "ui/data-grid";
+import { Text } from "ui/text";
 
 type User = {
   userId: string;

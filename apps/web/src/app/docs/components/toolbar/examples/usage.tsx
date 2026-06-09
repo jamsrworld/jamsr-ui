@@ -1,6 +1,6 @@
 "use client";
 
-import { Toolbar } from "jamsrui/toolbar";
+import { Toolbar } from "ui/toolbar";
 import {
   AlignCenter,
   AlignLeft,

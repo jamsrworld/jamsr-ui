@@ -1,6 +1,6 @@
 "use client";
 
-import { Card } from "jamsrui/card";
+import { Card } from "ui/card";
 
 export const CardUsage = (props: Card.Props) => {
   return (

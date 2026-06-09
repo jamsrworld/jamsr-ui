@@ -1,7 +1,7 @@
 "use client";
 
-import { Card } from "jamsrui/card";
-import { Collapsible } from "jamsrui/collapsible";
+import { Card } from "ui/card";
+import { Collapsible } from "ui/collapsible";
 import { type ComponentProps } from "react";
 
 export const CollapsibleUsage = (props: ComponentProps<typeof Collapsible>) => {

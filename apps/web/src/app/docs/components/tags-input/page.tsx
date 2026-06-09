@@ -1,6 +1,6 @@
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
-import { Text } from "jamsrui/text";
+import { Text } from "ui/text";
 import { Metadata } from "next";
 
 const title = "TagsInput";

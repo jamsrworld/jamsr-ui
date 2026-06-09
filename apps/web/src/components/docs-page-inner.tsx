@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@jamsrui/utils";
-import { Sidebar, useSidebarState } from "jamsrui/sidebar";
-import { Text } from "jamsrui/text";
+import { Sidebar, useSidebarState } from "ui/sidebar";
+import { Text } from "ui/text";
 
 type Props = {
   children: React.ReactNode;

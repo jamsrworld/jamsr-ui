@@ -1,8 +1,8 @@
 "use client";
 
-import { AlertDialog } from "jamsrui/alert-dialog";
-import { Button } from "jamsrui/button";
-import { Separator } from "jamsrui/separator";
+import { AlertDialog } from "ui/alert-dialog";
+import { Button } from "ui/button";
+import { Separator } from "ui/separator";
 
 export const AlertDialogCustomized = (props: AlertDialog.Props) => {
   return (

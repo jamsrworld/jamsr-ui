@@ -1,7 +1,7 @@
 "use client";
 
-import { Checkbox } from "jamsrui/checkbox";
-import { Field } from "jamsrui/field";
+import { Checkbox } from "ui/checkbox";
+import { Field } from "ui/field";
 
 export const CheckboxDescription = (props: Checkbox.Props) => {
   return (

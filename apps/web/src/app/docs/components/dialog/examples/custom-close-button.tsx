@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Dialog } from "jamsrui/dialog";
-import { Text } from "jamsrui/text";
+import { Button } from "ui/button";
+import { Dialog } from "ui/dialog";
+import { Text } from "ui/text";
 
 export const DialogCustomCloseButton = (props: Dialog.Props) => {
   return (

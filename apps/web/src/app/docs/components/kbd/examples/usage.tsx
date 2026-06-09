@@ -1,6 +1,6 @@
 "use client";
 
-import { Kbd } from "jamsrui/kbd";
+import { Kbd } from "ui/kbd";
 
 export const KbdUsage = (props: Kbd.Props) => {
   const { keys, ...rest } = props;

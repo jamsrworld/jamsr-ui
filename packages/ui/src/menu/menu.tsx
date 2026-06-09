@@ -164,11 +164,13 @@ export const MenuCheckboxItemIndicator = (
   const { children = <CheckIcon />, className, ...restProps } = props;
   return (
     <MenuPrimitive.CheckboxItemIndicator
+      keepMounted
       {...restProps}
       className={styles.menuItemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </MenuPrimitive.CheckboxItemIndicator>
+      render={(props, { checked }) => (
+        <span {...props}>{checked ? children : null} </span>
+      )}
+    />
   );
 };
 
@@ -179,11 +181,13 @@ export const MenuRadioItemIndicator = (
   const { children = <CheckIcon />, className, ...restProps } = props;
   return (
     <MenuPrimitive.RadioItemIndicator
+      keepMounted
       {...restProps}
       className={styles.menuItemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </MenuPrimitive.RadioItemIndicator>
+      render={(props, { checked }) => (
+        <span {...props}>{checked ? children : null}</span>
+      )}
+    />
   );
 };
 

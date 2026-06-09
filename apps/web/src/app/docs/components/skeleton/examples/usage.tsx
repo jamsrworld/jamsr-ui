@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "jamsrui/skeleton";
+import { Skeleton } from "ui/skeleton";
 import React from "react";
 
 export const SkeletonUsage = (props: Record<string, unknown>) => {

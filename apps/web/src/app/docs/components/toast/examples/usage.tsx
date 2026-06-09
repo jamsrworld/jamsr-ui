@@ -1,7 +1,7 @@
 "use client";
 
 import { toastManager } from "@/app/provider/toast";
-import { Button } from "jamsrui/button";
+import { Button } from "ui/button";
 import React from "react";
 
 export const ToastUsage = (props: Record<string, unknown>) => {

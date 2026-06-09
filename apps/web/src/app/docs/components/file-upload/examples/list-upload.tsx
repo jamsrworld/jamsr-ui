@@ -1,11 +1,11 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Avatar } from "jamsrui/avatar";
-import { Button } from "jamsrui/button";
-import { IconButton } from "jamsrui/icon-button";
-import { Text } from "jamsrui/text";
-import { formatBytes, useFileUpload } from "jamsrui/file-upload";
+import { Avatar } from "ui/avatar";
+import { Button } from "ui/button";
+import { IconButton } from "ui/icon-button";
+import { Text } from "ui/text";
+import { formatBytes, useFileUpload } from "ui/file-upload";
 import { cn } from "@jamsrui/utils";
 
 import React from "react";

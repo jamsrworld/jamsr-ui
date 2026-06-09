@@ -1,6 +1,6 @@
 "use client";
 
-import { Slider } from "jamsrui/slider";
+import { Slider } from "ui/slider";
 import React from "react";
 
 export const SliderUsage = (props: React.ComponentProps<typeof Slider>) => {

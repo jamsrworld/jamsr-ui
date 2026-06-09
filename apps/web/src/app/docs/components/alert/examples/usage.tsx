@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert } from "jamsrui/alert";
+import { Alert } from "ui/alert";
 
 export const AlertUsage = (props: Alert.Props) => {
   return (

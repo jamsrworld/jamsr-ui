@@ -1,6 +1,6 @@
 "use client";
 
-import { Autocomplete } from "jamsrui/autocomplete";
+import { Autocomplete } from "ui/autocomplete";
 
 const tags = [
   { id: "t1", value: "feature" },

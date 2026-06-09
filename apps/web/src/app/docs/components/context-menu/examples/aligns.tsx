@@ -1,6 +1,6 @@
 "use client";
 
-import { ContextMenu } from "jamsrui/context-menu";
+import { ContextMenu } from "ui/context-menu";
 
 export const ContextMenuAligns = (props: ContextMenu.Props) => {
   const aligns = ["start", "center", "end"] as const;

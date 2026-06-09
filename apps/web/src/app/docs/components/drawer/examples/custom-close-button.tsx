@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Drawer } from "jamsrui/drawer";
+import { Button } from "ui/button";
+import { Drawer } from "ui/drawer";
 
 export const DrawerCustomCloseBtn = (props: Drawer.Props) => {
   return (

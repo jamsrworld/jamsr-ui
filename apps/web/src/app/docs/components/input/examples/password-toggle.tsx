@@ -1,11 +1,11 @@
 "use client";
 
 import { EyeClosedIcon, EyeOpenIcon } from "@jamsrui/icons";
-import { Field } from "jamsrui/field";
-import { IconButton } from "jamsrui/icon-button";
-import { InputGroup } from "jamsrui/input-group";
+import { Field } from "ui/field";
+import { IconButton } from "ui/icon-button";
+import { InputGroup } from "ui/input-group";
 import { useState } from "react";
-import { type Input } from "jamsrui/input";
+import { type Input } from "ui/input";
 
 export const InputPasswordToggle = (props: Input.Variants) => {
   const [showPassword, setShowPassword] = useState(false);

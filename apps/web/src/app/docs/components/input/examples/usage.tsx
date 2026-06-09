@@ -1,6 +1,6 @@
 "use client";
 
-import { Input } from "jamsrui/input";
+import { Input } from "ui/input";
 
 export const InputUsage = (props: Input.Props) => {
   return (

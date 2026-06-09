@@ -1,6 +1,6 @@
 "use client";
 
-import { ScrollArea } from "jamsrui/scroll-area";
+import { ScrollArea } from "ui/scroll-area";
 import React from "react";
 
 export const ScrollAreaUsage = (props: Record<string, unknown>) => {

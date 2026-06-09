@@ -1,7 +1,7 @@
 "use client";
 
-import { Menu } from "jamsrui/menu";
-import { Menubar } from "jamsrui/menubar";
+import { Menu } from "ui/menu";
+import { Menubar } from "ui/menubar";
 import { ChevronRight } from "lucide-react";
 
 export const MenubarUsage = (props: Menubar.Props) => {

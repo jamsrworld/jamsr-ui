@@ -1,7 +1,7 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
-import { Chip } from "jamsrui/chip";
+import { Avatar } from "ui/avatar";
+import { Chip } from "ui/chip";
 
 const BadgeIcon = () => {
   return (

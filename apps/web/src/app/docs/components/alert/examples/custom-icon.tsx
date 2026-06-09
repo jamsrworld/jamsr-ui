@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert } from "jamsrui/alert";
+import { Alert } from "ui/alert";
 import { EmailIcon } from "@jamsrui/icons";
 
 export const AlertCustomIcon = (props: Alert.Props) => {

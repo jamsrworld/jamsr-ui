@@ -1,6 +1,6 @@
 "use client";
 
-import { Accordion } from "jamsrui/accordion";
+import { Accordion } from "ui/accordion";
 
 export const AccordionWithoutIcon = (props: Accordion.Props) => {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Separator } from "jamsrui/separator";
+import { Separator } from "ui/separator";
 import React from "react";
 
 export const SeparatorUsage = (

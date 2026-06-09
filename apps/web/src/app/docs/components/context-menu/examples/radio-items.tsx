@@ -1,5 +1,5 @@
 "use client";
-import { ContextMenu } from "jamsrui/context-menu";
+import { ContextMenu } from "ui/context-menu";
 import { useState } from "react";
 
 export const ContextMenuRadioItemsExample = (props: ContextMenu.Props) => {

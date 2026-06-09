@@ -1,8 +1,8 @@
 "use client";
 
 import { PlusIcon } from "@jamsrui/icons";
-import { Checkbox } from "jamsrui/checkbox";
-import { Field } from "jamsrui/field";
+import { Checkbox } from "ui/checkbox";
+import { Field } from "ui/field";
 import { useState } from "react";
 
 export const CheckboxCustomIndicator = (props: Checkbox.Props) => {

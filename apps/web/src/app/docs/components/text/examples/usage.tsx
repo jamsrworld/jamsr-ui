@@ -1,6 +1,6 @@
 "use client";
 
-import { Text } from "jamsrui/text";
+import { Text } from "ui/text";
 import React from "react";
 
 export const TextUsage = (props: React.ComponentProps<typeof Text>) => {

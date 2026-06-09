@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "jamsrui/button";
+import { Button } from "ui/button";
 import { useState } from "react";
 
 export const ButtonLoading = (props: Button.Props) => {

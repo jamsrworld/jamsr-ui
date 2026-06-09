@@ -1,12 +1,12 @@
 "use client";
 
 import { CloseIcon } from "@jamsrui/icons";
-import { Description } from "jamsrui/description";
-import { Field } from "jamsrui/field";
-import { IconButton } from "jamsrui/icon-button";
-import { InputGroup } from "jamsrui/input-group";
+import { Description } from "ui/description";
+import { Field } from "ui/field";
+import { IconButton } from "ui/icon-button";
+import { InputGroup } from "ui/input-group";
 import { useState } from "react";
-import { type Input } from "jamsrui/input";
+import { type Input } from "ui/input";
 
 export const InputControlled = (props: Input.Variants) => {
   const [value, setValue] = useState("");

@@ -1,8 +1,8 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { Input } from "jamsrui/input";
-import { InputGroup } from "jamsrui/input-group";
+import { Field } from "ui/field";
+import { Input } from "ui/input";
+import { InputGroup } from "ui/input-group";
 
 export const InputDisabled = (props: Input.Variants) => {
   return (

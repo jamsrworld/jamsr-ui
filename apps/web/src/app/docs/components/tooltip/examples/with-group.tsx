@@ -1,8 +1,8 @@
 "use client";
 
 import { EmailIcon, InfoIcon } from "@jamsrui/icons";
-import { IconButton } from "jamsrui/icon-button";
-import { Tooltip } from "jamsrui/tooltip";
+import { IconButton } from "ui/icon-button";
+import { Tooltip } from "ui/tooltip";
 import React from "react";
 
 export const TooltipWithGroup = (props: Record<string, unknown>) => {

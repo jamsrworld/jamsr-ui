@@ -1,6 +1,6 @@
 "use client";
 
-import { Ripple } from "jamsrui/ripple";
+import { Ripple } from "ui/ripple";
 import React from "react";
 
 export const RippleUsage = (props: Record<string, unknown>) => {

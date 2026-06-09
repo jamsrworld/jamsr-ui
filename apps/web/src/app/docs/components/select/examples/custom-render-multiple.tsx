@@ -1,8 +1,8 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
-import { Chip } from "jamsrui/chip";
-import { Select } from "jamsrui/select";
+import { Avatar } from "ui/avatar";
+import { Chip } from "ui/chip";
+import { Select } from "ui/select";
 import React from "react";
 
 const users = [

@@ -1,7 +1,7 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
-import { Menu } from "jamsrui/menu";
+import { Avatar } from "ui/avatar";
+import { Menu } from "ui/menu";
 
 export const MenuCustomized = (props: Menu.Props) => {
   return (

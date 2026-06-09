@@ -1,6 +1,6 @@
 "use client";
 
-import { NavigationMenu } from "jamsrui/navigation-menu";
+import { NavigationMenu } from "ui/navigation-menu";
 import { ChevronDown } from "lucide-react";
 
 const gettingStartedLinks = [

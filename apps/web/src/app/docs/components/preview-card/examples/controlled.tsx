@@ -1,11 +1,11 @@
 "use client";
 
 import { useDisclosure } from "@jamsrui/hooks";
-import { Avatar } from "jamsrui/avatar";
-import { Button } from "jamsrui/button";
-import { Link } from "jamsrui/link";
-import { PreviewCard } from "jamsrui/preview-card";
-import { Text } from "jamsrui/text";
+import { Avatar } from "ui/avatar";
+import { Button } from "ui/button";
+import { Link } from "ui/link";
+import { PreviewCard } from "ui/preview-card";
+import { Text } from "ui/text";
 
 export const PreviewCardControlled = (props: PreviewCard.Props) => {
   const { isOpen, setIsOpen, onToggle } = useDisclosure();

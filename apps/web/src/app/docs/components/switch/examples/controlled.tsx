@@ -1,7 +1,7 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { Switch } from "jamsrui/switch";
+import { Field } from "ui/field";
+import { Switch } from "ui/switch";
 import React, { useState } from "react";
 
 export const SwitchControlled = (

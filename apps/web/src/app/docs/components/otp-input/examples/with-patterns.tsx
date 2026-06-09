@@ -1,11 +1,7 @@
 "use client";
 
-import { Label } from "jamsrui/label";
-import {
-  OtpInput,
-  REGEXP_ONLY_CHARS,
-  REGEXP_ONLY_DIGITS,
-} from "jamsrui/otp-input";
+import { Label } from "ui/label";
+import { OtpInput, REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS } from "ui/otp-input";
 
 export const OtpInputWithPatterns = (props: OtpInput.Props) => {
   const { maxLength = 4, ...rest } = props;

@@ -1,7 +1,7 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { TextArea } from "jamsrui/textarea";
+import { Field } from "ui/field";
+import { TextArea } from "ui/textarea";
 
 export const TextAreaWithLabel = (props: TextArea.Props) => {
   return (

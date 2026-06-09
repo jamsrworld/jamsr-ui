@@ -13,7 +13,7 @@ export const menuStyles = tv({
     positioner: "z-popover outline-hidden",
     popup: [
       "relative z-popover box-border inline-flex w-full flex-col justify-center bg-surface p-1 text-sm shadow-md",
-      "shadow-lg",
+      "shadow-lg outline-hidden",
       "origin-(--transform-origin) transition-[transform,scale,opacity] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0",
     ],
     menuItem: [

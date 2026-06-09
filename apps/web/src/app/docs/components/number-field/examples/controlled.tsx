@@ -1,7 +1,7 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { NumberField } from "jamsrui/number-field";
+import { Description } from "ui/description";
+import { NumberField } from "ui/number-field";
 import { useState } from "react";
 
 export const NumberFieldControlled = (props: NumberField.Props) => {

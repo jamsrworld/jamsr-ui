@@ -1,4 +1,4 @@
-import { Text } from "jamsrui/text";
+import { Text } from "ui/text";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

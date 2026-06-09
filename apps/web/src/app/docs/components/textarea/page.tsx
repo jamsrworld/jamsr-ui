@@ -11,7 +11,7 @@ import { TextAreaWithDescription } from "./examples/with-description";
 import { TextAreaWithIcon } from "./examples/with-icon";
 import { TextAreaWithLabel } from "./examples/with-label";
 import { VariantOptions } from "@/types";
-import { TextArea } from "jamsrui/textarea";
+import { TextArea } from "ui/textarea";
 
 const title = "TextArea";
 const description =

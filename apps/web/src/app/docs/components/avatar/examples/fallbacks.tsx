@@ -1,7 +1,7 @@
 "use client";
 
 import { AvatarIcon } from "@jamsrui/icons";
-import { Avatar } from "jamsrui/avatar";
+import { Avatar } from "ui/avatar";
 
 export const AvatarFallbacks = (props: Avatar.Props) => {
   return (

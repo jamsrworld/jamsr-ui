@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Tooltip } from "jamsrui/tooltip";
+import { Button } from "ui/button";
+import { Tooltip } from "ui/tooltip";
 import React from "react";
 
 export const TooltipUsage = (props: Record<string, unknown>) => {

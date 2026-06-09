@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs } from "jamsrui/tabs";
+import { Tabs } from "ui/tabs";
 import React from "react";
 
 export const TabDisabledItem = (props: React.ComponentProps<typeof Tabs>) => {

@@ -1,4 +1,4 @@
-import { PreviewCard } from "jamsrui/preview-card";
+import { PreviewCard } from "ui/preview-card";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

@@ -2,7 +2,7 @@ import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
-import { ToggleGroup } from "jamsrui/toggle";
+import { ToggleGroup } from "ui/toggle";
 import { Metadata } from "next";
 import { ToggleGroupUsage } from "./examples/usage";
 

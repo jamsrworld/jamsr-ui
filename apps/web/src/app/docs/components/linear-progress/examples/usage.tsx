@@ -1,6 +1,6 @@
 "use client";
 
-import { LinearProgress } from "jamsrui/linear-progress";
+import { LinearProgress } from "ui/linear-progress";
 
 export const LinearProgressUsage = (props: LinearProgress.Props) => {
   return (

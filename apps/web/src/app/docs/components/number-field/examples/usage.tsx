@@ -1,6 +1,6 @@
 "use client";
 
-import { NumberField } from "jamsrui/number-field";
+import { NumberField } from "ui/number-field";
 
 export const NumberFieldUsage = (props: NumberField.Props) => {
   return (

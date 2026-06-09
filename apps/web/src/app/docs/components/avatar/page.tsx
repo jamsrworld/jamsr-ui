@@ -1,4 +1,4 @@
-import { Avatar } from "jamsrui/avatar";
+import { Avatar } from "ui/avatar";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

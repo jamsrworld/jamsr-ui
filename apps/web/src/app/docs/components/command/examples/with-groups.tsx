@@ -1,6 +1,6 @@
 "use client";
 
-import { Command } from "jamsrui/command";
+import { Command } from "ui/command";
 import {
   FileText,
   Globe,

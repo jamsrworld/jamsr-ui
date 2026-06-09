@@ -207,9 +207,6 @@ importers:
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
-      jamsrui:
-        specifier: workspace:^
-        version: link:../../packages/ui
       lucide-react:
         specifier: ^1.7.0
         version: 1.7.0(react@19.2.3)
@@ -234,6 +231,9 @@ importers:
       tailwind-variants:
         specifier: ^3.2.2
         version: 3.2.2(tailwind-merge@3.4.0)(tailwindcss@4.1.18)
+      ui:
+        specifier: workspace:^
+        version: link:../../packages/ui
       zod:
         specifier: ^4.1.12
         version: 4.3.5

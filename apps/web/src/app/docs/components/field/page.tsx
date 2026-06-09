@@ -2,7 +2,7 @@ import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
-import { Field } from "jamsrui/field";
+import { Field } from "ui/field";
 import { Metadata } from "next";
 import { FieldUsage } from "./examples/usage";
 

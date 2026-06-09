@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { menuStyles } from "./styles";
 import {
   Menu as MenuRoot,
   MenuArrow,
@@ -19,6 +17,10 @@ import {
   MenuSubmenuTrigger,
   MenuTrigger,
 } from "./menu";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { menuStyles } from "./styles";
 
 export const Menu = Object.assign(MenuRoot, {
   Group: MenuGroup,

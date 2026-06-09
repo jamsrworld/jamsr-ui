@@ -1,6 +1,6 @@
 "use client";
 
-import { Toggle, ToggleGroup } from "jamsrui/toggle";
+import { Toggle, ToggleGroup } from "ui/toggle";
 import { Bold, Italic, Underline } from "lucide-react";
 import React from "react";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { Clipboard } from "jamsrui/clipboard";
+import { Clipboard } from "ui/clipboard";
 
 export const ClipboardEvents = (props: Clipboard.Props) => {
   const { text = "Hello world!", ...rest } = props;

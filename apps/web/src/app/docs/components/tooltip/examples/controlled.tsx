@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Tooltip } from "jamsrui/tooltip";
+import { Button } from "ui/button";
+import { Tooltip } from "ui/tooltip";
 import React, { useState } from "react";
 
 export const TooltipControlled = (props: Record<string, unknown>) => {

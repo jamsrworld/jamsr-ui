@@ -1,6 +1,6 @@
 "use client";
 
-import { OtpInput } from "jamsrui/otp-input";
+import { OtpInput } from "ui/otp-input";
 
 export const OtpInputWithSeparators = (props: OtpInput.Props) => {
   const { maxLength, ...rest } = props;

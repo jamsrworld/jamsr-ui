@@ -1,7 +1,7 @@
 "use client";
 
 import { FileIcon, RefreshIcon } from "@jamsrui/icons";
-import { Button } from "jamsrui/button";
+import { Button } from "ui/button";
 import {
   Table,
   TableBody,
@@ -9,8 +9,8 @@ import {
   TableColumn,
   TableHeader,
   TableRow,
-} from "jamsrui/table";
-import { Text } from "jamsrui/text";
+} from "ui/table";
+import { Text } from "ui/text";
 import React from "react";
 
 const CustomTableEmptyState = () => {

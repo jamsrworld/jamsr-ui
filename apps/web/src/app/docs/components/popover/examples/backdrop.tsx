@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Popover } from "jamsrui/popover";
-import { Text } from "jamsrui/text";
+import { Button } from "ui/button";
+import { Popover } from "ui/popover";
+import { Text } from "ui/text";
 
 export const PopoverBackdrop = (props: Popover.Props) => {
   return (

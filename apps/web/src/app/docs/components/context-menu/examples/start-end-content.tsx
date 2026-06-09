@@ -1,8 +1,8 @@
 "use client";
 
 import { InfoIcon, SearchIcon, TrashIcon } from "@jamsrui/icons";
-import { Kbd } from "jamsrui/kbd";
-import { ContextMenu } from "jamsrui/context-menu";
+import { Kbd } from "ui/kbd";
+import { ContextMenu } from "ui/context-menu";
 
 export const ContextMenuStartEndContent = (props: ContextMenu.Props) => {
   return (

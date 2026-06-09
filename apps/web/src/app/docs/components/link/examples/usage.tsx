@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "jamsrui/link";
+import { Link } from "ui/link";
 
 export const LinkUsage = (props: Link.Props) => {
   return (

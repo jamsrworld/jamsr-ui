@@ -1,4 +1,4 @@
-import { Chip } from "jamsrui/chip";
+import { Chip } from "ui/chip";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

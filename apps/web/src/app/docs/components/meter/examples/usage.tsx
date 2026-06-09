@@ -1,6 +1,6 @@
 "use client";
 
-import { Meter } from "jamsrui/meter";
+import { Meter } from "ui/meter";
 import React from "react";
 
 export const MeterUsage = (props: React.ComponentProps<typeof Meter>) => {

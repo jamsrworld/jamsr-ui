@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
+import { Avatar } from "ui/avatar";
 import { useId } from "react";
 
 export const AvatarUsage = (props: Avatar.Props) => {

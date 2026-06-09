@@ -2,7 +2,7 @@ import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
-import { Tabs } from "jamsrui/tabs";
+import { Tabs } from "ui/tabs";
 import { Metadata } from "next";
 import { TabDisabled } from "./examples/disabled";
 import { TabDisabledItem } from "./examples/disabled-item";

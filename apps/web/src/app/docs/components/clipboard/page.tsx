@@ -1,4 +1,4 @@
-import { Clipboard } from "jamsrui/clipboard";
+import { Clipboard } from "ui/clipboard";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

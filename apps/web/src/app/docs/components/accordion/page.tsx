@@ -2,7 +2,7 @@ import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
-import { Accordion } from "jamsrui/accordion";
+import { Accordion } from "ui/accordion";
 import { Metadata } from "next";
 import { AccordionDisabled } from "./examples/disabled";
 import { AccordionMultipleSelection } from "./examples/multiple-selection";

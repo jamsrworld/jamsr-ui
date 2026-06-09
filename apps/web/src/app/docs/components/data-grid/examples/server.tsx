@@ -1,6 +1,6 @@
 "use client";
 
-import { DataGrid, useDataGridTable } from "jamsrui/data-grid";
+import { DataGrid, useDataGridTable } from "ui/data-grid";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { PaginationState } from "@tanstack/react-table";
 import { useMemo, useState } from "react";

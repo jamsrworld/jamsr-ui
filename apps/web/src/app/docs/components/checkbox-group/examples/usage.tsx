@@ -1,8 +1,8 @@
 "use client";
 
-import { Checkbox, CheckboxGroup } from "jamsrui/checkbox";
-import { Field } from "jamsrui/field";
-import { Text } from "jamsrui/text";
+import { Checkbox, CheckboxGroup } from "ui/checkbox";
+import { Field } from "ui/field";
+import { Text } from "ui/text";
 import React, { useId, useState } from "react";
 
 export const CheckboxGroupUsage = (

@@ -1,9 +1,9 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
-import { Button } from "jamsrui/button";
-import { PreviewCard } from "jamsrui/preview-card";
-import { Text } from "jamsrui/text";
+import { Avatar } from "ui/avatar";
+import { Button } from "ui/button";
+import { PreviewCard } from "ui/preview-card";
+import { Text } from "ui/text";
 
 export const PreviewCardBackdrop = (props: PreviewCard.Props) => {
   return (

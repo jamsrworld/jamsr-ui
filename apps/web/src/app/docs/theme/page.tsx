@@ -1,7 +1,7 @@
 import { DocsPage } from "@/components/docs-page";
 import { cn } from "@jamsrui/utils";
 import { Metadata } from "next";
-import { Text } from "jamsrui/text";
+import { Text } from "ui/text";
 import { THEME } from "./theme";
 
 const title = "Theme";

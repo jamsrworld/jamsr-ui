@@ -1,8 +1,8 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { Label } from "jamsrui/label";
-import { Radio, RadioGroup } from "jamsrui/radio-group";
+import { Field } from "ui/field";
+import { Label } from "ui/label";
+import { Radio, RadioGroup } from "ui/radio-group";
 import { useState } from "react";
 
 enum Gender {

@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Menu } from "jamsrui/menu";
+import { Button } from "ui/button";
+import { Menu } from "ui/menu";
 
 export const MenuNested = (props: Menu.Props) => {
   return (

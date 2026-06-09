@@ -1,8 +1,8 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
+import { Description } from "ui/description";
+import { Label } from "ui/label";
+import { Select } from "ui/select";
 import React, { useState } from "react";
 
 enum Fruits {

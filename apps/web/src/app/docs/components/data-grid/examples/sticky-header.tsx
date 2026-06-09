@@ -1,6 +1,6 @@
 "use client";
 
-import { DataGrid, useDataGridTable } from "jamsrui/data-grid";
+import { DataGrid, useDataGridTable } from "ui/data-grid";
 import { COLUMNS, USERS } from "./columns";
 
 export const DataGridStickyHeader = (props: Partial<DataGrid.Props>) => {

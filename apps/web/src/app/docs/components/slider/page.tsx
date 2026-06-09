@@ -1,4 +1,4 @@
-import { Slider } from "jamsrui/slider";
+import { Slider } from "ui/slider";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

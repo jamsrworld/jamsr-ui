@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Tabs } from "jamsrui/tabs";
+import { Tabs } from "ui/tabs";
 import React from "react";
 
 export const TabWithIcons = (props: React.ComponentProps<typeof Tabs>) => {

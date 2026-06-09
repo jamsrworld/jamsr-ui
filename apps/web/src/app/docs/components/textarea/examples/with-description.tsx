@@ -1,8 +1,8 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { Field } from "jamsrui/field";
-import { TextArea } from "jamsrui/textarea";
+import { Description } from "ui/description";
+import { Field } from "ui/field";
+import { TextArea } from "ui/textarea";
 
 export const TextAreaWithDescription = (props: TextArea.Props) => {
   return (

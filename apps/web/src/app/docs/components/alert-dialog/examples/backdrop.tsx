@@ -1,7 +1,7 @@
 "use client";
 
-import { AlertDialog } from "jamsrui/alert-dialog";
-import { Button } from "jamsrui/button";
+import { AlertDialog } from "ui/alert-dialog";
+import { Button } from "ui/button";
 
 export const AlertDialogBackdrop = (props: AlertDialog.Props) => {
   return (

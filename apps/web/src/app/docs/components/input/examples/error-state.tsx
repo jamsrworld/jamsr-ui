@@ -1,7 +1,7 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { Input } from "jamsrui/input";
+import { Field } from "ui/field";
+import { Input } from "ui/input";
 import { useState } from "react";
 
 export const InputErrorState = (props: Input.Props) => {

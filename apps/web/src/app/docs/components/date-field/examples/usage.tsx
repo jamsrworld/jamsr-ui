@@ -1,6 +1,6 @@
 "use client";
 
-import { DateField } from "jamsrui/date-field";
+import { DateField } from "ui/date-field";
 import React from "react";
 
 export const DateInputUsage = (

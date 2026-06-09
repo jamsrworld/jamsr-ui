@@ -1,6 +1,6 @@
 "use client";
 
-import { Progress } from "jamsrui/progress";
+import { Progress } from "ui/progress";
 import React from "react";
 
 export const ProgressUsage = (props: React.ComponentProps<typeof Progress>) => {

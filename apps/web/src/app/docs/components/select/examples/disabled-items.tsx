@@ -1,8 +1,8 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
+import { Field } from "ui/field";
+import { Label } from "ui/label";
+import { Select } from "ui/select";
 import React from "react";
 
 const apples = [

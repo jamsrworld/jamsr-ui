@@ -2,7 +2,7 @@ import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
-import { Ripple } from "jamsrui/ripple";
+import { Ripple } from "ui/ripple";
 import { Metadata } from "next";
 import { RippleUsage } from "./examples/usage";
 

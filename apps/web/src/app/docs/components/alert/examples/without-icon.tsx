@@ -1,6 +1,6 @@
 "use client";
 
-import { Alert } from "jamsrui/alert";
+import { Alert } from "ui/alert";
 
 export const AlertWithoutIcon = (props: Alert.Props) => {
   return (

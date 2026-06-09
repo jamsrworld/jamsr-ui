@@ -1,6 +1,6 @@
 "use client";
 
-import { ContextMenu } from "jamsrui/context-menu";
+import { ContextMenu } from "ui/context-menu";
 
 export const ContextMenuOffset = (props: ContextMenu.Props) => {
   return (

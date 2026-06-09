@@ -1,7 +1,7 @@
 "use client";
 
-import { Card } from "jamsrui/card";
-import { Tabs } from "jamsrui/tabs";
+import { Card } from "ui/card";
+import { Tabs } from "ui/tabs";
 import React from "react";
 
 export const TabsUsage = (props: React.ComponentProps<typeof Tabs>) => {

@@ -1,9 +1,9 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { Field } from "jamsrui/field";
-import { type Input } from "jamsrui/input";
-import { InputGroup } from "jamsrui/input-group";
+import { Description } from "ui/description";
+import { Field } from "ui/field";
+import { type Input } from "ui/input";
+import { InputGroup } from "ui/input-group";
 import { useState } from "react";
 
 export const TextAreaControlled = (props: Input.Variants) => {

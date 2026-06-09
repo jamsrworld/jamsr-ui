@@ -1,8 +1,8 @@
 "use client";
 
 import { InfoIcon } from "@jamsrui/icons";
-import { IconButton } from "jamsrui/icon-button";
-import { Popover } from "jamsrui/popover";
+import { IconButton } from "ui/icon-button";
+import { Popover } from "ui/popover";
 
 export const PopoverOpenOnHover = (props: Popover.Props) => {
   return (

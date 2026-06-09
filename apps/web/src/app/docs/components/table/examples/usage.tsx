@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Table } from "jamsrui/table";
+import { Button } from "ui/button";
+import { Table } from "ui/table";
 import React from "react";
 
 export const TableUsage = (props: any) => {

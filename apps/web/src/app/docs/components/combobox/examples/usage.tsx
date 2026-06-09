@@ -1,6 +1,6 @@
 "use client";
 
-import { Combobox } from "jamsrui/combobox";
+import { Combobox } from "ui/combobox";
 import { ChevronDown, X } from "lucide-react";
 import React from "react";
 

@@ -1,8 +1,8 @@
 "use client";
 
 import { SuccessIcon } from "@jamsrui/icons";
-import { Field } from "jamsrui/field";
-import { Switch } from "jamsrui/switch";
+import { Field } from "ui/field";
+import { Switch } from "ui/switch";
 import React from "react";
 
 export const SwitchCustomization = (

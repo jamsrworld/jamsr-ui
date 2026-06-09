@@ -1,4 +1,4 @@
-import { Toast } from "jamsrui/toast";
+import { Toast } from "ui/toast";
 
 export const toastManager = Toast.createToastManager();
 

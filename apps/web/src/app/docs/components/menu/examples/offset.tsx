@@ -1,8 +1,8 @@
 "use client";
 
 import { ChevronUpIcon } from "@jamsrui/icons";
-import { Button } from "jamsrui/button";
-import { Menu } from "jamsrui/menu";
+import { Button } from "ui/button";
+import { Menu } from "ui/menu";
 
 export const MenuOffset = (props: Menu.Props) => {
   return (

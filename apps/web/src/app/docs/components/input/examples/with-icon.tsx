@@ -1,9 +1,9 @@
 "use client";
 
 import { EmailIcon } from "@jamsrui/icons";
-import { Field } from "jamsrui/field";
-import { InputGroup } from "jamsrui/input-group";
-import { type Input } from "jamsrui/input";
+import { Field } from "ui/field";
+import { InputGroup } from "ui/input-group";
+import { type Input } from "ui/input";
 
 export const InputWithIcon = (props: Input.Variants) => {
   return (

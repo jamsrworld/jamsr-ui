@@ -2,9 +2,9 @@
 
 import { useCodeExample } from "./code-example-context";
 import { cn } from "@jamsrui/utils";
-import { Text } from "jamsrui/text";
-import { Field } from "jamsrui/field";
-import { Select } from "jamsrui/select";
+import { Text } from "ui/text";
+import { Field } from "ui/field";
+import { Select } from "ui/select";
 import {
   type ReactNode,
   type ComponentType,

@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronRightIcon, EmailIcon } from "@jamsrui/icons";
-import { Collapsible } from "jamsrui/collapsible";
+import { Collapsible } from "ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
   SidebarMenuItemButton,
   SidebarStateProvider,
-} from "jamsrui/sidebar";
+} from "ui/sidebar";
 import Link from "next/link";
 
 type NavItem = {

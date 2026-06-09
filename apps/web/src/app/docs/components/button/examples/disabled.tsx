@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "jamsrui/button";
+import { Button } from "ui/button";
 
 export const ButtonDisabled = (props: Button.Props) => {
   return (

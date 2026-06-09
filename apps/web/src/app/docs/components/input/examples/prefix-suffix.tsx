@@ -1,8 +1,8 @@
 "use client";
 
-import { InputGroup } from "jamsrui/input-group";
-import { Field } from "jamsrui/field";
-import { type Input } from "jamsrui/input";
+import { InputGroup } from "ui/input-group";
+import { Field } from "ui/field";
+import { type Input } from "ui/input";
 
 export const InputPrefixSuffix = (props: Input.Variants) => {
   return (

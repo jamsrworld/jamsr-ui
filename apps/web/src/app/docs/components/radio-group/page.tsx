@@ -2,7 +2,7 @@ import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
-import { RadioGroup } from "jamsrui/radio-group";
+import { RadioGroup } from "ui/radio-group";
 import { Metadata } from "next";
 import { RadioNumberUsage } from "./examples/number-usage";
 import { RadioUsage } from "./examples/usage";

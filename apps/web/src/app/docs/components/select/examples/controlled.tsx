@@ -1,8 +1,7 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
+import { Field } from "ui/field";
+import { Select } from "ui/select";
 import React, { useState } from "react";
 
 const apples = [
@@ -18,14 +17,14 @@ export const SelectControlled = (
 ) => {
   const [value, setValue] = useState<string | null>("gala");
   return (
-    <div className="flex flex-col gap-2">
+    <Field>
+      <Field.Label>Fruit</Field.Label>
       <Select
         items={apples}
         value={value}
         onValueChange={(val) => setValue(val as string | null)}
         {...props}
       >
-        <Label>Fruit</Label>
         <Select.Trigger className="min-w-40" />
         <Select.Content>
           {apples.map(({ label, value }) => (
@@ -39,7 +38,7 @@ export const SelectControlled = (
           ))}
         </Select.Content>
       </Select>
-      <Description>Selected value: {value}</Description>
-    </div>
+      <Field.Description>Selected value: {value}</Field.Description>
+    </Field>
   );
 };

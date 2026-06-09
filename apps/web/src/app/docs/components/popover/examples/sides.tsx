@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "jamsrui/button";
-import { Popover } from "jamsrui/popover";
+import { Button } from "ui/button";
+import { Popover } from "ui/popover";
 
 export const PopoverSides = (props: Popover.Props) => {
   const sides: (

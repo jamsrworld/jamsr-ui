@@ -1,6 +1,6 @@
 "use client";
 
-import { Table } from "jamsrui/table";
+import { Table } from "ui/table";
 import React from "react";
 
 export const TableStickyHeader = (props: any) => {

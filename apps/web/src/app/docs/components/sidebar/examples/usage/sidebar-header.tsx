@@ -1,10 +1,10 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Avatar } from "jamsrui/avatar";
-import { IconButton } from "jamsrui/icon-button";
-import { Menu } from "jamsrui/menu";
-import { Text } from "jamsrui/text";
+import { Avatar } from "ui/avatar";
+import { IconButton } from "ui/icon-button";
+import { Menu } from "ui/menu";
+import { Text } from "ui/text";
 
 const WorkspaceSwitcher = () => {
   return (

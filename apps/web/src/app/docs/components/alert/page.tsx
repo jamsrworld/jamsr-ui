@@ -8,7 +8,7 @@ import { AlertWithAction } from "./examples/with-action";
 import { AlertWithTitle } from "./examples/with-title";
 import { AlertWithoutIcon } from "./examples/without-icon";
 import { VariantOptions } from "@/types";
-import { Alert } from "jamsrui/alert";
+import { Alert } from "ui/alert";
 
 const title = "Alert";
 const description =

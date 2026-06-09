@@ -1,7 +1,7 @@
 "use client";
 
-import { Input } from "jamsrui/input";
-import { Field } from "jamsrui/field";
+import { Input } from "ui/input";
+import { Field } from "ui/field";
 
 export const InputWithLabel = (props: Input.Variants) => {
   return (

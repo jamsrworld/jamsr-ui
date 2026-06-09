@@ -1,8 +1,8 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { Input } from "jamsrui/input";
-import { Field } from "jamsrui/field";
+import { Description } from "ui/description";
+import { Input } from "ui/input";
+import { Field } from "ui/field";
 
 export const InputWithDescription = (props: Input.Variants) => {
   return (

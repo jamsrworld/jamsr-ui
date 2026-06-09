@@ -1,4 +1,4 @@
-import { AlertDialog } from "jamsrui/alert-dialog";
+import { AlertDialog } from "ui/alert-dialog";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";

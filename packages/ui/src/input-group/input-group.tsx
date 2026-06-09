@@ -68,6 +68,16 @@ export const InputGroupInput = (props: InputGroupUI.Input) => {
   );
 };
 
+export const InputGroupTextArea = (props: InputGroupUI.TextArea) => {
+  const { styles } = useInputGroupContext();
+  return (
+    <InputGroupUI.TextArea
+      {...props}
+      className={styles.input({ className: cn(props.className) })}
+    />
+  );
+};
+
 export namespace InputGroupPrefix {
   export interface Props extends InputGroupUI.Prefix {}
 }

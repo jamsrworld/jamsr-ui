@@ -1,6 +1,7 @@
 "use client";
 
 import { Input as InputPrimitive } from "@jamsrui/react";
+import { dataAttr } from "@jamsrui/utils";
 import { cn } from "tailwind-variants";
 
 import { inputStyles } from "./styles";
@@ -18,7 +19,13 @@ export const Input = (props: Input.Props) => {
     isInvalid,
     className: cn(className),
   });
-  return <InputPrimitive className={styles} {...restProps} />;
+  return (
+    <InputPrimitive
+      className={styles}
+      data-invalid={dataAttr(isInvalid)}
+      {...restProps}
+    />
+  );
 };
 
 export namespace Input {

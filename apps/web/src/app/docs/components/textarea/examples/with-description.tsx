@@ -1,12 +1,17 @@
+"use client";
+
 import { Description } from "jamsrui/description";
 import { Field } from "jamsrui/field";
-import { Textarea } from "jamsrui/textarea";
+import { TextArea } from "jamsrui/textarea";
 
-export const TextareaWithDescription = () => {
+export const TextAreaWithDescription = (props: TextArea.Props) => {
   return (
     <Field>
       <Field.Label>Username</Field.Label>
-      <Textarea placeholder="Enter your username" />
+      <TextArea
+        {...props}
+        placeholder="Enter your username"
+      />
       <Description>Please use a unique username</Description>
     </Field>
   );

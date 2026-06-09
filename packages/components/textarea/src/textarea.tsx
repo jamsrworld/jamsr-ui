@@ -1,12 +1,29 @@
 "use client";
 
-import { useTextarea } from "./use-textarea";
+import { Input as InputPrimitive } from "@base-ui/react/input";
+import { useHover } from "@jamsrui/hooks";
+import { dataAttr } from "@jamsrui/utils";
 
-export const Textarea = (props: Textarea.Props) => {
-  const { getTextareaProps } = useTextarea(props);
-  return <textarea {...getTextareaProps()} />;
+import type { ComponentProps } from "react";
+
+export const TextArea = (props: TextArea.Props) => {
+  const { isHovered, ref } = useHover();
+  const { onValueChange, value, defaultValue, ...restProps } = props;
+  return (
+    <InputPrimitive
+      ref={ref}
+      data-hovered={dataAttr(isHovered)}
+      defaultValue={defaultValue}
+      onValueChange={onValueChange}
+      render={<textarea {...restProps} />}
+      value={value}
+    />
+  );
 };
 
-export namespace Textarea {
-  export interface Props extends useTextarea.Props {}
+export namespace TextArea {
+  export interface Props
+    extends
+      Omit<InputPrimitive.Props, keyof ComponentProps<"textarea">>,
+      ComponentProps<"textarea"> {}
 }

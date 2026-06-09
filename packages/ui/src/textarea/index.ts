@@ -1,7 +1,7 @@
-import { Textarea as TextareaRoot } from "./textarea";
+import { TextArea as TextAreaRoot } from "./textarea";
 
-export const Textarea = TextareaRoot;
+export const TextArea = TextAreaRoot;
 
-export namespace Textarea {
-  export interface Props extends TextareaRoot.Props {}
+export namespace TextArea {
+  export interface Props extends TextAreaRoot.Props {}
 }

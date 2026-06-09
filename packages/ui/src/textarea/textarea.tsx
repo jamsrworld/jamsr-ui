@@ -1,17 +1,32 @@
 "use client";
 
-import { Textarea as TextareaUI } from "@jamsrui/react";
+import { TextArea as TextAreaUI } from "@jamsrui/react";
+import { dataAttr } from "@jamsrui/utils";
+import { cn } from "tailwind-variants";
 
 import { inputStyles } from "../input/styles";
 
 import type { Input } from "../input";
 
-export const Textarea = (props: Textarea.Props) => {
+export const TextArea = (props: TextArea.Props) => {
   const { variant, size, radius, isInvalid, className, ...restProps } = props;
-  const styles = inputStyles({ variant, size, radius, isInvalid, className });
-  return <TextareaUI {...restProps} className={styles} />;
+  const styles = inputStyles({
+    variant,
+    size,
+    radius,
+    isInvalid,
+    className: cn(className),
+  });
+  return (
+    <TextAreaUI
+      data-invalid={dataAttr(isInvalid)}
+      {...restProps}
+      className={styles}
+    />
+  );
 };
 
-export namespace Textarea {
-  export interface Props extends TextareaUI.Props, Input.Variants {}
+export namespace TextArea {
+  export interface Props
+    extends Omit<TextAreaUI.Props, "size">, Input.Variants {}
 }

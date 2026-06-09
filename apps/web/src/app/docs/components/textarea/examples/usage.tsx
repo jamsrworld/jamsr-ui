@@ -1,5 +1,13 @@
-import { Textarea } from "jamsrui/textarea";
+"use client";
 
-export const TextareaUsage = () => {
-  return <Textarea placeholder="Enter your name" />;
+import { TextArea } from "jamsrui/textarea";
+
+export const TextAreaUsage = (props: TextArea.Props) => {
+  return (
+    <TextArea
+      {...props}
+      placeholder="Enter your name"
+      rows={4}
+    />
+  );
 };

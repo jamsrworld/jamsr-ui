@@ -119,7 +119,7 @@ const Page = () => {
           <RHFField<FormValues> name="bio">
             <Field>
               <Field.Label>Bio</Field.Label>
-              <RHFField.Textarea />
+              <RHFField.TextArea />
               <RHFField.FieldError />
             </Field>
           </RHFField>

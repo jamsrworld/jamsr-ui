@@ -1026,9 +1026,6 @@ importers:
       '@jamsrui/hooks':
         specifier: workspace:^
         version: link:../../hooks
-      '@jamsrui/textfield':
-        specifier: workspace:^
-        version: link:../textfield
       '@jamsrui/utils':
         specifier: workspace:^
         version: link:../../utils
@@ -1066,6 +1063,9 @@ importers:
       '@jamsrui/label':
         specifier: workspace:^
         version: link:../label
+      '@jamsrui/textarea':
+        specifier: workspace:^
+        version: link:../textarea
       '@jamsrui/textfield':
         specifier: workspace:^
         version: link:../textfield

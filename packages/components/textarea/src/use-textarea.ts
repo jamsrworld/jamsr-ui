@@ -1,7 +1,6 @@
 "use client";
 import { useCallback, useMemo } from "react";
 
-import { useFieldA11yContext } from "@jamsrui/context";
 import {
   useControlledState,
   useFocusVisible,
@@ -11,21 +10,14 @@ import {
 import { dataAttr, mergeProps } from "@jamsrui/utils";
 
 import type { UIProps } from "@jamsrui/utils";
-import { useFieldContext } from "@jamsrui/textfield";
 
-export const useTextarea = (props: useTextarea.Props) => {
-  const fieldA11yCtx = useFieldA11yContext();
-
-  const ctx = useFieldContext();
-  const isTextFieldDisabled = ctx?.isDisabled ?? false;
-  const isTextFieldInvalid = ctx?.isInvalid ?? false;
-
+export const useTextArea = (props: useTextArea.Props) => {
   const {
     value: valueProp,
     defaultValue,
     onValueChange,
     ref,
-    disabled: isDisabled = isTextFieldDisabled,
+    disabled: isDisabled = false,
     ...elementProps
   } = props;
 
@@ -44,44 +36,40 @@ export const useTextarea = (props: useTextarea.Props) => {
     prop: valueProp,
   });
 
-  const handleTextareaChange = useCallback(
+  const handleTextAreaChange = useCallback(
     (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       setValue(e.target.value);
     },
     [setValue],
   );
 
-  const getTextareaProps = useCallback(
+  const getTextAreaProps = useCallback(
     (): UIProps<"textarea"> => ({
-      ...fieldA11yCtx?.getInputProps(),
-      ...mergeProps(elementProps, { onChange: handleTextareaChange }),
+      ...mergeProps(elementProps, { onChange: handleTextAreaChange }),
       value,
       ref: refs,
       "data-hovered": dataAttr(isHovered),
       "data-focus-visible": dataAttr(isFocusVisible),
-      "data-invalid": dataAttr(isTextFieldInvalid),
     }),
     [
-      fieldA11yCtx,
       elementProps,
       value,
-      handleTextareaChange,
+      handleTextAreaChange,
       refs,
       isHovered,
       isFocusVisible,
-      isTextFieldInvalid,
     ],
   );
 
   return useMemo(
     () => ({
-      getTextareaProps,
+      getTextAreaProps,
     }),
-    [getTextareaProps],
+    [getTextAreaProps],
   );
 };
 
-export namespace useTextarea {
+export namespace useTextArea {
   export interface Props extends UIProps<"textarea"> {
     value?: string;
     defaultValue?: string;

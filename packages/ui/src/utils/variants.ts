@@ -119,6 +119,7 @@ export const focusWithinClasses = [
   "focus-within:outline-2",
   "focus-within:outline-focus",
   "focus-within:outline-offset-2",
+  "focus-within:data-invalid:outline-danger",
 ];
 
 export const dataFocusVisibleClasses = [
@@ -145,6 +146,7 @@ export const focusRingClasses = [
   "focus:ring-focus",
   "focus:ring-offset-2",
   "focus:ring-offset-background",
+  "focus:data-invalid:ring-danger!",
 ];
 
 export const ringClasses = [

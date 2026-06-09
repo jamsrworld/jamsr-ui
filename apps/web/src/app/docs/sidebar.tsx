@@ -79,7 +79,7 @@ const data: { title: string; items: { title: string; url: Route }[] }[] = [
       { title: "Tags Input", url: "/docs/components/tags-input" },
       { title: "Time Field", url: "/docs/components/time-field" },
       { title: "Text", url: "/docs/components/text" },
-      { title: "Textarea", url: "/docs/components/textarea" },
+      { title: "TextArea", url: "/docs/components/textarea" },
       { title: "Toast", url: "/docs/components/toast" },
       { title: "Toggle", url: "/docs/components/toggle" },
       { title: "Toggle Group", url: "/docs/components/toggle-group" },

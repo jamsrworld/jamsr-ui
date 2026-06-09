@@ -14,7 +14,7 @@ type VariantOption = {
 type CodeExampleProps = Omit<CodeBlockProps, "children"> & {
   url: string;
   children?: ReactNode;
-  component?: ComponentType<object>;
+  component?: ComponentType<any>;
   title: string;
   description?: string;
   variants?: Record<string, VariantOption>;
@@ -30,7 +30,15 @@ const cleanCodeTemplate = (code: string) => {
 };
 
 export const CodeExampleV2 = async (props: CodeExampleProps) => {
-  const { children, component, url, lang = "tsx", title, description, variants } = props;
+  const {
+    children,
+    component,
+    url,
+    lang = "tsx",
+    title,
+    description,
+    variants,
+  } = props;
   const code = await readSourceCode(url);
   const cleanedCode = cleanCodeTemplate(code);
 

@@ -7,13 +7,13 @@ import { RHFOtpInput } from "./rhf-otp-input";
 import { RHFRadioGroup } from "./rhf-radio-group";
 import { RHFSelect } from "./rhf-select";
 import { RHFSwitch } from "./rhf-switch";
-import { RHFTextarea } from "./rhf-textarea";
+import { RHFTextArea } from "./rhf-textarea";
 
 export const RHFField = Object.assign(RHFFieldRoot, {
   Root: RHFFieldRoot,
   FieldError: RHFFieldError,
   Input: RHFInput,
-  Textarea: RHFTextarea,
+  TextArea: RHFTextArea,
   Switch: RHFSwitch,
   Checkbox: RHFCheckbox,
   NumberField: RHFNumberField,

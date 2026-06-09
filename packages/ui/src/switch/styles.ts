@@ -15,7 +15,7 @@ export const switchStyles = tv({
     ],
     thumb: [
       "rounded-full bg-white flex justify-center items-center",
-      "transition-[width] duration-150",
+      "origin-right transition-[width,translate] duration-150",
     ],
   },
   variants: {
@@ -42,15 +42,18 @@ export const switchStyles = tv({
     size: {
       sm: {
         root: "h-5 w-9",
-        thumb: "size-3.5 data-checked:translate-x-3.5",
+        thumb:
+          "size-3.5 data-checked:translate-x-3.5 group-data-pressed:w-4 data-checked:group-data-pressed:translate-x-3",
       },
       md: {
         root: "h-6 w-10",
-        thumb: "size-4 data-checked:translate-x-4",
+        thumb:
+          "size-4 data-checked:translate-x-4 group-data-pressed:w-5 data-checked:group-data-pressed:translate-x-3",
       },
       lg: {
         root: "h-7 w-12",
-        thumb: "size-5 data-checked:translate-x-5",
+        thumb:
+          "size-5 data-checked:translate-x-5 group-data-pressed:w-6 data-checked:group-data-pressed:translate-x-4",
       },
     },
     isInvalid: {

@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { tooltipStyles } from "./styles";
 import {
   Tooltip as TooltipRoot,
   TooltipArrow,
@@ -16,6 +18,7 @@ export const Tooltip = Object.assign(TooltipRoot, {
 });
 
 export namespace Tooltip {
+  export type Variants = VariantProps<typeof tooltipStyles>;
   export interface Props extends TooltipRoot.Props {}
   export interface Positioner extends TooltipPositionerProps {}
 }

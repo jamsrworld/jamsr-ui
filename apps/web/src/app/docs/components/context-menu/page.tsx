@@ -1,7 +1,9 @@
+import { ContextMenu } from "jamsrui/context-menu";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { ContextMenuAligns } from "./examples/aligns";
 import { ContextMenuCheckboxItemsExample } from "./examples/checkbox-items";
 import { ContextMenuGroupExample } from "./examples/group";
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const contextMenuVariants = {
+const contextMenuVariants: VariantOptions<ContextMenu.Variants> = {
   radius: {
     options: ["none", "sm", "md", "lg"],
     defaultValue: "md",

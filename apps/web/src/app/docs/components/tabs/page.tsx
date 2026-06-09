@@ -1,6 +1,8 @@
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Tabs } from "jamsrui/tabs";
 import { Metadata } from "next";
 import { TabDisabled } from "./examples/disabled";
 import { TabDisabledItem } from "./examples/disabled-item";
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const tabsVariants = {
+const tabsVariants: VariantOptions<Tabs.Variants> = {
   variant: {
     options: ["solid", "light", "underlined", "bordered"],
     defaultValue: "solid",
@@ -56,21 +58,18 @@ const TabsPage = () => {
         component={TabsUsage}
       />
       <CodeExampleV2
-        isCentered
         title="With Icons"
         url={resolvePath("with-icons.tsx")}
         variants={tabsVariants}
         component={TabWithIcons}
       />
       <CodeExampleV2
-        isCentered
         title="Disabled All"
         url={resolvePath("disabled.tsx")}
         variants={tabsVariants}
         component={TabDisabled}
       />
       <CodeExampleV2
-        isCentered
         title="Disabled Item"
         url={resolvePath("disabled-item.tsx")}
         variants={tabsVariants}

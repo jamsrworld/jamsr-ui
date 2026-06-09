@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { avatarStyles } from "./styles";
 import {
   Avatar as AvatarRoot,
   AvatarFallback,
@@ -12,5 +14,6 @@ export const Avatar = Object.assign(AvatarRoot, {
 });
 
 export namespace Avatar {
+  export type Variants = VariantProps<typeof avatarStyles>;
   export interface Props extends AvatarRoot.Props {}
 }

@@ -1,6 +1,8 @@
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { RadioGroup } from "jamsrui/radio-group";
 import { Metadata } from "next";
 import { RadioNumberUsage } from "./examples/number-usage";
 import { RadioUsage } from "./examples/usage";
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const radioGroupVariants = {
+const radioGroupVariants: VariantOptions<RadioGroup.Variants> = {
   color: {
     options: [
       "default",

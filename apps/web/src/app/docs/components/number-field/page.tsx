@@ -1,7 +1,9 @@
+import { NumberField } from "jamsrui/number-field";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { NumberFieldControlled } from "./examples/controlled";
 import { NumberFieldUsage } from "./examples/usage";
 
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const numberFieldVariants = {
+const numberFieldVariants: VariantOptions<NumberField.Variants> = {
   isInvalid: {
     options: ["true", "false"],
     defaultValue: "false",
@@ -29,14 +31,12 @@ const NumberFieldPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={numberFieldVariants}
         component={NumberFieldUsage}
       />
       <CodeExampleV2
-        isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
         variants={numberFieldVariants}

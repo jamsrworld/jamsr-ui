@@ -1,7 +1,9 @@
+import { Kbd } from "jamsrui/kbd";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { KbdUsage } from "./examples/usage";
 
 const title = "Kbd";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const kbdVariants = {
+const kbdVariants: VariantOptions<Kbd.Variants> = {
   size: {
     options: ["sm", "md", "lg"],
     defaultValue: "md",
@@ -28,7 +30,6 @@ const KbdPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={kbdVariants}

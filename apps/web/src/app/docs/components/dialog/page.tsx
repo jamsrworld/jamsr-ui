@@ -1,7 +1,9 @@
+import { Dialog } from "jamsrui/dialog";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { DialogBackdrop } from "./examples/backdrop";
 import { DialogBordered } from "./examples/bordered";
 import { DialogCustomCloseButton } from "./examples/custom-close-button";
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const dialogVariants = {
+const dialogVariants: VariantOptions<Dialog.Variants> = {
   radius: {
     options: ["none", "sm", "md", "lg"],
     defaultValue: "md",

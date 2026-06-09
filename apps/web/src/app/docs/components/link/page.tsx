@@ -1,7 +1,9 @@
+import { Link } from "jamsrui/link";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { LinkUsage } from "./examples/usage";
 
 const title = "Link";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const linkVariants = {
+const linkVariants: VariantOptions<Link.Variants> = {
   underline: {
     options: ["always", "hover", "never"],
     defaultValue: "hover",
@@ -28,7 +30,6 @@ const LinkPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={linkVariants}

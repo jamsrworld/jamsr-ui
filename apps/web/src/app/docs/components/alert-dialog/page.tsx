@@ -1,7 +1,9 @@
+import { AlertDialog } from "jamsrui/alert-dialog";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { AlertDialogBackdrop } from "./examples/backdrop";
 import { AlertDialogControlled } from "./examples/controlled";
 import { AlertDialogCustomized } from "./examples/customized";
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const alertDialogVariants = {
+const alertDialogVariants: VariantOptions<AlertDialog.Variants> = {
   radius: {
     options: ["none", "sm", "md", "lg"],
     defaultValue: "md",

@@ -1,7 +1,9 @@
+import { Card } from "jamsrui/card";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { CardUsage } from "./examples/usage";
 
 const title = "Card";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const cardVariants = {
+const cardVariants: VariantOptions<Card.Variants> = {
   bg: {
     options: ["default", "secondary"],
     defaultValue: "default",

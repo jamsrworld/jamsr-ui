@@ -1,7 +1,9 @@
+import { Button } from "jamsrui/button";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { ButtonDisabled } from "./examples/disabled";
 import { ButtonLoading } from "./examples/loading";
 import { ButtonUsage } from "./examples/usage";
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const buttonVariants = {
+const buttonVariants: VariantOptions<Button.Variants> = {
   variant: {
     options: ["solid", "bordered", "text", "light", "soft"],
     defaultValue: "solid",

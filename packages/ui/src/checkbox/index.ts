@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { checkboxStyles } from "./styles";
 import {
   Checkbox as CheckboxRoot,
   CheckboxGroupRoot,
@@ -10,6 +12,7 @@ export const Checkbox = Object.assign(CheckboxRoot, {
 });
 
 export namespace Checkbox {
+  export type Variants = VariantProps<typeof checkboxStyles>;
   export interface Props extends CheckboxRoot.Props {}
 }
 

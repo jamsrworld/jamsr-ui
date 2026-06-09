@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { sliderStyles } from "./styles";
 import {
   Slider as SliderRoot,
   SliderControl,
@@ -17,5 +19,6 @@ export const Slider = Object.assign(SliderRoot, {
 });
 
 export namespace Slider {
+  export type Variants = VariantProps<typeof sliderStyles>;
   export interface Props extends SliderRoot.Props {}
 }

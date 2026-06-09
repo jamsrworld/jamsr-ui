@@ -1,5 +1,6 @@
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
 import { ToastUsage } from "./examples/usage";
@@ -13,7 +14,9 @@ export const metadata: Metadata = {
   description,
 };
 
-const toastVariants = {
+const toastVariants: VariantOptions<{
+  type: "default" | "success" | "error" | "info" | "warning";
+}> = {
   type: {
     options: ["default", "success", "error", "info", "warning"],
     defaultValue: "default",
@@ -28,7 +31,6 @@ const ToastPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={toastVariants}

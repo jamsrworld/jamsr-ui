@@ -1,7 +1,9 @@
+import { Avatar } from "jamsrui/avatar";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { AvatarFallbacks } from "./examples/fallbacks";
 import { AvatarIndicatorExample } from "./examples/indicator";
 import { AvatarUsage } from "./examples/usage";
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const avatarVariants = {
+const avatarVariants: VariantOptions<Avatar.Variants> = {
   size: {
     options: ["xs", "sm", "md", "lg", "xl"],
     defaultValue: "md",

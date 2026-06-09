@@ -1,6 +1,6 @@
 "use client";
 
-import { Label } from "jamsrui/label";
+import { Field } from "jamsrui/field";
 import { Select } from "jamsrui/select";
 import React from "react";
 
@@ -35,32 +35,34 @@ export const SelectMultiple = (
 ) => {
   const { multiple = true, ...rest } = props;
   return (
-    <Select
-      multiple={multiple}
-      {...rest}
-    >
-      <Label>Language</Label>
-      <Select.Trigger className="min-w-80">
-        <Select.Value>
-          {(value) => {
-            return renderValue(value as Language[]);
-          }}
-        </Select.Value>
-        <Select.Icon />
-      </Select.Trigger>
-      <Select.Content>
-        {values.map((value) => {
-          return (
-            <Select.Item
-              key={value}
-              value={value}
-            >
-              <Select.ItemIndicator />
-              <Select.ItemText>{languages[value]}</Select.ItemText>
-            </Select.Item>
-          );
-        })}
-      </Select.Content>
-    </Select>
+    <Field>
+      <Field.Label>Language</Field.Label>
+      <Select
+        multiple={multiple}
+        {...rest}
+      >
+        <Select.Trigger className="min-w-80">
+          <Select.Value>
+            {(value) => {
+              return renderValue(value as Language[]);
+            }}
+          </Select.Value>
+          <Select.Icon />
+        </Select.Trigger>
+        <Select.Content>
+          {values.map((value) => {
+            return (
+              <Select.Item
+                key={value}
+                value={value}
+              >
+                <Select.ItemIndicator />
+                <Select.ItemText>{languages[value]}</Select.ItemText>
+              </Select.Item>
+            );
+          })}
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };

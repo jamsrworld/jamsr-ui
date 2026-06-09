@@ -218,7 +218,7 @@ export const SelectCustomRenderMultiple = (
       multiple={multiple}
       {...rest}
     >
-      <Select.Trigger className="min-w-40">
+      <Select.Trigger className="min-w-40 h-auto">
         <Select.Value placeholder="Select users">
           {(values: string[]) => {
             if (values.length === 0) return "Select users";

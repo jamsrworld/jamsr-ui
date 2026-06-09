@@ -1,7 +1,9 @@
+import { IconButton } from "jamsrui/icon-button";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { IconButtonDisabled } from "./examples/disabled";
 import { IconButtonLoading } from "./examples/loading";
 import { IconButtonUsage } from "./examples/usage";
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const iconButtonVariants = {
+const iconButtonVariants: VariantOptions<IconButton.Variants> = {
   variant: {
     options: ["solid", "bordered", "text", "light", "soft"],
     defaultValue: "solid",
@@ -49,21 +51,18 @@ const IconButtonPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={iconButtonVariants}
         component={IconButtonUsage}
       />
       <CodeExampleV2
-        isCentered
         title="Disabled"
         url={resolvePath("disabled.tsx")}
         variants={iconButtonVariants}
         component={IconButtonDisabled}
       />
       <CodeExampleV2
-        isCentered
         title="Loading"
         url={resolvePath("loading.tsx")}
         variants={iconButtonVariants}

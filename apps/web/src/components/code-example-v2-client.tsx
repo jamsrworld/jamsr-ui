@@ -23,7 +23,6 @@ type Props = {
   id: string;
   title: string;
   description?: string;
-  isCentered?: boolean;
   highlightedHtml: string;
   variants?: Record<string, VariantOption>;
   children?: ReactNode;
@@ -37,7 +36,6 @@ export const CodeExampleV2Client = (props: Props) => {
     id,
     title,
     description,
-    isCentered,
     highlightedHtml,
     variants,
     children,
@@ -156,7 +154,8 @@ export const CodeExampleV2Client = (props: Props) => {
                             key={opt}
                             value={opt}
                           >
-                            {items[opt]}
+                            <Select.ItemIndicator />
+                            <Select.ItemText>{items[opt]}</Select.ItemText>
                           </Select.Item>
                         ))}
                       </Select.Content>
@@ -167,12 +166,7 @@ export const CodeExampleV2Client = (props: Props) => {
             </div>
           </div>
         ) : (
-          <div
-            className={cn(
-              "p-4 min-h-50 w-full",
-              isCentered && "flex items-center justify-center",
-            )}
-          >
+          <div className="p-4 min-h-50 w-full flex items-center justify-center">
             {renderChildren()}
           </div>
         )}

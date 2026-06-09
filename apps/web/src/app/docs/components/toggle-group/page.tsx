@@ -1,6 +1,8 @@
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { ToggleGroup } from "jamsrui/toggle";
 import { Metadata } from "next";
 import { ToggleGroupUsage } from "./examples/usage";
 
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const toggleGroupVariants = {
+const toggleGroupVariants: VariantOptions<ToggleGroup.Variants> = {
   multiple: {
     options: ["true", "false"],
     defaultValue: "false",
@@ -28,7 +30,6 @@ const ToggleGroupPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={toggleGroupVariants}

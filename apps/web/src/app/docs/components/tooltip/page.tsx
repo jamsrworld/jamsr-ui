@@ -39,28 +39,24 @@ const TooltipPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={tooltipVariants}
         component={TooltipUsage}
       />
       <CodeExampleV2
-        isCentered
         title="With Arrow"
         url={resolvePath("with-arrow.tsx")}
         variants={tooltipVariants}
         component={TooltipWithArrow}
       />
       <CodeExampleV2
-        isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
         variants={tooltipVariants}
         component={TooltipControlled}
       />
       <CodeExampleV2
-        isCentered
         title="With Group"
         url={resolvePath("with-group.tsx")}
         variants={tooltipVariants}

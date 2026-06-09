@@ -1,7 +1,9 @@
+import { CircularProgress } from "jamsrui/circular-progress";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { CircularProgressCustomized } from "./examples/customized";
 import { CircularProgressUsage } from "./examples/usage";
 import { CircularProgressWithLabel } from "./examples/with-label";
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const circularProgressVariants = {
+const circularProgressVariants: VariantOptions<CircularProgress.Variants> = {
   color: {
     options: [
       "current",

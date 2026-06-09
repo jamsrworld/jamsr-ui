@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { dateFieldStyles } from "./styles";
 import {
   DateField as DateFieldRoot,
   DateFieldSeparator,
@@ -12,6 +14,7 @@ export const DateField = Object.assign(DateFieldRoot, {
 });
 
 export namespace DateField {
+  export type Variants = VariantProps<typeof dateFieldStyles>;
   export interface Props extends DateFieldRoot.Props {}
   export interface Input extends DateInput.Props {}
   export interface Segment extends DateSegment.Props {}

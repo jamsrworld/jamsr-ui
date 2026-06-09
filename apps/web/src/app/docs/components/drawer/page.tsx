@@ -1,5 +1,6 @@
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
 import { DrawerCustomCloseBtn } from "./examples/custom-close-button";
@@ -16,7 +17,12 @@ export const metadata: Metadata = {
   description,
 };
 
-const drawerVariants = {
+const drawerVariants: VariantOptions<{
+  swipeDirection: "left" | "right" | "up" | "down";
+  size: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "full";
+  backdrop: "transparent" | "opaque" | "blur";
+  radius: "none" | "sm" | "md" | "lg" | "full";
+}> = {
   swipeDirection: {
     options: ["left", "right", "up", "down"],
     defaultValue: "down",

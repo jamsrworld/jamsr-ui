@@ -1,7 +1,9 @@
+import { Toggle } from "jamsrui/toggle";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { ToggleUsage } from "./examples/usage";
 
 const title = "Toggle";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const toggleVariants = {
+const toggleVariants: VariantOptions<Toggle.Variants> = {
   size: {
     options: ["sm", "md", "lg"],
     defaultValue: "md",
@@ -32,7 +34,6 @@ const TogglePage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={toggleVariants}

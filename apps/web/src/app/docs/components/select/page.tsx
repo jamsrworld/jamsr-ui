@@ -1,7 +1,9 @@
+import { Select } from "jamsrui/select";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { SelectControlled } from "./examples/controlled";
 import { SelectControlledNumber } from "./examples/controlled-number";
 import { SelectCustomRenderMultiple } from "./examples/custom-render-multiple";
@@ -26,7 +28,11 @@ export const metadata: Metadata = {
   description,
 };
 
-const selectVariants = {
+const selectVariants: VariantOptions<Select.Variants> = {
+  variant: {
+    options: ["solid", "bordered"],
+    defaultValue: "bordered",
+  },
   size: {
     options: ["sm", "md", "lg"],
     defaultValue: "md",
@@ -45,98 +51,84 @@ const SelectPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={selectVariants}
         component={SelectUsage}
       />
       <CodeExampleV2
-        isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
         variants={selectVariants}
         component={SelectControlled}
       />
       <CodeExampleV2
-        isCentered
         title="Controlled Number"
         url={resolvePath("controlled-number.tsx")}
         variants={selectVariants}
         component={SelectControlledNumber}
       />
       <CodeExampleV2
-        isCentered
         title="Placeholder"
         url={resolvePath("placeholder.tsx")}
         variants={selectVariants}
         component={SelectPlaceholder}
       />
       <CodeExampleV2
-        isCentered
         title="Disabled"
         url={resolvePath("disabled.tsx")}
         variants={selectVariants}
         component={SelectDisabled}
       />
       <CodeExampleV2
-        isCentered
         title="Disabled Items"
         url={resolvePath("disabled-items.tsx")}
         variants={selectVariants}
         component={SelectDisabledItems}
       />
       <CodeExampleV2
-        isCentered
         title="Start & End Items"
         url={resolvePath("start-end-items.tsx")}
         variants={selectVariants}
         component={SelectStartEndItems}
       />
       <CodeExampleV2
-        isCentered
         title="With Description"
         url={resolvePath("with-description.tsx")}
         variants={selectVariants}
         component={SelectWithDescription}
       />
       <CodeExampleV2
-        isCentered
         title="With Error Message"
         url={resolvePath("with-error-message.tsx")}
         variants={selectVariants}
         component={SelectWithErrorMessage}
       />
       <CodeExampleV2
-        isCentered
         title="With Icons"
         url={resolvePath("with-icons.tsx")}
         variants={selectVariants}
         component={SelectWithIcons}
       />
       <CodeExampleV2
-        isCentered
         title="Custom Render Value"
         url={resolvePath("custom-render-value.tsx")}
         variants={selectVariants}
         component={SelectCustomRenderValue}
       />
       <CodeExampleV2
-        isCentered
         title="Multiple"
         url={resolvePath("multiple.tsx")}
         variants={selectVariants}
         component={SelectMultiple}
       />
       <CodeExampleV2
-        isCentered
         title="Multiple Controlled"
         url={resolvePath("multiple-controlled.tsx")}
         variants={selectVariants}
         component={SelectMultipleControlled}
       />
       <CodeExampleV2
-        isCentered
         title="Custom Render Multiple"
         url={resolvePath("custom-render-multiple.tsx")}
         variants={selectVariants}

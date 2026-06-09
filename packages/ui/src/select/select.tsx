@@ -25,14 +25,18 @@ const useSelectContext = () => {
 export const SelectRoot = <Value, Multiple extends boolean | undefined = false>(
   props: SelectRoot.Props<Value, Multiple>,
 ) => {
-  const { color, radius, size, isInvalid, className, ...restProps } = props;
-  const styles = selectStyles({ color, radius, size, isInvalid, className });
+  const { color, radius, size, variant, className, ...restProps } = props;
+  const styles = selectStyles({
+    color,
+    radius,
+    size,
+    variant,
+    className,
+  });
 
   return (
     <SelectContext.Provider value={{ styles }}>
-      <div className={styles.root()}>
-        <SelectPrimitive.Root {...restProps} />
-      </div>
+      <SelectPrimitive.Root {...restProps} />
     </SelectContext.Provider>
   );
 };
@@ -170,11 +174,13 @@ export const SelectItemIndicator = (
   const { children = <CheckIcon />, className, ...restProps } = props;
   return (
     <SelectPrimitive.ItemIndicator
+      keepMounted
       {...restProps}
       className={styles.itemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </SelectPrimitive.ItemIndicator>
+      render={(props, { selected }) => (
+        <span {...props}> {selected ? children : null} </span>
+      )}
+    />
   );
 };
 

@@ -21,7 +21,6 @@ const MenubarPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         component={MenubarUsage}

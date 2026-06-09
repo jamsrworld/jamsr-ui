@@ -1,7 +1,9 @@
+import { Slider } from "jamsrui/slider";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { SliderUsage } from "./examples/usage";
 
 const title = "Slider";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const sliderVariants = {
+const sliderVariants: VariantOptions<Slider.Variants> = {
   orientation: {
     options: ["horizontal", "vertical"],
     defaultValue: "horizontal",
@@ -28,7 +30,6 @@ const SliderPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={sliderVariants}

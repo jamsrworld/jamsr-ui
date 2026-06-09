@@ -1,7 +1,9 @@
+import { Switch } from "jamsrui/switch";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { SwitchControlled } from "./examples/controlled";
 import { SwitchCustomization } from "./examples/customization";
 import { SwitchDescription } from "./examples/description";
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const switchVariants = {
+const switchVariants: VariantOptions<Switch.Variants> = {
   color: {
     options: [
       "default",
@@ -44,42 +46,36 @@ const SwitchPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={switchVariants}
         component={SwitchUsage}
       />
       <CodeExampleV2
-        isCentered
         title="With Label"
         url={resolvePath("with-label.tsx")}
         variants={switchVariants}
         component={SwitchWithLabel}
       />
       <CodeExampleV2
-        isCentered
         title="Description"
         url={resolvePath("description.tsx")}
         variants={switchVariants}
         component={SwitchDescription}
       />
       <CodeExampleV2
-        isCentered
         title="Disabled"
         url={resolvePath("disabled.tsx")}
         variants={switchVariants}
         component={SwitchDisabled}
       />
       <CodeExampleV2
-        isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
         variants={switchVariants}
         component={SwitchControlled}
       />
       <CodeExampleV2
-        isCentered
         title="Customization"
         url={resolvePath("customization.tsx")}
         variants={switchVariants}

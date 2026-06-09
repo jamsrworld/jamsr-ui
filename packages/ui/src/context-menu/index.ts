@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { contextMenuStyles } from "./styles";
 import {
   ContextMenu as ContextMenuRoot,
   ContextMenuArrow,
@@ -38,5 +40,6 @@ export const ContextMenu = Object.assign(ContextMenuRoot, {
 });
 
 export namespace ContextMenu {
+  export type Variants = VariantProps<typeof contextMenuStyles>;
   export interface Props extends ContextMenuRoot.Props {}
 }

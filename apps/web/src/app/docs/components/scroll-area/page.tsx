@@ -1,7 +1,9 @@
+import { ScrollArea } from "jamsrui/scroll-area";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { ScrollAreaUsage } from "./examples/usage";
 
 const title = "ScrollArea";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const scrollAreaVariants = {
+const scrollAreaVariants: VariantOptions<ScrollArea.Variants> = {
   isScrollable: {
     options: ["true", "false"],
     defaultValue: "true",
@@ -28,7 +30,6 @@ const ScrollAreaPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={scrollAreaVariants}

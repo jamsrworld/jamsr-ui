@@ -1,7 +1,9 @@
+import { Chip } from "jamsrui/chip";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { ChipUsage } from "./examples/usage";
 import { ChipWithIcons } from "./examples/with-icons";
 
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const chipVariants = {
+const chipVariants: VariantOptions<Chip.Variants> = {
   variant: {
     options: ["solid", "bordered", "soft", "dot"],
     defaultValue: "solid",

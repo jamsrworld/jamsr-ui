@@ -18,7 +18,6 @@ type CodeExampleProps = Omit<CodeBlockProps, "children"> & {
   title: string;
   description?: string;
   variants?: Record<string, VariantOption>;
-  isCentered?: boolean;
 };
 
 const cleanCodeTemplate = (code: string) => {

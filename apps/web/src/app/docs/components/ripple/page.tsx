@@ -1,6 +1,8 @@
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Ripple } from "jamsrui/ripple";
 import { Metadata } from "next";
 import { RippleUsage } from "./examples/usage";
 
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const rippleVariants = {
+const rippleVariants: VariantOptions<Ripple.Variants> = {
   isCentered: {
     options: ["true", "false"],
     defaultValue: "false",
@@ -28,7 +30,6 @@ const RipplePage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={rippleVariants}

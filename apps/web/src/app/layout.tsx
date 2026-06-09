@@ -30,9 +30,7 @@ export default function RootLayout({
       lang="en"
       className="dark"
     >
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

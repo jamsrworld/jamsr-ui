@@ -1,7 +1,9 @@
+import { Toolbar } from "jamsrui/toolbar";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { ToolbarUsage } from "./examples/usage";
 
 const title = "Toolbar";
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const toolbarVariants = {
+const toolbarVariants: VariantOptions<Toolbar.Variants> = {
   orientation: {
     options: ["horizontal", "vertical"],
     defaultValue: "horizontal",
@@ -27,7 +29,6 @@ const ToolbarPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={toolbarVariants}

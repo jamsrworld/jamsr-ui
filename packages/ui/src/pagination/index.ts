@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { paginationStyles } from "./styles";
 import {
   Pagination as PaginationRoot,
   PaginationEllipsis,
@@ -10,6 +12,7 @@ export const Pagination = Object.assign(PaginationRoot, {
 });
 
 export namespace Pagination {
+  export type Variants = VariantProps<typeof paginationStyles>;
   export interface Props extends PaginationRoot.Props {}
   export interface Item extends PaginationItem.Props {}
   export interface Ellipsis extends PaginationEllipsis.Props {}

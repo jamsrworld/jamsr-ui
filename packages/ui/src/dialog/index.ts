@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { dialogStyles } from "./styles";
 import {
   Dialog as DialogRoot,
   DialogBody,
@@ -20,5 +22,6 @@ export const Dialog = Object.assign(DialogRoot, {
 });
 
 export namespace Dialog {
+  export type Variants = VariantProps<typeof dialogStyles>;
   export interface Props extends DialogRoot.Props {}
 }

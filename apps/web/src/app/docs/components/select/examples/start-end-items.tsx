@@ -1,7 +1,7 @@
 "use client";
 
 import { EmailIcon } from "@jamsrui/icons";
-import { Label } from "jamsrui/label";
+import { Field } from "jamsrui/field";
 import { Select } from "jamsrui/select";
 import React from "react";
 
@@ -9,26 +9,28 @@ export const SelectStartEndItems = (
   props: Partial<React.ComponentProps<typeof Select>>,
 ) => {
   return (
-    <Select {...props}>
-      <Label>Fruit</Label>
-      <Select.Trigger className="min-w-40" />
-      <Select.Content>
-        <Select.Item value="apple">
-          <Select.ItemIndicator />
-          <EmailIcon className="text-foreground-secondary text-base" />
-          <Select.ItemText>Apple</Select.ItemText>
-        </Select.Item>
-        <Select.Item value="blueberry">
-          <Select.ItemIndicator />
-          <EmailIcon className="text-foreground-secondary text-base" />
-          <Select.ItemText>Blueberry</Select.ItemText>
-        </Select.Item>
-        <Select.Item value="watermelon">
-          <Select.ItemIndicator />
-          <EmailIcon className="text-foreground-secondary text-base" />
-          <Select.ItemText>Watermelon</Select.ItemText>
-        </Select.Item>
-      </Select.Content>
-    </Select>
+    <Field>
+      <Field.Label>Fruit</Field.Label>
+      <Select {...props}>
+        <Select.Trigger className="min-w-40" />
+        <Select.Content>
+          <Select.Item value="apple">
+            <Select.ItemIndicator />
+            <Select.ItemText>Apple</Select.ItemText>
+            <EmailIcon className="text-foreground-secondary text-base ms-auto" />
+          </Select.Item>
+          <Select.Item value="blueberry">
+            <Select.ItemIndicator />
+            <Select.ItemText>Blueberry</Select.ItemText>
+            <EmailIcon className="text-foreground-secondary text-base ms-auto" />
+          </Select.Item>
+          <Select.Item value="watermelon">
+            <Select.ItemIndicator />
+            <Select.ItemText>Watermelon</Select.ItemText>
+            <EmailIcon className="text-foreground-secondary text-base ms-auto" />
+          </Select.Item>
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };

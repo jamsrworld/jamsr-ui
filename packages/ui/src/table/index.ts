@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { tableStyles } from "./styles";
 import {
   Table as TableRoot,
   TableBody,
@@ -27,6 +29,7 @@ export {
 };
 
 export namespace Table {
+  export type Variants = VariantProps<typeof tableStyles>;
   export interface Props extends TableRoot.Props {}
   export interface Header extends TableHeader.Props {}
   export interface Column extends TableColumn.Props {}

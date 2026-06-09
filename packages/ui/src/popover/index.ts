@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { popoverStyles } from "./styles";
 import {
   Popover as PopoverRoot,
   PopoverArrow,
@@ -18,6 +20,7 @@ export const Popover = Object.assign(PopoverRoot, {
 });
 
 export namespace Popover {
+  export type Variants = VariantProps<typeof popoverStyles>;
   export interface Props extends PopoverRoot.Props {}
   export interface Positioner extends PopoverPrimitive.Positioner.Props {}
 }

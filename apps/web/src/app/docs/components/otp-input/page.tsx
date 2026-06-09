@@ -1,7 +1,9 @@
+import { OtpInput } from "jamsrui/otp-input";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { OtpInput6Digits } from "./examples/6-digits";
 import { OtpInputControlled } from "./examples/controlled";
 import { OtpInputCustomization } from "./examples/customization";
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const otpInputVariants = {
+const otpInputVariants: VariantOptions<OtpInput.Variants> = {
   size: {
     options: ["sm", "md", "lg"],
     defaultValue: "md",
@@ -40,63 +42,54 @@ const OtpInputPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={otpInputVariants}
         component={OtpInputUsage}
       />
       <CodeExampleV2
-        isCentered
         title="6 Digits"
         url={resolvePath("6-digits.tsx")}
         variants={otpInputVariants}
         component={OtpInput6Digits}
       />
       <CodeExampleV2
-        isCentered
         title="With Separators"
         url={resolvePath("with-separators.tsx")}
         variants={otpInputVariants}
         component={OtpInputWithSeparators}
       />
       <CodeExampleV2
-        isCentered
         title="On Complete"
         url={resolvePath("on-complete.tsx")}
         variants={otpInputVariants}
         component={OtpInputOnComplete}
       />
       <CodeExampleV2
-        isCentered
         title="With Patterns"
         url={resolvePath("with-patterns.tsx")}
         variants={otpInputVariants}
         component={OtpInputWithPatterns}
       />
       <CodeExampleV2
-        isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
         variants={otpInputVariants}
         component={OtpInputControlled}
       />
       <CodeExampleV2
-        isCentered
         title="Invalid"
         url={resolvePath("invalid.tsx")}
         variants={otpInputVariants}
         component={OtpInputInvalid}
       />
       <CodeExampleV2
-        isCentered
         title="Disabled"
         url={resolvePath("disabled.tsx")}
         variants={otpInputVariants}
         component={OtpInputDisabled}
       />
       <CodeExampleV2
-        isCentered
         title="Customization"
         url={resolvePath("customization.tsx")}
         variants={otpInputVariants}

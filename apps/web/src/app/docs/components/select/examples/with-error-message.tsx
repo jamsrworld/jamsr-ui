@@ -15,13 +15,11 @@ const apples = [
 export const SelectWithErrorMessage = (
   props: Partial<React.ComponentProps<typeof Select>>,
 ) => {
-  const { isInvalid = true, ...rest } = props;
   return (
-    <Field>
+    <Field invalid>
       <Select
         items={apples}
-        isInvalid={isInvalid}
-        {...rest}
+        {...props}
       >
         <Field.Label>Fruit</Field.Label>
         <Select.Trigger className="min-w-40" />

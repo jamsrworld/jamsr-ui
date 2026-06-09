@@ -1,7 +1,9 @@
+import { Header } from "jamsrui/header";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { HeaderUsage } from "./examples/usage";
 
 const title = "Header";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const headerVariants = {
+const headerVariants: VariantOptions<Header.Variants> = {
   isBorder: {
     options: ["true", "false"],
     defaultValue: "false",

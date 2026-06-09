@@ -1,6 +1,6 @@
 "use client";
 
-import { Label } from "jamsrui/label";
+import { Field } from "jamsrui/field";
 import { Select } from "jamsrui/select";
 import React from "react";
 
@@ -17,24 +17,26 @@ export const SelectDisabled = (
 ) => {
   const { disabled = true, ...rest } = props;
   return (
-    <Select
-      items={apples}
-      disabled={disabled}
-      {...rest}
-    >
-      <Label>Fruit</Label>
-      <Select.Trigger className="min-w-40" />
-      <Select.Content>
-        {apples.map(({ label, value }) => (
-          <Select.Item
-            key={label}
-            value={value}
-          >
-            <Select.ItemIndicator />
-            <Select.ItemText>{label}</Select.ItemText>
-          </Select.Item>
-        ))}
-      </Select.Content>
-    </Select>
+    <Field>
+      <Field.Label>Fruit</Field.Label>
+      <Select
+        items={apples}
+        disabled={disabled}
+        {...rest}
+      >
+        <Select.Trigger className="min-w-40" />
+        <Select.Content>
+          {apples.map(({ label, value }) => (
+            <Select.Item
+              key={label}
+              value={value}
+            >
+              <Select.ItemIndicator />
+              <Select.ItemText>{label}</Select.ItemText>
+            </Select.Item>
+          ))}
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };

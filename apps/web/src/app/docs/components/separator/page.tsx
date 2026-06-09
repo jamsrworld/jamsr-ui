@@ -1,7 +1,9 @@
+import { Separator } from "jamsrui/separator";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { SeparatorUsage } from "./examples/usage";
 
 const title = "Separator";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const separatorVariants = {
+const separatorVariants: VariantOptions<Separator.Variants> = {
   variant: {
     options: ["default", "light", "dark"],
     defaultValue: "default",
@@ -32,7 +34,6 @@ const SeparatorPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={separatorVariants}

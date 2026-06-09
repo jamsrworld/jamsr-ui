@@ -15,7 +15,7 @@ export const SidebarWrapper = (props: SidebarWrapper.Props) => {
   );
 };
 
-export const Sidebar = (props: Sidebar.Props) => {
+export const Sidebar = (props: SidebarUI.Props) => {
   const { className, ...rest } = props;
   return <SidebarUI {...rest} className={styles.sidebar({ className })} />;
 };

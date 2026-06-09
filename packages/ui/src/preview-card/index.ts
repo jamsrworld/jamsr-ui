@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { previewCardStyles } from "./styles";
 import {
   PreviewCard as PreviewCardRoot,
   PreviewCardArrow,
@@ -14,6 +16,7 @@ export const PreviewCard = Object.assign(PreviewCardRoot, {
 });
 
 export namespace PreviewCard {
+  export type Variants = VariantProps<typeof previewCardStyles>;
   export interface Props extends PreviewCardRoot.Props {}
   export interface Positioner extends PreviewCardPrimitive.Positioner.Props {}
 }

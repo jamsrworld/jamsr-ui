@@ -1,20 +1,17 @@
 import { tv } from "tailwind-variants";
 
-import { focusVisibleClasses } from "../utils/variants";
+import { focusRingClasses, focusVisibleClasses } from "../utils/variants";
 
 export const selectStyles = tv({
   slots: {
-    root: ["group relative flex flex-col gap-1 text-sm"],
     value: [
       "text-sm",
       "font-normal overflow-hidden text-ellipsis grow text-start",
       "data-placeholder:text-foreground-secondary",
     ],
     trigger: [
-      "relative flex w-full flex-row items-center gap-3 border border-border px-3 py-2 outline-none",
-      "focus:border-primary data-hovered:not-focus:border-border-dark data-popup-open:border-primary",
+      "relative flex w-full flex-row items-center gap-3 px-3 py-2 outline-none",
       "data-disabled:status-disabled",
-      ...focusVisibleClasses,
     ],
     icon: "shrink-0 transition-transform duration-300 group-data-popup-open:rotate-180",
     positioner: "z-popover outline-hidden select-none",
@@ -25,10 +22,10 @@ export const selectStyles = tv({
     selectItem: [
       "relative flex w-full cursor-default select-none items-center gap-2 p-2 text-sm outline-none",
       "data-disabled:status-disabled data-highlighted:bg-surface-secondary data-selected:bg-surface-secondary/50",
-      "grid grid-cols-[0.75rem_1fr]",
+      "flex flex-row",
     ],
-    itemIndicator: "col-start-1",
-    itemText: "col-start-2",
+    itemIndicator: "size-3",
+    itemText: "",
     scrollUpArrow: "",
     scrollDownArrow: "",
     popup: [
@@ -86,14 +83,22 @@ export const selectStyles = tv({
         value: "text-base",
       },
     },
-    isInvalid: {
-      true: {
-        trigger: "border-danger!",
+    variant: {
+      bordered: {
+        trigger: [
+          "border border-border",
+          "focus:border-primary focus:data-invalid:border-danger",
+          "data-hovered:not-focus:border-border-dark data-popup-open:border-primary data-popup-open:data-invalid:border-danger",
+        ],
+      },
+      solid: {
+        trigger: ["bg-surface", ...focusVisibleClasses, ...focusRingClasses],
       },
     },
   },
   defaultVariants: {
     size: "md",
     radius: "md",
+    variant: "bordered",
   },
 });

@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { linearProgressStyles } from "./styles";
 import {
   LinearProgress as LinearProgressRoot,
   LinearProgressBar,
@@ -8,6 +10,7 @@ export const LinearProgress = Object.assign(LinearProgressRoot, {
 });
 
 export namespace LinearProgress {
+  export type Variants = VariantProps<typeof linearProgressStyles>;
   export interface Props extends LinearProgressRoot.Props {}
   export interface Bar extends LinearProgressBar.Props {}
 }

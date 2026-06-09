@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { numberFieldStyles } from "./styles";
 import {
   NumberField as NumberFieldRoot,
   NumberFieldDecrement,
@@ -16,5 +18,6 @@ export const NumberField = Object.assign(NumberFieldRoot, {
 });
 
 export namespace NumberField {
+  export type Variants = VariantProps<typeof numberFieldStyles>;
   export interface Props extends NumberFieldRoot.Props {}
 }

@@ -9,16 +9,15 @@ export const RHFSelect = <Value, Multiple extends boolean | undefined = false>(
   props: RHFSelect.Props<Value, Multiple>,
 ) => {
   const { field, fieldState } = useRHFContext();
-  const { value, onChange, onBlur, name, ref, disabled } = field;
+  const { value, onChange, name, ref, disabled } = field;
   const { invalid } = fieldState;
   return (
     <Select
-      inputRef={ref}
       data-invalid={dataAttr(invalid)}
       disabled={disabled}
+      inputRef={ref}
       isInvalid={invalid}
       name={name}
-      // onBlur={onBlur}
       onValueChange={onChange}
       value={value}
       {...props}

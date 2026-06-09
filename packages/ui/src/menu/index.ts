@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { menuStyles } from "./styles";
 import {
   Menu as MenuRoot,
   MenuArrow,
@@ -38,5 +40,6 @@ export const Menu = Object.assign(MenuRoot, {
 });
 
 export namespace Menu {
+  export type Variants = VariantProps<typeof menuStyles>;
   export interface Props extends MenuRoot.Props {}
 }

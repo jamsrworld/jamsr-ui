@@ -1,7 +1,9 @@
+import { Table } from "jamsrui/table";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { TableCustomEmptyState } from "./examples/custom-empty-state";
 import { TableEmptyState } from "./examples/empty-state";
 import { TableStickyHeader } from "./examples/sticky-header";
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const tableVariants = {
+const tableVariants: VariantOptions<Table.Variants> = {
   variant: {
     options: ["solid", "bordered"],
     defaultValue: "bordered",

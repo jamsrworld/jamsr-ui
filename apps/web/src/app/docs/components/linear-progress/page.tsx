@@ -1,7 +1,9 @@
+import { LinearProgress } from "jamsrui/linear-progress";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { LinearProgressControlled } from "./examples/controlled";
 import { LinearProgressUsage } from "./examples/usage";
 
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const linearProgressVariants = {
+const linearProgressVariants: VariantOptions<LinearProgress.Variants> = {
   color: {
     options: ["primary", "secondary", "success", "warning", "error"],
     defaultValue: "primary",
@@ -37,14 +39,12 @@ const LinearProgressPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={linearProgressVariants}
         component={LinearProgressUsage}
       />
       <CodeExampleV2
-        isCentered
         title="Controlled"
         url={resolvePath("controlled.tsx")}
         variants={linearProgressVariants}

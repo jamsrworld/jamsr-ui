@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { scrollAreaStyles } from "./styles";
 import {
   ScrollArea as ScrollAreaRoot,
   ScrollAreaContent,
@@ -16,5 +18,6 @@ export const ScrollArea = Object.assign(ScrollAreaRoot, {
 });
 
 export namespace ScrollArea {
+  export type Variants = VariantProps<typeof scrollAreaStyles>;
   export interface Props extends ScrollAreaRoot.Props {}
 }

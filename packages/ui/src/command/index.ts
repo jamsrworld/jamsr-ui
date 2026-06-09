@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { commandStyles } from "./styles";
 import {
   Command as CommandRoot,
   CommandDialog,
@@ -24,6 +26,7 @@ export const Command = Object.assign(CommandRoot, {
 });
 
 export namespace Command {
+  export type Variants = VariantProps<typeof commandStyles>;
   export interface Props extends CommandRoot.Props {}
   export interface Input extends CommandInput.Props {}
   export interface List extends CommandList.Props {}

@@ -1,7 +1,9 @@
+import { Text } from "jamsrui/text";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { TextUsage } from "./examples/usage";
 
 const title = "Text";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const textVariants = {
+const textVariants: VariantOptions<Text.Variants> = {
   variant: {
     options: [
       "h1",
@@ -51,7 +53,6 @@ const TextPage = () => {
       description={description}
     >
       <CodeExampleV2
-        isCentered
         title="Usage"
         url={resolvePath("usage.tsx")}
         variants={textVariants}

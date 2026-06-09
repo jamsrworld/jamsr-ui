@@ -1,7 +1,9 @@
+import { Checkbox } from "jamsrui/checkbox";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { CheckboxControlled } from "./examples/controlled";
 import { CheckboxCustomIndicator } from "./examples/custom-indicator";
 import { CheckboxDescription } from "./examples/description";
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   description,
 };
 
-const checkboxVariants = {
+const checkboxVariants: VariantOptions<Checkbox.Variants> = {
   size: {
     options: ["sm", "md", "lg"],
     defaultValue: "md",

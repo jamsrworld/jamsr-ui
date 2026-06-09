@@ -1,3 +1,5 @@
+import type { VariantProps } from "tailwind-variants";
+import { otpInputStyles } from "./styles";
 import {
   OtpInput as OtpInputRoot,
   OtpInputGroup,
@@ -15,6 +17,7 @@ export const OtpInput = Object.assign(OtpInputRoot, {
 });
 
 export namespace OtpInput {
+  export type Variants = VariantProps<typeof otpInputStyles>;
   export interface Props extends OtpInputRoot.Props {}
   export interface Group extends OtpInputGroup.Props {}
   export interface Slot extends OtpInputSlot.Props {}

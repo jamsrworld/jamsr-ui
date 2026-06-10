@@ -48,7 +48,7 @@ export const CodeExampleV2 = async (props: CodeExampleProps) => {
 
   const html = await codeToHtml(cleanedCode, {
     lang,
-    theme: "vesper",
+    theme: "github-dark-default",
   });
   const id = title.toLowerCase().replace(" ", "-");
 

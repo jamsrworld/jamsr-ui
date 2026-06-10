@@ -1,7 +1,7 @@
 import {
-  ScrollArea as ScrollAreaRoot,
   ScrollAreaContent,
   ScrollAreaCorner,
+  ScrollAreaRoot,
   ScrollAreaScrollbar,
   ScrollAreaThumb,
   ScrollAreaViewport,

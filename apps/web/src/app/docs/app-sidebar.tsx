@@ -119,7 +119,7 @@ const LinkItem = ({ href, ...restProp }: LinkProps) => {
 
 export const AppSidebar = () => {
   return (
-    <div className="sticky top-12 h-[calc(100vh-48px)] self-start overscroll-contain">
+    <div className="sticky max-lg:hidden top-12 h-[calc(100vh-48px)] self-start overscroll-contain">
       <ScrollArea className="h-full">
         <ScrollArea.Viewport className="overscroll-contain h-full">
           <div className="flex flex-col gap-2 min-w-55">
@@ -130,7 +130,12 @@ export const AppSidebar = () => {
                   key={title}
                   className="flex flex-col"
                 >
-                  <Text variant="h6">{title}</Text>
+                  <Text
+                    variant="h6"
+                    className="mb-3"
+                  >
+                    {title}
+                  </Text>
                   {items.map((item) => {
                     return (
                       <LinkItem

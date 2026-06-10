@@ -178,15 +178,14 @@ export const CodeExampleV2Client = (props: Props) => {
           />
         </div> */}
 
-        <ScrollArea>
-          <ScrollArea.Viewport className="max-h-250">
+        <ScrollArea className="border-t border-border">
+          <ScrollArea.Viewport className="max-h-[50vh]">
             {/* <div dangerouslySetInnerHTML={{ __html: finalHtml }} /> */}
             <div
               className="p-4 rounded-2xl [&_code]:text-sm [&_.shiki]:bg-background!"
               dangerouslySetInnerHTML={{ __html: finalHtml }}
             />
           </ScrollArea.Viewport>
-
           <ScrollArea.Scrollbar />
         </ScrollArea>
       </div>

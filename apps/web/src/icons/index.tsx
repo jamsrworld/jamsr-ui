@@ -1,3 +1,342 @@
+"use client";
+import * as React from "react";
+
+export const SuccessIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+};
+
+export const InfoIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <circle
+        cx={12}
+        cy={12}
+        r={10}
+      />
+      <path d="M12 16v-4" />
+      <path d="M12 8h.01" />
+    </svg>
+  );
+};
+
+export const WarningIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M12 13V9M12.5 16.5C12.5 16.7761 12.2761 17 12 17C11.7239 17 11.5 16.7761 11.5 16.5M12.5 16.5C12.5 16.2239 12.2761 16 12 16C11.7239 16 11.5 16.2239 11.5 16.5M12.5 16.5H11.5M19.3311 10.0912L18.98 9.46437C16.6988 5.39063 15.5581 3.35377 14.0576 2.67625C12.7495 2.08558 11.2505 2.08558 9.94239 2.67625C8.44189 3.35377 7.30124 5.39064 5.01995 9.46438L4.66894 10.0912C2.47606 14.007 1.37961 15.965 1.56302 17.5683C1.72303 18.967 2.46536 20.2335 3.60763 21.0566C4.91688 22 7.16092 22 11.649 22H12.351C16.8391 22 19.0831 22 20.3924 21.0566C21.5346 20.2335 22.277 18.967 22.437 17.5683C22.6204 15.965 21.5239 14.007 19.3311 10.0912Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+};
+
+export const ErrorIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M12 16h.01" />
+      <path d="M12 8v4" />
+      <path d="M15.312 2a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586l-4.688-4.688A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2z" />
+    </svg>
+  );
+};
+
+export const ArrowLeftToLineIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M3 19V5" />
+      <path d="m13 6-6 6 6 6" />
+      <path d="M7 12h14" />
+    </svg>
+  );
+};
+
+export const ArrowLeftIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="m12 19-7-7 7-7" />
+      <path d="M19 12H5" />
+    </svg>
+  );
+};
+
+export const ArrowRightIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+};
+
+export const ArrowRightToLineIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={20}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      width={20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M17 12H3" />
+      <path d="m11 18 6-6-6-6" />
+      <path d="M21 5v14" />
+    </svg>
+  );
+};
+
+export const ChevronDoubleLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    fill="none"
+    height={20}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    width={20}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="m11 17-5-5 5-5" />
+    <path d="m18 17-5-5 5-5" />
+  </svg>
+);
+
+export const ChevronDoubleRightIcon = (
+  props: React.SVGProps<SVGSVGElement>,
+) => (
+  <svg
+    fill="none"
+    height={20}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    width={20}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="m6 17 5-5-5-5" />
+    <path d="m13 17 5-5-5-5" />
+  </svg>
+);
+
+export const ChevronDownIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    fill="none"
+    width={16}
+    height={16}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="m6 9 6 6 6-6" />
+  </svg>
+);
+
+export const ChevronsUpDownIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={16}
+      width={16}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="m7 15 5 5 5-5" />
+      <path d="m7 9 5-5 5 5" />
+    </svg>
+  );
+};
+
+export const ArrowDownIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={16}
+      width={16}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M12 5v14" />
+      <path d="m19 12-7 7-7-7" />
+    </svg>
+  );
+};
+
+export const ArrowUpIcon = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      fill="none"
+      height={16}
+      width={16}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="m5 12 7-7 7 7" />
+      <path d="M12 19V5" />
+    </svg>
+  );
+};
+
+export const ChevronLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    fill="none"
+    height={16}
+    width={16}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="m15 18-6-6 6-6" />
+  </svg>
+);
+
+export const ChevronUpIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    fill="none"
+    height={16}
+    width={16}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="m18 15-6-6-6 6" />
+  </svg>
+);
+
+export const ChevronRightIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    fill="none"
+    height={20}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    width={20}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="m9 18 6-6-6-6" />
+  </svg>
+);
+
 export const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     color="currentColor"
@@ -19,7 +358,13 @@ export const CheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export const CloseIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg fill="none" height={20} viewBox="0 0 24 24" width={20} {...props}>
+  <svg
+    fill="none"
+    height={20}
+    viewBox="0 0 24 24"
+    width={20}
+    {...props}
+  >
     <path
       d="m6 18 6-6m0 0 6-6m-6 6L6 6m6 6 6 6"
       stroke="currentColor"
@@ -101,7 +446,10 @@ export const EyeOpenIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path d="M10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z" fill="currentColor" />
+    <path
+      d="M10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Z"
+      fill="currentColor"
+    />
     <path
       clipRule="evenodd"
       d="M4.745 7.029C6.446 5.396 8.933 4 12 4s5.554 1.396 7.255 3.029c.851.817 1.523 1.709 1.988 2.55.45.815.757 1.678.757 2.421 0 .743-.307 1.606-.757 2.42a10.926 10.926 0 0 1-1.988 2.551C17.554 18.604 15.067 20 12 20s-5.554-1.396-7.255-3.029a10.927 10.927 0 0 1-1.988-2.55C2.307 13.606 2 12.743 2 12c0-.743.307-1.606.757-2.42a10.928 10.928 0 0 1 1.988-2.551ZM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
@@ -285,7 +633,10 @@ export const ZipIcon = (props: React.SVGProps<SVGSVGElement>) => (
     </g>
     <defs>
       <clipPath id="a">
-        <path d="M0 0h40v40H0z" fill="#fff" />
+        <path
+          d="M0 0h40v40H0z"
+          fill="#fff"
+        />
       </clipPath>
       <filter
         colorInterpolationFilters="sRGB"
@@ -296,7 +647,10 @@ export const ZipIcon = (props: React.SVGProps<SVGSVGElement>) => (
         x={22.098}
         y={1.703}
       >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
+        <feFlood
+          floodOpacity={0}
+          result="BackgroundImageFix"
+        />
         <feColorMatrix
           in="SourceAlpha"
           result="hardAlpha"
@@ -304,7 +658,10 @@ export const ZipIcon = (props: React.SVGProps<SVGSVGElement>) => (
         />
         <feOffset dy={2} />
         <feGaussianBlur stdDeviation={1} />
-        <feComposite in2="hardAlpha" operator="out" />
+        <feComposite
+          in2="hardAlpha"
+          operator="out"
+        />
         <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0" />
         <feBlend
           in2="BackgroundImageFix"
@@ -620,8 +977,16 @@ export const Settings2Icon = (props: React.SVGProps<SVGSVGElement>) => {
     >
       <path d="M14 17H5" />
       <path d="M19 7h-9" />
-      <circle cx="17" cy="17" r="3" />
-      <circle cx="7" cy="7" r="3" />
+      <circle
+        cx="17"
+        cy="17"
+        r="3"
+      />
+      <circle
+        cx="7"
+        cy="7"
+        r="3"
+      />
     </svg>
   );
 };
@@ -640,9 +1005,103 @@ export const EllipsisVerticalIcon = (props: React.SVGProps<SVGSVGElement>) => {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <circle cx="12" cy="12" r="1" />
-      <circle cx="12" cy="5" r="1" />
-      <circle cx="12" cy="19" r="1" />
+      <circle
+        cx="12"
+        cy="12"
+        r="1"
+      />
+      <circle
+        cx="12"
+        cy="5"
+        r="1"
+      />
+      <circle
+        cx="12"
+        cy="19"
+        r="1"
+      />
+    </svg>
+  );
+};
+
+type Props = {
+  size?: number;
+};
+
+export const LoadingSpinnerIcon = (props: Props) => {
+  const { size = 20 } = props;
+  return (
+    <svg
+      fill="currentColor"
+      height={size}
+      viewBox="0 0 24 24"
+      width={size}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <rect
+          height={5}
+          opacity=".14"
+          width={2}
+          x={11}
+          y={1}
+        />
+        <rect
+          height={5}
+          opacity=".29"
+          transform="rotate(30 12 12)"
+          width={2}
+          x={11}
+          y={1}
+        />
+        <rect
+          height={5}
+          opacity=".43"
+          transform="rotate(60 12 12)"
+          width={2}
+          x={11}
+          y={1}
+        />
+        <rect
+          height={5}
+          opacity=".57"
+          transform="rotate(90 12 12)"
+          width={2}
+          x={11}
+          y={1}
+        />
+        <rect
+          height={5}
+          opacity=".71"
+          transform="rotate(120 12 12)"
+          width={2}
+          x={11}
+          y={1}
+        />
+        <rect
+          height={5}
+          opacity=".86"
+          transform="rotate(150 12 12)"
+          width={2}
+          x={11}
+          y={1}
+        />
+        <rect
+          height={5}
+          transform="rotate(180 12 12)"
+          width={2}
+          x={11}
+          y={1}
+        />
+        <animateTransform
+          attributeName="transform"
+          calcMode="discrete"
+          dur="0.75s"
+          repeatCount="indefinite"
+          type="rotate"
+          values="0 12 12;30 12 12;60 12 12;90 12 12;120 12 12;150 12 12;180 12 12;210 12 12;240 12 12;270 12 12;300 12 12;330 12 12;360 12 12"
+        />
+      </g>
     </svg>
   );
 };

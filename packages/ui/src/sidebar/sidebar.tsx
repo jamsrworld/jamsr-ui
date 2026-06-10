@@ -10,10 +10,10 @@ import {
 } from "react";
 
 import { useRender } from "@base-ui/react/use-render";
-import { useIsMobile } from "@jamsrui/hooks";
 
 import { IconButton } from "../icon-button";
 import { sidebarStyles } from "./styles";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const styles = sidebarStyles();
 

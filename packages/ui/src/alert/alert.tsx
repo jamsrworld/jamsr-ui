@@ -3,8 +3,8 @@
 import { createContext, use, useMemo } from "react";
 
 import { useRender } from "@base-ui/react/use-render";
-import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from "@jamsrui/icons";
 
+import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from "../icons";
 import { alertStyles } from "./styles";
 
 import type { VariantProps } from "tailwind-variants";

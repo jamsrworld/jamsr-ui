@@ -1,6 +1,6 @@
 "use client";
 
-import { EmailIcon, TrashIcon } from "@jamsrui/icons";
+import { EmailIcon, TrashIcon } from "@/icons";
 import { Button } from "ui/button";
 
 export const ButtonWithIcons = (props: Button.Props) => {

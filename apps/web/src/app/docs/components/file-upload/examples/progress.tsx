@@ -6,7 +6,7 @@ import { CircularProgress } from "ui/circular-progress";
 import { IconButton } from "ui/icon-button";
 import { Text } from "ui/text";
 import { formatBytes, useFileUpload } from "ui/file-upload";
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 import { useState } from "react";
 
 type UploadProgress = {
@@ -110,10 +110,7 @@ export const FileUploadUsage = () => {
           isDragging ? "border-primary" : "hover:border-border-light",
         )}
       >
-        <input
-          multiple
-          {...getInputProps({})}
-        />
+        <input {...getInputProps({})} />
         <div className="size-12 bg-background-secondary rounded-full flex items-center justify-center">
           <Icon
             icon="mage:image"

@@ -1,6 +1,6 @@
 "use client";
 
-import { InfoIcon } from "@jamsrui/icons";
+import { InfoIcon } from "@/icons";
 import { IconButton } from "ui/icon-button";
 import { Popover } from "ui/popover";
 import { Text } from "ui/text";

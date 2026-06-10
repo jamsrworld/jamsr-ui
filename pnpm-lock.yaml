@@ -80,18 +80,9 @@ importers:
       '@iconify/react':
         specifier: ^6.0.2
         version: 6.0.2(react@19.2.3)
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../packages/hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../packages/icons
       '@jamsrui/theme':
         specifier: workspace:^
         version: link:../../packages/theme
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../packages/utils
       '@tanstack/react-query':
         specifier: ^5.81.5
         version: 5.90.17(react@19.2.3)
@@ -163,31 +154,6 @@ importers:
         specifier: 'catalog:'
         version: 6.0.2
 
-  packages/context:
-    dependencies:
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../utils
-    devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 25.0.9
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/core:
-    devDependencies:
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-
   packages/eslint-config:
     devDependencies:
       '@eslint/js':
@@ -230,43 +196,6 @@ importers:
         specifier: ^8.30.1
         version: 8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.8.2)
 
-  packages/hooks:
-    dependencies:
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../utils
-    devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 25.0.9
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/icons:
-    devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 25.0.9
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
   packages/theme:
     dependencies:
       tailwindcss:
@@ -284,21 +213,12 @@ importers:
       '@base-ui/react':
         specifier: 'catalog:'
         version: 1.5.0(@types/react@19.2.8)(date-fns@4.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../context
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../icons
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../utils
       '@tanstack/react-table':
         specifier: 'catalog:'
         version: 8.21.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       cmdk:
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@19.1.1(@types/react@19.2.8))(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -314,6 +234,9 @@ importers:
       react-hook-form:
         specifier: ^7.66.0
         version: 7.71.1(react@19.2.3)
+      tailwind-merge:
+        specifier: ^3.2.0
+        version: 3.4.0
       tailwind-variants:
         specifier: ^3.2.2
         version: 3.2.2(tailwind-merge@3.4.0)(tailwindcss@4.1.18)
@@ -327,43 +250,15 @@ importers:
       '@types/react-dom':
         specifier: 'catalog:'
         version: 19.1.1(@types/react@19.2.8)
+      prettier:
+        specifier: ^3.6.2
+        version: 3.8.0
       react:
         specifier: 'catalog:'
         version: 19.2.3
       react-dom:
         specifier: 'catalog:'
         version: 19.2.3(react@19.2.3)
-
-  packages/utils:
-    dependencies:
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      tailwind-merge:
-        specifier: ^3.2.0
-        version: 3.4.0
-      tailwind-variants:
-        specifier: 3.1.1
-        version: 3.1.1(tailwind-merge@3.4.0)(tailwindcss@4.1.18)
-    devDependencies:
-      '@jamsrui/typescript-config':
-        specifier: workspace:^
-        version: link:../typescript-config
-      '@types/node':
-        specifier: 'catalog:'
-        version: 25.0.9
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
 
 packages:
 
@@ -3636,16 +3531,6 @@ packages:
 
   tailwind-merge@3.4.0:
     resolution: {integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==}
-
-  tailwind-variants@3.1.1:
-    resolution: {integrity: sha512-ftLXe3krnqkMHsuBTEmaVUXYovXtPyTK7ckEfDRXS8PBZx0bAUas+A0jYxuKA5b8qg++wvQ3d2MQ7l/xeZxbZQ==}
-    engines: {node: '>=16.x', pnpm: '>=7.x'}
-    peerDependencies:
-      tailwind-merge: '>=3.0.0'
-      tailwindcss: '*'
-    peerDependenciesMeta:
-      tailwind-merge:
-        optional: true
 
   tailwind-variants@3.2.2:
     resolution: {integrity: sha512-Mi4kHeMTLvKlM98XPnK+7HoBPmf4gygdFmqQPaDivc3DpYS6aIY6KiG/PgThrGvii5YZJqRsPz0aPyhoFzmZgg==}
@@ -7401,12 +7286,6 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tailwind-merge@3.4.0: {}
-
-  tailwind-variants@3.1.1(tailwind-merge@3.4.0)(tailwindcss@4.1.18):
-    dependencies:
-      tailwindcss: 4.1.18
-    optionalDependencies:
-      tailwind-merge: 3.4.0
 
   tailwind-variants@3.2.2(tailwind-merge@3.4.0)(tailwindcss@4.1.18):
     dependencies:

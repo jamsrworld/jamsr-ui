@@ -1,5 +1,5 @@
 import { readSourceCode } from "@/utils/code";
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 import { CodeBlock, CodeBlockProps } from "./code-block";
 import { Text } from "ui/text";
 import { Tabs } from "ui/tabs";

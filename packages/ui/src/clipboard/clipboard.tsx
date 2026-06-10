@@ -1,13 +1,13 @@
 import { createContext, use, useMemo } from "react";
 
 import { Button } from "@base-ui/react/button";
-import { dataAttr } from "@jamsrui/utils";
 import { mergeProps, useFocusRing, useHover, usePress } from "react-aria";
-import { cn } from "tailwind-variants";
 
 import { CheckIcon, CopyIcon } from "./icons";
 import { clipboardStyles } from "./styles";
 import { useCopyToClipboard } from "./use-copy-to-clipboard";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 export const ClipboardContext = createContext<ClipboardContext.Props | null>(
   null,

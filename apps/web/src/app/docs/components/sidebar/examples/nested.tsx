@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRightIcon, EmailIcon } from "@jamsrui/icons";
+import { ChevronRightIcon, EmailIcon } from "@/icons";
 import { Collapsible } from "ui/collapsible";
 import {
   Sidebar,

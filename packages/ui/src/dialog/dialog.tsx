@@ -3,11 +3,11 @@
 import { createContext, use, useMemo } from "react";
 
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
-import { CloseIcon } from "@jamsrui/icons";
-import { cn } from "tailwind-variants";
 
 import { IconButton } from "../icon-button";
+import { CloseIcon } from "../icons";
 import { dialogStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

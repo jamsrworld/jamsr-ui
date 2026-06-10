@@ -2,9 +2,9 @@
 
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
 import { Menubar as MenubarPrimitive } from "@base-ui/react/menubar";
-import { cn } from "tailwind-variants";
 
 import { menubarStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 const styles = menubarStyles();
 

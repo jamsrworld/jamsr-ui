@@ -1,6 +1,6 @@
 "use client";
 
-import { SuccessIcon } from "@jamsrui/icons";
+import { SuccessIcon } from "@/icons";
 import { Field } from "ui/field";
 import { Switch } from "ui/switch";
 import React from "react";

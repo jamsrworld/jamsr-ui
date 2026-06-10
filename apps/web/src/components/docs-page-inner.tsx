@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 import { Text } from "ui/text";
 
 type Props = {

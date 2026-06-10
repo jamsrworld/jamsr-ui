@@ -3,10 +3,10 @@
 import { createContext, use, useMemo } from "react";
 
 import { AlertDialog as AlertDialogPrimitive } from "@base-ui/react/alert-dialog";
-import { cn } from "tailwind-variants";
 
 import { Button } from "../button";
 import { alertDialogStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

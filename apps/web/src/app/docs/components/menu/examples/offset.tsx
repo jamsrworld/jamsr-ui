@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronUpIcon } from "@jamsrui/icons";
+import { ChevronUpIcon } from "@/icons";
 import { Button } from "ui/button";
 import { Menu } from "ui/menu";
 

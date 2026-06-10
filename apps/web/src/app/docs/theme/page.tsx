@@ -1,5 +1,5 @@
 import { DocsPage } from "@/components/docs-page";
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 import { Metadata } from "next";
 import { Text } from "ui/text";
 import { THEME } from "./theme";

@@ -1,6 +1,6 @@
 "use client";
 
-import { EmailIcon } from "@jamsrui/icons";
+import { EmailIcon } from "@/icons";
 import { Field } from "ui/field";
 import { type Input } from "ui/input";
 import { InputGroup } from "ui/input-group";

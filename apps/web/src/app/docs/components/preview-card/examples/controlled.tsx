@@ -1,6 +1,6 @@
 "use client";
 
-import { useDisclosure } from "@jamsrui/hooks";
+import { useDisclosure } from "ui/hooks";
 import { Avatar } from "ui/avatar";
 import { Button } from "ui/button";
 import { Link } from "ui/link";

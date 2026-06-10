@@ -1,5 +1,0 @@
-{
-  "extends": "@jamsrui/typescript-config/react-library.json",
-  "include": ["**/*.ts", "**/*.tsx", "../utils/src/merge-props.tsx", "../components/clipboard/src/use-copy-to-clipboard.ts"],
-  "exclude": ["node_modules"]
-}

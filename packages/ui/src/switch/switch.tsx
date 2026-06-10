@@ -3,11 +3,11 @@
 import { createContext, use } from "react";
 
 import { Switch as SwitchPrimitive } from "@base-ui/react/switch";
-import { dataAttr } from "@jamsrui/utils";
 import { mergeProps, useFocusRing, useHover, usePress } from "react-aria";
-import { cn } from "tailwind-variants";
 
 import { switchStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { SwitchVariants } from "./styles";
 

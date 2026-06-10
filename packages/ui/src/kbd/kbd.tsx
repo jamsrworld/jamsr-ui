@@ -1,9 +1,9 @@
 "use client";
 
 import { useRender } from "@base-ui/react/use-render";
-import { cn } from "tailwind-variants";
 
 import { kbdStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

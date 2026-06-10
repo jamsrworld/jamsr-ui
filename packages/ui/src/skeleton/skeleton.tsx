@@ -1,9 +1,9 @@
 "use client";
 
 import { useRender } from "@base-ui/react/use-render";
-import { dataAttr } from "@jamsrui/utils";
 
 import { skeletonStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
 
 import type { VariantProps } from "tailwind-variants";
 

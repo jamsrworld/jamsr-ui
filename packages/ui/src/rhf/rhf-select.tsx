@@ -1,9 +1,8 @@
 "use client";
 
-import { dataAttr } from "@jamsrui/utils";
-
 import { Select } from "../select";
 import { useRHFContext } from "./rhf-context";
+import { dataAttr } from "../utils/attr";
 
 export const RHFSelect = <Value, Multiple extends boolean | undefined = false>(
   props: RHFSelect.Props<Value, Multiple>,

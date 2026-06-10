@@ -1,9 +1,8 @@
 "use client";
 
-import { dataAttr } from "@jamsrui/utils";
-
 import { InputGroup } from "../input-group";
 import { useRHFContext } from "./rhf-context";
+import { dataAttr } from "../utils/attr";
 
 export const RHFInputGroupInput = (props: RHFInputGroupInput.Props) => {
   const { field, fieldState } = useRHFContext();

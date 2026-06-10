@@ -6,7 +6,7 @@ import { Button } from "ui/button";
 import { IconButton } from "ui/icon-button";
 import { Text } from "ui/text";
 import { formatBytes, useFileUpload } from "ui/file-upload";
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 
 import React from "react";
 
@@ -35,10 +35,7 @@ export const FileUploadListUpload = (props: React.ComponentProps<"div">) => {
         )}
         onClick={openFileDialog}
       >
-        <input
-          multiple
-          {...getInputProps({})}
-        />
+        <input {...getInputProps({})} />
         <div className="size-12 bg-background-secondary rounded-full flex items-center justify-center">
           <Icon
             icon="mage:image"

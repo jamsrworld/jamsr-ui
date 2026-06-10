@@ -4,14 +4,14 @@ import { createContext, use, useMemo } from "react";
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox-group";
-import { dataAttr } from "@jamsrui/utils";
 import { mergeProps } from "react-aria";
 import { useFocusRing } from "react-aria/useFocusRing";
 import { useHover } from "react-aria/useHover";
 import { usePress } from "react-aria/usePress";
-import { cn } from "tailwind-variants";
 
 import { checkboxStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

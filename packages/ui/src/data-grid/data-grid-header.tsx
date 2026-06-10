@@ -1,4 +1,7 @@
 "use client";
+import { flexRender } from "@tanstack/react-table";
+
+import { IconButton } from "../icon-button";
 import {
   ArrowDownIcon,
   ArrowLeftToLineIcon,
@@ -7,15 +10,12 @@ import {
   ChevronsUpDownIcon,
   EllipsisVerticalIcon,
   EyeClosedIcon,
-} from "@jamsrui/icons";
-import { cn } from "@jamsrui/utils";
-import { flexRender } from "@tanstack/react-table";
-
-import { IconButton } from "../icon-button";
+} from "../icons";
 import { Menu } from "../menu";
 import { Table } from "../table";
 import { useDataGridContext } from "./data-grid-context";
 import { getPinningStyles } from "./utils";
+import { cn } from "../utils/cn";
 
 import type { Column, Header } from "@tanstack/react-table";
 

@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { ContextMenu as ContextMenuPrimitive } from "@base-ui/react/context-menu";
-import { cn } from "tailwind-variants";
 
 import { contextMenuStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

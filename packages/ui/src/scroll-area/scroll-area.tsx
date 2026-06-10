@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { ScrollArea as ScrollAreaPrimitive } from "@base-ui/react/scroll-area";
-import { cn } from "tailwind-variants";
 
 import { scrollAreaStyles, scrollbarStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ScrollAreaVariants } from "./styles";
 

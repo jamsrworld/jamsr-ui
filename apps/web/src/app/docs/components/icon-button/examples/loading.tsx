@@ -1,6 +1,6 @@
 "use client";
 
-import { EmailIcon } from "@jamsrui/icons";
+import { EmailIcon } from "@/icons";
 import { Button } from "ui/button";
 import { IconButton } from "ui/icon-button";
 import { useState } from "react";

@@ -1,6 +1,6 @@
 "use client";
 
-import { FileIcon, RefreshIcon } from "@jamsrui/icons";
+import { FileIcon, RefreshIcon } from "@/icons";
 import { Button } from "ui/button";
 import { Table } from "ui/table";
 import { Text } from "ui/text";

@@ -38,7 +38,7 @@ import {
   VideoIcon,
   WarningIcon,
   ZipIcon,
-} from "@jamsrui/icons";
+} from "@/icons";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

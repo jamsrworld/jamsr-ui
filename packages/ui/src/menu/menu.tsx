@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
-import { cn } from "tailwind-variants";
 
 import { menuStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

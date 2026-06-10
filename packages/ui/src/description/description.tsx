@@ -1,9 +1,9 @@
 "use client";
 
 import { useRender } from "@base-ui/react/use-render";
-import { cn } from "tailwind-variants";
 
 import { descriptionStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 export const Description = (props: Description.Props) => {
   const { className, render, ...restProps } = props;

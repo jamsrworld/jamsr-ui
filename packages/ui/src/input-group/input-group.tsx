@@ -2,26 +2,22 @@
 
 import { createContext, use, useMemo } from "react";
 
+import { Input as LocalInput } from "@base-ui/react/input";
 import { useRender } from "@base-ui/react/use-render";
-import {
-  useFocus,
-  useFocusVisible,
-  useHover,
-  useMergeRefs,
-} from "@jamsrui/hooks";
-import { dataAttr } from "@jamsrui/utils";
+import { mergeProps, useFocusRing, useHover } from "react-aria";
 
-import { Input as LocalInput } from "../input";
 import { TextArea as LocalTextArea } from "../textarea";
 import { inputGroupStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
 
+import type { DOMAttributes } from "react";
 import type { VariantProps } from "tailwind-variants";
 
 type InputGroupVariants = VariantProps<typeof inputGroupStyles>;
 
 interface InputGroupContextProps {
   styles: ReturnType<typeof inputGroupStyles>;
-  inputRefs: React.Ref<HTMLInputElement | HTMLTextAreaElement>;
+  focusProps: DOMAttributes<any>;
 }
 
 const InputGroupContext = createContext<InputGroupContextProps | null>(null);
@@ -35,23 +31,11 @@ const useInputGroupContext = () => {
 };
 
 export const InputGroup = (props: InputGroup.Props) => {
-  const { className, variant, size, radius, ref, render, ...restProps } = props;
+  const { className, variant, size, radius, render, ...restProps } = props;
   const styles = inputGroupStyles({ variant, size, radius });
 
-  const isDisabled = false;
-  const isInvalid = false;
-  const { isFocused, ref: focusRef } = useFocus<HTMLInputElement>({
-    isDisabled,
-  });
-  const { isFocusVisible, ref: focusVisibleRef } =
-    useFocusVisible<HTMLInputElement>({
-      isDisabled,
-    });
-  const { isHovered, ref: hoverRef } = useHover<HTMLDivElement>({
-    isDisabled,
-  });
-  const refs = useMergeRefs([ref, hoverRef]);
-  const inputRefs = useMergeRefs([focusRef, focusVisibleRef]);
+  const { isFocused, focusProps, isFocusVisible } = useFocusRing({});
+  const { isHovered, hoverProps } = useHover({});
 
   const handleOnMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
@@ -76,13 +60,9 @@ export const InputGroup = (props: InputGroup.Props) => {
     "data-focused": dataAttr(isFocused),
     "data-focus-visible": dataAttr(isFocusVisible),
     "data-hovered": dataAttr(isHovered),
-    "data-disabled": dataAttr(isDisabled),
-    "data-invalid": dataAttr(isInvalid),
-    "aria-disabled": dataAttr(isDisabled),
-    "aria-invalid": dataAttr(isInvalid),
-    onMouseDown: handleOnMouseDown,
-    ref: refs,
-    ...restProps,
+    ...mergeProps(hoverProps, restProps, {
+      onMouseDown: handleOnMouseDown,
+    }),
     className: styles.root({ className }),
   };
 
@@ -92,7 +72,7 @@ export const InputGroup = (props: InputGroup.Props) => {
     render,
   });
 
-  const value = useMemo(() => ({ styles, inputRefs }), [styles, inputRefs]);
+  const value = useMemo(() => ({ styles, focusProps }), [focusProps, styles]);
 
   return <InputGroupContext value={value}>{renderElement}</InputGroupContext>;
 };
@@ -140,36 +120,28 @@ export namespace InputGroupSuffix {
   export interface Props extends useRender.ComponentProps<"div"> {}
 }
 
-export const InputGroupInput = (props: LocalInput.Props) => {
-  const { styles, inputRefs } = useInputGroupContext();
-  const { ref, className, ...rest } = props;
-  const mergedRefs = useMergeRefs([
-    ref,
-    inputRefs as React.Ref<HTMLInputElement>,
-  ]);
+export const InputGroupInput = (
+  props: Omit<LocalInput.Props, "size"> & { size?: "sm" | "md" | "lg" },
+) => {
+  const { styles, focusProps } = useInputGroupContext();
+  const { className, size: _size, ...restProps } = props;
   return (
     <LocalInput
-      ref={mergedRefs}
       className={styles.input({ className: className as string })}
       data-slot="input"
-      {...rest}
+      {...mergeProps(focusProps, restProps)}
     />
   );
 };
 
 export const InputGroupTextArea = (props: LocalTextArea.Props) => {
-  const { styles, inputRefs } = useInputGroupContext();
-  const { ref, className, ...rest } = props;
-  const mergedRefs = useMergeRefs([
-    ref,
-    inputRefs as React.Ref<HTMLTextAreaElement>,
-  ]);
+  const { styles, focusProps } = useInputGroupContext();
+  const { className, ...restProps } = props;
   return (
     <LocalTextArea
-      ref={mergedRefs}
       className={styles.input({ className: className as string })}
       data-slot="input"
-      {...rest}
+      {...mergeProps(focusProps, restProps)}
     />
   );
 };

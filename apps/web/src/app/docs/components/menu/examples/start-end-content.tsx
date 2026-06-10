@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronUpIcon, InfoIcon, SearchIcon, TrashIcon } from "@jamsrui/icons";
+import { ChevronUpIcon, InfoIcon, SearchIcon, TrashIcon } from "@/icons";
 import { Button } from "ui/button";
 import { Kbd } from "ui/kbd";
 import { Menu } from "ui/menu";

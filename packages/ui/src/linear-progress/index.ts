@@ -1,9 +1,11 @@
-import type { VariantProps } from "tailwind-variants";
-import { linearProgressStyles } from "./styles";
 import {
   LinearProgress as LinearProgressRoot,
   LinearProgressBar,
 } from "./linear-progress";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { linearProgressStyles } from "./styles";
 
 export const LinearProgress = Object.assign(LinearProgressRoot, {
   Bar: LinearProgressBar,

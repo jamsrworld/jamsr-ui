@@ -1,6 +1,6 @@
 "use client";
 
-import { InfoIcon, SearchIcon, TrashIcon } from "@jamsrui/icons";
+import { InfoIcon, SearchIcon, TrashIcon } from "@/icons";
 import { Kbd } from "ui/kbd";
 import { ContextMenu } from "ui/context-menu";
 

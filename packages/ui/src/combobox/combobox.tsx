@@ -1,9 +1,9 @@
 "use client";
 
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
-import { cn } from "tailwind-variants";
 
 import { comboboxStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 const styles = comboboxStyles();
 

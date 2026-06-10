@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Toolbar as ToolbarPrimitive } from "@base-ui/react/toolbar";
-import { cn } from "tailwind-variants";
 
 import { toolbarStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ToolbarVariants } from "./styles";
 

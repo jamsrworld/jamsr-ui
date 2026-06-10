@@ -1,9 +1,9 @@
 "use client";
 
 import { Command as CommandPrimitive } from "cmdk";
-import { cn } from "tailwind-variants";
 
 import { commandStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ComponentProps } from "react";
 

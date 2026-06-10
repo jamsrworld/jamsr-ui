@@ -1,6 +1,6 @@
 "use client";
 
-import { EmailIcon } from "@jamsrui/icons";
+import { EmailIcon } from "@/icons";
 import { Field } from "ui/field";
 import { Select } from "ui/select";
 import React from "react";

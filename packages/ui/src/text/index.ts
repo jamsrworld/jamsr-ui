@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { textStyles } from "./styles";
 import { Text as TextRoot } from "./text";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { textStyles } from "./styles";
 
 export const Text = TextRoot;
 

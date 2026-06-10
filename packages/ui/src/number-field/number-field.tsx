@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { NumberField as NumberFieldPrimitive } from "@base-ui/react/number-field";
-import { cn } from "tailwind-variants";
 
 import { numberFieldStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { NumberFieldVariants } from "./styles";
 

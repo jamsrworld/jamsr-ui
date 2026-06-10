@@ -71,18 +71,18 @@
     "./toolbar": "./src/toolbar/index.ts",
     "./tooltip": "./src/tooltip/index.ts",
     "./field": "./src/field/index.ts",
-    "./utils": "./src/utils/index.ts"
+    "./utils": "./src/utils/index.ts",
+    "./hooks": "./src/hooks/index.ts"
   },
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint src --ext .ts,.tsx --fix"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.6.2",
   "dependencies": {
-    "@jamsrui/hooks": "workspace:^",
-    "@jamsrui/icons": "workspace:^",
-    "@jamsrui/context": "workspace:^",
-    "@jamsrui/utils": "workspace:^",
     "@tanstack/react-table": "catalog:",
     "@base-ui/react": "catalog:",
     "cmdk": "^1.1.1",
@@ -90,12 +90,15 @@
     "motion": "catalog:",
     "react-aria": "^3.49.0",
     "react-hook-form": "^7.66.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.2.0",
     "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
     "@jamsrui/typescript-config": "workspace:^",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "prettier": "^3.6.2",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

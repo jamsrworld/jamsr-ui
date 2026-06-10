@@ -1,11 +1,11 @@
 "use client";
 
 import { Input as InputPrimitive } from "@base-ui/react/input";
-import { useHover } from "@jamsrui/hooks";
-import { dataAttr } from "@jamsrui/utils";
-import { cn } from "tailwind-variants";
+import { mergeProps, useHover } from "react-aria";
 
 import { inputStyles } from "../input/styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { ComponentProps } from "react";
 
@@ -23,7 +23,6 @@ export const TextArea = (props: TextArea.Props) => {
     value,
     ...restProps
   } = props;
-  const { isHovered, ref } = useHover();
   const styles = inputStyles({
     variant,
     size,
@@ -31,15 +30,15 @@ export const TextArea = (props: TextArea.Props) => {
     isInvalid,
     className: cn(className),
   });
+  const { hoverProps, isHovered } = useHover({ isDisabled: props.disabled });
   return (
     <InputPrimitive
-      ref={ref}
       className={styles}
       data-hovered={dataAttr(isHovered)}
       data-invalid={dataAttr(isInvalid)}
       defaultValue={defaultValue}
       onValueChange={onValueChange}
-      render={<textarea {...restProps} />}
+      render={<textarea {...mergeProps(hoverProps, restProps)} />}
       value={value}
     />
   );

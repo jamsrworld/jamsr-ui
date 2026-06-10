@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckIcon, EmailIcon } from "@jamsrui/icons";
+import { CheckIcon, EmailIcon } from "@/icons";
 import { Chip } from "ui/chip";
 
 export const ChipWithIcons = (props: Chip.Props) => {

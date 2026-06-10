@@ -1,7 +1,7 @@
 "use client";
 
-import { useDisclosure } from "@jamsrui/hooks";
-import { ChevronUpIcon } from "@jamsrui/icons";
+import { useDisclosure } from "ui/hooks";
+import { ChevronUpIcon } from "@/icons";
 import { Button } from "ui/button";
 import { Menu } from "ui/menu";
 

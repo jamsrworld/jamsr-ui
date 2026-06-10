@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { datePickerStyles } from "./styles";
 import { DatePicker as DatePickerRoot } from "./date-picker";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { datePickerStyles } from "./styles";
 
 export const DatePicker = Object.assign(DatePickerRoot, {});
 

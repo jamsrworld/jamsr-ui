@@ -3,10 +3,10 @@
 import { createContext, use } from "react";
 
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { dataAttr } from "@jamsrui/utils";
-import { cn } from "tailwind-variants";
 
 import { selectStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

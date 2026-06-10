@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { headerStyles } from "./styles";
 import { Header as HeaderRoot } from "./header";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { headerStyles } from "./styles";
 
 export const Header = Object.assign(HeaderRoot, {});
 

@@ -1,8 +1,6 @@
 "use client";
-import { Settings2Icon } from "@jamsrui/icons";
-import { AnimatedTickIcon } from "@jamsrui/icons/animated";
-
 import { Button } from "../button";
+import { AnimatedTickIcon, Settings2Icon } from "../icons";
 import { Menu } from "../menu";
 import { useDataGridContext } from "./data-grid-context";
 

@@ -2,7 +2,6 @@
 
 import { createContext, use, useMemo } from "react";
 
-import { dataAttr } from "@jamsrui/utils";
 import {
   OTPInput,
   OTPInputContext,
@@ -12,6 +11,7 @@ import {
 } from "input-otp";
 
 import { otpInputStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
 
 import type { OTPInputProps, SlotProps } from "input-otp";
 import type { VariantProps } from "tailwind-variants";

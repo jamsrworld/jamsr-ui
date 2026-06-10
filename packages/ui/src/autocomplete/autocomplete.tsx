@@ -1,9 +1,9 @@
 "use client";
 
 import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomplete";
-import { cn } from "tailwind-variants";
 
 import { autocompleteStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 const styles = autocompleteStyles();
 

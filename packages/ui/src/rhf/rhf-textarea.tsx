@@ -1,9 +1,8 @@
 "use client";
 
-import { dataAttr } from "@jamsrui/utils";
-
 import { useRHFContext } from "./rhf-context";
 import { TextArea } from "../textarea";
+import { dataAttr } from "../utils/attr";
 
 export const RHFTextArea = (props: RHFTextArea.Props) => {
   const { field, fieldState } = useRHFContext();

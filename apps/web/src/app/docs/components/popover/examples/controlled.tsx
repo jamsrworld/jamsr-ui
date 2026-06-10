@@ -1,7 +1,7 @@
 "use client";
 
-import { useDisclosure } from "@jamsrui/hooks";
-import { InfoIcon } from "@jamsrui/icons";
+import { useDisclosure } from "ui/hooks";
+import { InfoIcon } from "@/icons";
 import { Button } from "ui/button";
 import { IconButton } from "ui/icon-button";
 import { Popover } from "ui/popover";

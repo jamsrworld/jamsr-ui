@@ -1,13 +1,13 @@
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
-import { dataAttr } from "@jamsrui/utils";
 import { mergeProps } from "react-aria/mergeProps";
 import { useFocusRing } from "react-aria/useFocusRing";
 import { useHover } from "react-aria/useHover";
 import { usePress } from "react-aria/usePress";
-import { cn } from "tailwind-variants";
 
 import { CircularProgress } from "../circular-progress";
 import { buttonStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

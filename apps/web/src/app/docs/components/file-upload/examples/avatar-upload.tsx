@@ -5,7 +5,7 @@ import { Avatar } from "ui/avatar";
 import { IconButton } from "ui/icon-button";
 import { Text } from "ui/text";
 import { useFileUpload } from "ui/file-upload";
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 
 import React from "react";
 

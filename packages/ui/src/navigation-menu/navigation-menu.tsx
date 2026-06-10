@@ -1,9 +1,9 @@
 "use client";
 
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/navigation-menu";
-import { cn } from "tailwind-variants";
 
 import { navigationMenuStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 const styles = navigationMenuStyles();
 

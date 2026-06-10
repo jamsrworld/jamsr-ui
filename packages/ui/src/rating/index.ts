@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { ratingStyles } from "./styles";
 import { Rating as RatingRoot } from "./rating";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { ratingStyles } from "./styles";
 
 export const Rating = Object.assign(RatingRoot, {});
 

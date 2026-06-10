@@ -1,9 +1,9 @@
 "use client";
 
 import { useRender } from "@base-ui/react/use-render";
-import { cn } from "tailwind-variants";
 
 import { labelStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 export const Label = (props: Label.Props) => {
   const { className, render, ...restProps } = props;

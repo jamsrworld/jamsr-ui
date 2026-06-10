@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui/react/preview-card";
-import { cn } from "tailwind-variants";
 
 import { previewCardStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { PreviewCardVariants } from "./styles";
 

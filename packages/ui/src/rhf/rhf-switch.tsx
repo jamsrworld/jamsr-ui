@@ -1,9 +1,8 @@
 "use client";
 
-import { dataAttr } from "@jamsrui/utils";
-
 import { useRHFContext } from "./rhf-context";
 import { Switch } from "../switch";
+import { dataAttr } from "../utils/attr";
 
 export const RHFSwitch = (props: RHFSwitch.Props) => {
   const { field, fieldState } = useRHFContext();

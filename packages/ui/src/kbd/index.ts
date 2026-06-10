@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { kbdStyles } from "./styles";
 import { Kbd as KbdRoot } from "./kbd";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { kbdStyles } from "./styles";
 
 export const Kbd = Object.assign(KbdRoot, {});
 

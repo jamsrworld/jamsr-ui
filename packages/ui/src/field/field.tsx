@@ -1,5 +1,6 @@
 import { Field as FieldPrimitive } from "@base-ui/react/field";
-import { cn } from "tailwind-variants";
+
+import { cn } from "../utils/cn";
 
 export const FieldRoot = (props: FieldRoot.Props) => {
   const { className, orientation = "vertical", ...restProps } = props;

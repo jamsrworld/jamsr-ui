@@ -1,11 +1,13 @@
-import type { VariantProps } from "tailwind-variants";
-import { dateFieldStyles } from "./styles";
 import {
   DateField as DateFieldRoot,
   DateFieldSeparator,
   DateInput,
   DateSegment,
 } from "./date-field";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { dateFieldStyles } from "./styles";
 
 export const DateField = Object.assign(DateFieldRoot, {
   Input: DateInput,

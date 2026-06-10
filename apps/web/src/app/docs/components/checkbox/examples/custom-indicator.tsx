@@ -1,6 +1,6 @@
 "use client";
 
-import { PlusIcon } from "@jamsrui/icons";
+import { PlusIcon } from "@/icons";
 import { Checkbox } from "ui/checkbox";
 import { Field } from "ui/field";
 import { useState } from "react";

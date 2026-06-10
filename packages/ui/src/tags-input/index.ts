@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { tagsInputStyles } from "./styles";
 import { TagsInput as TagsInputRoot } from "./tags-input";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { tagsInputStyles } from "./styles";
 
 export const TagsInput = Object.assign(TagsInputRoot, {});
 

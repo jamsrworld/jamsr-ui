@@ -3,18 +3,18 @@
 import { useState } from "react";
 
 import { useRender } from "@base-ui/react/use-render";
+
+import { Field } from "../field";
+import { IconButton } from "../icon-button";
 import {
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-} from "@jamsrui/icons";
-import { cn } from "@jamsrui/utils";
-
-import { Field } from "../field";
-import { IconButton } from "../icon-button";
+} from "../icons";
 import { Select } from "../select";
 import { useDataGridContext } from "./data-grid-context";
+import { cn } from "../utils/cn";
 
 export const DataGridPaginationSelector = () => {
   const { table } = useDataGridContext();

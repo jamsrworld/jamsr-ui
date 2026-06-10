@@ -2,7 +2,7 @@
 
 import { DocsPage } from "@/components/docs-page";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { EyeClosedIcon, EyeOpenIcon } from "@jamsrui/icons";
+import { EyeClosedIcon, EyeOpenIcon } from "@/icons";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Button } from "ui/button";

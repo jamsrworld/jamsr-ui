@@ -1,7 +1,7 @@
 "use client";
 
 import { useCodeExample } from "./code-example-context";
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 import { Text } from "ui/text";
 import { Field } from "ui/field";
 import { Select } from "ui/select";

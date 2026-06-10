@@ -2,10 +2,11 @@
 
 import { useCallback, useMemo, useRef, useState } from "react";
 
-import { cn, mergeProps } from "@jamsrui/utils";
+import { mergeProps } from "react-aria";
+
+import { cn } from "../utils/cn";
 
 import type { useRender } from "@base-ui/react/use-render";
-import type { PropGetter } from "@jamsrui/utils";
 
 export type FileMetadata = {
   name: string;
@@ -197,22 +198,24 @@ export const useFileUpload = (props: useFileUpload.Props) => {
     [addFiles],
   );
 
-  const getInputProps: PropGetter<useRender.ComponentProps<"input">> =
-    useCallback(
-      (props) => ({
+  const getInputProps = useCallback(
+    (props: useRender.ComponentProps<"input"> = {}) => {
+      const { multiple: _, ...restProps } = props;
+      return {
         type: "file",
         multiple,
         ref: inputRef,
         className: cn(props.className, "sr-only"),
-        ...mergeProps(props, {
+        ...mergeProps(restProps, {
           onChange: handleOnChange,
         }),
-      }),
-      [handleOnChange, multiple],
-    );
+      };
+    },
+    [handleOnChange, multiple],
+  );
 
-  const getRootProps: PropGetter<useRender.ComponentProps<"div">> = useCallback(
-    (props) => ({
+  const getRootProps = useCallback(
+    (props: useRender.ComponentProps<"div"> = {}) => ({
       ...mergeProps(props, {
         onDragEnter: handleDragEnter,
         onDragLeave: handleDragLeave,

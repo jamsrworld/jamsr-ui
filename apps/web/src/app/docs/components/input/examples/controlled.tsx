@@ -1,6 +1,6 @@
 "use client";
 
-import { CloseIcon } from "@jamsrui/icons";
+import { CloseIcon } from "@/icons";
 import { Description } from "ui/description";
 import { Field } from "ui/field";
 import { IconButton } from "ui/icon-button";

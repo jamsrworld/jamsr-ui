@@ -1,6 +1,6 @@
 "use client";
 
-import { EyeClosedIcon, EyeOpenIcon } from "@jamsrui/icons";
+import { EyeClosedIcon, EyeOpenIcon } from "@/icons";
 import { Field } from "ui/field";
 import { IconButton } from "ui/icon-button";
 import { InputGroup } from "ui/input-group";

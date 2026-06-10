@@ -1,15 +1,12 @@
 "use client";
 
 import { ScrollArea } from "ui/scroll-area";
-import React from "react";
 
-export const ScrollAreaUsage = (props: Record<string, unknown>) => {
-  const isScrollable =
-    props.isScrollable === "true" || props.isScrollable === undefined;
+export const ScrollAreaUsage = (props: ScrollArea.Props) => {
   return (
     <ScrollArea
-      isScrollable={isScrollable}
       className="h-34 w-96 rounded-md border border-border"
+      {...props}
     >
       <ScrollArea.Viewport>
         <div className="flex flex-col gap-4 py-3 pr-6 pl-4 text-sm leading-5.5 ">

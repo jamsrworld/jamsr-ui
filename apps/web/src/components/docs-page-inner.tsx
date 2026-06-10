@@ -16,7 +16,7 @@ export const DocsPageInner = (props: Props) => {
     <>
       <div className={cn("w-full px-4 md:px-12 max-w-4xl")}>
         <article className={cn("flex col-span-2 flex-col gap-8 w-full")}>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
             <Text
               render={<h1 />}
               variant="h2"

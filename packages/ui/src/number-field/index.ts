@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { numberFieldStyles } from "./styles";
 import {
   NumberField as NumberFieldRoot,
   NumberFieldDecrement,
@@ -8,6 +6,10 @@ import {
   NumberFieldInput,
   NumberFieldScrubArea,
 } from "./number-field";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { numberFieldStyles } from "./styles";
 
 export const NumberField = Object.assign(NumberFieldRoot, {
   Group: NumberFieldGroup,

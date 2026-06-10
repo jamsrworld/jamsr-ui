@@ -14,7 +14,6 @@ export const RHFNumberField = (props: RHFNumberField.Props) => {
       ref={ref}
       data-invalid={dataAttr(invalid)}
       disabled={disabled}
-      isInvalid={invalid}
       name={name}
       onBlur={onBlur}
       onValueChange={onChange}

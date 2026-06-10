@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { clipboardStyles } from "./styles";
 import { Clipboard as ClipboardRoot, ClipboardIcon } from "./clipboard";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { clipboardStyles } from "./styles";
 
 export const Clipboard = Object.assign(ClipboardRoot, {
   Icon: ClipboardIcon,

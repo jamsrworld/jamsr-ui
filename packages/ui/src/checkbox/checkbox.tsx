@@ -5,6 +5,10 @@ import { createContext, use, useMemo } from "react";
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox-group";
 import { dataAttr } from "@jamsrui/utils";
+import { mergeProps } from "react-aria";
+import { useFocusRing } from "react-aria/useFocusRing";
+import { useHover } from "react-aria/useHover";
+import { usePress } from "react-aria/usePress";
 import { cn } from "tailwind-variants";
 
 import { checkboxStyles } from "./styles";
@@ -37,10 +41,18 @@ export const Checkbox = (props: Checkbox.Props) => {
   } = props;
   const styles = checkboxStyles({ size, radius, variant });
   const value = useMemo(() => ({ styles }), [styles]);
+
+  const { isPressed, pressProps } = usePress({ isDisabled: props.disabled });
+  const { isHovered, hoverProps } = useHover({ isDisabled: props.disabled });
+  const { isFocusVisible, focusProps, isFocused } = useFocusRing({});
   return (
     <CheckboxContext value={value}>
       <CheckboxPrimitive.Root
-        {...restProps}
+        data-focus-visible={dataAttr(isFocusVisible)}
+        data-focused={dataAttr(isFocused)}
+        data-hovered={dataAttr(isHovered)}
+        data-pressed={dataAttr(isPressed)}
+        {...mergeProps(pressProps, hoverProps, focusProps, restProps)}
         className={styles.root({ className: cn(className) })}
         data-invalid={dataAttr(isInvalid)}
       >

@@ -1,15 +1,13 @@
 import { tv } from "tailwind-variants";
 
-import { focusVisibleClasses } from "../utils/variants";
+import { dataFocusVisibleClasses } from "../utils/variants";
 
 export const checkboxStyles = tv({
   slots: {
     root: [
-      "flex justify-center items-center",
-      ...focusVisibleClasses,
-      "shrink-0",
-      "relative appearance-none",
-      "data-disabled:status-disabled data-pressed:scale-90 transition-all duration-300",
+      "flex justify-center items-center shrink-0 relative appearance-none",
+      ...dataFocusVisibleClasses,
+      "data-disabled:status-disabled data-pressed:scale-90 transition-scale duration-300",
       "data-invalid:data-checked:bg-danger",
     ],
     input:
@@ -46,8 +44,8 @@ export const checkboxStyles = tv({
       },
       solid: {
         root: [
-          "bg-surface data-hovered:bg-surface/90 data-checked:bg-primary",
-          "data-invalid:outline data-invalid:outline-danger ",
+          "bg-surface data-hovered:not(data-checked):bg-surface/90 data-checked:bg-primary",
+          "data-invalid:outline-danger ",
         ],
       },
     },

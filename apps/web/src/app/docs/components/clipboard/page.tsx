@@ -1,9 +1,9 @@
-import { Clipboard } from "ui/clipboard";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { VariantOptions } from "@/types";
+import { Clipboard } from "ui/clipboard";
 import { ClipboardEvents } from "./examples/events";
 import { ClipboardSoundEffect } from "./examples/sound-effect";
 import { ClipboardUsage } from "./examples/usage";
@@ -18,32 +18,6 @@ export const metadata: Metadata = {
   description,
 };
 
-const clipboardVariants: VariantOptions<Clipboard.Variants> = {
-  variant: {
-    options: ["solid", "bordered", "text", "light", "soft"],
-    defaultValue: "solid",
-  },
-  color: {
-    options: [
-      "default",
-      "primary",
-      "secondary",
-      "success",
-      "warning",
-      "danger",
-    ],
-    defaultValue: "default",
-  },
-  size: {
-    options: ["sm", "md", "lg"],
-    defaultValue: "md",
-  },
-  radius: {
-    options: ["none", "sm", "md", "lg", "xl", "full"],
-    defaultValue: "lg",
-  },
-};
-
 const ClipboardPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
@@ -54,31 +28,26 @@ const ClipboardPage = () => {
       <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-        variants={clipboardVariants}
         component={ClipboardUsage}
       />
       <CodeExampleV2
         title="With Content"
         url={resolvePath("with-content.tsx")}
-        variants={clipboardVariants}
         component={ClipboardWithContent}
       />
       <CodeExampleV2
         title="Without Icon"
         url={resolvePath("without-icon.tsx")}
-        variants={clipboardVariants}
         component={ClipboardWithoutIcon}
       />
       <CodeExampleV2
         title="Events"
         url={resolvePath("events.tsx")}
-        variants={clipboardVariants}
         component={ClipboardEvents}
       />
       <CodeExampleV2
         title="Sound Effect"
         url={resolvePath("sound-effect.tsx")}
-        variants={clipboardVariants}
         component={ClipboardSoundEffect}
       />
     </DocsPage>

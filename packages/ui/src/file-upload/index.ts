@@ -11,4 +11,5 @@ export namespace FileUpload {
   export type Variants = VariantProps<typeof fileUploadStyles>;
 }
 
-export { formatBytes, useFileUpload } from "@jamsrui/react";
+export { useFileUpload } from "./use-file-upload";
+export { formatBytes } from "./utils";

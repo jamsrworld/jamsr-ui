@@ -1,14 +1,14 @@
 import { tv } from "tailwind-variants";
 
-import { variantStyles } from "../utils/variants";
+import { dataFocusVisibleClasses, variantStyles } from "../utils/variants";
 
 export const iconButtonStyles = tv({
   extend: variantStyles,
   base: [
-    "cursor-default relative inline-flex items-center justify-center shrink-0",
+    "cursor-interactive relative inline-flex items-center justify-center shrink-0",
     "disabled:status-disabled",
-    "focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2",
     "transition-[scale] duration-150 data-pressed:scale-98",
+    ...dataFocusVisibleClasses,
   ],
   variants: {
     variant: {

@@ -1,9 +1,7 @@
-import { ScrollArea } from "ui/scroll-area";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { VariantOptions } from "@/types";
 import { ScrollAreaUsage } from "./examples/usage";
 
 const title = "ScrollArea";
@@ -13,13 +11,6 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-};
-
-const scrollAreaVariants: VariantOptions<ScrollArea.Variants> = {
-  isScrollable: {
-    options: ["true", "false"],
-    defaultValue: "true",
-  },
 };
 
 const ScrollAreaPage = () => {
@@ -32,7 +23,6 @@ const ScrollAreaPage = () => {
       <CodeExampleV2
         title="Usage"
         url={resolvePath("usage.tsx")}
-        variants={scrollAreaVariants}
         component={ScrollAreaUsage}
       />
     </DocsPage>

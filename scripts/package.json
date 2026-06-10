@@ -27,7 +27,6 @@
     "@jamsrui/circular-progress": "workspace:^",
     "@jamsrui/clipboard": "workspace:^",
     "@jamsrui/collapsible": "workspace:^",
-    "@jamsrui/composite": "workspace:^",
     "@jamsrui/context-menu": "workspace:^",
     "@jamsrui/date-field": "workspace:^",
     "@jamsrui/date-picker": "workspace:^",

@@ -1,9 +1,9 @@
-import { NumberField } from "ui/number-field";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { VariantOptions } from "@/types";
+import { NumberField } from "ui/number-field";
 import { NumberFieldControlled } from "./examples/controlled";
 import { NumberFieldUsage } from "./examples/usage";
 
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 };
 
 const numberFieldVariants: VariantOptions<NumberField.Variants> = {
-  isInvalid: {
-    options: ["true", "false"],
-    defaultValue: "false",
+  variant: {
+    defaultValue: "solid",
+    options: ["bordered", "solid"],
   },
 };
 

@@ -65,7 +65,7 @@ export const selectStyles = tv({
       },
       full: {
         trigger: "rounded-full",
-        popup: "rounded-full",
+        popup: "rounded-2xl",
         selectItem: "rounded-full",
       },
     },

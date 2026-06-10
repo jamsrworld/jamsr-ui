@@ -1,11 +1,13 @@
-import type { VariantProps } from "tailwind-variants";
-import { timeFieldStyles } from "./styles";
 import {
   TimeField as TimeFieldRoot,
   TimeFieldSeparator,
   TimeInput,
   TimeSegment,
 } from "./time-field";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { timeFieldStyles } from "./styles";
 
 export const TimeField = Object.assign(TimeFieldRoot, {
   Input: TimeInput,

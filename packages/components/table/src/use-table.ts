@@ -5,7 +5,7 @@ import { mergeProps } from "@jamsrui/utils";
 
 import type { PropGetter, UIProps } from "@jamsrui/utils";
 
-import { Table } from "./table";
+import type { Table } from "./table";
 import type { TableBody } from "./table-body";
 import type { TableCell } from "./table-cell";
 import type { TableColumn } from "./table-column";

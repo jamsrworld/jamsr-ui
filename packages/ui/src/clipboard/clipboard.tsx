@@ -3,7 +3,7 @@ import { createContext, use, useMemo } from "react";
 import { Button } from "@base-ui/react/button";
 import { mergeProps, useFocusRing, useHover, usePress } from "react-aria";
 
-import { CheckIcon, CopyIcon } from "./icons";
+import { CheckIcon, CopyIcon } from "../icons";
 import { clipboardStyles } from "./styles";
 import { useCopyToClipboard } from "./use-copy-to-clipboard";
 import { dataAttr } from "../utils/attr";

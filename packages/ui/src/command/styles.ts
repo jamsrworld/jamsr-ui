@@ -25,7 +25,7 @@ export const commandStyles = tv({
       "**:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-foreground-secondary",
     separator: "mx-1 my-1 h-px bg-border",
     item: [
-      "relative flex cursor-pointer select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none",
+      "relative flex cursor-interactive select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none",
       "data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50",
       "data-[selected=true]:bg-surface-secondary data-[selected=true]:text-foreground",
       "[&_svg]:size-4 [&_svg]:shrink-0",

@@ -1,9 +1,9 @@
-import { Separator } from "ui/separator";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { VariantOptions } from "@/types";
+import { Separator } from "ui/separator";
 import { SeparatorUsage } from "./examples/usage";
 
 const title = "Separator";
@@ -19,10 +19,6 @@ const separatorVariants: VariantOptions<Separator.Variants> = {
   variant: {
     options: ["default", "light", "dark"],
     defaultValue: "default",
-  },
-  orientation: {
-    options: ["horizontal", "vertical"],
-    defaultValue: "horizontal",
   },
 };
 

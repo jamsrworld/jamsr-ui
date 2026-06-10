@@ -12,13 +12,20 @@ export const SeparatorUsage = (props: Separator.Props) => {
       </div>
       <Separator
         className="my-2"
+        orientation="horizontal"
         {...props}
       />
       <div className="flex h-5 items-center gap-4 text-xs">
         <div>Blog</div>
-        <Separator orientation="vertical" />
+        <Separator
+          orientation="vertical"
+          {...props}
+        />
         <div>Docs</div>
-        <Separator orientation="vertical" />
+        <Separator
+          orientation="vertical"
+          {...props}
+        />
         <div>Source</div>
       </div>
     </div>

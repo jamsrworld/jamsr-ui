@@ -4,7 +4,7 @@ export const separatorStyles = tv({
   base: "",
   variants: {
     orientation: {
-      vertical: "w-px",
+      vertical: "w-px h-full",
       horizontal: "h-px",
     },
     variant: {

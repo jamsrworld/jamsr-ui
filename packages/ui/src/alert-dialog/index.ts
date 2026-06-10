@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { alertDialogStyles } from "./styles";
 import {
   AlertDialog as AlertDialogRoot,
   AlertDialogAction,
@@ -10,6 +8,10 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "./alert-dialog";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { alertDialogStyles } from "./styles";
 
 export const AlertDialog = Object.assign(AlertDialogRoot, {
   Trigger: AlertDialogTrigger,

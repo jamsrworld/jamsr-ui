@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { tooltipStyles } from "./styles";
 import {
   Tooltip as TooltipRoot,
   TooltipArrow,
@@ -9,6 +7,9 @@ import {
 } from "./tooltip";
 
 import type { TooltipPositionerProps } from "@base-ui/react";
+import type { VariantProps } from "tailwind-variants";
+
+import type { tooltipStyles } from "./styles";
 
 export const Tooltip = Object.assign(TooltipRoot, {
   Trigger: TooltipTrigger,

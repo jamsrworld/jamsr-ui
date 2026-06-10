@@ -1,10 +1,12 @@
-import type { VariantProps } from "tailwind-variants";
-import { breadcrumbStyles } from "./styles";
 import {
   Breadcrumb as BreadcrumbRoot,
   BreadcrumbItem,
   BreadcrumbSeparator,
 } from "./breadcrumb";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { breadcrumbStyles } from "./styles";
 
 export const Breadcrumb = Object.assign(BreadcrumbRoot, {
   Item: BreadcrumbItem,

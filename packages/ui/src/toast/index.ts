@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { toastStyles } from "./styles";
 import { Toast as ToastPrimitive } from "@base-ui/react/toast";
 
 import {
@@ -13,6 +11,10 @@ import {
   ToastTitle,
   ToastViewport,
 } from "./toast";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { toastStyles } from "./styles";
 
 export const Toast = Object.assign(ToastRoot, {
   Title: ToastTitle,

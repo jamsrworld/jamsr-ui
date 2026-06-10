@@ -15,7 +15,6 @@ import {
   SidebarStateProvider,
   SidebarToggle,
   SidebarWrapper,
-  useSidebarContext,
   useSidebarState,
 } from "./sidebar";
 
@@ -93,6 +92,5 @@ export {
   SidebarStateProvider,
   SidebarToggle,
   SidebarWrapper,
-  useSidebarContext,
   useSidebarState,
 };

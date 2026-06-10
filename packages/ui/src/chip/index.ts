@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { chipStyles } from "./styles";
 import { Chip as ChipRoot, ChipDot } from "./chip";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { chipStyles } from "./styles";
 
 export const Chip = Object.assign(ChipRoot, {
   Dot: ChipDot,

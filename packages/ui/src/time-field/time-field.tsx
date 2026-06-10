@@ -1,50 +1,61 @@
-import { timeFieldStyles } from "./styles";
+"use client";
 
-const styles = timeFieldStyles();
+import type { useRender } from "@base-ui/react/use-render";
+import type { ReactNode } from "react";
 
-export const TimeInput = (props: TimeInput.Props) => {
+export const TimeField = (_props: TimeField.Props) => {
   return null;
-  // const { className, ...rest } = props;
-  // return <TimeFieldUI.Input {...rest} className={styles.root({ className })} />;
 };
 
-export const TimeSegment = (props: TimeSegment.Props) => {
+export namespace TimeField {
+  export interface Props extends useRender.ComponentProps<"div"> {}
+}
+
+export const TimeInput = ({
+  as: _as = "div",
+  children: _children,
+  className: _className,
+  ..._restProps
+}: TimeInput.Props) => {
   return null;
-  // const { className, ...rest } = props;
-  // return (
-  // <TimeFieldUI.Segment {...rest} className={styles.segment({ className })} />
-  // );
 };
 
-export const TimeFieldSeparator = (props: TimeFieldSeparator.Props) => {
+export namespace TimeInput {
+  export interface Props extends Omit<
+    useRender.ComponentProps<"div">,
+    "children"
+  > {
+    as?: keyof React.JSX.IntrinsicElements;
+    children?: ReactNode | ((segment: unknown) => ReactNode);
+  }
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const useTimeSegment = (_segment: unknown) => {
   return null;
-  // const { className, ...rest } = props;
-  // return (
-  //   <TimeFieldUI.Separator
-  //     {...rest}
-  //     className={styles.separator({ className })}
-  //   />
-  // );
 };
 
-export const TimeField = (props: TimeField.Props) => {
+export const TimeSegment = ({
+  segment: _segment,
+  className: _className,
+  ..._restProps
+}: TimeSegment.Props) => {
   return null;
-  // const { ...rest } = props;
-  // return <TimeFieldUI {...rest} />;
 };
 
-// export namespace TimeField {
-//   export interface Props extends TimeFieldUI.Props {}
-// }
+export namespace TimeSegment {
+  export interface Props extends useRender.ComponentProps<"div"> {
+    segment?: unknown;
+  }
+}
 
-// export namespace TimeInput {
-//   export interface Props extends TimeFieldUI.Input {}
-// }
+export const TimeFieldSeparator = ({
+  className: _className,
+  ..._restProps
+}: TimeFieldSeparator.Props) => {
+  return null;
+};
 
-// export namespace TimeSegment {
-//   export interface Props extends TimeFieldUI.Segment {}
-// }
-
-// export namespace TimeFieldSeparator {
-//   export interface Props extends TimeFieldUI.Separator {}
-// }
+export namespace TimeFieldSeparator {
+  export interface Props extends useRender.ComponentProps<"span"> {}
+}

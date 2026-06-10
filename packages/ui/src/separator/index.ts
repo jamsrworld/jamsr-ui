@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { separatorStyles } from "./styles";
 import { Separator as SeparatorRoot } from "./separator";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { separatorStyles } from "./styles";
 
 export const Separator = SeparatorRoot;
 

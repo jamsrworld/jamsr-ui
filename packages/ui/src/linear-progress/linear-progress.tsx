@@ -2,17 +2,24 @@
 
 import { createContext, use, useMemo } from "react";
 
-import { LinearProgress as LinearProgressUI } from "@jamsrui/react";
+import { useRender } from "@base-ui/react/use-render";
+import { motion } from "motion/react";
 
 import { linearProgressStyles } from "./styles";
 
+import type { HTMLMotionProps } from "motion/react";
 import type { VariantProps } from "tailwind-variants";
 
 type LinearProgressVariants = VariantProps<typeof linearProgressStyles>;
 
-const LinearProgressContext = createContext<{
+interface LinearProgressContextProps {
   styles: ReturnType<typeof linearProgressStyles>;
-} | null>(null);
+  progress: number;
+}
+
+const LinearProgressContext = createContext<LinearProgressContextProps | null>(
+  null,
+);
 
 const useLinearProgressContext = () => {
   const ctx = use(LinearProgressContext);
@@ -29,34 +36,56 @@ export const LinearProgress = (props: LinearProgress.Props) => {
     color,
     size,
     isIntermediate = true,
+    progress: progressProp = isIntermediate ? 50 : 0,
     className,
     children = <LinearProgressBar />,
+    render,
     ...restProps
   } = props;
+  const progress = Math.min(progressProp, 100);
   const styles = linearProgressStyles({ color, size, isIntermediate });
-  const value = useMemo(() => ({ styles }), [styles]);
+  const value = useMemo(() => ({ styles, progress }), [styles, progress]);
+
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...restProps,
+      "data-slot": "root",
+      className: styles.track({ className }),
+      children,
+    },
+    render,
+  });
+
   return (
-    <LinearProgressContext value={value}>
-      <LinearProgressUI {...restProps} className={styles.track({ className })}>
-        {children}
-      </LinearProgressUI>
-    </LinearProgressContext>
+    <LinearProgressContext value={value}>{renderElement}</LinearProgressContext>
   );
 };
 
 export namespace LinearProgress {
   export interface Props
-    extends LinearProgressUI.Props, LinearProgressVariants {}
+    extends
+      Omit<useRender.ComponentProps<"div">, "color" | "size">,
+      LinearProgressVariants {
+    progress?: number;
+    isIntermediate?: boolean;
+  }
 }
 
 export const LinearProgressBar = (props: LinearProgressBar.Props) => {
-  const { styles } = useLinearProgressContext();
+  const { styles, progress } = useLinearProgressContext();
   const { className, ...rest } = props;
   return (
-    <LinearProgressUI.Bar {...rest} className={styles.bar({ className })} />
+    <motion.div
+      animate={{ width: `${progress}%` }}
+      className={styles.bar({ className })}
+      data-slot="bar"
+      initial={{ width: 0 }}
+      {...rest}
+    />
   );
 };
 
 export namespace LinearProgressBar {
-  export interface Props extends LinearProgressUI.Bar {}
+  export interface Props extends HTMLMotionProps<"div"> {}
 }

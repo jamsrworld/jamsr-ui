@@ -1,7 +1,34 @@
 "use client";
+
 import { useCallback, useMemo, useRef, useState } from "react";
 
-import type React from "react";
+import type { FC, MouseEvent, TouchEvent } from "react";
+
+const RippleInner: FC<RippleProps> = ({ x, y, size, duration }) => {
+  return (
+    <span
+      style={{
+        position: "absolute",
+        left: x,
+        top: y,
+        width: size,
+        height: size,
+        borderRadius: "50%",
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        transform: "scale(0)",
+        animation: `ripple-animation ${duration}ms linear`,
+        pointerEvents: "none",
+      }}
+    />
+  );
+};
+
+interface RippleProps {
+  x: number;
+  y: number;
+  size: number;
+  duration: number;
+}
 
 export const useRipple = (props: useRipple.Props) => {
   const { isCentered, isDisabled } = props;
@@ -26,17 +53,17 @@ export const useRipple = (props: useRipple.Props) => {
   }, []);
 
   const handleRipple = useCallback(
-    (event: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>) => {
+    (event: MouseEvent<HTMLElement> | TouchEvent<HTMLElement>) => {
       const element = event.currentTarget;
       const rect = element.getBoundingClientRect();
       let clientX = 0;
       let clientY = 0;
 
       if (event?.type === "mousedown") {
-        clientX = (event as React.MouseEvent<HTMLDivElement>).clientX;
-        clientY = (event as React.MouseEvent<HTMLDivElement>).clientY;
+        clientX = (event as MouseEvent<HTMLDivElement>).clientX;
+        clientY = (event as MouseEvent<HTMLDivElement>).clientY;
       } else if (event?.type === "touchstart") {
-        const touch = (event as React.TouchEvent<HTMLDivElement>).touches[0];
+        const touch = (event as TouchEvent<HTMLDivElement>).touches[0];
         if (touch) {
           clientX = touch.clientX;
           clientY = touch.clientY;
@@ -92,4 +119,35 @@ export namespace useRipple {
     isCentered?: boolean;
     isDisabled?: boolean;
   }
+}
+
+export const Ripple = (props: Ripple.Props) => {
+  const { ripples, handleRipple, isDisabled } = useRipple(props);
+  const duration = 600;
+  if (isDisabled) return null;
+  return (
+    <div
+      className="size-full inset-0 z-1 overflow-hidden absolute"
+      onClick={handleRipple}
+      onMouseDown={handleRipple}
+      onTouchStart={handleRipple}
+    >
+      {ripples.map((ripple) => (
+        <RippleInner
+          key={ripple.id}
+          duration={duration}
+          size={ripple.size}
+          x={ripple.x}
+          y={ripple.y}
+        />
+      ))}
+    </div>
+  );
+};
+
+export namespace Ripple {
+  export interface Props extends useRipple.Props {}
+  export type Variants = {
+    isCentered?: boolean;
+  };
 }

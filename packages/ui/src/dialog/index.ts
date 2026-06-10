@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { dialogStyles } from "./styles";
 import {
   Dialog as DialogRoot,
   DialogBody,
@@ -10,6 +8,10 @@ import {
   DialogHeader,
   DialogTrigger,
 } from "./dialog";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { dialogStyles } from "./styles";
 
 export const Dialog = Object.assign(DialogRoot, {
   Trigger: DialogTrigger,

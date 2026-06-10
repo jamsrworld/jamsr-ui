@@ -2,7 +2,7 @@
 
 import { createContext, use } from "react";
 
-import { Table as TableUI } from "@jamsrui/react";
+import { useRender } from "@base-ui/react/use-render";
 
 import { tableStyles } from "./styles";
 
@@ -29,6 +29,7 @@ export const Table = (props: Table.Props) => {
     allowHover,
     separateRows,
     className,
+    render,
     ...restProps
   } = props;
   const styles = tableStyles({
@@ -40,97 +41,154 @@ export const Table = (props: Table.Props) => {
     separateRows,
   });
 
-  return (
-    <TableContext value={{ styles }}>
-      <TableUI {...restProps} className={styles.root({ className })} />
-    </TableContext>
-  );
+  const renderElement = useRender({
+    defaultTagName: "table",
+    props: {
+      ...restProps,
+      "data-slot": "table",
+      className: styles.root({ className }),
+    },
+    render,
+  });
+
+  return <TableContext value={{ styles }}>{renderElement}</TableContext>;
 };
 
 export namespace Table {
-  export interface Props extends TableUI.Props, TableVariants {}
+  export interface Props
+    extends useRender.ComponentProps<"table">, TableVariants {}
 }
 
 export const TableHeader = (props: TableHeader.Props) => {
   const { styles } = useTableContext();
-  return (
-    <TableUI.Header
-      {...props}
-      className={styles.thead({ className: props.className })}
-    />
-  );
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "thead",
+    props: {
+      ...rest,
+      "data-slot": "header",
+      className: styles.thead({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
+
+export namespace TableHeader {
+  export interface Props extends useRender.ComponentProps<"thead"> {}
+}
 
 export const TableColumn = (props: TableColumn.Props) => {
   const { styles } = useTableContext();
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "th",
+    props: {
+      ...rest,
+      "data-slot": "column",
+      className: styles.th({ className }),
+    },
+    render,
+  });
+  return renderElement;
+};
+
+export namespace TableColumn {
+  export interface Props extends useRender.ComponentProps<"th"> {}
+}
+
+export const TableRow = (props: TableRow.Props) => {
+  const { styles } = useTableContext();
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "tr",
+    props: {
+      ...rest,
+      "data-slot": "row",
+      className: styles.tr({ className }),
+    },
+    render,
+  });
+  return renderElement;
+};
+
+export namespace TableRow {
+  export interface Props extends useRender.ComponentProps<"tr"> {}
+}
+
+export const TableCell = (props: TableCell.Props) => {
+  const { styles } = useTableContext();
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "td",
+    props: {
+      ...rest,
+      "data-slot": "cell",
+      className: styles.td({ className }),
+    },
+    render,
+  });
+  return renderElement;
+};
+
+export namespace TableCell {
+  export interface Props extends useRender.ComponentProps<"td"> {}
+}
+
+export const TableEmptyState = () => {
   return (
-    <TableUI.Column
-      {...props}
-      className={styles.th({ className: props.className })}
-    />
+    <TableRow>
+      <TableCell className="text-center py-12" colSpan={100}>
+        No data found
+      </TableCell>
+    </TableRow>
   );
 };
 
 export const TableBody = (props: TableBody.Props) => {
   const { styles } = useTableContext();
-  return (
-    <TableUI.Body
-      {...props}
-      className={styles.tbody({ className: props.className })}
-    />
-  );
+  const {
+    className,
+    children,
+    emptySlot = <TableEmptyState />,
+    render,
+    ...rest
+  } = props;
+  const composedChildren = children ?? emptySlot;
+  const renderElement = useRender({
+    defaultTagName: "tbody",
+    props: {
+      ...rest,
+      "data-slot": "body",
+      className: styles.tbody({ className }),
+      children: composedChildren,
+    },
+    render,
+  });
+  return renderElement;
 };
 
-export const TableRow = (props: TableRow.Props) => {
-  const { styles } = useTableContext();
-  return (
-    <TableUI.Row
-      {...props}
-      className={styles.tr({ className: props.className })}
-    />
-  );
-};
-
-export const TableCell = (props: TableCell.Props) => {
-  const { styles } = useTableContext();
-  return (
-    <TableUI.Cell
-      {...props}
-      className={styles.td({ className: props.className })}
-    />
-  );
-};
+export namespace TableBody {
+  export interface Props extends useRender.ComponentProps<"tbody"> {
+    emptySlot?: React.ReactNode;
+  }
+}
 
 export const TableFooter = (props: TableFooter.Props) => {
   const { styles } = useTableContext();
-  return (
-    <TableUI.Footer
-      {...props}
-      className={styles.tfoot({ className: props.className })}
-    />
-  );
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "tfoot",
+    props: {
+      ...rest,
+      "data-slot": "footer",
+      className: styles.tfoot({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
-export namespace TableHeader {
-  export interface Props extends TableUI.Header {}
-}
-
-export namespace TableColumn {
-  export interface Props extends TableUI.Column {}
-}
-
-export namespace TableBody {
-  export interface Props extends TableUI.Body {}
-}
-
-export namespace TableRow {
-  export interface Props extends TableUI.Row {}
-}
-
-export namespace TableCell {
-  export interface Props extends TableUI.Cell {}
-}
-
 export namespace TableFooter {
-  export interface Props extends TableUI.Footer {}
+  export interface Props extends useRender.ComponentProps<"tfoot"> {}
 }

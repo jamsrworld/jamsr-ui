@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { contextMenuStyles } from "./styles";
 import {
   ContextMenu as ContextMenuRoot,
   ContextMenuArrow,
@@ -19,6 +17,10 @@ import {
   ContextMenuSubmenuTrigger,
   ContextMenuTrigger,
 } from "./context-menu";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { contextMenuStyles } from "./styles";
 
 export const ContextMenu = Object.assign(ContextMenuRoot, {
   Group: ContextMenuGroup,

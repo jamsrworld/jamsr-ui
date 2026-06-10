@@ -1,11 +1,13 @@
-import type { VariantProps } from "tailwind-variants";
-import { circularProgressStyles } from "./styles";
 import {
   CircularProgress as CircularProgressRoot,
   CircularProgressLabel,
   CircularProgressProgress,
   CircularProgressTrack,
 } from "./circular-progress";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { circularProgressStyles } from "./styles";
 
 export const CircularProgress = Object.assign(CircularProgressRoot, {
   Label: CircularProgressLabel,

@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { commandStyles } from "./styles";
 import {
   Command as CommandRoot,
   CommandDialog,
@@ -12,6 +10,10 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "./command";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { commandStyles } from "./styles";
 
 export const Command = Object.assign(CommandRoot, {
   Input: CommandInput,

@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { cardStyles } from "./styles";
 import {
   Card as CardRoot,
   CardContent,
@@ -8,6 +6,10 @@ import {
   CardHeader,
   CardTitle,
 } from "./card";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { cardStyles } from "./styles";
 
 export const Card = Object.assign(CardRoot, {
   Header: CardHeader,

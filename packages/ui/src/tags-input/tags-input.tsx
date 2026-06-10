@@ -1,13 +1,23 @@
-import { TagsInput as TagsInputUI } from "@jamsrui/react";
+"use client";
+
+import { useRender } from "@base-ui/react/use-render";
 
 import { tagsInputStyles } from "./styles";
 
 export const TagsInput = (props: TagsInput.Props) => {
-  const { className, ...rest } = props;
+  const { className, render, ...rest } = props;
   const styles = tagsInputStyles();
-  return <TagsInputUI {...rest} className={styles.root({ className })} />;
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: styles.root({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
 export namespace TagsInput {
-  export interface Props extends TagsInputUI.Props {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }

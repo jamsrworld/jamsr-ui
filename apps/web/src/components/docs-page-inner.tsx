@@ -14,7 +14,7 @@ export const DocsPageInner = (props: Props) => {
   const { children, description, title, onThisPage } = props;
   return (
     <>
-      <div className={cn("w-full px-4 md:px-12 max-w-4xl")}>
+      <div className={cn("px-4 md:px-12 max-w-4xl w-4xl")}>
         <article className={cn("flex col-span-2 flex-col gap-8 w-full")}>
           <div className="flex flex-col gap-1">
             <Text

@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { toolbarStyles } from "./styles";
 import {
   Toolbar as ToolbarRoot,
   ToolbarButton,
@@ -8,6 +6,10 @@ import {
   ToolbarLink,
   ToolbarSeparator,
 } from "./toolbar";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { toolbarStyles } from "./styles";
 
 export const Toolbar = Object.assign(ToolbarRoot, {
   Button: ToolbarButton,

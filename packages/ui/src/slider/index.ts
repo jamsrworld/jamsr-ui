@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { sliderStyles } from "./styles";
 import {
   Slider as SliderRoot,
   SliderControl,
@@ -8,6 +6,10 @@ import {
   SliderTrack,
   SliderValue,
 } from "./slider";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { sliderStyles } from "./styles";
 
 export const Slider = Object.assign(SliderRoot, {
   Root: SliderRoot,

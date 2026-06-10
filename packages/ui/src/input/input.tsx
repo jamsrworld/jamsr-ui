@@ -1,6 +1,7 @@
 "use client";
 
-import { Input as InputPrimitive } from "@jamsrui/react";
+import { Input as InputPrimitive } from "@base-ui/react/input";
+import { useHover } from "@jamsrui/hooks";
 import { dataAttr } from "@jamsrui/utils";
 import { cn } from "tailwind-variants";
 
@@ -12,6 +13,7 @@ type InputVariants = VariantProps<typeof inputStyles>;
 
 export const Input = (props: Input.Props) => {
   const { variant, size, radius, isInvalid, className, ...restProps } = props;
+  const { isHovered, ref } = useHover();
   const styles = inputStyles({
     variant,
     size,
@@ -21,7 +23,9 @@ export const Input = (props: Input.Props) => {
   });
   return (
     <InputPrimitive
+      ref={ref}
       className={styles}
+      data-hovered={dataAttr(isHovered)}
       data-invalid={dataAttr(isInvalid)}
       {...restProps}
     />

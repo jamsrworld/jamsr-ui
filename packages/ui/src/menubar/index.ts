@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { menubarStyles } from "./styles";
 import { Menubar as MenubarRoot, MenubarTrigger } from "./menubar";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { menubarStyles } from "./styles";
 
 export const Menubar = Object.assign(MenubarRoot, {
   Trigger: MenubarTrigger,

@@ -17,7 +17,7 @@ export function useCallbackRef<T extends (...args: any[]) => any>(
   });
   return useMemo(
     () =>
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-argument
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       ((...args) => callbackRef.current?.(...args)) as T,
     [],
   );

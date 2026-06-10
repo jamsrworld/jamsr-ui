@@ -2,21 +2,13 @@
 
 import { FileIcon, RefreshIcon } from "@jamsrui/icons";
 import { Button } from "ui/button";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableColumn,
-  TableHeader,
-  TableRow,
-} from "ui/table";
+import { Table } from "ui/table";
 import { Text } from "ui/text";
-import React from "react";
 
 const CustomTableEmptyState = () => {
   return (
-    <TableRow>
-      <TableCell colSpan={3}>
+    <Table.Row>
+      <Table.Cell colSpan={3}>
         <div className="py-12 text-center flex flex-col gap-2 items-center">
           <div className="bg-default p-2 rounded-lg">
             <FileIcon className="size-6" />
@@ -31,8 +23,8 @@ const CustomTableEmptyState = () => {
             Refresh Page
           </Button>
         </div>
-      </TableCell>
-    </TableRow>
+      </Table.Cell>
+    </Table.Row>
   );
 };
 
@@ -49,14 +41,14 @@ export const TableCustomEmptyState = (props: any) => {
       isHeaderSticky={isHeaderStickyBool}
       {...rest}
     >
-      <TableHeader>
-        <TableRow>
-          <TableColumn>Name</TableColumn>
-          <TableColumn>Role</TableColumn>
-          <TableColumn>Status</TableColumn>
-        </TableRow>
-      </TableHeader>
-      <TableBody emptySlot={<CustomTableEmptyState />} />
+      <Table.Header>
+        <Table.Row>
+          <Table.Column>Name</Table.Column>
+          <Table.Column>Role</Table.Column>
+          <Table.Column>Status</Table.Column>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body emptySlot={<CustomTableEmptyState />} />
     </Table>
   );
 };

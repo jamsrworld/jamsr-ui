@@ -65,8 +65,7 @@ const createCollectionStore = () => {
   const register = (value: Value, data: Omit<ItemData, "value">) => {
     const existing = items.get(value);
     if (
-      existing &&
-      existing.textValue === data.textValue &&
+      existing?.textValue === data.textValue &&
       existing.disabled === data.disabled
     )
       return;

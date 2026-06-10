@@ -121,13 +121,13 @@ export const ChevronDoubleRightIcon = (
 export const ChevronDownIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     fill="none"
-    width={16}
     height={16}
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={2}
     viewBox="0 0 24 24"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -140,12 +140,12 @@ export const ChevronsUpDownIcon = (props: React.SVGProps<SVGSVGElement>) => {
     <svg
       fill="none"
       height={16}
-      width={16}
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
       viewBox="0 0 24 24"
+      width={16}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -160,12 +160,12 @@ export const ArrowDownIcon = (props: React.SVGProps<SVGSVGElement>) => {
     <svg
       fill="none"
       height={16}
-      width={16}
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
       viewBox="0 0 24 24"
+      width={16}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -180,12 +180,12 @@ export const ArrowUpIcon = (props: React.SVGProps<SVGSVGElement>) => {
     <svg
       fill="none"
       height={16}
-      width={16}
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
       viewBox="0 0 24 24"
+      width={16}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
@@ -199,12 +199,12 @@ export const ChevronLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     fill="none"
     height={16}
-    width={16}
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={2}
     viewBox="0 0 24 24"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -216,12 +216,12 @@ export const ChevronUpIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     fill="none"
     height={16}
-    width={16}
     stroke="currentColor"
     strokeLinecap="round"
     strokeLinejoin="round"
     strokeWidth={2}
     viewBox="0 0 24 24"
+    width={16}
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >

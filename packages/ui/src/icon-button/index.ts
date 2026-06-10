@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { iconButtonStyles } from "./styles";
 import { IconButton as IconButtonRoot } from "./icon-button";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { iconButtonStyles } from "./styles";
 
 export const IconButton = IconButtonRoot;
 

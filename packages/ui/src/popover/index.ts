@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { popoverStyles } from "./styles";
 import {
   Popover as PopoverRoot,
   PopoverArrow,
@@ -10,6 +8,9 @@ import {
 } from "./popover";
 
 import type { Popover as PopoverPrimitive } from "@base-ui/react/popover";
+import type { VariantProps } from "tailwind-variants";
+
+import type { popoverStyles } from "./styles";
 
 export const Popover = Object.assign(PopoverRoot, {
   Arrow: PopoverArrow,

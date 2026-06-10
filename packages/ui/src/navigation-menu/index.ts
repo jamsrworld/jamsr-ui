@@ -1,5 +1,3 @@
-import type { VariantProps } from "tailwind-variants";
-import { navigationMenuStyles } from "./styles";
 import {
   NavigationMenu as NavigationMenuRoot,
   NavigationMenuArrow,
@@ -15,6 +13,10 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "./navigation-menu";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { navigationMenuStyles } from "./styles";
 
 export const NavigationMenu = Object.assign(NavigationMenuRoot, {
   List: NavigationMenuList,

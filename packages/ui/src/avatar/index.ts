@@ -1,11 +1,13 @@
-import type { VariantProps } from "tailwind-variants";
-import { avatarStyles } from "./styles";
 import {
   Avatar as AvatarRoot,
   AvatarFallback,
   AvatarImage,
   AvatarIndicator,
 } from "./avatar";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { avatarStyles } from "./styles";
 
 export const Avatar = Object.assign(AvatarRoot, {
   Image: AvatarImage,

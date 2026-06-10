@@ -8,10 +8,7 @@ catalogs:
   default:
     '@base-ui/react':
       specifier: ^1.3.0
-      version: 1.3.0
-    '@floating-ui/react':
-      specifier: '>=0.27'
-      version: 0.27.16
+      version: 1.5.0
     '@tanstack/react-table':
       specifier: '>=8'
       version: 8.21.3
@@ -166,1620 +163,6 @@ importers:
         specifier: 'catalog:'
         version: 6.0.2
 
-  packages/components/accordion:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/composite':
-        specifier: workspace:^
-        version: link:../composite
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-      react-dom:
-        specifier: 'catalog:'
-        version: 19.2.3(react@19.2.3)
-
-  packages/components/alert:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/text':
-        specifier: workspace:^
-        version: link:../text
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 25.0.9
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/alert-dialog:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/button':
-        specifier: workspace:^
-        version: link:../button
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/text':
-        specifier: workspace:^
-        version: link:../text
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/autocomplete:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/input':
-        specifier: workspace:^
-        version: link:../input
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/avatar:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/breadcrumb:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/button:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-      react-dom:
-        specifier: 'catalog:'
-        version: 19.2.3(react@19.2.3)
-
-  packages/components/card:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/text':
-        specifier: workspace:^
-        version: link:../text
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/charts:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/checkbox:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/chip:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/circular-progress:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/clipboard:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/button':
-        specifier: workspace:^
-        version: link:../button
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/collapsible:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/composite:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/context-menu:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/date-field:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/input':
-        specifier: workspace:^
-        version: link:../input
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/date-picker:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/description:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../../context
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/dialog:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icon-button':
-        specifier: workspace:^
-        version: link:../icon-button
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/drawer:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icon-button':
-        specifier: workspace:^
-        version: link:../icon-button
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/editor:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/field-error:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../../context
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/file-upload:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/header:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/icon-button:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/input:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../../context
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/input-group:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/description':
-        specifier: workspace:^
-        version: link:../description
-      '@jamsrui/field-error':
-        specifier: workspace:^
-        version: link:../field-error
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/input':
-        specifier: workspace:^
-        version: link:../input
-      '@jamsrui/label':
-        specifier: workspace:^
-        version: link:../label
-      '@jamsrui/textarea':
-        specifier: workspace:^
-        version: link:../textarea
-      '@jamsrui/textfield':
-        specifier: workspace:^
-        version: link:../textfield
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/kbd:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/label:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../../context
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/linear-progress:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/link:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/text':
-        specifier: workspace:^
-        version: link:../text
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/menu:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/separator':
-        specifier: workspace:^
-        version: link:../separator
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/number-field:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icon-button':
-        specifier: workspace:^
-        version: link:../icon-button
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/otp-input:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-      terser:
-        specifier: ^5.44.1
-        version: 5.46.0
-
-  packages/components/pagination:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/popover:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: ^0.27.8
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/radio:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../../context
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/rating:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/ripple:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/scroll-area:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/select:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../../icons
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/separator:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/sidebar:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/icon-button':
-        specifier: workspace:^
-        version: link:../icon-button
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/skeleton:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/slider:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/switch:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/table:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/tabs:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      motion:
-        specifier: 'catalog:'
-        version: 12.26.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/tags-input:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/text:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-      tailwind-variants:
-        specifier: ^1.0.0
-        version: 1.0.0(tailwindcss@4.1.18)
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/textarea:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../../context
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/textfield':
-        specifier: workspace:^
-        version: link:../textfield
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/textfield:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/context':
-        specifier: workspace:^
-        version: link:../../context
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/time-field:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/input':
-        specifier: workspace:^
-        version: link:../input
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/toast:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-      sonner:
-        specifier: ^2.0.5
-        version: 2.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/toggle:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
-  packages/components/tooltip:
-    dependencies:
-      '@base-ui/react':
-        specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/react':
-        specifier: 'catalog:'
-        version: 0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@jamsrui/core':
-        specifier: workspace:^
-        version: link:../../core
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../../hooks
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-
   packages/context:
     dependencies:
       '@jamsrui/utils':
@@ -1884,208 +267,6 @@ importers:
         specifier: 'catalog:'
         version: 19.2.3
 
-  packages/react:
-    dependencies:
-      '@jamsrui/accordion':
-        specifier: workspace:^
-        version: link:../components/accordion
-      '@jamsrui/alert':
-        specifier: workspace:^
-        version: link:../components/alert
-      '@jamsrui/alert-dialog':
-        specifier: workspace:^
-        version: link:../components/alert-dialog
-      '@jamsrui/autocomplete':
-        specifier: workspace:^
-        version: link:../components/autocomplete
-      '@jamsrui/avatar':
-        specifier: workspace:^
-        version: link:../components/avatar
-      '@jamsrui/breadcrumb':
-        specifier: workspace:^
-        version: link:../components/breadcrumb
-      '@jamsrui/button':
-        specifier: workspace:^
-        version: link:../components/button
-      '@jamsrui/card':
-        specifier: workspace:^
-        version: link:../components/card
-      '@jamsrui/charts':
-        specifier: workspace:^
-        version: link:../components/charts
-      '@jamsrui/checkbox':
-        specifier: workspace:^
-        version: link:../components/checkbox
-      '@jamsrui/chip':
-        specifier: workspace:^
-        version: link:../components/chip
-      '@jamsrui/circular-progress':
-        specifier: workspace:^
-        version: link:../components/circular-progress
-      '@jamsrui/clipboard':
-        specifier: workspace:^
-        version: link:../components/clipboard
-      '@jamsrui/collapsible':
-        specifier: workspace:^
-        version: link:../components/collapsible
-      '@jamsrui/composite':
-        specifier: workspace:^
-        version: link:../components/composite
-      '@jamsrui/context-menu':
-        specifier: workspace:^
-        version: link:../components/context-menu
-      '@jamsrui/date-field':
-        specifier: workspace:^
-        version: link:../components/date-field
-      '@jamsrui/date-picker':
-        specifier: workspace:^
-        version: link:../components/date-picker
-      '@jamsrui/description':
-        specifier: workspace:^
-        version: link:../components/description
-      '@jamsrui/dialog':
-        specifier: workspace:^
-        version: link:../components/dialog
-      '@jamsrui/drawer':
-        specifier: workspace:^
-        version: link:../components/drawer
-      '@jamsrui/editor':
-        specifier: workspace:^
-        version: link:../components/editor
-      '@jamsrui/field-error':
-        specifier: workspace:^
-        version: link:../components/field-error
-      '@jamsrui/file-upload':
-        specifier: workspace:^
-        version: link:../components/file-upload
-      '@jamsrui/header':
-        specifier: workspace:^
-        version: link:../components/header
-      '@jamsrui/hooks':
-        specifier: workspace:^
-        version: link:../hooks
-      '@jamsrui/icon-button':
-        specifier: workspace:^
-        version: link:../components/icon-button
-      '@jamsrui/icons':
-        specifier: workspace:^
-        version: link:../icons
-      '@jamsrui/input':
-        specifier: workspace:^
-        version: link:../components/input
-      '@jamsrui/input-group':
-        specifier: workspace:^
-        version: link:../components/input-group
-      '@jamsrui/kbd':
-        specifier: workspace:^
-        version: link:../components/kbd
-      '@jamsrui/label':
-        specifier: workspace:^
-        version: link:../components/label
-      '@jamsrui/linear-progress':
-        specifier: workspace:^
-        version: link:../components/linear-progress
-      '@jamsrui/link':
-        specifier: workspace:^
-        version: link:../components/link
-      '@jamsrui/menu':
-        specifier: workspace:^
-        version: link:../components/menu
-      '@jamsrui/number-field':
-        specifier: workspace:^
-        version: link:../components/number-field
-      '@jamsrui/otp-input':
-        specifier: workspace:^
-        version: link:../components/otp-input
-      '@jamsrui/pagination':
-        specifier: workspace:^
-        version: link:../components/pagination
-      '@jamsrui/popover':
-        specifier: workspace:^
-        version: link:../components/popover
-      '@jamsrui/radio':
-        specifier: workspace:^
-        version: link:../components/radio
-      '@jamsrui/rating':
-        specifier: workspace:^
-        version: link:../components/rating
-      '@jamsrui/ripple':
-        specifier: workspace:^
-        version: link:../components/ripple
-      '@jamsrui/scroll-area':
-        specifier: workspace:^
-        version: link:../components/scroll-area
-      '@jamsrui/select':
-        specifier: workspace:^
-        version: link:../components/select
-      '@jamsrui/separator':
-        specifier: workspace:^
-        version: link:../components/separator
-      '@jamsrui/sidebar':
-        specifier: workspace:^
-        version: link:../components/sidebar
-      '@jamsrui/skeleton':
-        specifier: workspace:^
-        version: link:../components/skeleton
-      '@jamsrui/slider':
-        specifier: workspace:^
-        version: link:../components/slider
-      '@jamsrui/switch':
-        specifier: workspace:^
-        version: link:../components/switch
-      '@jamsrui/table':
-        specifier: workspace:^
-        version: link:../components/table
-      '@jamsrui/tabs':
-        specifier: workspace:^
-        version: link:../components/tabs
-      '@jamsrui/tags-input':
-        specifier: workspace:^
-        version: link:../components/tags-input
-      '@jamsrui/text':
-        specifier: workspace:^
-        version: link:../components/text
-      '@jamsrui/textarea':
-        specifier: workspace:^
-        version: link:../components/textarea
-      '@jamsrui/textfield':
-        specifier: workspace:^
-        version: link:../components/textfield
-      '@jamsrui/theme':
-        specifier: workspace:^
-        version: link:../theme
-      '@jamsrui/time-field':
-        specifier: workspace:^
-        version: link:../components/time-field
-      '@jamsrui/toast':
-        specifier: workspace:^
-        version: link:../components/toast
-      '@jamsrui/toggle':
-        specifier: workspace:^
-        version: link:../components/toggle
-      '@jamsrui/tooltip':
-        specifier: workspace:^
-        version: link:../components/tooltip
-      '@jamsrui/utils':
-        specifier: workspace:^
-        version: link:../utils
-    devDependencies:
-      '@types/react':
-        specifier: 'catalog:'
-        version: 19.2.8
-      '@types/react-dom':
-        specifier: 'catalog:'
-        version: 19.1.1(@types/react@19.2.8)
-      clean-package:
-        specifier: ^2.2.0
-        version: 2.2.0
-      react:
-        specifier: 'catalog:'
-        version: 19.2.3
-      react-dom:
-        specifier: 'catalog:'
-        version: 19.2.3(react@19.2.3)
-
   packages/theme:
     dependencies:
       tailwindcss:
@@ -2102,19 +283,16 @@ importers:
     dependencies:
       '@base-ui/react':
         specifier: 'catalog:'
-        version: 1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        version: 1.5.0(@types/react@19.2.8)(date-fns@4.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@jamsrui/context':
+        specifier: workspace:^
+        version: link:../context
       '@jamsrui/hooks':
         specifier: workspace:^
         version: link:../hooks
       '@jamsrui/icons':
         specifier: workspace:^
         version: link:../icons
-      '@jamsrui/react':
-        specifier: workspace:^
-        version: link:../react
-      '@jamsrui/text':
-        specifier: workspace:^
-        version: link:../components/text
       '@jamsrui/utils':
         specifier: workspace:^
         version: link:../utils
@@ -2252,6 +430,10 @@ packages:
     resolution: {integrity: sha512-05WQkdpL9COIMz4LjTxGpPNCdlpyimKppYNoJ5Di5EUObifl8t4tuLuUBBZEpoLYOmfvIWrsp9fCl0HoPRVTdA==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/runtime@7.29.7':
+    resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/template@7.28.6':
     resolution: {integrity: sha512-YA6Ma2KsCdGb+WC6UpBVFJGXL58MDA6oyONbjyF/+5sBgxY/dwkhLogbMT2GXXyU84/IhRw/2D1Os1B/giz+BQ==}
     engines: {node: '>=6.9.0'}
@@ -2264,19 +446,25 @@ packages:
     resolution: {integrity: sha512-0ZrskXVEHSWIqZM/sQZ4EV3jZJXRkio/WCxaqKZP1g//CEWEPSfeZFcms4XeKBCHU0ZKnIkdJeU/kF+eRp5lBg==}
     engines: {node: '>=6.9.0'}
 
-  '@base-ui/react@1.3.0':
-    resolution: {integrity: sha512-FwpKqZbPz14AITp1CVgf4AjhKPe1OeeVKSBMdgD10zbFlj3QSWelmtCMLi2+/PFZZcIm3l87G7rwtCZJwHyXWA==}
+  '@base-ui/react@1.5.0':
+    resolution: {integrity: sha512-z1gSAlced1yY+iM+mHDEtIkD8UI3Ebs52MuBPxvV6f5hRutk+xvCH/wuB7hDqDzK9JG5FoMz5nhrqtSs1wjt1A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
+      '@date-fns/tz': ^1.2.0
       '@types/react': ^17 || ^18 || ^19
+      date-fns: ^4.0.0
       react: ^17 || ^18 || ^19
       react-dom: ^17 || ^18 || ^19
     peerDependenciesMeta:
+      '@date-fns/tz':
+        optional: true
       '@types/react':
         optional: true
+      date-fns:
+        optional: true
 
-  '@base-ui/utils@0.2.6':
-    resolution: {integrity: sha512-yQ+qeuqohwhsNpoYDqqXaLllYAkPCP4vYdDrVo8FQXaAPfHWm1pG/Vm+jmGTA5JFS0BAIjookyapuJFY8F9PIw==}
+  '@base-ui/utils@0.2.9':
+    resolution: {integrity: sha512-x/PDDCYzoqPpjrdyb3VcyylTI2IjUXEtYDGi5foh7KsnmNJIIaVwA2GLgDH1dps1GgXiJbA60hM+AyuTfQzIvw==}
     peerDependencies:
       '@types/react': ^17 || ^18 || ^19
       react: ^17 || ^18 || ^19
@@ -2616,38 +804,17 @@ packages:
     resolution: {integrity: sha512-C3mrr3b5dRVlKPJdfrAXS8+dq+rq8Qm5SNRazca0JKgw1HQERFmrVb0towvMmw5uu8hHKNiQasMaR/tydf3Zsg==}
     engines: {node: ^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0, npm: '>=10'}
 
-  '@floating-ui/core@1.7.3':
-    resolution: {integrity: sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==}
-
   '@floating-ui/core@1.7.5':
     resolution: {integrity: sha512-1Ih4WTWyw0+lKyFMcBHGbb5U5FtuHJuujoyyr5zTaWS5EYMeT6Jb2AuDeftsCsEuchO+mM2ij5+q9crhydzLhQ==}
 
-  '@floating-ui/dom@1.7.4':
-    resolution: {integrity: sha512-OOchDgh4F2CchOX94cRVqhvy7b3AFb+/rQXyswmzmGakRfkMgoWVjfnLWkRirfLEfuD4ysVW16eXzwt3jHIzKA==}
-
   '@floating-ui/dom@1.7.6':
     resolution: {integrity: sha512-9gZSAI5XM36880PPMm//9dfiEngYoC6Am2izES1FF406YFsjvyBMmeJ2g4SAju3xWwtuynNRFL2s9hgxpLI5SQ==}
-
-  '@floating-ui/react-dom@2.1.6':
-    resolution: {integrity: sha512-4JX6rEatQEvlmgU80wZyq9RT96HZJa88q8hp0pBd+LrczeDI4o6uA2M+uvxngVHo4Ihr8uibXxH6+70zhAFrVw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
 
   '@floating-ui/react-dom@2.1.8':
     resolution: {integrity: sha512-cC52bHwM/n/CxS87FH0yWdngEZrjdtLW/qVruo68qg+prK7ZQ4YGdut2GyDVpoGeAYe/h899rVeOVm6Oi40k2A==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
-
-  '@floating-ui/react@0.27.16':
-    resolution: {integrity: sha512-9O8N4SeG2z++TSM8QA/KTeKFBVCNEz/AGS7gWPJf6KFRzmRWixFRnCnkPHRDwSVZW6QPDO6uT0P2SpWNKCc9/g==}
-    peerDependencies:
-      react: '>=17.0.0'
-      react-dom: '>=17.0.0'
-
-  '@floating-ui/utils@0.2.10':
-    resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
   '@floating-ui/utils@0.2.11':
     resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
@@ -2853,9 +1020,6 @@ packages:
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
     engines: {node: '>=6.0.0'}
-
-  '@jridgewell/source-map@0.3.11':
-    resolution: {integrity: sha512-ZMp1V8ZFcPG5dIWnQLr3NSI1MiCU7UETdS/A0G8V/XWHvJv3ZsFqutJn1Y5RPmAPX6F3BiE397OqveU/9NCuIA==}
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -3735,9 +1899,6 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  buffer-from@1.1.2:
-    resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
-
   bundle-require@5.1.0:
     resolution: {integrity: sha512-3WrrOuZiyaaZPWiEt4G3+IffISVC9HYlWueJEBWED4ZH4aIAC2PnkdnuRrR94M+w6yGWn4AglWtJtBI8YqvgoA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3825,9 +1986,6 @@ packages:
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
-
-  commander@2.20.3:
-    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
@@ -5266,8 +3424,8 @@ packages:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
 
-  reselect@5.1.1:
-    resolution: {integrity: sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==}
+  reselect@5.2.0:
+    resolution: {integrity: sha512-AgZ3UOZm3YndfrJ4OYjgrT7bmCm/1iqkjvEfH/oYjzh6PD2qw4QuT3jjnXIrpdt4MTpMXclMT3lXbmRY+XRakw==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -5379,21 +3537,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  sonner@2.0.7:
-    resolution: {integrity: sha512-W6ZN4p58k8aDKA4XPcx2hpIQXBRAgyiWVkYhT7CvK6D3iAu7xjvVyhQHg2/iaKJZ1XVJ4r7XuwGL+WGEK37i9w==}
-    peerDependencies:
-      react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
-      react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
-
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
-    engines: {node: '>=0.10.0'}
-
-  source-map-support@0.5.21:
-    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
-
-  source-map@0.6.1:
-    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
   source-map@0.7.6:
@@ -5489,20 +3634,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  tabbable@6.4.0:
-    resolution: {integrity: sha512-05PUHKSNE8ou2dwIxTngl4EzcnsCDZGJ/iCLtDflR/SHB/ny14rXc+qU5P4mG9JkusiV7EivzY9Mhm55AzAvCg==}
-
-  tailwind-merge@3.0.2:
-    resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
-
   tailwind-merge@3.4.0:
     resolution: {integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==}
-
-  tailwind-variants@1.0.0:
-    resolution: {integrity: sha512-2WSbv4ulEEyuBKomOunut65D8UZwxrHoRfYnxGcQNnHqlSCp2+B7Yz2W+yrNDrxRodOXtGD/1oCcKGNBnUqMqA==}
-    engines: {node: '>=16.x', pnpm: '>=7.x'}
-    peerDependencies:
-      tailwindcss: '*'
 
   tailwind-variants@3.1.1:
     resolution: {integrity: sha512-ftLXe3krnqkMHsuBTEmaVUXYovXtPyTK7ckEfDRXS8PBZx0bAUas+A0jYxuKA5b8qg++wvQ3d2MQ7l/xeZxbZQ==}
@@ -5534,11 +3667,6 @@ packages:
   term-size@2.2.1:
     resolution: {integrity: sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==}
     engines: {node: '>=8'}
-
-  terser@5.46.0:
-    resolution: {integrity: sha512-jTwoImyr/QbOWFFso3YoU3ik0jBBDJ6JTOQiy/J2YxVJdZCc+5u7skhNwiOR3FQIygFqVUPHl7qbbxtjW2K3Qg==}
-    engines: {node: '>=10'}
-    hasBin: true
 
   text-extensions@2.4.0:
     resolution: {integrity: sha512-te/NtwBwfiNRLf9Ijqx3T0nlqZiQ2XrrtBvu+cLL8ZRrGkO0NHTug8MYFKyoSrv/sHTaSKfilUkizV6XhxMJ3g==}
@@ -5909,6 +4037,8 @@ snapshots:
 
   '@babel/runtime@7.28.6': {}
 
+  '@babel/runtime@7.29.7': {}
+
   '@babel/template@7.28.6':
     dependencies:
       '@babel/code-frame': 7.28.6
@@ -5932,26 +4062,26 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@base-ui/react@1.3.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@base-ui/react@1.5.0(@types/react@19.2.8)(date-fns@4.1.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@babel/runtime': 7.28.6
-      '@base-ui/utils': 0.2.6(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@babel/runtime': 7.29.7
+      '@base-ui/utils': 0.2.9(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@floating-ui/react-dom': 2.1.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@floating-ui/utils': 0.2.11
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      tabbable: 6.4.0
       use-sync-external-store: 1.6.0(react@19.2.3)
     optionalDependencies:
       '@types/react': 19.2.8
+      date-fns: 4.1.0
 
-  '@base-ui/utils@0.2.6(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@base-ui/utils@0.2.9(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.7
       '@floating-ui/utils': 0.2.11
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      reselect: 5.1.1
+      reselect: 5.2.0
       use-sync-external-store: 1.6.0(react@19.2.3)
     optionalDependencies:
       '@types/react': 19.2.8
@@ -6352,45 +4482,20 @@ snapshots:
 
   '@faker-js/faker@10.1.0': {}
 
-  '@floating-ui/core@1.7.3':
-    dependencies:
-      '@floating-ui/utils': 0.2.10
-
   '@floating-ui/core@1.7.5':
     dependencies:
       '@floating-ui/utils': 0.2.11
-
-  '@floating-ui/dom@1.7.4':
-    dependencies:
-      '@floating-ui/core': 1.7.3
-      '@floating-ui/utils': 0.2.10
 
   '@floating-ui/dom@1.7.6':
     dependencies:
       '@floating-ui/core': 1.7.5
       '@floating-ui/utils': 0.2.11
 
-  '@floating-ui/react-dom@2.1.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
-    dependencies:
-      '@floating-ui/dom': 1.7.4
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-
   '@floating-ui/react-dom@2.1.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@floating-ui/dom': 1.7.6
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-
-  '@floating-ui/react@0.27.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
-    dependencies:
-      '@floating-ui/react-dom': 2.1.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@floating-ui/utils': 0.2.10
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-      tabbable: 6.4.0
-
-  '@floating-ui/utils@0.2.10': {}
 
   '@floating-ui/utils@0.2.11': {}
 
@@ -6550,11 +4655,6 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/resolve-uri@3.1.2': {}
-
-  '@jridgewell/source-map@0.3.11':
-    dependencies:
-      '@jridgewell/gen-mapping': 0.3.13
-      '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
@@ -7355,8 +5455,6 @@ snapshots:
       node-releases: 2.0.27
       update-browserslist-db: 1.2.3(browserslist@4.28.1)
 
-  buffer-from@1.1.2: {}
-
   bundle-require@5.1.0(esbuild@0.27.2):
     dependencies:
       esbuild: 0.27.2
@@ -7439,8 +5537,6 @@ snapshots:
   color-name@1.1.4: {}
 
   comma-separated-tokens@2.0.3: {}
-
-  commander@2.20.3: {}
 
   commander@4.1.1: {}
 
@@ -9005,7 +7101,7 @@ snapshots:
 
   require-from-string@2.0.2: {}
 
-  reselect@5.1.1: {}
+  reselect@5.2.0: {}
 
   resolve-from@4.0.0: {}
 
@@ -9192,19 +7288,7 @@ snapshots:
 
   slash@3.0.0: {}
 
-  sonner@2.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
-    dependencies:
-      react: 19.2.3
-      react-dom: 19.2.3(react@19.2.3)
-
   source-map-js@1.2.1: {}
-
-  source-map-support@0.5.21:
-    dependencies:
-      buffer-from: 1.1.2
-      source-map: 0.6.1
-
-  source-map@0.6.1: {}
 
   source-map@0.7.6: {}
 
@@ -9316,16 +7400,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  tabbable@6.4.0: {}
-
-  tailwind-merge@3.0.2: {}
-
   tailwind-merge@3.4.0: {}
-
-  tailwind-variants@1.0.0(tailwindcss@4.1.18):
-    dependencies:
-      tailwind-merge: 3.0.2
-      tailwindcss: 4.1.18
 
   tailwind-variants@3.1.1(tailwind-merge@3.4.0)(tailwindcss@4.1.18):
     dependencies:
@@ -9344,13 +7419,6 @@ snapshots:
   tapable@2.3.0: {}
 
   term-size@2.2.1: {}
-
-  terser@5.46.0:
-    dependencies:
-      '@jridgewell/source-map': 0.3.11
-      acorn: 8.15.0
-      commander: 2.20.3
-      source-map-support: 0.5.21
 
   text-extensions@2.4.0: {}
 

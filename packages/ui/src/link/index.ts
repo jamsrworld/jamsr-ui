@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { linkStyles } from "./styles";
 import { Link as LinkRoot } from "./link";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { linkStyles } from "./styles";
 
 export const Link = LinkRoot;
 

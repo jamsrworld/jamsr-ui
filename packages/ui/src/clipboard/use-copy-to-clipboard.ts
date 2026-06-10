@@ -9,7 +9,7 @@ export const useCopyToClipboard = (props: useCopyToClipboard.Props) => {
     onCopySuccess: onSuccess,
     timeout = 1000,
   } = props;
-  const timeoutRef = useRef<number>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const onCopy = async () => {
     try {

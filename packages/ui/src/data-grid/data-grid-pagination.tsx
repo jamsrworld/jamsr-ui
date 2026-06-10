@@ -1,7 +1,8 @@
 "use client";
+
 import { useState } from "react";
 
-import { useRenderElement } from "@jamsrui/hooks";
+import { useRender } from "@base-ui/react/use-render";
 import {
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
@@ -14,8 +15,6 @@ import { Field } from "../field";
 import { IconButton } from "../icon-button";
 import { Select } from "../select";
 import { useDataGridContext } from "./data-grid-context";
-
-import type { UIProps } from "@jamsrui/utils";
 
 export const DataGridPaginationSelector = () => {
   const { table } = useDataGridContext();
@@ -132,7 +131,7 @@ export const DataGridPaginationControls = (
 };
 
 export namespace DataGridPaginationControls {
-  export interface Props extends UIProps<"div"> {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }
 
 export const DataGridPagination = (props: DataGridPagination.Props) => {
@@ -145,24 +144,27 @@ export const DataGridPagination = (props: DataGridPagination.Props) => {
         <DataGridPaginationControls />
       </>
     ),
+    render,
     ...restProps
   } = props;
 
-  const renderElement = useRenderElement("div", {
-    props: [
-      {
-        className:
-          "flex flex-col w-full justify-between gap-4 md:flex-row md:items-center mt-2",
-        "data-slot": "pagination",
-        children,
-      },
-      restProps,
-    ],
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...restProps,
+      className: cn(
+        "flex flex-col w-full justify-between gap-4 md:flex-row md:items-center mt-2",
+        restProps.className,
+      ),
+      "data-slot": "pagination",
+      children,
+    },
+    render,
   });
   if (isEmpty) return null;
   return <>{renderElement}</>;
 };
 
 export namespace DataGridPagination {
-  export interface Props extends UIProps<"div"> {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }

@@ -1,6 +1,8 @@
-import type { VariantProps } from "tailwind-variants";
-import { skeletonStyles } from "./styles";
 import { Skeleton as SkeletonRoot } from "./skeleton";
+
+import type { VariantProps } from "tailwind-variants";
+
+import type { skeletonStyles } from "./styles";
 
 export const Skeleton = Object.assign(SkeletonRoot, {});
 

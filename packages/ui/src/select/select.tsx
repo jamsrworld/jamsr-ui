@@ -3,6 +3,7 @@
 import { createContext, use } from "react";
 
 import { Select as SelectPrimitive } from "@base-ui/react/select";
+import { dataAttr } from "@jamsrui/utils";
 import { cn } from "tailwind-variants";
 
 import { selectStyles } from "./styles";
@@ -13,6 +14,7 @@ type SelectVariants = VariantProps<typeof selectStyles>;
 
 const SelectContext = createContext<{
   styles: ReturnType<typeof selectStyles>;
+  isInvalid?: boolean;
 } | null>(null);
 
 const useSelectContext = () => {
@@ -25,7 +27,8 @@ const useSelectContext = () => {
 export const SelectRoot = <Value, Multiple extends boolean | undefined = false>(
   props: SelectRoot.Props<Value, Multiple>,
 ) => {
-  const { color, radius, size, variant, className, ...restProps } = props;
+  const { color, radius, size, variant, className, isInvalid, ...restProps } =
+    props;
   const styles = selectStyles({
     color,
     radius,
@@ -35,7 +38,7 @@ export const SelectRoot = <Value, Multiple extends boolean | undefined = false>(
   });
 
   return (
-    <SelectContext.Provider value={{ styles }}>
+    <SelectContext.Provider value={{ styles, isInvalid }}>
       <SelectPrimitive.Root {...restProps} />
     </SelectContext.Provider>
   );
@@ -48,11 +51,13 @@ export namespace SelectRoot {
   > = SelectPrimitive.Root.Props<Value, Multiple> &
     SelectVariants & {
       className?: string;
+      isInvalid?: boolean;
+      inputRef?: React.Ref<HTMLButtonElement | HTMLInputElement>;
     };
 }
 
 export const SelectTrigger = (props: SelectPrimitive.Trigger.Props) => {
-  const { styles } = useSelectContext();
+  const { styles, isInvalid } = useSelectContext();
   const {
     children = (
       <>
@@ -65,6 +70,7 @@ export const SelectTrigger = (props: SelectPrimitive.Trigger.Props) => {
   } = props;
   return (
     <SelectPrimitive.Trigger
+      data-invalid={dataAttr(isInvalid)}
       {...restProps}
       className={styles.trigger({ className: cn(className) })}
     >

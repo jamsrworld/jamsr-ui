@@ -1,5 +1,7 @@
 import { tv } from "tailwind-variants";
 
+import { focusRingClasses } from "../utils";
+
 import type { VariantProps } from "tailwind-variants";
 
 export const autocompleteStyles = tv({
@@ -7,12 +9,12 @@ export const autocompleteStyles = tv({
     input: [
       "w-full rounded-md border border-border bg-surface px-3 py-2 text-sm outline-none",
       "placeholder:text-foreground-tertiary",
-      "focus:ring-2 focus:ring-ring focus:ring-offset-2 ring-offset-background",
       "disabled:status-disabled",
+      ...focusRingClasses,
     ],
     inputGroup: [
       "flex items-center rounded-md border border-border bg-surface",
-      "focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 ring-offset-background",
+      ...focusRingClasses,
     ],
     trigger: [
       "inline-flex items-center justify-center px-2 text-foreground-secondary",
@@ -29,7 +31,7 @@ export const autocompleteStyles = tv({
     ],
     list: "max-h-60 overflow-auto p-1",
     item: [
-      "relative flex cursor-pointer select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none",
+      "relative flex cursor-interactive select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none",
       "data-highlighted:bg-surface-secondary",
       "data-disabled:status-disabled",
     ],

@@ -174,12 +174,6 @@ export const CodeExampleV2Client = (props: Props) => {
         )}
 
         <div className="relative">
-          <Clipboard
-            text={finalHtml}
-            className="absolute top-4 right-4"
-          >
-            <Clipboard.Icon />
-          </Clipboard>
           <ScrollArea className="border-t border-border">
             <ScrollArea.Viewport className="max-h-[50vh]">
               {/* <div dangerouslySetInnerHTML={{ __html: finalHtml }} /> */}
@@ -190,6 +184,12 @@ export const CodeExampleV2Client = (props: Props) => {
             </ScrollArea.Viewport>
             <ScrollArea.Scrollbar />
           </ScrollArea>
+          <Clipboard
+            text={finalHtml}
+            className="absolute top-4 right-4"
+          >
+            <Clipboard.Icon />
+          </Clipboard>
         </div>
       </div>
     </section>

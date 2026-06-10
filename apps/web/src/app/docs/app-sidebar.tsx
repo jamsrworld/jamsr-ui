@@ -8,7 +8,10 @@ import { cn } from "tailwind-variants";
 import { ScrollArea } from "ui/scroll-area";
 import { Text } from "ui/text";
 
-const data: { title: string; items: { title: string; url: Route }[] }[] = [
+export const sidebarData: {
+  title: string;
+  items: { title: string; url: Route }[];
+}[] = [
   {
     title: "Getting Started",
     items: [
@@ -123,7 +126,7 @@ export const AppSidebar = () => {
       <ScrollArea className="h-full">
         <ScrollArea.Viewport className="overscroll-contain h-full">
           <div className="flex flex-col gap-2 min-w-55">
-            {data.map((item) => {
+            {sidebarData.map((item) => {
               const { items, title } = item;
               return (
                 <div

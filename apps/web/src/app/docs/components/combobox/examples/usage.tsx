@@ -3,6 +3,7 @@
 import { Combobox } from "ui/combobox";
 import { ChevronDown, X } from "lucide-react";
 import React from "react";
+import { Field } from "ui/field";
 
 interface Fruit {
   label: string;
@@ -28,14 +29,12 @@ const fruits: Fruit[] = [
 
 export const ComboboxUsage = (props: Partial<Combobox.Props>) => {
   return (
-    <div className="w-full max-w-xs">
+    <Field>
+      <Field.Label>Choose a fruit</Field.Label>
       <Combobox
         items={fruits}
         {...props}
       >
-        <label className="mb-1.5 block text-sm font-medium">
-          Choose a fruit
-        </label>
         <Combobox.InputGroup>
           <Combobox.Input placeholder="e.g. Apple" />
           <div className="flex items-center">
@@ -62,6 +61,6 @@ export const ComboboxUsage = (props: Partial<Combobox.Props>) => {
           </Combobox.List>
         </Combobox.Content>
       </Combobox>
-    </div>
+    </Field>
   );
 };

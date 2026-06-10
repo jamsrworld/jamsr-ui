@@ -109,10 +109,12 @@ export const ComboboxItemIndicator = (
   return (
     <ComboboxPrimitive.ItemIndicator
       {...restProps}
+      keepMounted
       className={styles.itemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </ComboboxPrimitive.ItemIndicator>
+      render={(props, { selected }) => (
+        <span {...props}>{selected ? children : null}</span>
+      )}
+    />
   );
 };
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { Autocomplete } from "ui/autocomplete";
+import { Field } from "ui/field";
 
 const tags = [
   { id: "t1", value: "feature" },
@@ -21,15 +22,13 @@ type Tag = (typeof tags)[number];
 
 export const AutocompleteUsage = (props: Record<string, unknown>) => {
   return (
-    <div className="w-full max-w-xs">
+    <Field>
+      <Field.Label>Search Tags</Field.Label>
       <Autocomplete
         items={tags}
         {...props}
       >
-        <label className="mb-1.5 block text-sm font-medium">
-          Search tags
-          <Autocomplete.Input placeholder="e.g. feature" />
-        </label>
+        <Autocomplete.Input placeholder="e.g. feature" />
         <Autocomplete.Content>
           <Autocomplete.Empty>No tags found.</Autocomplete.Empty>
           <Autocomplete.List>
@@ -44,6 +43,6 @@ export const AutocompleteUsage = (props: Record<string, unknown>) => {
           </Autocomplete.List>
         </Autocomplete.Content>
       </Autocomplete>
-    </div>
+    </Field>
   );
 };

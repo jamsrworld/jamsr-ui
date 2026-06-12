@@ -1,12 +1,13 @@
-import { Dialog } from "ui/dialog";
 import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { VariantOptions } from "@/types";
+import { Dialog } from "ui/dialog";
 import { DialogBackdrop } from "./examples/backdrop";
 import { DialogBordered } from "./examples/bordered";
 import { DialogCustomCloseButton } from "./examples/custom-close-button";
+import { DialogNested } from "./examples/nested";
 import { DialogNonDismissible } from "./examples/non-dismissible";
 import { DialogScrollBehavior } from "./examples/scroll-behavior";
 import { DialogUsage } from "./examples/usage";
@@ -82,6 +83,12 @@ const DialogPage = () => {
         url={resolvePath("non-dismissible.tsx")}
         variants={dialogVariants}
         component={DialogNonDismissible}
+      />
+      <CodeExampleV2
+        title="Nested"
+        url={resolvePath("nested.tsx")}
+        variants={dialogVariants}
+        component={DialogNested}
       />
       <CodeExampleV2
         title="Custom Close Button"

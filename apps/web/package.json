@@ -19,7 +19,6 @@
     "@tanstack/react-query": "^5.81.5",
     "@tanstack/react-table": "catalog:",
     "date-fns": "^4.1.0",
-    "ui": "workspace:^",
     "lucide-react": "^1.7.0",
     "motion": "catalog:",
     "next": "catalog:",
@@ -28,6 +27,7 @@
     "react-hook-form": "^7.66.0",
     "shiki": "^3.4.2",
     "tailwind-variants": "^3.2.2",
+    "ui": "workspace:^",
     "zod": "^4.1.12"
   },
   "devDependencies": {

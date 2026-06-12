@@ -3,16 +3,15 @@
 import { OtpInput } from "ui/otp-input";
 import { useState } from "react";
 
-export const OtpInputControlled = (props: OtpInput.Props) => {
+export const OtpInputControlled = (props: Partial<OtpInput.Props>) => {
   const [value, setValue] = useState("");
-  const { maxLength = 4, ...rest } = props;
   return (
     <div className="flex flex-col gap-2">
       <OtpInput
         value={value}
         onChange={setValue}
-        maxLength={maxLength}
-        {...rest}
+        maxLength={4}
+        {...props}
       >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />

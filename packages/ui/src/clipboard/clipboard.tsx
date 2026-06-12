@@ -1,7 +1,10 @@
 import { createContext, use, useMemo } from "react";
 
 import { Button } from "@base-ui/react/button";
-import { mergeProps, useFocusRing, useHover, usePress } from "react-aria";
+import { mergeProps } from "react-aria/mergeProps";
+import { useFocusRing } from "react-aria/useFocusRing";
+import { useHover } from "react-aria/useHover";
+import { usePress } from "react-aria/usePress";
 
 import { CheckIcon, CopyIcon } from "../icons";
 import { clipboardStyles } from "./styles";
@@ -30,8 +33,15 @@ export namespace ClipboardContext {
 const styles = clipboardStyles();
 
 export const Clipboard = (props: Clipboard.Props) => {
-  const { text, onCopyError, onCopySuccess, timeout, className, ...restProps } =
-    props;
+  const {
+    text,
+    onCopyError,
+    onCopySuccess,
+    timeout,
+    className,
+    disabled,
+    ...restProps
+  } = props;
   const { isCopied, onCopy } = useCopyToClipboard({
     text,
     onCopyError,
@@ -44,8 +54,15 @@ export const Clipboard = (props: Clipboard.Props) => {
     [isCopied],
   );
 
-  const { isPressed, pressProps } = usePress({ isDisabled: props.disabled });
-  const { isHovered, hoverProps } = useHover({ isDisabled: props.disabled });
+  const isDisabled = disabled;
+
+  const { isPressed, pressProps } = usePress({
+    isDisabled,
+    onClick(e) {
+      onCopy?.();
+    },
+  });
+  const { isHovered, hoverProps } = useHover({ isDisabled });
   const { isFocusVisible, focusProps, isFocused } = useFocusRing({});
   return (
     <ClipboardContext value={value}>
@@ -58,9 +75,7 @@ export const Clipboard = (props: Clipboard.Props) => {
         data-hovered={dataAttr(isHovered)}
         data-pressed={dataAttr(isPressed)}
         data-slot="root"
-        {...mergeProps(restProps, pressProps, hoverProps, focusProps, {
-          onClick: onCopy,
-        })}
+        {...mergeProps(restProps, pressProps, hoverProps, focusProps)}
       />
     </ClipboardContext>
   );

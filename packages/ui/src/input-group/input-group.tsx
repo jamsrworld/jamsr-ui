@@ -4,7 +4,9 @@ import { createContext, use, useMemo } from "react";
 
 import { Input as LocalInput } from "@base-ui/react/input";
 import { useRender } from "@base-ui/react/use-render";
-import { mergeProps, useFocusRing, useHover } from "react-aria";
+import { mergeProps } from "react-aria/mergeProps";
+import { useFocusRing } from "react-aria/useFocusRing";
+import { useHover } from "react-aria/useHover";
 
 import { TextArea as LocalTextArea } from "../textarea";
 import { inputGroupStyles } from "./styles";

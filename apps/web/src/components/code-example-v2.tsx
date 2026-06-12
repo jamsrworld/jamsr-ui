@@ -70,6 +70,7 @@ export const CodeExampleV2 = async (props: CodeExampleProps) => {
         isOwnLine={isOwnLine}
         indent={indent}
         component={component}
+        code={cleanedCode}
       >
         {children}
       </CodeExampleV2Client>

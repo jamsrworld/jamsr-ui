@@ -3,16 +3,15 @@
 import { Label } from "ui/label";
 import { OtpInput, REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS } from "ui/otp-input";
 
-export const OtpInputWithPatterns = (props: OtpInput.Props) => {
-  const { maxLength = 4, ...rest } = props;
+export const OtpInputWithPatterns = (props: Partial<OtpInput.Props>) => {
   return (
     <div className="flex flex-col gap-8">
       <div>
         <Label>Only digits</Label>
         <OtpInput
-          maxLength={maxLength}
+          maxLength={4}
           pattern={REGEXP_ONLY_DIGITS}
-          {...rest}
+          {...props}
         >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />
@@ -25,9 +24,9 @@ export const OtpInputWithPatterns = (props: OtpInput.Props) => {
       <div>
         <Label>Only characters</Label>
         <OtpInput
-          maxLength={maxLength}
+          maxLength={4}
           pattern={REGEXP_ONLY_CHARS}
-          {...rest}
+          {...props}
         >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />

@@ -2,12 +2,11 @@
 
 import { OtpInput } from "ui/otp-input";
 
-export const OtpInputUsage = (props: OtpInput.Props) => {
-  const { maxLength = 4, ...rest } = props;
+export const OtpInputUsage = (props: Partial<OtpInput.Props>) => {
   return (
     <OtpInput
-      maxLength={maxLength}
-      {...rest}
+      maxLength={4}
+      {...props}
     >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />

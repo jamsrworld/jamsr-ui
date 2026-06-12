@@ -2,12 +2,11 @@
 
 import { OtpInput } from "ui/otp-input";
 
-export const OtpInput6Digits = (props: OtpInput.Props) => {
-  const { maxLength = 6, ...rest } = props;
+export const OtpInput6Digits = (props: Partial<OtpInput.Props>) => {
   return (
     <OtpInput
-      maxLength={maxLength}
-      {...rest}
+      maxLength={6}
+      {...props}
     >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />

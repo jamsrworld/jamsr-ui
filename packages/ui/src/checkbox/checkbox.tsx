@@ -4,7 +4,7 @@ import { createContext, use, useMemo } from "react";
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox-group";
-import { mergeProps } from "react-aria";
+import { mergeProps } from "react-aria/mergeProps";
 import { useFocusRing } from "react-aria/useFocusRing";
 import { useHover } from "react-aria/useHover";
 import { usePress } from "react-aria/usePress";
@@ -37,13 +37,22 @@ export const Checkbox = (props: Checkbox.Props) => {
     className,
     children = <CheckboxIndicator />,
     variant,
+    disabled,
+    onClick,
     ...restProps
   } = props;
   const styles = checkboxStyles({ size, radius, variant });
   const value = useMemo(() => ({ styles }), [styles]);
 
-  const { isPressed, pressProps } = usePress({ isDisabled: props.disabled });
-  const { isHovered, hoverProps } = useHover({ isDisabled: props.disabled });
+  const isDisabled = disabled;
+
+  const { isPressed, pressProps } = usePress({
+    isDisabled,
+    onClick(e) {
+      onClick?.(e as any);
+    },
+  });
+  const { isHovered, hoverProps } = useHover({ isDisabled });
   const { isFocusVisible, focusProps, isFocused } = useFocusRing({});
   return (
     <CheckboxContext value={value}>
@@ -52,6 +61,7 @@ export const Checkbox = (props: Checkbox.Props) => {
         data-focused={dataAttr(isFocused)}
         data-hovered={dataAttr(isHovered)}
         data-pressed={dataAttr(isPressed)}
+        disabled={isDisabled}
         {...mergeProps(pressProps, hoverProps, focusProps, restProps)}
         className={styles.root({ className: cn(className) })}
         data-invalid={dataAttr(isInvalid)}

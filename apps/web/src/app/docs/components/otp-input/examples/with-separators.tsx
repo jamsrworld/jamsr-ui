@@ -2,13 +2,12 @@
 
 import { OtpInput } from "ui/otp-input";
 
-export const OtpInputWithSeparators = (props: OtpInput.Props) => {
-  const { maxLength, ...rest } = props;
+export const OtpInputWithSeparators = (props: Partial<OtpInput.Props>) => {
   return (
     <div className="flex flex-col gap-8">
       <OtpInput
         maxLength={4}
-        {...rest}
+        {...props}
       >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />
@@ -22,7 +21,7 @@ export const OtpInputWithSeparators = (props: OtpInput.Props) => {
       </OtpInput>
       <OtpInput
         maxLength={6}
-        {...rest}
+        {...props}
       >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />
@@ -38,7 +37,7 @@ export const OtpInputWithSeparators = (props: OtpInput.Props) => {
       </OtpInput>
       <OtpInput
         maxLength={6}
-        {...rest}
+        {...props}
       >
         <OtpInput.Group>
           <OtpInput.Slot index={0} />

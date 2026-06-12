@@ -22,11 +22,20 @@ export const Button = (props: Button.Props) => {
     className,
     children,
     radius,
+    disabled,
+    onClick,
     ...restProps
   } = props;
 
-  const { isPressed, pressProps } = usePress({ isDisabled: props.disabled });
-  const { isHovered, hoverProps } = useHover({ isDisabled: props.disabled });
+  const isDisabled = disabled ?? isLoading;
+
+  const { isPressed, pressProps } = usePress({
+    isDisabled,
+    onClick(e) {
+      onClick?.(e as any);
+    },
+  });
+  const { isHovered, hoverProps } = useHover({ isDisabled });
   const { isFocusVisible, focusProps, isFocused } = useFocusRing({});
   return (
     <ButtonPrimitive
@@ -34,7 +43,8 @@ export const Button = (props: Button.Props) => {
       data-focused={dataAttr(isFocused)}
       data-hovered={dataAttr(isHovered)}
       data-pressed={dataAttr(isPressed)}
-      {...mergeProps(pressProps, hoverProps, focusProps, restProps)}
+      disabled={isDisabled}
+      {...mergeProps(restProps, pressProps, hoverProps, focusProps)}
       className={buttonStyles({
         color,
         size,

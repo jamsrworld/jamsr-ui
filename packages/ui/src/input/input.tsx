@@ -1,7 +1,8 @@
 "use client";
 
 import { Input as InputPrimitive } from "@base-ui/react/input";
-import { mergeProps, useHover } from "react-aria";
+import { mergeProps } from "react-aria/mergeProps";
+import { useHover } from "react-aria/useHover";
 
 import { inputStyles } from "./styles";
 import { dataAttr } from "../utils/attr";

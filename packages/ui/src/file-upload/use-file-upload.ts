@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useRef, useState } from "react";
 
-import { mergeProps } from "react-aria";
+import { mergeProps } from "react-aria/mergeProps";
 
 import { cn } from "../utils/cn";
 

@@ -2,16 +2,15 @@
 
 import { OtpInput } from "ui/otp-input";
 
-export const OtpInputOnComplete = (props: OtpInput.Props) => {
-  const { maxLength = 4, ...rest } = props;
+export const OtpInputOnComplete = (props: Partial<OtpInput.Props>) => {
   const handleComplete = (val: unknown) => {
     console.log(`Completed: ${val}`);
   };
   return (
     <OtpInput
-      maxLength={maxLength}
+      maxLength={4}
       onComplete={handleComplete}
-      {...rest}
+      {...props}
     >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />

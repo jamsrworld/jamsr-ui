@@ -10,9 +10,9 @@ export const RHFNumberField = (props: RHFNumberField.Props) => {
   const { invalid } = fieldState;
   return (
     <NumberField
-      ref={ref}
       data-invalid={dataAttr(invalid)}
       disabled={disabled}
+      inputRef={ref}
       name={name}
       onBlur={onBlur}
       onValueChange={onChange}

@@ -17,20 +17,28 @@ export const metadata: Metadata = {
 
 const cardVariants: VariantOptions<Card.Variants> = {
   bg: {
-    options: ["default", "secondary"],
+    options: ["default", "secondary", "tertiary", "quaternary"],
     defaultValue: "default",
   },
   isBordered: {
     options: ["true", "false"],
     defaultValue: "false",
   },
-  isElevated: {
-    options: ["true", "false"],
-    defaultValue: "false",
-  },
   radius: {
     options: ["none", "sm", "md", "lg", "full"],
     defaultValue: "md",
+  },
+  contentPadding: {
+    options: ["none", "x", "y", "both"],
+    defaultValue: "both",
+  },
+  shadow: {
+    options: ["none", "sm", "md", "lg"],
+    defaultValue: "sm",
+  },
+  surface: {
+    options: ["card", "content"],
+    defaultValue: "card",
   },
 };
 

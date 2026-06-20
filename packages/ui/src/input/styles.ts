@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
 
-import { focusRingClasses } from "../utils/variants";
+import { dataFocusRingClasses } from "../utils/variants";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -12,7 +12,7 @@ export const inputStyles = tv({
     variant: {
       bordered:
         "border border-border data-hovered:not-focus:border-border-dark focus:border-focus",
-      solid: ["bg-surface data-hovered:bg-surface/90", ...focusRingClasses],
+      solid: ["bg-surface data-hovered:bg-surface/90", ...dataFocusRingClasses],
     },
     size: {
       sm: "px-3 py-1.5 text-sm placeholder:text-sm",

@@ -8,14 +8,14 @@ export const tableStyles = tv({
     thead: "h-10 group/thead",
     th: [
       "h-10 grow items-center px-3 text-left text-sm font-normal",
-      "data-pinned:bg-background/90 data-pinned:backdrop-blur-xl",
-      "group/th",
+      "data-pinned:bg-surface-tertiary/90 data-pinned:backdrop-blur-xl",
+      "group/th min-w-ma",
     ],
     tbody: "",
     tr: "group/tr",
     td: [
       "overflow-hidden  px-3 text-sm",
-      "data-pinned:bg-background/90 data-pinned:backdrop-blur-xl",
+      "data-pinned:bg-surface-tertiary/90 data-pinned:backdrop-blur-xl",
     ],
     tfoot: "",
   },

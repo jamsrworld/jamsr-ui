@@ -5,6 +5,7 @@ import { createContext, use, useMemo } from "react";
 import { useRender } from "@base-ui/react/use-render";
 
 import { cardStyles } from "./styles";
+import { cn } from "../utils";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -12,6 +13,7 @@ type CardVariants = VariantProps<typeof cardStyles>;
 
 const CardContext = createContext<{
   styles: ReturnType<typeof cardStyles>;
+  surface: Card.Props["surface"];
 } | null>(null);
 
 const useCardContext = () => {
@@ -26,20 +28,35 @@ export const Card = (props: Card.Props) => {
   const {
     bg,
     isBordered,
-    isElevated,
+    shadow,
+    surface = "card",
     radius,
     className,
+    contentPadding,
     render,
     ...restProps
   } = props;
-  const styles = cardStyles({ bg, isBordered, isElevated, radius });
-  const value = useMemo(() => ({ styles }), [styles]);
+  const styles = cardStyles({
+    bg,
+    isBordered,
+    shadow,
+    radius,
+    contentPadding,
+    surface,
+  });
+  const value = useMemo(() => ({ styles, surface }), [styles, surface]);
+
+  const finalClassName = useMemo(() => {
+    return surface === "card"
+      ? styles.root({ className: cn(styles.surface({ className })) })
+      : styles.root({ className });
+  }, [styles, surface, className]);
 
   const renderElement = useRender({
     defaultTagName: "div",
     props: {
       ...restProps,
-      className: styles.root({ className }),
+      className: finalClassName,
     },
     render,
   });
@@ -48,8 +65,9 @@ export const Card = (props: Card.Props) => {
 };
 
 export namespace Card {
-  export interface Props
-    extends useRender.ComponentProps<"div">, CardVariants {}
+  export interface Props extends useRender.ComponentProps<"div">, CardVariants {
+    surface?: "card" | "content";
+  }
 }
 
 export const CardHeader = (props: CardHeader.Props) => {
@@ -108,18 +126,25 @@ export namespace CardDescription {
 
 export const CardContent = (props: CardContent.Props) => {
   const { className, render, ...rest } = props;
-  const { styles } = useCardContext();
+  const { styles, surface } = useCardContext();
+
+  const finalClassName = useMemo(() => {
+    if (surface === "content") {
+      return styles.content({ className: cn(styles.surface({ className })) });
+    }
+    return styles.content({ className });
+  }, [styles, surface, className]);
+
   const renderElement = useRender({
     defaultTagName: "div",
     props: {
       ...rest,
-      className: styles.content({ className }),
+      className: finalClassName,
     },
     render,
   });
   return renderElement;
 };
-
 export namespace CardContent {
   export interface Props extends useRender.ComponentProps<"div"> {}
 }

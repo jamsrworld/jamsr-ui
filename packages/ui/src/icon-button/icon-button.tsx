@@ -26,13 +26,19 @@ export const IconButton = (props: IconButton.Props) => {
     children,
     label,
     disabled,
+    onClick,
     ...restProps
   } = props;
   const labelId = useId();
 
   const isDisabled = disabled ?? isLoading;
 
-  const { isPressed, pressProps } = usePress({ isDisabled });
+  const { isPressed, pressProps } = usePress({
+    isDisabled,
+    onClick(e) {
+      onClick?.(e as any);
+    },
+  });
   const { isHovered, hoverProps } = useHover({ isDisabled });
   const { isFocusVisible, focusProps, isFocused } = useFocusRing({});
   return (

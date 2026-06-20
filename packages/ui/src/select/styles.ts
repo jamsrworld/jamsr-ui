@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
 
-import { focusRingClasses, focusVisibleClasses } from "../utils/variants";
+import { dataFocusRingClasses, focusVisibleClasses } from "../utils/variants";
 
 export const selectStyles = tv({
   slots: {
@@ -25,7 +25,7 @@ export const selectStyles = tv({
       "flex flex-row",
     ],
     itemIndicator: "size-3",
-    itemText: "",
+    itemText: "grow",
     scrollUpArrow: "",
     scrollDownArrow: "",
     popup: [
@@ -92,7 +92,11 @@ export const selectStyles = tv({
         ],
       },
       solid: {
-        trigger: ["bg-surface", ...focusVisibleClasses, ...focusRingClasses],
+        trigger: [
+          "bg-surface",
+          ...focusVisibleClasses,
+          ...dataFocusRingClasses,
+        ],
       },
     },
   },

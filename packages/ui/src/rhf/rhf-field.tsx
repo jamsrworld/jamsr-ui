@@ -22,7 +22,11 @@ export const RHFField = <T extends FieldValues>(
       render={({ field, fieldState, formState }) => {
         return (
           <RHFContext value={{ field, fieldState, formState }}>
-            <Field name={name} {...restProps}>
+            <Field
+              invalid={!!fieldState.error?.message}
+              name={name}
+              {...restProps}
+            >
               {children}
             </Field>
           </RHFContext>

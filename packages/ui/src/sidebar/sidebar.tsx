@@ -103,10 +103,10 @@ export const SidebarWrapperInner = (props: SidebarWrapper.Props) => {
     defaultTagName: "div",
     props: {
       ...rest,
-      className,
+      className: styles.wrapper({ className }),
       style: {
         ...style,
-        "--width": `${width}px`,
+        "--sidebar-width": `${width}px`,
       } as React.CSSProperties,
       "data-slot": "wrapper",
       "data-state": state,

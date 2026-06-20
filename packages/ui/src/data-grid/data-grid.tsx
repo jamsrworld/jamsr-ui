@@ -12,6 +12,7 @@ declare module "@tanstack/react-table" {
     headerClassName?: string;
     cellClassName?: string;
     expandedContent?: (row: TData) => ReactNode;
+    skeleton?: ReactNode;
   }
 }
 

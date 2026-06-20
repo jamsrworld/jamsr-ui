@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
 
-import { focusRingClasses } from "../utils";
+import { dataFocusRingClasses } from "../utils";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -10,11 +10,11 @@ export const autocompleteStyles = tv({
       "w-full rounded-md border border-border bg-surface px-3 py-2 text-sm outline-none",
       "placeholder:text-foreground-tertiary",
       "disabled:status-disabled",
-      ...focusRingClasses,
+      ...dataFocusRingClasses,
     ],
     inputGroup: [
       "flex items-center rounded-md border border-border bg-surface",
-      ...focusRingClasses,
+      ...dataFocusRingClasses,
     ],
     trigger: [
       "inline-flex items-center justify-center px-2 text-foreground-secondary",

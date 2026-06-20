@@ -24,6 +24,7 @@ export const menuStyles = tv({
     menuGroupLabel: "pl-2 text-foreground-secondary py-1",
     submenuIndicator: "ml-auto size-4",
     menuItemIndicator: "size-4 grid place-content-center",
+    separator: "w-full h-px bg-border my-1",
   },
   variants: {
     radius: {

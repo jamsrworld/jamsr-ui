@@ -2,17 +2,14 @@
 
 import { createContext, use, useMemo } from "react";
 
-import { Input as LocalInput } from "@base-ui/react/input";
+import { Input as InputPrimitive } from "@base-ui/react/input";
 import { useRender } from "@base-ui/react/use-render";
-import { mergeProps } from "react-aria/mergeProps";
-import { useFocusRing } from "react-aria/useFocusRing";
-import { useHover } from "react-aria/useHover";
+import { mergeProps, useFocusRing, useHover } from "react-aria";
 
-import { TextArea as LocalTextArea } from "../textarea";
 import { inputGroupStyles } from "./styles";
 import { dataAttr } from "../utils/attr";
 
-import type { DOMAttributes } from "react";
+import type { ComponentProps, DOMAttributes } from "react";
 import type { VariantProps } from "tailwind-variants";
 
 type InputGroupVariants = VariantProps<typeof inputGroupStyles>;
@@ -123,12 +120,12 @@ export namespace InputGroupSuffix {
 }
 
 export const InputGroupInput = (
-  props: Omit<LocalInput.Props, "size"> & { size?: "sm" | "md" | "lg" },
+  props: Omit<InputPrimitive.Props, "size"> & { size?: "sm" | "md" | "lg" },
 ) => {
   const { styles, focusProps } = useInputGroupContext();
   const { className, size: _size, ...restProps } = props;
   return (
-    <LocalInput
+    <InputPrimitive
       className={styles.input({ className: className as string })}
       data-slot="input"
       {...mergeProps(focusProps, restProps)}
@@ -136,14 +133,23 @@ export const InputGroupInput = (
   );
 };
 
-export const InputGroupTextArea = (props: LocalTextArea.Props) => {
+export const InputGroupTextArea = (props: InputGroupTextArea.Props) => {
   const { styles, focusProps } = useInputGroupContext();
-  const { className, ...restProps } = props;
+  const { className, defaultValue, onValueChange, ...restProps } = props;
   return (
-    <LocalTextArea
+    <InputPrimitive
       className={styles.input({ className: className as string })}
-      data-slot="input"
-      {...mergeProps(focusProps, restProps)}
+      data-slot="textarea"
+      defaultValue={defaultValue}
+      onValueChange={onValueChange}
+      render={<textarea {...mergeProps(focusProps, restProps)} />}
     />
   );
 };
+
+export namespace InputGroupTextArea {
+  export interface Props
+    extends
+      Omit<InputPrimitive.Props, keyof ComponentProps<"textarea"> | "size">,
+      ComponentProps<"textarea"> {}
+}

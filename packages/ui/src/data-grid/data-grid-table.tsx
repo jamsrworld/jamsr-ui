@@ -17,7 +17,11 @@ export const DataGridTable = (props: DataGridTable.Props) => {
     ...restProps
   } = props;
   return (
-    <Table className={cn("w-full table-fixed", className)} {...restProps}>
+    <Table
+      isHeaderSticky
+      className={cn("w-full table-fixed", className)}
+      {...restProps}
+    >
       {children}
     </Table>
   );

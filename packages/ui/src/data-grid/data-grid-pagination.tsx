@@ -28,8 +28,8 @@ export const DataGridPaginationSelector = () => {
     setValue(value);
   };
   return (
-    <Field className="grow max-w-40" orientation="horizontal">
-      <Field.Label className="whitespace-nowrap grid place-content-center">
+    <Field className="grow" orientation="horizontal">
+      <Field.Label className="whitespace-nowrap hidden sm:grid sm:place-content-center">
         Rows Per Page:
       </Field.Label>
       <Select
@@ -39,11 +39,12 @@ export const DataGridPaginationSelector = () => {
         size="sm"
         value={value}
       >
-        <Select.Trigger className="px-1" />
+        <Select.Trigger className="px-1 max-w-14" />
         <Select.Content>
           {[10, 20, 50, 100, 500].map((pageSize) => (
             <Select.Item key={pageSize.toString()} value={pageSize}>
-              {pageSize.toString()}
+              <Select.ItemIndicator />
+              <Select.ItemText>{pageSize.toString()}</Select.ItemText>
             </Select.Item>
           ))}
         </Select.Content>
@@ -153,7 +154,7 @@ export const DataGridPagination = (props: DataGridPagination.Props) => {
     props: {
       ...restProps,
       className: cn(
-        "flex flex-col w-full justify-between gap-4 md:flex-row md:items-center mt-2",
+        "flex w-full justify-between gap-4 items-center mt-2",
         restProps.className,
       ),
       "data-slot": "pagination",

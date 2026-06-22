@@ -31,6 +31,7 @@ export const sidebarData: {
       { title: "Avatar", url: "/docs/components/avatar" },
       { title: "Breadcrumb", url: "/docs/components/breadcrumb" },
       { title: "Button", url: "/docs/components/button" },
+      { title: "Calendar", url: "/docs/components/calendar" },
       { title: "Card", url: "/docs/components/card" },
       { title: "Charts", url: "/docs/components/charts" },
       { title: "Checkbox", url: "/docs/components/checkbox" },

@@ -1,5 +1,8 @@
-import { Field } from "jamsrui/field";
-import { Select } from "jamsrui/select";
+"use client";
+
+import { Field } from "ui/field";
+import { Select } from "ui/select";
+import React from "react";
 
 const apples = [
   { label: "Gala", value: "gala" },
@@ -9,15 +12,21 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectWithErrorMessage = () => {
+export const SelectWithErrorMessage = (props: Partial<Select.Props>) => {
   return (
-    <Field>
-      <Select items={apples} isInvalid>
+    <Field invalid>
+      <Select
+        items={apples}
+        {...props}
+      >
         <Field.Label>Fruit</Field.Label>
         <Select.Trigger className="min-w-40" />
         <Select.Content>
           {apples.map(({ label, value }) => (
-            <Select.Item key={label} value={value}>
+            <Select.Item
+              key={label}
+              value={value}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>{label}</Select.ItemText>
             </Select.Item>

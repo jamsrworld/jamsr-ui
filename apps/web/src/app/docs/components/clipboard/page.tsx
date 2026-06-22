@@ -1,7 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { Clipboard } from "ui/clipboard";
 import { ClipboardEvents } from "./examples/events";
 import { ClipboardSoundEffect } from "./examples/sound-effect";
 import { ClipboardUsage } from "./examples/usage";
@@ -16,39 +18,40 @@ export const metadata: Metadata = {
   description,
 };
 
-const Clipboard = () => {
+const ClipboardPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <ClipboardUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        component={ClipboardUsage}
+      />
+      <CodeExampleV2
         title="With Content"
         url={resolvePath("with-content.tsx")}
-      >
-        <ClipboardWithContent />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        component={ClipboardWithContent}
+      />
+      <CodeExampleV2
         title="Without Icon"
         url={resolvePath("without-icon.tsx")}
-      >
-        <ClipboardWithoutIcon />
-      </CodeExample>
-      <CodeExample isCentered title="Events" url={resolvePath("events.tsx")}>
-        <ClipboardEvents />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        component={ClipboardWithoutIcon}
+      />
+      <CodeExampleV2
+        title="Events"
+        url={resolvePath("events.tsx")}
+        component={ClipboardEvents}
+      />
+      <CodeExampleV2
         title="Sound Effect"
         url={resolvePath("sound-effect.tsx")}
-      >
-        <ClipboardSoundEffect />
-      </CodeExample>
+        component={ClipboardSoundEffect}
+      />
     </DocsPage>
   );
 };
 
-export default Clipboard;
+export default ClipboardPage;

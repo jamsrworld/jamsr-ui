@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
 
-import { dataFocusVisibleClasses } from "../utils/variants";
+import { dataFocusVisibleClasses, focusWithinClasses } from "../utils/variants";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -11,12 +11,12 @@ export const numberFieldStyles = tv({
     decrement: "h-full w-12 border-r border-r-border grid place-content-center",
     input: [
       "outline-0 px-3 py-1 grow text-sm",
-      "focus:z-1 tabular-nums text-center",
+      "focus:z-1 tabular-nums",
       "min-w-0",
     ],
     group: [
-      "border border-border flex items-center rounded-md h-9 w-full",
-      "overflow-hidden focus-within:outline-none focus-within:border-focus hover:not-focus-within:border-border-dark",
+      "flex items-center w-full",
+      "overflow-hidden",
       ...dataFocusVisibleClasses,
     ],
     scrubArea: "cursor-ew-resize",
@@ -24,11 +24,31 @@ export const numberFieldStyles = tv({
     scrubAreaCursor: "drop-shadow-[0_1px_1px_#0008] filter",
   },
   variants: {
-    isInvalid: {
-      true: {
-        group: "border-danger focus-within:border-danger",
+    variant: {
+      solid: {
+        group: ["bg-surface", ...focusWithinClasses],
+      },
+      bordered: {
+        group: ["border border-border"],
       },
     },
+    radius: {
+      none: { group: "rounded-none" },
+      sm: { group: "rounded-sm" },
+      md: { group: "rounded-md" },
+      lg: { group: "rounded-lg" },
+      xl: { group: "rounded-xl" },
+    },
+    size: {
+      sm: { group: "h-7" },
+      md: { group: "h-9" },
+      lg: { group: "h-11" },
+    },
+  },
+  defaultVariants: {
+    variant: "solid",
+    radius: "md",
+    size: "md",
   },
 });
 

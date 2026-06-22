@@ -2,19 +2,19 @@
 
 import { DocsPage } from "@/components/docs-page";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { EyeClosedIcon, EyeOpenIcon } from "@jamsrui/icons";
-import { Button } from "jamsrui/button";
-import { Field } from "jamsrui/field";
-import { IconButton } from "jamsrui/icon-button";
-import { InputGroup } from "jamsrui/input-group";
-import { Label } from "jamsrui/label";
-import { NumberField } from "jamsrui/number-field";
-import { OtpInput } from "jamsrui/otp-input";
-import { Radio } from "jamsrui/radio-group";
-import { RHFField } from "jamsrui/rhf";
-import { Select } from "jamsrui/select";
+import { EyeClosedIcon, EyeOpenIcon } from "@/icons";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { Button } from "ui/button";
+import { Field } from "ui/field";
+import { IconButton } from "ui/icon-button";
+import { InputGroup } from "ui/input-group";
+import { Label } from "ui/label";
+import { NumberField } from "ui/number-field";
+import { OtpInput } from "ui/otp-input";
+import { Radio } from "ui/radio-group";
+import { RHFField } from "ui/rhf";
+import { Select } from "ui/select";
 import z, { boolean, number, object, string } from "zod";
 
 type FormValues = {
@@ -65,10 +65,15 @@ const Page = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = form.handleSubmit((values) => {
-    console.log(values);
-    // toast.success(<pre>{JSON.stringify(values, null, 2)}</pre>);
-  });
+  const onSubmit = form.handleSubmit(
+    (values) => {
+      console.log(values);
+      // toast.success(<pre>{JSON.stringify(values, null, 2)}</pre>);
+    },
+    (e) => {
+      console.log(e);
+    },
+  );
 
   const [showPassword, setShowPassword] = useState(false);
   const handleTogglePassword = () => {
@@ -76,9 +81,15 @@ const Page = () => {
   };
 
   return (
-    <DocsPage title="React Hook Form" description="">
+    <DocsPage
+      title="React Hook Form"
+      description=""
+    >
       <FormProvider {...form}>
-        <form onSubmit={onSubmit} className="flex flex-col gap-8 max-w-md">
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col gap-8 max-w-md"
+        >
           {/* Username */}
           <RHFField<FormValues> name="username">
             <Field.Label>Username</Field.Label>
@@ -87,40 +98,36 @@ const Page = () => {
           </RHFField>
           {/* Password */}
           <RHFField<FormValues> name="password">
-            <Field>
-              <Field.Label>Password</Field.Label>
-              <InputGroup>
-                <RHFField.Input
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Enter your name"
-                />
-                <InputGroup.Suffix>
-                  <IconButton
-                    size="sm"
-                    radius="full"
-                    label="Toggle password"
-                    variant="light"
-                    onClick={handleTogglePassword}
-                  >
-                    {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
-                  </IconButton>
-                </InputGroup.Suffix>
-              </InputGroup>
-              <RHFField.FieldError />
-            </Field>
+            <Field.Label>Password</Field.Label>
+            <InputGroup>
+              <RHFField.InputGroupInput
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your name"
+              />
+              <InputGroup.Suffix>
+                <IconButton
+                  size="sm"
+                  radius="full"
+                  label="Toggle password"
+                  variant="light"
+                  onClick={handleTogglePassword}
+                >
+                  {showPassword ? <EyeClosedIcon /> : <EyeOpenIcon />}
+                </IconButton>
+              </InputGroup.Suffix>
+            </InputGroup>
+            <RHFField.FieldError />
           </RHFField>
           {/* Bio */}
           <RHFField<FormValues> name="bio">
-            <Field>
-              <Field.Label>Bio</Field.Label>
-              <RHFField.Textarea />
-              <RHFField.FieldError />
-            </Field>
+            <Field.Label>Bio</Field.Label>
+            <RHFField.TextArea />
+            <RHFField.FieldError />
           </RHFField>
           {/* Age */}
           <RHFField<FormValues> name="age">
             <RHFField.NumberField>
-              <Label>Age</Label>
+              <Field.Label>Age</Field.Label>
               <NumberField.Group>
                 <NumberField.Input />
               </NumberField.Group>
@@ -128,14 +135,23 @@ const Page = () => {
             </RHFField.NumberField>
           </RHFField>
           {/* Accepted Terms */}
-          <RHFField<FormValues> name="acceptedTerms" orientation="horizontal">
+          <RHFField<FormValues>
+            name="acceptedTerms"
+            orientation="horizontal"
+          >
             <RHFField.Checkbox />
             <Field.Label>Accept Terms and Conditions</Field.Label>
           </RHFField>
           {/* Dark Mode */}
-          <RHFField<FormValues> name="darkMode" orientation="horizontal">
+          <RHFField<FormValues>
+            name="darkMode"
+            orientation="horizontal"
+          >
             <Field.Label>Dark Mode</Field.Label>
-            <RHFField.Switch />
+            <Field.Content>
+              <RHFField.Switch />
+              <RHFField.FieldError />
+            </Field.Content>
           </RHFField>
           {/* Gender */}
           <RHFField<FormValues> name="gender">
@@ -171,8 +187,8 @@ const Page = () => {
           </RHFField>
           {/* Country */}
           <RHFField<FormValues> name="country">
+            <Field.Label>Country</Field.Label>
             <RHFField.Select>
-              <Label>Country</Label>
               <Select.Trigger>
                 <Select.Value placeholder="Select a country..." />
                 <Select.Icon />
@@ -196,8 +212,8 @@ const Page = () => {
           </RHFField>
           {/* Hobbies */}
           <RHFField<FormValues> name="hobbies">
+            <Field.Label>Hobbies</Field.Label>
             <RHFField.Select multiple>
-              <Label>Hobbies</Label>
               <Select.Trigger>
                 <Select.Value placeholder="Select hobbies..." />
                 <Select.Icon />
@@ -219,7 +235,10 @@ const Page = () => {
               <RHFField.FieldError />
             </RHFField.Select>
           </RHFField>
-          <Button type="submit" color="primary">
+          <Button
+            type="submit"
+            color="primary"
+          >
             Submit
           </Button>
         </form>

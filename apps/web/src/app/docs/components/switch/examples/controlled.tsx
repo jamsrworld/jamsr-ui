@@ -1,14 +1,18 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { Switch } from "jamsrui/switch";
-import { useState } from "react";
+import { Field } from "ui/field";
+import { Switch } from "ui/switch";
+import React, { useState } from "react";
 
-export const SwitchControlled = () => {
+export const SwitchControlled = (props: Switch.Props) => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <Field orientation="horizontal">
-      <Switch checked={isChecked} onCheckedChange={setIsChecked} />
+      <Switch
+        checked={isChecked}
+        onCheckedChange={setIsChecked}
+        {...props}
+      />
       <Field.Content>
         <Field.Label>Are you ok?</Field.Label>
         <Field.Description>

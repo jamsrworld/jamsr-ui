@@ -8,20 +8,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json,css}\""
   },
   "dependencies": {
+    "@daypicker/react": "^10.0.1",
     "@faker-js/faker": "10.1.0",
     "@hookform/resolvers": "^5.2.2",
     "@iconify/react": "^6.0.2",
-    "@jamsrui/hooks": "workspace:^",
-    "@jamsrui/icons": "workspace:^",
     "@jamsrui/theme": "workspace:^",
-    "@jamsrui/utils": "workspace:^",
     "@tanstack/react-query": "^5.81.5",
     "@tanstack/react-table": "catalog:",
     "date-fns": "^4.1.0",
-    "jamsrui": "workspace:^",
     "lucide-react": "^1.7.0",
     "motion": "catalog:",
     "next": "catalog:",
@@ -30,6 +28,7 @@
     "react-hook-form": "^7.66.0",
     "shiki": "^3.4.2",
     "tailwind-variants": "^3.2.2",
+    "ui": "workspace:^",
     "zod": "^4.1.12"
   },
   "devDependencies": {

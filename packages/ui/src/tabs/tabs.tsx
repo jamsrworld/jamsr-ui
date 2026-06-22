@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
-import { cn } from "tailwind-variants";
 
 import { tabsStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { TabsVariants } from "./styles";
 

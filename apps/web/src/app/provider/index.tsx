@@ -1,7 +1,7 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Toast } from "jamsrui/toast";
+import { Toast } from "ui/toast";
 import { useState } from "react";
 import { ToastList, toastManager } from "./toast";
 

@@ -1,12 +1,12 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Accordion } from "ui/accordion";
 import { Metadata } from "next";
 import { AccordionDisabled } from "./examples/disabled";
 import { AccordionMultipleSelection } from "./examples/multiple-selection";
-import { AccordionRadius } from "./examples/radius";
 import { AccordionUsage } from "./examples/usage";
-import { AccordionVariants } from "./examples/variants";
 import { AccordionWithoutIcon } from "./examples/without-icon";
 
 const title = "Accordion";
@@ -18,33 +18,50 @@ export const metadata: Metadata = {
   description,
 };
 
-const Accordion = () => {
+const AccordionVariants: VariantOptions<Accordion.Variants> = {
+  radius: {
+    defaultValue: "md",
+    options: ["sm", "md", "lg", "full", "none"],
+  },
+  variant: {
+    defaultValue: "splitted",
+    options: ["light", "splitted"],
+  },
+};
+
+const AccordionPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <AccordionUsage />
-      </CodeExample>
-      <CodeExample title="Disabled" url={resolvePath("disabled.tsx")}>
-        <AccordionDisabled />
-      </CodeExample>
-      <CodeExample
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={AccordionVariants}
+        component={AccordionUsage}
+      />
+      <CodeExampleV2
+        title="Disabled"
+        url={resolvePath("disabled.tsx")}
+        variants={AccordionVariants}
+        component={AccordionDisabled}
+      />
+      <CodeExampleV2
         title="Multiple Selection"
         url={resolvePath("multiple-selection.tsx")}
-      >
-        <AccordionMultipleSelection />
-      </CodeExample>
-      <CodeExample title="Radius" url={resolvePath("radius.tsx")}>
-        <AccordionRadius />
-      </CodeExample>
-      <CodeExample title="Variants" url={resolvePath("variants.tsx")}>
-        <AccordionVariants />
-      </CodeExample>
-      <CodeExample title="Without Icon" url={resolvePath("without-icon.tsx")}>
-        <AccordionWithoutIcon />
-      </CodeExample>
+        variants={AccordionVariants}
+        component={AccordionMultipleSelection}
+      />
+      <CodeExampleV2
+        title="Without Icon"
+        url={resolvePath("without-icon.tsx")}
+        variants={AccordionVariants}
+        component={AccordionWithoutIcon}
+      />
     </DocsPage>
   );
 };
 
-export default Accordion;
+export default AccordionPage;

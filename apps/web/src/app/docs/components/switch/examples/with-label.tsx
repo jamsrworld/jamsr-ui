@@ -1,11 +1,14 @@
-import { Field } from "jamsrui/field";
-import { Switch } from "jamsrui/switch";
+"use client";
 
-export const SwitchWithLabel = () => {
+import { Field } from "ui/field";
+import { Switch } from "ui/switch";
+import React from "react";
+
+export const SwitchWithLabel = (props: Switch.Props) => {
   return (
     <Field orientation="horizontal">
-      <Switch />
-      <Field.Label>This is label</Field.Label>
+      <Switch {...props} />
+      <Field.Label>Enable notifications</Field.Label>
     </Field>
   );
 };

@@ -1,8 +1,13 @@
-import { OtpInput } from "jamsrui/otp-input";
+"use client";
 
-export const OtpInput6Digits = () => {
+import { OtpInput } from "ui/otp-input";
+
+export const OtpInput6Digits = (props: Partial<OtpInput.Props>) => {
   return (
-    <OtpInput maxLength={6}>
+    <OtpInput
+      maxLength={6}
+      {...props}
+    >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />
         <OtpInput.Slot index={1} />

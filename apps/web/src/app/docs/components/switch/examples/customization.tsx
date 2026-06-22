@@ -1,11 +1,14 @@
-import { SuccessIcon } from "@jamsrui/icons";
-import { Field } from "jamsrui/field";
-import { Switch } from "jamsrui/switch";
+"use client";
 
-export const SwitchCustomization = () => {
+import { SuccessIcon } from "@/icons";
+import { Field } from "ui/field";
+import { Switch } from "ui/switch";
+import React from "react";
+
+export const SwitchCustomization = (props: Switch.Props) => {
   return (
     <Field orientation="horizontal">
-      <Switch>
+      <Switch {...props}>
         <Switch.Thumb>
           <SuccessIcon className="size-3 shrink-0 text-primary" />
         </Switch.Thumb>

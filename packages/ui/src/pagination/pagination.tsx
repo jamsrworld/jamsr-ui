@@ -1,44 +1,60 @@
-import { Pagination as PaginationUI } from "@jamsrui/react";
+"use client";
+
+import { useRender } from "@base-ui/react/use-render";
 
 import { paginationStyles } from "./styles";
 
 const styles = paginationStyles();
 
 export const PaginationItem = (props: PaginationItem.Props) => {
-  const { isActive, className, ...rest } = props;
-  return (
-    <PaginationUI.Item
-      {...rest}
-      className={paginationStyles({ isActive }).item({ className })}
-    />
-  );
+  const { isActive, className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "button",
+    props: {
+      ...rest,
+      className: paginationStyles({ isActive }).item({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
-
-export const PaginationEllipsis = (props: PaginationEllipsis.Props) => {
-  const { className, ...rest } = props;
-  return (
-    <PaginationUI.Ellipsis
-      {...rest}
-      className={styles.ellipsis({ className })}
-    />
-  );
-};
-
-export const Pagination = (props: Pagination.Props) => {
-  const { className, ...rest } = props;
-  return <PaginationUI {...rest} className={styles.root({ className })} />;
-};
-
-export namespace Pagination {
-  export interface Props extends PaginationUI.Props {}
-}
 
 export namespace PaginationItem {
-  export interface Props extends PaginationUI.Item {
+  export interface Props extends useRender.ComponentProps<"button"> {
     isActive?: boolean;
   }
 }
 
+export const PaginationEllipsis = (props: PaginationEllipsis.Props) => {
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "span",
+    props: {
+      ...rest,
+      className: styles.ellipsis({ className }),
+    },
+    render,
+  });
+  return renderElement;
+};
+
 export namespace PaginationEllipsis {
-  export interface Props extends PaginationUI.Ellipsis {}
+  export interface Props extends useRender.ComponentProps<"span"> {}
+}
+
+export const Pagination = (props: Pagination.Props) => {
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: styles.root({ className }),
+    },
+    render,
+  });
+  return renderElement;
+};
+
+export namespace Pagination {
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }

@@ -1,13 +1,26 @@
-import { Label as LabelUI } from "@jamsrui/react";
-import { cn } from "tailwind-variants";
+"use client";
+
+import { useRender } from "@base-ui/react/use-render";
 
 import { labelStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 export const Label = (props: Label.Props) => {
-  const { className, ...restProps } = props;
-  return <LabelUI {...restProps} className={cn(labelStyles(), className)} />;
+  const { className, render, ...restProps } = props;
+
+  const labelProps = {
+    className: cn(labelStyles(), className),
+    ...restProps,
+  };
+
+  const renderElement = useRender({
+    defaultTagName: "label",
+    props: labelProps,
+    render,
+  });
+  return renderElement;
 };
 
 export namespace Label {
-  export interface Props extends LabelUI.Props {}
+  export interface Props extends useRender.ComponentProps<"label"> {}
 }

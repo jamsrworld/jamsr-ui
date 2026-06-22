@@ -1,26 +1,26 @@
 import { tv } from "tailwind-variants";
 
-import { variantStyles } from "../utils/variants";
+import { dataFocusVisibleClasses, variantStyles } from "../utils/variants";
 
 export const buttonStyles = tv({
   extend: variantStyles,
   base: [
     "cursor-interactive relative inline-flex py-2 px-4 justify-center items-center gap-2 shrink-0",
     "disabled:status-disabled",
-    "focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2",
-    "font-medium",
+    "font-medium data-pressed:scale-97 transition-[scale] duration-150",
+    ...dataFocusVisibleClasses,
   ],
   variants: {
     variant: {
-      solid: "ring-1 ring-inset",
+      solid: "",
     },
     color: {
-      primary: "ring-primary-border",
-      secondary: "ring-secondary-border",
-      default: "ring-default-border",
-      success: "ring-success-border",
-      warning: "ring-warning-border",
-      danger: "ring-danger-border",
+      primary: "",
+      secondary: "",
+      default: "",
+      success: "",
+      warning: "",
+      danger: "",
     },
     size: {
       sm: "min-w-16 gap-1 px-3 py-1.5 text-xs",

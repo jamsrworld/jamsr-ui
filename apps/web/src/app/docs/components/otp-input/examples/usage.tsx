@@ -1,8 +1,13 @@
-import { OtpInput } from "jamsrui/otp-input";
+"use client";
 
-export const OtpInputUsage = () => {
+import { OtpInput } from "ui/otp-input";
+
+export const OtpInputUsage = (props: Partial<OtpInput.Props>) => {
   return (
-    <OtpInput maxLength={4}>
+    <OtpInput
+      maxLength={4}
+      {...props}
+    >
       <OtpInput.Group>
         <OtpInput.Slot index={0} />
         <OtpInput.Slot index={1} />

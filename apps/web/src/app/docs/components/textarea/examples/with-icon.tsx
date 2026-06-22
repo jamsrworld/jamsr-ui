@@ -1,17 +1,22 @@
-import { EmailIcon } from "@jamsrui/icons";
-import { InputGroup } from "jamsrui/input-group";
-import { Field } from "jamsrui/field";
-import { Textarea } from "jamsrui/textarea";
+"use client";
 
-export const TextareaWithIcon = () => {
+import { EmailIcon } from "@/icons";
+import { Field } from "ui/field";
+import { type Input } from "ui/input";
+import { InputGroup } from "ui/input-group";
+
+export const TextAreaWithIcon = (props: Input.Variants) => {
   return (
     <Field>
       <Field.Label>Email</Field.Label>
-      <InputGroup>
+      <InputGroup {...props}>
         <InputGroup.Prefix>
           <EmailIcon />
         </InputGroup.Prefix>
-        <Textarea placeholder="Enter your email" className="w-full" />
+        <InputGroup.TextArea
+          placeholder="Enter your email"
+          className="w-full"
+        />
       </InputGroup>
     </Field>
   );

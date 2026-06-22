@@ -1,10 +1,11 @@
 "use client";
 
-import { TimeField, TimeInput, TimeSegment } from "jamsrui/time-field";
+import { TimeField, TimeInput, TimeSegment } from "ui/time-field";
+import React from "react";
 
-export const TimeFieldUsage = () => {
+export const TimeFieldUsage = (props: TimeField.Props) => {
   return (
-    <TimeField>
+    <TimeField {...props}>
       <TimeInput>{(segment) => <TimeSegment segment={segment} />}</TimeInput>
     </TimeField>
   );

@@ -1,5 +1,5 @@
 {
-  "name": "jamsrui",
+  "name": "ui",
   "version": "1.1.2",
   "description": "",
   "private": true,
@@ -12,6 +12,7 @@
     "./avatar": "./src/avatar/index.ts",
     "./breadcrumb": "./src/breadcrumb/index.ts",
     "./button": "./src/button/index.ts",
+    "./calendar": "./src/calendar/index.ts",
     "./card": "./src/card/index.ts",
     "./charts": "./src/charts/index.ts",
     "./checkbox": "./src/checkbox/index.ts",
@@ -71,31 +72,35 @@
     "./toolbar": "./src/toolbar/index.ts",
     "./tooltip": "./src/tooltip/index.ts",
     "./field": "./src/field/index.ts",
-    "./utils": "./src/utils/index.ts"
+    "./utils": "./src/utils/index.ts",
+    "./hooks": "./src/hooks/index.ts"
   },
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint src --ext .ts,.tsx --fix"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.6.2",
   "dependencies": {
     "@base-ui/react": "catalog:",
-    "@jamsrui/hooks": "workspace:^",
-    "@jamsrui/icons": "workspace:^",
-    "@jamsrui/react": "workspace:^",
-    "@jamsrui/text": "workspace:^",
-    "@jamsrui/utils": "workspace:^",
+    "@daypicker/react": "^10.0.1",
     "@tanstack/react-table": "catalog:",
+    "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "input-otp": "^1.4.2",
     "motion": "catalog:",
+    "react-aria": "^3.49.0",
     "react-hook-form": "^7.66.0",
+    "tailwind-merge": "^3.2.0",
     "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
     "@jamsrui/typescript-config": "workspace:^",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "prettier": "^3.6.2",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

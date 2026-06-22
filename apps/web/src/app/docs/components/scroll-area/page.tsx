@@ -1,28 +1,32 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
-import { Text } from "jamsrui/text";
 import { Metadata } from "next";
-import ScrollbarUsage from "./examples/usage";
+import { ScrollAreaUsage } from "./examples/usage";
 
 const title = "ScrollArea";
-const description = "ScrollArea";
+const description =
+  "ScrollArea is a custom scrollbar component that provides customizable, smooth scrolling capabilities with fallback to native scrolling when necessary.";
 
 export const metadata: Metadata = {
   title,
   description,
 };
 
-const ScrollArea = () => {
+const ScrollAreaPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <Text>Coming Soon!</Text>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <ScrollbarUsage />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        component={ScrollAreaUsage}
+      />
     </DocsPage>
   );
 };
 
-export default ScrollArea;
+export default ScrollAreaPage;

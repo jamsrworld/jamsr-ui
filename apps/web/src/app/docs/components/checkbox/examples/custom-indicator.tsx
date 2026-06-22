@@ -1,15 +1,19 @@
 "use client";
 
-import { PlusIcon } from "@jamsrui/icons";
-import { Checkbox } from "jamsrui/checkbox";
-import { Field } from "jamsrui/field";
+import { PlusIcon } from "@/icons";
+import { Checkbox } from "ui/checkbox";
+import { Field } from "ui/field";
 import { useState } from "react";
 
-export const CheckboxCustomIndicator = () => {
+export const CheckboxCustomIndicator = (props: Checkbox.Props) => {
   const [checked, setChecked] = useState(false);
   return (
     <Field orientation="horizontal">
-      <Checkbox checked={checked} onCheckedChange={setChecked}>
+      <Checkbox
+        checked={checked}
+        onCheckedChange={setChecked}
+        {...props}
+      >
         <Checkbox.Indicator>{checked ? <PlusIcon /> : null}</Checkbox.Indicator>
       </Checkbox>
       <Field.Content>

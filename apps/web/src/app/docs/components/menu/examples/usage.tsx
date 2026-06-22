@@ -1,9 +1,11 @@
-import { Button } from "jamsrui/button";
-import { Menu } from "jamsrui/menu";
+"use client";
 
-export const MenuUsage = () => {
+import { Button } from "ui/button";
+import { Menu } from "ui/menu";
+
+export const MenuUsage = (props: Menu.Props) => {
   return (
-    <Menu>
+    <Menu {...props}>
       <Menu.Trigger render={<Button>Open Me</Button>} />
       <Menu.Content>
         <Menu.Item>Add to Library</Menu.Item>

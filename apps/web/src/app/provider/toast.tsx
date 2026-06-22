@@ -1,11 +1,15 @@
-import { Toast } from "jamsrui/toast";
+import { Toast } from "ui/toast";
 
 export const toastManager = Toast.createToastManager();
 
 export const ToastList = () => {
   const { toasts } = Toast.useToastManager();
   return toasts.map((toast) => (
-    <Toast key={toast.id} toast={toast} variant={toast.type as any}>
+    <Toast
+      key={toast.id}
+      toast={toast}
+      variant={toast.type as any}
+    >
       <Toast.Content>
         <Toast.Title />
         <Toast.Description />

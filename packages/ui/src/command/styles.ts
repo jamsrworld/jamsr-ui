@@ -21,16 +21,16 @@ export const commandStyles = tv({
       "**:[[cmdk-list-sizer]]:space-y-1",
     ],
     empty: "py-6 text-center text-sm text-foreground-secondary",
-    group: "**:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-foreground-secondary",
+    group:
+      "**:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:text-xs **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-foreground-secondary",
     separator: "mx-1 my-1 h-px bg-border",
     item: [
-      "relative flex cursor-pointer select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none",
+      "relative flex cursor-interactive select-none items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none",
       "data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50",
       "data-[selected=true]:bg-surface-secondary data-[selected=true]:text-foreground",
       "[&_svg]:size-4 [&_svg]:shrink-0",
     ],
-    shortcut:
-      "ml-auto text-xs tracking-widest text-foreground-secondary",
+    shortcut: "ml-auto text-xs tracking-widest text-foreground-secondary",
     dialogOverlay: [
       "fixed inset-0 z-backdrop bg-black/50",
       "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",

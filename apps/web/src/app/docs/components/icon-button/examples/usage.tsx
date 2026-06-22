@@ -1,11 +1,15 @@
 "use client";
 
-import { IconButton } from "jamsrui/icon-button";
-import { EmailIcon } from "@jamsrui/icons";
+import { EmailIcon } from "@/icons";
+import { IconButton } from "ui/icon-button";
 
-export const IconButtonUsage = () => {
+export const IconButtonUsage = (props: IconButton.Props) => {
+  const { label = "Icon Button Usage", ...rest } = props;
   return (
-    <IconButton label="Icon Button Usage" color="primary">
+    <IconButton
+      label={label}
+      {...rest}
+    >
       <EmailIcon />
     </IconButton>
   );

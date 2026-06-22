@@ -1,8 +1,9 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
-import { Chip } from "jamsrui/chip";
-import { Select } from "jamsrui/select";
+import { Avatar } from "ui/avatar";
+import { Chip } from "ui/chip";
+import { Select } from "ui/select";
+import React from "react";
 
 const users = [
   {
@@ -207,10 +208,15 @@ const users = [
   },
 ];
 
-export const SelectCustomRenderMultiple = () => {
+export const SelectCustomRenderMultiple = (props: Partial<Select.Props>) => {
+  const { size = "lg", multiple = true, ...rest } = props;
   return (
-    <Select size="lg" multiple>
-      <Select.Trigger className="min-w-40">
+    <Select
+      size={size}
+      multiple={multiple}
+      {...rest}
+    >
+      <Select.Trigger className="min-w-40 h-auto">
         <Select.Value placeholder="Select users">
           {(values: string[]) => {
             if (values.length === 0) return "Select users";
@@ -220,8 +226,14 @@ export const SelectCustomRenderMultiple = () => {
                   const selectedUser = users.find((u) => u.email === value);
                   if (!selectedUser) return <></>;
                   return (
-                    <Chip key={selectedUser.id} className="p-2">
-                      <Avatar className="shrink-0" size="xs">
+                    <Chip
+                      key={selectedUser.id}
+                      className="p-2"
+                    >
+                      <Avatar
+                        className="shrink-0"
+                        size="xs"
+                      >
                         <Avatar.Image
                           src={selectedUser.avatar}
                           alt={selectedUser.name}
@@ -250,12 +262,21 @@ export const SelectCustomRenderMultiple = () => {
       <Select.Content>
         {users.map((user) => {
           return (
-            <Select.Item key={user.id} value={user.email}>
+            <Select.Item
+              key={user.id}
+              value={user.email}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>
                 <div className="flex items-center gap-2">
-                  <Avatar className="shrink-0" size="sm">
-                    <Avatar.Image src={user.avatar} alt={user.name} />
+                  <Avatar
+                    className="shrink-0"
+                    size="sm"
+                  >
+                    <Avatar.Image
+                      src={user.avatar}
+                      alt={user.name}
+                    />
                     <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
                   </Avatar>
                   <div className="flex flex-col">

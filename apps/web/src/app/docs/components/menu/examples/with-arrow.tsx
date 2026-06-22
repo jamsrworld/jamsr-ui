@@ -1,10 +1,15 @@
-import { ChevronUpIcon } from "@jamsrui/icons";
-import { Button } from "jamsrui/button";
-import { Menu } from "jamsrui/menu";
+"use client";
 
-export const MenuWithArrow = () => {
+import { ChevronUpIcon } from "@/icons";
+import { Button } from "ui/button";
+import { Menu } from "ui/menu";
+
+export const MenuWithArrow = (props: Menu.Props) => {
   return (
-    <Menu showArrow>
+    <Menu
+      showArrow
+      {...props}
+    >
       <Menu.Trigger
         render={
           <Button>
@@ -21,7 +26,10 @@ export const MenuWithArrow = () => {
         <Menu.Item>Play Last</Menu.Item>
         <Menu.Item>Share</Menu.Item>
         <Menu.Item>Favorite</Menu.Item>
-        <Menu.Item disabled color="danger">
+        <Menu.Item
+          disabled
+          color="danger"
+        >
           Delete
         </Menu.Item>
       </Menu.Content>

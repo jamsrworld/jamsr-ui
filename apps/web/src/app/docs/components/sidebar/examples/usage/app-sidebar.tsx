@@ -1,5 +1,7 @@
+"use client";
+
 import { Icon } from "@iconify/react";
-import { Sidebar } from "jamsrui/sidebar";
+import { Sidebar } from "ui/sidebar";
 import { SidebarHeader } from "./sidebar-header";
 
 const data = [

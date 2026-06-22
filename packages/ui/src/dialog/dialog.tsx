@@ -3,11 +3,11 @@
 import { createContext, use, useMemo } from "react";
 
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
-import { CloseIcon } from "@jamsrui/icons";
-import { cn } from "tailwind-variants";
 
 import { IconButton } from "../icon-button";
+import { CloseIcon } from "../icons";
 import { dialogStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -15,6 +15,7 @@ type DialogVariants = VariantProps<typeof dialogStyles>;
 
 const DialogContext = createContext<{
   styles: ReturnType<typeof dialogStyles>;
+  isNested?: boolean;
 } | null>(null);
 
 const useDialogContext = () => {
@@ -32,6 +33,7 @@ export const Dialog = (props: Dialog.Props) => {
     backdrop,
     isBordered,
     scrollBehavior,
+    isNested,
     ...restProps
   } = props;
   const styles = dialogStyles({
@@ -41,7 +43,7 @@ export const Dialog = (props: Dialog.Props) => {
     fullWidth,
     radius,
   });
-  const value = useMemo(() => ({ styles }), [styles]);
+  const value = useMemo(() => ({ styles, isNested }), [isNested, styles]);
   return (
     <DialogContext value={value}>
       <DialogPrimitive.Root {...restProps}>
@@ -52,7 +54,9 @@ export const Dialog = (props: Dialog.Props) => {
 };
 
 export namespace Dialog {
-  export interface Props extends DialogPrimitive.Root.Props, DialogVariants {}
+  export interface Props extends DialogPrimitive.Root.Props, DialogVariants {
+    isNested?: boolean;
+  }
 }
 
 export const DialogTrigger = (props: DialogPrimitive.Trigger.Props) => {
@@ -60,23 +64,29 @@ export const DialogTrigger = (props: DialogPrimitive.Trigger.Props) => {
 };
 
 export const DialogContent = (props: DialogContent.Props) => {
-  const { styles } = useDialogContext();
+  const { styles, isNested } = useDialogContext();
   const { slotProps, className, ...restProps } = props;
   return (
-    <DialogPrimitive.Portal {...slotProps?.portal}>
-      <DialogPrimitive.Backdrop
-        {...slotProps?.backdrop}
-        className={styles.backdrop({
-          className: cn(slotProps?.backdrop?.className),
-        })}
-      >
-        <DialogPrimitive.Popup
-          {...restProps}
-          className={styles.popup({
-            className: cn(className),
+    <DialogPrimitive.Portal
+      {...slotProps?.portal}
+      className={styles.portal({
+        className: cn(slotProps?.portal?.className),
+      })}
+    >
+      {!isNested && (
+        <DialogPrimitive.Backdrop
+          {...slotProps?.backdrop}
+          className={styles.backdrop({
+            className: cn(slotProps?.backdrop?.className),
           })}
         />
-      </DialogPrimitive.Backdrop>
+      )}
+      <DialogPrimitive.Popup
+        {...restProps}
+        className={styles.popup({
+          className: cn(className),
+        })}
+      />
     </DialogPrimitive.Portal>
   );
 };

@@ -1,16 +1,14 @@
-import { CodeExample, DocsPageSection } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
 import { AlertCustomIcon } from "./examples/custom-icon";
-import { AlertStatus } from "./examples/status";
 import { AlertUsage } from "./examples/usage";
-import { AlertVariantBordered } from "./examples/variants/bordered";
-import { AlertVariantFlat } from "./examples/variants/flat";
-import { AlertVariantSolid } from "./examples/variants/solid";
 import { AlertWithAction } from "./examples/with-action";
 import { AlertWithTitle } from "./examples/with-title";
 import { AlertWithoutIcon } from "./examples/without-icon";
+import { VariantOptions } from "@/types";
+import { Alert } from "ui/alert";
 
 const title = "Alert";
 const description =
@@ -21,48 +19,56 @@ export const metadata: Metadata = {
   description,
 };
 
-const Alert = () => {
+const alertVariants: VariantOptions<Alert.Variants> = {
+  variant: {
+    options: ["solid", "bordered", "soft"],
+    defaultValue: "solid",
+  },
+  status: {
+    options: ["success", "warning", "info", "error", "neutral"],
+    defaultValue: "success",
+  },
+};
+
+const AlertPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <AlertUsage />
-      </CodeExample>
-      <CodeExample title="With Title" url={resolvePath("with-title.tsx")}>
-        <AlertWithTitle />
-      </CodeExample>
-      <CodeExample title="Status" url={resolvePath("status.tsx")}>
-        <AlertStatus />
-      </CodeExample>
-      <DocsPageSection title="Variants">
-        <CodeExample title="Solid" url={resolvePath("variants/solid.tsx")}>
-          <AlertVariantSolid />
-        </CodeExample>
-        <CodeExample
-          title="Bordered"
-          url={resolvePath("variants/bordered.tsx")}
-        >
-          <AlertVariantBordered />
-        </CodeExample>
-        <CodeExample title="Flat" url={resolvePath("variants/flat.tsx")}>
-          <AlertVariantFlat />
-        </CodeExample>
-      </DocsPageSection>
-      <CodeExample title="With Action" url={resolvePath("with-action.tsx")}>
-        <AlertWithAction />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={alertVariants}
+        component={AlertUsage}
+      />
+      <CodeExampleV2
+        title="With Title"
+        url={resolvePath("with-title.tsx")}
+        variants={alertVariants}
+        component={AlertWithTitle}
+      />
+      <CodeExampleV2
+        title="With Action"
+        url={resolvePath("with-action.tsx")}
+        variants={alertVariants}
+        component={AlertWithAction}
+      />
+      <CodeExampleV2
         title="Custom Icon"
         url={resolvePath("custom-icon.tsx")}
-      >
-        <AlertCustomIcon />
-      </CodeExample>
-      <CodeExample title="Without Icon" url={resolvePath("without-icon.tsx")}>
-        <AlertWithoutIcon />
-      </CodeExample>
+        variants={alertVariants}
+        component={AlertCustomIcon}
+      />
+      <CodeExampleV2
+        title="Without Icon"
+        url={resolvePath("without-icon.tsx")}
+        variants={alertVariants}
+        component={AlertWithoutIcon}
+      />
     </DocsPage>
   );
 };
 
-export default Alert;
+export default AlertPage;

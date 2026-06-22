@@ -3,9 +3,10 @@
 import { createContext, use } from "react";
 
 import { Select as SelectPrimitive } from "@base-ui/react/select";
-import { cn } from "tailwind-variants";
 
 import { selectStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -13,6 +14,7 @@ type SelectVariants = VariantProps<typeof selectStyles>;
 
 const SelectContext = createContext<{
   styles: ReturnType<typeof selectStyles>;
+  isInvalid?: boolean;
 } | null>(null);
 
 const useSelectContext = () => {
@@ -25,14 +27,19 @@ const useSelectContext = () => {
 export const SelectRoot = <Value, Multiple extends boolean | undefined = false>(
   props: SelectRoot.Props<Value, Multiple>,
 ) => {
-  const { color, radius, size, isInvalid, className, ...restProps } = props;
-  const styles = selectStyles({ color, radius, size, isInvalid, className });
+  const { color, radius, size, variant, className, isInvalid, ...restProps } =
+    props;
+  const styles = selectStyles({
+    color,
+    radius,
+    size,
+    variant,
+    className,
+  });
 
   return (
-    <SelectContext.Provider value={{ styles }}>
-      <div className={styles.root()}>
-        <SelectPrimitive.Root {...restProps} />
-      </div>
+    <SelectContext.Provider value={{ styles, isInvalid }}>
+      <SelectPrimitive.Root {...restProps} />
     </SelectContext.Provider>
   );
 };
@@ -44,11 +51,13 @@ export namespace SelectRoot {
   > = SelectPrimitive.Root.Props<Value, Multiple> &
     SelectVariants & {
       className?: string;
+      isInvalid?: boolean;
+      inputRef?: React.Ref<HTMLButtonElement | HTMLInputElement>;
     };
 }
 
 export const SelectTrigger = (props: SelectPrimitive.Trigger.Props) => {
-  const { styles } = useSelectContext();
+  const { styles, isInvalid } = useSelectContext();
   const {
     children = (
       <>
@@ -61,6 +70,7 @@ export const SelectTrigger = (props: SelectPrimitive.Trigger.Props) => {
   } = props;
   return (
     <SelectPrimitive.Trigger
+      data-invalid={dataAttr(isInvalid)}
       {...restProps}
       className={styles.trigger({ className: cn(className) })}
     >
@@ -170,11 +180,13 @@ export const SelectItemIndicator = (
   const { children = <CheckIcon />, className, ...restProps } = props;
   return (
     <SelectPrimitive.ItemIndicator
+      keepMounted
       {...restProps}
       className={styles.itemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </SelectPrimitive.ItemIndicator>
+      render={(props, { selected }) => (
+        <span {...props}> {selected ? children : null} </span>
+      )}
+    />
   );
 };
 

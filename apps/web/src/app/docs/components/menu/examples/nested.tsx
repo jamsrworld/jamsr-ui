@@ -1,9 +1,11 @@
-import { Button } from "jamsrui/button";
-import { Menu } from "jamsrui/menu";
+"use client";
 
-export const MenuNested = () => {
+import { Button } from "ui/button";
+import { Menu } from "ui/menu";
+
+export const MenuNested = (props: Menu.Props) => {
   return (
-    <Menu>
+    <Menu {...props}>
       <Menu.Trigger render={<Button>Open Me</Button>} />
       <Menu.Content>
         <Menu.Item>Add to Library</Menu.Item>
@@ -28,7 +30,10 @@ export const MenuNested = () => {
             </Menu.SubmenuRoot>
           </Menu.SubmenuContent>
         </Menu.SubmenuRoot>
-        <Menu.Item disabled color="danger">
+        <Menu.Item
+          disabled
+          color="danger"
+        >
           Delete
         </Menu.Item>
       </Menu.Content>

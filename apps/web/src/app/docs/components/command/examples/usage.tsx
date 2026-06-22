@@ -1,6 +1,6 @@
 "use client";
 
-import { Command } from "jamsrui/command";
+import { Command } from "ui/command";
 import {
   Calculator,
   Calendar,
@@ -10,9 +10,12 @@ import {
   User,
 } from "lucide-react";
 
-export const CommandUsage = () => {
+export const CommandUsage = (props: Command.Props) => {
   return (
-    <Command className="max-w-md">
+    <Command
+      className="max-w-md"
+      {...props}
+    >
       <Command.Input placeholder="Type a command or search..." />
       <Command.List>
         <Command.Empty>No results found.</Command.Empty>

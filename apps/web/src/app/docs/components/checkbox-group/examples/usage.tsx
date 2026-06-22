@@ -1,11 +1,12 @@
 "use client";
 
-import { Checkbox, CheckboxGroup } from "jamsrui/checkbox";
-import { Field } from "jamsrui/field";
-import { Text } from "jamsrui/text";
 import { useId, useState } from "react";
+import { Checkbox, CheckboxGroup } from "ui/checkbox";
+import { Field } from "ui/field";
+import { Label } from "ui/label";
+import { Text } from "ui/text";
 
-export const CheckboxGroupUsage = () => {
+export const CheckboxGroupUsage = (props: CheckboxGroup.Props) => {
   const [value, setValue] = useState<string[]>([]);
   const id = useId();
   return (
@@ -14,10 +15,14 @@ export const CheckboxGroupUsage = () => {
         aria-labelledby={id}
         value={value}
         onValueChange={setValue}
+        {...props}
       >
-        <label id={id}>How would you like to be notified?</label>
+        <Label id={id}>How would you like to be notified?</Label>
         <Field orientation="horizontal">
-          <Checkbox name="notifications" value="email" />
+          <Checkbox
+            name="notifications"
+            value="email"
+          />
           <Field.Content>
             <Field.Label>Email</Field.Label>
             <Field.Description>
@@ -26,7 +31,10 @@ export const CheckboxGroupUsage = () => {
           </Field.Content>
         </Field>
         <Field orientation="horizontal">
-          <Checkbox name="notifications" value="sms" />
+          <Checkbox
+            name="notifications"
+            value="sms"
+          />
           <Field.Content>
             <Field.Label>SMS</Field.Label>
             <Field.Description>
@@ -35,7 +43,10 @@ export const CheckboxGroupUsage = () => {
           </Field.Content>
         </Field>
         <Field orientation="horizontal">
-          <Checkbox name="notifications" value="push" />
+          <Checkbox
+            name="notifications"
+            value="push"
+          />
           <Field.Content>
             <Field.Label>Push</Field.Label>
             <Field.Description>
@@ -44,8 +55,10 @@ export const CheckboxGroupUsage = () => {
           </Field.Content>
         </Field>
       </CheckboxGroup>
-
-      <Text className="text-foreground-tertiary mt-5" variant="caption">
+      <Text
+        className="text-foreground-tertiary mt-5"
+        variant="caption"
+      >
         You selected: {value.join(", ")}
       </Text>
     </div>

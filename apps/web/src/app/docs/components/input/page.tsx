@@ -1,19 +1,18 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Input } from "ui/input";
 import { Metadata } from "next";
 import { InputControlled } from "./examples/controlled";
 import { InputDisabled } from "./examples/disabled";
 import { InputErrorState } from "./examples/error-state";
-import { InputRadius } from "./examples/radius";
-import { InputSizes } from "./examples/sizes";
+import { InputPasswordToggle } from "./examples/password-toggle";
 import { InputPrefixSuffix } from "./examples/prefix-suffix";
 import { InputUsage } from "./examples/usage";
 import { InputWithDescription } from "./examples/with-description";
 import { InputWithIcon } from "./examples/with-icon";
 import { InputWithLabel } from "./examples/with-label";
-import { InputPasswordToggle } from "./examples/password-toggle";
-import { InputVariants } from "./examples/variants";
 
 const title = "Input";
 const description =
@@ -24,84 +23,84 @@ export const metadata: Metadata = {
   description,
 };
 
-const Input = () => {
+const InputVariants: VariantOptions<Input.Variants> = {
+  variant: {
+    options: ["solid", "bordered"],
+    defaultValue: "solid",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
+const InputPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <InputUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={InputVariants}
+        component={InputUsage}
+      />
+      <CodeExampleV2
         title="With Label"
         url={resolvePath("with-label.tsx")}
-      >
-        <InputWithLabel />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={InputVariants}
+        component={InputWithLabel}
+      />
+      <CodeExampleV2
         title="With Description"
         url={resolvePath("with-description.tsx")}
-      >
-        <InputWithDescription />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={InputVariants}
+        component={InputWithDescription}
+      />
+      <CodeExampleV2
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <InputControlled />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants"
-        url={resolvePath("variants.tsx")}
-      >
-        <InputVariants />
-      </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
-        <InputSizes />
-      </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
-        <InputRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={InputVariants}
+        component={InputControlled}
+      />
+      <CodeExampleV2
         title="Error State"
         url={resolvePath("error-state.tsx")}
-      >
-        <InputErrorState />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={InputVariants}
+        component={InputErrorState}
+      />
+      <CodeExampleV2
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-      >
-        <InputDisabled />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={InputVariants}
+        component={InputDisabled}
+      />
+      <CodeExampleV2
         title="Prefix & Suffix"
         url={resolvePath("prefix-suffix.tsx")}
-      >
-        <InputPrefixSuffix />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={InputVariants}
+        component={InputPrefixSuffix}
+      />
+      <CodeExampleV2
         title="With Icon"
         url={resolvePath("with-icon.tsx")}
-      >
-        <InputWithIcon />
-      </CodeExample>
-      <CodeExample
+        variants={InputVariants}
+        component={InputWithIcon}
+      />
+      <CodeExampleV2
         title="Password Toggle"
         url={resolvePath("password-toggle.tsx")}
-        isCentered
-      >
-        <InputPasswordToggle />
-      </CodeExample>
+        variants={InputVariants}
+        component={InputPasswordToggle}
+      />
     </DocsPage>
   );
 };
 
-export default Input;
+export default InputPage;

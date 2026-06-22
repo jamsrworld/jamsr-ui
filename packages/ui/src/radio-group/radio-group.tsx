@@ -4,9 +4,9 @@ import { createContext, use, useMemo } from "react";
 
 import { Radio as RadioPrimitive } from "@base-ui/react/radio";
 import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
-import { cn } from "tailwind-variants";
 
 import { radioGroupStyles, radioStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { RadioGroupVariants, RadioVariants } from "./styles";
 

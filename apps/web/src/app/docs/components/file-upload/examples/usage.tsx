@@ -1,13 +1,15 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Avatar } from "jamsrui/avatar";
-import { IconButton } from "jamsrui/icon-button";
-import { Text } from "jamsrui/text";
-import { formatBytes, useFileUpload } from "jamsrui/file-upload";
-import { cn } from "@jamsrui/utils";
+import { Avatar } from "ui/avatar";
+import { IconButton } from "ui/icon-button";
+import { Text } from "ui/text";
+import { formatBytes, useFileUpload } from "ui/file-upload";
+import { cn } from "ui/utils";
 
-export const FileUploadUsage = () => {
+import React from "react";
+
+export const FileUploadUsage = (props: React.ComponentProps<"div">) => {
   const {
     getInputProps,
     isDragging,
@@ -22,7 +24,7 @@ export const FileUploadUsage = () => {
     accept: "image/*",
   });
   return (
-    <div>
+    <div {...props}>
       <div
         {...getRootProps({})}
         className={cn(
@@ -31,7 +33,7 @@ export const FileUploadUsage = () => {
         )}
         onClick={openFileDialog}
       >
-        <input multiple {...getInputProps({})} />
+        <input {...getInputProps({})} />
         <div className="size-12 bg-background-secondary rounded-full flex items-center justify-center">
           <Icon
             icon="mage:image"
@@ -39,10 +41,16 @@ export const FileUploadUsage = () => {
           />
         </div>
         <Text variant="paragraph">Upload images to gallery</Text>
-        <Text variant="paragraph2" className="text-foreground-secondary">
+        <Text
+          variant="paragraph2"
+          className="text-foreground-secondary"
+        >
           Drag and drop images here or click to browse
         </Text>
-        <Text variant="caption" className="text-foreground-secondary">
+        <Text
+          variant="caption"
+          className="text-foreground-secondary"
+        >
           PNG, JPG, GIF up to 5MB each (max 10 files)
         </Text>
       </div>
@@ -56,8 +64,14 @@ export const FileUploadUsage = () => {
                 className="flex size-32 flex-col gap-4 group relative bg-background-secondary rounded-md"
               >
                 {file.preview ? (
-                  <Avatar radius="md" className="size-full">
-                    <Avatar.Image src={file.preview} alt={file.file.name} />
+                  <Avatar
+                    radius="md"
+                    className="size-full"
+                  >
+                    <Avatar.Image
+                      src={file.preview}
+                      alt={file.file.name}
+                    />
                   </Avatar>
                 ) : (
                   <div className="flex justify-center items-center size-full">
@@ -68,7 +82,10 @@ export const FileUploadUsage = () => {
                   </div>
                 )}
                 <div className="absolute bottom-0 bg-background/40 right-0 w-full py-1 px-2">
-                  <Text variant="caption" className="text-foreground">
+                  <Text
+                    variant="caption"
+                    className="text-foreground"
+                  >
                     {file.file.name}
                   </Text>
                   <Text variant="caption">{formatBytes(file.file.size)}</Text>

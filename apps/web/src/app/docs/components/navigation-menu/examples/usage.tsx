@@ -1,6 +1,6 @@
 "use client";
 
-import { NavigationMenu } from "jamsrui/navigation-menu";
+import { NavigationMenu } from "ui/navigation-menu";
 import { ChevronDown } from "lucide-react";
 
 const gettingStartedLinks = [
@@ -30,12 +30,14 @@ const handbookLinks = [
   {
     href: "#styling",
     title: "Styling",
-    description: "Components can be styled with plain CSS, Tailwind, or CSS-in-JS.",
+    description:
+      "Components can be styled with plain CSS, Tailwind, or CSS-in-JS.",
   },
   {
     href: "#animation",
     title: "Animation",
-    description: "Animate with CSS transitions, animations, or JavaScript libraries.",
+    description:
+      "Animate with CSS transitions, animations, or JavaScript libraries.",
   },
   {
     href: "#composition",
@@ -44,9 +46,9 @@ const handbookLinks = [
   },
 ];
 
-export const NavigationMenuUsage = () => {
+export const NavigationMenuUsage = (props: NavigationMenu.Props) => {
   return (
-    <NavigationMenu>
+    <NavigationMenu {...props}>
       <NavigationMenu.List>
         <NavigationMenu.Item>
           <NavigationMenu.Trigger>
@@ -56,7 +58,7 @@ export const NavigationMenuUsage = () => {
             </NavigationMenu.Icon>
           </NavigationMenu.Trigger>
           <NavigationMenu.Content>
-            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2">
+            <ul className="grid w-100 gap-2 md:w-125 md:grid-cols-2 m-0 p-0 list-none">
               {gettingStartedLinks.map((item) => (
                 <li key={item.href}>
                   <NavigationMenu.Link
@@ -83,7 +85,7 @@ export const NavigationMenuUsage = () => {
             </NavigationMenu.Icon>
           </NavigationMenu.Trigger>
           <NavigationMenu.Content>
-            <ul className="flex w-75 flex-col gap-1">
+            <ul className="flex w-75 flex-col gap-1 m-0 p-0 list-none">
               {handbookLinks.map((item) => (
                 <li key={item.href}>
                   <NavigationMenu.Link

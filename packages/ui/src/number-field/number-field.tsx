@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { NumberField as NumberFieldPrimitive } from "@base-ui/react/number-field";
-import { cn } from "tailwind-variants";
 
 import { numberFieldStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { NumberFieldVariants } from "./styles";
 
@@ -22,8 +22,8 @@ const useNumberFieldContext = () => {
 };
 
 export const NumberField = (props: NumberField.Props) => {
-  const { className, isInvalid, ...rest } = props;
-  const styles = numberFieldStyles({ isInvalid });
+  const { className, variant, radius, ...rest } = props;
+  const styles = numberFieldStyles({ variant, radius });
   const value = useMemo(() => ({ styles }), [styles]);
   return (
     <NumberFieldContext value={value}>

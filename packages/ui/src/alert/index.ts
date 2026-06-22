@@ -6,6 +6,8 @@ import {
   AlertTitle,
 } from "./alert";
 
+import type { AlertVariants } from "./styles";
+
 export const Alert = Object.assign(AlertRoot, {
   Content: AlertContent,
   Icon: AlertIcon,
@@ -14,5 +16,6 @@ export const Alert = Object.assign(AlertRoot, {
 });
 
 export namespace Alert {
+  export interface Variants extends AlertVariants {}
   export interface Props extends AlertRoot.Props {}
 }

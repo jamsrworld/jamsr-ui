@@ -1,16 +1,20 @@
 "use client";
 
-import { useDisclosure } from "@jamsrui/hooks";
-import { InfoIcon } from "@jamsrui/icons";
-import { Button } from "jamsrui/button";
-import { IconButton } from "jamsrui/icon-button";
-import { Popover } from "jamsrui/popover";
+import { useDisclosure } from "ui/hooks";
+import { InfoIcon } from "@/icons";
+import { Button } from "ui/button";
+import { IconButton } from "ui/icon-button";
+import { Popover } from "ui/popover";
 
-export const PopoverControlled = () => {
+export const PopoverControlled = (props: Popover.Props) => {
   const { isOpen, setIsOpen, onToggle } = useDisclosure();
   return (
     <div className="flex flex-col items-center gap-4">
-      <Popover open={isOpen} onOpenChange={setIsOpen}>
+      <Popover
+        open={isOpen}
+        onOpenChange={setIsOpen}
+        {...props}
+      >
         <Popover.Trigger
           render={
             <IconButton label="Popover Trigger">
@@ -19,9 +23,9 @@ export const PopoverControlled = () => {
           }
         />
         <Popover.Content>
-          Popover is a non-modal dialog that floats around its disclosure. It's
-          commonly used for displaying additional rich content on top of
-          something.
+          Popover is a non-modal dialog that floats around its disclosure.
+          It&apos;s commonly used for displaying additional rich content on top
+          of something.
         </Popover.Content>
       </Popover>
       <Button onClick={onToggle}>{isOpen ? "Close" : "Open"}</Button>

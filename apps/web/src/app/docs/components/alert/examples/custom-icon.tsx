@@ -1,10 +1,15 @@
-import { Alert } from "jamsrui/alert";
-import { EmailIcon } from "@jamsrui/icons";
+"use client";
 
-export const AlertCustomIcon = () => {
+import { Alert } from "ui/alert";
+import { EmailIcon } from "@/icons";
+
+export const AlertCustomIcon = (props: Alert.Props) => {
   return (
     <div className="flex flex-col w-full gap-4">
-      <Alert status="warning">
+      <Alert
+        status="warning"
+        {...props}
+      >
         <Alert.Icon>
           <EmailIcon />
         </Alert.Icon>

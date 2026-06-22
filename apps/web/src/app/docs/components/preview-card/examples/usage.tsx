@@ -1,16 +1,21 @@
-import { Avatar } from "jamsrui/avatar";
-import { Link } from "jamsrui/link";
-import { PreviewCard } from "jamsrui/preview-card";
-import { Text } from "jamsrui/text";
+"use client";
 
-export const PreviewCardUsage = () => {
+import { Avatar } from "ui/avatar";
+import { Link } from "ui/link";
+import { PreviewCard } from "ui/preview-card";
+import { Text } from "ui/text";
+
+export const PreviewCardUsage = (props: PreviewCard.Props) => {
   return (
-    <PreviewCard>
+    <PreviewCard {...props}>
       <PreviewCard.Trigger render={<Link href="#">@base-ui</Link>} />
       <PreviewCard.Content className="w-80 p-4">
         <div className="flex justify-between space-x-4">
           <Avatar className="size-10">
-            <Avatar.Image alt="Base UI" src="https://github.com/mui.png" />
+            <Avatar.Image
+              alt="Base UI"
+              src="https://github.com/mui.png"
+            />
             <Avatar.Fallback>BUI</Avatar.Fallback>
           </Avatar>
           <div className="space-y-1">

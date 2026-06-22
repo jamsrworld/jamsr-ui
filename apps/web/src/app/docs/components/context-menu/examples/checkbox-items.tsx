@@ -1,9 +1,9 @@
 "use client";
-import { ContextMenu } from "jamsrui/context-menu";
+import { ContextMenu } from "ui/context-menu";
 
-export const ContextMenuCheckboxItemsExample = () => {
+export const ContextMenuCheckboxItemsExample = (props: ContextMenu.Props) => {
   return (
-    <ContextMenu>
+    <ContextMenu {...props}>
       <ContextMenu.Trigger>
         <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
           Right Click Here

@@ -1,8 +1,10 @@
-import { ContextMenu } from "jamsrui/context-menu";
+"use client";
 
-export const ContextMenuNested = () => {
+import { ContextMenu } from "ui/context-menu";
+
+export const ContextMenuNested = (props: ContextMenu.Props) => {
   return (
-    <ContextMenu>
+    <ContextMenu {...props}>
       <ContextMenu.Trigger>
         <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
           Right Click Here
@@ -31,7 +33,10 @@ export const ContextMenuNested = () => {
             </ContextMenu.SubmenuRoot>
           </ContextMenu.SubmenuContent>
         </ContextMenu.SubmenuRoot>
-        <ContextMenu.Item disabled color="danger">
+        <ContextMenu.Item
+          disabled
+          color="danger"
+        >
           Delete
         </ContextMenu.Item>
       </ContextMenu.Content>

@@ -1,4 +1,4 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
@@ -16,24 +16,36 @@ export const metadata: Metadata = {
   description,
 };
 
-const DataGrid = () => {
+const DataGridPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description} size="lg">
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <DataGridUsage />
-      </CodeExample>
-      <CodeExample title="Server Side" url={resolvePath("server.tsx")}>
-        <DataGridServerSide />
-      </CodeExample>
-      <CodeExample title="Empty State" url={resolvePath("empty-state.tsx")}>
-        <DataGridEmptyState />
-      </CodeExample>
-      <CodeExample title="Sticky Header" url={resolvePath("sticky-header.tsx")}>
-        <DataGridStickyHeader />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+      size="lg"
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        component={DataGridUsage}
+      />
+      <CodeExampleV2
+        title="Server Side"
+        url={resolvePath("server.tsx")}
+        component={DataGridServerSide}
+      />
+      <CodeExampleV2
+        title="Empty State"
+        url={resolvePath("empty-state.tsx")}
+        component={DataGridEmptyState}
+      />
+      <CodeExampleV2
+        title="Sticky Header"
+        url={resolvePath("sticky-header.tsx")}
+        component={DataGridStickyHeader}
+      />
     </DocsPage>
   );
 };
 
-export default DataGrid;
+export default DataGridPage;

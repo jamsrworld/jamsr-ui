@@ -5,6 +5,10 @@ import {
   TimeSegment,
 } from "./time-field";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { timeFieldStyles } from "./styles";
+
 export const TimeField = Object.assign(TimeFieldRoot, {
   Input: TimeInput,
   Segment: TimeSegment,
@@ -12,6 +16,7 @@ export const TimeField = Object.assign(TimeFieldRoot, {
 });
 
 export namespace TimeField {
+  export type Variants = VariantProps<typeof timeFieldStyles>;
   export interface Props extends TimeFieldRoot.Props {}
   export interface Input extends TimeInput.Props {}
   export interface Segment extends TimeSegment.Props {}

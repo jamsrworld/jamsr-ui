@@ -5,6 +5,10 @@ import {
   AvatarIndicator,
 } from "./avatar";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { avatarStyles } from "./styles";
+
 export const Avatar = Object.assign(AvatarRoot, {
   Image: AvatarImage,
   Fallback: AvatarFallback,
@@ -12,5 +16,6 @@ export const Avatar = Object.assign(AvatarRoot, {
 });
 
 export namespace Avatar {
+  export type Variants = VariantProps<typeof avatarStyles>;
   export interface Props extends AvatarRoot.Props {}
 }

@@ -1,35 +1,43 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import ToastUsage from "./examples/usage";
-import ToastVariants from "./examples/variants";
+import { ToastUsage } from "./examples/usage";
 
 const title = "Toast";
 const description =
-  "A Toast component displays brief, non-intrusive notifications that appear on the screen to inform users about an event, such as a successful action or an error message, and typically disappears after a few seconds.";
+  "A Toast component is a temporary, non-disruptive notification that appears on the screen to provide feedback, alerts, or information. It disappears automatically or can be dismissed by the user.";
 
 export const metadata: Metadata = {
   title,
   description,
 };
 
-const Toast = () => {
+const toastVariants: VariantOptions<{
+  type: "default" | "success" | "error" | "info" | "warning";
+}> = {
+  type: {
+    options: ["default", "success", "error", "info", "warning"],
+    defaultValue: "default",
+  },
+};
+
+const ToastPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <ToastUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants"
-        url={resolvePath("variants.tsx")}
-      >
-        <ToastVariants />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={toastVariants}
+        component={ToastUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Toast;
+export default ToastPage;

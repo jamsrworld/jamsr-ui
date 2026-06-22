@@ -18,6 +18,10 @@ import {
   MenuTrigger,
 } from "./menu";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { menuStyles } from "./styles";
+
 export const Menu = Object.assign(MenuRoot, {
   Group: MenuGroup,
   Item: MenuItem,
@@ -38,5 +42,6 @@ export const Menu = Object.assign(MenuRoot, {
 });
 
 export namespace Menu {
+  export type Variants = VariantProps<typeof menuStyles>;
   export interface Props extends MenuRoot.Props {}
 }

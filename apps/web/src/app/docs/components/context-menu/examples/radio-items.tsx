@@ -1,18 +1,21 @@
 "use client";
-import { ContextMenu } from "jamsrui/context-menu";
+import { ContextMenu } from "ui/context-menu";
 import { useState } from "react";
 
-export const ContextMenuRadioItemsExample = () => {
+export const ContextMenuRadioItemsExample = (props: ContextMenu.Props) => {
   const [sortBy, setSortBy] = useState("date");
   return (
-    <ContextMenu>
+    <ContextMenu {...props}>
       <ContextMenu.Trigger>
         <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
           Right Click Here
         </div>
       </ContextMenu.Trigger>
       <ContextMenu.Content>
-        <ContextMenu.RadioGroup value={sortBy} onValueChange={setSortBy}>
+        <ContextMenu.RadioGroup
+          value={sortBy}
+          onValueChange={setSortBy}
+        >
           <ContextMenu.RadioItem value="date">
             <ContextMenu.RadioItemIndicator />
             Date

@@ -1,7 +1,9 @@
-import { Button } from "jamsrui/button";
-import { Menu } from "jamsrui/menu";
+"use client";
 
-export const MenuSides = () => {
+import { Button } from "ui/button";
+import { Menu } from "ui/menu";
+
+export const MenuSides = (props: Menu.Props) => {
   const sides = [
     "top",
     "right",
@@ -13,7 +15,10 @@ export const MenuSides = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {sides.map((side) => (
-        <Menu key={side}>
+        <Menu
+          key={side}
+          {...props}
+        >
           <Menu.Trigger render={<Button>{side}</Button>} />
           <Menu.Content
             slotProps={{
@@ -28,7 +33,10 @@ export const MenuSides = () => {
             <Menu.Item>Play Last</Menu.Item>
             <Menu.Item>Share</Menu.Item>
             <Menu.Item>Favorite</Menu.Item>
-            <Menu.Item disabled color="danger">
+            <Menu.Item
+              disabled
+              color="danger"
+            >
               Delete
             </Menu.Item>
           </Menu.Content>

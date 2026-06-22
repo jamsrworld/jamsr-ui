@@ -1,10 +1,15 @@
-import { Button } from "jamsrui/button";
-import { Dialog } from "jamsrui/dialog";
-import { Text } from "jamsrui/text";
+"use client";
 
-export const DialogNonDismissible = () => {
+import { Button } from "ui/button";
+import { Dialog } from "ui/dialog";
+import { Text } from "ui/text";
+
+export const DialogNonDismissible = (props: Dialog.Props) => {
   return (
-    <Dialog disablePointerDismissal>
+    <Dialog
+      disablePointerDismissal
+      {...props}
+    >
       <Dialog.Trigger render={<Button>Click Me!</Button>} />
       <Dialog.Content>
         <Dialog.Header>Heading</Dialog.Header>
@@ -18,7 +23,10 @@ export const DialogNonDismissible = () => {
         </Dialog.Body>
         <Dialog.Footer>
           <Dialog.Cancel render={<Button>Cancel</Button>} />
-          <Button color="primary" variant="solid">
+          <Button
+            color="primary"
+            variant="solid"
+          >
             Submit
           </Button>
         </Dialog.Footer>

@@ -1,6 +1,5 @@
-import { Sidebar } from "jamsrui/sidebar";
+import { AppSidebar } from "./app-sidebar";
 import { AppHeader } from "./header";
-import { AppSidebar } from "./sidebar";
 
 type Props = {
   children: React.ReactNode;
@@ -9,13 +8,13 @@ type Props = {
 const Layout = (props: Props) => {
   const { children } = props;
   return (
-    <Sidebar.Wrapper>
-      <AppSidebar />
-      <Sidebar.Inset>
-        <AppHeader />
+    <>
+      <AppHeader />
+      <div className="flex px-0 lg:px-6 mx-auto py-12 justify-center">
+        <AppSidebar />
         {children}
-      </Sidebar.Inset>
-    </Sidebar.Wrapper>
+      </div>
+    </>
   );
 };
 

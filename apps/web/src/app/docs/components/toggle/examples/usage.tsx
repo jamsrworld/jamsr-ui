@@ -1,16 +1,19 @@
-import { Toggle } from "jamsrui/toggle";
-import { Bold, Italic, Underline } from "lucide-react";
+"use client";
 
-export const ToggleUsage = () => {
+import { Toggle } from "ui/toggle";
+import { Bold, Italic, Underline } from "lucide-react";
+import React from "react";
+
+export const ToggleUsage = (props: Toggle.Props) => {
   return (
     <div className="flex items-center gap-2">
-      <Toggle>
+      <Toggle {...props}>
         <Bold className="size-4" />
       </Toggle>
-      <Toggle>
+      <Toggle {...props}>
         <Italic className="size-4" />
       </Toggle>
-      <Toggle>
+      <Toggle {...props}>
         <Underline className="size-4" />
       </Toggle>
     </div>

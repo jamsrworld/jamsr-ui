@@ -12,6 +12,10 @@ import {
   ToastViewport,
 } from "./toast";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { toastStyles } from "./styles";
+
 export const Toast = Object.assign(ToastRoot, {
   Title: ToastTitle,
   Description: ToastDescription,
@@ -26,5 +30,6 @@ export const Toast = Object.assign(ToastRoot, {
 });
 
 export namespace Toast {
+  export type Variants = VariantProps<typeof toastStyles>;
   export interface Props {}
 }

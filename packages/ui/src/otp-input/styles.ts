@@ -1,48 +1,63 @@
 import { tv } from "tailwind-variants";
 
+import { dataFocusVisibleClasses } from "../utils/variants";
+
 import type { VariantProps } from "tailwind-variants";
 
 export const otpInputStyles = tv({
   slots: {
     root: "relative flex items-center gap-2 group data-disabled:status-disabled",
-    group: "flex",
+    group: "flex gap-1",
+    input: "data-disabled:status-disabled",
     slot: [
-      "border-border relative flex items-center justify-center",
-      "border-y border-r first:border-l outline-solid outline-0 outline-border/20",
-      "transition-all duration-300 ease-in-out",
-      "group-data-hovered:border-border-dark data-active:border-transparent data-active:outline-focus data-active:outline-2",
-      "group-data-invalid:border-danger group-data-invalid:data-active:outline-danger",
+      "relative flex items-center justify-center data-disabled:status-disabled",
     ],
-    separator: "w-4 h-1 bg-border",
+    separator: "w-4 h-0.5 bg-border",
     caret:
       "absolute pointer-events-none flex w-[1.5px] bg-foreground animate-caret-blink z-1",
   },
   variants: {
+    variant: {
+      solid: {
+        slot: [
+          "bg-surface",
+          ...dataFocusVisibleClasses,
+          "data-invalid:data-focus-visible:outline-danger",
+        ],
+      },
+      bordered: {
+        slot: [
+          "border-border border",
+          ...dataFocusVisibleClasses,
+          "data-invalid:data-focus-visible:outline-danger",
+        ],
+      },
+    },
     radius: {
       none: {
         group: "rounded-none",
         separator: "rounded-none",
-        slot: "first:rounded-l-none last:rounded-r-none",
+        slot: "rounded-none",
       },
       sm: {
         group: "rounded-sm",
         separator: "rounded-sm",
-        slot: "first:rounded-l-sm last:rounded-r-sm",
+        slot: "rounded-sm",
       },
       md: {
         group: "rounded-md",
+        slot: "rounded-md",
         separator: "rounded-md",
-        slot: "first:rounded-l-md last:rounded-r-md",
       },
       lg: {
         group: "rounded-lg",
         separator: "rounded-lg",
-        slot: "first:rounded-l-lg last:rounded-r-lg",
+        slot: "rounded-lg",
       },
       full: {
         group: "rounded-full",
         separator: "rounded-full",
-        slot: "first:rounded-l-full last:rounded-r-full",
+        slot: "rounded-full",
       },
     },
     size: {
@@ -60,7 +75,7 @@ export const otpInputStyles = tv({
       },
     },
   },
-  defaultVariants: { radius: "md", size: "md" },
+  defaultVariants: { radius: "md", size: "md", variant: "solid" },
 });
 
 export type OtpInputVariants = VariantProps<typeof otpInputStyles>;

@@ -1,9 +1,9 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
-import { useState } from "react";
+import { Description } from "ui/description";
+import { Label } from "ui/label";
+import { Select } from "ui/select";
+import React, { useState } from "react";
 
 const languages = {
   javascript: "JavaScript",
@@ -31,16 +31,22 @@ function renderValue(value: Language[]) {
   return firstLanguage + additionalLanguages;
 }
 
-export const SelectMultipleControlled = () => {
+export const SelectMultipleControlled = (props: Partial<Select.Props>) => {
   const [value, setValue] = useState<Language[]>([]);
+  const { multiple = true, ...rest } = props;
   return (
     <div className="flex flex-col gap-2">
-      <Select multiple value={value} onValueChange={setValue}>
-        <Label>Fruit</Label>
+      <Select
+        multiple={multiple}
+        value={value}
+        onValueChange={(val) => setValue(val as Language[])}
+        {...rest}
+      >
+        <Label>Language</Label>
         <Select.Trigger className="min-w-80">
           <Select.Value>
             {(value) => {
-              return renderValue(value);
+              return renderValue(value as Language[]);
             }}
           </Select.Value>
           <Select.Icon />
@@ -48,7 +54,10 @@ export const SelectMultipleControlled = () => {
         <Select.Content>
           {values.map((value) => {
             return (
-              <Select.Item key={value} value={value}>
+              <Select.Item
+                key={value}
+                value={value}
+              >
                 <Select.ItemIndicator />
                 <Select.ItemText>{languages[value]}</Select.ItemText>
               </Select.Item>

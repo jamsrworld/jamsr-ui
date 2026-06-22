@@ -1,10 +1,12 @@
-import { Button } from "jamsrui/button";
-import { Dialog } from "jamsrui/dialog";
-import { Text } from "jamsrui/text";
+"use client";
 
-export const DialogWithClose = () => {
+import { Button } from "ui/button";
+import { Dialog } from "ui/dialog";
+import { Text } from "ui/text";
+
+export const DialogWithClose = (props: Dialog.Props) => {
   return (
-    <Dialog>
+    <Dialog {...props}>
       <Dialog.Trigger render={<Button>Open Me</Button>} />
       <Dialog.Content>
         <Dialog.Header>
@@ -27,7 +29,10 @@ export const DialogWithClose = () => {
         </Dialog.Body>
         <Dialog.Footer>
           <Dialog.Cancel render={<Button>Cancel</Button>} />
-          <Button color="primary" variant="solid">
+          <Button
+            color="primary"
+            variant="solid"
+          >
             Submit
           </Button>
         </Dialog.Footer>

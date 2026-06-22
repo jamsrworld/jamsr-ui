@@ -1,29 +1,22 @@
-import { AlertDialog } from "jamsrui/alert-dialog";
-import { Button } from "jamsrui/button";
+"use client";
 
-export const AlertDialogBackdrop = () => {
-  const backdrops: AlertDialog.Props["backdrop"][] = [
-    "blur",
-    "opaque",
-    "transparent",
-  ];
+import { AlertDialog } from "ui/alert-dialog";
+import { Button } from "ui/button";
+
+export const AlertDialogBackdrop = (props: AlertDialog.Props) => {
   return (
-    <div className="flex gap-2">
-      {backdrops.map((backdrop) => (
-        <AlertDialog key={backdrop} backdrop={backdrop}>
-          <AlertDialog.Trigger render={<Button>Backdrop {backdrop}</Button>} />
-          <AlertDialog.Content>
-            <AlertDialog.Title>Are you sure?</AlertDialog.Title>
-            <AlertDialog.Description>
-              You won't be able to revert this!
-            </AlertDialog.Description>
-            <AlertDialog.Footer>
-              <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
-              <AlertDialog.Action>Confirm</AlertDialog.Action>
-            </AlertDialog.Footer>
-          </AlertDialog.Content>
-        </AlertDialog>
-      ))}
-    </div>
+    <AlertDialog {...props}>
+      <AlertDialog.Trigger render={<Button>Trigger dialog</Button>} />
+      <AlertDialog.Content>
+        <AlertDialog.Title>Are you sure?</AlertDialog.Title>
+        <AlertDialog.Description>
+          You won&apos;t be able to revert this!
+        </AlertDialog.Description>
+        <AlertDialog.Footer>
+          <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
+          <AlertDialog.Action>Confirm</AlertDialog.Action>
+        </AlertDialog.Footer>
+      </AlertDialog.Content>
+    </AlertDialog>
   );
 };

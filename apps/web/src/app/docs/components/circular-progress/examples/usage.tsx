@@ -1,5 +1,7 @@
-import { CircularProgress } from "jamsrui/circular-progress";
+"use client";
 
-export const CircularProgressUsage = () => {
-  return <CircularProgress />;
+import { CircularProgress } from "ui/circular-progress";
+
+export const CircularProgressUsage = (props: CircularProgress.Props) => {
+  return <CircularProgress {...props} />;
 };

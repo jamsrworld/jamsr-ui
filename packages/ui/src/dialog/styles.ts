@@ -17,6 +17,7 @@ export const dialogStyles = tv({
     closeButton: "absolute right-2 top-2 z-10",
     title: "",
     description: "",
+    portal: "relative z-dialog",
   },
   variants: {
     radius: {

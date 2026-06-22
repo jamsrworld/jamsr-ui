@@ -1,7 +1,10 @@
-import { Textarea as TextareaRoot } from "./textarea";
+import { TextArea as TextAreaRoot } from "./textarea";
 
-export const Textarea = TextareaRoot;
+import type { InputVariants } from "../input/styles";
 
-export namespace Textarea {
-  export interface Props extends TextareaRoot.Props {}
+export const TextArea = TextAreaRoot;
+
+export namespace TextArea {
+  export type Variants = InputVariants;
+  export interface Props extends TextAreaRoot.Props {}
 }

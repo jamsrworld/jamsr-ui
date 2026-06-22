@@ -1,12 +1,14 @@
+"use client";
+
 import { Icon } from "@iconify/react";
-import { Avatar } from "jamsrui/avatar";
-import { IconButton } from "jamsrui/icon-button";
-import { Menu } from "jamsrui/menu";
-import { Text } from "jamsrui/text";
+import { Avatar } from "ui/avatar";
+import { IconButton } from "ui/icon-button";
+import { Menu } from "ui/menu";
+import { Text } from "ui/text";
 
 const WorkspaceSwitcher = () => {
   return (
-    <Menu placement="bottom-start">
+    <Menu>
       <Menu.Trigger>
         <div className="flex gap-1 items-center hover:bg-surface-secondary p-0.5 rounded-sm">
           <Avatar size="sm">
@@ -17,7 +19,9 @@ const WorkspaceSwitcher = () => {
           <Icon icon="tabler:chevron-down" />
         </div>
       </Menu.Trigger>
-      <Menu.Content>
+      <Menu.Content
+        slotProps={{ positioner: { side: "bottom", align: "start" } }}
+      >
         <Menu.Item>Settings</Menu.Item>
         <Menu.Item>Invite and manage members</Menu.Item>
         <Menu.Separator />
@@ -35,13 +39,20 @@ export const SidebarHeader = () => {
     <div className="flex gap-1 items-center">
       <WorkspaceSwitcher />
       <div className="ml-auto flex gap-1 items-center">
-        <IconButton label="Search" variant="light" size="sm">
+        <IconButton
+          label="Search"
+          variant="light"
+          size="sm"
+        >
           <Icon
             icon="hugeicons:search-01"
             className="text-foreground-secondary"
           />
         </IconButton>
-        <IconButton label="Draft" size="sm">
+        <IconButton
+          label="Draft"
+          size="sm"
+        >
           <Icon icon="mynaui:edit-one-solid" />
         </IconButton>
       </div>

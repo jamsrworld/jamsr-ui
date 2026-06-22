@@ -1,5 +1,6 @@
 import { Field as FieldPrimitive } from "@base-ui/react/field";
-import { cn } from "tailwind-variants";
+
+import { cn } from "../utils/cn";
 
 export const FieldRoot = (props: FieldRoot.Props) => {
   const { className, orientation = "vertical", ...restProps } = props;
@@ -63,7 +64,7 @@ export const FieldLabel = (props: FieldPrimitive.Label.Props) => {
 export const FieldContent = (props: FieldContent.Props) => {
   const { className, ...restProps } = props;
   return (
-    <div className={cn("flex flex-col gap-1", className)} {...restProps} />
+    <div className={cn("flex flex-col gap-0.5", className)} {...restProps} />
   );
 };
 

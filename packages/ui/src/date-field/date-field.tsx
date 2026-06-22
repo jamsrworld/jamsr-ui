@@ -1,48 +1,42 @@
-import { DateField as DateFieldUI } from "@jamsrui/react";
+"use client";
 
 import { dateFieldStyles } from "./styles";
 
+import type { useRender } from "@base-ui/react/use-render";
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const styles = dateFieldStyles();
 
-export const DateInput = (props: DateInput.Props) => {
-  const { className, ...rest } = props;
-  return <DateFieldUI.Input {...rest} className={styles.root({ className })} />;
-};
-
-export const DateSegment = (props: DateSegment.Props) => {
-  const { className, ...rest } = props;
-  return (
-    <DateFieldUI.Segment {...rest} className={styles.segment({ className })} />
-  );
-};
-
-export const DateFieldSeparator = (props: DateFieldSeparator.Props) => {
-  const { className, ...rest } = props;
-  return (
-    <DateFieldUI.Separator
-      {...rest}
-      className={styles.separator({ className })}
-    />
-  );
-};
-
-export const DateField = (props: DateField.Props) => {
-  const { ...rest } = props;
-  return <DateFieldUI {...rest} />;
+export const DateField = (_props: DateField.Props) => {
+  return null;
 };
 
 export namespace DateField {
-  export interface Props extends DateFieldUI.Props {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }
+
+export const DateInput = (_props: DateInput.Props) => {
+  return null;
+};
 
 export namespace DateInput {
-  export interface Props extends DateFieldUI.Input {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }
+
+export const DateSegment = (_props: DateSegment.Props) => {
+  return null;
+};
 
 export namespace DateSegment {
-  export interface Props extends DateFieldUI.Segment {}
+  export interface Props extends useRender.ComponentProps<"div"> {
+    segment?: unknown;
+  }
 }
 
+export const DateFieldSeparator = (_props: DateFieldSeparator.Props) => {
+  return null;
+};
+
 export namespace DateFieldSeparator {
-  export interface Props extends DateFieldUI.Separator {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }

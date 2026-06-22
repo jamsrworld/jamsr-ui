@@ -1,5 +1,6 @@
 import { Collapsible as CollapsiblePrimitive } from "@base-ui/react/collapsible";
-import { cn } from "tailwind-variants";
+
+import { cn } from "../utils/cn";
 
 const Collapsible = (props: CollapsiblePrimitive.Root.Props) => {
   return <CollapsiblePrimitive.Root {...props} />;

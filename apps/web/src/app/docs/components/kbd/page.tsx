@@ -1,7 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { Kbd } from "ui/kbd";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { KbdUsage } from "./examples/usage";
 
 const title = "Kbd";
@@ -13,15 +15,28 @@ export const metadata: Metadata = {
   description,
 };
 
-const Kbd = () => {
+const kbdVariants: VariantOptions<Kbd.Variants> = {
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+};
+
+const KbdPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <KbdUsage />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={kbdVariants}
+        component={KbdUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Kbd;
+export default KbdPage;

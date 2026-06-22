@@ -1,17 +1,17 @@
-import { CodeExample } from "@/components/code-example";
+import { Menu } from "ui/menu";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { MenuAligns } from "./examples/aligns";
 import { MenuBackdrop } from "./examples/backdrop";
 import { MenuCheckboxItemsExample } from "./examples/checkbox-items";
-import { MenuColors } from "./examples/colors";
 import { MenuControlled } from "./examples/controlled";
 import { MenuGroupExample } from "./examples/group";
 import { MenuNested } from "./examples/nested";
 import { MenuOffset } from "./examples/offset";
 import { MenuRadioItemsExample } from "./examples/radio-items";
-import { MenuRadius } from "./examples/radius";
 import { MenuSides } from "./examples/sides";
 import { MenuStartEndContent } from "./examples/start-end-content";
 import { MenuUsage } from "./examples/usage";
@@ -26,78 +26,109 @@ export const metadata: Metadata = {
   description,
 };
 
-const Menu = () => {
+const menuVariants: VariantOptions<Menu.Variants> = {
+  color: {
+    options: [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+    ],
+    defaultValue: "default",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  backdrop: {
+    options: ["transparent", "opaque", "blur"],
+    defaultValue: "transparent",
+  },
+};
+
+const MenuPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <MenuUsage />
-      </CodeExample>
-      <CodeExample isCentered title="Nested" url={resolvePath("nested.tsx")}>
-        <MenuNested />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={menuVariants}
+        component={MenuUsage}
+      />
+      <CodeExampleV2
+        title="Nested"
+        url={resolvePath("nested.tsx")}
+        variants={menuVariants}
+        component={MenuNested}
+      />
+      <CodeExampleV2
         title="Radio Items"
         url={resolvePath("radio-items.tsx")}
-      >
-        <MenuRadioItemsExample />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={menuVariants}
+        component={MenuRadioItemsExample}
+      />
+      <CodeExampleV2
         title="Checkbox Items"
         url={resolvePath("checkbox-items.tsx")}
-      >
-        <MenuCheckboxItemsExample />
-      </CodeExample>
-      <CodeExample isCentered title="Group" url={resolvePath("group.tsx")}>
-        <MenuGroupExample />
-      </CodeExample>
-      <CodeExample
+        variants={menuVariants}
+        component={MenuCheckboxItemsExample}
+      />
+      <CodeExampleV2
+        title="Group"
+        url={resolvePath("group.tsx")}
+        variants={menuVariants}
+        component={MenuGroupExample}
+      />
+      <CodeExampleV2
         title="Start & End Content"
         url={resolvePath("start-end-content.tsx")}
-        isCentered
-      >
-        <MenuStartEndContent />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={menuVariants}
+        component={MenuStartEndContent}
+      />
+      <CodeExampleV2
         title="With Arrow"
         url={resolvePath("with-arrow.tsx")}
-      >
-        <MenuWithArrow />
-      </CodeExample>
-      <CodeExample isCentered title="Sides" url={resolvePath("sides.tsx")}>
-        <MenuSides />
-      </CodeExample>
-      <CodeExample isCentered title="Aligns" url={resolvePath("aligns.tsx")}>
-        <MenuAligns />
-      </CodeExample>
-      <CodeExample isCentered title="Offset" url={resolvePath("offset.tsx")}>
-        <MenuOffset />
-      </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
-        <MenuRadius />
-      </CodeExample>
-      <CodeExample isCentered title="Colors" url={resolvePath("colors.tsx")}>
-        <MenuColors />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={menuVariants}
+        component={MenuWithArrow}
+      />
+      <CodeExampleV2
+        title="Sides"
+        url={resolvePath("sides.tsx")}
+        variants={menuVariants}
+        component={MenuSides}
+      />
+      <CodeExampleV2
+        title="Aligns"
+        url={resolvePath("aligns.tsx")}
+        variants={menuVariants}
+        component={MenuAligns}
+      />
+      <CodeExampleV2
+        title="Offset"
+        url={resolvePath("offset.tsx")}
+        variants={menuVariants}
+        component={MenuOffset}
+      />
+      <CodeExampleV2
         title="Backdrop"
         url={resolvePath("backdrop.tsx")}
-      >
-        <MenuBackdrop />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={menuVariants}
+        component={MenuBackdrop}
+      />
+      <CodeExampleV2
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <MenuControlled />
-      </CodeExample>
+        variants={menuVariants}
+        component={MenuControlled}
+      />
     </DocsPage>
   );
 };
 
-export default Menu;
+export default MenuPage;

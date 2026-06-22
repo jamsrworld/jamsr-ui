@@ -1,24 +1,26 @@
 "use client";
 
-import { Clipboard } from "jamsrui/clipboard";
+import { Clipboard } from "ui/clipboard";
 
-export const ClipboardSoundEffect = () => {
+export const ClipboardSoundEffect = (props: Clipboard.Props) => {
+  const { text = "Hello world!", ...rest } = props;
   const onSuccess = () => {
     // Play sound effect
     const audio = new Audio("/copy.mp3");
     void audio.play();
 
-    alert("Copied to clipboard");
+    console.log("Copied to clipboard");
   };
 
   const onError = () => {
-    alert("Failed to copy to clipboard");
+    console.log("Failed to copy to clipboard");
   };
   return (
     <Clipboard
-      text="Hello world!"
+      text={text}
       onCopySuccess={onSuccess}
       onCopyError={onError}
+      {...rest}
     >
       Click me to copy text with sound
       <Clipboard.Icon />

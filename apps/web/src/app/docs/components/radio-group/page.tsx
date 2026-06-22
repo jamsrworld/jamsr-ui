@@ -1,10 +1,11 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { RadioGroup } from "ui/radio-group";
 import { Metadata } from "next";
-import { RadioUsage } from "./examples/usage";
-import { RadioColors } from "./examples/colors";
 import { RadioNumberUsage } from "./examples/number-usage";
+import { RadioUsage } from "./examples/usage";
 
 const title = "Radio Group";
 const description =
@@ -15,21 +16,45 @@ export const metadata: Metadata = {
   description,
 };
 
-const RadioGroup = () => {
+const radioGroupVariants: VariantOptions<RadioGroup.Variants> = {
+  color: {
+    options: [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+    ],
+    defaultValue: "primary",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+};
+
+const RadioGroupPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <RadioUsage />
-      </CodeExample>
-      <CodeExample title="Number Usage" url={resolvePath("number-usage.tsx")}>
-        <RadioNumberUsage />
-      </CodeExample>
-      <CodeExample title="Colors" url={resolvePath("colors.tsx")}>
-        <RadioColors />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={radioGroupVariants}
+        component={RadioUsage}
+      />
+      <CodeExampleV2
+        title="Number Usage"
+        url={resolvePath("number-usage.tsx")}
+        variants={radioGroupVariants}
+        component={RadioNumberUsage}
+      />
     </DocsPage>
   );
 };
 
-export default RadioGroup;
+export default RadioGroupPage;

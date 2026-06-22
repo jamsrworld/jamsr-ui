@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
-import { cn } from "tailwind-variants";
 
 import { menuStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -130,7 +130,13 @@ export const MenuGroupLabel = (props: MenuPrimitive.GroupLabel.Props) => {
 };
 
 export const MenuSeparator = (props: MenuPrimitive.Separator.Props) => {
-  return <MenuPrimitive.Separator {...props} />;
+  const { styles } = useMenuContext();
+  return (
+    <MenuPrimitive.Separator
+      {...props}
+      className={styles.separator({ className: cn(props.className) })}
+    />
+  );
 };
 
 export const MenuCheckboxItem = (props: MenuPrimitive.CheckboxItem.Props) => {
@@ -164,11 +170,13 @@ export const MenuCheckboxItemIndicator = (
   const { children = <CheckIcon />, className, ...restProps } = props;
   return (
     <MenuPrimitive.CheckboxItemIndicator
+      keepMounted
       {...restProps}
       className={styles.menuItemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </MenuPrimitive.CheckboxItemIndicator>
+      render={(props, { checked }) => (
+        <span {...props}>{checked ? children : null} </span>
+      )}
+    />
   );
 };
 
@@ -179,11 +187,13 @@ export const MenuRadioItemIndicator = (
   const { children = <CheckIcon />, className, ...restProps } = props;
   return (
     <MenuPrimitive.RadioItemIndicator
+      keepMounted
       {...restProps}
       className={styles.menuItemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </MenuPrimitive.RadioItemIndicator>
+      render={(props, { checked }) => (
+        <span {...props}>{checked ? children : null}</span>
+      )}
+    />
   );
 };
 

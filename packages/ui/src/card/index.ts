@@ -7,6 +7,10 @@ import {
   CardTitle,
 } from "./card";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { cardStyles } from "./styles";
+
 export const Card = Object.assign(CardRoot, {
   Header: CardHeader,
   Title: CardTitle,
@@ -16,5 +20,6 @@ export const Card = Object.assign(CardRoot, {
 });
 
 export namespace Card {
+  export type Variants = VariantProps<typeof cardStyles>;
   export interface Props extends CardRoot.Props {}
 }

@@ -1,6 +1,8 @@
-import { ContextMenu } from "jamsrui/context-menu";
+"use client";
 
-export const ContextMenuSides = () => {
+import { ContextMenu } from "ui/context-menu";
+
+export const ContextMenuSides = (props: ContextMenu.Props) => {
   const sides = [
     "top",
     "right",
@@ -12,12 +14,15 @@ export const ContextMenuSides = () => {
   return (
     <div className="flex flex-wrap gap-4">
       {sides.map((side) => (
-        <ContextMenu key={side}>
+        <ContextMenu
+          key={side}
+          {...props}
+        >
           <ContextMenu.Trigger>
-        <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
-          Right Click Here
-        </div>
-      </ContextMenu.Trigger>
+            <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
+              Right Click Here
+            </div>
+          </ContextMenu.Trigger>
           <ContextMenu.Content
             slotProps={{
               positioner: {
@@ -31,7 +36,10 @@ export const ContextMenuSides = () => {
             <ContextMenu.Item>Play Last</ContextMenu.Item>
             <ContextMenu.Item>Share</ContextMenu.Item>
             <ContextMenu.Item>Favorite</ContextMenu.Item>
-            <ContextMenu.Item disabled color="danger">
+            <ContextMenu.Item
+              disabled
+              color="danger"
+            >
               Delete
             </ContextMenu.Item>
           </ContextMenu.Content>

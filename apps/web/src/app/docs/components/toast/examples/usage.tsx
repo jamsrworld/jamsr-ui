@@ -1,16 +1,17 @@
 "use client";
 
 import { toastManager } from "@/app/provider/toast";
-import { Button } from "jamsrui/button";
+import { Button } from "ui/button";
+import React from "react";
 
-const ToastUsage = () => {
+export const ToastUsage = (props: Record<string, unknown>) => {
+  const type = (props.type as any) ?? "default";
   const handleClick = () => {
     toastManager.add({
-      title: "Hello, world!",
-      description: "This is a toast",
+      title: "Notification",
+      description: `This is a ${type} toast message.`,
+      type,
     });
   };
-  return <Button onClick={handleClick}>Press Me</Button>;
+  return <Button onClick={handleClick}>Trigger Toast</Button>;
 };
-
-export default ToastUsage;

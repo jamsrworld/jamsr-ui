@@ -1,7 +1,9 @@
 "use client";
 
-import { Combobox } from "jamsrui/combobox";
+import { Combobox } from "ui/combobox";
 import { ChevronDown, X } from "lucide-react";
+import React from "react";
+import { Field } from "ui/field";
 
 interface Fruit {
   label: string;
@@ -25,13 +27,14 @@ const fruits: Fruit[] = [
   { label: "Pomegranate", value: "pomegranate" },
 ];
 
-export const ComboboxUsage = () => {
+export const ComboboxUsage = (props: Partial<Combobox.Props>) => {
   return (
-    <div className="w-full max-w-xs">
-      <Combobox items={fruits}>
-        <label className="mb-1.5 block text-sm font-medium">
-          Choose a fruit
-        </label>
+    <Field>
+      <Field.Label>Choose a fruit</Field.Label>
+      <Combobox
+        items={fruits}
+        {...props}
+      >
         <Combobox.InputGroup>
           <Combobox.Input placeholder="e.g. Apple" />
           <div className="flex items-center">
@@ -47,7 +50,10 @@ export const ComboboxUsage = () => {
           <Combobox.Empty>No fruits found.</Combobox.Empty>
           <Combobox.List>
             {(item: Fruit) => (
-              <Combobox.Item key={item.value} value={item}>
+              <Combobox.Item
+                key={item.value}
+                value={item}
+              >
                 <Combobox.ItemIndicator />
                 <span>{item.label}</span>
               </Combobox.Item>
@@ -55,6 +61,6 @@ export const ComboboxUsage = () => {
           </Combobox.List>
         </Combobox.Content>
       </Combobox>
-    </div>
+    </Field>
   );
 };

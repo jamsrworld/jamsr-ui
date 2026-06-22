@@ -1,13 +1,16 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
+import { Avatar } from "ui/avatar";
 import { useId } from "react";
 
-export const AvatarUsage = () => {
+export const AvatarUsage = (props: Avatar.Props) => {
   const id = useId();
   return (
-    <Avatar>
-      <Avatar.Image alt="John" src={`https://i.pravatar.cc/300?u=${id}`} />
+    <Avatar {...props}>
+      <Avatar.Image
+        alt="John"
+        src={`https://i.pravatar.cc/300?u=${id}`}
+      />
       <Avatar.Fallback />
     </Avatar>
   );

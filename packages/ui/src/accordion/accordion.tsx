@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
-import { cn } from "tailwind-variants";
 
 import { accordionStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ComponentPropsWithRef } from "react";
 import type { VariantProps } from "tailwind-variants";

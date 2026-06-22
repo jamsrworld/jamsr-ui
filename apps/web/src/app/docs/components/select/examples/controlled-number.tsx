@@ -1,9 +1,9 @@
 "use client";
 
-import { Description } from "jamsrui/description";
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
-import { useState } from "react";
+import { Description } from "ui/description";
+import { Label } from "ui/label";
+import { Select } from "ui/select";
+import React, { useState } from "react";
 
 enum Fruits {
   APPLE = 1,
@@ -21,16 +21,23 @@ const fruits = [
   { label: "Orange", value: Fruits.ORANGE },
 ];
 
-export const SelectControlledNumber = () => {
-  const [value, setValue] = useState<Fruits>(Fruits.APPLE);
+export const SelectControlledNumber = (props: Partial<Select.Props>) => {
+  const [value, setValue] = useState<Fruits | null>(Fruits.APPLE);
   return (
     <div className="flex flex-col gap-2">
-      <Select value={value} onValueChange={setValue}>
+      <Select
+        value={value}
+        onValueChange={(val) => setValue(val as Fruits | null)}
+        {...props}
+      >
         <Label>Fruit</Label>
         <Select.Trigger className="min-w-40" />
         <Select.Content>
           {fruits.map(({ label, value }) => (
-            <Select.Item key={label} value={value}>
+            <Select.Item
+              key={label}
+              value={value}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>{label}</Select.ItemText>
             </Select.Item>

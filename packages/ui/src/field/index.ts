@@ -17,4 +17,7 @@ export const Field = Object.assign(FieldRoot, {
 
 export namespace Field {
   export type Props = FieldRoot.Props;
+  export type Variants = {
+    orientation?: "vertical" | "horizontal";
+  };
 }

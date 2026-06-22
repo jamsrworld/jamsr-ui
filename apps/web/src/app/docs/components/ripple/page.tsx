@@ -1,9 +1,10 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Ripple } from "ui/ripple";
 import { Metadata } from "next";
 import { RippleUsage } from "./examples/usage";
-import { RippleAtCenter } from "./examples/centered";
 
 const title = "Ripple";
 const description =
@@ -14,18 +15,28 @@ export const metadata: Metadata = {
   description,
 };
 
-const Ripple = () => {
+const rippleVariants: VariantOptions<Ripple.Variants> = {
+  isCentered: {
+    options: ["true", "false"],
+    defaultValue: "false",
+  },
+};
+
+const RipplePage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <RippleUsage />
-      </CodeExample>
-      <CodeExample title="Centered" url={resolvePath("centered.tsx")}>
-        <RippleAtCenter />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={rippleVariants}
+        component={RippleUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Ripple;
+export default RipplePage;

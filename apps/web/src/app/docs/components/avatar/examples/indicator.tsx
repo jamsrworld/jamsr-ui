@@ -1,5 +1,7 @@
-import { Avatar } from "jamsrui/avatar";
-import { Chip } from "jamsrui/chip";
+"use client";
+
+import { Avatar } from "ui/avatar";
+import { Chip } from "ui/chip";
 
 const BadgeIcon = () => {
   return (
@@ -21,10 +23,10 @@ const BadgeIcon = () => {
   );
 };
 
-export const AvatarIndicatorExample = () => {
+export const AvatarIndicatorExample = (props: Avatar.Props) => {
   return (
     <div className="grid grid-cols-4 gap-4">
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/boy?username=John`}
@@ -34,38 +36,50 @@ export const AvatarIndicatorExample = () => {
           <BadgeIcon />
         </Avatar.Indicator>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=Jamsr`}
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Chip size="sm" isSquare color="primary">
+          <Chip
+            size="sm"
+            isSquare
+            color="primary"
+          >
             2
           </Chip>
         </Avatar.Indicator>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Chip isSquare variant="dot" color="success">
+          <Chip
+            isSquare
+            variant="dot"
+            color="success"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
       </Avatar>
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Avatar size="sm" isBordered color="warning">
+          <Avatar
+            size="sm"
+            isBordered
+            color="warning"
+          >
             <Avatar.Image
               alt="John"
               src={`https://avatar.iran.liara.run/public/girl?username=Jamsr`}
@@ -76,53 +90,69 @@ export const AvatarIndicatorExample = () => {
       </Avatar>
       {/*  */}
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
         />
         <Avatar.Fallback />
         <Avatar.Indicator>
-          <Chip isSquare variant="dot" color="primary">
+          <Chip
+            isSquare
+            variant="dot"
+            color="primary"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
       </Avatar>
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
         />
         <Avatar.Fallback />
         <Avatar.Indicator className="-top-2 -left-1">
-          <Chip isSquare variant="dot" color="danger">
+          <Chip
+            isSquare
+            variant="dot"
+            color="danger"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
       </Avatar>
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
         />
         <Avatar.Fallback />
         <Avatar.Indicator className="-top-2 -right-1">
-          <Chip isSquare variant="dot" color="success">
+          <Chip
+            isSquare
+            variant="dot"
+            color="success"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>
       </Avatar>
 
-      <Avatar>
+      <Avatar {...props}>
         <Avatar.Image
           alt="John"
           src={`https://avatar.iran.liara.run/public/girl?username=John`}
         />
         <Avatar.Fallback />
         <Avatar.Indicator className="-bottom-2 -left-1">
-          <Chip isSquare variant="dot" color="warning">
+          <Chip
+            isSquare
+            variant="dot"
+            color="warning"
+          >
             <Chip.Dot />
           </Chip>
         </Avatar.Indicator>

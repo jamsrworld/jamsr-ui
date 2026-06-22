@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Drawer as DrawerPrimitive } from "@base-ui/react/drawer";
-import { cn } from "tailwind-variants";
 
 import { drawerStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ComponentProps } from "react";
 import type { VariantProps } from "tailwind-variants";

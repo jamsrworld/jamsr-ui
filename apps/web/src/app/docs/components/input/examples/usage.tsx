@@ -1,5 +1,12 @@
-import { Input } from "jamsrui/input";
+"use client";
 
-export const InputUsage = () => {
-  return <Input placeholder="Enter your name" />;
+import { Input } from "ui/input";
+
+export const InputUsage = (props: Input.Props) => {
+  return (
+    <Input
+      {...props}
+      placeholder="Enter your name"
+    />
+  );
 };

@@ -21,6 +21,10 @@ import {
   ComboboxValue,
 } from "./combobox";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { comboboxStyles } from "./styles";
+
 export const Combobox = Object.assign(ComboboxRoot, {
   Label: ComboboxLabel,
   InputGroup: ComboboxInputGroup,
@@ -42,3 +46,8 @@ export const Combobox = Object.assign(ComboboxRoot, {
   Icon: ComboboxIcon,
   Status: ComboboxStatus,
 });
+
+export namespace Combobox {
+  export interface Props extends React.ComponentProps<typeof ComboboxRoot> {}
+  export type Variants = VariantProps<typeof comboboxStyles>;
+}

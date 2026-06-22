@@ -9,6 +9,10 @@ import {
   DialogTrigger,
 } from "./dialog";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { dialogStyles } from "./styles";
+
 export const Dialog = Object.assign(DialogRoot, {
   Trigger: DialogTrigger,
   Content: DialogContent,
@@ -20,5 +24,6 @@ export const Dialog = Object.assign(DialogRoot, {
 });
 
 export namespace Dialog {
+  export type Variants = VariantProps<typeof dialogStyles>;
   export interface Props extends DialogRoot.Props {}
 }

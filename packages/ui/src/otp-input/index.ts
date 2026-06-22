@@ -8,6 +8,10 @@ import {
   REGEXP_ONLY_DIGITS_AND_CHARS,
 } from "./otp-input";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { otpInputStyles } from "./styles";
+
 export const OtpInput = Object.assign(OtpInputRoot, {
   Group: OtpInputGroup,
   Slot: OtpInputSlot,
@@ -15,6 +19,7 @@ export const OtpInput = Object.assign(OtpInputRoot, {
 });
 
 export namespace OtpInput {
+  export type Variants = VariantProps<typeof otpInputStyles>;
   export interface Props extends OtpInputRoot.Props {}
   export interface Group extends OtpInputGroup.Props {}
   export interface Slot extends OtpInputSlot.Props {}

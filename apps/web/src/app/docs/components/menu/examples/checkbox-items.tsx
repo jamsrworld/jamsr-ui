@@ -1,10 +1,11 @@
 "use client";
-import { Button } from "jamsrui/button";
-import { Menu } from "jamsrui/menu";
 
-export const MenuCheckboxItemsExample = () => {
+import { Button } from "ui/button";
+import { Menu } from "ui/menu";
+
+export const MenuCheckboxItemsExample = (props: Menu.Props) => {
   return (
-    <Menu>
+    <Menu {...props}>
       <Menu.Trigger render={<Button>Sort</Button>} />
       <Menu.Content>
         <Menu.CheckboxItem>

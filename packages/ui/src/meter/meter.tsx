@@ -1,7 +1,7 @@
 import { Meter as MeterPrimitive } from "@base-ui/react/meter";
-import { cn } from "tailwind-variants";
 
 import { meterStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

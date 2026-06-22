@@ -1,12 +1,12 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Tabs } from "ui/tabs";
 import { Metadata } from "next";
-import { TabColors } from "./examples/colors";
-import { TabRadius } from "./examples/radius";
-import { TabSizes } from "./examples/sizes";
+import { TabDisabled } from "./examples/disabled";
+import { TabDisabledItem } from "./examples/disabled-item";
 import { TabsUsage } from "./examples/usage";
-import { TabVariants } from "./examples/variants";
 import { TabWithIcons } from "./examples/with-icons";
 
 const title = "Tabs";
@@ -18,38 +18,65 @@ export const metadata: Metadata = {
   description,
 };
 
-const Tabs = () => {
+const tabsVariants: VariantOptions<Tabs.Variants> = {
+  variant: {
+    options: ["solid", "light", "underlined", "bordered"],
+    defaultValue: "solid",
+  },
+  color: {
+    options: [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+    ],
+    defaultValue: "default",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
+const TabsPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <TabsUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants"
-        url={resolvePath("variants.tsx")}
-      >
-        <TabVariants />
-      </CodeExample>
-      <CodeExample isCentered title="Colors" url={resolvePath("colors.tsx")}>
-        <TabColors />
-      </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
-        <TabSizes />
-      </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
-        <TabRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={tabsVariants}
+        component={TabsUsage}
+      />
+      <CodeExampleV2
         title="With Icons"
         url={resolvePath("with-icons.tsx")}
-      >
-        <TabWithIcons />
-      </CodeExample>
+        variants={tabsVariants}
+        component={TabWithIcons}
+      />
+      <CodeExampleV2
+        title="Disabled All"
+        url={resolvePath("disabled.tsx")}
+        variants={tabsVariants}
+        component={TabDisabled}
+      />
+      <CodeExampleV2
+        title="Disabled Item"
+        url={resolvePath("disabled-item.tsx")}
+        variants={tabsVariants}
+        component={TabDisabledItem}
+      />
     </DocsPage>
   );
 };
 
-export default Tabs;
+export default TabsPage;

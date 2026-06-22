@@ -14,6 +14,10 @@ import {
   NavigationMenuViewport,
 } from "./navigation-menu";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { navigationMenuStyles } from "./styles";
+
 export const NavigationMenu = Object.assign(NavigationMenuRoot, {
   List: NavigationMenuList,
   Item: NavigationMenuItem,
@@ -30,5 +34,6 @@ export const NavigationMenu = Object.assign(NavigationMenuRoot, {
 });
 
 export namespace NavigationMenu {
+  export type Variants = VariantProps<typeof navigationMenuStyles>;
   export interface Props extends NavigationMenuRoot.Props {}
 }

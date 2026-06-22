@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { ScrollArea as ScrollAreaPrimitive } from "@base-ui/react/scroll-area";
-import { cn } from "tailwind-variants";
 
-import { scrollAreaStyles } from "./styles";
+import { scrollAreaStyles, scrollbarStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ScrollAreaVariants } from "./styles";
 
@@ -21,9 +21,9 @@ const useScrollAreaContext = () => {
   return ctx;
 };
 
-export const ScrollArea = (props: ScrollArea.Props) => {
-  const { orientation, isScrollable, className, ...rest } = props;
-  const styles = scrollAreaStyles({ orientation, isScrollable });
+export const ScrollAreaRoot = (props: ScrollAreaRoot.Props) => {
+  const { className, ...rest } = props;
+  const styles = scrollAreaStyles();
   const value = useMemo(() => ({ styles }), [styles]);
   return (
     <ScrollAreaContext value={value}>
@@ -35,7 +35,7 @@ export const ScrollArea = (props: ScrollArea.Props) => {
   );
 };
 
-export namespace ScrollArea {
+export namespace ScrollAreaRoot {
   export interface Props
     extends ScrollAreaPrimitive.Root.Props, ScrollAreaVariants {}
 }
@@ -56,14 +56,21 @@ export const ScrollAreaViewport = (
 export const ScrollAreaScrollbar = (
   props: ScrollAreaPrimitive.Scrollbar.Props,
 ) => {
-  const { styles } = useScrollAreaContext();
-  const { orientation = "vertical", className, ...rest } = props;
+  const {
+    orientation = "vertical",
+    children = <ScrollAreaThumb />,
+    className,
+    ...rest
+  } = props;
+  const styles = scrollbarStyles({ orientation, className: cn(className) });
   return (
     <ScrollAreaPrimitive.Scrollbar
       {...rest}
-      className={styles.scrollbar({ className: cn(className) })}
+      className={styles}
       orientation={orientation}
-    />
+    >
+      {children}
+    </ScrollAreaPrimitive.Scrollbar>
   );
 };
 

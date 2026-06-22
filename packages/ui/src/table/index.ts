@@ -8,6 +8,10 @@ import {
   TableRow,
 } from "./table";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { tableStyles } from "./styles";
+
 export const Table = Object.assign(TableRoot, {
   Header: TableHeader,
   Column: TableColumn,
@@ -17,16 +21,8 @@ export const Table = Object.assign(TableRoot, {
   Footer: TableFooter,
 });
 
-export {
-  TableBody,
-  TableCell,
-  TableColumn,
-  TableFooter,
-  TableHeader,
-  TableRow,
-};
-
 export namespace Table {
+  export type Variants = VariantProps<typeof tableStyles>;
   export interface Props extends TableRoot.Props {}
   export interface Header extends TableHeader.Props {}
   export interface Column extends TableColumn.Props {}

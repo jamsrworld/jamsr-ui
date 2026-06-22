@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Popover as PopoverPrimitive } from "@base-ui/react/popover";
-import { cn } from "tailwind-variants";
 
 import { popoverStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { PopoverVariants } from "./styles";
 

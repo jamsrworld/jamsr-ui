@@ -9,6 +9,10 @@ import {
   SelectValue,
 } from "./select";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { selectStyles } from "./styles";
+
 export const Select = Object.assign(SelectRoot, {
   Content: SelectContent,
   Icon: SelectIcon,
@@ -20,8 +24,9 @@ export const Select = Object.assign(SelectRoot, {
 });
 
 export namespace Select {
+  export type Variants = VariantProps<typeof selectStyles>;
   export type Props<
-    Value,
+    Value = unknown,
     Multiple extends boolean | undefined = false,
   > = SelectRoot.Props<Value, Multiple>;
 }

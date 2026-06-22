@@ -1,7 +1,7 @@
 import { Progress as ProgressPrimitive } from "@base-ui/react/progress";
-import { cn } from "tailwind-variants";
 
 import { progressStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

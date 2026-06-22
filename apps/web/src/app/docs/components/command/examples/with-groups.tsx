@@ -1,6 +1,6 @@
 "use client";
 
-import { Command } from "jamsrui/command";
+import { Command } from "ui/command";
 import {
   FileText,
   Globe,
@@ -13,9 +13,12 @@ import {
   Video,
 } from "lucide-react";
 
-export const CommandWithGroups = () => {
+export const CommandWithGroups = (props: Command.Props) => {
   return (
-    <Command className="max-w-md">
+    <Command
+      className="max-w-md"
+      {...props}
+    >
       <Command.Input placeholder="Search all actions..." />
       <Command.List>
         <Command.Empty>No results found.</Command.Empty>

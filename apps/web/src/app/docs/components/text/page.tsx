@@ -1,9 +1,10 @@
-import { CodeExample } from "@/components/code-example";
+import { Text } from "ui/text";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { TextUsage } from "./examples/usage";
-import { TextVariants } from "./examples/variants";
 
 const title = "Text";
 const description =
@@ -14,18 +15,51 @@ export const metadata: Metadata = {
   description,
 };
 
-const Text = () => {
+const textVariants: VariantOptions<Text.Variants> = {
+  variant: {
+    options: [
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "lead",
+      "caption",
+      "paragraph2",
+      "paragraph",
+      "body1",
+      "body2",
+      "body3",
+      "body4",
+      "body5",
+      "body6",
+      "body7",
+      "inherit",
+    ],
+    defaultValue: "paragraph",
+  },
+  leading: {
+    options: ["none", "md"],
+    defaultValue: "md",
+  },
+};
+
+const TextPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <TextUsage />
-      </CodeExample>
-      <CodeExample title="Variants" url={resolvePath("variants.tsx")}>
-        <TextVariants />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={textVariants}
+        component={TextUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Text;
+export default TextPage;

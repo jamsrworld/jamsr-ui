@@ -2,9 +2,10 @@
 
 import { createContext, use, useMemo } from "react";
 
-import { Card as CardUI } from "@jamsrui/react";
+import { useRender } from "@base-ui/react/use-render";
 
 import { cardStyles } from "./styles";
+import { cn } from "../utils";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -12,6 +13,7 @@ type CardVariants = VariantProps<typeof cardStyles>;
 
 const CardContext = createContext<{
   styles: ReturnType<typeof cardStyles>;
+  surface: Card.Props["surface"];
 } | null>(null);
 
 const useCardContext = () => {
@@ -23,66 +25,144 @@ const useCardContext = () => {
 };
 
 export const Card = (props: Card.Props) => {
-  const { bg, isBordered, isElevated, radius, className, ...restProps } = props;
-  const styles = cardStyles({ bg, isBordered, isElevated, radius });
-  const value = useMemo(() => ({ styles }), [styles]);
-  return (
-    <CardContext value={value}>
-      <CardUI {...restProps} className={styles.root({ className })} />
-    </CardContext>
-  );
+  const {
+    bg,
+    isBordered,
+    shadow,
+    surface = "card",
+    radius,
+    className,
+    contentPadding,
+    render,
+    ...restProps
+  } = props;
+  const styles = cardStyles({
+    bg,
+    isBordered,
+    shadow,
+    radius,
+    contentPadding,
+    surface,
+  });
+  const value = useMemo(() => ({ styles, surface }), [styles, surface]);
+
+  const finalClassName = useMemo(() => {
+    return surface === "card"
+      ? styles.root({ className: cn(styles.surface({ className })) })
+      : styles.root({ className });
+  }, [styles, surface, className]);
+
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...restProps,
+      className: finalClassName,
+    },
+    render,
+  });
+
+  return <CardContext value={value}>{renderElement}</CardContext>;
 };
 
 export namespace Card {
-  export interface Props extends CardUI.Props, CardVariants {}
+  export interface Props extends useRender.ComponentProps<"div">, CardVariants {
+    surface?: "card" | "content";
+  }
 }
 
-export const CardHeader = (props: CardUI.Header) => {
+export const CardHeader = (props: CardHeader.Props) => {
+  const { className, render, ...rest } = props;
   const { styles } = useCardContext();
-  return (
-    <CardUI.Header
-      {...props}
-      className={styles.header({ className: props.className })}
-    />
-  );
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: styles.header({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
-export const CardTitle = (props: CardUI.Title) => {
+export namespace CardHeader {
+  export interface Props extends useRender.ComponentProps<"div"> {}
+}
+
+export const CardTitle = (props: CardTitle.Props) => {
+  const { className, render, ...rest } = props;
   const { styles } = useCardContext();
-  return (
-    <CardUI.Title
-      {...props}
-      className={styles.title({ className: props.className })}
-    />
-  );
+  const renderElement = useRender({
+    defaultTagName: "h3",
+    props: {
+      ...rest,
+      className: styles.title({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
-export const CardDescription = (props: CardUI.Description) => {
+export namespace CardTitle {
+  export interface Props extends useRender.ComponentProps<"h3"> {}
+}
+
+export const CardDescription = (props: CardDescription.Props) => {
+  const { className, render, ...rest } = props;
   const { styles } = useCardContext();
-  return (
-    <CardUI.Description
-      {...props}
-      className={styles.description({ className: props.className })}
-    />
-  );
+  const renderElement = useRender({
+    defaultTagName: "p",
+    props: {
+      ...rest,
+      className: styles.description({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
-export const CardContent = (props: CardUI.Content) => {
+export namespace CardDescription {
+  export interface Props extends useRender.ComponentProps<"p"> {}
+}
+
+export const CardContent = (props: CardContent.Props) => {
+  const { className, render, ...rest } = props;
+  const { styles, surface } = useCardContext();
+
+  const finalClassName = useMemo(() => {
+    if (surface === "content") {
+      return styles.content({ className: cn(styles.surface({ className })) });
+    }
+    return styles.content({ className });
+  }, [styles, surface, className]);
+
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: finalClassName,
+    },
+    render,
+  });
+  return renderElement;
+};
+export namespace CardContent {
+  export interface Props extends useRender.ComponentProps<"div"> {}
+}
+
+export const CardFooter = (props: CardFooter.Props) => {
+  const { className, render, ...rest } = props;
   const { styles } = useCardContext();
-  return (
-    <CardUI.Content
-      {...props}
-      className={styles.content({ className: props.className })}
-    />
-  );
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: styles.footer({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
-export const CardFooter = (props: CardUI.Footer) => {
-  const { styles } = useCardContext();
-  return (
-    <CardUI.Footer
-      {...props}
-      className={styles.footer({ className: props.className })}
-    />
-  );
-};
+export namespace CardFooter {
+  export interface Props extends useRender.ComponentProps<"div"> {}
+}

@@ -1,19 +1,23 @@
 "use client";
 
-import { AlertDialog } from "jamsrui/alert-dialog";
-import { Button } from "jamsrui/button";
+import { AlertDialog } from "ui/alert-dialog";
+import { Button } from "ui/button";
 import { useState } from "react";
 
-export const AlertDialogControlled = () => {
+export const AlertDialogControlled = (props: AlertDialog.Props) => {
   const [open, setOpen] = useState(false);
   return (
     <div>
       <Button onClick={() => setOpen(true)}>Click to delete!</Button>
-      <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialog
+        open={open}
+        onOpenChange={setOpen}
+        {...props}
+      >
         <AlertDialog.Content>
           <AlertDialog.Title>Are you sure?</AlertDialog.Title>
           <AlertDialog.Description>
-            You won't be able to revert this!
+            You won&apos;t be able to revert this!
           </AlertDialog.Description>
           <AlertDialog.Footer>
             <AlertDialog.Cancel onClick={() => setOpen(false)}>

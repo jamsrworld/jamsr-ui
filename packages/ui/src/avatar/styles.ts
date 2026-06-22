@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const avatarStyles = tv({
   slots: {
-    root: "relative cursor-default group shrink-0 rounded-full bg-surface object-cover [&>img]:size-full [&>img]:object-cover",
+    root: "relative block cursor-default group shrink-0 rounded-full bg-surface object-cover [&>img]:size-full [&>img]:object-cover",
     img: "select-none group-data-[status=idle]:hidden group-data-[status=loading]:hidden rounded-inherit",
     fallback: "absolute inset-0 flex items-center justify-center font-medium",
     indicator:

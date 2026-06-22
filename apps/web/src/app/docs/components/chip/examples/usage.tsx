@@ -1,5 +1,7 @@
-import { Chip } from "jamsrui/chip";
+"use client";
 
-export const ChipUsage = () => {
-  return <Chip>Default</Chip>;
+import { Chip } from "ui/chip";
+
+export const ChipUsage = (props: Chip.Props) => {
+  return <Chip {...props}>Default</Chip>;
 };

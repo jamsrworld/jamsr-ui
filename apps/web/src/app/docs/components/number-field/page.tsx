@@ -1,7 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { NumberField } from "ui/number-field";
 import { NumberFieldControlled } from "./examples/controlled";
 import { NumberFieldUsage } from "./examples/usage";
 
@@ -14,18 +16,34 @@ export const metadata: Metadata = {
   description,
 };
 
-const NumberInput = () => {
+const numberFieldVariants: VariantOptions<NumberField.Variants> = {
+  variant: {
+    defaultValue: "solid",
+    options: ["bordered", "solid"],
+  },
+};
+
+const NumberFieldPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <NumberFieldUsage />
-      </CodeExample>
-      <CodeExample title="Controlled" url={resolvePath("controlled.tsx")}>
-        <NumberFieldControlled />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={numberFieldVariants}
+        component={NumberFieldUsage}
+      />
+      <CodeExampleV2
+        title="Controlled"
+        url={resolvePath("controlled.tsx")}
+        variants={numberFieldVariants}
+        component={NumberFieldControlled}
+      />
     </DocsPage>
   );
 };
 
-export default NumberInput;
+export default NumberFieldPage;

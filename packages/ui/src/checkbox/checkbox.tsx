@@ -4,9 +4,14 @@ import { createContext, use, useMemo } from "react";
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox-group";
-import { cn } from "tailwind-variants";
+import { mergeProps } from "react-aria/mergeProps";
+import { useFocusRing } from "react-aria/useFocusRing";
+import { useHover } from "react-aria/useHover";
+import { usePress } from "react-aria/usePress";
 
 import { checkboxStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -31,15 +36,35 @@ export const Checkbox = (props: Checkbox.Props) => {
     isInvalid,
     className,
     children = <CheckboxIndicator />,
+    variant,
+    disabled,
+    onClick,
     ...restProps
   } = props;
-  const styles = checkboxStyles({ size, radius, isInvalid });
+  const styles = checkboxStyles({ size, radius, variant });
   const value = useMemo(() => ({ styles }), [styles]);
+
+  const isDisabled = disabled;
+
+  const { isPressed, pressProps } = usePress({
+    isDisabled,
+    onClick(e) {
+      onClick?.(e as any);
+    },
+  });
+  const { isHovered, hoverProps } = useHover({ isDisabled });
+  const { isFocusVisible, focusProps, isFocused } = useFocusRing({});
   return (
     <CheckboxContext value={value}>
       <CheckboxPrimitive.Root
-        {...restProps}
+        data-focus-visible={dataAttr(isFocusVisible)}
+        data-focused={dataAttr(isFocused)}
+        data-hovered={dataAttr(isHovered)}
+        data-pressed={dataAttr(isPressed)}
+        disabled={isDisabled}
+        {...mergeProps(pressProps, hoverProps, focusProps, restProps)}
         className={styles.root({ className: cn(className) })}
+        data-invalid={dataAttr(isInvalid)}
       >
         {children}
       </CheckboxPrimitive.Root>
@@ -49,7 +74,9 @@ export const Checkbox = (props: Checkbox.Props) => {
 
 export namespace Checkbox {
   export interface Props
-    extends CheckboxPrimitive.Root.Props, CheckboxVariants {}
+    extends CheckboxPrimitive.Root.Props, CheckboxVariants {
+    isInvalid?: boolean;
+  }
 }
 
 export const CheckboxIndicator = (props: CheckboxPrimitive.Indicator.Props) => {
@@ -83,7 +110,11 @@ export const CheckboxGroupRoot = (props: CheckboxGroupPrimitive.Props) => {
   return (
     <CheckboxGroupPrimitive
       {...props}
-      className={cn("flex flex-col items-start gap-1", props.className)}
+      className={cn("flex flex-col items-start gap-2", props.className)}
     />
   );
 };
+
+export namespace CheckboxGroupRoot {
+  export interface Props extends CheckboxGroupPrimitive.Props {}
+}

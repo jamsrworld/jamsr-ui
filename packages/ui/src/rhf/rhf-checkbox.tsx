@@ -1,9 +1,8 @@
 "use client";
 
-import { dataAttr } from "@jamsrui/utils";
-
 import { useRHFContext } from "./rhf-context";
 import { Checkbox } from "../checkbox";
+import { dataAttr } from "../utils/attr";
 
 export const RHFCheckbox = (props: RHFCheckbox.Props) => {
   const { field, fieldState } = useRHFContext();

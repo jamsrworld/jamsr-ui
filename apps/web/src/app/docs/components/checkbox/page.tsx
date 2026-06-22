@@ -1,15 +1,15 @@
-import { CodeExample } from "@/components/code-example";
+import { Checkbox } from "ui/checkbox";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { VariantOptions } from "@/types";
 import { CheckboxControlled } from "./examples/controlled";
 import { CheckboxCustomIndicator } from "./examples/custom-indicator";
 import { CheckboxDescription } from "./examples/description";
 import { CheckboxDisabled } from "./examples/disabled";
 import { CheckboxIntermediate } from "./examples/intermediate";
 import { CheckboxInvalid } from "./examples/invalid";
-import { CheckboxRadius } from "./examples/radius";
-import { CheckboxSizes } from "./examples/sizes";
 import { CheckboxUsage } from "./examples/usage";
 
 const title = "Checkbox";
@@ -21,59 +21,72 @@ export const metadata: Metadata = {
   description,
 };
 
-const Checkbox = () => {
+const checkboxVariants: VariantOptions<Checkbox.Variants> = {
+  variant: {
+    options: ["bordered", "solid"],
+    defaultValue: "solid",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
+const CheckboxPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <CheckboxUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={checkboxVariants}
+        component={CheckboxUsage}
+      />
+      <CodeExampleV2
         title="Description"
         url={resolvePath("description.tsx")}
-      >
-        <CheckboxDescription />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={checkboxVariants}
+        component={CheckboxDescription}
+      />
+      <CodeExampleV2
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <CheckboxControlled />
-      </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
-        <CheckboxSizes />
-      </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
-        <CheckboxRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={checkboxVariants}
+        component={CheckboxControlled}
+      />
+      <CodeExampleV2
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-      >
-        <CheckboxDisabled />
-      </CodeExample>
-      <CodeExample isCentered title="Invalid" url={resolvePath("invalid.tsx")}>
-        <CheckboxInvalid />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={checkboxVariants}
+        component={CheckboxDisabled}
+      />
+      <CodeExampleV2
+        title="Invalid"
+        url={resolvePath("invalid.tsx")}
+        variants={checkboxVariants}
+        component={CheckboxInvalid}
+      />
+      <CodeExampleV2
         title="Intermediate"
         url={resolvePath("intermediate.tsx")}
-      >
-        <CheckboxIntermediate />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={checkboxVariants}
+        component={CheckboxIntermediate}
+      />
+      <CodeExampleV2
         title="Custom Indicator"
         url={resolvePath("custom-indicator.tsx")}
-      >
-        <CheckboxCustomIndicator />
-      </CodeExample>
+        variants={checkboxVariants}
+        component={CheckboxCustomIndicator}
+      />
     </DocsPage>
   );
 };
 
-export default Checkbox;
+export default CheckboxPage;

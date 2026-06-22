@@ -1,11 +1,16 @@
-import { Input } from "jamsrui/input";
-import { Field } from "jamsrui/field";
+"use client";
 
-export const InputWithLabel = () => {
+import { Input } from "ui/input";
+import { Field } from "ui/field";
+
+export const InputWithLabel = (props: Input.Variants) => {
   return (
     <Field>
       <Field.Label>Username</Field.Label>
-      <Input placeholder="Enter your username" />
+      <Input
+        {...props}
+        placeholder="Enter your username"
+      />
     </Field>
   );
 };

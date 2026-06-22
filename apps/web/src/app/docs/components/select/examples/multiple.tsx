@@ -1,7 +1,8 @@
 "use client";
 
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
+import { Field } from "ui/field";
+import { Select } from "ui/select";
+import React from "react";
 
 const languages = {
   javascript: "JavaScript",
@@ -29,28 +30,37 @@ function renderValue(value: Language[]) {
   return firstLanguage + additionalLanguages;
 }
 
-export const SelectMultiple = () => {
+export const SelectMultiple = (props: Partial<Select.Props>) => {
+  const { multiple = true, ...rest } = props;
   return (
-    <Select multiple>
-      <Label>Fruit</Label>
-      <Select.Trigger className="min-w-80">
-        <Select.Value>
-          {(value) => {
-            return renderValue(value);
-          }}
-        </Select.Value>
-        <Select.Icon />
-      </Select.Trigger>
-      <Select.Content>
-        {values.map((value) => {
-          return (
-            <Select.Item key={value} value={value}>
-              <Select.ItemIndicator />
-              <Select.ItemText>{languages[value]}</Select.ItemText>
-            </Select.Item>
-          );
-        })}
-      </Select.Content>
-    </Select>
+    <Field>
+      <Field.Label>Language</Field.Label>
+      <Select
+        multiple={multiple}
+        {...rest}
+      >
+        <Select.Trigger className="min-w-80">
+          <Select.Value>
+            {(value) => {
+              return renderValue(value as Language[]);
+            }}
+          </Select.Value>
+          <Select.Icon />
+        </Select.Trigger>
+        <Select.Content>
+          {values.map((value) => {
+            return (
+              <Select.Item
+                key={value}
+                value={value}
+              >
+                <Select.ItemIndicator />
+                <Select.ItemText>{languages[value]}</Select.ItemText>
+              </Select.Item>
+            );
+          })}
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };

@@ -1,7 +1,8 @@
 "use client";
 
-import { Avatar } from "jamsrui/avatar";
-import { Select } from "jamsrui/select";
+import { Avatar } from "ui/avatar";
+import { Select } from "ui/select";
+import React from "react";
 
 const users = [
   {
@@ -212,8 +213,14 @@ function renderValue(value?: string) {
   if (!selectedUser) return "Select a user";
   return (
     <div className="flex items-center gap-2">
-      <Avatar className="shrink-0" size="sm">
-        <Avatar.Image src={selectedUser.avatar} alt={selectedUser.name} />
+      <Avatar
+        className="shrink-0"
+        size="sm"
+      >
+        <Avatar.Image
+          src={selectedUser.avatar}
+          alt={selectedUser.name}
+        />
         <Avatar.Fallback>{selectedUser.name.charAt(0)}</Avatar.Fallback>
       </Avatar>
       <div className="flex flex-col">
@@ -226,9 +233,13 @@ function renderValue(value?: string) {
   );
 }
 
-export const SelectCustomRenderValue = () => {
+export const SelectCustomRenderValue = (props: Partial<Select.Props>) => {
+  const { size = "lg", ...rest } = props;
   return (
-    <Select size="lg">
+    <Select
+      size={size}
+      {...rest}
+    >
       <Select.Trigger className="min-w-40">
         <Select.Value placeholder="Select a user">
           {(value) => {
@@ -240,12 +251,21 @@ export const SelectCustomRenderValue = () => {
       <Select.Content>
         {users.map((user) => {
           return (
-            <Select.Item key={user.id} value={user.email}>
+            <Select.Item
+              key={user.id}
+              value={user.email}
+            >
               <Select.ItemIndicator />
               <Select.ItemText>
                 <div className="flex items-center gap-2">
-                  <Avatar className="shrink-0" size="sm">
-                    <Avatar.Image src={user.avatar} alt={user.name} />
+                  <Avatar
+                    className="shrink-0"
+                    size="sm"
+                  >
+                    <Avatar.Image
+                      src={user.avatar}
+                      alt={user.name}
+                    />
                     <Avatar.Fallback>{user.name.charAt(0)}</Avatar.Fallback>
                   </Avatar>
                   <div className="flex flex-col">

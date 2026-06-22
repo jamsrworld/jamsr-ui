@@ -6,14 +6,14 @@ export const sidebarStyles = tv({
   slots: {
     wrapper: "group/sidebar-wrapper flex min-h-svh w-full",
     sidebar: [
-      "group w-(--width) group-data-[state=collapsed]/sidebar-wrapper:w-0",
+      "group w-(--sidebar-width) group-data-[state=collapsed]/sidebar-wrapper:w-0",
       "duration-300 ease-out transition-[width]",
     ],
     container: [
       "group fixed flex z-10 h-dvh max-h-dvh flex-col",
       "transition-[left] duration-300 ease-out",
-      "w-(--width) left-0",
-      "group-data-[state=collapsed]:left-[calc((var(--width))*-1)]",
+      "w-(--sidebar-width) left-0",
+      "group-data-[state=collapsed]:left-[calc((var(--sidebar-width))*-1)]",
     ],
     header: "py-2 px-4",
     content: "flex h-full flex-col bg-surface",
@@ -24,10 +24,15 @@ export const sidebarStyles = tv({
     menuItem: "",
     footer: "py-2 px-4",
     menuItemButton: [
-      "flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm data-hovered:bg-surface-secondary",
+      "flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-surface-secondary",
       "disabled:status-disabled",
     ],
-    inset: "relative w-full flex-1 flex-col",
+    inset: [
+      "relative flex-1 flex-col",
+      "w-full",
+      "md:group-data-[state=expanded]/sidebar-wrapper:w-[calc(100%-var(--sidebar-width))]",
+      "duration-300 ease-out transition-[width,translate]",
+    ],
     backdrop: [
       "inset-0 -z-10 fixed bg-black/30 backdrop-blur-md backdrop-saturate-150",
     ],

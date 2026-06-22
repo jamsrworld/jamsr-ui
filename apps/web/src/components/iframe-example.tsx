@@ -1,5 +1,5 @@
-import { IconButton } from "jamsrui/icon-button";
-import { Tooltip } from "jamsrui/tooltip";
+import { IconButton } from "ui/icon-button";
+import { Tooltip } from "ui/tooltip";
 import { type Route } from "next";
 
 type Props = {
@@ -13,7 +13,13 @@ export const IFrameExample = (props: Props) => {
       <Tooltip>
         <Tooltip.Trigger>
           <IconButton
-            render={<a href={src} target="_blank" rel="noreferrer" />}
+            render={
+              <a
+                href={src}
+                target="_blank"
+                rel="noreferrer"
+              />
+            }
             label="Open In New Tab"
             className="absolute right-0 top-0 text-foreground-secondary"
             variant="bordered"
@@ -23,7 +29,11 @@ export const IFrameExample = (props: Props) => {
         </Tooltip.Trigger>
         <Tooltip.Content>Open In New Tab</Tooltip.Content>
       </Tooltip>
-      <iframe src={src} title="Header default" className="h-125 w-full" />
+      <iframe
+        src={src}
+        title="Header default"
+        className="h-125 w-full"
+      />
     </div>
   );
 };

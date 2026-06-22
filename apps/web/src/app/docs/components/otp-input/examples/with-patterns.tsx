@@ -1,16 +1,18 @@
-import { Label } from "jamsrui/label";
-import {
-  OtpInput,
-  REGEXP_ONLY_CHARS,
-  REGEXP_ONLY_DIGITS,
-} from "jamsrui/otp-input";
+"use client";
 
-export const OtpInputWithPatterns = () => {
+import { Label } from "ui/label";
+import { OtpInput, REGEXP_ONLY_CHARS, REGEXP_ONLY_DIGITS } from "ui/otp-input";
+
+export const OtpInputWithPatterns = (props: Partial<OtpInput.Props>) => {
   return (
     <div className="flex flex-col gap-8">
       <div>
         <Label>Only digits</Label>
-        <OtpInput maxLength={4} pattern={REGEXP_ONLY_DIGITS}>
+        <OtpInput
+          maxLength={4}
+          pattern={REGEXP_ONLY_DIGITS}
+          {...props}
+        >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />
             <OtpInput.Slot index={1} />
@@ -21,7 +23,11 @@ export const OtpInputWithPatterns = () => {
       </div>
       <div>
         <Label>Only characters</Label>
-        <OtpInput maxLength={4} pattern={REGEXP_ONLY_CHARS}>
+        <OtpInput
+          maxLength={4}
+          pattern={REGEXP_ONLY_CHARS}
+          {...props}
+        >
           <OtpInput.Group>
             <OtpInput.Slot index={0} />
             <OtpInput.Slot index={1} />

@@ -1,20 +1,19 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { TextareaControlled } from "./examples/controlled";
-import { TextareaDisabled } from "./examples/disabled";
-import { TextareaErrorState } from "./examples/error-state";
-import { TextareaPrefixSuffix } from "./examples/prefix-suffix";
-import { TextareaRadius } from "./examples/radius";
-import { TextareaSizes } from "./examples/sizes";
-import { TextareaUsage } from "./examples/usage";
-import { TextareaVariants } from "./examples/variants";
-import { TextareaWithDescription } from "./examples/with-description";
-import { TextareaWithIcon } from "./examples/with-icon";
-import { TextareaWithLabel } from "./examples/with-label";
+import { TextAreaControlled } from "./examples/controlled";
+import { TextAreaDisabled } from "./examples/disabled";
+import { TextAreaErrorState } from "./examples/error-state";
+import { TextAreaPrefixSuffix } from "./examples/prefix-suffix";
+import { TextAreaUsage } from "./examples/usage";
+import { TextAreaWithDescription } from "./examples/with-description";
+import { TextAreaWithIcon } from "./examples/with-icon";
+import { TextAreaWithLabel } from "./examples/with-label";
+import { VariantOptions } from "@/types";
+import { TextArea } from "ui/textarea";
 
-const title = "Textarea";
+const title = "TextArea";
 const description =
   "A form element that allows users to textarea and submit data, supporting various types such as text, numbers, and more for seamless data entry.";
 
@@ -23,77 +22,78 @@ export const metadata: Metadata = {
   description,
 };
 
-const Textarea = () => {
+const TextAreaVariants: VariantOptions<TextArea.Variants> = {
+  variant: {
+    options: ["solid", "bordered"],
+    defaultValue: "solid",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "full"],
+    defaultValue: "md",
+  },
+};
+
+const TextAreaPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <TextareaUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={TextAreaVariants}
+        component={TextAreaUsage}
+      />
+      <CodeExampleV2
         title="With Label"
         url={resolvePath("with-label.tsx")}
-      >
-        <TextareaWithLabel />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={TextAreaVariants}
+        component={TextAreaWithLabel}
+      />
+      <CodeExampleV2
         title="With Description"
         url={resolvePath("with-description.tsx")}
-      >
-        <TextareaWithDescription />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={TextAreaVariants}
+        component={TextAreaWithDescription}
+      />
+      <CodeExampleV2
         title="Controlled"
         url={resolvePath("controlled.tsx")}
-      >
-        <TextareaControlled />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants"
-        url={resolvePath("variants.tsx")}
-      >
-        <TextareaVariants />
-      </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
-        <TextareaSizes />
-      </CodeExample>
-      <CodeExample isCentered title="Radius" url={resolvePath("radius.tsx")}>
-        <TextareaRadius />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={TextAreaVariants}
+        component={TextAreaControlled}
+      />
+      <CodeExampleV2
         title="Error State"
         url={resolvePath("error-state.tsx")}
-      >
-        <TextareaErrorState />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={TextAreaVariants}
+        component={TextAreaErrorState}
+      />
+      <CodeExampleV2
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-      >
-        <TextareaDisabled />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={TextAreaVariants}
+        component={TextAreaDisabled}
+      />
+      <CodeExampleV2
         title="Prefix & Suffix"
         url={resolvePath("prefix-suffix.tsx")}
-      >
-        <TextareaPrefixSuffix />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={TextAreaVariants}
+        component={TextAreaPrefixSuffix}
+      />
+      <CodeExampleV2
         title="With Icon"
         url={resolvePath("with-icon.tsx")}
-      >
-        <TextareaWithIcon />
-      </CodeExample>
+        variants={TextAreaVariants}
+        component={TextAreaWithIcon}
+      />
     </DocsPage>
   );
 };
 
-export default Textarea;
+export default TextAreaPage;

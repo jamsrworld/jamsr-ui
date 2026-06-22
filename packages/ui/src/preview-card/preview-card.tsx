@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui/react/preview-card";
-import { cn } from "tailwind-variants";
 
 import { previewCardStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { PreviewCardVariants } from "./styles";
 
@@ -38,12 +38,15 @@ export const PreviewCard = (props: PreviewCard.Props) => {
 };
 
 export namespace PreviewCard {
-  export interface Props extends PreviewCardPrimitive.Root.Props, PreviewCardVariants {
+  export interface Props
+    extends PreviewCardPrimitive.Root.Props, PreviewCardVariants {
     showArrow?: boolean;
   }
 }
 
-export const PreviewCardTrigger = (props: PreviewCardPrimitive.Trigger.Props) => {
+export const PreviewCardTrigger = (
+  props: PreviewCardPrimitive.Trigger.Props,
+) => {
   return <PreviewCardPrimitive.Trigger {...props} />;
 };
 

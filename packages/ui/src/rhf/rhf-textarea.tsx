@@ -1,20 +1,19 @@
 "use client";
 
-import { dataAttr } from "@jamsrui/utils";
-
 import { useRHFContext } from "./rhf-context";
-import { Textarea } from "../textarea";
+import { TextArea } from "../textarea";
+import { dataAttr } from "../utils/attr";
 
-export const RHFTextarea = (props: RHFTextarea.Props) => {
+export const RHFTextArea = (props: RHFTextArea.Props) => {
   const { field, fieldState } = useRHFContext();
   const { value, onChange, onBlur, name, ref, disabled } = field;
   const { invalid } = fieldState;
   return (
-    <Textarea
+    <TextArea
       ref={ref}
       data-invalid={dataAttr(invalid)}
       disabled={disabled}
-      // isInvalid={invalid}
+      isInvalid={invalid}
       name={name}
       onBlur={onBlur}
       onValueChange={onChange}
@@ -24,6 +23,6 @@ export const RHFTextarea = (props: RHFTextarea.Props) => {
   );
 };
 
-export namespace RHFTextarea {
-  export interface Props extends Textarea.Props {}
+export namespace RHFTextArea {
+  export interface Props extends TextArea.Props {}
 }

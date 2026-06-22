@@ -2,10 +2,10 @@
 
 import { faker } from "@faker-js/faker";
 import type { ColumnDef } from "@tanstack/react-table";
-import { Avatar } from "jamsrui/avatar";
-import { Chip } from "jamsrui/chip";
-import { DataGrid } from "jamsrui/data-grid";
-import { Text } from "jamsrui/text";
+import { Avatar } from "ui/avatar";
+import { Chip } from "ui/chip";
+import { DataGrid } from "ui/data-grid";
+import { Text } from "ui/text";
 
 type User = {
   userId: string;
@@ -99,7 +99,10 @@ export const COLUMNS = [
           </Avatar>
           <div className="flex flex-col gap-1">
             <Text>{original.fullName.slice(0, 40)}</Text>
-            <Text variant="caption" className="text-foreground-secondary">
+            <Text
+              variant="caption"
+              className="text-foreground-secondary"
+            >
               {original.username}
             </Text>
           </div>
@@ -118,7 +121,10 @@ export const COLUMNS = [
       return (
         <div>
           <Text>{country}</Text>
-          <Text className="text-foreground-secondary" variant="caption">
+          <Text
+            className="text-foreground-secondary"
+            variant="caption"
+          >
             {city}
           </Text>
         </div>
@@ -135,7 +141,10 @@ export const COLUMNS = [
   {
     accessorKey: "status",
     header: ({ header }) => (
-      <DataGrid.HeaderColumn header={header} hideDropdown>
+      <DataGrid.HeaderColumn
+        header={header}
+        hideDropdown
+      >
         Status
       </DataGrid.HeaderColumn>
     ),

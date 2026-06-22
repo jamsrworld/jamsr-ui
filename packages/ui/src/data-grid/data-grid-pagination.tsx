@@ -1,21 +1,20 @@
 "use client";
+
 import { useState } from "react";
 
-import { useRenderElement } from "@jamsrui/hooks";
+import { useRender } from "@base-ui/react/use-render";
+
+import { Field } from "../field";
+import { IconButton } from "../icon-button";
 import {
   ChevronDoubleLeftIcon,
   ChevronDoubleRightIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-} from "@jamsrui/icons";
-import { cn } from "@jamsrui/utils";
-
-import { IconButton } from "../icon-button";
-import { Label } from "../label";
+} from "../icons";
 import { Select } from "../select";
 import { useDataGridContext } from "./data-grid-context";
-
-import type { UIProps } from "@jamsrui/utils";
+import { cn } from "../utils/cn";
 
 export const DataGridPaginationSelector = () => {
   const { table } = useDataGridContext();
@@ -29,23 +28,28 @@ export const DataGridPaginationSelector = () => {
     setValue(value);
   };
   return (
-    <Select
-      className="flex flex-row items-center gap-2"
-      data-slot="pagination-selector"
-      onValueChange={onValueChange}
-      size="sm"
-      value={value}
-    >
-      <Label>Rows Per Page:</Label>
-      <Select.Trigger className="px-1" />
-      <Select.Content>
-        {[10, 20, 50, 100, 500].map((pageSize) => (
-          <Select.Item key={pageSize.toString()} value={pageSize}>
-            {pageSize.toString()}
-          </Select.Item>
-        ))}
-      </Select.Content>
-    </Select>
+    <Field className="grow" orientation="horizontal">
+      <Field.Label className="whitespace-nowrap hidden sm:grid sm:place-content-center">
+        Rows Per Page:
+      </Field.Label>
+      <Select
+        className="flex flex-row items-center gap-2"
+        data-slot="pagination-selector"
+        onValueChange={onValueChange}
+        size="sm"
+        value={value}
+      >
+        <Select.Trigger className="px-1 max-w-14" />
+        <Select.Content>
+          {[10, 20, 50, 100, 500].map((pageSize) => (
+            <Select.Item key={pageSize.toString()} value={pageSize}>
+              <Select.ItemIndicator />
+              <Select.ItemText>{pageSize.toString()}</Select.ItemText>
+            </Select.Item>
+          ))}
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };
 
@@ -128,7 +132,7 @@ export const DataGridPaginationControls = (
 };
 
 export namespace DataGridPaginationControls {
-  export interface Props extends UIProps<"div"> {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }
 
 export const DataGridPagination = (props: DataGridPagination.Props) => {
@@ -141,24 +145,27 @@ export const DataGridPagination = (props: DataGridPagination.Props) => {
         <DataGridPaginationControls />
       </>
     ),
+    render,
     ...restProps
   } = props;
 
-  const renderElement = useRenderElement("div", {
-    props: [
-      {
-        className:
-          "flex flex-col w-full justify-between gap-4 md:flex-row md:items-center mt-2",
-        "data-slot": "pagination",
-        children,
-      },
-      restProps,
-    ],
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...restProps,
+      className: cn(
+        "flex w-full justify-between gap-4 items-center mt-2",
+        restProps.className,
+      ),
+      "data-slot": "pagination",
+      children,
+    },
+    render,
   });
   if (isEmpty) return null;
   return <>{renderElement}</>;
 };
 
 export namespace DataGridPagination {
-  export interface Props extends UIProps<"div"> {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }

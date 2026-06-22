@@ -1,5 +1,15 @@
-import { Clipboard } from "jamsrui/clipboard";
+"use client";
 
-export const ClipboardWithoutIcon = () => {
-  return <Clipboard text="Hello world!">Click me to copy text</Clipboard>;
+import { Clipboard } from "ui/clipboard";
+
+export const ClipboardWithoutIcon = (props: Clipboard.Props) => {
+  const { text = "Hello world!", ...rest } = props;
+  return (
+    <Clipboard
+      text={text}
+      {...rest}
+    >
+      Click me to copy text
+    </Clipboard>
+  );
 };

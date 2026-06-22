@@ -11,6 +11,10 @@ import {
   CommandShortcut,
 } from "./command";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { commandStyles } from "./styles";
+
 export const Command = Object.assign(CommandRoot, {
   Input: CommandInput,
   List: CommandList,
@@ -24,6 +28,7 @@ export const Command = Object.assign(CommandRoot, {
 });
 
 export namespace Command {
+  export type Variants = VariantProps<typeof commandStyles>;
   export interface Props extends CommandRoot.Props {}
   export interface Input extends CommandInput.Props {}
   export interface List extends CommandList.Props {}

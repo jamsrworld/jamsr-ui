@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Slider as SliderPrimitive } from "@base-ui/react/slider";
-import { cn } from "tailwind-variants";
 
 import { sliderStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -24,8 +24,8 @@ const useSliderContext = () => {
 };
 
 export const Slider = (props: Slider.Props) => {
-  const { orientation, isDisabled, className, ...rest } = props;
-  const styles = sliderStyles({ orientation, isDisabled });
+  const { orientation, className, ...rest } = props;
+  const styles = sliderStyles({ orientation });
   const value = useMemo(() => ({ styles }), [styles]);
   return (
     <SliderContext value={value}>

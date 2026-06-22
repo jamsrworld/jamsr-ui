@@ -1,7 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
+import { Separator } from "ui/separator";
 import { SeparatorUsage } from "./examples/usage";
 
 const title = "Separator";
@@ -13,15 +15,28 @@ export const metadata: Metadata = {
   description,
 };
 
-const Separator = () => {
+const separatorVariants: VariantOptions<Separator.Variants> = {
+  variant: {
+    options: ["default", "light", "dark"],
+    defaultValue: "default",
+  },
+};
+
+const SeparatorPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <SeparatorUsage />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={separatorVariants}
+        component={SeparatorUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Separator;
+export default SeparatorPage;

@@ -1,33 +1,21 @@
 "use client";
 
-import { CloseIcon } from "@jamsrui/icons";
-import { Description } from "jamsrui/description";
-import { IconButton } from "jamsrui/icon-button";
-import { InputGroup } from "jamsrui/input-group";
-import { Textarea } from "jamsrui/textarea";
-import { Field } from "jamsrui/field";
+import { Description } from "ui/description";
+import { Field } from "ui/field";
+import { type Input } from "ui/input";
+import { InputGroup } from "ui/input-group";
 import { useState } from "react";
 
-export const TextareaControlled = () => {
+export const TextAreaControlled = (props: Input.Variants) => {
   const [value, setValue] = useState("");
-  const onClear = () => setValue("");
-  const hasValue = value.length > 0;
   return (
     <Field className="max-w-62 w-full">
       <Field.Label>Name</Field.Label>
-      <InputGroup>
-        <Textarea value={value} onValueChange={setValue} />
-        {hasValue && (
-          <IconButton
-            variant="light"
-            radius="full"
-            size="sm"
-            label="Clear"
-            onClick={onClear}
-          >
-            <CloseIcon className="size-4 text-foreground-secondary" />
-          </IconButton>
-        )}
+      <InputGroup {...props}>
+        <InputGroup.TextArea
+          value={value}
+          onValueChange={setValue}
+        />
       </InputGroup>
       <Description>Your name is: {value}</Description>
     </Field>

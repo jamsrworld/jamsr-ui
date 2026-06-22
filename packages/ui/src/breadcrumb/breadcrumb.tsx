@@ -1,46 +1,60 @@
-import { Breadcrumb as BreadcrumbUI } from "@jamsrui/react";
+import { useRender } from "@base-ui/react/use-render";
 
 import { breadcrumbStyles } from "./styles";
 
 const styles = breadcrumbStyles();
 
 export const BreadcrumbItem = (props: BreadcrumbItem.Props) => {
-  const { isCurrent, className, ...rest } = props;
-  return (
-    <BreadcrumbUI.Item
-      {...rest}
-      className={
-        isCurrent ? styles.current({ className }) : styles.item({ className })
-      }
-    />
-  );
+  const { isCurrent, className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: isCurrent
+        ? styles.current({ className })
+        : styles.item({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
 export const BreadcrumbSeparator = (props: BreadcrumbSeparator.Props) => {
-  const { className, ...rest } = props;
-  return (
-    <BreadcrumbUI.Separator
-      {...rest}
-      className={styles.separator({ className })}
-    />
-  );
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: styles.separator({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
 export const Breadcrumb = (props: Breadcrumb.Props) => {
-  const { className, ...rest } = props;
-  return <BreadcrumbUI {...rest} className={styles.root({ className })} />;
+  const { className, render, ...rest } = props;
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: styles.root({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
 export namespace Breadcrumb {
-  export interface Props extends BreadcrumbUI.Props {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }
 
 export namespace BreadcrumbItem {
-  export interface Props extends BreadcrumbUI.Item {
+  export interface Props extends useRender.ComponentProps<"div"> {
     isCurrent?: boolean;
   }
 }
 
 export namespace BreadcrumbSeparator {
-  export interface Props extends BreadcrumbUI.Separator {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }

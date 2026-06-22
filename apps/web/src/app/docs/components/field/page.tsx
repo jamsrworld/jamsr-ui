@@ -1,6 +1,8 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
+import { VariantOptions } from "@/types";
 import { readMetaUrl } from "@/utils/code";
+import { Field } from "ui/field";
 import { Metadata } from "next";
 import { FieldUsage } from "./examples/usage";
 
@@ -13,15 +15,28 @@ export const metadata: Metadata = {
   description,
 };
 
-const Input = () => {
+const fieldVariants: VariantOptions<Field.Variants> = {
+  orientation: {
+    options: ["vertical", "horizontal"],
+    defaultValue: "vertical",
+  },
+};
+
+const FieldPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <FieldUsage />
-      </CodeExample>
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={fieldVariants}
+        component={FieldUsage}
+      />
     </DocsPage>
   );
 };
 
-export default Input;
+export default FieldPage;

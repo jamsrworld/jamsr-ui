@@ -1,8 +1,8 @@
 "use client";
 
-import { Field } from "jamsrui/field";
-import { Label } from "jamsrui/label";
-import { Radio, RadioGroup } from "jamsrui/radio-group";
+import { Field } from "ui/field";
+import { Label } from "ui/label";
+import { Radio, RadioGroup } from "ui/radio-group";
 import { useState } from "react";
 
 enum Gender {
@@ -10,18 +10,22 @@ enum Gender {
   FEMALE = 2,
 }
 
-export const RadioNumberUsage = () => {
+export const RadioNumberUsage = (props: Partial<RadioGroup.Props>) => {
   const [gender, setGender] = useState<Gender>(Gender.MALE);
   return (
-    <RadioGroup value={gender} onValueChange={setGender}>
-      <Label>Select your favorite city</Label>
+    <RadioGroup
+      value={gender}
+      onValueChange={setGender}
+      {...props}
+    >
+      <Label>Select Gender</Label>
       <Field orientation="horizontal">
         <Radio value={Gender.MALE} />
-        <Field.Label>Buenos Aires</Field.Label>
+        <Field.Label>Male</Field.Label>
       </Field>
       <Field orientation="horizontal">
         <Radio value={Gender.FEMALE} />
-        <Field.Label>Sydney</Field.Label>
+        <Field.Label>Female</Field.Label>
       </Field>
     </RadioGroup>
   );

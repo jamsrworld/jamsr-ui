@@ -9,6 +9,10 @@ import {
   AlertDialogTrigger,
 } from "./alert-dialog";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { alertDialogStyles } from "./styles";
+
 export const AlertDialog = Object.assign(AlertDialogRoot, {
   Trigger: AlertDialogTrigger,
   Content: AlertDialogContent,
@@ -20,5 +24,6 @@ export const AlertDialog = Object.assign(AlertDialogRoot, {
 });
 
 export namespace AlertDialog {
+  export type Variants = VariantProps<typeof alertDialogStyles>;
   export interface Props extends AlertDialogRoot.Props {}
 }

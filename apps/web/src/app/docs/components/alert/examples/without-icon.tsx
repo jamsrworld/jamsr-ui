@@ -1,17 +1,13 @@
-import { Alert } from "jamsrui/alert";
+"use client";
 
-export const AlertWithoutIcon = () => {
+import { Alert } from "ui/alert";
+
+export const AlertWithoutIcon = (props: Alert.Props) => {
   return (
-    <div className="flex flex-col gap-4">
-      <Alert status="warning">
-        <Alert.Content>This is a warning message.</Alert.Content>
-      </Alert>
-      <Alert status="info">
-        <Alert.Content>This is an info message.</Alert.Content>
-      </Alert>
-      <Alert status="success">
-        <Alert.Content>This is an success message.</Alert.Content>
-      </Alert>
-    </div>
+    <Alert {...props}>
+      <Alert.Content>
+        This is a notification message without an icon.
+      </Alert.Content>
+    </Alert>
   );
 };

@@ -1,17 +1,19 @@
-import { AlertDialog } from "jamsrui/alert-dialog";
-import { Button } from "jamsrui/button";
-import { Separator } from "jamsrui/separator";
+"use client";
 
-export const AlertDialogCustomized = () => {
+import { AlertDialog } from "ui/alert-dialog";
+import { Button } from "ui/button";
+import { Separator } from "ui/separator";
+
+export const AlertDialogCustomized = (props: AlertDialog.Props) => {
   return (
-    <AlertDialog>
+    <AlertDialog {...props}>
       <AlertDialog.Trigger render={<Button>Click to delete!</Button>} />
       <AlertDialog.Content className="max-w-xs items-center p-0 text-center">
         <div className="p-4 gap-4 flex flex-col">
           <AlertDialog.Title>Warning!</AlertDialog.Title>
           <AlertDialog.Description>
-            Are you sure you want to delete this? You won't be able to revert
-            this!
+            Are you sure you want to delete this? You won&apos;t be able to
+            revert this!
           </AlertDialog.Description>
         </div>
         <Separator />

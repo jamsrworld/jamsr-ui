@@ -15,11 +15,30 @@ import {
   SidebarStateProvider,
   SidebarToggle,
   SidebarWrapper,
-  useSidebarContext,
   useSidebarState,
 } from "./sidebar";
 
-export const Sidebar = Object.assign(SidebarRoot, {
+import type { VariantProps } from "tailwind-variants";
+
+import type { sidebarStyles } from "./styles";
+
+export const Sidebar: typeof SidebarRoot & {
+  Backdrop: typeof SidebarBackdrop;
+  Body: typeof SidebarBody;
+  Container: typeof SidebarContainer;
+  Content: typeof SidebarContent;
+  Footer: typeof SidebarFooter;
+  Group: typeof SidebarGroup;
+  GroupLabel: typeof SidebarGroupLabel;
+  Header: typeof SidebarHeader;
+  Inset: typeof SidebarInset;
+  Menu: typeof SidebarMenu;
+  MenuItem: typeof SidebarMenuItem;
+  MenuItemButton: typeof SidebarMenuItemButton;
+  StateProvider: typeof SidebarStateProvider;
+  Toggle: typeof SidebarToggle;
+  Wrapper: typeof SidebarWrapper;
+} = Object.assign(SidebarRoot, {
   Backdrop: SidebarBackdrop,
   Body: SidebarBody,
   Container: SidebarContainer,
@@ -38,7 +57,8 @@ export const Sidebar = Object.assign(SidebarRoot, {
 });
 
 export namespace Sidebar {
-  export interface Props extends SidebarRoot.Props {}
+  export type Variants = VariantProps<typeof sidebarStyles>;
+  export interface Props extends React.ComponentProps<typeof SidebarRoot> {}
   export interface Backdrop extends SidebarBackdrop.Props {}
   export interface Body extends SidebarBody.Props {}
   export interface Container extends SidebarContainer.Props {}
@@ -72,6 +92,5 @@ export {
   SidebarStateProvider,
   SidebarToggle,
   SidebarWrapper,
-  useSidebarContext,
   useSidebarState,
 };

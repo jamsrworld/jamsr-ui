@@ -11,20 +11,23 @@ import {
 } from "input-otp";
 
 import { otpInputStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
 
 import type { OTPInputProps, SlotProps } from "input-otp";
 import type { VariantProps } from "tailwind-variants";
 
 type OtpInputVariants = VariantProps<typeof otpInputStyles>;
 
-const OtpInputStyleContext = createContext<{
+const OtpInputContext = createContext<{
   styles: ReturnType<typeof otpInputStyles>;
+  isDisabled?: boolean;
+  isInvalid?: boolean;
 } | null>(null);
 
-const useOtpInputStyleContext = () => {
-  const ctx = use(OtpInputStyleContext);
+const useOtpInputContext = () => {
+  const ctx = use(OtpInputContext);
   if (!ctx) {
-    throw new Error("useOtpInputStyleContext must be used within an OtpInput");
+    throw new Error("useOtpInputContext must be used within an OtpInput");
   }
   return ctx;
 };
@@ -44,31 +47,34 @@ export const OtpInput = (props: OtpInputRootProps) => {
   const {
     radius,
     size,
-    isInvalid,
     containerClassName,
     onValueChange,
     onChange,
     disabled,
     children,
     ref,
+    variant,
+    isInvalid,
+    className,
     ...rest
   } = props;
-  const styles = otpInputStyles({ radius, size });
-  const ctxValue = useMemo(() => ({ styles }), [styles]);
+  const styles = otpInputStyles({ variant, radius, size });
+  const ctxValue = useMemo(
+    () => ({ styles, isDisabled: disabled, isInvalid }),
+    [disabled, isInvalid, styles],
+  );
 
-  const rootClassName = [
-    styles.root({ className: containerClassName }),
-    isInvalid ? "group" : "",
-  ]
-    .filter(Boolean)
-    .join(" ");
+  const rootClassName = styles.root({ className: containerClassName });
+  const inputClassName = styles.input({ className });
 
   return (
-    <OtpInputStyleContext value={ctxValue}>
+    <OtpInputContext value={ctxValue}>
       <OTPInput
         {...rest}
         ref={ref}
+        className={inputClassName}
         containerClassName={rootClassName}
+        data-disabled={dataAttr(disabled)}
         disabled={disabled}
         onChange={(newValue) => {
           onChange?.(newValue);
@@ -77,7 +83,7 @@ export const OtpInput = (props: OtpInputRootProps) => {
       >
         {children}
       </OTPInput>
-    </OtpInputStyleContext>
+    </OtpInputContext>
   );
 };
 
@@ -86,7 +92,7 @@ export namespace OtpInput {
 }
 
 export const OtpInputGroup = (props: OtpInputGroup.Props) => {
-  const { styles } = useOtpInputStyleContext();
+  const { styles } = useOtpInputContext();
   const { className, ...rest } = props;
   return <div {...rest} className={styles.group({ className })} />;
 };
@@ -97,7 +103,7 @@ export namespace OtpInputGroup {
 
 const SlotContent = (props: SlotProps) => {
   const { char, isActive, placeholderChar, hasFakeCaret } = props;
-  const { styles } = useOtpInputStyleContext();
+  const { styles } = useOtpInputContext();
   if (char) return char;
   if (placeholderChar) return placeholderChar;
   if (hasFakeCaret || isActive) {
@@ -107,7 +113,7 @@ const SlotContent = (props: SlotProps) => {
 };
 
 export const OtpInputSlot = (props: OtpInputSlot.Props) => {
-  const { styles } = useOtpInputStyleContext();
+  const { styles, isDisabled, isInvalid } = useOtpInputContext();
   const { index, className, ...rest } = props;
   const inputContext = use(OTPInputContext);
   const slot = inputContext.slots[index];
@@ -117,7 +123,9 @@ export const OtpInputSlot = (props: OtpInputSlot.Props) => {
     <div
       {...rest}
       className={styles.slot({ className })}
-      data-active={slot.isActive || undefined}
+      data-disabled={dataAttr(isDisabled)}
+      data-focus-visible={dataAttr(slot.isActive)}
+      data-invalid={dataAttr(isInvalid)}
     >
       <SlotContent
         char={slot.char}
@@ -136,7 +144,7 @@ export namespace OtpInputSlot {
 }
 
 export const OtpInputSeparator = (props: OtpInputSeparator.Props) => {
-  const { styles } = useOtpInputStyleContext();
+  const { styles } = useOtpInputContext();
   const { className, ...rest } = props;
   return <div {...rest} className={styles.separator({ className })} />;
 };

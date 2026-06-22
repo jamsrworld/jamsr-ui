@@ -1,14 +1,12 @@
-import { CodeExample } from "@/components/code-example";
+import { Button } from "ui/button";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { ButtonColors } from "./examples/colors";
+import { VariantOptions } from "@/types";
 import { ButtonDisabled } from "./examples/disabled";
 import { ButtonLoading } from "./examples/loading";
-import { ButtonSizes } from "./examples/sizes";
 import { ButtonUsage } from "./examples/usage";
-import { ButtonVariants } from "./examples/variants";
-import { ButtonVariantsColors } from "./examples/variants-colors";
 import { ButtonWithIcons } from "./examples/with-icons";
 
 const title = "Button";
@@ -20,52 +18,65 @@ export const metadata: Metadata = {
   description,
 };
 
-const Button = () => {
+const buttonVariants: VariantOptions<Button.Variants> = {
+  variant: {
+    options: ["solid", "bordered", "text", "light", "soft"],
+    defaultValue: "solid",
+  },
+  color: {
+    options: [
+      "default",
+      "primary",
+      "secondary",
+      "success",
+      "warning",
+      "danger",
+    ],
+    defaultValue: "default",
+  },
+  size: {
+    options: ["sm", "md", "lg"],
+    defaultValue: "md",
+  },
+  radius: {
+    options: ["none", "sm", "md", "lg", "xl", "full"],
+    defaultValue: "lg",
+  },
+};
+
+const ButtonPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample isCentered title="Usage" url={resolvePath("usage.tsx")}>
-        <ButtonUsage />
-      </CodeExample>
-      <CodeExample isCentered title="Colors" url={resolvePath("colors.tsx")}>
-        <ButtonColors />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants"
-        url={resolvePath("variants.tsx")}
-      >
-        <ButtonVariants />
-      </CodeExample>
-      <CodeExample isCentered title="Sizes" url={resolvePath("sizes.tsx")}>
-        <ButtonSizes />
-      </CodeExample>
-      <CodeExample isCentered title="Loading" url={resolvePath("loading.tsx")}>
-        <ButtonLoading />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        variants={buttonVariants}
+        component={ButtonUsage}
+      />
+      <CodeExampleV2
+        title="Loading"
+        url={resolvePath("loading.tsx")}
+        variants={buttonVariants}
+        component={ButtonLoading}
+      />
+      <CodeExampleV2
         title="Disabled"
         url={resolvePath("disabled.tsx")}
-      >
-        <ButtonDisabled />
-      </CodeExample>
-      <CodeExample
-        isCentered
+        variants={buttonVariants}
+        component={ButtonDisabled}
+      />
+      <CodeExampleV2
         title="With Icons"
         url={resolvePath("with-icons.tsx")}
-      >
-        <ButtonWithIcons />
-      </CodeExample>
-      <CodeExample
-        isCentered
-        title="Variants Colors"
-        url={resolvePath("variants-colors.tsx")}
-      >
-        <ButtonVariantsColors />
-      </CodeExample>
+        variants={buttonVariants}
+        component={ButtonWithIcons}
+      />
     </DocsPage>
   );
 };
 
-export default Button;
+export default ButtonPage;

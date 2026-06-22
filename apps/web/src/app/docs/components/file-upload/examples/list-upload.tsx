@@ -1,14 +1,16 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Avatar } from "jamsrui/avatar";
-import { Button } from "jamsrui/button";
-import { IconButton } from "jamsrui/icon-button";
-import { Text } from "jamsrui/text";
-import { formatBytes, useFileUpload } from "jamsrui/file-upload";
-import { cn } from "@jamsrui/utils";
+import { Avatar } from "ui/avatar";
+import { Button } from "ui/button";
+import { IconButton } from "ui/icon-button";
+import { Text } from "ui/text";
+import { formatBytes, useFileUpload } from "ui/file-upload";
+import { cn } from "ui/utils";
 
-export const FileUploadListUpload = () => {
+import React from "react";
+
+export const FileUploadListUpload = (props: React.ComponentProps<"div">) => {
   const {
     getInputProps,
     isDragging,
@@ -24,7 +26,7 @@ export const FileUploadListUpload = () => {
     accept: "image/*",
   });
   return (
-    <div>
+    <div {...props}>
       <div
         {...getRootProps({})}
         className={cn(
@@ -33,7 +35,7 @@ export const FileUploadListUpload = () => {
         )}
         onClick={openFileDialog}
       >
-        <input multiple {...getInputProps({})} />
+        <input {...getInputProps({})} />
         <div className="size-12 bg-background-secondary rounded-full flex items-center justify-center">
           <Icon
             icon="mage:image"
@@ -41,10 +43,16 @@ export const FileUploadListUpload = () => {
           />
         </div>
         <Text variant="paragraph">Upload images to gallery</Text>
-        <Text variant="paragraph2" className="text-foreground-secondary">
+        <Text
+          variant="paragraph2"
+          className="text-foreground-secondary"
+        >
           Drag and drop images here or click to browse
         </Text>
-        <Text variant="caption" className="text-foreground-secondary">
+        <Text
+          variant="caption"
+          className="text-foreground-secondary"
+        >
           PNG, JPG, GIF up to 5MB each (max 10 files)
         </Text>
       </div>
@@ -52,7 +60,10 @@ export const FileUploadListUpload = () => {
       {files.length > 0 && (
         <ul className="flex gap-2 flex-col py-4">
           <div className="flex justify-end">
-            <Button onClick={clearFiles} size="sm">
+            <Button
+              onClick={clearFiles}
+              size="sm"
+            >
               Clear All
             </Button>
           </div>
@@ -65,7 +76,10 @@ export const FileUploadListUpload = () => {
                 <div>
                   {file.preview ? (
                     <Avatar radius="md">
-                      <Avatar.Image src={file.preview} alt={file.file.name} />
+                      <Avatar.Image
+                        src={file.preview}
+                        alt={file.file.name}
+                      />
                     </Avatar>
                   ) : (
                     <div className="flex justify-center items-center size-full">
@@ -78,7 +92,10 @@ export const FileUploadListUpload = () => {
                 </div>
                 <div>
                   <Text className="text-foreground">{file.file.name}</Text>
-                  <Text variant="caption" className="text-foreground-secondary">
+                  <Text
+                    variant="caption"
+                    className="text-foreground-secondary"
+                  >
                     {formatBytes(file.file.size)}
                   </Text>
                 </div>

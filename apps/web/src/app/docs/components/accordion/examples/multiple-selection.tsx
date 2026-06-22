@@ -1,8 +1,14 @@
-import { Accordion } from "jamsrui/accordion";
+"use client";
 
-export const AccordionMultipleSelection = () => {
+import { Accordion } from "ui/accordion";
+
+export const AccordionMultipleSelection = (props: Accordion.Props) => {
   return (
-    <Accordion variant="splitted" multiple>
+    <Accordion
+      {...props}
+      multiple
+      className="w-full"
+    >
       <Accordion.Item>
         <Accordion.Trigger>
           Accordion 1

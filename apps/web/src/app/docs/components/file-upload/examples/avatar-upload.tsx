@@ -1,13 +1,15 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import { Avatar } from "jamsrui/avatar";
-import { IconButton } from "jamsrui/icon-button";
-import { Text } from "jamsrui/text";
-import { useFileUpload } from "jamsrui/file-upload";
-import { cn } from "@jamsrui/utils";
+import { Avatar } from "ui/avatar";
+import { IconButton } from "ui/icon-button";
+import { Text } from "ui/text";
+import { useFileUpload } from "ui/file-upload";
+import { cn } from "ui/utils";
 
-export const FileUploadAvatarUpload = () => {
+import React from "react";
+
+export const FileUploadAvatarUpload = (props: React.ComponentProps<"div">) => {
   const {
     getInputProps,
     isDragging,
@@ -23,7 +25,10 @@ export const FileUploadAvatarUpload = () => {
   });
   const avatar = files[0];
   return (
-    <div className="flex flex-col items-center text-center">
+    <div
+      className="flex flex-col items-center text-center"
+      {...props}
+    >
       <div
         {...getRootProps({})}
         className={cn(
@@ -35,7 +40,10 @@ export const FileUploadAvatarUpload = () => {
         <input {...getInputProps({})} />
         {avatar ? (
           <Avatar className="size-full">
-            <Avatar.Image src={avatar.preview} alt={avatar.file.name} />
+            <Avatar.Image
+              src={avatar.preview}
+              alt={avatar.file.name}
+            />
             <IconButton
               label="Remove"
               size="sm"
@@ -59,7 +67,10 @@ export const FileUploadAvatarUpload = () => {
         )}
       </div>
       <Text className="font-medium mt-2">Upload Avatar</Text>
-      <Text variant="paragraph2" className="text-foreground-secondary">
+      <Text
+        variant="paragraph2"
+        className="text-foreground-secondary"
+      >
         PNG, JPG up to 2MB
       </Text>
     </div>

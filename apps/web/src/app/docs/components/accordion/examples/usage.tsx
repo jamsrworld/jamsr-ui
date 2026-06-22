@@ -1,8 +1,13 @@
-import { Accordion } from "jamsrui/accordion";
+"use client";
 
-export const AccordionUsage = () => {
+import { Accordion } from "ui/accordion";
+
+export const AccordionUsage = (props: Accordion.Props) => {
   return (
-    <Accordion variant="splitted" className="w-full">
+    <Accordion
+      {...props}
+      className="w-full"
+    >
       <Accordion.Item>
         <Accordion.Trigger>
           Accordion 1<Accordion.Indicator />

@@ -1,9 +1,15 @@
-import { Card } from "jamsrui/card";
-import { Tabs } from "jamsrui/tabs";
+"use client";
 
-export const TabsUsage = () => {
+import { Card } from "ui/card";
+import { Tabs } from "ui/tabs";
+import React from "react";
+
+export const TabsUsage = (props: Tabs.Props) => {
   return (
-    <Tabs defaultValue="photos">
+    <Tabs
+      defaultValue="photos"
+      {...props}
+    >
       <Tabs.List>
         <Tabs.Tab value="photos">Photos</Tabs.Tab>
         <Tabs.Tab value="music">Music</Tabs.Tab>
@@ -14,8 +20,8 @@ export const TabsUsage = () => {
         <Card>
           <Card.Content>
             📸 <strong>12 new photos</strong> from your weekend trip to Yosemite
-            have been uploaded. Don't forget to tag your friends and add them to
-            the shared album!
+            have been uploaded. Don&apos;t forget to tag your friends and add
+            them to the shared album!
           </Card.Content>
         </Card>
       </Tabs.Panel>

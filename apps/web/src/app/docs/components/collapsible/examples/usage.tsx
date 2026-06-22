@@ -1,9 +1,11 @@
-import { Card } from "jamsrui/card";
-import { Collapsible } from "jamsrui/collapsible";
+"use client";
 
-export const CollapsibleUsage = () => {
+import { Card } from "ui/card";
+import { Collapsible } from "ui/collapsible";
+
+export const CollapsibleUsage = (props: Collapsible.Props) => {
   return (
-    <Collapsible>
+    <Collapsible {...props}>
       <Card>
         <Collapsible.Trigger>
           <Card.Header className="pb-3">

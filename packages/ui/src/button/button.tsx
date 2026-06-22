@@ -1,8 +1,13 @@
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
-import { cn } from "tailwind-variants";
+import { mergeProps } from "react-aria/mergeProps";
+import { useFocusRing } from "react-aria/useFocusRing";
+import { useHover } from "react-aria/useHover";
+import { usePress } from "react-aria/usePress";
 
 import { CircularProgress } from "../circular-progress";
 import { buttonStyles } from "./styles";
+import { dataAttr } from "../utils/attr";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 
@@ -17,11 +22,29 @@ export const Button = (props: Button.Props) => {
     className,
     children,
     radius,
+    disabled,
+    onClick,
     ...restProps
   } = props;
+
+  const isDisabled = disabled ?? isLoading;
+
+  const { isPressed, pressProps } = usePress({
+    isDisabled,
+    onClick(e) {
+      onClick?.(e as any);
+    },
+  });
+  const { isHovered, hoverProps } = useHover({ isDisabled });
+  const { isFocusVisible, focusProps, isFocused } = useFocusRing({});
   return (
     <ButtonPrimitive
-      {...restProps}
+      data-focus-visible={dataAttr(isFocusVisible)}
+      data-focused={dataAttr(isFocused)}
+      data-hovered={dataAttr(isHovered)}
+      data-pressed={dataAttr(isPressed)}
+      disabled={isDisabled}
+      {...mergeProps(restProps, pressProps, hoverProps, focusProps)}
       className={buttonStyles({
         color,
         size,

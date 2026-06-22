@@ -1,10 +1,11 @@
 "use client";
 
-import { DateField } from "jamsrui/date-field";
+import { DateField } from "ui/date-field";
+import React from "react";
 
-export const DateInputUsage = () => {
+export const DateInputUsage = (props: DateField.Props) => {
   return (
-    <DateField>
+    <DateField {...props}>
       <DateField.Input>
         {(segment) => <DateField.Segment segment={segment} />}
       </DateField.Input>

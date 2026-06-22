@@ -1,26 +1,26 @@
 import { tv } from "tailwind-variants";
 
-import { variantStyles } from "../utils/variants";
+import { dataFocusVisibleClasses, variantStyles } from "../utils/variants";
 
 export const iconButtonStyles = tv({
   extend: variantStyles,
   base: [
-    "cursor-default relative inline-flex items-center justify-center shrink-0",
+    "cursor-interactive relative inline-flex items-center justify-center shrink-0",
     "disabled:status-disabled",
-    "focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2",
     "transition-[scale] duration-150 data-pressed:scale-98",
+    ...dataFocusVisibleClasses,
   ],
   variants: {
     variant: {
-      solid: "ring-1 ring-inset",
+      solid: "",
     },
     color: {
-      primary: "ring-primary-border",
-      secondary: "ring-secondary-border",
-      default: "ring-default-border",
-      success: "ring-success-border",
-      warning: "ring-warning-border",
-      danger: "ring-danger-border",
+      primary: "",
+      secondary: "",
+      default: "",
+      success: "",
+      warning: "",
+      danger: "",
     },
     size: {
       sm: "size-6 rounded text-sm",

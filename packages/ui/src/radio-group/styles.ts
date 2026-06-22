@@ -13,20 +13,26 @@ export const radioStyles = tv({
       "justify-center",
       "shrink-0",
       "overflow-hidden",
-      "border-solid",
-      "border-[1.5px]",
       "box-border",
-      "border-default",
       "rounded-full",
-      "data-hovered:border-default-hover",
       "data-pressed:scale-95",
-      "data-checked:border-transparent",
       ...focusVisibleClasses,
-      "data-invalid:border-danger",
+      "focus-visible:outline-offset-2",
     ],
     indicator: "absolute rounded-full bg-white",
   },
   variants: {
+    variant: {
+      solid: {
+        root: ["bg-surface"],
+      },
+      bordered: {
+        root: [
+          "data-invalid:border-danger data-hovered:border-default-hover data-checked:border-transparent",
+          "border-default border-solid border-[1.5px]",
+        ],
+      },
+    },
     color: {
       default: {
         root: "data-checked:bg-default",
@@ -74,6 +80,7 @@ export const radioStyles = tv({
   defaultVariants: {
     color: "primary",
     size: "md",
+    variant: "solid",
   },
 });
 

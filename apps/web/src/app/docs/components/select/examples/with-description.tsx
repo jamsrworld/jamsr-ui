@@ -1,6 +1,9 @@
-import { Description } from "jamsrui/description";
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
+"use client";
+
+import { Description } from "ui/description";
+import { Field } from "ui/field";
+import { Select } from "ui/select";
+import React from "react";
 
 const apples = [
   { label: "Gala", value: "gala" },
@@ -10,20 +13,28 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectWithDescription = () => {
+export const SelectWithDescription = (props: Partial<Select.Props>) => {
   return (
-    <Select items={apples}>
-      <Label>Fruit</Label>
-      <Select.Trigger className="min-w-40" />
-      <Select.Content>
-        {apples.map(({ label, value }) => (
-          <Select.Item key={label} value={value}>
-            <Select.ItemIndicator />
-            <Select.ItemText>{label}</Select.ItemText>
-          </Select.Item>
-        ))}
-      </Select.Content>
-      <Description>Choose your favorite fruit</Description>
-    </Select>
+    <Field>
+      <Field.Label>Fruit</Field.Label>
+      <Select
+        items={apples}
+        {...props}
+      >
+        <Select.Trigger className="min-w-40" />
+        <Select.Content>
+          {apples.map(({ label, value }) => (
+            <Select.Item
+              key={label}
+              value={value}
+            >
+              <Select.ItemIndicator />
+              <Select.ItemText>{label}</Select.ItemText>
+            </Select.Item>
+          ))}
+        </Select.Content>
+        <Description>Choose your favorite fruit</Description>
+      </Select>
+    </Field>
   );
 };

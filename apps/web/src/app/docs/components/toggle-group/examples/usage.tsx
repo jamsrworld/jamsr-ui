@@ -1,9 +1,17 @@
-import { Toggle, ToggleGroup } from "jamsrui/toggle";
-import { Bold, Italic, Underline } from "lucide-react";
+"use client";
 
-export const ToggleGroupUsage = () => {
+import { Toggle, ToggleGroup } from "ui/toggle";
+import { Bold, Italic, Underline } from "lucide-react";
+import React from "react";
+
+export const ToggleGroupUsage = (props: any) => {
+  const { multiple, ...rest } = props;
+  const multipleBool = multiple === "true";
   return (
-    <ToggleGroup>
+    <ToggleGroup
+      multiple={multipleBool}
+      {...rest}
+    >
       <Toggle>
         <Bold className="size-4" />
       </Toggle>

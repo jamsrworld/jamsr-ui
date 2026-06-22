@@ -1,5 +1,14 @@
-import { Button } from "jamsrui/button";
+"use client";
 
-export const ButtonDisabled = () => {
-  return <Button disabled>Button</Button>;
+import { Button } from "ui/button";
+
+export const ButtonDisabled = (props: Button.Props) => {
+  return (
+    <Button
+      disabled
+      {...props}
+    >
+      Button
+    </Button>
+  );
 };

@@ -1,8 +1,8 @@
 import { readSourceCode } from "@/utils/code";
-import { cn } from "@jamsrui/utils";
+import { cn } from "ui/utils";
 import { CodeBlock, CodeBlockProps } from "./code-block";
-import { Text } from "jamsrui/text";
-import { Tabs } from "jamsrui/tabs";
+import { Text } from "ui/text";
+import { Tabs } from "ui/tabs";
 
 type CodeExampleProps = Omit<CodeBlockProps, "children"> & {
   url: string;
@@ -20,9 +20,15 @@ export const DocsPageSection = (props: {
   const { title, description, children } = props;
   const id = title.toLowerCase().replace(" ", "-");
   return (
-    <section id={id} className="flex flex-col gap-2">
+    <section
+      id={id}
+      className="flex flex-col gap-2"
+    >
       <div>
-        <Text render={<h1 />} variant="h5">
+        <Text
+          render={<h1 />}
+          variant="h5"
+        >
           {title}
         </Text>
         <Text className="text-foreground-secondary">{description}</Text>
@@ -37,9 +43,15 @@ export const CodeExample = async (props: CodeExampleProps) => {
   const code = await readSourceCode(url);
   const id = title.toLowerCase().replace(" ", "-");
   return (
-    <section id={id} className="flex flex-col gap-2">
+    <section
+      id={id}
+      className="flex flex-col gap-2"
+    >
       <div>
-        <Text render={<a href={`#${id}`} />} variant="h5">
+        <Text
+          render={<a href={`#${id}`} />}
+          variant="h5"
+        >
           {title}
         </Text>
         {description && <Text>{description}</Text>}
@@ -53,7 +65,7 @@ export const CodeExample = async (props: CodeExampleProps) => {
         <Tabs.Panel value="preview">
           <div
             className={cn(
-              "border min-h-50  border-border rounded-lg p-4",
+              "border min-h-50  border-border rounded-lg p-4 flex flex-col",
               isCentered && "flex items-center justify-center",
             )}
           >

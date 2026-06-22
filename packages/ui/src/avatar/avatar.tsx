@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar";
-import { cn } from "tailwind-variants";
 
 import { avatarStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ComponentProps } from "react";
 import type { VariantProps } from "tailwind-variants";

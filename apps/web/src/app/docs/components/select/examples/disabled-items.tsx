@@ -1,5 +1,9 @@
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
+"use client";
+
+import { Field } from "ui/field";
+import { Label } from "ui/label";
+import { Select } from "ui/select";
+import React from "react";
 
 const apples = [
   { label: "Gala", value: "gala", disabled: true },
@@ -9,19 +13,28 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectDisabledItems = () => {
+export const SelectDisabledItems = (props: Partial<Select.Props>) => {
   return (
-    <Select items={apples}>
-      <Label>Fruit</Label>
-      <Select.Trigger className="min-w-40" />
-      <Select.Content>
-        {apples.map(({ label, value, disabled }) => (
-          <Select.Item key={label} value={value} disabled={disabled}>
-            <Select.ItemIndicator />
-            <Select.ItemText>{label}</Select.ItemText>
-          </Select.Item>
-        ))}
-      </Select.Content>
-    </Select>
+    <Field>
+      <Field.Label>Fruit</Field.Label>
+      <Select
+        items={apples}
+        {...props}
+      >
+        <Select.Trigger className="min-w-40" />
+        <Select.Content>
+          {apples.map(({ label, value, disabled }) => (
+            <Select.Item
+              key={label}
+              value={value}
+              disabled={disabled}
+            >
+              <Select.ItemIndicator />
+              <Select.ItemText>{label}</Select.ItemText>
+            </Select.Item>
+          ))}
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };

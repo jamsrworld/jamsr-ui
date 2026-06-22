@@ -1,9 +1,9 @@
 "use client";
 
 import { Command as CommandPrimitive } from "cmdk";
-import { cn } from "tailwind-variants";
 
 import { commandStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { ComponentProps } from "react";
 
@@ -50,8 +50,9 @@ export const CommandInput = (props: CommandInput.Props) => {
 };
 
 export namespace CommandInput {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.Input> {}
+  export interface Props extends ComponentProps<
+    typeof CommandPrimitive.Input
+  > {}
 }
 
 export const CommandList = (props: CommandList.Props) => {
@@ -65,8 +66,7 @@ export const CommandList = (props: CommandList.Props) => {
 };
 
 export namespace CommandList {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.List> {}
+  export interface Props extends ComponentProps<typeof CommandPrimitive.List> {}
 }
 
 export const CommandEmpty = (props: CommandEmpty.Props) => {
@@ -80,8 +80,9 @@ export const CommandEmpty = (props: CommandEmpty.Props) => {
 };
 
 export namespace CommandEmpty {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.Empty> {}
+  export interface Props extends ComponentProps<
+    typeof CommandPrimitive.Empty
+  > {}
 }
 
 export const CommandGroup = (props: CommandGroup.Props) => {
@@ -95,8 +96,9 @@ export const CommandGroup = (props: CommandGroup.Props) => {
 };
 
 export namespace CommandGroup {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.Group> {}
+  export interface Props extends ComponentProps<
+    typeof CommandPrimitive.Group
+  > {}
 }
 
 export const CommandSeparator = (props: CommandSeparator.Props) => {
@@ -110,8 +112,9 @@ export const CommandSeparator = (props: CommandSeparator.Props) => {
 };
 
 export namespace CommandSeparator {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.Separator> {}
+  export interface Props extends ComponentProps<
+    typeof CommandPrimitive.Separator
+  > {}
 }
 
 export const CommandItem = (props: CommandItem.Props) => {
@@ -125,13 +128,17 @@ export const CommandItem = (props: CommandItem.Props) => {
 };
 
 export namespace CommandItem {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.Item> {}
+  export interface Props extends ComponentProps<typeof CommandPrimitive.Item> {}
 }
 
 export const CommandShortcut = (props: CommandShortcut.Props) => {
   const { className, ...restProps } = props;
-  return <span {...restProps} className={styles.shortcut({ className: cn(className) })} />;
+  return (
+    <span
+      {...restProps}
+      className={styles.shortcut({ className: cn(className) })}
+    />
+  );
 };
 
 export namespace CommandShortcut {
@@ -151,8 +158,9 @@ export const CommandDialog = (props: CommandDialog.Props) => {
 };
 
 export namespace CommandDialog {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.Dialog> {}
+  export interface Props extends ComponentProps<
+    typeof CommandPrimitive.Dialog
+  > {}
 }
 
 export const CommandLoading = (props: CommandLoading.Props) => {
@@ -166,6 +174,7 @@ export const CommandLoading = (props: CommandLoading.Props) => {
 };
 
 export namespace CommandLoading {
-  export interface Props
-    extends ComponentProps<typeof CommandPrimitive.Loading> {}
+  export interface Props extends ComponentProps<
+    typeof CommandPrimitive.Loading
+  > {}
 }

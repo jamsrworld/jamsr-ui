@@ -1,10 +1,17 @@
-import { Icon } from "@iconify/react";
-import { Tabs } from "jamsrui/tabs";
+"use client";
 
-export const TabWithIcons = () => {
+import { Icon } from "@iconify/react";
+import { Tabs } from "ui/tabs";
+import React from "react";
+
+export const TabWithIcons = (props: Tabs.Props) => {
   return (
     <div className="flex flex-wrap gap-4">
-      <Tabs defaultValue="photos" aria-label="Tabs variants">
+      <Tabs
+        defaultValue="photos"
+        aria-label="Tabs variants"
+        {...props}
+      >
         <Tabs.List>
           <Tabs.Tab value="photos">
             <Icon icon="ic:round-photo" />

@@ -11,6 +11,10 @@ import {
   DrawerTrigger,
 } from "./drawer";
 
+import type { VariantProps } from "tailwind-variants";
+
+import type { drawerStyles } from "./styles";
+
 export const Drawer = Object.assign(DrawerRoot, {
   Trigger: DrawerTrigger,
   Content: DrawerContent,
@@ -24,5 +28,6 @@ export const Drawer = Object.assign(DrawerRoot, {
 });
 
 export namespace Drawer {
+  export type Variants = VariantProps<typeof drawerStyles>;
   export interface Props extends DrawerRoot.Props {}
 }

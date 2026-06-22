@@ -1,6 +1,9 @@
-import { EmailIcon } from "@jamsrui/icons";
-import { Label } from "jamsrui/label";
-import { Select } from "jamsrui/select";
+"use client";
+
+import { EmailIcon } from "@/icons";
+import { Field } from "ui/field";
+import { Select } from "ui/select";
+import React from "react";
 
 const apples = [
   { label: "Gala", value: "gala" },
@@ -10,23 +13,31 @@ const apples = [
   { label: "Pink Lady", value: "pink-lady" },
 ];
 
-export const SelectWithIcons = () => {
+export const SelectWithIcons = (props: Partial<Select.Props>) => {
   return (
-    <Select items={apples}>
-      <Label>Fruit</Label>
-      <Select.Trigger className="min-w-40">
-        <EmailIcon className="text-foreground-secondary" />
-        <Select.Value />
-        <Select.Icon />
-      </Select.Trigger>
-      <Select.Content>
-        {apples.map(({ label, value }) => (
-          <Select.Item key={label} value={value}>
-            <Select.ItemIndicator />
-            <Select.ItemText>{label}</Select.ItemText>
-          </Select.Item>
-        ))}
-      </Select.Content>
-    </Select>
+    <Field>
+      <Field.Label>Fruit</Field.Label>
+      <Select
+        items={apples}
+        {...props}
+      >
+        <Select.Trigger className="min-w-40">
+          <EmailIcon className="text-foreground-secondary" />
+          <Select.Value />
+          <Select.Icon />
+        </Select.Trigger>
+        <Select.Content>
+          {apples.map(({ label, value }) => (
+            <Select.Item
+              key={label}
+              value={value}
+            >
+              <Select.ItemIndicator />
+              <Select.ItemText>{label}</Select.ItemText>
+            </Select.Item>
+          ))}
+        </Select.Content>
+      </Select>
+    </Field>
   );
 };

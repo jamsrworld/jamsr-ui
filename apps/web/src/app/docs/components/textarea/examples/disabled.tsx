@@ -1,11 +1,13 @@
-import { Field } from "jamsrui/field";
-import { Textarea } from "jamsrui/textarea";
+"use client";
 
-export const TextareaDisabled = () => {
+import { Field } from "ui/field";
+import { TextArea } from "ui/textarea";
+
+export const TextAreaDisabled = (props: TextArea.Props) => {
   return (
-    <Field>
+    <Field disabled>
       <Field.Label>Enter your name</Field.Label>
-      <Textarea disabled />
+      <TextArea {...props} />
     </Field>
   );
 };

@@ -3,10 +3,10 @@
 import { createContext, use, useMemo } from "react";
 
 import { Toast as ToastPrimitive } from "@base-ui/react/toast";
-import { cn } from "tailwind-variants";
 
 import { toastStyles } from "./styles";
 import { IconButton } from "../icon-button";
+import { cn } from "../utils/cn";
 
 import type { VariantProps } from "tailwind-variants";
 

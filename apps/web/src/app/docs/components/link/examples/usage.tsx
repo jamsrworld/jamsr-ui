@@ -1,5 +1,14 @@
-import { Link } from "jamsrui/link";
+"use client";
 
-export const LinkUsage = () => {
-  return <Link href="/">Go to homepage </Link>;
+import { Link } from "ui/link";
+
+export const LinkUsage = (props: Link.Props) => {
+  return (
+    <Link
+      href="/"
+      {...props}
+    >
+      Go to homepage
+    </Link>
+  );
 };

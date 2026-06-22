@@ -1,5 +1,7 @@
 import { tv } from "tailwind-variants";
 
+import type { VariantProps } from "tailwind-variants";
+
 export const alertStyles = tv({
   slots: {
     root: "relative flex gap-2 px-4 py-1.5 text-sm ring-1 ring-inset rounded-lg",
@@ -151,3 +153,5 @@ export const alertStyles = tv({
     variant: "solid",
   },
 });
+
+export type AlertVariants = VariantProps<typeof alertStyles>;

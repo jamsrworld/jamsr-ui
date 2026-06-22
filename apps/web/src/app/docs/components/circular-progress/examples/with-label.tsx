@@ -1,12 +1,15 @@
-import { CircularProgress } from "jamsrui/circular-progress";
+"use client";
 
-export const CircularProgressWithLabel = () => {
+import { CircularProgress } from "ui/circular-progress";
+
+export const CircularProgressWithLabel = (props: CircularProgress.Props) => {
   return (
     <CircularProgress
       value={50}
       isIntermediate={false}
       size={100}
       strokeWidth={16}
+      {...props}
     >
       <CircularProgress.Track />
       <CircularProgress.Progress />

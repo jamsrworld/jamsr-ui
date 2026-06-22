@@ -1,13 +1,23 @@
-import { DatePicker as DatePickerUI } from "@jamsrui/react";
+"use client";
+
+import { useRender } from "@base-ui/react/use-render";
 
 import { datePickerStyles } from "./styles";
 
 export const DatePicker = (props: DatePicker.Props) => {
-  const { className, ...rest } = props;
+  const { className, render, ...rest } = props;
   const styles = datePickerStyles();
-  return <DatePickerUI {...rest} className={styles.root({ className })} />;
+  const renderElement = useRender({
+    defaultTagName: "div",
+    props: {
+      ...rest,
+      className: styles.root({ className }),
+    },
+    render,
+  });
+  return renderElement;
 };
 
 export namespace DatePicker {
-  export interface Props extends DatePickerUI.Props {}
+  export interface Props extends useRender.ComponentProps<"div"> {}
 }

@@ -1,9 +1,9 @@
-import { CodeExample } from "@/components/code-example";
+import { CodeExampleV2 } from "@/components/code-example-v2";
 import { DocsPage } from "@/components/docs-page";
 import { readMetaUrl } from "@/utils/code";
 import { Metadata } from "next";
-import { CommandUsage } from "./examples/usage";
 import { CommandDialogDemo } from "./examples/dialog";
+import { CommandUsage } from "./examples/usage";
 import { CommandWithGroups } from "./examples/with-groups";
 
 const title = "Command";
@@ -18,23 +18,25 @@ export const metadata: Metadata = {
 const CommandPage = () => {
   const resolvePath = readMetaUrl(import.meta.url, "/examples/");
   return (
-    <DocsPage title={title} description={description}>
-      <CodeExample title="Usage" url={resolvePath("usage.tsx")}>
-        <CommandUsage />
-      </CodeExample>
-      <CodeExample
-        isCentered
+    <DocsPage
+      title={title}
+      description={description}
+    >
+      <CodeExampleV2
+        title="Usage"
+        url={resolvePath("usage.tsx")}
+        component={CommandUsage}
+      />
+      <CodeExampleV2
         title="Dialog"
         url={resolvePath("dialog.tsx")}
-      >
-        <CommandDialogDemo />
-      </CodeExample>
-      <CodeExample
+        component={CommandDialogDemo}
+      />
+      <CodeExampleV2
         title="With Groups"
         url={resolvePath("with-groups.tsx")}
-      >
-        <CommandWithGroups />
-      </CodeExample>
+        component={CommandWithGroups}
+      />
     </DocsPage>
   );
 };

@@ -1,10 +1,9 @@
 "use client";
 
-import { cn } from "@jamsrui/utils";
-
 import { Table } from "../table";
 import { DataGridBody } from "./data-grid-body";
 import { DataGridHeader } from "./data-grid-header";
+import { cn } from "../utils/cn";
 
 export const DataGridTable = (props: DataGridTable.Props) => {
   const {
@@ -18,7 +17,11 @@ export const DataGridTable = (props: DataGridTable.Props) => {
     ...restProps
   } = props;
   return (
-    <Table className={cn("w-full table-fixed", className)} {...restProps}>
+    <Table
+      isHeaderSticky
+      className={cn("w-full table-fixed", className)}
+      {...restProps}
+    >
       {children}
     </Table>
   );

@@ -1,10 +1,12 @@
-import { Checkbox } from "jamsrui/checkbox";
-import { Field } from "jamsrui/field";
+"use client";
 
-export const CheckboxDescription = () => {
+import { Checkbox } from "ui/checkbox";
+import { Field } from "ui/field";
+
+export const CheckboxDescription = (props: Checkbox.Props) => {
   return (
     <Field orientation="horizontal">
-      <Checkbox />
+      <Checkbox {...props} />
       <Field.Content>
         <Field.Label>Enable email notifications</Field.Label>
         <Field.Description>

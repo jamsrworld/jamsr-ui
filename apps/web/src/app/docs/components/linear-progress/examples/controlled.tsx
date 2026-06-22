@@ -1,11 +1,11 @@
 "use client";
 
-import { IconButton } from "jamsrui/icon-button";
-import { LinearProgress } from "jamsrui/linear-progress";
-import { MinusIcon, PlusIcon } from "@jamsrui/icons";
+import { MinusIcon, PlusIcon } from "@/icons";
+import { IconButton } from "ui/icon-button";
+import { LinearProgress } from "ui/linear-progress";
 import { useState } from "react";
 
-export const LinearProgressControlled = () => {
+export const LinearProgressControlled = (props: LinearProgress.Props) => {
   const [value, setValue] = useState(10);
   const OnIncrease = () => setValue(value + 10);
   const OnDecrease = () => setValue(value - 10);
@@ -13,11 +13,23 @@ export const LinearProgressControlled = () => {
   const CanDecrease = value > 0;
   return (
     <div className="flex w-full items-center gap-4">
-      <IconButton label="Decrease" disabled={!CanDecrease} onClick={OnDecrease}>
+      <IconButton
+        label="Decrease"
+        disabled={!CanDecrease}
+        onClick={OnDecrease}
+      >
         <MinusIcon />
       </IconButton>
-      <LinearProgress isIntermediate={false} progress={value} size="lg" />
-      <IconButton label="Increase" disabled={!CanIncrease} onClick={OnIncrease}>
+      <LinearProgress
+        isIntermediate={false}
+        progress={value}
+        {...props}
+      />
+      <IconButton
+        label="Increase"
+        disabled={!CanIncrease}
+        onClick={OnIncrease}
+      >
         <PlusIcon />
       </IconButton>
     </div>

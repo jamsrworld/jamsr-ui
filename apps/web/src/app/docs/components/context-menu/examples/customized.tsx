@@ -1,9 +1,13 @@
+"use client";
 
-import { ContextMenu } from "jamsrui/context-menu";
+import { ContextMenu } from "ui/context-menu";
 
-export const ContextMenuCustomized = () => {
+export const ContextMenuCustomized = (props: ContextMenu.Props) => {
   return (
-    <ContextMenu radius="sm">
+    <ContextMenu
+      radius="sm"
+      {...props}
+    >
       <ContextMenu.Trigger>
         <div className="border-border text-foreground-secondary flex w-full items-center justify-center rounded-xl border border-dashed py-12 text-center">
           Right Click Here

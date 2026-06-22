@@ -1,9 +1,9 @@
 "use client";
 
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
-import { cn } from "tailwind-variants";
 
 import { comboboxStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 const styles = comboboxStyles();
 
@@ -109,10 +109,12 @@ export const ComboboxItemIndicator = (
   return (
     <ComboboxPrimitive.ItemIndicator
       {...restProps}
+      keepMounted
       className={styles.itemIndicator({ className: cn(className) })}
-    >
-      {children}
-    </ComboboxPrimitive.ItemIndicator>
+      render={(props, { selected }) => (
+        <span {...props}>{selected ? children : null}</span>
+      )}
+    />
   );
 };
 
@@ -145,9 +147,7 @@ export const ComboboxGroupLabel = (
   );
 };
 
-export const ComboboxSeparator = (
-  props: ComboboxPrimitive.Separator.Props,
-) => {
+export const ComboboxSeparator = (props: ComboboxPrimitive.Separator.Props) => {
   return (
     <ComboboxPrimitive.Separator
       {...props}

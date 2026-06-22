@@ -3,9 +3,9 @@
 import { createContext, use, useMemo } from "react";
 
 import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip";
-import { cn } from "tailwind-variants";
 
 import { tooltipStyles } from "./styles";
+import { cn } from "../utils/cn";
 
 import type { TooltipVariants } from "./styles";
 

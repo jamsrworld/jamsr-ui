@@ -1,13 +1,15 @@
-import { Button } from "jamsrui/button";
-import { Popover } from "jamsrui/popover";
+"use client";
 
-export const PopoverUsage = () => {
+import { Button } from "ui/button";
+import { Popover } from "ui/popover";
+
+export const PopoverUsage = (props: Popover.Props) => {
   return (
-    <Popover>
+    <Popover {...props}>
       <Popover.Trigger render={<Button>Click Me!</Button>} />
       <Popover.Content>
-        Popover is a non-modal dialog that floats around its disclosure. It's
-        commonly used for displaying additional rich content on top of
+        Popover is a non-modal dialog that floats around its disclosure.
+        It&apos;s commonly used for displaying additional rich content on top of
         something.
       </Popover.Content>
     </Popover>
